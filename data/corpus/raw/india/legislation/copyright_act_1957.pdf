@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:57:18.163914+00:00
+# IND_COPYRIGHT_ACT_1957
+# URL: https://www.indiacode.nic.in/handle/123456789/1367
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_COPYRIGHT_ACT_1957

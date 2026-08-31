@@ -1,0 +1,151 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "AyuRaksha (IP-SAKTI Sahayak)",
+  "total_statutory_sources": 10,
+  "sources": [
+    {
+      "source_id": "IND_PATENTS_ACT_1970",
+      "title": "The Patents Act, 1970 (as amended)",
+      "authority": "Intellectual Property India (CGPDTM)",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/india_patents/patents_act_1970.json",
+      "domain": "PATENTS"
+    },
+    {
+      "source_id": "IND_PATENTS_RULES_2024",
+      "title": "The Patents Rules, 2003 & 2024 Amendments",
+      "authority": "DPIIT / IP India",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/india_patents/patents_rules_2003_and_2024_amendments.json",
+      "domain": "PATENTS"
+    },
+    {
+      "source_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002_2023",
+      "title": "The Biological Diversity Act, 2002 (as amended 2023)",
+      "authority": "National Biodiversity Authority (NBA)",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/biodiversity_abs/biological_diversity_act_2002_and_2023_amendments.json",
+      "domain": "BIODIVERSITY_ABS"
+    },
+    {
+      "source_id": "IND_NBA_ABS_REGULATIONS_2014",
+      "title": "NBA Access and Benefit Sharing Regulations, 2014",
+      "authority": "National Biodiversity Authority",
+      "jurisdiction": "IN",
+      "authority_level": 4,
+      "file_path": "data/corpus/biodiversity_abs/nba_abs_regulations_and_forms.json",
+      "domain": "BIODIVERSITY_ABS"
+    },
+    {
+      "source_id": "IND_DRUGS_COSMETICS_ACT_1940_ASU",
+      "title": "Drugs & Cosmetics Act, 1940 (Chapter IV-A: ASU Drugs)",
+      "authority": "Ministry of Ayush / CDSCO",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/ayush_drug_regulations/drugs_and_cosmetics_act_1940_asu.json",
+      "domain": "AYUSH_DRUG_REGULATION"
+    },
+    {
+      "source_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+      "title": "Drugs & Cosmetics Rules, 1945 (Part XVI & XVII: ASU)",
+      "authority": "Ministry of Ayush",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/ayush_drug_regulations/drugs_and_cosmetics_rules_1945_asu.json",
+      "domain": "AYUSH_DRUG_REGULATION"
+    },
+    {
+      "source_id": "IND_FIRST_SCHEDULE_AYURVEDIC_BOOKS",
+      "title": "First Schedule Authoritative Ayurvedic Classical Texts",
+      "authority": "Ministry of Ayush",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/ayush_drug_regulations/first_schedule_authoritative_texts.json",
+      "domain": "AYUSH_DRUG_REGULATION"
+    },
+    {
+      "source_id": "IND_FSSAI_AYURVEDA_AAHARA_2022",
+      "title": "FSSAI (Ayurveda Aahara) Regulations, 2022",
+      "authority": "FSSAI / Ministry of Health",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/food_ayurveda_aahara/fssai_ayurveda_aahara_regulations_2022.json",
+      "domain": "FOOD_AYURVEDA_AAHARA"
+    },
+    {
+      "source_id": "IND_TRADE_MARKS_ACT_1999",
+      "title": "The Trade Marks Act, 1999",
+      "authority": "Trade Marks Registry / IP India",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/trademarks_gi_designs_copyright/trade_marks_act_1999_and_rules.json",
+      "domain": "TRADEMARKS"
+    },
+    {
+      "source_id": "IND_GEOGRAPHICAL_INDICATIONS_ACT_1999",
+      "title": "The Geographical Indications of Goods Act, 1999",
+      "authority": "GI Registry (Chennai)",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/trademarks_gi_designs_copyright/geographical_indications_act_1999.json",
+      "domain": "GEOGRAPHICAL_INDICATIONS"
+    },
+    {
+      "source_id": "IND_DRUGS_MAGIC_REMEDIES_ACT_1954",
+      "title": "Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954",
+      "authority": "Ministry of Health & Family Welfare",
+      "jurisdiction": "IN",
+      "authority_level": 5,
+      "file_path": "data/corpus/advertising_and_claims/drugs_and_magic_remedies_act_1954.json",
+      "domain": "ADVERTISING_AND_CLAIMS"
+    },
+    {
+      "source_id": "INT_WIPO_GRATK_TREATY_2024",
+      "title": "WIPO Treaty on IP, Genetic Resources & TK (2024)",
+      "authority": "WIPO",
+      "jurisdiction": "INT",
+      "authority_level": 5,
+      "file_path": "data/corpus/international_treaties_and_markets/wipo_gratk_treaty_2024.json",
+      "domain": "INTERNATIONAL_IP_AND_TREATIES"
+    },
+    {
+      "source_id": "INT_EXPORT_REGULATIONS_US_EU",
+      "title": "Comparative Export Regulations (US FDA & EU EMA)",
+      "authority": "US FDA / EMA",
+      "jurisdiction": "INT",
+      "authority_level": 4,
+      "file_path": "data/corpus/international_treaties_and_markets/us_fda_and_eu_herbal_export_regulations.json",
+      "domain": "INTERNATIONAL_EXPORT_REGULATION"
+    },
+    {
+      "source_id": "IND_TKDL_REPRESENTATIVE_FORMULATIONS",
+      "title": "TKDL Representative Prior Art Catalog",
+      "authority": "CSIR-TKDL / Ministry of Ayush",
+      "jurisdiction": "IN",
+      "authority_level": 4,
+      "file_path": "data/corpus/ayurveda_tk_and_taxonomy/tkdl_representative_formulations.json",
+      "domain": "TRADITIONAL_KNOWLEDGE_PRIOR_ART"
+    },
+    {
+      "source_id": "IND_MEDICINAL_PLANT_BOTANICAL_TAXONOMY",
+      "title": "Ayurvedic Medicinal Plant Taxonomy & ABS Ontology",
+      "authority": "National Medicinal Plants Board",
+      "jurisdiction": "IN",
+      "authority_level": 4,
+      "file_path": "data/corpus/ayurveda_tk_and_taxonomy/medicinal_plant_botanical_taxonomy.json",
+      "domain": "BOTANICAL_ONTOLOGY"
+    },
+    {
+      "source_id": "IND_LANDMARK_LEGAL_PRECEDENTS",
+      "title": "Landmark Case Laws & Precedents (Turmeric, Neem, Divya Pharmacy)",
+      "authority": "Supreme Court / High Courts / USPTO / EPO",
+      "jurisdiction": "IN_AND_INT",
+      "authority_level": 4,
+      "file_path": "data/corpus/case_laws/landmark_precedents.json",
+      "domain": "CASE_LAW_PRECEDENTS"
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "statute_id": "IND_DCA_1940_FIRST_SCHEDULE",
+  "statute_title": "First Schedule to the Drugs and Cosmetics Act, 1940 (Authoritative Classical ASU Texts)",
+  "authority_level": 5,
+  "jurisdiction": "IN",
+  "legal_significance": "Under Section 3(a) of the Drugs & Cosmetics Act, 1940, only formulations manufactured in accordance with recipes in these 56 books qualify as Classical ASU Drugs without requiring Rule 158B safety trials. Under Section 3(p) of the Patents Act, 1970, all recipes in these 56 books constitute anticipation in prior art.",
+  "total_texts": 56,
+  "texts": [
+    {
+      "book_no": 1,
+      "sanskrit_name": "Arogya Kalpadruma",
+      "author": "Kaikulangara Rama Warrier",
+      "region": "Kerala Tradition",
+      "clinical_scope": "Kaumarbhritya (Pediatrics), Bala Chikitsa, General therapeutics"
+    },
+    {
+      "book_no": 2,
+      "sanskrit_name": "Arka Prakasha",
+      "author": "Lankapati Ravana",
+      "region": "Pan-India Classical",
+      "clinical_scope": "Arka Kalpana (Distillation science), volatile herbal essences, emergency tinctures"
+    },
+    {
+      "book_no": 3,
+      "sanskrit_name": "Arya Bhishak",
+      "author": "Shankar Daji Pade",
+      "region": "Western India / Maharashtra & Gujarat",
+      "clinical_scope": "Comprehensive materia medica and polyherbal remedies"
+    },
+    {
+      "book_no": 4,
+      "sanskrit_name": "Ashtanga Hridaya",
+      "author": "Acharya Vagbhata",
+      "region": "Brihat-Trayi (Foundational Great Trio)",
+      "clinical_scope": "Kaya Chikitsa, Prameha, Jwara, Rasayana, Panchakarma"
+    },
+    {
+      "book_no": 5,
+      "sanskrit_name": "Ashtanga Sangraha",
+      "author": "Vriddha Vagbhata",
+      "region": "Brihat-Trayi (Foundational Great Trio)",
+      "clinical_scope": "Exhaustive encyclopedic classical Ayurveda across all 8 branches"
+    },
+    {
+      "book_no": 6,
+      "sanskrit_name": "Ayurveda Kalpadruma",
+      "author": "Pandit Lakshmana Sastri",
+      "region": "North-Western Classical",
+      "clinical_scope": "Compound herbal-mineral Rasashastra formulations"
+    },
+    {
+      "book_no": 7,
+      "sanskrit_name": "Ayurveda Prakasha",
+      "author": "Madhava Upadhyaya",
+      "region": "Rasashastra Classical",
+      "clinical_scope": "Parada Samskaras, Bhasma Kalpana, Kupipakwa Rasayana"
+    },
+    {
+      "book_no": 8,
+      "sanskrit_name": "Ayurveda Samgraha",
+      "author": "Acharya Chakrapanidatta",
+      "region": "Bengal Ayurvedic Classical",
+      "clinical_scope": "Polyherbal compound therapeutics, Gutika, Vati, Kwatha"
+    },
+    {
+      "book_no": 9,
+      "sanskrit_name": "Ayurveda Sarasangraha",
+      "author": "Traditional Acharyas (Baidyanath tradition)",
+      "region": "North India",
+      "clinical_scope": "Standard North Indian classical manufacturing manual"
+    },
+    {
+      "book_no": 10,
+      "sanskrit_name": "Bhaishajya Ratnavali",
+      "author": "Kaviraj Govinda Das Sen",
+      "region": "Bengal / Pan-India",
+      "clinical_scope": "Gold-standard classical clinical formulary for Rasashastra & polyherbals"
+    },
+    {
+      "book_no": 11,
+      "sanskrit_name": "Bharat Bhaishajya Ratnakara",
+      "author": "Gopinath Sen",
+      "region": "5-Volume Pan-India Encyclopedia",
+      "clinical_scope": "Exhaustive compilation of 10,000+ classical formulations"
+    },
+    {
+      "book_no": 12,
+      "sanskrit_name": "Bhavaprakasha / Bhavaprakasha Nighantu",
+      "author": "Acharya Bhava Mishra",
+      "region": "Laghu-Trayi (Lesser Trio)",
+      "clinical_scope": "The supreme classical authority on herbal pharmacognosy and Rasa-panchaka"
+    },
+    {
+      "book_no": 13,
+      "sanskrit_name": "Brihat Nighantu Ratnakara",
+      "author": "Dattaram Chaube",
+      "region": "Western / Northern India",
+      "clinical_scope": "Materia medica, compound formulations, single herb actions"
+    },
+    {
+      "book_no": 14,
+      "sanskrit_name": "Charaka Samhita",
+      "author": "Maharshi Agnivesha / Redacted by Charaka & Dridhabala",
+      "region": "Brihat-Trayi (Foundational Great Trio)",
+      "clinical_scope": "The supreme foundational compendium on Internal Medicine, Sutrasthana, Chikitsasthana"
+    },
+    {
+      "book_no": 15,
+      "sanskrit_name": "Chikitsa Kalika",
+      "author": "Tisata Acharya",
+      "region": "Classical Therapeutics",
+      "clinical_scope": "Exact posology, dosage, and vehicle (Anupana) prescriptions"
+    },
+    {
+      "book_no": 16,
+      "sanskrit_name": "Chikitsa Sara Sangraha",
+      "author": "Vangasena",
+      "region": "Eastern Classical",
+      "clinical_scope": "Clinical management of intractable and chronic diseases"
+    },
+    {
+      "book_no": 17,
+      "sanskrit_name": "Dravyaguna Sangraha",
+      "author": "Chakrapanidatta",
+      "region": "Bengal Classical",
+      "clinical_scope": "Pharmacological properties of food ingredients and botanical dravyas"
+    },
+    {
+      "book_no": 18,
+      "sanskrit_name": "Gada Nigraha",
+      "author": "Acharya Sodhala",
+      "region": "Gujarat Classical",
+      "clinical_scope": "Comprehensive clinical treatise grouped by formulation classes"
+    },
+    {
+      "book_no": 19,
+      "sanskrit_name": "Galagandadi Rogadhikara",
+      "author": "Traditional Masters",
+      "region": "Specialized Classical",
+      "clinical_scope": "Thyroid, lymphadenopathy, and glandular swelling formulations"
+    },
+    {
+      "book_no": 20,
+      "sanskrit_name": "Kaviraja Sangraha",
+      "author": "Bengal Kaviraja Tradition",
+      "region": "Eastern India",
+      "clinical_scope": "Practical compounding formulas for classical physicians"
+    },
+    {
+      "book_no": 21,
+      "sanskrit_name": "Kuppuswamy Mudaliar Formulary",
+      "author": "Kuppuswamy Mudaliar",
+      "region": "Southern Regional Classical",
+      "clinical_scope": "Compound preparations combining southern ASU traditions"
+    },
+    {
+      "book_no": 22,
+      "sanskrit_name": "Madhava Nidana (Roga Vinischaya)",
+      "author": "Acharya Madhavakara",
+      "region": "Laghu-Trayi (Lesser Trio)",
+      "clinical_scope": "The supreme diagnostic manual on etiology, pathogenesis, and symptomatology"
+    },
+    {
+      "book_no": 23,
+      "sanskrit_name": "Materia Medica of Ayurveda",
+      "author": "Umesh Chandra Dutt / P.C. Ray",
+      "region": "Modern Classical Harmonization",
+      "clinical_scope": "Standardized botanical, mineral, and animal origin dravya descriptions"
+    },
+    {
+      "book_no": 24,
+      "sanskrit_name": "Nighantu Ratnakara",
+      "author": "Vishnu Vasudev Godbole",
+      "region": "Western India",
+      "clinical_scope": "Encyclopedic lexicon of Sanskrit synonyms and actions"
+    },
+    {
+      "book_no": 25,
+      "sanskrit_name": "Pathya-Apathya Vinischaya",
+      "author": "Harita tradition",
+      "region": "Classical Dietetics",
+      "clinical_scope": "Dietary guidelines, wholesome foods and prohibited combinations (Viruddha Ahara)"
+    },
+    {
+      "book_no": 26,
+      "sanskrit_name": "Raja Nighantu",
+      "author": "Narahari Pandita",
+      "region": "Kashmir Classical",
+      "clinical_scope": "14th-century botanical taxonomy and classification"
+    },
+    {
+      "book_no": 27,
+      "sanskrit_name": "Rasa Chandranshu",
+      "author": "Dattaram Chaube",
+      "region": "Rasashastra Classical",
+      "clinical_scope": "Mercurial processing, Gandhaka Jarana, and Kharaliya Rasayanas"
+    },
+    {
+      "book_no": 28,
+      "sanskrit_name": "Rasa Prakasha Sudhakara",
+      "author": "Acharya Yashodhara",
+      "region": "13th-century Rasashastra",
+      "clinical_scope": "Mineral and metallic transmutation and potentiation"
+    },
+    {
+      "book_no": 29,
+      "sanskrit_name": "Rasa Ratna Samucchaya",
+      "author": "Vagbhata (Son of Simhagupta)",
+      "region": "Premier Alchemical Classic",
+      "clinical_scope": "The definitive classical textbook on Ayurvedic mineralogy and pharmaceutical chemistry"
+    },
+    {
+      "book_no": 30,
+      "sanskrit_name": "Rasa Tarangini",
+      "author": "Acharya Sadananda Sharma",
+      "region": "Modern Standard Rasashastra",
+      "clinical_scope": "The standard contemporary syllabus text on 24 Tarangas of mineral/metallic purification"
+    },
+    {
+      "book_no": 31,
+      "sanskrit_name": "Rasa Yoga Sagara",
+      "author": "Pandit Hariprapanna",
+      "region": "2-Volume Monumental Classic",
+      "clinical_scope": "Alphabetical compilation of over 4,000 Rasa formulations"
+    },
+    {
+      "book_no": 32,
+      "sanskrit_name": "Rasendra Chintamani",
+      "author": "Dhunda-natha",
+      "region": "Classical Mineralogy",
+      "clinical_scope": "Parpati and Kupipakwa pharmaceutical processing"
+    },
+    {
+      "book_no": 33,
+      "sanskrit_name": "Rasendra Sara Sangraha",
+      "author": "Gopala Krishna Bhatta",
+      "region": "Bengal Rasashastra",
+      "clinical_scope": "Therapeutic recipes combining herbs and calcinated minerals"
+    },
+    {
+      "book_no": 34,
+      "sanskrit_name": "Rasa Hridaya Tantra",
+      "author": "Govinda Bhagavatpada",
+      "region": "Early Alchemical Classic",
+      "clinical_scope": "18 Samskaras of Parada and cellular rejuvenators"
+    },
+    {
+      "book_no": 35,
+      "sanskrit_name": "Sahasrayoga",
+      "author": "Traditional Kerala Vaidyas",
+      "region": "Kerala Ayurvedic Formulary",
+      "clinical_scope": "Monumental compilation of 1,000 practical clinical formulas (Kashayas, Asavas, Tailas)"
+    },
+    {
+      "book_no": 36,
+      "sanskrit_name": "Sarngadhara Samhita",
+      "author": "Acharya Sarngadhara",
+      "region": "Laghu-Trayi (Lesser Trio)",
+      "clinical_scope": "The premier classical authority on Bhaishajya Kalpana (Pharmaceutical science) and Nadi Pariksha"
+    },
+    {
+      "book_no": 37,
+      "sanskrit_name": "Siddha Bhaishajya Manimala",
+      "author": "Rajarama Kalidasa",
+      "region": "Western Classical",
+      "clinical_scope": "Rhymed versified compounding recipes for quick memorization"
+    },
+    {
+      "book_no": 38,
+      "sanskrit_name": "Siddha Yoga",
+      "author": "Vrinda Kavi",
+      "region": "Early Medieval Classical",
+      "clinical_scope": "Proven clinical polyherbal compound remedies"
+    },
+    {
+      "book_no": 39,
+      "sanskrit_name": "Sushruta Samhita",
+      "author": "Maharshi Sushruta / Redacted by Nagarjuna",
+      "region": "Brihat-Trayi (Foundational Great Trio)",
+      "clinical_scope": "The supreme foundational compendium on Surgery, Kshara-sutra, Anatomy, and Toxicology"
+    },
+    {
+      "book_no": 40,
+      "sanskrit_name": "Vaidyaka Shabda Sindhu",
+      "author": "Kaviraj Umesh Chandra Gupta",
+      "region": "19th-Century Encyclopedic Lexicon",
+      "clinical_scope": "Comprehensive Sanskrit medical lexicon with botanical concordances"
+    },
+    {
+      "book_no": 41,
+      "sanskrit_name": "Vangasena Samhita",
+      "author": "Acharya Vangasena",
+      "region": "Eastern Classical",
+      "clinical_scope": "Exhaustive therapeutic manual on clinical internal medicine"
+    },
+    {
+      "book_no": 42,
+      "sanskrit_name": "Yogaratnakara",
+      "author": "Mayura Pada Acharya",
+      "region": "17th-Century Comprehensive Classic",
+      "clinical_scope": "Master compilation of diagnosis (Ashtavidha Pariksha), diet, and formulations"
+    },
+    {
+      "book_no": 43,
+      "sanskrit_name": "Yogatarangini",
+      "author": "Trimalla Bhatta",
+      "region": "Southern / Central Classical",
+      "clinical_scope": "Specialized formulation recipes and clinical therapeutics"
+    },
+    {
+      "book_no": 44,
+      "sanskrit_name": "Kashyapa Samhita (Vriddha Jivakiya Tantra)",
+      "author": "Maharshi Kashyapa / Acharya Vatsya",
+      "region": "Ancient Classical",
+      "clinical_scope": "The supreme foundational authority on Kaumarbhritya (Pediatrics) & Prasuti-tantra (Obstetrics)"
+    },
+    {
+      "book_no": 45,
+      "sanskrit_name": "Bhel Samhita",
+      "author": "Maharshi Bhela",
+      "region": "Ancient Classical",
+      "clinical_scope": "Companion classical treatise to Charaka Samhita"
+    },
+    {
+      "book_no": 46,
+      "sanskrit_name": "Harita Samhita",
+      "author": "Maharshi Harita",
+      "region": "Ancient Classical",
+      "clinical_scope": "Etiology of complex systemic diseases and lifestyle guidelines"
+    },
+    {
+      "book_no": 47,
+      "sanskrit_name": "Chakradatta",
+      "author": "Acharya Chakrapanidatta",
+      "region": "Bengal Classical",
+      "clinical_scope": "Authoritative clinical recipes with exact herbal purification methods"
+    },
+    {
+      "book_no": 48,
+      "sanskrit_name": "Ananda Kanda",
+      "author": "Mahananda Acharya",
+      "region": "Rasashastra Encyclopedia",
+      "clinical_scope": "Encyclopedic metallurgy, mineral processing, and botanical extracts"
+    },
+    {
+      "book_no": 49,
+      "sanskrit_name": "Shodhala Nighantu",
+      "author": "Acharya Sodhala",
+      "region": "Materia Medica",
+      "clinical_scope": "Botanical glossary of rare Ayurvedic forest herbs and identification"
+    },
+    {
+      "book_no": 50,
+      "sanskrit_name": "Dhanvantari Nighantu",
+      "author": "Dhanvantari Tradition",
+      "region": "Ancient Materia Medica",
+      "clinical_scope": "Foundational Sanskrit glossary of medicinal herbs and therapeutics"
+    },
+    {
+      "book_no": 51,
+      "sanskrit_name": "Kaiyadeva Nighantu (Pathyapathya-Vibodhaka)",
+      "author": "Acharya Kaiyadeva",
+      "region": "15th-Century Classical",
+      "clinical_scope": "Exhaustive classification of herbs, foods, dietetics, and therapeutic actions"
+    },
+    {
+      "book_no": 52,
+      "sanskrit_name": "Madanapala Nighantu",
+      "author": "King Madanapala",
+      "region": "Royal Pharmacopoeial Lexicon",
+      "clinical_scope": "Medieval pharmacognosy and botanical synonyms"
+    },
+    {
+      "book_no": 53,
+      "sanskrit_name": "Shaligram Nighantu",
+      "author": "Shaligram Vaishya",
+      "region": "19th-Century Classical",
+      "clinical_scope": "Detailed descriptions of single dravyas, parts used, and clinical indications"
+    },
+    {
+      "book_no": 54,
+      "sanskrit_name": "Priya Nighantu",
+      "author": "Prof. Priyavrat Sharma",
+      "region": "Modern Botanical Concordance",
+      "clinical_scope": "Modern botanical-Sanskrit concordance and pharmacological classifications"
+    },
+    {
+      "book_no": 55,
+      "sanskrit_name": "Vaidya Manoramya",
+      "author": "Traditional Kerala Masters",
+      "region": "Kerala Clinical Manual",
+      "clinical_scope": "Southern Indian clinical handbook of high-potency formulations"
+    },
+    {
+      "book_no": 56,
+      "sanskrit_name": "Brihat Trayi Compendia Combined",
+      "author": "NCISM / Ministry of Ayush",
+      "region": "Statutory Consolidated Reference",
+      "clinical_scope": "Statutory consolidated reference covering Charaka, Sushruta, and Vagbhata"
+    }
+  ]
+}

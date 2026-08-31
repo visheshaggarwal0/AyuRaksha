@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:57:15.213347+00:00
+# IND_GEOGRAPHICAL_INDICATIONS_ACT_1999
+# URL: https://www.indiacode.nic.in/handle/123456789/1988
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_GEOGRAPHICAL_INDICATIONS_ACT_1999

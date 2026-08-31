@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:47.317497+00:00
+# IND_AYUSH_GMP_SCHEDULE_T
+# URL: https://www.ayush.gov.in/docs/ScheduleT_GMP.pdf
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_AYUSH_GMP_SCHEDULE_T

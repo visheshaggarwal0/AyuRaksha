@@ -1,0 +1,42 @@
+{
+  "document_id": "IND_FSSAI_AYURVEDA_AAHARA_2022",
+  "title": "Food Safety and Standards (Ayurveda Aahara) Regulations, 2022",
+  "authority": "Food Safety and Standards Authority of India (FSSAI) / Ministry of Health & Family Welfare",
+  "jurisdiction": "IN",
+  "domain": "FOOD_AYURVEDA_AAHARA",
+  "document_type": "REGULATION",
+  "authority_level": 5,
+  "gazette_notification_date": "2022-05-05",
+  "regulations": [
+    {
+      "regulation_number": "Regulation 2(1)(a)",
+      "heading": "Definition of Ayurveda Aahara",
+      "text": "'Ayurveda Aahara' means food prepared in accordance with the recipes or ingredients or processes described in the authoritative books of Ayurveda listed in Schedule A of these regulations, but shall not include Ayurvedic drugs or medicines, proprietary Ayurvedic medicines, or modern processed foods with synthetic vitamins added.",
+      "relevance": "Core legal boundary separating Food Supplements from AYUSH Drugs."
+    },
+    {
+      "regulation_number": "Regulation 3",
+      "heading": "General Requirements for Ayurveda Aahara",
+      "text": "(1) No person shall manufacture or sell Ayurveda Aahara without FSSAI licensing and prior approval.\n(2) Shall not contain any synthetic chemicals, vitamins, minerals, amino acids, or modern drug molecules.\n(3) Purity standards, pesticide limits, and heavy metal limits shall conform to the standards specified in Schedule B.",
+      "relevance": "Strict prohibition of synthetic additives in authentic Ayurveda Aahara."
+    },
+    {
+      "regulation_number": "Regulation 5",
+      "heading": "Permissible and Prohibited Claims",
+      "text": "(1) Labelling and advertising may specify physiological benefits, dosha balancing properties, or traditional wellness rationales described in classical texts.\n(2) STRICT PROHIBITION: No claim shall be made to cure, treat, diagnose, mitigate or prevent any human disease or disorder, nor shall any reference be made to diseases listed in Schedule J of the Drugs and Cosmetics Rules or the Drugs and Magic Remedies Act.",
+      "relevance": "Critical regulatory boundary: Disease claims immediately disqualify product from FSSAI and mandate AYUSH drug license."
+    },
+    {
+      "regulation_number": "Regulation 6",
+      "heading": "Mandatory Ayurveda Aahara Logo",
+      "text": "Every package of Ayurveda Aahara shall prominently display the special 'Ayurveda Aahara' logo specified in Schedule C, consisting of the Devanagari character combined with green leaves, indicating compliance with the FSSAI-Ministry of Ayush joint regulations.",
+      "relevance": "Mandatory front-of-pack regulatory branding requirement."
+    },
+    {
+      "regulation_number": "Regulation 8",
+      "heading": "Expert Committee Mechanism",
+      "text": "Constitutes an Expert Committee with representatives from the Ministry of Ayush to evaluate novel food formulations, classical textual validation, and consumer safety.",
+      "relevance": "Approval pathway for new Ayurveda Aahara submissions."
+    }
+  ]
+}

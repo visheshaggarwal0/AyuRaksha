@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:57:04.790535+00:00
+# IND_PATENTS_RULES_2003_2024
+# URL: https://www.indiacode.nic.in/handle/123456789/1362?view_type=browse&lang=en
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_PATENTS_RULES_2003_2024

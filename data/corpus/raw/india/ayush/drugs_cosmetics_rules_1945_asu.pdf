@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:01.998428+00:00
+# IND_DRUGS_COSMETICS_RULES_1945_ASU
+# URL: https://www.indiacode.nic.in/handle/123456789/2152?view_type=browse
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_DRUGS_COSMETICS_RULES_1945_ASU

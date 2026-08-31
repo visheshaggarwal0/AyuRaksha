@@ -1,0 +1,62 @@
+{
+  "document_id": "IND_TKDL_REPRESENTATIVE_FORMULATIONS",
+  "title": "Traditional Knowledge Digital Library (TKDL) Representative Prior Art Formulations",
+  "authority": "CSIR-TKDL / Ministry of Ayush",
+  "jurisdiction": "IN",
+  "domain": "TRADITIONAL_KNOWLEDGE_PRIOR_ART",
+  "document_type": "TKDL_CATALOG",
+  "authority_level": 4,
+  "formulations": [
+    {
+      "tkdl_id": "TKDL-AYU-001",
+      "formulation_name": "Triphala Churna",
+      "ingredients": [
+        { "sanskrit_name": "Haritaki", "botanical_name": "Terminalia chebula", "part": "Fruit rind", "ratio": "1 part" },
+        { "sanskrit_name": "Bibhitaki", "botanical_name": "Terminalia bellirica", "part": "Fruit rind", "ratio": "1 part" },
+        { "sanskrit_name": "Amalaki", "botanical_name": "Phyllanthus emblica", "part": "Fruit rind", "ratio": "1 part" }
+      ],
+      "classical_source": "Charaka Samhita (Chikitsasthana, Chapter 1)",
+      "traditional_indications": ["Deepana (digestive stimulant)", "Chakshushya (vision promoting)", "Anulomana (mild laxative)", "Rasayana (rejuvenator)"],
+      "tkrc_ipc_classification": "A61K 36/185",
+      "patent_status": "Prior Art (Section 3p bar applies to direct composition and known indications)"
+    },
+    {
+      "tkdl_id": "TKDL-AYU-002",
+      "formulation_name": "Trikatu Churna",
+      "ingredients": [
+        { "sanskrit_name": "Shunthi", "botanical_name": "Zingiber officinale", "part": "Rhizome", "ratio": "1 part" },
+        { "sanskrit_name": "Maricha", "botanical_name": "Piper nigrum", "part": "Fruit", "ratio": "1 part" },
+        { "sanskrit_name": "Pippali", "botanical_name": "Piper longum", "part": "Fruit", "ratio": "1 part" }
+      ],
+      "classical_source": "Sharangadhara Samhita (Madhyama Khanda)",
+      "traditional_indications": ["Agni-deepana (appetizer)", "Kaphahara (respiratory support)", "Bio-enhancer for bioavailability"],
+      "tkrc_ipc_classification": "A61K 36/906",
+      "patent_status": "Prior Art (Section 3p bar; novel piperine derivatives or patented nano-carriers may qualify)"
+    },
+    {
+      "tkdl_id": "TKDL-AYU-003",
+      "formulation_name": "Nisha-Amalaki Churna",
+      "ingredients": [
+        { "sanskrit_name": "Haridra / Nisha", "botanical_name": "Curcuma longa", "part": "Rhizome", "ratio": "1 part" },
+        { "sanskrit_name": "Amalaki", "botanical_name": "Phyllanthus emblica", "part": "Fruit", "ratio": "1 part" }
+      ],
+      "classical_source": "Ashtanga Hridaya (Chikitsasthana, Prameha Chikitsa)",
+      "traditional_indications": ["Prameha-hara (anti-diabetic)", "Kledahara (clearing metabolic stagnation)", "Raktashodhaka (blood purifier)"],
+      "tkrc_ipc_classification": "A61K 36/9066",
+      "patent_status": "Prior Art (Direct anti-diabetic herbal combination cannot be patented under Section 3p; modified nano-emulsion or specific synergistic ratio with clinical bio-data may be evaluated under Section 3e)"
+    },
+    {
+      "tkdl_id": "TKDL-AYU-004",
+      "formulation_name": "Chyawanprash Avaleha",
+      "ingredients": [
+        { "sanskrit_name": "Amalaki", "botanical_name": "Phyllanthus emblica", "part": "Fresh fruit", "ratio": "Base" },
+        { "sanskrit_name": "Dashamoola group", "botanical_name": "10 Classical Roots", "part": "Roots", "ratio": "Decoction" },
+        { "sanskrit_name": "Ashtavarga & Pippali", "botanical_name": "Botanicals", "part": "Various", "ratio": "Prakshepa" }
+      ],
+      "classical_source": "Charaka Samhita (Chikitsasthana, Chapter 1-1, Verses 62-74)",
+      "traditional_indications": ["Kasa-shwasa (respiratory care)", "Rasayana (immunity/cellular rejuvenation)", "Brimhana (nourishing)"],
+      "tkrc_ipc_classification": "A61K 36/00",
+      "patent_status": "Prior Art (Classical formulation protected from exclusive monopoly; modern sugar-free stabilized process may be patentable if novel)"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "document_id": "IND_DRUGS_COSMETICS_ACT_1940_ASU",
+  "title": "The Drugs and Cosmetics Act, 1940 (Chapter IV-A: Ayurvedic, Siddha and Unani Drugs)",
+  "authority": "Ministry of Ayush / Central Drugs Standard Control Organization (CDSCO) / State Licensing Authorities",
+  "jurisdiction": "IN",
+  "domain": "AYUSH_DRUG_REGULATION",
+  "document_type": "ACT",
+  "authority_level": 5,
+  "sections": [
+    {
+      "section_number": "Section 3(a)",
+      "heading": "Definition of Ayurvedic, Siddha or Unani Drug (Classical)",
+      "text": "'Ayurvedic, Siddha or Unani drug' includes all medicines intended for internal or external use for or in the diagnosis, treatment, mitigation or prevention of disease or disorder in human beings or animals, and manufactured exclusively in accordance with the formulae described in the authoritative books of Ayurvedic, Siddha and Unani systems of medicine specified in the First Schedule.",
+      "relevance": "Legal definition of Classical (Shastriya) Ayurvedic medicine."
+    },
+    {
+      "section_number": "Section 3(h)",
+      "heading": "Definition of Patent or Proprietary Medicine (ASU)",
+      "text": "'patent or proprietary medicine', in relation to Ayurvedic, Siddha or Unani systems of medicine, means a drug which is a remedy or prescription presented in a form ready for internal or external administration on or in human beings or animals and which is not included in the authoritative books of Ayurvedic, Siddha or Unani systems of medicine specified in the First Schedule.",
+      "relevance": "Legal definition of Proprietary (Anubhuta) Ayurvedic medicine requiring Rule 158B licensing."
+    },
+    {
+      "section_number": "Section 33C",
+      "heading": "Ayurvedic, Siddha and Unani Drugs Technical Advisory Board (ASUDTAB)",
+      "text": "The Central Government shall constitute a Board to be called the Ayurvedic, Siddha and Unani Drugs Technical Advisory Board to advise the Central and State Governments on technical matters arising out of the administration of Chapter IV-A.",
+      "relevance": "Apex technical authority for ASU drug standards."
+    },
+    {
+      "section_number": "Section 33EE",
+      "heading": "Misbranded ASU Drugs",
+      "text": "An ASU drug shall be deemed to be misbranded if it is so coloured, coated, powdered or polished that damage is concealed, or if it is not labelled in the prescribed manner, or if its label makes false claims regarding curative or therapeutic properties.",
+      "relevance": "Strict statutory ban on unauthorized therapeutic claims on labels."
+    },
+    {
+      "section_number": "Section 33EED",
+      "heading": "Adulterated ASU Drugs",
+      "text": "An ASU drug shall be deemed to be adulterated if it consists in whole or in part of any filthy, putrid or decomposed substance, or if it contains any harmful or toxic substance, or if any substance has been mixed therewith so as to reduce its quality or strength.",
+      "relevance": "Contaminant testing (heavy metals, aflatoxins, pesticide residues) under Ayurvedic Pharmacopoeia of India."
+    },
+    {
+      "section_number": "Section 33EEE",
+      "heading": "Spurious ASU Drugs",
+      "text": "An ASU drug shall be deemed to be spurious if it is manufactured under a name which belongs to another drug, or if it is an imitation of another drug, or if it purports to be the product of a manufacturer of whom it is not truly a product.",
+      "relevance": "Trademark and counterfeit ASU product enforcement."
+    }
+  ]
+}

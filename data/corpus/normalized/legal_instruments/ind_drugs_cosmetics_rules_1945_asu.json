@@ -1,0 +1,72 @@
+{
+  "document_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+  "title": "The Drugs and Cosmetics Rules, 1945 (Part XVI & XVI-A: ASU Drugs)",
+  "short_title": "DCR 1945 Part XVI",
+  "jurisdiction": "IN",
+  "country": "India",
+  "authority": "Ministry of Ayush / State Licensing Authorities",
+  "issuing_body": "Ministry of Health and Family Welfare / Ministry of Ayush",
+  "domain": ["AYUSH_DRUG_REGULATION", "MANUFACTURING_GMP"],
+  "document_type": "RULES",
+  "authority_level": 5,
+  "source": {
+    "url": "https://ayush.gov.in/docs/drugs-and-cosmetics-rules-1945.pdf",
+    "source_type": "OFFICIAL_RULES_MINISTRY_OF_AYUSH",
+    "retrieved_at": "2026-08-31",
+    "file_name": "drugs_cosmetics_rules_1945_asu.pdf",
+    "sha256": "3f9821811e59273c509cfae4f88410292f7543a6d962058444a169123019be55",
+    "mime_type": "application/pdf",
+    "storage_uri": "gs://ayuraksha-corpus/raw/india/ayush/drugs_cosmetics_rules_1945_asu.pdf"
+  },
+  "version": {
+    "published_date": "1945-12-21",
+    "effective_from": "1945-12-21",
+    "effective_until": null,
+    "version_label": "2024 Consolidated",
+    "supersedes_version": "2020 Consolidated"
+  },
+  "provisions": [
+    {
+      "provision_id": "DCR_1945_RULE_158B",
+      "type": "RULE",
+      "number": "158B",
+      "heading": "Guidelines for Issue of License with Respect to Patent or Proprietary ASU Medicine",
+      "text": "For the grant of license for Patent or Proprietary ASU medicines under Rule 154:\n(I) For ASU medicines containing ingredients mentioned in the First Schedule books with new indications, proof of safety and effectiveness based on textual rationales or pilot clinical trial data is required.\n(II) For ASU medicines with modified extracts or novel extraction techniques, acute toxicity studies and published scientific literature are required.\n(III) For novel botanical combinations not in classical texts, safety data and clinical trial verification as prescribed are required.",
+      "location": {
+        "part": "Part XVI (Manufacture for Sale of ASU Drugs)",
+        "page_start": 182,
+        "page_end": 184
+      },
+      "topics": ["RULE_158B", "PROPRIETARY_LICENSE", "SAFETY_DATA", "CLINICAL_PROOF"],
+      "statutory_significance": "The exact evidentiary threshold for state licensing of proprietary Ayurvedic drugs."
+    },
+    {
+      "provision_id": "DCR_1945_RULE_161",
+      "type": "RULE",
+      "number": "161",
+      "heading": "Labelling, Packing and Batch Details",
+      "text": "Every container of an Ayurvedic drug shall bear on its label:\n(a) Name of the drug (classical name as per First Schedule, or proprietary brand name).\n(b) Complete list of all ingredients with their Sanskrit botanical names and quantities.\n(c) The name of the classical text (for classical drugs).\n(d) Batch number, manufacturing license number, manufacturing date, and expiry date.\n(e) Prominent warning for Schedule E(1) ingredients: 'To be taken under medical supervision'.",
+      "location": {
+        "part": "Part XVII (Labelling and Packing of ASU Drugs)",
+        "page_start": 189,
+        "page_end": 191
+      },
+      "topics": ["LABELLING", "INGREDIENTS_LIST", "SCHEDULE_E1_WARNING", "BATCH_DETAILS"],
+      "statutory_significance": "Mandatory statutory labelling checklist for retail commercialization."
+    },
+    {
+      "provision_id": "DCR_1945_SCHEDULE_T",
+      "type": "SCHEDULE",
+      "number": "Schedule T",
+      "heading": "Good Manufacturing Practices for Ayurvedic, Siddha and Unani Medicines",
+      "text": "Prescribes factory requirements for location, premises, hygiene, raw material quarantine, manufacturing records (BMR), standard operating procedures, and quality control laboratories.",
+      "location": {
+        "part": "Schedules to DCR 1945",
+        "page_start": 210,
+        "page_end": 222
+      },
+      "topics": ["GMP", "SCHEDULE_T", "QUALITY_CONTROL", "MANUFACTURING_PREMISES"],
+      "statutory_significance": "Prerequisite for manufacturing license issuance and international WHO-GMP export certification."
+    }
+  ]
+}

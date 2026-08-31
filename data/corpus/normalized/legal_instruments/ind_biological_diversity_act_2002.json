@@ -1,0 +1,100 @@
+{
+  "document_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002",
+  "title": "The Biological Diversity Act, 2002 (Act No. 18 of 2003 as amended by Act No. 10 of 2023)",
+  "short_title": "Biological Diversity Act 2002",
+  "jurisdiction": "IN",
+  "country": "India",
+  "authority": "National Biodiversity Authority (NBA)",
+  "issuing_body": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+  "domain": ["BIODIVERSITY_ABS", "ENVIRONMENT"],
+  "document_type": "ACT",
+  "authority_level": 5,
+  "source": {
+    "url": "https://www.indiacode.nic.in/handle/123456789/2046",
+    "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
+    "retrieved_at": "2026-08-31",
+    "file_name": "the_biological_diversity_act_2002.pdf",
+    "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "mime_type": "application/pdf",
+    "storage_uri": "gs://ayuraksha-corpus/raw/india/biodiversity/the_biological_diversity_act_2002.pdf"
+  },
+  "version": {
+    "published_date": "2003-02-05",
+    "effective_from": "2003-10-01",
+    "effective_until": null,
+    "version_label": "2023 Amendment Consolidated",
+    "supersedes_version": "2002 Original Act"
+  },
+  "provisions": [
+    {
+      "provision_id": "BDA_2002_SEC_002_C",
+      "type": "SECTION",
+      "number": "2(c)",
+      "heading": "Biological Resources",
+      "text": "'biological resources' means plants, animals and microorganisms or parts thereof, their genetic material and by-products (excluding value added products) with actual or potential use or value, but does not include human genetic material.",
+      "location": {
+        "chapter": "Chapter I (Preliminary)",
+        "page_start": 2,
+        "page_end": 2
+      },
+      "topics": ["BIOLOGICAL_RESOURCES", "SCOPE", "MEDICINAL_PLANTS"],
+      "statutory_significance": "Defines statutory scope across all Ayurvedic raw botanicals."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_003",
+      "type": "SECTION",
+      "number": "3",
+      "heading": "Certain Persons Not to Undertake Biodiversity Related Activities Without Approval of NBA",
+      "text": "(1) No person who is not a citizen of India; or a citizen of India who is an NRI; or a body corporate, association or organization not incorporated or registered in India, or incorporated or registered in India having any non-Indian participation in its share capital or management, shall obtain any biological resource occurring in India or knowledge associated thereto for research or for commercial utilisation or for bio-survey and bio-utilisation without previous approval of the National Biodiversity Authority on Form I.",
+      "location": {
+        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
+        "page_start": 4,
+        "page_end": 5
+      },
+      "topics": ["FOREIGN_ENTITIES", "NBA_APPROVAL", "COMMERCIAL_UTILISATION", "FORM_I"],
+      "statutory_significance": "Mandatory prior approval barrier for foreign/NRI investors and export entities."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_006",
+      "type": "SECTION",
+      "number": "6",
+      "heading": "Application for Intellectual Property Rights (IPR Approval)",
+      "text": "(1) No person shall apply for any intellectual property right, by whatever name called, in or outside India for any invention based on any research or information on a biological resource obtained from India without obtaining the previous approval of the National Biodiversity Authority before the grant of such IPR on Form III.\n(2) The National Biodiversity Authority may, while granting approval, impose benefit sharing requirements.",
+      "location": {
+        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
+        "page_start": 6,
+        "page_end": 7
+      },
+      "topics": ["PATENT_LINKAGE", "IPR_APPROVAL", "FORM_III", "BENEFIT_SHARING"],
+      "statutory_significance": "Direct statutory linkage: Patents on Indian botanicals cannot be granted without NBA Form III approval."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_007",
+      "type": "SECTION",
+      "number": "7",
+      "heading": "Prior Intimation to State Biodiversity Board",
+      "text": "No person who is a citizen of India or a body corporate, association or organisation which is registered in India shall obtain any biological resource for commercial utilisation, or bio-survey and bio-utilisation for commercial utilisation except after giving prior intimation to the State Biodiversity Board concerned in the manner as may be prescribed by the State Government.\nProvided that the provisions of this section shall not apply to the local people and communities of the area, including vaids, hakims and registered AYUSH practitioners.",
+      "location": {
+        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
+        "page_start": 7,
+        "page_end": 7
+      },
+      "topics": ["DOMESTIC_ENTITIES", "SBB_PRIOR_INTIMATION", "AYUSH_VAIDYA_EXEMPTION"],
+      "statutory_significance": "Governs domestic AYUSH manufacturing; 2023 amendment explicitly exempts local registered practitioners."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_021",
+      "type": "SECTION",
+      "number": "21",
+      "heading": "Determination of Equitable Benefit Sharing by National Biodiversity Authority",
+      "text": "The National Biodiversity Authority shall ensure that the terms and conditions agreed to secure equitable sharing of benefits arising out of the use of accessed biological resources, their derivatives, innovations and practices associated with their use and applications and knowledge relating thereto in accordance with mutually agreed terms.",
+      "location": {
+        "chapter": "Chapter V (Functions and Powers of NBA)",
+        "page_start": 12,
+        "page_end": 13
+      },
+      "topics": ["BENEFIT_SHARING", "EQUITY", "LOCAL_COMMUNITIES", "BMC"],
+      "statutory_significance": "Legal authority for calculating benefit sharing royalties."
+    }
+  ]
+}

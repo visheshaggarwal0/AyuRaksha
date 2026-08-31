@@ -1,0 +1,78 @@
+{
+  "document_id": "IND_PATENTS_ACT_1970",
+  "title": "The Patents Act, 1970 (Act No. 39 of 1970 as amended)",
+  "authority": "India Code / Intellectual Property India (CGPDTM)",
+  "jurisdiction": "IN",
+  "domain": "PATENTS",
+  "document_type": "ACT",
+  "authority_level": 5,
+  "last_amended_year": 2024,
+  "sections": [
+    {
+      "section_number": "Section 2(1)(j)",
+      "heading": "Definition of Invention",
+      "text": "'invention' means a new product or process involving an inventive step and capable of industrial application.",
+      "relevance": "Core patentability threshold."
+    },
+    {
+      "section_number": "Section 2(1)(ja)",
+      "heading": "Definition of Inventive Step",
+      "text": "'inventive step' means a feature of an invention that involves technical advance as compared to the existing knowledge or having economic significance or both and that makes the invention not obvious to a person skilled in the art.",
+      "relevance": "Non-obviousness over classical Ayurvedic texts and TKDL prior art."
+    },
+    {
+      "section_number": "Section 3(p)",
+      "heading": "Traditional Knowledge Exclusion",
+      "text": "An invention which in effect is traditional knowledge or which is an aggregation or duplication of known properties of traditionally known component or components is not an invention within the meaning of this Act.",
+      "relevance": "Primary statutory bar against patenting known classical Ayurvedic formulations and herbal properties."
+    },
+    {
+      "section_number": "Section 3(e)",
+      "heading": "Mere Admixture Exclusion",
+      "text": "A substance obtained by a mere admixture resulting only in the aggregation of the properties of the components thereof or a process for producing such substance is not an invention within the meaning of this Act.",
+      "relevance": "Requires proof of non-obvious synergistic technical effect when combining known botanical ingredients."
+    },
+    {
+      "section_number": "Section 3(c)",
+      "heading": "Naturally Occurring Substances Exclusion",
+      "text": "The mere discovery of a scientific principle or the formulation of an abstract theory or discovery of any living thing or non-living substance occurring in nature is not an invention.",
+      "relevance": "Raw isolated herbs without novel synthetic modification or structural derivation cannot be patented."
+    },
+    {
+      "section_number": "Section 3(i)",
+      "heading": "Method of Treatment Exclusion",
+      "text": "Any process for the medicinal, surgical, curative, prophylactic, diagnostic, therapeutic or other treatment of human beings or any similar treatment of animals to render them free of disease or to increase their economic value or that of their products is not an invention.",
+      "relevance": "Methods of treating diseases using Ayurvedic formulations are unpatentable in India; only product/formulation/process claims can be evaluated."
+    },
+    {
+      "section_number": "Section 3(d)",
+      "heading": "New Form of Known Substance Exclusion",
+      "text": "The mere discovery of a new form of a known substance which does not result in the enhancement of the known efficacy of that substance or the mere discovery of any new property or new use for a known substance or of the mere use of a known process, machine or apparatus unless such known process results in a new product or employs at least one new reactant is not patentable.",
+      "relevance": "Secondary phytopharmaceutical extractions require demonstrated enhanced therapeutic efficacy."
+    },
+    {
+      "section_number": "Section 6",
+      "heading": "Persons Entitled to Apply for Patents & Biological Resource Linkage",
+      "text": "An application for a patent for an invention may be made by any person being the true and first inventor of the invention or by the assignee. Where the invention utilizes biological material from India, compliance with the Biological Diversity Act, 2002 is mandatory prior to grant.",
+      "relevance": "Triggers NBA Form III filing obligations."
+    },
+    {
+      "section_number": "Section 10(4)",
+      "heading": "Contents of Specification & Source Disclosure",
+      "text": "Every complete specification shall fully and particularly describe the invention and disclose the source and geographical origin of the biological material in the specification, when used in an invention.",
+      "relevance": "Mandatory statutory disclosure of botanical origin (state, district, agro-climatic zone) in patent specifications."
+    },
+    {
+      "section_number": "Section 25(1)(k)",
+      "heading": "Pre-Grant Opposition based on Traditional Knowledge",
+      "text": "A patent may be opposed on the ground that the complete specification does not disclose or wrongly mentions the source or geographical origin of biological material used for the invention, or that the invention claimed was anticipated having regard to the knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",
+      "relevance": "CSIR/TKDL opposition pathway to challenge unmerited biopiracy patents."
+    },
+    {
+      "section_number": "Section 64(1)(p)",
+      "heading": "Revocation of Patent on Traditional Knowledge Grounds",
+      "text": "A patent may be revoked on a petition on the ground that the complete specification does not disclose or wrongly mentions the source and geographical origin of biological material, or that the invention claimed was anticipated having regard to the knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",
+      "relevance": "Post-grant invalidation grounds."
+    }
+  ]
+}

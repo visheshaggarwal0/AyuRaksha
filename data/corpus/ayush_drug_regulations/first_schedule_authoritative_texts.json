@@ -1,0 +1,29 @@
+{
+  "document_id": "IND_FIRST_SCHEDULE_AYURVEDIC_BOOKS",
+  "title": "The First Schedule to The Drugs and Cosmetics Act, 1940 (Authoritative Books of Ayurvedic System)",
+  "authority": "Ministry of Ayush / Central Drugs Standard Control Organization",
+  "jurisdiction": "IN",
+  "domain": "AYUSH_DRUG_REGULATION",
+  "document_type": "SCHEDULE",
+  "authority_level": 5,
+  "description": "Statutory list of 56 authoritative books recognized for manufacturing Classical Ayurvedic Drugs under Section 3(a).",
+  "classical_texts": [
+    { "id": "TXT_01", "name": "Charaka Samhita", "author": "Maharshi Charaka / Agnivesha", "period": "Ancient" },
+    { "id": "TXT_02", "name": "Sushruta Samhita", "author": "Maharshi Sushruta", "period": "Ancient" },
+    { "id": "TXT_03", "name": "Ashtanga Hridaya", "author": "Acharya Vagbhata", "period": "Ancient" },
+    { "id": "TXT_04", "name": "Ashtanga Sangraha", "author": "Acharya Vagbhata", "period": "Ancient" },
+    { "id": "TXT_05", "name": "Sharangadhara Samhita", "author": "Acharya Sharangadhara", "period": "Medieval" },
+    { "id": "TXT_06", "name": "Bhavaprakasha", "author": "Bhavamishra", "period": "Medieval" },
+    { "id": "TXT_07", "name": "Bhaishajya Ratnavali", "author": "Govinda Das", "period": "Medieval" },
+    { "id": "TXT_08", "name": "Rasatarangini", "author": "Sadananda Sharma", "period": "Medieval" },
+    { "id": "TXT_09", "name": "Rasa Ratna Samucchaya", "author": "Vagbhata II", "period": "Medieval" },
+    { "id": "TXT_10", "name": "Sahasrayoga", "author": "Traditional Kerala Compilation", "period": "Traditional" },
+    { "id": "TXT_11", "name": "Madhava Nidana", "author": "Madhavakara", "period": "Ancient" },
+    { "id": "TXT_12", "name": "Chakradatta", "author": "Chakrapanidatta", "period": "Medieval" },
+    { "id": "TXT_13", "name": "Vangasena (Chikitsasara Samgraha)", "author": "Vangasena", "period": "Medieval" },
+    { "id": "TXT_14", "name": "Yoga Ratnakara", "author": "Anonymous Compilation", "period": "Medieval" },
+    { "id": "TXT_15", "name": "Gada Nigraha", "author": "Sodhala", "period": "Medieval" },
+    { "id": "TXT_16", "name": "Ayurvedic Pharmacopoeia of India (API)", "author": "Pharmacopoeia Commission for Indian Medicine & Homoeopathy (PCIM&H)", "period": "Modern Official Standard" },
+    { "id": "TXT_17", "name": "Ayurvedic Formulary of India (AFI)", "author": "Ministry of Ayush", "period": "Modern Official Standard" }
+  ]
+}

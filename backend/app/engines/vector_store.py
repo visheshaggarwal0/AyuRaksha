@@ -1,0 +1,150 @@
+from abc import ABC, abstractmethod
+from typing import Any, Dict, List, Optional
+import hashlib
+import logging
+import math
+
+from sqlalchemy import func, select
+
+from app.db.session import AsyncSessionLocal
+from app.db.models import DocumentChunk, Source, SourceSection, SourceVersion
+
+logger = logging.getLogger(__name__)
+
+
+def generate_deterministic_embedding(text_content: str, dim: int = 1536) -> List[float]:
+    """Offline-safe embedding fallback with stable dimensions for pgvector tests."""
+    vector = []
+    text_bytes = text_content.encode("utf-8")
+    for index in range(dim):
+        digest = hashlib.sha256(text_bytes + str(index).encode("utf-8")).digest()
+        vector.append(int.from_bytes(digest[:4], "big") / (2**32 - 1) - 0.5)
+    norm = math.sqrt(sum(value * value for value in vector)) or 1.0
+    return [value / norm for value in vector]
+
+
+class BaseVectorStore(ABC):
+    @abstractmethod
+    async def search(
+        self,
+        query_vector: List[float],
+        jurisdiction: str = "IN",
+        limit: int = 10,
+        domain_filter: Optional[str] = None,
+    ) -> List[Dict[str, Any]]:
+        pass
+
+
+class NeonPgVectorStore(BaseVectorStore):
+    """Neon/Postgres retrieval over normalized, provenance-bearing chunk records."""
+
+    @staticmethod
+    def _base_statement():
+        return select(
+            DocumentChunk.id.label("chunk_id"),
+            DocumentChunk.text,
+            DocumentChunk.jurisdiction,
+            DocumentChunk.chunk_metadata,
+            SourceSection.text.label("raw_statute"),
+            SourceSection.section_number,
+            SourceSection.heading,
+            Source.source_code,
+            Source.title.label("source_title"),
+            Source.source_url,
+            Source.authority,
+            Source.authority_level,
+        ).join(
+            SourceSection, DocumentChunk.section_id == SourceSection.id
+        ).join(
+            SourceVersion, SourceSection.source_version_id == SourceVersion.id
+        ).join(
+            Source, SourceVersion.source_id == Source.id
+        ).where(Source.current_status == "ACTIVE")
+
+    @staticmethod
+    def _apply_filters(statement, jurisdiction: str, domain_filter: Optional[str]):
+        if jurisdiction and jurisdiction != "CROSS_BORDER":
+            statement = statement.where(DocumentChunk.jurisdiction == jurisdiction)
+        if domain_filter:
+            statement = statement.where(DocumentChunk.chunk_metadata["domain"].astext == domain_filter)
+        return statement
+
+    @staticmethod
+    def _serialize_row(row: Any, score: float) -> Dict[str, Any]:
+        metadata = row.chunk_metadata or {}
+        return {
+            "chunk_id": str(row.chunk_id),
+            "source_id": row.source_code or metadata.get("source_id", "UNKNOWN_SOURCE"),
+            "text": row.text,
+            "raw_statute": row.raw_statute,
+            "jurisdiction": row.jurisdiction,
+            "section_number": row.section_number,
+            "heading": row.heading,
+            "source_title": row.source_title,
+            "official_url": row.source_url or metadata.get("source_url"),
+            "authority": row.authority,
+            "authority_level": row.authority_level,
+            "metadata": metadata,
+            "support_score": round(max(0.0, min(score, 1.0)), 4),
+        }
+
+    async def search(
+        self,
+        query_vector: List[float],
+        jurisdiction: str = "IN",
+        limit: int = 10,
+        domain_filter: Optional[str] = None,
+    ) -> List[Dict[str, Any]]:
+        if not AsyncSessionLocal or not query_vector:
+            return []
+
+        distance = DocumentChunk.embedding.cosine_distance(query_vector).label("distance")
+        statement = self._apply_filters(self._base_statement().add_columns(distance), jurisdiction, domain_filter)
+        statement = statement.where(DocumentChunk.embedding.is_not(None)).order_by(distance).limit(limit)
+        try:
+            async with AsyncSessionLocal() as session:
+                rows = (await session.execute(statement)).all()
+            return [self._serialize_row(row, 1.0 - float(row.distance)) for row in rows]
+        except Exception as error:
+            logger.warning("Vector retrieval unavailable: %s", error)
+            return []
+
+    async def search_lexical(
+        self,
+        query_text: str,
+        jurisdiction: str = "IN",
+        limit: int = 10,
+        domain_filter: Optional[str] = None,
+    ) -> List[Dict[str, Any]]:
+        if not AsyncSessionLocal or not query_text.strip():
+            return []
+
+        document_vector = func.to_tsvector("english", DocumentChunk.text)
+        query = func.websearch_to_tsquery("english", query_text)
+        rank = func.ts_rank_cd(document_vector, query).label("lexical_rank")
+        statement = self._apply_filters(self._base_statement().add_columns(rank), jurisdiction, domain_filter)
+        statement = statement.where(document_vector.op("@@")(query)).order_by(rank.desc()).limit(limit)
+        try:
+            async with AsyncSessionLocal() as session:
+                rows = (await session.execute(statement)).all()
+            return [self._serialize_row(row, float(row.lexical_rank)) for row in rows]
+        except Exception as error:
+            logger.warning("PostgreSQL full-text retrieval unavailable: %s", error)
+            return []
+
+
+class PineconeVectorStore(BaseVectorStore):
+    """Reserved adapter for deployments that elect to use an external vector store."""
+
+    def __init__(self, api_key: str = "", index_name: str = "ayuraksha"):
+        self.api_key = api_key
+        self.index_name = index_name
+
+    async def search(
+        self,
+        query_vector: List[float],
+        jurisdiction: str = "IN",
+        limit: int = 10,
+        domain_filter: Optional[str] = None,
+    ) -> List[Dict[str, Any]]:
+        return []

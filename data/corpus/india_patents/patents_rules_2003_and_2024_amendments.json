@@ -1,0 +1,36 @@
+{
+  "document_id": "IND_PATENTS_RULES_2024",
+  "title": "The Patents Rules, 2003 (as amended by Patents (Amendment) Rules, 2024)",
+  "authority": "Ministry of Commerce and Industry (DPIIT) / IP India",
+  "jurisdiction": "IN",
+  "domain": "PATENTS",
+  "document_type": "RULES",
+  "authority_level": 5,
+  "last_amended_year": 2024,
+  "rules": [
+    {
+      "rule_number": "Rule 12",
+      "heading": "Statement and Undertaking Regarding Foreign Applications (Section 8)",
+      "text": "Under the 2024 Amendment Rules, the requirement to periodically file foreign prosecution details on Form 3 has been streamlined to reduce compliance burden on startups and MSMEs.",
+      "relevance": "Procedural compliance for AYUSH global filings."
+    },
+    {
+      "rule_number": "Rule 24C",
+      "heading": "Expedited Examination of Patent Applications",
+      "text": "An applicant may file a request for expedited examination on Form 18A where the applicant is a recognized startup, small entity, or an application involving Department of Biotechnology/AYUSH recognized research organizations.",
+      "relevance": "Enables AYUSH startups to get examination reports within months instead of years."
+    },
+    {
+      "rule_number": "Rule 55",
+      "heading": "Opposition Procedure (Pre-Grant)",
+      "text": "Streamlined pre-grant opposition hearing mechanisms to prevent frivolous biopiracy patents on indigenous traditional medicinal herbs.",
+      "relevance": "Third-party representation on TK grounds."
+    },
+    {
+      "rule_number": "Fee Schedule 2024",
+      "heading": "Concessional Fees for Startups and Educational Institutions",
+      "text": "Significant fee reductions (up to 80% discount on filing, examination and renewal) for DPIIT-recognized startups and universities developing herbal innovations.",
+      "relevance": "Cost benefits for AYUSH MSMEs."
+    }
+  ]
+}

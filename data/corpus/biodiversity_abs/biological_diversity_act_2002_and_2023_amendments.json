@@ -1,0 +1,66 @@
+{
+  "document_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002_2023",
+  "title": "The Biological Diversity Act, 2002 (as amended by Biological Diversity (Amendment) Act, 2023)",
+  "authority": "National Biodiversity Authority (NBA) / Ministry of Environment, Forest and Climate Change (MoEFCC)",
+  "jurisdiction": "IN",
+  "domain": "BIODIVERSITY_ABS",
+  "document_type": "ACT",
+  "authority_level": 5,
+  "last_amended_year": 2023,
+  "sections": [
+    {
+      "section_number": "Section 2(c)",
+      "heading": "Definition of Biological Resources",
+      "text": "'biological resources' means plants, animals and microorganisms or parts thereof, their genetic material and by-products (excluding value added products) with actual or potential use or value, but does not include human genetic material.",
+      "relevance": "Scope of statutory coverage across all Ayurvedic medicinal plants and herbs."
+    },
+    {
+      "section_number": "Section 2(f)",
+      "heading": "Definition of Commercial Utilisation",
+      "text": "'commercial utilisation' means end uses of biological resources for commercial utilization such as drugs, industrial enzymes, food flavours, fragrance, cosmetics, emulsifiers, oleoresins, colours, extracts and genes used for improving crops and livestock through genetic intervention, but does not include conventional breeding or traditional practices in use in any agriculture, horticulture, poultry, dairy farming, animal husbandry or bee keeping.",
+      "relevance": "Triggers ABS benefit sharing when herbs are used in commercial Ayurvedic drugs and supplements."
+    },
+    {
+      "section_number": "Section 3",
+      "heading": "Prior Approval of National Biodiversity Authority for Foreign Entities",
+      "text": "(1) No person who is not a citizen of India; or a citizen of India who is an NRI; or a body corporate, association or organization not incorporated or registered in India, or incorporated or registered in India under any law having any non-Indian participation in its share capital or management, shall obtain any biological resource occurring in India or knowledge associated thereto for research or for commercial utilisation or for bio-survey and bio-utilisation without previous approval of the National Biodiversity Authority on Form I.",
+      "relevance": "Foreign-funded Ayurvedic companies and export entities must obtain prior approval from NBA Chennai."
+    },
+    {
+      "section_number": "Section 4",
+      "heading": "Transfer of Biological Resource or Knowledge",
+      "text": "No person shall, without the previous approval of the National Biodiversity Authority, transfer the results of any research relating to any biological resources occurring in, or obtained from, India, in any manner to any person who is not a citizen of India or a body corporate having foreign participation.",
+      "relevance": "Restricts sharing Ayurvedic clinical/extraction research with foreign partners without NBA Form II approval."
+    },
+    {
+      "section_number": "Section 6",
+      "heading": "Application for Intellectual Property Rights (IPR Approval)",
+      "text": "(1) No person shall apply for any intellectual property right, by whatever name called, in or outside India for any invention based on any research or information on a biological resource obtained from India without obtaining the previous approval of the National Biodiversity Authority before the grant of such IPR on Form III.\n(2) The National Biodiversity Authority may, while granting approval, impose benefit sharing requirements.",
+      "relevance": "Crucial patent linkage: Indian Patent Office cannot grant an Ayurvedic patent until NBA issues Form III approval."
+    },
+    {
+      "section_number": "Section 7",
+      "heading": "Prior Intimation to State Biodiversity Board for Indian Entities",
+      "text": "No person who is a citizen of India or a body corporate, association or organisation which is registered in India shall obtain any biological resource for commercial utilisation, or bio-survey and bio-utilisation for commercial utilisation except after giving prior intimation to the State Biodiversity Board concerned in the manner as may be prescribed by the State Government.\nProvided that the provisions of this section shall not apply to the local people and communities of the area, including vaids, hakims and registered AYUSH practitioners.",
+      "relevance": "Domestic AYUSH MSMEs must file Prior Intimation with respective SBB (e.g. Kerala SBB, HP SBB); local vaids are exempted under 2023 amendment."
+    },
+    {
+      "section_number": "Section 21",
+      "heading": "Determination of Equitable Benefit Sharing",
+      "text": "The National Biodiversity Authority and State Biodiversity Boards shall ensure that the terms and conditions agreed to secure equitable sharing of benefits arising out of the use of accessed biological resources, their derivatives, innovations and practices associated with their use and applications and knowledge relating thereto in accordance with mutually agreed terms.",
+      "relevance": "Benefit-sharing percentage (typically 0.1% to 0.5% of annual ex-factory turnover or 3.0% to 5.0% of buyer purchase price)."
+    },
+    {
+      "section_number": "Section 40",
+      "heading": "Exemption of Normally Traded Commodities (NTAC List)",
+      "text": "The Central Government may, by notification in the Official Gazette, exempt certain biological resources normally traded as commodities (NTAC list) from the provisions of this Act when exported as raw commodities.",
+      "relevance": "Exempts 400+ notified common agricultural/culinary herbs (e.g., Black pepper, Ginger, Cumin) when traded solely as raw food commodities, but NOT when used for patented ASU extractions."
+    },
+    {
+      "section_number": "Section 55 (Amended 2023)",
+      "heading": "Decriminalization and Civil Penalties",
+      "text": "Under the 2023 Amendment Act, violations of the Act are decriminalized (imprisonment removed for technical non-compliance) and replaced with structured civil penalties determined by an Adjudicating Officer.",
+      "relevance": "Transforms criminal liability into civil compliance and retroactive regularization pathways."
+    }
+  ]
+}

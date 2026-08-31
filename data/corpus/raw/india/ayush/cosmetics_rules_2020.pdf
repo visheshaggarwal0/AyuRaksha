@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:04.862099+00:00
+# IND_COSMETICS_RULES_2020
+# URL: https://cdsco.gov.in/opencms/export/sites/CDSCO_WEB/Pdf-documents/Cosmetics/Cosmetics_Rules_2020.pdf
+# Error: HTTP 404
+# Retry: python scripts/download_corpus.py --retry IND_COSMETICS_RULES_2020

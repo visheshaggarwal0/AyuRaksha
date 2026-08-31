@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:03.893989+00:00
+# IND_AYUSH_LICENSING_GUIDELINES
+# URL: https://www.ayush.gov.in/docs/ayurved-drugs-guidelines.pdf
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_AYUSH_LICENSING_GUIDELINES

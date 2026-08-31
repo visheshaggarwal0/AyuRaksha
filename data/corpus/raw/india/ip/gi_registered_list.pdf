@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:51.888966+00:00
+# IND_GI_REGISTRY_PORTAL
+# URL: https://ipindia.gov.in/writereaddata/Portal/Images/pdf/GI_Registered_GI.pdf
+# Error: HTTP 404
+# Retry: python scripts/download_corpus.py --retry IND_GI_REGISTRY_PORTAL

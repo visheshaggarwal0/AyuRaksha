@@ -1,0 +1,29 @@
+{
+  "document_id": "IND_NBA_ABS_REGULATIONS_2014",
+  "title": "Guidelines on Access to Biological Resources and Associated Knowledge and Benefits Sharing Regulations, 2014",
+  "authority": "National Biodiversity Authority (NBA)",
+  "jurisdiction": "IN",
+  "domain": "BIODIVERSITY_ABS",
+  "document_type": "REGULATION",
+  "authority_level": 4,
+  "regulations": [
+    {
+      "regulation_number": "Regulation 1",
+      "heading": "Obligation to Apply on Prescribed Forms",
+      "text": "Access to biological resources shall be made through standard forms:\n- Form I: Access to biological resources and associated traditional knowledge for commercial utilization or bio-survey.\n- Form II: Transfer of results of research to foreign entities.\n- Form III: Applying for Intellectual Property Rights (Patents) in or outside India.\n- Form IV: Third-party transfer of accessed biological resource.",
+      "relevance": "Procedural compliance roadmap for AYUSH innovators."
+    },
+    {
+      "regulation_number": "Regulation 2",
+      "heading": "Benefit Sharing Options on Sale of Product",
+      "text": "The applicant shall pay to the NBA/SBB benefit sharing on annual gross ex-factory sale of product:\n- Up to Rs. 1 Crore: 0.1%\n- Rs. 1 to 5 Crores: 0.2%\n- Above Rs. 5 Crores: 0.5%\nAlternatively, 3.0% to 5.0% of the purchase price of the biological resource.",
+      "relevance": "Exact formula to compute commercial benefit-sharing costs for Ayurvedic startups."
+    },
+    {
+      "regulation_number": "Regulation 3",
+      "heading": "Benefit Sharing on Commercialization of Patents / IPR",
+      "text": "Where the applicant commercializes the patent himself, the benefit sharing shall be 0.2% to 1.0% on ex-factory sale. Where the applicant assigns or licenses the patent to a third party, the benefit sharing shall be 3.0% to 5.0% of the royalty received, or 2.0% to 5.0% of the license fee.",
+      "relevance": "IP licensing royalties distribution to local biodiversity management committees (BMCs)."
+    }
+  ]
+}

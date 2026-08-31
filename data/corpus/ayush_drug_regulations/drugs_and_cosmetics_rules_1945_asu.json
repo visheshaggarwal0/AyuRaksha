@@ -1,0 +1,35 @@
+{
+  "document_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+  "title": "The Drugs and Cosmetics Rules, 1945 (Part XVI & XVII: ASU Drugs)",
+  "authority": "Ministry of Ayush / State Licensing Authorities",
+  "jurisdiction": "IN",
+  "domain": "AYUSH_DRUG_REGULATION",
+  "document_type": "RULES",
+  "authority_level": 5,
+  "rules": [
+    {
+      "rule_number": "Rule 158B",
+      "heading": "Guidelines for Issue of License with Respect to Patent or Proprietary ASU Medicine",
+      "text": "For grant of license for Patent or Proprietary ASU medicines:\n(a) For medicines containing classical ingredients with new indications, proof of safety and effectiveness based on textual rationales or pilot clinical trial data is required.\n(b) For medicines with modified formulations or extracts, acute toxicity studies and published literature on safety are required.\n(c) For medicines with new botanical ingredients or phytopharmaceuticals, full clinical trials as per Schedule Y are required.",
+      "relevance": "The exact statutory evidentiary threshold for licensing proprietary Ayurvedic formulations."
+    },
+    {
+      "rule_number": "Rule 161",
+      "heading": "Labelling, Packing and Limit of Alcohol in Ayurvedic Drugs",
+      "text": "Every container of ASU drug shall bear on its label:\n- The true list of all ingredients with their Sanskrit botanical names and quantities.\n- Name of classical text (for Shastriya drugs) or 'Patent/Proprietary Medicine'.\n- Batch number, manufacturing license number, date of manufacture, date of expiry (shelf life as per Rule 161B).\n- Warning text: 'To be taken under medical supervision' for Schedule E(1) drugs.",
+      "relevance": "Mandatory packaging and statutory compliance for retail sale."
+    },
+    {
+      "rule_number": "Schedule T",
+      "heading": "Good Manufacturing Practices (GMP) for ASU Drugs",
+      "text": "Requirements for factory premises, hygienic conditions, raw material quarantine, standard operating procedures, quality control laboratories, and batch manufacturing records (BMR) for Ayurvedic medicine manufacturing.",
+      "relevance": "Prerequisite for obtaining state AYUSH manufacturing license and WHO-GMP certification for export."
+    },
+    {
+      "rule_number": "Schedule E(1)",
+      "heading": "List of Poisonous Substances under ASU Systems",
+      "text": "Lists regulated poisonous herbs and minerals requiring shodhana (purification) and mandatory red caution warning on labels, including Vatsanabha (Aconitum chasmanthum), Gunja (Abrus precatorius), Bhang (Cannabis sativa), Kupilu (Strychnos nux-vomica), and Snuhi (Euphorbia antiquorum).",
+      "relevance": "Strict consumer safety and toxicological compliance flag."
+    }
+  ]
+}

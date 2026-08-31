@@ -1,0 +1,67 @@
+{
+  "manifest_version": "2.0.0",
+  "project": "AyuRaksha (IP-SAKTI Sahayak — SIH 26045)",
+  "total_registered_sources": 5,
+  "sources": [
+    {
+      "source_id": "IND_PATENTS_ACT_1970",
+      "short_title": "Patents Act 1970",
+      "title": "The Patents Act, 1970 (Act No. 39 of 1970)",
+      "authority": "Intellectual Property India (CGPDTM)",
+      "issuing_body": "Ministry of Commerce and Industry (DPIIT)",
+      "jurisdiction": "IN",
+      "document_type": "ACT",
+      "authority_level": 5,
+      "raw_file_name": "the_patents_act_1970.pdf",
+      "normalized_file": "data/corpus/normalized/legal_instruments/ind_patents_act_1970.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "storage_uri": "gs://ayuraksha-corpus/raw/india/ip/patents/the_patents_act_1970.pdf",
+      "official_url": "https://www.indiacode.nic.in/handle/123456789/1392"
+    },
+    {
+      "source_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002",
+      "short_title": "Biological Diversity Act 2002",
+      "title": "The Biological Diversity Act, 2002 (as amended 2023)",
+      "authority": "National Biodiversity Authority (NBA)",
+      "issuing_body": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+      "jurisdiction": "IN",
+      "document_type": "ACT",
+      "authority_level": 5,
+      "raw_file_name": "the_biological_diversity_act_2002.pdf",
+      "normalized_file": "data/corpus/normalized/legal_instruments/ind_biological_diversity_act_2002.json",
+      "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "storage_uri": "gs://ayuraksha-corpus/raw/india/biodiversity/the_biological_diversity_act_2002.pdf",
+      "official_url": "https://www.indiacode.nic.in/handle/123456789/2046"
+    },
+    {
+      "source_id": "IND_DRUGS_COSMETICS_ACT_1940_ASU",
+      "short_title": "Drugs & Cosmetics Act 1940 (ASU)",
+      "title": "The Drugs and Cosmetics Act, 1940 (Chapter IV-A)",
+      "authority": "CDSCO / Ministry of Ayush",
+      "issuing_body": "Ministry of Health and Family Welfare",
+      "jurisdiction": "IN",
+      "document_type": "ACT",
+      "authority_level": 5,
+      "raw_file_name": "the_drugs_and_cosmetics_act_1940.pdf",
+      "normalized_file": "data/corpus/normalized/legal_instruments/ind_drugs_cosmetics_act_1940_asu.json",
+      "sha256": "7a9332158872bcae4751433f4a30a845e1281eec956279f584e03b29c9ef63e3",
+      "storage_uri": "gs://ayuraksha-corpus/raw/india/ayush/the_drugs_and_cosmetics_act_1940.pdf",
+      "official_url": "https://www.indiacode.nic.in/handle/123456789/2402"
+    },
+    {
+      "source_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+      "short_title": "Drugs & Cosmetics Rules 1945 (Part XVI)",
+      "title": "The Drugs and Cosmetics Rules, 1945 (Part XVI & XVII)",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "Ministry of Health and Family Welfare",
+      "jurisdiction": "IN",
+      "document_type": "RULES",
+      "authority_level": 5,
+      "raw_file_name": "drugs_cosmetics_rules_1945_asu.pdf",
+      "normalized_file": "data/corpus/normalized/legal_instruments/ind_drugs_cosmetics_rules_1945_asu.json",
+      "sha256": "3f9821811e59273c509cfae4f88410292f7543a6d962058444a169123019be55",
+      "storage_uri": "gs://ayuraksha-corpus/raw/india/ayush/drugs_cosmetics_rules_1945_asu.pdf",
+      "official_url": "https://ayush.gov.in/docs/drugs-and-cosmetics-rules-1945.pdf"
+    }
+  ]
+}

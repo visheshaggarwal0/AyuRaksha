@@ -1,0 +1,72 @@
+{
+  "document_id": "IND_DRUGS_COSMETICS_ACT_1940_ASU",
+  "title": "The Drugs and Cosmetics Act, 1940 (Act No. 23 of 1940 - Chapter IV-A)",
+  "short_title": "DCA 1940 Chapter IV-A",
+  "jurisdiction": "IN",
+  "country": "India",
+  "authority": "Central Drugs Standard Control Organization (CDSCO) / Ministry of Ayush",
+  "issuing_body": "Ministry of Health and Family Welfare / Ministry of Ayush",
+  "domain": ["AYUSH_DRUG_REGULATION", "PHARMACEUTICALS"],
+  "document_type": "ACT",
+  "authority_level": 5,
+  "source": {
+    "url": "https://www.indiacode.nic.in/handle/123456789/2402",
+    "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
+    "retrieved_at": "2026-08-31",
+    "file_name": "the_drugs_and_cosmetics_act_1940.pdf",
+    "sha256": "7a9332158872bcae4751433f4a30a845e1281eec956279f584e03b29c9ef63e3",
+    "mime_type": "application/pdf",
+    "storage_uri": "gs://ayuraksha-corpus/raw/india/ayush/the_drugs_and_cosmetics_act_1940.pdf"
+  },
+  "version": {
+    "published_date": "1940-04-10",
+    "effective_from": "1940-04-10",
+    "effective_until": null,
+    "version_label": "2024 Consolidated",
+    "supersedes_version": "2018 Consolidated"
+  },
+  "provisions": [
+    {
+      "provision_id": "DCA_1940_SEC_003_A",
+      "type": "SECTION",
+      "number": "3(a)",
+      "heading": "Ayurvedic, Siddha or Unani Drug",
+      "text": "'Ayurvedic, Siddha or Unani drug' includes all medicines intended for internal or external use for or in the diagnosis, treatment, mitigation or prevention of disease or disorder in human beings or animals, and manufactured exclusively in accordance with the formulae described in the authoritative books of Ayurvedic, Siddha and Unani systems of medicine specified in the First Schedule.",
+      "location": {
+        "chapter": "Chapter I (Introductory)",
+        "page_start": 2,
+        "page_end": 3
+      },
+      "topics": ["CLASSICAL_MEDICINE", "FIRST_SCHEDULE", "SHASTRIYA", "MANUFACTURING"],
+      "statutory_significance": "Legal foundation of Classical (Shastriya) Ayurvedic medicines."
+    },
+    {
+      "provision_id": "DCA_1940_SEC_003_H",
+      "type": "SECTION",
+      "number": "3(h)",
+      "heading": "Patent or Proprietary Medicine in Relation to ASU",
+      "text": "'patent or proprietary medicine', in relation to Ayurvedic, Siddha or Unani systems of medicine, means a drug which is a remedy or prescription presented in a form ready for internal or external administration on or in human beings or animals and which is not included in the authoritative books of Ayurvedic, Siddha or Unani systems of medicine specified in the First Schedule.",
+      "location": {
+        "chapter": "Chapter I (Introductory)",
+        "page_start": 3,
+        "page_end": 4
+      },
+      "topics": ["PROPRIETARY_MEDICINE", "ANUBHUTA", "LICENSING"],
+      "statutory_significance": "Legal definition for non-classical Ayurvedic formulations requiring safety/efficacy validation."
+    },
+    {
+      "provision_id": "DCA_1940_SEC_033_EE",
+      "type": "SECTION",
+      "number": "33EE",
+      "heading": "Misbranded ASU Drugs",
+      "text": "For the purposes of this Chapter, an Ayurvedic, Siddha or Unani drug shall be deemed to be misbranded if it is so coloured, coated, powdered or polished that damage is concealed, or if it is not labelled in the prescribed manner, or if its label makes false claims regarding curative or therapeutic properties.",
+      "location": {
+        "chapter": "Chapter IV-A (Provisions Relating to ASU Drugs)",
+        "page_start": 38,
+        "page_end": 39
+      },
+      "topics": ["MISBRANDING", "LABELLING", "FALSE_CLAIMS", "ENFORCEMENT"],
+      "statutory_significance": "Statutory offence for unauthorized therapeutic claims on ASU packaging."
+    }
+  ]
+}

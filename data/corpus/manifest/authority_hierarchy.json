@@ -1,0 +1,84 @@
+{
+  "hierarchy_version": "1.0.0",
+  "description": "Statutory Authority Hierarchy for Legal & Regulatory Evidentiary Weighting in AyuRaksha",
+  "levels": {
+    "LEVEL_5": {
+      "name": "Primary Authoritative Legislation & Treaties",
+      "weight": 1.0,
+      "categories": [
+        "ACT",
+        "RULES",
+        "REGULATION",
+        "OFFICIAL_GAZETTE_NOTIFICATION",
+        "INTERNATIONAL_TREATY",
+        "OFFICIAL_REGISTRY_RECORD"
+      ],
+      "examples": [
+        "The Patents Act, 1970",
+        "The Biological Diversity Act, 2002",
+        "Drugs and Cosmetics Rules, 1945",
+        "FSSAI (Ayurveda Aahara) Regulations, 2022",
+        "WIPO GRATK Treaty, 2024"
+      ],
+      "evidentiary_rule": "Highest legal precedence. Can never be overridden by secondary commentary or guidelines."
+    },
+    "LEVEL_4": {
+      "name": "Official Institutional Guidance & Manuals",
+      "weight": 0.85,
+      "categories": [
+        "GOVERNMENT_GUIDELINE",
+        "MINISTRY_CIRCULAR",
+        "OFFICIAL_EXAMINATION_MANUAL",
+        "REGULATORY_FAQ"
+      ],
+      "examples": [
+        "IPO Guidelines for Examination of Patent Applications in Traditional Knowledge",
+        "NBA Guidelines on Access and Benefit Sharing, 2014"
+      ],
+      "evidentiary_rule": "Binding on administrative officers but subordinate to parent Acts and Rules."
+    },
+    "LEVEL_3": {
+      "name": "Official Standards & Pharmacopoeias",
+      "weight": 0.75,
+      "categories": [
+        "PHARMACOPOEIA",
+        "FORMULARY",
+        "OFFICIAL_TECHNICAL_STANDARD"
+      ],
+      "examples": [
+        "Ayurvedic Pharmacopoeia of India (API)",
+        "Ayurvedic Formulary of India (AFI)",
+        "First Schedule Classical Texts"
+      ],
+      "evidentiary_rule": "Authoritative benchmark for quality, safety, and classical formulation validation."
+    },
+    "LEVEL_2": {
+      "name": "Secondary Legal & Scientific Evidence",
+      "weight": 0.50,
+      "categories": [
+        "PEER_REVIEWED_STUDY",
+        "LEGAL_COMMENTARY",
+        "TOXICOLOGY_REPORT"
+      ],
+      "examples": [
+        "Published clinical trials on Withania somnifera efficacy",
+        "Law review analyses on Section 3(p)"
+      ],
+      "evidentiary_rule": "Used solely for scientific corroboration or Rule 158B safety proof; cannot establish legal authority."
+    },
+    "LEVEL_1": {
+      "name": "Discovery & Contextual Only",
+      "weight": 0.20,
+      "categories": [
+        "NEWS",
+        "INDUSTRY_BLOG",
+        "GENERAL_WEB"
+      ],
+      "examples": [
+        "Press releases",
+        "Industry trade articles"
+      ],
+      "evidentiary_rule": "Strictly excluded from citation generation. Used only for discovery or context."
+    }
+  }
+}

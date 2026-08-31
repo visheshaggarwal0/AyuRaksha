@@ -1,0 +1,43 @@
+{
+  "document_id": "IND_LANDMARK_LEGAL_PRECEDENTS",
+  "title": "Landmark Legal Precedents, Revocations and High Court Rulings in Ayurvedic IP & ABS",
+  "authority": "Supreme Court of India / High Courts / USPTO / EPO / CSIR",
+  "jurisdiction": "IN_AND_INT",
+  "domain": "CASE_LAW_PRECEDENTS",
+  "document_type": "CASE_LAW",
+  "authority_level": 4,
+  "cases": [
+    {
+      "case_name": "CSIR Turmeric Patent Revocation (US Patent No. 5,401,504)",
+      "forum": "United States Patent and Trademark Office (USPTO)",
+      "year": 1997,
+      "subject": "Use of Turmeric in Wound Healing",
+      "ruling_summary": "USPTO had granted a patent to University of Mississippi for wound healing properties of turmeric. CSIR India challenged it using ancient Sanskrit texts and classical Ayurvedic citations. The USPTO revoked all 6 claims for lack of novelty and anticipation by traditional knowledge.",
+      "legal_principle": "Traditional knowledge documented in classical texts constitutes prior art under 35 U.S.C. 102 / Patents Act Section 3(p)."
+    },
+    {
+      "case_name": "EPO Neem Patent Revocation (European Patent No. 0436257)",
+      "forum": "European Patent Office (EPO) Technical Board of Appeal",
+      "year": 2005,
+      "subject": "Fungicidal effect of hydrophobic extracted neem oil",
+      "ruling_summary": "Granted to W.R. Grace & USDA. Challenged by Vandana Shiva, CSIR, and EU Green Party. EPO revoked the patent in full, establishing that traditional agricultural and medicinal use in India lacked an inventive step.",
+      "legal_principle": "Publicly known traditional methods cannot be monopolized under European Patent Convention Article 56."
+    },
+    {
+      "case_name": "Divya Pharmacy v. Union of India & Others (Uttarakhand High Court)",
+      "forum": "High Court of Uttarakhand (Writ Petition No. 3437 of 2016)",
+      "judgment_date": "2018-12-21",
+      "subject": "Fair and Equitable Benefit Sharing (FEBS) obligation on Indian companies",
+      "ruling_summary": "Divya Pharmacy (Patanjali) argued that Section 7 of BDA 2002 only required prior intimation to SBB and that Indian entities were exempt from Fair and Equitable Benefit Sharing. The Uttarakhand High Court rejected the petition and ruled that Indian entities utilizing biological resources are equally obligated to share benefits with local communities under the Nagoya Protocol and Section 21/23 of BDA.",
+      "legal_principle": "Indian commercial entities are legally bound to pay Fair & Equitable Benefit Sharing (FEBS) to State Biodiversity Boards."
+    },
+    {
+      "case_name": "The Kani Tribe - TBGRI 'Jeevani' Benefit Sharing Model",
+      "forum": "Tropical Botanic Garden and Research Institute (TBGRI) / WIPO Case Study",
+      "year": 1995,
+      "subject": "Arogyapacha (Trichopus zeylanicus) anti-fatigue formulation",
+      "ruling_summary": "TBGRI developed the herbal drug 'Jeevani' based on traditional knowledge of the nomadic Kani tribe in Kerala. TBGRI licensed the patent to Arya Vaidya Pharmacy and created the 'Kerala Kani Samudaya Kshema Trust', sharing 50% of the license fee and 50% of ongoing royalties directly with the tribal community.",
+      "legal_principle": "Gold standard model for Access and Benefit Sharing (ABS) prior to the formal enactment of the Biological Diversity Act."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:30.520804+00:00
+# IND_API_PART1
+# URL: https://www.ayush.gov.in/docs/Ayurvedic_Pharmacopoeia_Part1.pdf
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_API_PART1

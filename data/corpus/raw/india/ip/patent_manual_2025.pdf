@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:57:11.539197+00:00
+# IND_PATENT_MANUAL_2025
+# URL: https://ipindia.gov.in/writereaddata/Portal/Images/pdf/Manual_for_Patent_Office_Practice_and_Procedure.pdf
+# Error: HTTP 404
+# Retry: python scripts/download_corpus.py --retry IND_PATENT_MANUAL_2025

@@ -1,0 +1,48 @@
+{
+  "document_id": "INT_EXPORT_REGULATIONS_US_EU",
+  "title": "Comparative Export Regulations for Ayurvedic Products (US FDA & European Union)",
+  "authority": "US FDA (21 CFR Part 111) / European Medicines Agency (EMA Directive 2004/24/EC)",
+  "jurisdiction": "INT",
+  "domain": "INTERNATIONAL_EXPORT_REGULATION",
+  "document_type": "GUIDELINE",
+  "authority_level": 4,
+  "jurisdictions": [
+    {
+      "market": "United States (US FDA)",
+      "regulatory_pathway": "Dietary Supplement Health and Education Act (DSHEA 1994) / 21 CFR Part 111",
+      "rules": [
+        {
+          "clause": "Classification as Dietary Supplement",
+          "text": "Ayurvedic products are marketed primarily as Dietary Supplements, not as drugs. Must not contain prohibited heavy metals (Lead, Mercury, Arsenic) or undeclared pharmaceutical adulterants.",
+          "relevance": "US market entry standard."
+        },
+        {
+          "clause": "Structure / Function Claims vs Disease Claims",
+          "text": "Manufacturers may make Structure/Function claims (e.g. 'Supports joint flexibility', 'Promotes restful sleep') accompanied by the mandatory FDA disclaimer. Disease treatment/cure claims (e.g. 'Cures arthritis') are strictly forbidden and constitute unapproved new drugs.",
+          "relevance": "Label compliance for exports to USA."
+        },
+        {
+          "clause": "New Dietary Ingredient (NDI) Notification",
+          "text": "Any botanical ingredient not marketed in the US prior to October 15, 1994 requires a 75-day pre-market safety notification under Section 413 of the FD&C Act.",
+          "relevance": "Prerequisite for novel Ayurvedic extracts."
+        }
+      ]
+    },
+    {
+      "market": "European Union (EU EMA)",
+      "regulatory_pathway": "Traditional Herbal Medicinal Products Directive (THMPD - Directive 2004/24/EC)",
+      "rules": [
+        {
+          "clause": "Simplified Traditional Use Registration",
+          "text": "Requires documentary evidence of uninterrupted traditional medicinal use for at least 30 years preceding the application, including at least 15 years within the European Union.",
+          "relevance": "Major barrier for traditional Ayurvedic polyherbals without prior EU presence; alternative pathway is EU Food Supplement under Directive 2002/46/EC."
+        },
+        {
+          "clause": "Heavy Metal & Pyrrolizidine Alkaloid (PA) Limits",
+          "text": "Strict maximum contaminant thresholds for Lead (<3.0 mg/kg), Cadmium (<1.0 mg/kg), Mercury (<0.1 mg/kg) and total Pyrrolizidine Alkaloids (<1.0 microgram/day).",
+          "relevance": "Laboratory testing specification for EU export batches."
+        }
+      ]
+    }
+  ]
+}

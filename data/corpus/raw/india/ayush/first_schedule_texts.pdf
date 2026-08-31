@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:03.007257+00:00
+# IND_FIRST_SCHEDULE_BOOKS
+# URL: https://www.ayush.gov.in/docs/Firsy-schedule-ayurved.pdf
+# Error: HTTP 403
+# Retry: python scripts/download_corpus.py --retry IND_FIRST_SCHEDULE_BOOKS

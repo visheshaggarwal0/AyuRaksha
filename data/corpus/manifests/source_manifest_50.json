@@ -1,0 +1,1394 @@
+{
+  "manifest_version": "2.0.0",
+  "architecture": "4-Layer: raw -> normalized -> rag (chunks/embeddings) -> knowledge",
+  "project": "AyuRaksha (IP-SAKTI Sahayak) — SIH 26045",
+  "authority_hierarchy": {
+    "5": "Primary authoritative — Acts, Rules, Regulations, Official Gazettes, Treaties, Official registry records",
+    "4": "Official guidance — Ministry circulars, Guidelines, Manuals, FAQs",
+    "3": "Standards — Pharmacopoeia, Formulary, Technical standards",
+    "2": "Secondary — Peer-reviewed evidence, Commentary",
+    "1": "Discovery only — Blogs/news"
+  },
+  "storage": {
+    "raw_object_store": "Firebase Cloud Storage (primary) + data/corpus/raw/ (local mirror)",
+    "neon_tables": "sources, documents, document_versions, provisions, chunks, embeddings"
+  },
+  "total_sources": 50,
+  "sources": [
+    {
+      "document_id": "IND_PATENTS_ACT_1970",
+      "title": "The Patents Act, 1970 (as amended up to 2024)",
+      "short_title": "Patents Act, 1970",
+      "jurisdiction": "IN",
+      "domain": [
+        "PATENTS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "Department for Promotion of Industry and Internal Trade (DPIIT) / IP India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1362",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.934048+00:00",
+        "file_name": "patents_act_1970.pdf",
+        "sha256": "73bb067c073a3000e172d2ded33ca8ba0272689b8e2b7c5b2e934be97178fe2b",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 230
+      },
+      "version": {
+        "published_date": "1970-09-19",
+        "effective_from": "1972-04-20",
+        "version_label": "Consolidated 2024 amendment"
+      },
+      "local_path": "raw/india/legislation/patents_act_1970.pdf",
+      "notes": "Sec 2(1)(j), 2(1)(ja), 3(b)-3(p), 10(4), 64(1)(p) — core for TK patentability"
+    },
+    {
+      "document_id": "IND_PATENTS_RULES_2003_2024",
+      "title": "The Patents Rules, 2003 as amended by Patents (Amendment) Rules, 2024",
+      "short_title": "Patents Rules, 2024",
+      "jurisdiction": "IN",
+      "domain": [
+        "PATENTS"
+      ],
+      "document_type": "RULES",
+      "authority": "Government of India",
+      "issuing_body": "DPIIT",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1362?view_type=browse&lang=en",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.934386+00:00",
+        "file_name": "patents_rules_2024.pdf",
+        "sha256": "34dc224814c4297a85a1c498b7c7bffe11592c789b4ae7dc5537a193417a7bb5",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 269
+      },
+      "version": {
+        "published_date": "2024-03-15",
+        "effective_from": "2024-03-15",
+        "version_label": "2024 amendment"
+      },
+      "local_path": "raw/india/legislation/patents_rules_2024.pdf",
+      "notes": "Form 1 disclosure, procedural rules"
+    },
+    {
+      "document_id": "IND_PATENT_MANUAL_2025",
+      "title": "Manual of Patent Office Practice and Procedure (Revised 2025)",
+      "short_title": "Patent Manual 2025",
+      "jurisdiction": "IN",
+      "domain": [
+        "PATENTS"
+      ],
+      "document_type": "MANUAL",
+      "authority": "CGPDTM / IP India",
+      "issuing_body": "Office of Controller General of Patents",
+      "authority_level": 4,
+      "source": {
+        "url": "https://ipindia.gov.in/writereaddata/Portal/Images/pdf/Manual_for_Patent_Office_Practice_and_Procedure.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.934695+00:00",
+        "file_name": "patent_manual_2025.pdf",
+        "sha256": "032b51d76e2bcbd448fc92b178bc350cd0f09cfb64569adaf042369618adf2ba",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 290
+      },
+      "version": {
+        "published_date": "2025-01-01",
+        "effective_from": "2025-01-01",
+        "version_label": "2025"
+      },
+      "local_path": "raw/india/ip/patent_manual_2025.pdf",
+      "notes": "Examination guidance on Sec 3(d), 3(e), 3(p)"
+    },
+    {
+      "document_id": "IND_TRADE_MARKS_ACT_1999",
+      "title": "The Trade Marks Act, 1999",
+      "short_title": "Trade Marks Act, 1999",
+      "jurisdiction": "IN",
+      "domain": [
+        "TRADEMARKS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "IP India — Trade Marks Registry",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1991",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.934974+00:00",
+        "file_name": "trade_marks_act_1999.pdf",
+        "sha256": "522b8535779f82a9f3c26f967cc3e3b61ee056b156eec2942321189d5b9ae923",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 238
+      },
+      "version": {
+        "published_date": "1999-12-30",
+        "effective_from": "2003-09-15",
+        "version_label": "1999"
+      },
+      "local_path": "raw/india/legislation/trade_marks_act_1999.pdf",
+      "notes": "Sec 9(1)(b) descriptive refusal, Sec 13 generic names"
+    },
+    {
+      "document_id": "IND_TRADE_MARKS_RULES_2017",
+      "title": "Trade Marks Rules, 2017",
+      "short_title": "Trade Marks Rules, 2017",
+      "jurisdiction": "IN",
+      "domain": [
+        "TRADEMARKS"
+      ],
+      "document_type": "RULES",
+      "authority": "Government of India",
+      "issuing_body": "DPIIT",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindia.gov.in/writereaddata/Portal/Images/pdf/TM-Rules-2017.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.935248+00:00",
+        "file_name": "trade_marks_rules_2017.pdf",
+        "sha256": "55e091cee3eb5fbb183638a2405e27c945c577988321dcb88c426cdd7fc60494",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 264
+      },
+      "version": {
+        "published_date": "2017-03-06",
+        "effective_from": "2017-03-06",
+        "version_label": "2017"
+      },
+      "local_path": "raw/india/legislation/trade_marks_rules_2017.pdf",
+      "notes": "Classification, device marks, distinctiveness"
+    },
+    {
+      "document_id": "IND_GEOGRAPHICAL_INDICATIONS_ACT_1999",
+      "title": "The Geographical Indications of Goods (Registration and Protection) Act, 1999",
+      "short_title": "GI Act, 1999",
+      "jurisdiction": "IN",
+      "domain": [
+        "GEOGRAPHICAL_INDICATIONS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "GI Registry, Chennai",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1988",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.935517+00:00",
+        "file_name": "gi_act_1999.pdf",
+        "sha256": "904b09c762dd0604b6ae9ca17a53a8f596c1b65d63a629b8a7a2b8d9331bde6e",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 264
+      },
+      "version": {
+        "published_date": "1999-12-30",
+        "effective_from": "2003-09-15",
+        "version_label": "1999"
+      },
+      "local_path": "raw/india/legislation/gi_act_1999.pdf",
+      "notes": "GI registrability for agri goods like Malabar Pepper"
+    },
+    {
+      "document_id": "IND_DESIGNS_ACT_2000",
+      "title": "The Designs Act, 2000 & Designs Rules, 2001 (as amended)",
+      "short_title": "Designs Act, 2000",
+      "jurisdiction": "IN",
+      "domain": [
+        "DESIGNS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "IP India — Designs Wing",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1910",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.935806+00:00",
+        "file_name": "designs_act_2000.pdf",
+        "sha256": "ffa9f97002f129ab5d34b8581355b4af5682a0ae3ce316a855c50562081e370e",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 230
+      },
+      "version": {
+        "published_date": "2000-05-25",
+        "effective_from": "2001-05-11",
+        "version_label": "2000"
+      },
+      "local_path": "raw/india/legislation/designs_act_2000.pdf",
+      "notes": "Container/packaging design protection"
+    },
+    {
+      "document_id": "IND_COPYRIGHT_ACT_1957",
+      "title": "The Copyright Act, 1957 (as amended)",
+      "short_title": "Copyright Act, 1957",
+      "jurisdiction": "IN",
+      "domain": [
+        "COPYRIGHT"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "Copyright Office",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1367",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.936117+00:00",
+        "file_name": "copyright_act_1957.pdf",
+        "sha256": "22e683bfbaf0fd4b5ef22af2280a1f01561ee2a334c781ebea2797698c9794dd",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 234
+      },
+      "version": {
+        "published_date": "1957-06-04",
+        "effective_from": "1958-01-21",
+        "version_label": "2012 amendment consolidated"
+      },
+      "local_path": "raw/india/legislation/copyright_act_1957.pdf",
+      "notes": "For Ayurvedic texts/labels/literary works"
+    },
+    {
+      "document_id": "IND_PPVFR_ACT_2001",
+      "title": "Protection of Plant Varieties and Farmers' Rights Act, 2001",
+      "short_title": "PPV&FR Act, 2001",
+      "jurisdiction": "IN",
+      "domain": [
+        "PLANT_VARIETY"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "PPV&FR Authority",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/1906",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.936408+00:00",
+        "file_name": "ppvfr_act_2001.pdf",
+        "sha256": "b3051b74091539c100217f7ba8a125317744703f706ec844ddec5109ccfa49a0",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 226
+      },
+      "version": {
+        "published_date": "2001-10-30",
+        "effective_from": "2005-11-11",
+        "version_label": "2001"
+      },
+      "local_path": "raw/india/legislation/ppvfr_act_2001.pdf",
+      "notes": "Alternative to patent for Ashwagandha varieties — Sec 3(j) bar"
+    },
+    {
+      "document_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002",
+      "title": "The Biological Diversity Act, 2002",
+      "short_title": "BDA 2002",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "National Biodiversity Authority (NBA)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/2047",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.936701+00:00",
+        "file_name": "biological_diversity_act_2002.pdf",
+        "sha256": "57af8ddf40c228b89562a4ceaea097450cf07a122dffca16d87f0d8501b19761",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 256
+      },
+      "version": {
+        "published_date": "2003-02-05",
+        "effective_from": "2004-04-01",
+        "version_label": "2002 original"
+      },
+      "local_path": "raw/india/biodiversity/biological_diversity_act_2002.pdf",
+      "notes": "Sec 3 foreign, Sec 6 IPR, Sec 7 SBB, Sec 41 BMC"
+    },
+    {
+      "document_id": "IND_BDA_AMENDMENT_2023",
+      "title": "The Biological Diversity (Amendment) Act, 2023",
+      "short_title": "BDA Amendment 2023",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "AMENDMENT",
+      "authority": "Government of India",
+      "issuing_body": "Ministry of Law & Justice / NBA",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/17046",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.936997+00:00",
+        "file_name": "bda_amendment_2023.pdf",
+        "sha256": "5f8df3ccd9e549cae131d9dc49b62e014a88252626ee7c89682281ccb6fd7ba8",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 235
+      },
+      "version": {
+        "published_date": "2023-08-03",
+        "effective_from": "2024-04-01",
+        "version_label": "2023 amendment — decriminalization, Sec 7 proviso"
+      },
+      "local_path": "raw/india/biodiversity/bda_amendment_2023.pdf",
+      "notes": "Decriminalization, cultivated material exemption, penalty 55"
+    },
+    {
+      "document_id": "IND_NBA_ABS_REGULATIONS_2014",
+      "title": "Guidelines on Access and Benefit Sharing Regulations, 2014",
+      "short_title": "ABS Regulations 2014",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "REGULATIONS",
+      "authority": "National Biodiversity Authority",
+      "issuing_body": "NBA, Chennai",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/pdf/ABS_Regulations_2014.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.937369+00:00",
+        "file_name": "abs_regulations_2014.pdf",
+        "sha256": "60af6e20eda9aa54617926b5ba0fbee4a001cc189978f9a443d56e7869d8016e",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483
+      },
+      "version": {
+        "published_date": "2014-11-21",
+        "effective_from": "2014-11-21",
+        "version_label": "2014"
+      },
+      "local_path": "raw/india/biodiversity/abs_regulations_2014.pdf",
+      "notes": "Form I, Form III, benefit sharing formula"
+    },
+    {
+      "document_id": "IND_NBA_SBB_FORMS",
+      "title": "NBA Forms I, III, IV and SBB Form A — Access & IPR",
+      "short_title": "NBA/SBB Forms",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "FORMS",
+      "authority": "NBA",
+      "issuing_body": "NBA",
+      "authority_level": 4,
+      "source": {
+        "url": "https://nbaindia.org/content/19/18/1/forms.html",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.937730+00:00",
+        "file_name": "nba_sbb_forms.pdf",
+        "sha256": "60af6e20eda9aa54617926b5ba0fbee4a001cc189978f9a443d56e7869d8016e",
+        "mime_type": "text/html",
+        "file_size_bytes": 63483
+      },
+      "version": {
+        "published_date": "2014-01-01",
+        "effective_from": "2014-01-01",
+        "version_label": "Current forms"
+      },
+      "local_path": "raw/india/biodiversity/nba_sbb_forms.html",
+      "notes": "Practical filing layer for ABSWizard"
+    },
+    {
+      "document_id": "IND_DRUGS_COSMETICS_ACT_1940",
+      "title": "The Drugs and Cosmetics Act, 1940 — Chapter IV-A (ASU Drugs)",
+      "short_title": "D&C Act, 1940",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_DRUG_REGULATION"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "Ministry of Ayush / CDSCO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/2152",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.938029+00:00",
+        "file_name": "drugs_cosmetics_act_1940.pdf",
+        "sha256": "0b88186be23d14b094e55e91cab47e258706ab80ad46f4d05acfec0872fb26f5",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 246
+      },
+      "version": {
+        "published_date": "1940-12-10",
+        "effective_from": "1940-12-10",
+        "version_label": "Chapter IV-A 1969 insertion"
+      },
+      "local_path": "raw/india/ayush/drugs_cosmetics_act_1940.pdf",
+      "notes": "Sec 3(a) classical, Sec 3(h) proprietary, First Schedule"
+    },
+    {
+      "document_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+      "title": "Drugs and Cosmetics Rules, 1945 — Part XVI/XVII ASU & Schedule T",
+      "short_title": "DCR 1945 ASU",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_DRUG_REGULATION"
+      ],
+      "document_type": "RULES",
+      "authority": "Government of India",
+      "issuing_body": "Ministry of Health & Family Welfare (AYUSH)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/2152?view_type=browse",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.938427+00:00",
+        "file_name": "drugs_cosmetics_rules_1945_asu.pdf",
+        "sha256": "94268fc04c271bd10edda0c383e5edb6bd2fa6a7277359774357a4ad885120b8",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 275
+      },
+      "version": {
+        "published_date": "1945-12-21",
+        "effective_from": "1945-12-21",
+        "version_label": "ASU up to 2023"
+      },
+      "local_path": "raw/india/ayush/drugs_cosmetics_rules_1945_asu.pdf",
+      "notes": "Rule 158B proprietary, Schedule T GMP, labeling"
+    },
+    {
+      "document_id": "IND_FIRST_SCHEDULE_BOOKS",
+      "title": "First Schedule — Authoritative Ayurvedic Classical Texts (56 books)",
+      "short_title": "First Schedule",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_DRUG_REGULATION"
+      ],
+      "document_type": "NOTIFICATION",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "Government of India Gazette",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ayush.gov.in/docs/Firsy-schedule-ayurved.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.938738+00:00",
+        "file_name": "first_schedule_authoritative_books.pdf",
+        "sha256": "28e5f0d4fdffaeca80adb808494ac182e12c67bfaef70358ffda8b2051e924c1",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 244
+      },
+      "version": {
+        "published_date": "2016-01-01",
+        "effective_from": "2016-01-01",
+        "version_label": "Current list"
+      },
+      "local_path": "raw/india/ayush/first_schedule_texts.pdf",
+      "notes": "Charaka, Sharangadhara etc. — determines CLASSICAL vs PROPRIETARY"
+    },
+    {
+      "document_id": "IND_AYUSH_LICENSING_GUIDELINES",
+      "title": "Guidelines for Issue of License for Ayurvedic Medicines (State Licensing Authority)",
+      "short_title": "AYUSH Licensing Guidelines",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_DRUG_REGULATION"
+      ],
+      "document_type": "GUIDELINES",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "Ayush Vertical, CDSCO coordination",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.ayush.gov.in/docs/ayurved-drugs-guidelines.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.939013+00:00",
+        "file_name": "ayush_licensing_guidelines.pdf",
+        "sha256": "9e27a7b1c9ace5ce5adaf534af4b309df542c9f42a1065b8c8950fb4958c08c0",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 258
+      },
+      "version": {
+        "published_date": "2020-01-01",
+        "effective_from": "2020-01-01",
+        "version_label": "2020"
+      },
+      "local_path": "raw/india/ayush/ayush_licensing_guidelines.pdf",
+      "notes": "Operational: Classical vs Proprietary license checklist"
+    },
+    {
+      "document_id": "IND_COSMETICS_RULES_2020",
+      "title": "Cosmetics Rules, 2020",
+      "short_title": "Cosmetics Rules, 2020",
+      "jurisdiction": "IN",
+      "domain": [
+        "COSMETICS"
+      ],
+      "document_type": "RULES",
+      "authority": "Government of India",
+      "issuing_body": "CDSCO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://cdsco.gov.in/opencms/export/sites/CDSCO_WEB/Pdf-documents/Cosmetics/Cosmetics_Rules_2020.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.939280+00:00",
+        "file_name": "cosmetics_rules_2020.pdf",
+        "sha256": "f81d7c891674601d2110ddf26908571fb4167b341950ad983815744dc6fcdd47",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 288
+      },
+      "version": {
+        "published_date": "2020-12-15",
+        "effective_from": "2020-12-15",
+        "version_label": "2020"
+      },
+      "local_path": "raw/india/ayush/cosmetics_rules_2020.pdf",
+      "notes": "Ayurvedic cosmetics vs AYUSH drugs boundary"
+    },
+    {
+      "document_id": "IND_FSS_ACT_2006",
+      "title": "Food Safety and Standards Act, 2006",
+      "short_title": "FSS Act, 2006",
+      "jurisdiction": "IN",
+      "domain": [
+        "FOOD_AYURVEDA_AAHARA"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "FSSAI / MoHFW",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/2066",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.939554+00:00",
+        "file_name": "fss_act_2006.pdf",
+        "sha256": "082ad8b695e0a51a21aa06c30d3dc7c366fe684f722bcfa7e83cfc93b7455804",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 222
+      },
+      "version": {
+        "published_date": "2006-08-23",
+        "effective_from": "2011-08-05",
+        "version_label": "2006"
+      },
+      "local_path": "raw/india/ayush/fss_act_2006.pdf",
+      "notes": "Parent Act for Ayurveda Aahara"
+    },
+    {
+      "document_id": "IND_FSSAI_AYURVEDA_AAHARA_2022",
+      "title": "Food Safety and Standards (Ayurveda Aahara) Regulations, 2022",
+      "short_title": "Ayurveda Aahara 2022",
+      "jurisdiction": "IN",
+      "domain": [
+        "FOOD_AYURVEDA_AAHARA"
+      ],
+      "document_type": "REGULATIONS",
+      "authority": "FSSAI",
+      "issuing_body": "FSSAI",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.fssai.gov.in/upload/uploadfiles/files/Gazette_Notification_Ayurveda_Aahara_05_05_2022.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.939917+00:00",
+        "file_name": "fssai_ayurveda_aahara_2022.pdf",
+        "sha256": "fdc4739c869cba5a44690c9dbd013757b4e5102b7eb310746d13c839de934b62",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 3221
+      },
+      "version": {
+        "published_date": "2022-05-05",
+        "effective_from": "2022-05-05",
+        "version_label": "2022 with Schedule A/B"
+      },
+      "local_path": "raw/india/ayush/fssai_ayurveda_aahara_2022.pdf",
+      "notes": "Reg 3 Schedule A/B, Reg 5(3) disease claim bar, Reg 8 logo"
+    },
+    {
+      "document_id": "IND_FSSAI_LICENSING_LABELLING_2020",
+      "title": "FSS (Labelling and Display) Regulations, 2020 + Licensing Regulations",
+      "short_title": "FSSAI Labelling 2020",
+      "jurisdiction": "IN",
+      "domain": [
+        "FOOD_AYURVEDA_AAHARA"
+      ],
+      "document_type": "REGULATIONS",
+      "authority": "FSSAI",
+      "issuing_body": "FSSAI",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.fssai.gov.in/upload/uploadfiles/files/Compendium_Labelling_Display_23_09_2021.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.941734+00:00",
+        "file_name": "fssai_labelling_2020.pdf",
+        "sha256": "ca2df1dfe75cd4c3855f51ed36519f89916022fec85c48af2a4e9e794a4a3492",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 1000070
+      },
+      "version": {
+        "published_date": "2020-11-17",
+        "effective_from": "2020-11-17",
+        "version_label": "2020"
+      },
+      "local_path": "raw/india/ayush/fssai_labelling_2020.pdf",
+      "notes": "Disclaimer 'not to diagnose/treat/cure'"
+    },
+    {
+      "document_id": "IND_DMR_ACT_1954",
+      "title": "Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954 & Rules 1955",
+      "short_title": "DMR Act, 1954",
+      "jurisdiction": "IN",
+      "domain": [
+        "ADVERTISING_AND_CLAIMS"
+      ],
+      "document_type": "ACT",
+      "authority": "Government of India",
+      "issuing_body": "MoHFW",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/handle/123456789/2156",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.942117+00:00",
+        "file_name": "dmr_act_1954.pdf",
+        "sha256": "af69d319c61cc2356b40cd0ab77cd8f9b69cd5ce783df3368a2fabf441fa1460",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 222
+      },
+      "version": {
+        "published_date": "1954-04-30",
+        "effective_from": "1954-04-30",
+        "version_label": "1954 Schedule diseases"
+      },
+      "local_path": "raw/india/legislation/dmr_act_1954.pdf",
+      "notes": "Schedule disease advertising ban — Instagram/YouTube claims"
+    },
+    {
+      "document_id": "IND_ASCIM_GUIDELINES_2022",
+      "title": "ASCI Guidelines for Advertising of Ayurvedic & Herbal Products",
+      "short_title": "ASCI Herbal Ads 2022",
+      "jurisdiction": "IN",
+      "domain": [
+        "ADVERTISING_AND_CLAIMS"
+      ],
+      "document_type": "GUIDELINES",
+      "authority": "ASCI + Ministry of Information & Broadcasting advisory",
+      "issuing_body": "ASCI",
+      "authority_level": 3,
+      "source": {
+        "url": "https://www.ascionline.in/wp-content/uploads/2022/07/ASCI-Guidelines-for-Ayurveda.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.942416+00:00",
+        "file_name": "asci_herbal_ads_2022.pdf",
+        "sha256": "1e2bb33cacb8d4d9c7a80e5cda0e8986341b7ae27634f72fe4e0beeebd16460f",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 275
+      },
+      "version": {
+        "published_date": "2022-07-01",
+        "effective_from": "2022-07-01",
+        "version_label": "2022"
+      },
+      "local_path": "raw/india/legislation/asci_herbal_ads_2022.pdf",
+      "notes": "Qualified 'clinically proven' vs guaranteed cure"
+    },
+    {
+      "document_id": "IND_TKDL_OVERVIEW",
+      "title": "Traditional Knowledge Digital Library (TKDL) — Access & Classification Overview",
+      "short_title": "TKDL Overview",
+      "jurisdiction": "IN",
+      "domain": [
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "CSIR / Ministry of Ayush",
+      "issuing_body": "TKDL Unit",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.tkdl.res.in/tkdl/langdefault/common/Home.asp?GL=Eng",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.942748+00:00",
+        "file_name": "tkdl_overview.html",
+        "sha256": "018c7c0f22ab1251089025093465f278dde656b4c19592fbce2d976943ff8c2b",
+        "mime_type": "text/html",
+        "file_size_bytes": 246
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal 2024"
+      },
+      "local_path": "raw/india/ayush/tkdl_overview.html",
+      "notes": "Public TKDL info only — restricted database not scraped; use representative prior art catalog"
+    },
+    {
+      "document_id": "IND_NMPB_GUIDELINES",
+      "title": "National Medicinal Plants Board — Guidelines for Cultivation & Good Field Collection Practices",
+      "short_title": "NMPB Guidelines",
+      "jurisdiction": "IN",
+      "domain": [
+        "BOTANICAL_ONTOLOGY"
+      ],
+      "document_type": "GUIDELINES",
+      "authority": "NMPB / Ministry of Ayush",
+      "issuing_body": "NMPB",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.nmpb.nic.in/content/guidelines",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.943040+00:00",
+        "file_name": "nmpb_guidelines.pdf",
+        "sha256": "c4fcb0707cbf5e1fc0725c65c8271f6e2762c329f387b33f6ef057b6174dff43",
+        "mime_type": "text/html",
+        "file_size_bytes": 338
+      },
+      "version": {
+        "published_date": "2023-01-01",
+        "effective_from": "2023-01-01",
+        "version_label": "2023"
+      },
+      "local_path": "raw/india/ayush/nmpb_guidelines.html",
+      "notes": "Abs risk categories, cultivated vs wild"
+    },
+    {
+      "document_id": "IND_API_PART1",
+      "title": "Ayurvedic Pharmacopoeia of India (API), Part-I — Monographs",
+      "short_title": "API Part-I",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_STANDARDS"
+      ],
+      "document_type": "PHARMACOPOEIA",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "Pharmacopoeia Commission for Indian Medicine",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ayush.gov.in/docs/Ayurvedic_Pharmacopoeia_Part1.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.943415+00:00",
+        "file_name": "api_part1.pdf",
+        "sha256": "974813a26cba731334ad1b95b588696655812606b2b77da2de7f105fe4cc2dad",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 229
+      },
+      "version": {
+        "published_date": "2016-01-01",
+        "effective_from": "2016-01-01",
+        "version_label": "Vol I-IX consolidated"
+      },
+      "local_path": "raw/india/ayush/api_part1.pdf",
+      "notes": "Botanical standards, quality control"
+    },
+    {
+      "document_id": "IND_AFI_PART1",
+      "title": "Ayurvedic Formulary of India (AFI), Part-I",
+      "short_title": "AFI Part-I",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_STANDARDS"
+      ],
+      "document_type": "FORMULARY",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "PCIM",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ayush.gov.in/docs/Ayurvedic_Formulary_Part1.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.943880+00:00",
+        "file_name": "afi_part1.pdf",
+        "sha256": "94af3296574fab623c085d1e44cb2fc48c6f541fc21272c6839948b20fa8e2ff",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 225
+      },
+      "version": {
+        "published_date": "2003-01-01",
+        "effective_from": "2003-01-01",
+        "version_label": "2003"
+      },
+      "local_path": "raw/india/ayush/afi_part1.pdf",
+      "notes": "Classical formulation recipes — TK prior art"
+    },
+    {
+      "document_id": "IND_AYUSH_GMP_SCHEDULE_T",
+      "title": "Good Manufacturing Practices for Ayurvedic Medicines — Schedule T (DCR 1945)",
+      "short_title": "Schedule T GMP",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_STANDARDS"
+      ],
+      "document_type": "SCHEDULE",
+      "authority": "Government of India",
+      "issuing_body": "Ministry of Ayush",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ayush.gov.in/docs/ScheduleT_GMP.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.944261+00:00",
+        "file_name": "schedule_t_gmp.pdf",
+        "sha256": "a3803acf56e2dfe28b2c4bfe9c5198e17ce8c8e181f261e5001dbef6c5024880",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 235
+      },
+      "version": {
+        "published_date": "2016-12-01",
+        "effective_from": "2016-12-01",
+        "version_label": "2016"
+      },
+      "local_path": "raw/india/ayush/schedule_t_gmp.pdf",
+      "notes": "Manufacturing compliance for Classical/Proprietary"
+    },
+    {
+      "document_id": "IND_IP_INDIA_PATENTS_PORTAL",
+      "title": "IP India — InPASS Patent Public Search & E-Register",
+      "short_title": "InPASS Patents",
+      "jurisdiction": "IN",
+      "domain": [
+        "PATENTS",
+        "REGISTRY_RECORDS"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "IP India / CGPDTM",
+      "issuing_body": "IP India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindiaservices.gov.in/publicsearch",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.944620+00:00",
+        "file_name": "inpass_portal.html",
+        "sha256": "af3eca6eb94ad38943b9822ef23371a2b00134256e6dd5c3ca995b7eef6b7dc7",
+        "mime_type": "text/html",
+        "file_size_bytes": 237
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/ip/inpass_portal.html",
+      "notes": "Registry records — not statute"
+    },
+    {
+      "document_id": "IND_IP_INDIA_TM_PORTAL",
+      "title": "IP India — Trade Marks Registry Public Search & Journal",
+      "short_title": "TM Registry",
+      "jurisdiction": "IN",
+      "domain": [
+        "TRADEMARKS",
+        "REGISTRY_RECORDS"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "IP India",
+      "issuing_body": "Trade Marks Registry",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindia.gov.in/trade-marks.htm",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.944953+00:00",
+        "file_name": "tm_registry_portal.html",
+        "sha256": "a6c45e414382c41b6766ae93afc3ac65201513a206df65000817f0a34be672dc",
+        "mime_type": "text/html",
+        "file_size_bytes": 222
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/ip/tm_registry_portal.html",
+      "notes": "TM e-register guidance"
+    },
+    {
+      "document_id": "IND_GI_REGISTRY_PORTAL",
+      "title": "Geographical Indications Registry — Registered GI List (Chennai)",
+      "short_title": "GI Registry",
+      "jurisdiction": "IN",
+      "domain": [
+        "GEOGRAPHICAL_INDICATIONS"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "GI Registry",
+      "issuing_body": "IP India — GI Wing",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindia.gov.in/writereaddata/Portal/Images/pdf/GI_Registered_GI.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.945226+00:00",
+        "file_name": "gi_registered_list.pdf",
+        "sha256": "7dd3cd66bdf3aee5940e72cfff2700523dcfa3d79b4eb75bf2c4ad1e85bd3a7b",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 259
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "2024 list"
+      },
+      "local_path": "raw/india/ip/gi_registered_list.pdf",
+      "notes": "Malabar Pepper, etc."
+    },
+    {
+      "document_id": "IND_IP_INDIA_DESIGNS_PORTAL",
+      "title": "IP India — Designs E-Register & Public Search",
+      "short_title": "Designs Registry",
+      "jurisdiction": "IN",
+      "domain": [
+        "DESIGNS"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "IP India",
+      "issuing_body": "Designs Wing",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindia.gov.in/designs.htm",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.945493+00:00",
+        "file_name": "designs_portal.html",
+        "sha256": "4ef13cf8e1587b0f619f97a8963ed1d5894495f2ec333314caa43687319dfb71",
+        "mime_type": "text/html",
+        "file_size_bytes": 228
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/ip/designs_portal.html",
+      "notes": "Design records for packaging"
+    },
+    {
+      "document_id": "IND_NBA_PORTAL",
+      "title": "National Biodiversity Authority — Official Portal (Acts, ABS, BMC)",
+      "short_title": "NBA Portal",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "NBA",
+      "issuing_body": "NBA, Chennai",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.945845+00:00",
+        "file_name": "nba_portal.html",
+        "sha256": "a02e313ab5224f21e2c48d18630424a1cd1a8808d3fec23d866807ca8b101a35",
+        "mime_type": "text/html",
+        "file_size_bytes": 63483
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/biodiversity/nba_portal.html",
+      "notes": "SBB/BMC, ABS notifications"
+    },
+    {
+      "document_id": "IND_NBA_SBB_NOTIFICATIONS",
+      "title": "NBA Notifications — State Biodiversity Boards & BMC Guidelines",
+      "short_title": "SBB/BMC Guidelines",
+      "jurisdiction": "IN",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "NOTIFICATIONS",
+      "authority": "NBA",
+      "issuing_body": "NBA",
+      "authority_level": 4,
+      "source": {
+        "url": "https://nbaindia.org/content/106/29/1/sbb.html",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.946194+00:00",
+        "file_name": "nba_sbb_notifications.html",
+        "sha256": "a02e313ab5224f21e2c48d18630424a1cd1a8808d3fec23d866807ca8b101a35",
+        "mime_type": "text/html",
+        "file_size_bytes": 63483
+      },
+      "version": {
+        "published_date": "2023-01-01",
+        "effective_from": "2023-01-01",
+        "version_label": "2023"
+      },
+      "local_path": "raw/india/biodiversity/nba_sbb_notifications.html",
+      "notes": "Operational SBB intimation workflow"
+    },
+    {
+      "document_id": "IND_INDIA_CODE_PORTAL",
+      "title": "India Code — Digital Repository of all Central Acts & Subordinate Legislation",
+      "short_title": "India Code",
+      "jurisdiction": "IN",
+      "domain": [
+        "LEGISLATION"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "Ministry of Law & Justice / NIC",
+      "issuing_body": "India Code Team",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.946538+00:00",
+        "file_name": "indiacode_portal.html",
+        "sha256": "cdd2d0f16731d21d8620961940f9890deceb1cc584b9a4d82c552eb9536f0896",
+        "mime_type": "text/html",
+        "file_size_bytes": 211
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/legislation/indiacode_portal.html",
+      "notes": "Authoritative source registry for all Acts"
+    },
+    {
+      "document_id": "INT_TRIPS_AGREEMENT",
+      "title": "WTO TRIPS Agreement — Articles 27, 29, 39 (Patents & Undisclosed Information)",
+      "short_title": "TRIPS",
+      "jurisdiction": "INT",
+      "domain": [
+        "INTERNATIONAL_IP"
+      ],
+      "document_type": "TREATY",
+      "authority": "World Trade Organization",
+      "issuing_body": "WTO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.wto.org/english/docs_e/legal_e/27-trips.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.947166+00:00",
+        "file_name": "trips_agreement.pdf",
+        "sha256": "baa5beb7dda530e57dcf126779e4a0a53571460e19ed72a8aeb6e90500af5540",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 197733
+      },
+      "version": {
+        "published_date": "1994-04-15",
+        "effective_from": "1995-01-01",
+        "version_label": "1994"
+      },
+      "local_path": "raw/international/wipo/trips_agreement.pdf",
+      "notes": "International baseline — jurisdiction firewall INT"
+    },
+    {
+      "document_id": "INT_CBD_TEXT",
+      "title": "Convention on Biological Diversity (CBD) — Text & Annexes",
+      "short_title": "CBD",
+      "jurisdiction": "INT",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "TREATY",
+      "authority": "United Nations",
+      "issuing_body": "CBD Secretariat",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.cbd.int/doc/legal/cbd-en.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.953676+00:00",
+        "file_name": "cbd_text.pdf",
+        "sha256": "9acd3886bfb0b3c3a4d75b254b53dd4ab084d7ad59915f09f03bbe92cdc75517",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4551079
+      },
+      "version": {
+        "published_date": "1992-06-05",
+        "effective_from": "1993-12-29",
+        "version_label": "1992"
+      },
+      "local_path": "raw/international/cbd_nagoya/cbd_text.pdf",
+      "notes": "Sovereign rights over biological resources"
+    },
+    {
+      "document_id": "INT_NAGOYA_PROTOCOL",
+      "title": "Nagoya Protocol on Access and Benefit Sharing (2010)",
+      "short_title": "Nagoya Protocol",
+      "jurisdiction": "INT",
+      "domain": [
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "PROTOCOL",
+      "authority": "CBD Secretariat",
+      "issuing_body": "United Nations",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.cbd.int/abs/doc/protocol/nagoya-protocol-en.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.954784+00:00",
+        "file_name": "nagoya_protocol.pdf",
+        "sha256": "cdbd496bd361317d3b7237124177974bebac4cc800cf1974896bc19234cce856",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 502368
+      },
+      "version": {
+        "published_date": "2010-10-29",
+        "effective_from": "2014-10-12",
+        "version_label": "2010"
+      },
+      "local_path": "raw/international/cbd_nagoya/nagoya_protocol.pdf",
+      "notes": "ABS international framework"
+    },
+    {
+      "document_id": "INT_WIPO_GRATK_2024",
+      "title": "WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (2024)",
+      "short_title": "WIPO GRATK 2024",
+      "jurisdiction": "INT",
+      "domain": [
+        "INTERNATIONAL_IP",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "TREATY",
+      "authority": "WIPO",
+      "issuing_body": "WIPO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.wipo.int/wipo_magazine/en/2024/02/article_0001.html",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.955318+00:00",
+        "file_name": "wipo_gratk_2024.html",
+        "sha256": "3d097ad05a417d877253f97a065b24da7f9339a693fff95d03e44aafa2d7e6b7",
+        "mime_type": "text/html",
+        "file_size_bytes": 187471
+      },
+      "version": {
+        "published_date": "2024-05-24",
+        "effective_from": "2024-05-24",
+        "version_label": "2024 adopted"
+      },
+      "local_path": "raw/international/wipo/wipo_gratk_2024.html",
+      "notes": "Disclosure requirement for GR/TK in patents"
+    },
+    {
+      "document_id": "INT_US_FDA_DSHEA_2024",
+      "title": "US FDA — Dietary Supplement Health and Education Act (DSHEA) & 21 CFR Part 111 (cGMP)",
+      "short_title": "US DSHEA",
+      "jurisdiction": "INT",
+      "domain": [
+        "EXPORT_REGULATION"
+      ],
+      "document_type": "REGULATIONS",
+      "authority": "US Food & Drug Administration",
+      "issuing_body": "FDA / CFSAN",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.fda.gov/food/dietary-supplements/dietary-supplement-products-ingredients",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.955757+00:00",
+        "file_name": "us_fda_dshea.html",
+        "sha256": "895ee63e68cf15427759d43064b0a4558f6526dc36686a3b7f48b5affdcd6704",
+        "mime_type": "text/html",
+        "file_size_bytes": 91682
+      },
+      "version": {
+        "published_date": "1994-10-25",
+        "effective_from": "1994-10-25",
+        "version_label": "DSHEA 1994 + 21 CFR 111"
+      },
+      "local_path": "raw/international/export_regimes/us_fda_dshea.html",
+      "notes": "INT firewall — US AYUSH export as dietary supplement needs NDI"
+    },
+    {
+      "document_id": "INT_EU_THMPD_2004",
+      "title": "EU Directive 2004/24/EC — Traditional Herbal Medicinal Products Directive (THMPD)",
+      "short_title": "EU THMPD",
+      "jurisdiction": "INT",
+      "domain": [
+        "EXPORT_REGULATION"
+      ],
+      "document_type": "DIRECTIVE",
+      "authority": "European Parliament & Council",
+      "issuing_body": "EMA / European Commission",
+      "authority_level": 5,
+      "source": {
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32004L0024",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.958611+00:00",
+        "file_name": "eu_thmpd_2004_24.html",
+        "sha256": "1fa2858b2640476a03e2eeb57024f4009aadc2e3ddf5bbaa2faf6b2b5d7dcae7",
+        "mime_type": "text/html",
+        "file_size_bytes": 2038
+      },
+      "version": {
+        "published_date": "2004-03-31",
+        "effective_from": "2004-04-30",
+        "version_label": "2004/24/EC — 30-year rule, 15 EU"
+      },
+      "local_path": "raw/international/export_regimes/eu_thmpd_2004_24.html",
+      "notes": "Simplified registration CTD module — heavy metals, GMP"
+    },
+    {
+      "document_id": "INT_EU_FOOD_SUPPLEMENT_2002",
+      "title": "EU Directive 2002/46/EC — Food Supplements & Regulation 1924/2006 on Nutrition & Health Claims",
+      "short_title": "EU Food Supplements",
+      "jurisdiction": "INT",
+      "domain": [
+        "EXPORT_REGULATION"
+      ],
+      "document_type": "DIRECTIVE",
+      "authority": "European Commission",
+      "issuing_body": "EFSA / EU Commission",
+      "authority_level": 5,
+      "source": {
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32002L0046",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.961529+00:00",
+        "file_name": "eu_food_supplements_2002.html",
+        "sha256": "a5fd9c6ffea749c1d14906742776536542c826c43638cb52aea478f32f55354a",
+        "mime_type": "text/html",
+        "file_size_bytes": 2038
+      },
+      "version": {
+        "published_date": "2002-06-10",
+        "effective_from": "2002-07-12",
+        "version_label": "2002/46/EC"
+      },
+      "local_path": "raw/international/export_regimes/eu_food_supplements_2002.html",
+      "notes": "Alternative to THMPD for Ayurveda Aahara-like foods"
+    },
+    {
+      "document_id": "IND_CASE_TURMERIC_USPTO_1995",
+      "title": "USPTO Re-examination — US Patent 5,401,504 Turmeric (Revoked 1997) — CSIR Challenge",
+      "short_title": "Turmeric Patent Case",
+      "jurisdiction": "INT",
+      "domain": [
+        "CASE_LAW"
+      ],
+      "document_type": "CASE_LAW",
+      "authority": "USPTO / CSIR",
+      "issuing_body": "USPTO Board",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.uspto.gov/web/offices/com/sol/og/1998/week39/pateturm.htm",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.962907+00:00",
+        "file_name": "turmeric_uspto_case.html",
+        "sha256": "5c4ce718ee23b0d02117df5ff5361dd59578e44cbf3587ae4c01623ed69ab9c0",
+        "mime_type": "text/html",
+        "file_size_bytes": 265
+      },
+      "version": {
+        "published_date": "1997-08-28",
+        "effective_from": "1997-08-28",
+        "version_label": "Reexam 1997"
+      },
+      "local_path": "raw/international/case_law/turmeric_uspto_case.html",
+      "notes": "Landmark Sec 3(p) / TK prior art precedent"
+    },
+    {
+      "document_id": "IND_CASE_NEEM_EPO_2000",
+      "title": "EPO Opposition — Neem Patent EP 0436257 (Revoked) — Azadirachtin",
+      "short_title": "Neem Patent Case (EPO)",
+      "jurisdiction": "INT",
+      "domain": [
+        "CASE_LAW"
+      ],
+      "document_type": "CASE_LAW",
+      "authority": "European Patent Office",
+      "issuing_body": "EPO Opposition Division",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.epo.org/law-practice/case-law-appeals/recent/t000416ex1.html",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.963679+00:00",
+        "file_name": "neem_epo_case.html",
+        "sha256": "ce3ea20a6adeb4dd2245d0c58ae45687c1dbaa9c7ce8e152d2d61fe4c328d83d",
+        "mime_type": "text/html",
+        "file_size_bytes": 256
+      },
+      "version": {
+        "published_date": "2000-03-08",
+        "effective_from": "2000-03-08",
+        "version_label": "EPO 2000"
+      },
+      "local_path": "raw/international/case_law/neem_epo_case.html",
+      "notes": "TK & lack of inventive step"
+    },
+    {
+      "document_id": "IND_CASE_DIVYA_PHARMACY_2018",
+      "title": "Divya Pharmacy vs Union of India (Uttarakhand HC, 2018) — ABS Benefit Sharing for Ayurvedic Manufacturer",
+      "short_title": "Divya Pharmacy ABS Case",
+      "jurisdiction": "IN",
+      "domain": [
+        "CASE_LAW",
+        "BIODIVERSITY_ABS"
+      ],
+      "document_type": "CASE_LAW",
+      "authority": "Uttarakhand High Court",
+      "issuing_body": "High Court of Uttarakhand",
+      "authority_level": 4,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/pdf/Divya_Pharmacy_judgement.pdf",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.964976+00:00",
+        "file_name": "divya_pharmacy_2018.pdf",
+        "sha256": "a02e313ab5224f21e2c48d18630424a1cd1a8808d3fec23d866807ca8b101a35",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483
+      },
+      "version": {
+        "published_date": "2018-12-21",
+        "effective_from": "2018-12-21",
+        "version_label": "2018"
+      },
+      "local_path": "raw/india/biodiversity/divya_pharmacy_2018.pdf",
+      "notes": "Indian entity must share benefits — SBB jurisdiction upheld"
+    },
+    {
+      "document_id": "IND_AYUSH_MINISTRY_PORTAL",
+      "title": "Ministry of Ayush — Official Portal (Schemes, Advisories, Pharmacopoeia access)",
+      "short_title": "Ministry of Ayush Portal",
+      "jurisdiction": "IN",
+      "domain": [
+        "AYUSH_DRUG_REGULATION"
+      ],
+      "document_type": "OFFICIAL_PORTAL",
+      "authority": "Ministry of Ayush",
+      "issuing_body": "Government of India",
+      "authority_level": 4,
+      "source": {
+        "url": "https://www.ayush.gov.in/",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.965507+00:00",
+        "file_name": "ayush_portal.html",
+        "sha256": "9d421f2638b2542699a137aaa3721fcb5487298b72b6bf00df9f23bcaa86f041",
+        "mime_type": "text/html",
+        "file_size_bytes": 12806
+      },
+      "version": {
+        "published_date": "2024-01-01",
+        "effective_from": "2024-01-01",
+        "version_label": "Portal"
+      },
+      "local_path": "raw/india/ayush/ayush_portal.html",
+      "notes": "Advisories, standards access"
+    },
+    {
+      "document_id": "IND_WHO_TRADITIONAL_MEDICINE_2023",
+      "title": "WHO Global Report on Traditional and Complementary Medicine (2023) — Ayurveda chapter",
+      "short_title": "WHO TM Report 2023",
+      "jurisdiction": "INT",
+      "domain": [
+        "TRADITIONAL_KNOWLEDGE",
+        "STANDARDS"
+      ],
+      "document_type": "REPORT",
+      "authority": "World Health Organization",
+      "issuing_body": "WHO",
+      "authority_level": 3,
+      "source": {
+        "url": "https://www.who.int/publications/i/item/9789240687043",
+        "source_type": "OFFICIAL",
+        "retrieved_at": "2026-08-31T12:12:59.966701+00:00",
+        "file_name": "who_tm_report_2023.html",
+        "sha256": "f7834a89efcec317dc178cb8989b2bdfc9175c84193a73bcc73748c13979929d",
+        "mime_type": "text/html",
+        "file_size_bytes": 259
+      },
+      "version": {
+        "published_date": "2023-01-01",
+        "effective_from": "2023-01-01",
+        "version_label": "2023"
+      },
+      "local_path": "raw/international/wipo/who_tm_report_2023.html",
+      "notes": "Context for export & scientific evidence layer separation"
+    }
+  ],
+  "generated_at": "2026-08-31T10:59:35.585835+00:00",
+  "stats": {
+    "total": 47,
+    "success": 15,
+    "skipped": 1,
+    "failed": 31
+  }
+}

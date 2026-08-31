@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/apple-touch-icon.png" type="image/png" />
+
+    <title>Home | National Biodiversity Authority</title>
+    <link rel="stylesheet" media="all" href="/core/misc/components/progress.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/misc/components/ajax-progress.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/filter/css/filter.caption.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/core/modules/views/css/views.module.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/google_map_popup/css/map-popup.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/unee_header/css/base.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/unee_header/css/font.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/unee_header/css/font-awesome.min.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/unee_header/css/print.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/unee_header/css/search.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/modules/custom/youtube_gallery/css/youtube_gallery.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/includes/bootstrap/css/bootstrap.min.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/includes/flexslider/css/flexslider.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/includes/fontawesome/css/fontawesome-all.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/css/base.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/css/custom-style.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/css/custom-media.css?tkmuvk" />
+<link rel="stylesheet" media="all" href="/themes/drupal8_zymphonies_theme/includes/smartmenus/sm-core-css.css?tkmuvk" />
+
+    <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" defer crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v6.4.2/js/v4-shims.js" defer crossorigin="anonymous"></script>
+
+  </head>
+  <body class="path-frontpage" id="fontSize">
+    <a href="#main-content" class="visually-hidden focusable skip-link skipCont">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <script type="text/javascript">
+	// ====Tab scrolling text====
+
+function changeClass1(){    
+    var x = document.getElementsByClassName("text-slide"); 
+    var z = document.getElementsByClassName("scroll-text-3");                              
+    x[0].classList.toggle ("pause");
+    z[0].classList.toggle("scroll-left");                             
+}
+function changeClass2(){    
+    var x = document.getElementsByClassName("text-slide2"); 
+    var z = document.getElementsByClassName("scroll-text-2");                              
+    x[0].classList.toggle ("pause");
+    z[0].classList.toggle("scroll-left");                             
+}
+function changeClass3(){    
+    var x = document.getElementsByClassName("text-slide3"); 
+    var z = document.getElementsByClassName("scroll-text-1");  
+
+    if(x.length && z.length){
+        x[0].classList.toggle("pause");
+        z[0].classList.toggle("scroll-left");
+    }
+}
+
+</script>
+
+<!-- Header and Navbar -->
+<div class="container topheader">
+<div class="row">
+      <div class="col-md-12">  <div class="region region-header-top">
+    <div id="block-drupal8-zymphonies-theme-uneeheaderdata" class="block block-unee-header">
+  
+    
+      <div class="steel-contact-container">
+  <div class="steel-contact-item-container">
+	<div class="steel-contact-item common-left">
+	  <span class="steel-text">भारत सरकार | GOVERNMENT OF INDIA</span>
+	</div>
+	
+		
+	
+	<div class="steel-contact-item common-right">
+  
+    <ul class="social-icons">
+	  <li class="ico-skip cf"><a href="#skipCont" title="">Skip to main content</a>
+                           </li>
+     <li tabindex="2" class="serach-icon" title="Search">
+  <a href="javascript:void(0);" id="search-toggle">
+    <img src="/modules/custom/unee_header/images/ico-site-search.png" alt="Search">
+  </a>
+
+  <div id="search-box" class="search-box">
+    <form class="search-block-form" data-drupal-selector="search-block-form" action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+</li>
+    <li tabindex="2" class="ico-accessibility cf">
+                              <a href="javascript:void(0);" id="toggleAccessibility" title="Accessibility Dropdown" role="link">
+                              <img class="top" src="/modules/custom/unee_header/images/ico-accessibility.png" alt="Accessibility Dropdown">
+                              </a>
+                              <ul class="tester">
+                               <li> <a onclick="event.preventDefault(); set_font_size('increase');" title="Increase font size" href="javascript:void(0);" role="link">A<sup>+</sup>
+                                  </a> 
+                                 </li>
+                               <li> <a onclick="event.preventDefault(); set_font_size();" title="Reset font size" href="javascript:void(0);" role="link">A<sup>&nbsp;</sup></a> </li>
+                                 <li> <a onclick="event.preventDefault(); set_font_size('decrease');" title="Decrease font size" href="javascript:void(0);" role="link">A<sup>-</sup></a> </li>
+                                 <li> <a href="javascript:void(0);" class="high-contrast dark" title="High Contrast" role="link">A</a> </li>
+								 <li> <a href="javascript:void(0);" class="high-contrast red" title="High Red" role="link">A</a> </li>
+								 <li> <a href="javascript:void(0);" class="high-contrast blue" title="High Blue" role="link">A</a> </li>
+                                 <li> <a href="javascript:void(0);" class="high-contrast light" title="Normal Contrast" style="display: none;" role="link">A</a> </li>
+								 
+                              </ul>
+                           </li> 
+      <li tabindex="3" class="steel-icon" title="Sitemap">
+        <a href="/sitemap">
+          <img src="/modules/custom/unee_header/images/ico-sitemap.png" alt="Sitemap">
+        </a>
+      </li>
+	<li tabindex="4" class="articulate-area screenreader">
+  
+  <!-- PLAY -->
+  <a href="javascript:void(0)" 
+     onclick="speak('body')" 
+     class="open" 
+     role="button"
+     aria-label="Screen Reader Play" 
+     title="Screen Reader">
+    <img src="/modules/custom/unee_header/images/ico-speak.png" alt="Screen Reader">
+  </a>
+
+  <!-- PAUSE -->
+  <a href="javascript:void(0)" 
+     onclick="pauseSpeech()" 
+     class="closed" 
+     role="button"
+     aria-label="Screenreader Pause" 
+     title="Pause Screen Reader">
+     <img src="/modules/custom/unee_header/images/ico-speak-pause.png" alt="Screen Reader Pause">
+  </a>
+
+</li>
+  
+<li tabindex="5" class="ico-social cf">
+  <a target="_blank" 
+     title="External Link that opens in a new window" 
+     href="https://www.facebook.com/nbaindia.org"
+     class="ico"
+     aria-label="Visit Facebook page">
+     
+    <img alt="Facebook Page" 
+         src="/modules/custom/unee_header/images/ico-facebook.png">
+  </a>
+</li>
+	 <li tabindex="6" class="ico-social cf">
+						     <a target="_blank" title="External Link that opens in a new window" href="https://twitter.com/NationalBiodiv">
+                                    <img alt="twitter Page" src="/modules/custom/unee_header/images/ico-twitter.png">
+                                    </a>
+						   </li>
+	 <li  tabindex="7" class="ico-social cf">
+						     <a target="_blank" title="External Link that opens in a new window" href="https://www.youtube.com/channel/UC4i9M4xHCURz-2_6cYqo9Xw">
+                                    <img alt="youtube Page" src="/modules/custom/unee_header/images/ico-youtube.png">
+                                    </a>
+						   </li> 
+	<li class="cmf_lan d-hide">
+			  <label class="de-lag">
+				<select id="lang-switcher" title="Select Language">
+				  <option value="en">English</option>
+				  <option value="hi">हिन्दी</option>
+				</select>
+			  </label>
+    </li>
+    </ul>
+  </div>
+</div>
+	
+</div>
+<style>
+    ul.social-icons li{
+        list-style:none;
+    }
+</style>
+                          
+
+
+
+  </div>
+
+  </div>
+</div>
+    </div>
+</div>	
+<header class="main-header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="row">
+      <div class="navbar-header col-md-8">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+                    <div class="region region-header">
+    <div id="block-drupal8-zymphonies-theme-site-branding" class="site-branding block block-system block-system-branding-block">
+  
+    
+        <div class="brand logo">
+      <a href="/" title="Home" rel="home" class="site-branding__logo">
+        <img src="/sites/default/files/NBA_0.png" alt="Home" />
+      </a>
+    </div>
+        <div class="brand site-name">
+              <div class="site-branding__name">
+          <a href="/" title="Home" rel="home">National Biodiversity Authority</a>
+        </div>
+		<div class="site-branding__slogan">A Statutory Body of the Ministry of Environment, Forest and Climate Change, Government of India.</div>
+            
+    </div>
+  </div>
+
+  </div>
+
+              </div>
+	   <div class="navbar-header col-md-4">
+	   <div class="header-right">
+                  <div class="right-content clearfix">
+                     <div class="float-element">
+                        <a class="sw-logo1" target="_blank" href="#" title="External link that open in a new windows" "="">
+                          <img class="national_emblem" src="/sites/default/files/emblem-dark.png" alt="national emblem">
+                        </a>
+                        <a class="sw-logo" target="_blank" href="#" title="External link that open in a new windows">
+                        <img src="/sites/default/files/swach-bharat.png" alt="External link that open in a new windows" "="">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+	   </div>
+    </div>
+	</div>
+	 <!-- Navigation -->
+	 <div class="row"> 
+      <div class="col-md-12">
+                    <div class="region region-primary-menu">
+    <nav role="navigation" aria-labelledby="block-drupal8-zymphonies-theme-main-menu-menu" id="block-drupal8-zymphonies-theme-main-menu">
+            
+  <h2 class="visually-hidden" id="block-drupal8-zymphonies-theme-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="sm menu-base-theme" id="main-menu"  class="menu nav navbar-nav">
+                      <li aria-label="Home" class="active">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;" class="is-active" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">About Us</a>
+                                  <ul>
+                      <li>
+        <a href="/about-us/introduction" title="Introduction" data-drupal-link-system-path="node/1">Introduction</a>
+                  </li>
+                  <li>
+        <a href="/about-us/organogram" data-drupal-link-system-path="node/39">Organogram</a>
+                  </li>
+                  <li>
+        <a href="/about-us/members" data-drupal-link-system-path="node/42">Members</a>
+                  </li>
+                  <li>
+        <a href="/about-us/functional-committees" data-drupal-link-system-path="about-us/functional-committees">Functional Committees</a>
+                  </li>
+                  <li>
+        <a href="/about-us/faqs">FAQ</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">Acts &amp; Rules</a>
+                                  <ul>
+                      <li>
+        <a href="/acts-and-rules/acts" data-drupal-link-system-path="acts-and-rules/acts">Act</a>
+                  </li>
+                  <li>
+        <a href="/acts-and-rules/rules" data-drupal-link-system-path="acts-and-rules/rules">Rules</a>
+                  </li>
+                  <li>
+        <a href="/acts-and-rules/state-biodiversity-rules" data-drupal-link-system-path="acts-and-rules/state-biodiversity-rules">State Biodiversity Rules</a>
+                  </li>
+                  <li>
+        <a href="/public-information/notification-guidelines" data-drupal-link-system-path="public-information/notification-guidelines">Notifications &amp; Guidelines</a>
+                  </li>
+                  <li>
+        <a href="/acts-and-rules/om-for-uts" data-drupal-link-system-path="acts-and-rules/om-for-uts">OM for UT&#039;s</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">Public Information</a>
+                                  <ul>
+                      <li>
+        <a href="/public-information/meetings-of-the-authority" title="Authority Meetings" data-drupal-link-system-path="public-information/meetings-of-the-authority">Authority Meetings</a>
+                  </li>
+                  <li>
+        <a href="/public-information/grant-in-aids" data-drupal-link-system-path="node/266">Grant-in-Aid</a>
+                  </li>
+                  <li>
+        <a href="/public-information/opportunities" data-drupal-link-system-path="public-information/opportunities">Opportunities</a>
+                  </li>
+                  <li>
+        <a href="/court-orders" data-drupal-link-system-path="court-orders">Court-Orders</a>
+                  </li>
+                  <li>
+        <a href="/public-information/rti" data-drupal-link-system-path="node/282">RTI</a>
+                  </li>
+                  <li>
+        <a href="/public-information/bhs-site-page">BHS</a>
+                  </li>
+                  <li>
+        <a href="/public-information/pbr" data-drupal-link-system-path="public-information/pbr">PBR</a>
+                  </li>
+                  <li>
+        <a href="/public-information/tenders" data-drupal-link-system-path="public-information/tenders">Tenders</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">SBB&#039;s/BMC</a>
+                                  <ul>
+                      <li>
+        <a href="/sbbs/bmc-details-page" data-drupal-link-system-path="sbbs/bmc-details-page">BMC&#039;s</a>
+                  </li>
+                  <li>
+        <a href="/biodiversity-dashboard" data-drupal-link-system-path="biodiversity-dashboard">SBB&#039;s / UT&#039;s - Dashboard</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">Resources</a>
+                                  <ul>
+                      <li>
+        <a href="/resource/publication1" data-drupal-link-system-path="resource/publication1">Publications</a>
+                  </li>
+                  <li>
+        <a href="/resource/reports" data-drupal-link-system-path="resource/reports">Reports</a>
+                  </li>
+                  <li>
+        <a href="/resources/links" data-drupal-link-system-path="node/277">Links</a>
+                  </li>
+                  <li>
+        <a href="/resources/awareness-training-tools" data-drupal-link-system-path="resources/awareness-training-tools">Awareness/Training Tools</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="" data-target="#" data-toggle="dropdown">Media</a>
+                                  <ul>
+                      <li>
+        <a href="/media/events?field_event_category_target_id=All" data-drupal-link-query="{&quot;field_event_category_target_id&quot;:&quot;All&quot;}" data-drupal-link-system-path="media/events">Event&#039;s </a>
+                  </li>
+                  <li>
+        <a href="/whats-new" data-drupal-link-system-path="whats-new">What&#039;s New</a>
+                  </li>
+                  <li>
+        <a href="/media/press-release" data-drupal-link-system-path="media/press-release">Press Release</a>
+                  </li>
+                  <li>
+        <a href="/public-information/photo-gallery?field_select_year_target_id=All" data-drupal-link-query="{&quot;field_select_year_target_id&quot;:&quot;All&quot;}" data-drupal-link-system-path="public-information/photo-gallery">Photo Gallery</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="/" data-target="#" data-toggle="dropdown">ABS Application</a>
+                                  <ul>
+                      <li>
+        <a href="/abs-e-filing-application-status">ABS e-filing Application Status</a>
+                  </li>
+                  <li>
+        <a href="/application-form/Process" data-drupal-link-system-path="node/280">Application Process</a>
+                  </li>
+                  <li>
+        <a href="/application-form/form-application-fee" data-drupal-link-system-path="node/281">Forms/Application Fee</a>
+                  </li>
+        </ul>
+  
+            </li>
+                  <li>
+        <a href="/contact-us" data-drupal-link-system-path="node/55">Contact Us</a>
+                  </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+              
+      </div>
+	  </div>
+      <!--End Navigation -->
+      <div class="flexslider">
+        <ul class="slides">
+                      <li>
+  <img src="https://www.nbaindia.nic.in/sites/default/files/vt4_0.jpg" alt="Slider Banner" />
+  <div class="slider-caption">
+    <h2 class="slider-title"></h2>
+    <div class="clearfix"><a href="https://google.com"><p class="slider-description">Welcome to the Official Public Website of the National Biodiversity Authority.</p></a></div>
+  </div>
+</li>
+                      <li>
+  <img src="https://www.nbaindia.nic.in/sites/default/files/vt1_0.jpg" alt="Slider Banner" />
+  <div class="slider-caption">
+    <h2 class="slider-title"></h2>
+    <div class="clearfix"><p class="slider-description">Welcome to the Official Public Website of the National Biodiversity Authority.</p></div>
+  </div>
+</li>
+                      <li>
+  <img src="https://www.nbaindia.nic.in/sites/default/files/vt2_0.jpg" alt="Slider Banner" />
+  <div class="slider-caption">
+    <h2 class="slider-title"></h2>
+    <div class="clearfix"><p class="slider-description">Welcome to the Official Public Website of the National Biodiversity Authority.</p></div>
+  </div>
+</li>
+                      <li>
+  <img src="https://www.nbaindia.nic.in/sites/default/files/1747905597_WED_Banner-3-1.jpg" alt="Slider Banner" />
+  <div class="slider-caption">
+    <h2 class="slider-title"></h2>
+    <div class="clearfix"><p class="slider-description">Welcome to the Official Public Website of the National Biodiversity Authority.</p></div>
+  </div>
+</li>
+                      <li>
+  <img src="https://www.nbaindia.nic.in/sites/default/files/HAR-GHAR-TIRANAGA-WEBSITE-BANNER.jpg.jpeg" alt="Slider Banner" />
+  <div class="slider-caption">
+    <h2 class="slider-title">Har Ghar Trianga Banner</h2>
+    <div class="clearfix"><a href="https://harghartiranga.com"><p class="slider-description">Har Ghar Trianga Banner</p></a></div>
+  </div>
+</li>
+                  </ul>
+      </div>
+ 
+      </nav>
+
+  
+
+</header>
+<!--End Header & Navbar -->
+
+
+<!--Highlighted-->
+      <div class="">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="region region-highlighted">
+    <div class="views-element-container block block-views block-views-blockduplicate-of-information-to-applicants-block-2" id="block-views-block-duplicate-of-information-to-applicants-block-2">
+  
+      <h2>Latest News</h2>
+    
+      <div><div class="js-view-dom-id-34e4bb5feee64387b3373a111d2ea81bb38a84bd3f40a5b96f87bf61a10ede7a">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="marquee">
+  
+  <ul  class="arrow_list" >
+
+          <li><div class="views-field views-field-nothing"><span class="field-content">
+    
+  <a href="/sites/default/files/2026-04/NBA_Setup_1%20%281%29_0.pdf" target="_blank" class="doc-link newblink">
+    Procedure for obtaining approval of NBA for lifting the Red Sanders
+
+          <span class="pdf-icon">📄</span>
+      </a>
+
+      <span class="file-size">(205.34 KB)</span>
+  
+</span></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  <!--End Highlighted-->
+
+
+
+<!-- Start Top Widget -->
+<!--End Top Widget -->
+
+
+<!-- Page Title -->
+<!-- End Page Title -- >
+
+
+<!-- layout -->
+<div id="wrapper" >
+  <!-- start: Container -->
+  <div class="container">
+    
+    <!--Content top-->
+          <!--End Content top-->
+    
+    <!--start:content -->
+    <div class="row">
+      <div class="col-md-12"></div>
+    </div>
+
+    <div id="skipCont" class="row layout">
+      <!--- Start First SideBar -->
+              <div class="sidebar" >
+          <div class = col-md-4 >
+		      <div class="region region-sidebar-first">
+    <div class="views-element-container block block-views block-views-blockabout-us-block-1" id="block-drupal8-zymphonies-theme-views-block-about-us-block-1">
+  
+      <h2>About Us</h2>
+    
+      <div><div class="js-view-dom-id-84ea99fa12a33b11b0881a4feb89e6c529bf7e2804c841d1da2e4adc6af6ec99">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row">
+    <div><div><p><img src="/sites/default/files/inline-images/NBA_0.png" data-entity-uuid="c26b0e83-0ebd-490a-a576-bf192c374b5d" data-entity-type="file" alt="National Biodiversity Authority" width="130" height="127" class="align-left" loading="lazy">The National Biodiversity Authority (NBA) was established in 2003 by the Central Government to implement India’s Biological Diversity Act (2002). The NBA is a Statutory body and that performs facilitative, regulatory and advisory function for Government of India on issue of Conservation, sustainable use of biological resource and fair equitable sharing of benefits of use.</p><p>The Biological diversity Act (2002) mandates implementation of the provisions of the Act through decentralized system with the NBA focusing on advice the Central Government on matters relating to the conservation of biodiversity, sustainable use of its components and equitable sharing of benefits arising out of the utilization of biological resources; advice the State Government…</p></div></div>
+  </div>
+
+    
+
+  
+  <div class="more-link"><a href="/about-us/introduction">Read more</a></div>
+
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+          </div>
+		  <div class=col-md-4 >
+		     <p class="text-slide3 pause" onclick="changeClass3()"></p>   
+              <div class="region region-sidebar-second">
+    <div class="views-element-container block block-views block-views-blockinformation-to-applicants-block-1" id="block-views-block-information-to-applicants-1">
+  
+      <h2>Information To Applicants</h2>
+    
+      <div><div class="js-view-dom-id-0658c29bc7789c438cbc42b8aad7ccb05d968fa69ff0ba559e8ce618a104a2e8">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="scroll-text-1 scroll-left">
+  
+  <ul  class="slides" class="arrow_list" >
+
+          <li><div class="views-field views-field-nothing"><span class="field-content">    
+  <a href="/sites/default/files/2026-08/vaps.pdf" target="_blank" class="doc-link">
+    Classification of biological resources, Derivatives and VAPs
+    
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(343.85 KB)</span>
+  
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">    
+  <a href="/sites/default/files/2026-04/sub_form10.pdf" target="_blank" class="doc-link">
+    Submission of Declaration (Form-10) for use of Foreign Biological Resources and Associated TK in India
+    
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(452.22 KB)</span>
+  
+</span></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+      <footer>
+      <a href="/Information-to-applicants" class="views-display-link views-display-link-page_1">View All</a>
+    </footer>
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+          </div>
+		  <div class=col-md-4>
+              <div class="region region-sidebar-third">
+    <div class="views-element-container block block-views block-views-blockour-minister-block-1" id="block-drupal8-zymphonies-theme-views-block-our-minister-block-1">
+  
+    
+      <div><div class="js-view-dom-id-161a008225322fd04b2b5c1a0178cfa0e7615f5d08cb1b01d2816c0542ec98fc">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="col-md-6">
+    <div class="views-field views-field-field-upload-image"><div class="field-content"><div class="minister-image">
+						  <div class="team-detail">
+							  <img loading="lazy" src="/sites/default/files/2026-04/minister1_0.jpg" width="230" height="167" alt="Hon&#039;ble President of India" title="Hon&#039;ble President of India" />
+
+
+							<div class="min-info">
+							   <h3>Smt. Droupadi Murmu </h3>
+							   <h4>Hon&#039;ble President of India</h4>
+							<div class="team-social bg-light">
+                            <a href="https://facebook.com/PresidentofIndia"><img src="/sites/default/files/ico-facebook.png" alt="facebook link"></a>
+                            <a href="https://twitter.com/rashtrapatibhvn"><img src="/sites/default/files/ico-twitter.png" alt="twitter link"></a> 
+                            <a href="https://youtube.com/@PresidentofIndia"><img src="/sites/default/files/ico-youtube.png" alt="youtube link"></a> 
+                        </div>
+							</div>
+							
+                          </div>   
+						
+						</div>
+                        </div></div>
+  </div>
+    <div class="col-md-6">
+    <div class="views-field views-field-field-upload-image"><div class="field-content"><div class="minister-image">
+						  <div class="team-detail">
+							  <img loading="lazy" src="/sites/default/files/2026-04/minister2_0.jpg" width="230" height="167" alt="Hon&#039;ble Prime Minister " title="Hon&#039;ble Prime Minister " />
+
+
+							<div class="min-info">
+							   <h3>Sh. Narendra Modi </h3>
+							   <h4>Hon&#039;ble Prime Minister </h4>
+							<div class="team-social bg-light">
+                            <a href="https://facebook.com/narendramodi"><img src="/sites/default/files/ico-facebook.png" alt="facebook link"></a>
+                            <a href="https://x.com/narendramodi"><img src="/sites/default/files/ico-twitter.png" alt="twitter link"></a> 
+                            <a href="https://youtube.com/@NarendraModi"><img src="/sites/default/files/ico-youtube.png" alt="youtube link"></a> 
+                        </div>
+							</div>
+							
+                          </div>   
+						
+						</div>
+                        </div></div>
+  </div>
+    <div class="col-md-6">
+    <div class="views-field views-field-field-upload-image"><div class="field-content"><div class="minister-image">
+						  <div class="team-detail">
+							  <img loading="lazy" src="/sites/default/files/2026-04/minister3_0.jpg" width="230" height="167" alt="Hon&#039;ble Minister (EF&amp;CC)" title="Hon&#039;ble Minister (EF&amp;CC)" />
+
+
+							<div class="min-info">
+							   <h3>Sh. Bhupender Yadav </h3>
+							   <h4>Hon&#039;ble Minister (EF&amp;CC)</h4>
+							<div class="team-social bg-light">
+                            <a href="https://facebook.com/bhupenderyadavbjp"><img src="/sites/default/files/ico-facebook.png" alt="facebook link"></a>
+                            <a href="https://twitter.com/byadavbjp"><img src="/sites/default/files/ico-twitter.png" alt="twitter link"></a> 
+                            <a href="https://youtube.com/@Bhupenderyadavbjp"><img src="/sites/default/files/ico-youtube.png" alt="youtube link"></a> 
+                        </div>
+							</div>
+							
+                          </div>   
+						
+						</div>
+                        </div></div>
+  </div>
+    <div class="col-md-6">
+    <div class="views-field views-field-field-upload-image"><div class="field-content"><div class="minister-image">
+						  <div class="team-detail">
+							  <img loading="lazy" src="/sites/default/files/2026-04/minister4_0.jpg" width="230" height="167" alt="Hon’ble Minister of State (EF&amp;CC)" title="Hon’ble Minister of State (EF&amp;CC)" />
+
+
+							<div class="min-info">
+							   <h3>Sh. Kirti Vardhan Singh </h3>
+							   <h4>Hon’ble Minister of State (EF&amp;CC)</h4>
+							<div class="team-social bg-light">
+                            <a href="https://www.facebook.com/kirtivardhansinghmp"><img src="/sites/default/files/ico-facebook.png" alt="facebook link"></a>
+                            <a href="https://x.com/KVSinghMPGonda"><img src="/sites/default/files/ico-twitter.png" alt="twitter link"></a> 
+                            <a href="https://yoytube.com"><img src="/sites/default/files/ico-youtube.png" alt="youtube link"></a> 
+                        </div>
+							</div>
+							
+                          </div>   
+						
+						</div>
+                        </div></div>
+  </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+          </div>
+        </div>
+            
+    </div>
+    <!--End Content -->
+
+    <!--Start Content Bottom-->
+          <div class="row">
+          <div class="region region-content-bottom">
+    <div class="views-element-container block block-views block-views-blockou-block-1" id="block-drupal8-zymphonies-theme-views-block-ou-block-1">
+  
+    
+      <div><div class="js-view-dom-id-81558696d8f8b41df09788cd3606d5c4628dd837597e17c135644fded589b4cf">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/other-icon1.png" width="70" height="70" alt="Apply Certificate of Origin" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="https://absefiling.nbaindia.in/" target="_blank">Apply Certificate of Origin</a></div></div>
+  </div>
+    <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/other-icon4.png" width="70" height="70" alt="Online ABS e-filing" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="https://absefiling.nbaindia.in" target="_blank">Online ABS e-filing</a></div></div>
+  </div>
+    <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/counter4_10.png" width="68" height="68" alt="Completed Projects" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="https://nbaindia.nic.in" target="_blank">Completed Projects</a></div></div>
+  </div>
+    <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/icon-1.png" width="48" height="50" alt="SHe-Box online complaint system" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="https://shebox.wcd.gov.in/" target="_blank">SHe-Box online complaint system</a></div></div>
+  </div>
+    <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/pngegg4.png" width="200" height="200" alt="Updation of NBSAP" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="http://www.nbaindia.org/nbsap/" target="_blank">Updation of NBSAP</a></div></div>
+  </div>
+    <div class="all-sector">
+    <div class="views-field views-field-field-services-icon"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/pngegg.png" width="200" height="200" alt="help desk" />
+
+</div></div><div class="views-field views-field-field-services-name"><div class="field-content"><a href="https://nbaindia.nic.in" target="_blank">HelpDesk</a></div></div>
+  </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+      </div>
+        <!--End Content Bottom-->
+  </div>
+</div>
+<!-- End layout -->
+
+
+<!-- Start Middle Widget -->
+  <div class="middlewidget">
+    <!-- start: Container -->
+    <div class="container">
+      
+      <div class="row">
+        <!-- Top widget first region -->
+        <div class = col-md-4>
+		<p class="text-slide2 pause" onclick="changeClass2()"></p>
+                        <div class="region region-middle-first">
+    <div class="views-element-container block block-views block-views-blockduplicate-of-information-to-applicants-block-1" id="block-views-block-duplicate-of-information-to-applicants-block-1">
+  
+      <h2>What&#039;s New</h2>
+    
+      <div><div class="js-view-dom-id-98df42ba7483037ab709718ffe02eeb88a40ad9ff94b828501a57e42021c7be2">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="scroll-text-2 scroll-left">
+  
+  <ul  class="arrow_list" >
+
+          <li><div class="views-field views-field-nothing"><span class="field-content">
+    
+  <a href="/sites/default/files/2026-07/internship_shortterm_0.pdf" target="_blank" class="doc-link newblink">
+    Short-Term Internship Programme
+
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(1020.16 KB)</span>
+  
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">
+    
+  <a href="/sites/default/files/2026-07/HOLIDAY2026.pdf" target="_blank" class="doc-link ">
+    List of Closed Holidays &amp; Restricted Holidays for the year 2026
+
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(1.39 MB)</span>
+  
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">
+    
+  <a href="/sites/default/files/2026-07/imp_formIII.pdf" target="_blank" class="doc-link ">
+    Important Notice to Stakeholders Regarding Filing of e-Forms pertaining to IPR applications under The Biological Diversity (Amendment) Act, 2023 
+
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(1.56 MB)</span>
+  
+</span></div></li>
+          <li><div class="views-field views-field-nothing"><span class="field-content">
+    
+  <a href="/sites/default/files/2026-04/NBA_Setup_1%20%281%29_0.pdf" target="_blank" class="doc-link newblink">
+    Procedure for obtaining approval of NBA for lifting the Red Sanders
+
+          <i class="pdficon"></i>
+      </a>
+
+      <span class="file-size">(205.34 KB)</span>
+  
+</span></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+      <footer>
+      <a href="/whats-new" class="views-display-link views-display-link-page_1">View All</a>
+    </footer>
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End top widget third region -->
+        <!-- Top widget second region -->
+        <div class = col-md-4>
+		<p class="text-slide pause" onclick="changeClass1()"></p>
+                        <div class="region region-middle-second">
+    <div class="views-element-container block block-views block-views-blockevent-block-1" id="block-drupal8-zymphonies-theme-views-block-event-block-1">
+  
+      <h2>Event&#039;s</h2>
+    
+      <div><div class="js-view-dom-id-21d342064b7b249cd3413c45096ef8ec4c5d875260f75b9e194b8c0ee1c39666">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="scroll-text-3 scroll-left">
+  
+  <ul  class="arrow_list" >
+
+          <li><div class="list-content">
+  Upcoming Event
+  <strong>16th National Meeting of State Biodiversity Boards (SBBs)/Union Territory Biodiversity Councils(UTBCs)</strong>
+
+  <div class="event-date">
+    <time datetime="2026-09-06T12:00:00Z">6  September,  2026</time>
+
+          to <time datetime="2026-09-07T12:00:00Z">7  September,  2026</time>
+
+      </div>
+</div>
+
+<div class="list-content-document">
+  
+  <div class="view-footer readmore"><a href="/event/636?language_content_entity=en " title="Know More"><span>Read More </span></a></div>
+</div>
+
+<div class="clear"></div></li>
+          <li><div class="list-content">
+  Upcoming Event
+  <strong>79th Authority Meeting</strong>
+
+  <div class="event-date">
+    <time datetime="2026-09-01T12:00:00Z">1  September,  2026</time>
+
+      </div>
+</div>
+
+<div class="list-content-document">
+      <a href="/sites/default/files/2026-08/eventdummy.pdf" target="_blank" class="download-link">
+      Download File
+    </a>
+  
+  <div class="view-footer readmore"><a href="/event/630?language_content_entity=en " title="Know More"><span>Read More </span></a></div>
+</div>
+
+<div class="clear"></div></li>
+          <li><div class="list-content">
+  Event Done
+  <strong>The International Day for Biological Diversity</strong>
+
+  <div class="event-date">
+    <time datetime="2026-03-10T12:00:00Z">10  March,  2026</time>
+
+      </div>
+</div>
+
+<div class="list-content-document">
+      <a href="/sites/default/files/2026-04/sample.pdf" target="_blank" class="download-link">
+      Download File
+    </a>
+  
+  <div class="view-footer readmore"><a href="/event/19?language_content_entity=en " title="Know More"><span>Read More </span></a></div>
+</div>
+
+<div class="clear"></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End top widget third region -->
+        <!-- Top widget third region -->
+        <div class = col-md-4>
+                        <div class="region region-middle-third">
+    <div class="views-element-container block block-views block-views-blockimportant-links-front-page-block-1" id="block-views-block-important-links-front-page-block-1">
+  
+    
+      <div><div class="js-view-dom-id-b3c6915a81f803303879814d775bd9c79ab0e363233b2573d035c17e27ab9ff4">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="side-link">
+  
+  <ul  class="arrow_list" >
+
+          <li class="col-md-12 nopadding"><a href="/resource/publication1" target="_blank">Publications</a></li>
+          <li class="col-md-12 nopadding"><a href="/resource/reports" target="_blank">Reports</a></li>
+          <li class="col-md-12 nopadding"><a href="/" target="_blank">Information on Biodiversity </a></li>
+          <li class="col-md-12 nopadding"><a href="/resources/awareness-training-tools" target="_blank">Awareness / Training Tools</a></li>
+          <li class="col-md-12 nopadding"><a href="/public-information/tenders" target="_blank">Tender&#039;s</a></li>
+          <li class="col-md-12 nopadding"><a href="/public-information/opportunities" target="_blank">Opportunities</a></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End top widget third region -->
+      </div>
+    </div>
+  </div>
+    <script type="text/javascript">
+    (function () {
+      function fixMiddleWidgetRow() {
+        var widget = document.querySelector('.middlewidget');
+        if (!widget) { return; }
+        var container = widget.querySelector('.container');
+        if (!container) { return; }
+        var row = null, strays = [], child, i;
+        for (i = 0; i < container.children.length; i++) {
+          child = container.children[i];
+          if (!row && child.className.indexOf('row') !== -1) {
+            row = child;
+          }
+          else if (child.className.indexOf('col-') !== -1) {
+            strays.push(child);
+          }
+        }
+        if (!row) { return; }
+        for (i = 0; i < strays.length; i++) {
+          row.appendChild(strays[i]);
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', fixMiddleWidgetRow);
+      } else {
+        fixMiddleWidgetRow();
+      }
+    })();
+  </script>
+<!--End Top Widget -->
+<div id="frontcounter">
+<!--Statics_bottom-->
+      
+    <div class="">
+      <div class="row">
+        <div class="col-md-12">
+              <h2 style="text-align:center;">
+    ABS e-filing Application Status Updated as of August 2026 <br>
+ <small>
+  Stay Updated on ABS e-Filing Application Status Received from Across India -
+  August 2026
+</small>
+</h2>
+         	  <div class="region region-statics-bottom">
+    <div class="views-element-container block block-views block-views-blockfront-statics-abs-e-fiiling-block-1" id="block-views-block-front-statics-abs-e-fiiling-block-1">
+  
+    
+      <div><div class="js-view-dom-id-53b3d0ed1db0b26a09bf41a82e4019023f2be2467035c71905360030d204184c">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="statistics abs">
+    <div class="views-field views-field-field-total-applications"><span class="views-label views-label-field-total-applications">Total Applications Received                     </span><div class="field-content">12248</div></div><div class="views-field views-field-field-model-agreement-signed"><span class="views-label views-label-field-model-agreement-signed">Total Agreement Signed</span><div class="field-content">6060</div></div><div class="views-field views-field-field-model-agreement"><span class="views-label views-label-field-model-agreement">Total Model Agreement           </span><div class="field-content">6626</div></div><div class="views-field views-field-field-total-applications-closed"><span class="views-label views-label-field-total-applications-closed">Total Applications Closed</span><div class="field-content">1751</div></div><div class="views-field views-field-field-under-process"><span class="views-label views-label-field-under-process">Application Under Process</span><div class="field-content">170</div></div><div class="views-field views-field-field-cor-issued"><span class="views-label views-label-field-cor-issued">Total CoR Issued</span><div class="field-content">2408</div></div>
+  </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  <!--End Statics_bottom-->
+
+<!--Statics_bottom-->
+      
+    <div class="">
+      <div class="row">
+	  <div class="col-md-2">
+	  </div>
+        <div class="col-md-8">
+              <h2 style="text-align:center;">
+    BMC / PBR / BHS - Status <br>
+   <small>
+    Stay Updated on Status all Across India -
+    August 2026
+  </small>
+</h2>
+         	  <div class="region region-statics-bottom-1">
+    <div class="views-element-container block block-views block-views-blockbmc-pbr-bhs-status-block-1" id="block-drupal8-zymphonies-theme-views-block-bmc-pbr-bhs-status-block-1">
+  
+    
+      <div><div class="js-view-dom-id-6aea7530017fed390a62fddc3b789ee1d9852fd79ab9bceed6c10d1ba9b75af4">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="statistics abs">
+    <div class="views-field views-field-field-bhs-count"><span class="views-label views-label-field-bhs-count">Biodiversity Heritage Sites (BHS)</span><div class="field-content"><a href="/public-information/bhs-site-page">57</a></div></div><div class="views-field views-field-field-bms"><span class="views-label views-label-field-bms">Biodiversity Management Committees (BMCs)</span><div class="field-content"><a href="/sbbs/bmc-details-page">276653</a></div></div><div class="views-field views-field-field-pbr-count"><span class="views-label views-label-field-pbr-count">People&#039;s Biodiversity Register (PBR)</span><div class="field-content"><a href="/public-information/pbr">272648</a></div></div>
+  </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+
+        </div>
+      <div class="col-md-2">
+	  </div>
+	  </div>
+    </div>
+  <!--End Statics_bottom-->
+
+</div>
+<!-- Start bottom -->
+  <div class="bottom-widgets">
+    <!-- Start Container -->
+    <div class="container">
+      
+      <div class="row">
+
+        <!-- Start Bottom First Region -->
+        <div class = col-md-3>
+		<h2><span><img src="/sites/default/files/ico-facebook.png" alt="Facebook"></span>&nbsp;Facebook</h2>
+         
+          		    
+              <div class="region region-bottom-first">
+    <div id="block-drupal8-zymphonies-theme-facebook" class="block block-block-content block-block-content8525c67f-b73a-4ffe-a9ca-992649f3e05a">
+  
+    
+      
+            <div><div class="iframe-container"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnbaindia.org&amp;tabs=timeline&amp;width=353&amp;height=400&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false&amp;appId=1589013301111679" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            				  </iframe></div></div>
+      
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End Bottom First Region -->
+
+        <!-- Start Bottom Second Region -->
+        <div class = col-md-3>
+		<h2><span><img src="/sites/default/files/ico-twitter.png" alt="twitter"></span>&nbsp;X (formerly Twitter)</h2>
+         
+                        <div class="region region-bottom-second">
+    <div id="block-drupal8-zymphonies-theme-xformerlytwitter" class="block block-block-content block-block-contente4f06b92-5fe3-434e-b86d-cf28a4d5c4d6">
+  
+    
+      
+            <div><div class="iframe-container"><iframe src="https://widgets.sociablekit.com/twitter-feed/iframe/25660434" frameborder="0">
+    </iframe></div></div>
+      
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End Bottom Second Region -->
+
+        <!-- Start Bottom third Region -->
+        <div class = col-md-3>
+		<h2><span><img src="/sites/default/files/ico-youtube.png" alt="twitter"></span>&nbsp;Youtube</h2>
+         
+                        <div class="region region-bottom-third">
+    <div id="block-drupal8-zymphonies-theme-youtubegallery" class="block block-youtube-gallery block-youtube-gallery-block">
+  
+    
+      <div class="youtube-gallery-block">
+  <div class="youtube-container" id="youtube-feeds-youtube-block--6a956de937636">
+          <div class="youtube-playlist-embed">
+        <iframe src="https://www.youtube.com/embed/videoseries?list=UU4i9M4xHCURz-2_6cYqo9Xw&amp;rel=0"
+          title="Latest videos" loading="lazy" frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+              <p class="youtube-channel-link">
+          <a href="https://www.youtube.com/channel/UC4i9M4xHCURz-2_6cYqo9Xw" target="_blank" rel="noopener">Visit our YouTube channel</a>
+        </p>
+            </div>
+</div>
+
+<div id="videoModal" class="video-modal" style="display: none;">
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <div class="modal-header"><span class="modal-close">&times;</span></div>
+    <div class="modal-body">
+      <div class="video-wrapper">
+        <iframe id="videoFrame" class="video-iframe" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End Bottom fourth Region -->
+
+        <div class = col-md-3>
+		<h2><span><img src="/sites/default/files/gallery.png" alt="gallery"></span>&nbsp;Photo Gallery</h2>
+         
+                        <div class="region region-bottom-forth">
+    <div class="views-element-container block block-views block-views-blockphoto-gallery-slider-block-1" id="block-views-block-photo-gallery-slider-block-1">
+  
+    
+      <div><div class="js-view-dom-id-21eaaa7a57dc1afa5fe4a336ead9619b104674a32489048c4243ce1d68eeb9bf">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="flexslidergallery">
+  <ul class="slides">
+
+         
+        <li>
+<img src="/sites/default/files/styles/large/public/2026-08/WhatsApp%20Image%202026-08-15%20at%2010.37.51%20AM%20%281%29.jpeg.webp?itok=WqYWqKvP ">
+<div class="text-gallery"><a href="public-information/photo-gallery-inner-page/603">80th Independence Day Celebration </a></div>
+</li>
+      
+         
+        <li>
+<img src="/sites/default/files/styles/large/public/2026-04/gallery1%20%281%29_0.jpg.webp?itok=TM0SNBWO ">
+<div class="text-gallery"><a href="public-information/photo-gallery-inner-page/52">Training on Biodiversity Conservation and Biodiversity Act </a></div>
+</li>
+      
+         
+        <li>
+<img src="/sites/default/files/styles/large/public/2026-04/fday2%20%281%29.jpg.webp?itok=j78_MRUd ">
+<div class="text-gallery"><a href="public-information/photo-gallery-inner-page/51">22nd Foundation Day </a></div>
+</li>
+      
+    
+  </ul>
+</div>
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+<div id="block-drupal8-zymphonies-theme-livestatusyoutube" class="block block-block-content block-block-contenta407d585-2058-4d8b-adca-cbd4f78e14da">
+  
+    
+      
+            <div><div style="clear:both;height:0px;">&nbsp;</div><img class="align-center" src="/sites/default/files/inline-images/livestream_0%20%282%29.png" data-entity-uuid="07aa1fce-0ea9-4de3-8271-135ba180cb1a" data-entity-type="file" alt="Youtube Live Status" width="410" height="273" loading="lazy"></div>
+      
+  </div>
+
+  </div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+  
+<div style="clear:both;"></div>
+<!--End Bottom -->
+<div class="carousel-wrapper">
+<div class="carousel-wrapper-img"></div>
+<div class="row">
+      <div class="col-md-12">  <div class="region region-our-partner">
+    <div class="views-element-container block block-views block-views-blockour-partners-block-1" id="block-drupal8-zymphonies-theme-views-block-our-partners-block-1">
+  
+    
+      <div><div class="js-view-dom-id-86f6c86f092f3a434a2adfdc83e12c4a01e39d1eb5a7e06bdc21ed105dade878">
+  
+  
+  
+
+  
+  
+  
+
+  
+<div class="flexCarousel">
+  
+  <ul  class="slides" class="arrow_list" >
+
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/zic.jpg" width="340" height="103" alt="zic" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/wii_0.jpg" width="340" height="103" alt="Wildlife Institute of India" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/iii_0.jpg" width="340" height="103" alt="Indian agriculture research institute" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/dst_0.jpg" width="340" height="103" alt="Department of Science and technology" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/es_0.jpg" width="340" height="103" alt="Ministry of Earth &amp; Science" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/db_0.jpg" width="340" height="103" alt="Department of Biotechnology" />
+
+</div></div></li>
+          <li><div class="views-field views-field-field-upload-partner-logo"><div class="field-content">  <img loading="lazy" src="/sites/default/files/2026-04/botanical_0.jpg" width="340" height="103" alt="Botanical Survey of India" />
+
+</div></div></li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+  </div>
+</div>
+    </div>
+</div>	
+
+<!-- start: Footer -->
+  <div class="footerwidget">
+    <div class="container">
+      
+      <div class="row">
+        
+        <!-- Start Footer First Region -->
+        <div class = col-md-6>
+                        <div class="region region-footer-first">
+    <div id="block-drupal8-zymphonies-theme-getintouch" class="block block-block-content block-block-contentbc0f7153-3277-4ea7-b8df-c847fcc6945b">
+  
+      <h2>Get In Touch</h2>
+    
+      
+            <div><h3>National Biodiversity Authority</h3><ul><li data-list-item-id="ed4d977fed5319dbc1e0cfe5e3e323625">5th Floor, Phase I, TICEL Bio Park, CSIR Road</li><li data-list-item-id="e3725c5091a310ad1a3401bf106c8e7ed">Taramani, Chennai, Tamil Nadu - 600 113</li><li data-list-item-id="e983dc79a21a167ffc58ef5a680c37c0f">+91-44-2254 2777</li></ul><h3>Helpdesk Number</h3><ul class="helpdesk-info"><li class="helpdesk-phone" data-list-item-id="edf6cc582a49fdc3b3b4a75f06db5d561"><span class="helpdesk-icon">📞</span> <span>+91 44 2254 2777</span></li><li class="helpdesk-schedule" data-list-item-id="eda005a11aeee0fd80edb8ae83508aead"><span>🕘 9:15 AM – 5:45 PM</span> <span class="schedule-divider">|</span> <span>📅 Monday–Friday (Working Days)</span></li><li class="helpdesk-email" data-list-item-id="ed5d47d0a67f31730ae662d749f05fc12"><span>✉</span> <a href="mailto:admn@nba.nic.in">admn@nba.nic.in</a></li></ul></div>
+      
+  </div>
+
+  </div>
+
+                  </div>
+        <!-- End Footer First Region -->
+
+        <!-- Start Footer Second Region -->
+        <div class = col-md-6>
+                        <div class="region region-footer-second">
+    <nav role="navigation" aria-labelledby="block-drupal8-zymphonies-theme-footer-menu" id="block-drupal8-zymphonies-theme-footer">
+      
+  <h2 id="block-drupal8-zymphonies-theme-footer-menu">Website Links</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/contact-us" data-drupal-link-system-path="node/55">Contact Us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/disclaimer" data-drupal-link-system-path="node/56">Disclaimer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/faqs">FAQ</a>
+              </li>
+                <li class="menu-item">
+        <a href="/footer/feedback" data-drupal-link-system-path="webform/contact">Feedback</a>
+              </li>
+                <li class="menu-item">
+        <a href="/help" data-drupal-link-system-path="node/57">Help</a>
+              </li>
+                <li class="menu-item">
+        <a href="/term%26conditions" data-drupal-link-system-path="node/58">Terms and Conditions </a>
+              </li>
+                <li class="menu-item">
+        <a href="/web_information_manager" data-drupal-link-system-path="node/59">Web Information Manager</a>
+              </li>
+                <li class="menu-item">
+        <a href="/website_policies" data-drupal-link-system-path="node/60">Website policies</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+          		 
+        </div>
+        <!-- End Footer Second Region -->
+
+        <!-- Start Footer third Region -->
+        <div class = col-md-3>
+                   		  <h2 class="footer-widget-title">Connect with Us</h2>
+        <div class="social-media">
+                          <a href="https://www.facebook.com/nbaindia.org"  class="facebook" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                                      <a href="https://twitter.com/NationalBiodiv" class="twitter" target="_blank" ><i class="fab fa-twitter"></i></a>
+                                      <a href="https://www.youtube.com/channel/UC4i9M4xHCURz-2_6cYqo9Xw" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                                              </div>
+        		</div>
+        <!-- End Footer Third Region -->
+		 <!-- Start Footer third Region -->
+        <div class = col-md-3>
+		              <div class="region region-footer-fourth">
+    <div id="block-drupal8-zymphonies-theme-googlemap" class="block block-block-content block-block-content8555705e-66d7-4fed-884b-ed95f656077a">
+  
+      <h2>Find Us on G-Map</h2>
+    
+      
+            <div><div id="map-modal"><div class="map-content"><span class="map-close">Scan &nbsp;X</span> <iframe style="border-width:0;" width="100%" height="100%" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.660821402299!2d80.2463295!3d12.9855875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d615ecf5c9b%3A0x5d52be0c39242dd3!2sNational%20Biodiversity%20Authority%20(NBA%20India)!5e0!3m2!1sen!2sin!4v1">
+                                                                                                </iframe></div></div><figure role="group" class="align-center">
+<img alt="Location Qr-Code" data-entity-type="file" data-entity-uuid="08367f92-d3ff-421f-96e6-50ae30882ea4" height="140" src="/sites/default/files/inline-images/qr-code.png" width="140" loading="lazy">
+<figcaption>QR Code for Location &nbsp;</figcaption>
+</figure>
+<p style="margin:0px;padding:0px;">or</p><p style="margin:0px;padding:0px;"><a style="color:#fff;" href="#" id="map-link">Click to Zoom Our Location</a></p></div>
+      
+  </div>
+
+  </div>
+
+                    
+        </div>
+        <!-- End Footer Third Region -->
+      </div>
+    </div>
+  </div>
+<!--End Footer -->
+
+
+<!-- Start Footer Menu -->
+<!-- End Footer Menu -->
+
+
+<div class="copyright">
+  <div class="container">
+    <div class="row">
+
+      <!-- Copyright -->
+      <div class="col-sm-6 col-md-6">
+                
+          <p>Website Content Managed by National Biodiversity Authority, Government of India</p>        
+              </div>
+      <!-- End Copyright -->
+
+      <!-- Credit link -->
+            <!-- End Credit link -->
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Google map -->
+<!-- End Google map -->
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx9kMGOwyAMRH-Ihmv_BpkwIUgGs9i0zX79rlbRqpf0Mp6Rn2Rr0pid-B6-j9p3aQUabEeFjyKmNqi7dIVsjJdySRgfGGlGT6hUXEOZJRLfVqldGprpNaqVhlW0qW6jr7DuZFHMn9NthQ3Dr9StSHNv198_WfSRP-0W3Ut1WSQzQqUeuvTZ_b9zeqih-kgKNxsQdtBvDT5BS27uUfBU_6dLlTQZ7pBpMyJkYsY4_JlvZ_4B4NSb0A","theme":"drupal8_zymphonies_theme","theme_token":null},"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"37eae64b3a22bddd454a97ac2fe3cb8a3aaa2cebd5b9358687f23fb17e65fe31"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.7.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=10.6.5"></script>
+<script src="/core/misc/drupal.js?v=10.6.5"></script>
+<script src="/core/misc/drupal.init.js?v=10.6.5"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=6.3.0"></script>
+<script src="/themes/drupal8_zymphonies_theme/includes/flexslider/js/jquery.flexslider-min.js?v=1.x"></script>
+<script src="/core/misc/progress.js?v=10.6.5"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="/core/misc/debounce.js?v=10.6.5"></script>
+<script src="/core/misc/announce.js?v=10.6.5"></script>
+<script src="/core/misc/message.js?v=10.6.5"></script>
+<script src="/core/misc/ajax.js?v=10.6.5"></script>
+<script src="/themes/drupal8_zymphonies_theme/js/custom.js?tkmuvk"></script>
+<script src="/themes/drupal8_zymphonies_theme/js/jquery.marquee.js?tkmuvk"></script>
+<script src="/themes/drupal8_zymphonies_theme/includes/smartmenus/jquery.smartmenus.min.js?v=1.x"></script>
+<script src="/modules/custom/faq_chatbot/js/chatbot.js?tkmuvk"></script>
+<script src="/modules/custom/google_map_popup/js/map-popup.js?tkmuvk"></script>
+<script src="/modules/custom/unee_header/js/framework.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/font-size.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/swithcer.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/unee_design.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/search.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/articulate.js?v=1.x"></script>
+<script src="/modules/custom/unee_header/js/screen-reader.js?v=1.x"></script>
+<script src="/modules/custom/youtube_gallery/js/youtube_gallery.js?v=1.0"></script>
+
+  </body>
+</html>

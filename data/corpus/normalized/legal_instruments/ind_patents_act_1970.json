@@ -1,0 +1,128 @@
+{
+  "document_id": "IND_PATENTS_ACT_1970",
+  "title": "The Patents Act, 1970 (Act No. 39 of 1970)",
+  "short_title": "Patents Act 1970",
+  "jurisdiction": "IN",
+  "country": "India",
+  "authority": "Intellectual Property India (CGPDTM)",
+  "issuing_body": "Ministry of Commerce and Industry (DPIIT)",
+  "domain": ["PATENTS", "INTELLECTUAL_PROPERTY"],
+  "document_type": "ACT",
+  "authority_level": 5,
+  "source": {
+    "url": "https://www.indiacode.nic.in/handle/123456789/1392",
+    "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
+    "retrieved_at": "2026-08-31",
+    "file_name": "the_patents_act_1970.pdf",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "mime_type": "application/pdf",
+    "storage_uri": "gs://ayuraksha-corpus/raw/india/ip/patents/the_patents_act_1970.pdf"
+  },
+  "version": {
+    "published_date": "1970-09-19",
+    "effective_from": "1972-04-20",
+    "effective_until": null,
+    "version_label": "2024 Consolidated",
+    "supersedes_version": "2016 Consolidated"
+  },
+  "provisions": [
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_002_1_J",
+      "type": "SECTION",
+      "number": "2(1)(j)",
+      "heading": "Invention",
+      "text": "'invention' means a new product or process involving an inventive step and capable of industrial application.",
+      "location": {
+        "chapter": "Chapter I (Preliminary)",
+        "page_start": 4,
+        "page_end": 4
+      },
+      "topics": ["INVENTION", "NOVELTY", "INDUSTRIAL_APPLICABILITY"],
+      "statutory_significance": "Defines basic statutory threshold for patentability."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_P",
+      "type": "SECTION",
+      "number": "3(p)",
+      "heading": "Traditional Knowledge Inventions Not Patentable",
+      "text": "An invention which in effect is traditional knowledge or which is an aggregation or duplication of known properties of traditionally known component or components is not an invention within the meaning of this Act.",
+      "location": {
+        "chapter": "Chapter II (Inventions Not Patentable)",
+        "page_start": 8,
+        "page_end": 8
+      },
+      "topics": ["TRADITIONAL_KNOWLEDGE", "AYURVEDA", "PRIOR_ART", "EXCLUSION"],
+      "statutory_significance": "Primary statutory bar preventing monopolization of classical Ayurvedic formulations and known herbal properties."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_E",
+      "type": "SECTION",
+      "number": "3(e)",
+      "heading": "Mere Admixture Not Patentable",
+      "text": "A substance obtained by a mere admixture resulting only in the aggregation of the properties of the components thereof or a process for producing such substance is not an invention within the meaning of this Act.",
+      "location": {
+        "chapter": "Chapter II (Inventions Not Patentable)",
+        "page_start": 7,
+        "page_end": 7
+      },
+      "topics": ["MERE_ADMIXTURE", "SYNERGY", "POLYHERBAL", "FORMULATION"],
+      "statutory_significance": "Mandates technical proof of non-obvious synergistic effect when combining multiple known botanical ingredients."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_C",
+      "type": "SECTION",
+      "number": "3(c)",
+      "heading": "Naturally Occurring Substances Not Patentable",
+      "text": "The mere discovery of a scientific principle or the formulation of an abstract theory or discovery of any living thing or non-living substance occurring in nature is not an invention.",
+      "location": {
+        "chapter": "Chapter II (Inventions Not Patentable)",
+        "page_start": 7,
+        "page_end": 7
+      },
+      "topics": ["NATURAL_PRODUCTS", "HERBS", "ISOLATION"],
+      "statutory_significance": "Naturally occurring whole herbs and crude botanicals cannot be patented in isolated form."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_I",
+      "type": "SECTION",
+      "number": "3(i)",
+      "heading": "Methods of Treatment Not Patentable",
+      "text": "Any process for the medicinal, surgical, curative, prophylactic, diagnostic, therapeutic or other treatment of human beings or any similar treatment of animals to render them free of disease or to increase their economic value or that of their products is not an invention.",
+      "location": {
+        "chapter": "Chapter II (Inventions Not Patentable)",
+        "page_start": 8,
+        "page_end": 8
+      },
+      "topics": ["TREATMENT_METHOD", "THERAPY", "DOSAGE_REGIMEN"],
+      "statutory_significance": "Methods of treating patients with Ayurvedic remedies cannot be patented in India; claims must be formulated as novel compositions or processes."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_010_4",
+      "type": "SECTION",
+      "number": "10(4)(d)(ii)",
+      "heading": "Mandatory Biological Material Source Disclosure",
+      "text": "Every complete specification shall fully and particularly describe the invention and its operation or use and the method by which it is to be performed; and disclose the source and geographical origin of the biological material in the specification, when used in an invention.",
+      "location": {
+        "chapter": "Chapter III (Applications for Patents)",
+        "page_start": 14,
+        "page_end": 15
+      },
+      "topics": ["SOURCE_DISCLOSURE", "GEOGRAPHICAL_ORIGIN", "BIOLOGICAL_RESOURCE"],
+      "statutory_significance": "Statutory duty of disclosure for all Ayurvedic patents using Indian botanicals."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_025_1_K",
+      "type": "SECTION",
+      "number": "25(1)(k)",
+      "heading": "Opposition Ground for Traditional Knowledge Anticipation",
+      "text": "Where an application for a patent has been published, any person may oppose the grant on the ground that the complete specification does not disclose or wrongly mentions the source or geographical origin of biological material used for the invention, or that the invention claimed was anticipated having regard to the knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",
+      "location": {
+        "chapter": "Chapter V (Opposition to Grant of Patent)",
+        "page_start": 23,
+        "page_end": 24
+      },
+      "topics": ["PRE_GRANT_OPPOSITION", "TKDL", "INDIGENOUS_KNOWLEDGE", "BIOPIRACY"],
+      "statutory_significance": "Legal mechanism for CSIR and third parties to challenge biopiracy patents."
+    }
+  ]
+}

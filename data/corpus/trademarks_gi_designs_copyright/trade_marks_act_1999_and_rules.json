@@ -1,0 +1,29 @@
+{
+  "document_id": "IND_TRADE_MARKS_ACT_1999",
+  "title": "The Trade Marks Act, 1999 and Trade Marks Rules, 2017",
+  "authority": "Trade Marks Registry / CGPDTM (IP India)",
+  "jurisdiction": "IN",
+  "domain": "TRADEMARKS",
+  "document_type": "ACT",
+  "authority_level": 5,
+  "sections": [
+    {
+      "section_number": "Section 9(1)(b)",
+      "heading": "Absolute Grounds for Refusal - Descriptive Traditional Names",
+      "text": "Trade marks which consist exclusively of marks or indications which may serve in trade to designate the kind, quality, quantity, intended purpose, values, geographical origin or the time of production of the goods or of rendering of the service, or other characteristics of the goods or service, shall not be registered.",
+      "relevance": "Prevents monopolizing classical Sanskrit Ayurvedic herb names (e.g., 'Ashwagandha Churna', 'Triphala Guggulu') as exclusive proprietary brand names."
+    },
+    {
+      "section_number": "Section 13",
+      "heading": "Prohibition of Registration of Names of Chemical Elements or INN",
+      "text": "Prohibits registration of generic botanical names, International Nonproprietary Names (INN), or commonly accepted Ayurvedic formulation names.",
+      "relevance": "Ensures public domain traditional medicinal terms remain accessible to all manufacturers."
+    },
+    {
+      "section_number": "Nice Classification Classes for Ayurveda",
+      "heading": "Applicable Trademark Classes for Ayurvedic Startups",
+      "text": "- Class 5: Ayurvedic medicines, classical ASU preparations, dietary supplements for medical purposes, herbal pharma.\n- Class 3: Ayurvedic cosmetics, herbal soaps, essential oils, dhoop, hair oils, skincare.\n- Class 30: Herbal teas, spices, confectionery, Ayurveda Aahara foods.\n- Class 32: Ayurvedic non-alcoholic wellness beverages, herbal syrups, tonics.\n- Class 44: Ayurvedic clinics, Panchakarma centers, wellness resorts, AYUSH telehealth.",
+      "relevance": "Direct class filing guidance for brand strategy."
+    }
+  ]
+}

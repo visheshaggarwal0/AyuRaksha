@@ -1,0 +1,5 @@
+# Download attempted 2026-08-31T10:58:13.410817+00:00
+# IND_ASCIM_GUIDELINES_2022
+# URL: https://www.ascionline.in/wp-content/uploads/2022/07/ASCI-Guidelines-for-Ayurveda.pdf
+# Error: HTTP 404
+# Retry: python scripts/download_corpus.py --retry IND_ASCIM_GUIDELINES_2022

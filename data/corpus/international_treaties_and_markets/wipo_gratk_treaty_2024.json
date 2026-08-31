@@ -1,0 +1,24 @@
+{
+  "document_id": "INT_WIPO_GRATK_TREATY_2024",
+  "title": "WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (2024)",
+  "authority": "World Intellectual Property Organization (WIPO)",
+  "jurisdiction": "INT",
+  "domain": "INTERNATIONAL_IP_AND_TREATIES",
+  "document_type": "TREATY",
+  "authority_level": 5,
+  "adoption_date": "2024-05-24",
+  "articles": [
+    {
+      "article_number": "Article 3",
+      "heading": "Mandatory Patent Disclosure Requirement",
+      "text": "1. Where the claimed invention in a patent application is based on genetic resources, each Contracting Party shall require applicants to disclose the country of origin of the genetic resources, or, if unknown, the source of the genetic resources.\n2. Where the claimed invention in a patent application is based on traditional knowledge associated with genetic resources, each Contracting Party shall require applicants to disclose the Indigenous Peoples or local community who provided the traditional knowledge, or, if unknown, the source of the traditional knowledge.",
+      "relevance": "Landmark global treaty compelling all international patent applicants worldwide to disclose Indian medicinal plant origins."
+    },
+    {
+      "article_number": "Article 6",
+      "heading": "Information Systems and Traditional Knowledge Databases",
+      "text": "Encourages establishment and recognition of digital traditional knowledge databases (such as India's TKDL) in patent offices worldwide to facilitate international prior art searches.",
+      "relevance": "International validation of TKDL as a recognized search authority during PCT international patent examination."
+    }
+  ]
+}
