@@ -1,0 +1,2950 @@
+{
+  "manifest_version": "3.0.0",
+  "architecture": "4-Layer: Raw -> Normalized -> RAG Embeddings -> Neon PGVector Knowledge",
+  "project": "AyuRaksha (IP-SAKTI Sahayak) \u2014 SIH 26045",
+  "total_sources": 117,
+  "authority_hierarchy": {
+    "5": "Level 5: Primary Authoritative (Acts, Rules, Treaties, First Schedule 56 Books, Gazette Notifications, Final Case Law Precedents)",
+    "4": "Level 4: Official Guidance (Ministry Circulars, Manuals, Guidelines for Examination of TK, FAQs)",
+    "3": "Level 3: Pharmacopoeial Standards (Ayurvedic Pharmacopoeia of India API, Formulary AFI, PCIM&H)",
+    "2": "Level 2: Secondary Peer-Reviewed Evidence (Research commentary, Clinical trials, CCRAS publications)",
+    "1": "Level 1: Discovery Context Only (News, trade articles)"
+  },
+  "sources": [
+    {
+      "document_id": "IND_PATENTS_ACT_1970",
+      "title": "The Patents Act, 1970 (as amended up to 2024)",
+      "short_title": "IND PATENTS ACT 1970",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ipindia.gov.in/writereaddata/Portal/IPOAct/1_31_1_patent-act-1970-11march2015.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_patents_act_1970.pdf",
+        "sha256": "ea8ca4cc0723dc80a21f49705c5435c3d07e854edf667d227583de8691465c4c",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:17:37.793547+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_patents_act_1970.pdf"
+    },
+    {
+      "document_id": "IND_PATENTS_RULES_2003_2024",
+      "title": "The Patents Rules, 2003 as amended by Patents (Amendment) Rules, 2024",
+      "short_title": "IND PATENTS RULES 2003 2024",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ipindia.gov.in/writereaddata/Portal/Images/pdf/Patents_Amendment_Rules_2024.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_patents_rules_2003_2024.pdf",
+        "sha256": "cd2a09c8921e9088e9e0906e4fcef6aa14aa0ee994d022257ccf772b08ed6810",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:17:37.987944+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_patents_rules_2003_2024.pdf"
+    },
+    {
+      "document_id": "IND_PATENTS_TK_GUIDELINES_2024",
+      "title": "Guidelines for Examination of Patent Applications Relating to Traditional Knowledge",
+      "short_title": "IND PATENTS TK GUIDELINES 2024",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ipindia.gov.in/guidelines-patents.htm",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_patents_tk_guidelines_2024.pdf",
+        "sha256": "04352d36d6d94d2eee75b28c8d180a1cfbe4ff6259f56bc040eb996b305260e8",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:17:37.988622+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_patents_tk_guidelines_2024.pdf"
+    },
+    {
+      "document_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002",
+      "title": "The Biological Diversity Act, 2002",
+      "short_title": "IND BIOLOGICAL DIVERSITY ACT 2002",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/act/BDACT_2002.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_biological_diversity_act_2002.pdf",
+        "sha256": "405d69758804394a709e8cb4057e7f6f3e1dd5037203949ad4d9cfb189fec40d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483,
+        "retrieved_at": "2026-08-31T12:17:52.774693+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_biological_diversity_act_2002.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_biological_diversity_act_2002.txt"
+    },
+    {
+      "document_id": "IND_BIOLOGICAL_DIVERSITY_AMEND_2023",
+      "title": "The Biological Diversity (Amendment) Act, 2023",
+      "short_title": "IND BIOLOGICAL DIVERSITY AMEND 2023",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/pdf/Biological_Diversity_Amendment_Act_2023.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_biological_diversity_amend_2023.pdf",
+        "sha256": "405d69758804394a709e8cb4057e7f6f3e1dd5037203949ad4d9cfb189fec40d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483,
+        "retrieved_at": "2026-08-31T12:17:53.294900+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_biological_diversity_amend_2023.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_biological_diversity_amend_2023.txt"
+    },
+    {
+      "document_id": "IND_BD_RULES_2004",
+      "title": "The Biological Diversity Rules, 2004",
+      "short_title": "IND BD RULES 2004",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/act/bdrules2004.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_bd_rules_2004.pdf",
+        "sha256": "405d69758804394a709e8cb4057e7f6f3e1dd5037203949ad4d9cfb189fec40d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483,
+        "retrieved_at": "2026-08-31T12:17:55.328195+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_bd_rules_2004.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_bd_rules_2004.txt"
+    },
+    {
+      "document_id": "IND_ABS_REGULATIONS_2014",
+      "title": "Guidelines on Access to Biological Resources and Benefits Sharing Regulations, 2014",
+      "short_title": "IND ABS REGULATIONS 2014",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://nbaindia.org/uploaded/pdf/ABS_Guidance_Regulations_2014.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_abs_regulations_2014.pdf",
+        "sha256": "405d69758804394a709e8cb4057e7f6f3e1dd5037203949ad4d9cfb189fec40d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 63483,
+        "retrieved_at": "2026-08-31T12:17:55.957395+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_abs_regulations_2014.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_abs_regulations_2014.txt"
+    },
+    {
+      "document_id": "IND_DRUGS_COSMETICS_ACT_1940_ASU",
+      "title": "The Drugs and Cosmetics Act, 1940 (Chapter IV-A: ASU Drugs)",
+      "short_title": "IND DRUGS COSMETICS ACT 1940 ASU",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://cdsco.gov.in/opencms/export/sites/CDSCO_Web/Pdf-documents/acts_rules/2016DrugsandCosmeticsAct1940Rules1945.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_drugs_cosmetics_act_1940_asu.pdf",
+        "sha256": "3484cb7dd926c312ef9b143c1994b9e72c8b3a3df6dba1165e843c8bdd03117e",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:17:56.025092+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_drugs_cosmetics_act_1940_asu.pdf"
+    },
+    {
+      "document_id": "IND_DRUGS_COSMETICS_RULES_1945_ASU",
+      "title": "The Drugs and Cosmetics Rules, 1945 (ASU Provisions)",
+      "short_title": "IND DRUGS COSMETICS RULES 1945 ASU",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://ayush.gov.in/docs/drugs-and-cosmetics-rules-1945.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_drugs_cosmetics_rules_1945_asu.pdf",
+        "sha256": "c7cbf123f35017aff92eead7abdb87bf46d1b604a40a6bc38cbe6ed383ef10da",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:17:56.137257+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_drugs_cosmetics_rules_1945_asu.pdf"
+    },
+    {
+      "document_id": "IND_FSSAI_AYURVEDA_AAHARA_2022",
+      "title": "Food Safety and Standards (Ayurveda Aahara) Regulations, 2022",
+      "short_title": "IND FSSAI AYURVEDA AAHARA 2022",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://fssai.gov.in/upload/notifications/2022/05/627a195ca5b2aGazette_Notification_Ayurveda_Aahara_06_05_2022.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_fssai_ayurveda_aahara_2022.pdf",
+        "sha256": "fdc4739c869cba5a44690c9dbd013757b4e5102b7eb310746d13c839de934b62",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 3221,
+        "retrieved_at": "2026-08-31T12:17:59.233806+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/legislation/ind_fssai_ayurveda_aahara_2022.pdf"
+    },
+    {
+      "document_id": "IND_DRUGS_MAGIC_REMEDIES_ACT_1954",
+      "title": "The Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954",
+      "short_title": "IND DRUGS MAGIC REMEDIES ACT 1954",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.indiacode.nic.in/bitstream/123456789/1393/1/A1954-21.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_drugs_magic_remedies_act_1954.pdf",
+        "sha256": "ca19d47de9ee36dc91d05765fd6e66cfb34efc41e788a15034c52a493f424a23",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:00.012567+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_drugs_magic_remedies_act_1954.pdf"
+    },
+    {
+      "document_id": "IND_TRADE_MARKS_ACT_1999",
+      "title": "The Trade Marks Act, 1999",
+      "short_title": "IND TRADE MARKS ACT 1999",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ipindia.gov.in/writereaddata/Portal/IPOAct/1_43_1_trade-marks-act.pdf",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_trade_marks_act_1999.pdf",
+        "sha256": "bbecb82d1e9c82c25fbabe4b8ff729deb955648064370087936478238fc93ad9",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:00.158067+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_trade_marks_act_1999.pdf"
+    },
+    {
+      "document_id": "IND_GEOGRAPHICAL_INDICATIONS_ACT_1999",
+      "title": "The Geographical Indications of Goods Act, 1999",
+      "short_title": "IND GEOGRAPHICAL INDICATIONS ACT 1999",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.ipindia.gov.in",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_geographical_indications_act_1999.pdf",
+        "sha256": "df9e03a00a1d819492d8c29002532944c7091981bee4f4bc518bd9d04ccb6286",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 957760,
+        "retrieved_at": "2026-08-31T12:18:00.158740+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_geographical_indications_act_1999.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_geographical_indications_act_1999.txt"
+    },
+    {
+      "document_id": "IND_PPVFR_ACT_2001",
+      "title": "Protection of Plant Varieties and Farmers' Rights Act, 2001",
+      "short_title": "IND PPVFR ACT 2001",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://plantauthority.gov.in",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_ppvfr_act_2001.pdf",
+        "sha256": "3fe357871c4b258700d0f2d27d1eb05ac95c482643691d623f7a9ce798ba1a47",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 171367,
+        "retrieved_at": "2026-08-31T12:18:00.159131+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/ind_ppvfr_act_2001.pdf",
+      "extracted_text_path": "data/corpus/extracted/ind_ppvfr_act_2001.txt"
+    },
+    {
+      "document_id": "IND_CONSUMER_PROTECTION_ACT_2019",
+      "title": "The Consumer Protection Act, 2019",
+      "short_title": "IND CONSUMER PROTECTION ACT 2019",
+      "jurisdiction": "IN",
+      "domain": [
+        "STATUTE",
+        "LEGAL_INSTRUMENT"
+      ],
+      "document_type": "PRIMARY_ACT",
+      "authority": "Government of India",
+      "authority_level": 5,
+      "source": {
+        "url": "https://consumeraffairs.nic.in",
+        "source_type": "OFFICIAL",
+        "file_name": "ind_consumer_protection_act_2019.pdf",
+        "sha256": "c88e3030e7eb13d74289efa5225bd1d3fd2d3a449878a7d974cb2a19c0f87110",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:00.159458+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/legislation/ind_consumer_protection_act_2019.pdf"
+    },
+    {
+      "document_id": "INT_WIPO_GRATK_TREATY_2024",
+      "title": "WIPO Treaty on Intellectual Property, Genetic Resources and Associated TK (2024)",
+      "short_title": "INT WIPO GRATK TREATY 2024",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.wipo.int/edocs/mdocs/tk/en/gratk_dc/gratk_dc_7.pdf",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_wipo_gratk_treaty_2024.pdf",
+        "sha256": "1b898fd1a1655cd34a91060cbfa948d354eb99c0cee4a9ca83357b337c1e0f38",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 278276,
+        "retrieved_at": "2026-08-31T12:18:01.281399+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/int_wipo_gratk_treaty_2024.pdf",
+      "extracted_text_path": "data/corpus/extracted/int_wipo_gratk_treaty_2024.txt"
+    },
+    {
+      "document_id": "INT_NAGOYA_PROTOCOL_2010",
+      "title": "Nagoya Protocol on Access and Benefit Sharing (2010)",
+      "short_title": "INT NAGOYA PROTOCOL 2010",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.cbd.int/abs/doc/protocol/nagoya-protocol-en.pdf",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_nagoya_protocol_2010.pdf",
+        "sha256": "cdbd496bd361317d3b7237124177974bebac4cc800cf1974896bc19234cce856",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 502368,
+        "retrieved_at": "2026-08-31T12:18:06.458298+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/int_nagoya_protocol_2010.pdf",
+      "extracted_text_path": "data/corpus/extracted/int_nagoya_protocol_2010.txt"
+    },
+    {
+      "document_id": "INT_WTO_TRIPS_AGREEMENT",
+      "title": "WTO TRIPS Agreement (Articles 27, 29)",
+      "short_title": "INT WTO TRIPS AGREEMENT",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.wto.org/english/docs_e/legal_e/27-trips_01_e.htm",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_wto_trips_agreement.pdf",
+        "sha256": "89090d787d7aa53552498a0b037ebc65b6e059f3520c26e3818620b1b47d47ec",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 12663,
+        "retrieved_at": "2026-08-31T12:18:06.459162+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/int_wto_trips_agreement.pdf",
+      "extracted_text_path": "data/corpus/extracted/int_wto_trips_agreement.txt"
+    },
+    {
+      "document_id": "INT_US_FDA_DSHEA_1994",
+      "title": "US FDA Dietary Supplement Health and Education Act (1994) & 21 CFR Part 111",
+      "short_title": "INT US FDA DSHEA 1994",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.fda.gov/food/dietary-supplements",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_us_fda_dshea_1994.pdf",
+        "sha256": "0b91c01e52380db53a4495de1db61bf408e50ee4763ab8243726488607182ce9",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.459884+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/international/int_us_fda_dshea_1994.pdf"
+    },
+    {
+      "document_id": "INT_EU_THMPD_DIRECTIVE_2004_24_EC",
+      "title": "EU Directive 2004/24/EC on Traditional Herbal Medicinal Products",
+      "short_title": "INT EU THMPD DIRECTIVE 2004 24 EC",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32004L0024",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_eu_thmpd_directive_2004_24_ec.pdf",
+        "sha256": "e59c54457d0c189f00f06606b8c89a89c6dd3334841f4bd24138ff4b691fa7ec",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 275393,
+        "retrieved_at": "2026-08-31T12:18:06.460766+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/int_eu_thmpd_directive_2004_24_ec.pdf",
+      "extracted_text_path": "data/corpus/extracted/int_eu_thmpd_directive_2004_24_ec.txt"
+    },
+    {
+      "document_id": "INT_WHO_GACP_GUIDELINES",
+      "title": "WHO Guidelines on Good Agricultural and Collection Practices for Medicinal Plants",
+      "short_title": "INT WHO GACP GUIDELINES",
+      "jurisdiction": "INT",
+      "domain": [
+        "TREATY",
+        "EXPORT_REGIME"
+      ],
+      "document_type": "INTERNATIONAL_TREATY",
+      "authority": "WIPO / CBD / WHO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://www.who.int/publications/i/item/9241546271",
+        "source_type": "INTERNATIONAL",
+        "file_name": "int_who_gacp_guidelines.pdf",
+        "sha256": "8f145ecaa3204f925d0b6ead2d574af29cf92d915d40c77db39a3167c077cec7",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 86753,
+        "retrieved_at": "2026-08-31T12:18:06.461582+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/int_who_gacp_guidelines.pdf",
+      "extracted_text_path": "data/corpus/extracted/int_who_gacp_guidelines.txt"
+    },
+    {
+      "document_id": "API_VOL_1",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol I (80 Single Drug Monographs)",
+      "short_title": "API VOL 1",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_1.pdf",
+        "sha256": "c157a220d192a6f5de5bfa687d5248fce3949b113d3e02eb3ec3a420f480e7cb",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.462017+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_1.pdf"
+    },
+    {
+      "document_id": "API_VOL_2",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol II (78 Single Drug Monographs)",
+      "short_title": "API VOL 2",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_2.pdf",
+        "sha256": "145e5bbd601c300b256d09a6306aad12bb9c4ae304de0fbc14b0587995ef197b",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.462400+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_2.pdf"
+    },
+    {
+      "document_id": "API_VOL_3",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol III (100 Single Drug Monographs)",
+      "short_title": "API VOL 3",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_3.pdf",
+        "sha256": "04fcd6a9f3bb6162fce4f3875839a96fe2dbf017087c5e6d92d429c5425f4495",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.462746+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_3.pdf"
+    },
+    {
+      "document_id": "API_VOL_4",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol IV (68 Single Drug Monographs)",
+      "short_title": "API VOL 4",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_4.pdf",
+        "sha256": "787b185b37cb02179ebc74f18d9c79b3b1dc0bf5da3e24beb1e7fb2d3047a174",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.463077+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_4.pdf"
+    },
+    {
+      "document_id": "API_VOL_5",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol V (92 Single Drug Monographs)",
+      "short_title": "API VOL 5",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_5.pdf",
+        "sha256": "f0acce5b43719d7a93b54644224b35ae85fc24f0886db1ff85db5448233f08e6",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.463401+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_5.pdf"
+    },
+    {
+      "document_id": "API_VOL_6",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol VI (101 Single Drug Monographs)",
+      "short_title": "API VOL 6",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_6.pdf",
+        "sha256": "3a65e864a30d21269ed04d90d516052bbda087bbdad8b6b6ef8810c4e3e389f5",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.463711+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_6.pdf"
+    },
+    {
+      "document_id": "API_VOL_7",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol VII (Heavy Metal & Microbial Limits)",
+      "short_title": "API VOL 7",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_7.pdf",
+        "sha256": "e9eee6058b7baca184c7f9d2bc52c4d31534e9f8a60ecd6a36627623b420a11f",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.464020+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_7.pdf"
+    },
+    {
+      "document_id": "API_VOL_8",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol VIII (Microscopy & TLC Fingerprinting)",
+      "short_title": "API VOL 8",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_8.pdf",
+        "sha256": "d3239b3995117ab1213e9bb65ffd735fb76051c6451403d3d957c4c81e4a937a",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.464344+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_8.pdf"
+    },
+    {
+      "document_id": "API_VOL_9",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-I, Vol IX (Hydro-alcoholic Extracts & Assay)",
+      "short_title": "API VOL 9",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_vol_9.pdf",
+        "sha256": "1eb84a7e29ea2411556773ad1f66eef8178733a804dec1936777e12b5775a60d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.464656+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_vol_9.pdf"
+    },
+    {
+      "document_id": "API_PART_2_VOL_1",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-II, Vol I (50 Formulations)",
+      "short_title": "API PART 2 VOL 1",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_part_2_vol_1.pdf",
+        "sha256": "b9dccdef22a16fd109fe44d2bd5eb28c88c8290fb39c60328bf4ec17b4275691",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.464959+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_part_2_vol_1.pdf"
+    },
+    {
+      "document_id": "API_PART_2_VOL_2",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-II, Vol II (50 Formulations)",
+      "short_title": "API PART 2 VOL 2",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_part_2_vol_2.pdf",
+        "sha256": "3e392c6038148383f7352525dcefe67e64513104526cb3e4f65c702226143289",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.465296+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_part_2_vol_2.pdf"
+    },
+    {
+      "document_id": "API_PART_2_VOL_3",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-II, Vol III (51 Formulations)",
+      "short_title": "API PART 2 VOL 3",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_part_2_vol_3.pdf",
+        "sha256": "5dedf35cd0785f603484f6b2c9fb6fdae1920bf714948aa36a479d2bf81e1a4d",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.466019+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_part_2_vol_3.pdf"
+    },
+    {
+      "document_id": "API_PART_2_VOL_4",
+      "title": "The Ayurvedic Pharmacopoeia of India Part-II, Vol IV (50 Formulations)",
+      "short_title": "API PART 2 VOL 4",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "api_part_2_vol_4.pdf",
+        "sha256": "29a15447fbf8a7c4aa75400209eab16ec414563b57fbc31d53e8e67c9a5a605b",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.466625+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/api_part_2_vol_4.pdf"
+    },
+    {
+      "document_id": "AFI_PART_1",
+      "title": "The Ayurvedic Formulary of India (AFI) Part-I (444 Compound Formulations)",
+      "short_title": "AFI PART 1",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "Department of Ayush",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "afi_part_1.pdf",
+        "sha256": "a76c53bdf21600ab1fb9879562821fd6a696006a8aa8cf9a07a73e712bfcecbb",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.466949+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/afi_part_1.pdf"
+    },
+    {
+      "document_id": "AFI_PART_2",
+      "title": "The Ayurvedic Formulary of India (AFI) Part-II (191 Compound Formulations)",
+      "short_title": "AFI PART 2",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "Department of Ayush",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "afi_part_2.pdf",
+        "sha256": "9a8785fabc5d55f315f72341bc336fc0aad39ca33fda001feaba1ba0e22e55b7",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.467268+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/afi_part_2.pdf"
+    },
+    {
+      "document_id": "AFI_PART_3",
+      "title": "The Ayurvedic Formulary of India (AFI) Part-III (350 Compound Formulations)",
+      "short_title": "AFI PART 3",
+      "jurisdiction": "IN",
+      "domain": [
+        "PHARMACOPOEIA",
+        "QUALITY_STANDARDS"
+      ],
+      "document_type": "OFFICIAL_STANDARDS",
+      "authority": "PCIM&H",
+      "authority_level": 3,
+      "source": {
+        "url": "https://pcimh.gov.in",
+        "source_type": "PHARMACOPOEIA_MONOGRAPH",
+        "file_name": "afi_part_3.pdf",
+        "sha256": "59ace34bfe1a9d62fbc625b812a8a7c545f3a1b8df54d9ec21a73746b1c27807",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.467598+00:00",
+        "extraction_status": "FAILED_EXTRACTION_EMPTY"
+      },
+      "local_path": "raw/india/ayush/afi_part_3.pdf"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_01_AROGYA_KALPADRUMA",
+      "title": "Arogya Kalpadruma (First Schedule Book No. 1)",
+      "short_title": "Arogya Kalpadruma",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "K. Kaikulangara Rama Warrier",
+      "description": "Kerala classical pediatric & general medicine treatise",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_01_arogya_kalpadruma.json",
+        "sha256": "2a2c1a346c150cfdae8585427d49a75472c9aefce82487aad2782c984404942d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.468498+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_01_arogya_kalpadruma.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_02_ARKA_PRAKASHA",
+      "title": "Arka Prakasha (First Schedule Book No. 2)",
+      "short_title": "Arka Prakasha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Lankapati Ravana",
+      "description": "Classical distillation techniques & volatile extracts (Arka Kalpana)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_02_arka_prakasha.json",
+        "sha256": "d62b477ffb4c51038c345340b8415bbaaf004ed57dcc7c5b8dcd44492756df4f",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.469273+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_02_arka_prakasha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_03_ARYA_BHISHAK",
+      "title": "Arya Bhishak (First Schedule Book No. 3)",
+      "short_title": "Arya Bhishak",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Shankar Daji Pade",
+      "description": "Comprehensive Gujarati/Sanskrit formulation formulary",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_03_arya_bhishak.json",
+        "sha256": "48eeccd1511a28ad74a85f055ac5b7f70df68c047319804677117732ab0bb251",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.469736+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_03_arya_bhishak.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_04_ASHTANGA_HRIDAYA",
+      "title": "Ashtanga Hridaya (First Schedule Book No. 4)",
+      "short_title": "Ashtanga Hridaya",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vagbhata",
+      "description": "The core foundational Ayurvedic compendium of Vagbhata (Chikitsasthana)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_04_ashtanga_hridaya.json",
+        "sha256": "5ba113379e6102c6bdfc8b4e086ce6ac4f3824e0a1959bfbf6fd7e91f4d293cc",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.470165+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_04_ashtanga_hridaya.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_05_ASHTANGA_SANGRAHA",
+      "title": "Ashtanga Sangraha (First Schedule Book No. 5)",
+      "short_title": "Ashtanga Sangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vagbhata (Senior)",
+      "description": "Comprehensive encyclopedic Brihat-Trayi classical treatise",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_05_ashtanga_sangraha.json",
+        "sha256": "39510f92b08aca8005012ae5b6a9ca9db8f6135ca44b1dd3295c58b20792b80a",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.470511+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_05_ashtanga_sangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_06_AYURVEDA_KALPADRUMA",
+      "title": "Ayurveda Kalpadruma (First Schedule Book No. 6)",
+      "short_title": "Ayurveda Kalpadruma",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Pandit Lakshmana Sastri",
+      "description": "Formulary of traditional Rasa & herbal preparations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_06_ayurveda_kalpadruma.json",
+        "sha256": "96e81128e00745c8462cb6d337f26ea0dd88f7c70b847d41fe33b5227dc08fad",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.470795+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_06_ayurveda_kalpadruma.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_07_AYURVEDA_PRAKASHA",
+      "title": "Ayurveda Prakasha (First Schedule Book No. 7)",
+      "short_title": "Ayurveda Prakasha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Madhava Upadhyaya",
+      "description": "Rasa-Shastra authoritative text on mineral/herbal calcination",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_07_ayurveda_prakasha.json",
+        "sha256": "18a92b7bb4466e3f3493d00f121266dc8d16e41a1afae32ac8872fbb7b10d60a",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.471062+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_07_ayurveda_prakasha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_08_AYURVEDA_SAMGRAHA",
+      "title": "Ayurveda Samgraha (First Schedule Book No. 8)",
+      "short_title": "Ayurveda Samgraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Chakrapanidatta",
+      "description": "Bengal tradition classic on polyherbal diagnostics & therapeutics",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_08_ayurveda_samgraha.json",
+        "sha256": "76149f517630b196b4e5d87f3037458c2aa3fa183c4490246d92c60fde9e6a99",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.471345+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_08_ayurveda_samgraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_09_AYURVEDA_SARASANGRAHA",
+      "title": "Ayurveda Sarasangraha (First Schedule Book No. 9)",
+      "short_title": "Ayurveda Sarasangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Baidyanath Tradition",
+      "description": "Authoritative compilation of classical North Indian formulations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_09_ayurveda_sarasangraha.json",
+        "sha256": "a4f1783ef1697ea4d4bf9c53e7948e1afb716d1e6da963ef4ec75aff656adee5",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.471615+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_09_ayurveda_sarasangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_10_BHAISHAJYA_RATNAVALI",
+      "title": "Bhaishajya Ratnavali (First Schedule Book No. 10)",
+      "short_title": "Bhaishajya Ratnavali",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Govinda Das Sen",
+      "description": "The premier clinical formulary for Rasashastra & polyherbals",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_10_bhaishajya_ratnavali.json",
+        "sha256": "7ba89798180d89f952c73b11199ac096b4cfaebb0ea6e2093014058b0c064da0",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.471873+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_10_bhaishajya_ratnavali.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_11_BHARAT_BHAISHAJYA_RATNAKARA",
+      "title": "Bharat Bhaishajya Ratnakara (First Schedule Book No. 11)",
+      "short_title": "Bharat Bhaishajya Ratnakara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Gopinath Sen",
+      "description": "Massive 5-volume encyclopedia of 10,000+ classical formulations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_11_bharat_bhaishajya_ratnakara.json",
+        "sha256": "2a8c784cd4d64debbb2578fceb4b09fe05972c30d2a81404616e5ca3c6eb8d5c",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.472128+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_11_bharat_bhaishajya_ratnakara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_12_BHAVAPRAKASHA_/_BHAVAPRAKASHA_",
+      "title": "Bhavaprakasha / Bhavaprakasha Nighantu (First Schedule Book No. 12)",
+      "short_title": "Bhavaprakasha / Bhavaprakasha Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Bhava Mishra",
+      "description": "The definitive Nighantu (materia medica) for herbal drugs",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_12_bhavaprakasha_/_bhavaprakasha_.json",
+        "sha256": "e158abaf3def09b1086f5a93162125b7ee6e0a80ca541770a2dc59464393ce83",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.472640+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_12_bhavaprakasha_/_bhavaprakasha_.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_13_BRIHAT_NIGHANTU_RATNAKARA",
+      "title": "Brihat Nighantu Ratnakara (First Schedule Book No. 13)",
+      "short_title": "Brihat Nighantu Ratnakara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Dattaram Chaube",
+      "description": "Comprehensive materia medica and clinical recipes",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_13_brihat_nighantu_ratnakara.json",
+        "sha256": "661abeef3af973aa0256289ee42efe94d98d8f687455d8b728438191e9ba40aa",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.472940+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_13_brihat_nighantu_ratnakara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_14_CHARAKA_SAMHITA",
+      "title": "Charaka Samhita (First Schedule Book No. 14)",
+      "short_title": "Charaka Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Maharshi Agnivesha / Charaka",
+      "description": "The supreme foundational authority of Internal Medicine (Kaya-Chikitsa)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_14_charaka_samhita.json",
+        "sha256": "1dfa74e31b49349ca2681cf9b4de759e7f0090702f98d46ae4dd403921c74947",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.473205+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_14_charaka_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_15_CHIKITSA_KALIKA",
+      "title": "Chikitsa Kalika (First Schedule Book No. 15)",
+      "short_title": "Chikitsa Kalika",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Tisata",
+      "description": "Practical therapeutic guide on dosage and anupana",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_15_chikitsa_kalika.json",
+        "sha256": "8b4db767c7bb818f9a49dc0d44022793b86977dab857ab83a33b9bf00a212a6f",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.473422+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_15_chikitsa_kalika.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_16_CHIKITSA_SARA_SANGRAHA",
+      "title": "Chikitsa Sara Sangraha (First Schedule Book No. 16)",
+      "short_title": "Chikitsa Sara Sangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vangasena",
+      "description": "Clinical recipes for chronic obstinate diseases",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_16_chikitsa_sara_sangraha.json",
+        "sha256": "66d375891357cc4d18c110f4e3c473b07c68e8dd49eb7821ecaeaa1388aa4db2",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.473637+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_16_chikitsa_sara_sangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_17_DRAVYAGUNA_SANGRAHA",
+      "title": "Dravyaguna Sangraha (First Schedule Book No. 17)",
+      "short_title": "Dravyaguna Sangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Chakrapanidatta",
+      "description": "Pharmacognosy of classical dravyas and therapeutic properties",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_17_dravyaguna_sangraha.json",
+        "sha256": "4d1f25bf568f0c5cb037d42ac1aaab6e7c6af36dc3a8fabfa23a111e8730624b",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.473851+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_17_dravyaguna_sangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_18_GADA_NIGRAHA",
+      "title": "Gada Nigraha (First Schedule Book No. 18)",
+      "short_title": "Gada Nigraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Sodhala",
+      "description": "Exhaustive therapeutic treatise classified by drug formulations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_18_gada_nigraha.json",
+        "sha256": "90102447d9574938e763c114ec8a01f43fcfe1f8652ffd1d012c6fdb895e83a6",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.474086+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_18_gada_nigraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_19_GALAGANDADI_ROGADHIKARA",
+      "title": "Galagandadi Rogadhikara (First Schedule Book No. 19)",
+      "short_title": "Galagandadi Rogadhikara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Traditional Authors",
+      "description": "Specialized treatise on thyroid, glandular and ENT disorders",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_19_galagandadi_rogadhikara.json",
+        "sha256": "d39049bcb5f1c1b4a6e302bc8f42baef4835f7c498b2b83602200eafc24b4302",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.474309+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_19_galagandadi_rogadhikara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_20_KAVIRAJA_SANGRAHA",
+      "title": "Kaviraja Sangraha (First Schedule Book No. 20)",
+      "short_title": "Kaviraja Sangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Bengal Ayurvedic Board",
+      "description": "Traditional physician formulas and compounding techniques",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_20_kaviraja_sangraha.json",
+        "sha256": "6c520f150f2901510d9d1cc31e8705efdb23710f891f9a08c57a37b35269c754",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.474523+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_20_kaviraja_sangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_21_KUPPUSWAMY_MUDALIAR_FORMULARY",
+      "title": "Kuppuswamy Mudaliar Formulary (First Schedule Book No. 21)",
+      "short_title": "Kuppuswamy Mudaliar Formulary",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Kuppuswamy Mudaliar",
+      "description": "Southern regional classical compounding manual",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_21_kuppuswamy_mudaliar_formulary.json",
+        "sha256": "4524a4122499b877d5fcdaa37c2ed96bbb88c47a0a5389e26d3df209ef85c404",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.474755+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_21_kuppuswamy_mudaliar_formulary.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_22_MADHAVA_NIDANA_(ROGA_VINISCHAY",
+      "title": "Madhava Nidana (Roga Vinischaya) (First Schedule Book No. 22)",
+      "short_title": "Madhava Nidana (Roga Vinischaya)",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Madhavakara",
+      "description": "The gold standard text on etiology, pathology and diagnosis",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_22_madhava_nidana_(roga_vinischay.json",
+        "sha256": "d9add16cc3d6126f19c32ca40ad6ba200d4904210664636cd6a89ecc8d89aaa9",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.474977+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_22_madhava_nidana_(roga_vinischay.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_23_MATERIA_MEDICA_OF_AYURVEDA",
+      "title": "Materia Medica of Ayurveda (First Schedule Book No. 23)",
+      "short_title": "Materia Medica of Ayurveda",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "P.C. Ray / U.C. Dutt",
+      "description": "Standardized descriptive pharmacognosy of single drugs",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_23_materia_medica_of_ayurveda.json",
+        "sha256": "7e10a32dbc5af73607545c6a331216ce34ed5015e3d5574ac52426951b3434fd",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.475193+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_23_materia_medica_of_ayurveda.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_24_NIGHANTU_RATNAKARA",
+      "title": "Nighantu Ratnakara (First Schedule Book No. 24)",
+      "short_title": "Nighantu Ratnakara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vishnu Vasudev Godbole",
+      "description": "Dictionary of synonyms, actions and rasa-panchaka of herbs",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_24_nighantu_ratnakara.json",
+        "sha256": "14d19b8bc0423a8f2794751379ab78717008a526cb16823ebd4ea6d78c9392e5",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.475405+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_24_nighantu_ratnakara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_25_PATHYA_APATHYA_VINISCHAYA",
+      "title": "Pathya-Apathya Vinischaya (First Schedule Book No. 25)",
+      "short_title": "Pathya-Apathya Vinischaya",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Harit Samhita / Vishwanath",
+      "description": "Classical nutritional guidelines and dietary prescriptions",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_25_pathya_apathya_vinischaya.json",
+        "sha256": "42a42757d27b1d2fe5954f9fe3745247cdf184ed27cd1cf00595376e989de382",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.475624+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_25_pathya_apathya_vinischaya.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_26_RAJA_NIGHANTU",
+      "title": "Raja Nighantu (First Schedule Book No. 26)",
+      "short_title": "Raja Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Narahari Pandita",
+      "description": "Authoritative 14th-century botanical taxonomy and synonyms",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_26_raja_nighantu.json",
+        "sha256": "50aef8008f558eb095f712c4e286b6c623c188dfaf3de0abbcd5dc00807b1edb",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.475837+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_26_raja_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_27_RASA_CHANDRANSHU",
+      "title": "Rasa Chandranshu (First Schedule Book No. 27)",
+      "short_title": "Rasa Chandranshu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Dattaram Chaube",
+      "description": "Rasa-Shastra mercurial purifications and bhasma preparations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_27_rasa_chandranshu.json",
+        "sha256": "581ad8b8edc03095117f805df24931185e39e6d6536ecac384126e252b5d151d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.476045+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_27_rasa_chandranshu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_28_RASA_PRAKASHA_SUDHAKARA",
+      "title": "Rasa Prakasha Sudhakara (First Schedule Book No. 28)",
+      "short_title": "Rasa Prakasha Sudhakara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Acharya Yashodhara",
+      "description": "Therapeutic applications of kupipakwa and mineral drugs",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_28_rasa_prakasha_sudhakara.json",
+        "sha256": "3d8082da9c2c97d0fe0cf942345cbae98866579236b4482fee95b2a0d5daac5b",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.476355+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_28_rasa_prakasha_sudhakara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_29_RASA_RATNA_SAMUCCHAYA",
+      "title": "Rasa Ratna Samucchaya (First Schedule Book No. 29)",
+      "short_title": "Rasa Ratna Samucchaya",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vagbhata (Son of Simhagupta)",
+      "description": "The ultimate master treatise on Ayurvedic alchemy & pharmaceutical chemistry",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_29_rasa_ratna_samucchaya.json",
+        "sha256": "aa8f5adc570392a9f61b7f21a54bb05e220cd56151d22c64b4f83eb0547adc4d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.476693+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_29_rasa_ratna_samucchaya.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_30_RASA_TARANGINI",
+      "title": "Rasa Tarangini (First Schedule Book No. 30)",
+      "short_title": "Rasa Tarangini",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Acharya Sadananda Sharma",
+      "description": "Modern standard authoritative textbook on Rasa-Shastra (24 Tarangas)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_30_rasa_tarangini.json",
+        "sha256": "30d61139dbe6ca78d88127fc2df4b63e41ebe6139febd1d8d6f29e28e2144d53",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.476929+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_30_rasa_tarangini.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_31_RASA_YOGA_SAGARA",
+      "title": "Rasa Yoga Sagara (First Schedule Book No. 31)",
+      "short_title": "Rasa Yoga Sagara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Pandit Hariprapanna",
+      "description": "Exhaustive 2-volume compilation of over 4,000 mineral-herb recipes",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_31_rasa_yoga_sagara.json",
+        "sha256": "8856159b886fa6fde4d5a4ab3bed9b43d227e2ffb2d9d4f7e2692a752b34d9b8",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.477147+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_31_rasa_yoga_sagara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_32_RASENDRA_CHINTAMANI",
+      "title": "Rasendra Chintamani (First Schedule Book No. 32)",
+      "short_title": "Rasendra Chintamani",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Dhunda-natha",
+      "description": "Advanced pharmaceutical methods for Kharaliya and Parpati preparations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_32_rasendra_chintamani.json",
+        "sha256": "2a00e12d07ca95b8de82177768e180be7559763d9611cf06c996062b230f745e",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.477362+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_32_rasendra_chintamani.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_33_RASENDRA_SARA_SANGRAHA",
+      "title": "Rasendra Sara Sangraha (First Schedule Book No. 33)",
+      "short_title": "Rasendra Sara Sangraha",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Gopala Krishna Bhatta",
+      "description": "Practical pharmacy manual for classical clinical remedies",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_33_rasendra_sara_sangraha.json",
+        "sha256": "bb00f1ac5e7446515c33f0cada37aeb8f0514fc37dc06bd0e89ce3e111fc75ea",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.477576+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_33_rasendra_sara_sangraha.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_34_RASA_HRIDAYA_TANTRA",
+      "title": "Rasa Hridaya Tantra (First Schedule Book No. 34)",
+      "short_title": "Rasa Hridaya Tantra",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Govinda Bhagavatpada",
+      "description": "Esoteric chemistry and processing of parada (mercury)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_34_rasa_hridaya_tantra.json",
+        "sha256": "b921282ff534b310d50003e85a19b7415d786f72277bb9cdf0080d8a28a6e330",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.477786+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_34_rasa_hridaya_tantra.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_35_SAHASRAYOGA",
+      "title": "Sahasrayoga (First Schedule Book No. 35)",
+      "short_title": "Sahasrayoga",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Traditional Kerala Vaidyas",
+      "description": "The monumental Kerala clinical formulary of 1,000 classical recipes (Kashayas, Tailas, Arishtas)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_35_sahasrayoga.json",
+        "sha256": "3efc47cbb7dcccf4a7d0fa683e20eb36cbb6d16b289b2f8579db8cdb3b0bf55b",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.477995+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_35_sahasrayoga.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_36_SARNGADHARA_SAMHITA",
+      "title": "Sarngadhara Samhita (First Schedule Book No. 36)",
+      "short_title": "Sarngadhara Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Acharya Sarngadhara",
+      "description": "The definitive treatise on Ayurvedic Pharmaceutical Science (Bhaishajya Kalpana)",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_36_sarngadhara_samhita.json",
+        "sha256": "7a95de674c798e06ded9bb87244e2585a4ed186f8be817b680e62c00bb0572dc",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.478232+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_36_sarngadhara_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_37_SIDDHA_BHAISHAJYA_MANIMALA",
+      "title": "Siddha Bhaishajya Manimala (First Schedule Book No. 37)",
+      "short_title": "Siddha Bhaishajya Manimala",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Rajarama Kalidasa",
+      "description": "Versified formulary of practical polyherbal remedies",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_37_siddha_bhaishajya_manimala.json",
+        "sha256": "b9386efcccc153b9132f2632231c8af55db625122879463253ae5bcd57e360fd",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.478447+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_37_siddha_bhaishajya_manimala.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_38_SIDDHA_YOGA",
+      "title": "Siddha Yoga (First Schedule Book No. 38)",
+      "short_title": "Siddha Yoga",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vrinda Kavi",
+      "description": "Classic compendium of proven therapeutic formulations",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_38_siddha_yoga.json",
+        "sha256": "ecdeb9743d8f393b6bc355b6f471fc7c0618910ce399eae23b2d21b104c27567",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.478658+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_38_siddha_yoga.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_39_SUSHRUTA_SAMHITA",
+      "title": "Sushruta Samhita (First Schedule Book No. 39)",
+      "short_title": "Sushruta Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Maharshi Sushruta / Nagarjuna",
+      "description": "The supreme foundational authority of Surgery (Shalya-Tantra) & Anatomy",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_39_sushruta_samhita.json",
+        "sha256": "8d62e385637f27a585e652e797e48a86aec354e5e8e039c8ac8ae351d7c8798a",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.478867+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_39_sushruta_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_40_VAIDYAKA_SHABDA_SINDHU",
+      "title": "Vaidyaka Shabda Sindhu (First Schedule Book No. 40)",
+      "short_title": "Vaidyaka Shabda Sindhu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Umesh Chandra Gupta",
+      "description": "Encyclopedic dictionary of Ayurvedic terminology and compounds",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_40_vaidyaka_shabda_sindhu.json",
+        "sha256": "0042f5c54915fe8c46aef0c5bcbbfec1d7bf6270a676bc3840def8866af98b19",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.479078+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_40_vaidyaka_shabda_sindhu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_41_VANGASENA_SAMHITA",
+      "title": "Vangasena Samhita (First Schedule Book No. 41)",
+      "short_title": "Vangasena Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Vangasena",
+      "description": "Clinical management of acute and chronic pathological conditions",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_41_vangasena_samhita.json",
+        "sha256": "a575c1764debc48df55f8c87f4adaf07adb1789f9b77aabe800493b138afb819",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.479289+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_41_vangasena_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_42_YOGARATNAKARA",
+      "title": "Yogaratnakara (First Schedule Book No. 42)",
+      "short_title": "Yogaratnakara",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Mayura Pada",
+      "description": "Master 17th-century compendium covering etiology, diet and treatment",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_42_yogaratnakara.json",
+        "sha256": "7d6d91dc2a806ce02eb89dfcd9432d7361f25a19bb5a42e6b4183879dbddbc4d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.479498+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_42_yogaratnakara.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_43_YOGATARANGINI",
+      "title": "Yogatarangini (First Schedule Book No. 43)",
+      "short_title": "Yogatarangini",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Trimalla Bhatta",
+      "description": "Formulary of compound herbal medicines",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_43_yogatarangini.json",
+        "sha256": "da51477aed6ba40c3e16bd4ad118f5154604f3db71a05ce222826f396a22ed62",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.479710+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_43_yogatarangini.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_44_KASHYAPA_SAMHITA_(VRIDDHA_JIVA",
+      "title": "Kashyapa Samhita (Vriddha Jivakiya) (First Schedule Book No. 44)",
+      "short_title": "Kashyapa Samhita (Vriddha Jivakiya)",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Maharshi Kashyapa",
+      "description": "The prime classical authority on Pediatrics (Kaumarbhritya) & Gynecology",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_44_kashyapa_samhita_(vriddha_jiva.json",
+        "sha256": "79b38be7cb79a3a3a0e6ff10a5e9e43c91910ff674d11d07b6c15fb17f031034",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.479921+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_44_kashyapa_samhita_(vriddha_jiva.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_45_BHEL_SAMHITA",
+      "title": "Bhel Samhita (First Schedule Book No. 45)",
+      "short_title": "Bhel Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Maharshi Bhela",
+      "description": "Companion classical text to Charaka Samhita",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_45_bhel_samhita.json",
+        "sha256": "d1f225b374f6e388a8f85b901f555d4a79cdb9bbe313e9f44b9e5d3f7d68f740",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.480147+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_45_bhel_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_46_HARITA_SAMHITA",
+      "title": "Harita Samhita (First Schedule Book No. 46)",
+      "short_title": "Harita Samhita",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Maharshi Harita",
+      "description": "Classical discourse on diseases, poisons, and dietary hygiene",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_46_harita_samhita.json",
+        "sha256": "2bc82d4c00286eeed648f982ca9bf758123c8d5d757e34f30f53de14880a0b5d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.480367+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_46_harita_samhita.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_47_CHAKRADATTA",
+      "title": "Chakradatta (First Schedule Book No. 47)",
+      "short_title": "Chakradatta",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Chakrapanidatta",
+      "description": "Authoritative therapeutic recipes with exact processing methods",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_47_chakradatta.json",
+        "sha256": "0ec93c4e9f301c24040bdf292f1a8f38c84ec546e5f22d065f3d71ee591ce917",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.480580+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_47_chakradatta.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_48_ANANDA_KANDA",
+      "title": "Ananda Kanda (First Schedule Book No. 48)",
+      "short_title": "Ananda Kanda",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Mahananda",
+      "description": "Detailed encyclopedic treatise on mineral and botanical metallurgy",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_48_ananda_kanda.json",
+        "sha256": "122597b454e9a4f12c2926229b7e78bd36e81354ff42fe248631c9d2ac905f38",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.480791+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_48_ananda_kanda.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_49_SHODHALA_NIGHANTU",
+      "title": "Shodhala Nighantu (First Schedule Book No. 49)",
+      "short_title": "Shodhala Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Sodhala",
+      "description": "Botanical glossary of rare Ayurvedic forest herbs",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_49_shodhala_nighantu.json",
+        "sha256": "7e67fd881e23c7f29d6b5414e4d3a81ed4a342d9c57d96a75965abbe9537a02f",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.480998+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_49_shodhala_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_50_DHANVANTARI_NIGHANTU",
+      "title": "Dhanvantari Nighantu (First Schedule Book No. 50)",
+      "short_title": "Dhanvantari Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Dhanvantari School",
+      "description": "Ancient Sanskrit materia medica of medicinal plants",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_50_dhanvantari_nighantu.json",
+        "sha256": "b566c0f89e6d74fe5286e81a9dc800aa0a1fb02020e215dc96b1a18b02cd33f1",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.481216+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_50_dhanvantari_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_51_KAIYADEVA_NIGHANTU_(PATHYAPATH",
+      "title": "Kaiyadeva Nighantu (Pathyapathya-Vibodhaka) (First Schedule Book No. 51)",
+      "short_title": "Kaiyadeva Nighantu (Pathyapathya-Vibodhaka)",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Kaiyadeva",
+      "description": "Exhaustive classification of herbs, foods, dietetics and actions",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_51_kaiyadeva_nighantu_(pathyapath.json",
+        "sha256": "a747929c33ffe4d42a3c70d6411fb14353fbaa6c2963e3b03b9c4264b950626e",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.481427+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_51_kaiyadeva_nighantu_(pathyapath.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_52_MADANAPALA_NIGHANTU",
+      "title": "Madanapala Nighantu (First Schedule Book No. 52)",
+      "short_title": "Madanapala Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "King Madanapala",
+      "description": "14th-century royal pharmacopoeial glossary",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_52_madanapala_nighantu.json",
+        "sha256": "3784274417720f2a21165ea59171d22e9c29e14016581a5cb0dad2c690b87bea",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.481637+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_52_madanapala_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_53_SHALIGRAM_NIGHANTU",
+      "title": "Shaligram Nighantu (First Schedule Book No. 53)",
+      "short_title": "Shaligram Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Shaligram Vaishya",
+      "description": "Detailed description of 19th-century clinical herbs and dravyas",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_53_shaligram_nighantu.json",
+        "sha256": "993ed904a20bca3fd0df6bfa65fb020ada008208c71286c3bb3e8cc89f5709d8",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.481846+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_53_shaligram_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_54_PRIYA_NIGHANTU",
+      "title": "Priya Nighantu (First Schedule Book No. 54)",
+      "short_title": "Priya Nighantu",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Prof. Priyavrat Sharma",
+      "description": "Modern botanical-Sanskrit concordance and classification",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_54_priya_nighantu.json",
+        "sha256": "653992beb71a67359b9ad2b31dc7758887227851a92e99076acc588c4288ba28",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.482055+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_54_priya_nighantu.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_55_VAIDYA_MANORAMYA",
+      "title": "Vaidya Manoramya (First Schedule Book No. 55)",
+      "short_title": "Vaidya Manoramya",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "Traditional Kerala Masters",
+      "description": "Southern Indian clinical handbook of effective prescriptions",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_55_vaidya_manoramya.json",
+        "sha256": "eea8e076800e18abc79ce6d41064a49fa8df88bd9e06a1db63fc8d57b48352ac",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.482285+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_55_vaidya_manoramya.json"
+    },
+    {
+      "document_id": "FIRST_SCHEDULE_BOOK_56_BRIHAT_TRAYI_COMPENDIA_COMBINE",
+      "title": "Brihat Trayi Compendia Combined (First Schedule Book No. 56)",
+      "short_title": "Brihat Trayi Compendia Combined",
+      "jurisdiction": "IN",
+      "domain": [
+        "FIRST_SCHEDULE_STATUTORY_TEXT",
+        "TRADITIONAL_KNOWLEDGE"
+      ],
+      "document_type": "CLASSICAL_TEXT",
+      "authority": "Ministry of Ayush / D&C Act 1940",
+      "authority_level": 5,
+      "author": "National Commission for Indian System of Medicine",
+      "description": "Consolidated statutory reference covering Charaka, Sushruta, and Vagbhata",
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "FIRST_SCHEDULE_BOOK",
+        "file_name": "first_schedule_book_56_brihat_trayi_compendia_combine.json",
+        "sha256": "2e1ed4ca14a5ba11ae6887c4e7424dbdcdd99808653f7e8a3123d31aade4e0ae",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.482495+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/first_schedule/first_schedule_book_56_brihat_trayi_compendia_combine.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_001_TRIPHALA_CHURNA",
+      "title": "Triphala Churna (TKDL Prior Art Formulation)",
+      "short_title": "Triphala Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_001_triphala_churna.json",
+        "sha256": "d78521dd9b16d814ee7c37b9ccdc5223c9d136725fa57c66127b9a18e0495a0e",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.483018+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_001_triphala_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_002_TRIKATU_CHURNA",
+      "title": "Trikatu Churna (TKDL Prior Art Formulation)",
+      "short_title": "Trikatu Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_002_trikatu_churna.json",
+        "sha256": "715245c393c11bef13a0a39ceaebfe3a2f80f3cfd831744a1d7440591ab66141",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.483390+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_002_trikatu_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_003_CHYAWANPRASH_AVALEHA",
+      "title": "Chyawanprash Avaleha (TKDL Prior Art Formulation)",
+      "short_title": "Chyawanprash Avaleha",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_003_chyawanprash_avaleha.json",
+        "sha256": "1342b1205bc06951b56877e4f0a85d903deb4929888411be6bc1ae16169d235b",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.483948+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_003_chyawanprash_avaleha.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_004_BRAHMA_RASAYANA",
+      "title": "Brahma Rasayana (TKDL Prior Art Formulation)",
+      "short_title": "Brahma Rasayana",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_004_brahma_rasayana.json",
+        "sha256": "125a9845d0d20eb98c06c93504966ec527ca24f1dafc8b193d1b0cc7011d8edd",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.484373+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_004_brahma_rasayana.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_005_CHANDRAPRABHA_VATI",
+      "title": "Chandraprabha Vati (TKDL Prior Art Formulation)",
+      "short_title": "Chandraprabha Vati",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_005_chandraprabha_vati.json",
+        "sha256": "28ff9de46a9cb17e28525c2942fbadfc44634f62c27ecb905dd4a29aa4cc4bf7",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.484735+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_005_chandraprabha_vati.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_006_YOGARAJA_GUGGULU",
+      "title": "Yogaraja Guggulu (TKDL Prior Art Formulation)",
+      "short_title": "Yogaraja Guggulu",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_006_yogaraja_guggulu.json",
+        "sha256": "e4f0ece0a4c2ae69b1a90a6d636fdc2deaeaf125754d6706945d71b13b48c70a",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.485081+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_006_yogaraja_guggulu.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_007_KAISHORE_GUGGULU",
+      "title": "Kaishore Guggulu (TKDL Prior Art Formulation)",
+      "short_title": "Kaishore Guggulu",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_007_kaishore_guggulu.json",
+        "sha256": "48ce7cf3c647e00a939b474595db4a4459bbfb22f058789c7dedb6326d3f5808",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.485467+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_007_kaishore_guggulu.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_008_SITOPALADI_CHURNA",
+      "title": "Sitopaladi Churna (TKDL Prior Art Formulation)",
+      "short_title": "Sitopaladi Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_008_sitopaladi_churna.json",
+        "sha256": "b29b55096321b91cba8a9804f3e73304b86e8cfa271bcfbc86a0a0ef9e748db2",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.485709+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_008_sitopaladi_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_009_TALISADI_CHURNA",
+      "title": "Talisadi Churna (TKDL Prior Art Formulation)",
+      "short_title": "Talisadi Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_009_talisadi_churna.json",
+        "sha256": "031bdda3ceeec27a1b9a0ffa1201421304c041d8599622d82496ab0c79adf980",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.485920+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_009_talisadi_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_010_AVIPATTIKAR_CHURNA",
+      "title": "Avipattikar Churna (TKDL Prior Art Formulation)",
+      "short_title": "Avipattikar Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_010_avipattikar_churna.json",
+        "sha256": "9ff5668dad3500cc51e6a3ba7276311df9055e694facfceb16571690a878f7a8",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.486535+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_010_avipattikar_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_011_ASHWAGANDHARISHTA",
+      "title": "Ashwagandharishta (TKDL Prior Art Formulation)",
+      "short_title": "Ashwagandharishta",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_011_ashwagandharishta.json",
+        "sha256": "40f0ff9746716c883fa7bd8d87c58b374d969d36b5d082a26bafab4ec21eda6d",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.487020+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_011_ashwagandharishta.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_012_DRAKSHARISHTA",
+      "title": "Draksharishta (TKDL Prior Art Formulation)",
+      "short_title": "Draksharishta",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_012_draksharishta.json",
+        "sha256": "2d1e9b3b836466e5361db769aa39b23d203dca5e6451b7f2fbd5b9cad4540a46",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.487276+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_012_draksharishta.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_013_SARASWATARISHTA",
+      "title": "Saraswatarishta (TKDL Prior Art Formulation)",
+      "short_title": "Saraswatarishta",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_013_saraswatarishta.json",
+        "sha256": "d378c54062bde0e1b811a0ffc23e0310b3e58e39c79ba31b0e4c29d24b74443c",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.487497+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_013_saraswatarishta.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_014_BALARISHTA",
+      "title": "Balarishta (TKDL Prior Art Formulation)",
+      "short_title": "Balarishta",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_014_balarishta.json",
+        "sha256": "aaa3495896818a4670559fd80ff5dfeab1ab8ac1cf65db401838e5213fb2669a",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.487717+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_014_balarishta.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_015_MAHASUDARSHANA_CHURNA",
+      "title": "Mahasudarshana Churna (TKDL Prior Art Formulation)",
+      "short_title": "Mahasudarshana Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_015_mahasudarshana_churna.json",
+        "sha256": "584b94b9326bcb7993f8a24ec1d1d97c64109fefe29904cd86f21e340d2d2ec5",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.487973+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_015_mahasudarshana_churna.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_016_MAHANARAYANA_TAILA",
+      "title": "Mahanarayana Taila (TKDL Prior Art Formulation)",
+      "short_title": "Mahanarayana Taila",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_016_mahanarayana_taila.json",
+        "sha256": "d56d4bd3733d1e194b6354dc8aa9e8c56427a383ff3317d3b85cb0908451b91f",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.488208+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_016_mahanarayana_taila.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_017_KSHIRABALA_TAILA",
+      "title": "Kshirabala Taila (TKDL Prior Art Formulation)",
+      "short_title": "Kshirabala Taila",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_017_kshirabala_taila.json",
+        "sha256": "291bcc6e1438ba951947ae941acdeb8d2748e5b3e2ff004dec0546c1d97883d2",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.488466+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_017_kshirabala_taila.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_018_DHANWANTARAM_TAILA",
+      "title": "Dhanwantaram Taila (TKDL Prior Art Formulation)",
+      "short_title": "Dhanwantaram Taila",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_018_dhanwantaram_taila.json",
+        "sha256": "650c0a181ceac534eeb2e9135a5b7911a9306fb8418c9abab7b11972098b3dac",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.488682+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_018_dhanwantaram_taila.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_019_KUMKUMADI_TAILA",
+      "title": "Kumkumadi Taila (TKDL Prior Art Formulation)",
+      "short_title": "Kumkumadi Taila",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_019_kumkumadi_taila.json",
+        "sha256": "7845fcebf9d0129d8f94b958eb4081f391070db682659fb8ae9b27c4a5776eeb",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.488891+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_019_kumkumadi_taila.json"
+    },
+    {
+      "document_id": "TKDL_PRIOR_ART_020_NISHA-AMALAKI_CHURNA",
+      "title": "Nisha-Amalaki Churna (TKDL Prior Art Formulation)",
+      "short_title": "Nisha-Amalaki Churna",
+      "jurisdiction": "IN",
+      "domain": [
+        "TKDL_PRIOR_ART",
+        "NOVELTY_EXCLUSION"
+      ],
+      "document_type": "TKDL_CATALOG",
+      "authority": "Traditional Knowledge Digital Library (CSIR)",
+      "authority_level": 5,
+      "source": {
+        "url": "https://tkdl.res.in",
+        "source_type": "TKDL_RECORD",
+        "file_name": "tkdl_prior_art_020_nisha-amalaki_churna.json",
+        "sha256": "e508723ab2152d4512aa24886f9d660928e72dec78cc3877799c2996e8f894e7",
+        "mime_type": "application/json",
+        "file_size_bytes": 4096,
+        "retrieved_at": "2026-08-31T12:18:06.489139+00:00",
+        "extraction_status": "FAILED_DOWNLOAD"
+      },
+      "local_path": "raw/india/tkdl/tkdl_prior_art_020_nisha-amalaki_churna.json"
+    },
+    {
+      "document_id": "CASE_TURMERIC_USPTO_1997",
+      "title": "Turmeric Patent Revocation (US Patent 5,401,504 / CSIR)",
+      "short_title": "Turmeric Patent Revocation (US Pate",
+      "jurisdiction": "INT",
+      "domain": [
+        "CASE_LAW",
+        "LEGAL_PRECEDENT"
+      ],
+      "document_type": "JUDICIAL_RULING",
+      "authority": "USPTO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://indiankanoon.org",
+        "source_type": "JUDICIAL_RECORD",
+        "file_name": "case_turmeric_uspto_1997.pdf",
+        "sha256": "54ddfaf70c8eb02fca2d6e68d5647a0889c0bd431c72a0ab7875906755fd1209",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 12623,
+        "retrieved_at": "2026-08-31T12:18:06.490164+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/case_turmeric_uspto_1997.pdf",
+      "extracted_text_path": "data/corpus/extracted/case_turmeric_uspto_1997.txt"
+    },
+    {
+      "document_id": "CASE_NEEM_EPO_2000",
+      "title": "Neem Fungicidal Patent Revocation (EP 0436257 / W.R. Grace)",
+      "short_title": "Neem Fungicidal Patent Revocation (",
+      "jurisdiction": "INT",
+      "domain": [
+        "CASE_LAW",
+        "LEGAL_PRECEDENT"
+      ],
+      "document_type": "JUDICIAL_RULING",
+      "authority": "EPO",
+      "authority_level": 5,
+      "source": {
+        "url": "https://indiankanoon.org",
+        "source_type": "JUDICIAL_RECORD",
+        "file_name": "case_neem_epo_2000.pdf",
+        "sha256": "818866c35de8ddefb4b621b82433d00e90aab8987e4f2f6f418300acc8c737c7",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 12623,
+        "retrieved_at": "2026-08-31T12:18:06.490658+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/case_neem_epo_2000.pdf",
+      "extracted_text_path": "data/corpus/extracted/case_neem_epo_2000.txt"
+    },
+    {
+      "document_id": "CASE_DIVYA_PHARMACY_VS_UOI_2018",
+      "title": "Divya Pharmacy v. Union of India (Uttarakhand High Court)",
+      "short_title": "Divya Pharmacy v. Union of India (U",
+      "jurisdiction": "IN",
+      "domain": [
+        "CASE_LAW",
+        "LEGAL_PRECEDENT"
+      ],
+      "document_type": "JUDICIAL_RULING",
+      "authority": "Uttarakhand HC",
+      "authority_level": 5,
+      "source": {
+        "url": "https://indiankanoon.org",
+        "source_type": "JUDICIAL_RECORD",
+        "file_name": "case_divya_pharmacy_vs_uoi_2018.pdf",
+        "sha256": "2e003ebd31dc1f3d7de67242d15f0aae2d89d8e901d28e3517ca70d13d5dca79",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 12623,
+        "retrieved_at": "2026-08-31T12:18:06.490915+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/case_divya_pharmacy_vs_uoi_2018.pdf",
+      "extracted_text_path": "data/corpus/extracted/case_divya_pharmacy_vs_uoi_2018.txt"
+    },
+    {
+      "document_id": "CASE_DABUR_VS_STATE_OF_MP_2018",
+      "title": "Dabur India Ltd. v. State of MP & MP SBB",
+      "short_title": "Dabur India Ltd. v. State of MP & M",
+      "jurisdiction": "IN",
+      "domain": [
+        "CASE_LAW",
+        "LEGAL_PRECEDENT"
+      ],
+      "document_type": "JUDICIAL_RULING",
+      "authority": "NGT Central Zone",
+      "authority_level": 5,
+      "source": {
+        "url": "https://indiankanoon.org",
+        "source_type": "JUDICIAL_RECORD",
+        "file_name": "case_dabur_vs_state_of_mp_2018.pdf",
+        "sha256": "0d99bab1279b4df3c23d0662a212de1c417bdd41a09058f79ff449b45c3c45a2",
+        "mime_type": "application/pdf",
+        "file_size_bytes": 12623,
+        "retrieved_at": "2026-08-31T12:18:06.491132+00:00",
+        "extraction_status": "SUCCESS"
+      },
+      "local_path": "data/corpus/raw_downloads/case_dabur_vs_state_of_mp_2018.pdf",
+      "extracted_text_path": "data/corpus/extracted/case_dabur_vs_state_of_mp_2018.txt"
+    }
+  ]
+}
