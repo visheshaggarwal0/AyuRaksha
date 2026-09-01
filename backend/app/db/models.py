@@ -64,7 +64,7 @@ class DocumentChunk(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     section_id = Column(UUID(as_uuid=True), ForeignKey("source_sections.id", ondelete="CASCADE"), nullable=False)
     text = Column(Text, nullable=False)
-    embedding = Column(Vector(1536), nullable=True) # OpenAI / pgvector 1536-dim
+    embedding = Column(Vector(384), nullable=True) # sentence-transformers 384-dim
     token_count = Column(Integer, nullable=True)
     language = Column(String(10), default="en")
     jurisdiction = Column(String(10), default="IN")

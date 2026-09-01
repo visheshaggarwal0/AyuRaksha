@@ -161,23 +161,27 @@ export function App() {
   ];
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 font-sans overflow-hidden">
-      {/* Outer Shell: Double-Bezel Design */}
-      <div className="w-full h-full max-w-[1800px] flex overflow-hidden rounded-[2.5rem] bg-white/40 border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-3xl relative">
-        
+    <div className="flex h-screen bg-[#F9F9F9] text-zinc-900 overflow-hidden font-sans">
+      
+      {/* Dynamic Background Effects (Removed for Eve minimalism, kept very subtle) */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-white" />
+
+      {/* Z-10 Context for layout */}
+      <div className="relative z-10 flex w-full h-full">
+
         {/* ========================================================= */}
-        {/* 1. LEFT SIDEBAR (Floating Island)                         */}
+        {/* 1. COLLAPSIBLE MINIMAL SIDEBAR                            */}
         {/* ========================================================= */}
         <AnimatePresence>
           {sidebarOpen && (
             <motion.aside
-              initial={{ width: 0, opacity: 0, x: -50 }}
-              animate={{ width: 300, opacity: 1, x: 0 }}
-              exit={{ width: 0, opacity: 0, x: -50 }}
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 260, opacity: 1 }}
+              exit={{ width: 0, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="flex flex-col justify-between shrink-0 select-none overflow-hidden bg-transparent z-30"
+              className="flex flex-col justify-between shrink-0 select-none overflow-hidden bg-[#F9F9F9] border-r border-zinc-200/60 z-30"
             >
-              <div className="w-[300px] h-full flex flex-col justify-between p-4 pb-4">
+              <div className="w-[260px] h-full flex flex-col justify-between p-3">
                 {/* Top Section */}
                 <div className="space-y-6">
                   {/* Brand Header */}
@@ -425,28 +429,33 @@ export function App() {
                     </motion.div>
                   )}
 
-                  {/* Message Bubbles */}
+                  {/* Message Rows */}
                   {messages.map((msg) => (
                     <motion.div
-                      initial={{ opacity: 0, y: 16, filter: 'blur(4px)' }}
-                      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                       key={msg.id}
-                      className={`max-w-4xl mx-auto flex space-x-4 sm:space-x-6 ${
-                        msg.sender === 'user' ? 'justify-end' : 'justify-start'
-                      }`}
+                      className="max-w-4xl mx-auto flex space-x-4 sm:space-x-6 w-full"
                     >
-                      {msg.sender === 'assistant' && (
-                        <div className="w-10 h-10 rounded-[14px] bg-white text-ayush-forest flex items-center justify-center shrink-0 shadow-subtle border border-slate-100 mt-1">
-                          <Bot className="w-5 h-5" />
-                        </div>
-                      )}
+                      {/* Avatar */}
+                      <div className="shrink-0 pt-1">
+                        {msg.sender === 'assistant' ? (
+                          <div className="w-8 h-8 rounded bg-ayush-forest/10 text-ayush-forest flex items-center justify-center">
+                            <Shield className="w-4 h-4" />
+                          </div>
+                        ) : (
+                          <div className="w-8 h-8 rounded bg-zinc-100 border border-zinc-200 text-zinc-500 flex items-center justify-center">
+                            <User className="w-4 h-4" />
+                          </div>
+                        )}
+                      </div>
 
                       <div
-                        className={`space-y-4 ${
+                        className={`flex-1 space-y-4 ${
                           msg.sender === 'user'
-                            ? 'bg-ayush-forest text-white px-6 py-4 rounded-[2rem] rounded-tr-[4px] max-w-[85%] sm:max-w-2xl text-sm font-medium shadow-[0_8px_30px_rgba(20,83,45,0.15)] leading-relaxed'
-                            : 'bg-white border border-slate-100 p-6 sm:p-8 rounded-[2rem] rounded-tl-[4px] w-full shadow-[0_4px_24px_-4px_rgba(0,0,0,0.02)] text-sm text-slate-800 space-y-5 leading-relaxed'
+                            ? 'text-zinc-800 text-[15px] font-medium leading-relaxed pt-1.5'
+                            : 'text-zinc-700 text-[15px] leading-relaxed pt-1.5'
                         }`}
                       >
                         {/* Message Body */}
@@ -507,12 +516,6 @@ export function App() {
                           </div>
                         )}
                       </div>
-
-                      {msg.sender === 'user' && (
-                        <div className="w-10 h-10 rounded-[14px] bg-white border border-slate-100 text-slate-400 flex items-center justify-center shrink-0 shadow-subtle mt-1">
-                          <User className="w-5 h-5" />
-                        </div>
-                      )}
                     </motion.div>
                   ))}
 
@@ -538,9 +541,9 @@ export function App() {
                 </div>
 
                 {/* Bottom Input Area */}
-                <div className="p-4 sm:p-8 bg-gradient-to-t from-[#FAFAFA] via-[#FAFAFA] to-transparent shrink-0">
-                  <div className="max-w-4xl mx-auto relative">
-                    <div className="relative flex flex-col bg-white border border-slate-200 focus-within:border-slate-300 focus-within:ring-4 focus-within:ring-slate-100 rounded-[1.75rem] shadow-card transition-all p-3 pl-5">
+                <div className="p-4 sm:p-6 bg-gradient-to-t from-[#F9F9F9] via-[#F9F9F9] to-transparent shrink-0">
+                  <div className="max-w-3xl mx-auto relative">
+                    <div className="relative flex flex-col bg-white border border-zinc-200 focus-within:border-zinc-300 focus-within:shadow-sm rounded-2xl transition-all p-2 pl-4">
                       <textarea
                         ref={textareaRef}
                         rows={1}
@@ -552,23 +555,21 @@ export function App() {
                             handleSendMessage();
                           }
                         }}
-                        placeholder="Ask about Ayurvedic IP, Section 3(p), ABS, or FSSAI laws..."
-                        className="w-full bg-transparent resize-none focus:outline-none text-sm sm:text-base font-medium text-slate-800 placeholder-slate-400 py-3 pr-16 max-h-40"
+                        placeholder="Ask about Ayurvedic IP, Section 3(p), or ABS..."
+                        className="w-full bg-transparent resize-none focus:outline-none text-[15px] text-zinc-800 placeholder-zinc-400 py-2.5 pr-12 max-h-40 leading-relaxed"
                       />
                       
-                      <div className="absolute right-3 bottom-3 flex items-center space-x-2">
-                        <span className="text-[10px] font-bold px-3 py-1.5 rounded-xl bg-slate-50 text-slate-500 border border-slate-100 hidden sm:inline">
-                          {jurisdiction === 'IN' ? '🇮🇳 India Law' : '🌎 International'}
+                      <div className="absolute right-2 bottom-2 flex items-center space-x-2">
+                        <span className="text-[10px] font-bold px-2 py-1 rounded bg-zinc-100 text-zinc-500 hidden sm:inline">
+                          {jurisdiction === 'IN' ? 'IN' : 'INT'}
                         </span>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.92 }}
+                        <button
                           onClick={() => handleSendMessage()}
                           disabled={loading || !inputQuery.trim()}
-                          className="w-10 h-10 rounded-[14px] bg-ayush-navy text-white flex items-center justify-center disabled:opacity-30 transition-colors shadow-subtle"
+                          className="w-8 h-8 rounded-lg bg-zinc-900 text-white flex items-center justify-center disabled:opacity-20 hover:bg-zinc-800 transition-colors"
                         >
-                          <Send className="w-4 h-4 ml-0.5" />
-                        </motion.button>
+                          <Send className="w-3.5 h-3.5 ml-0.5" />
+                        </button>
                       </div>
                     </div>
 

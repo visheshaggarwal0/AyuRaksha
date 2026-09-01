@@ -1,0 +1,190 @@
+“The examinations being cared out onthe folowing application documents
+
+Description, Pages
+199 5 ofall ed
+
+aims, Numbers
+var ‘od wit entry int the regional phase beore the EPO
+
+ited documents.
+D1 US2002/054918 At (MURAD) 9 May 2002
+
+D2 US2004/081672 A1 (GUPTA) 29 Apri 2004
+D3 US$ 843.998 A (SONG ET AL) 1 December 1998
+
+D4 US2004/080482 At (GUPTA) 13 May 2004
+
+DS WO 85/03779 At (UNILEVER) 9 February 1995,
+
+D6 US2001/019722 At (FOTINOS ET AL) 6 September 2001
+
+07 CA2.386 648 At (FYTOKEM PRODUCTS) 16 November 2003,
+
+1 Modifications (Article 123(2) EPC).
+
+1.1, Anew set of claims has been fied upon entry into the European phase. A
+basis has been found for the subject matter of all claims except for that of
+present claim 6 where no basis has been found for the fact that the
+cetyinydroxyproline palmitate component can be present in a quantity of at
+least 0.02 weight %
+
+1.2. This objection aside, the rest of the claims meet the requirements of Article
+123(2) EPC.
+
+2 Medical uses and contlict with Article 63(c) EPC.
+
+
+
+Fy
+
+07.06.2016 Bm 2 opener: 10 735: 074.6
+
+2a
+
+22
+
+3a
+
+32
+
+33
+
+34
+
+‘As mentioned in the PCT phase, the subject matte ofthe present claims 22 to
+27 contravenes Anicle 53(c) EPC. The subject matter of these claims
+Concerns a method of treatment ofthe human body by therapy (a treatment of
+acne), which is excluded trom patentabilty by virtue of Article 59(c) EPC. The
+use of the expression non-therapeutic or cosmetic is insufficient to render a
+‘method of the treatment of acne allowable since the therapeutic indication is,
+considered to be inseparable from the cosmetic one. Therefore, the claimed
+‘method inevitably encompasses a therapeutic effect irespective of the
+wording ofthe claim, and the method as a whole falls under the provisions of
+Arlicle 89(c) EPC (please see T 820/92 and T 82/99),
+
+It is recommended to either delete these claims or to formulate them in a
+‘manner according to Article 54(4) & (5) EPC (please see the Guidelines for
+examination at the EPO, Gull, 4.2). This wording should encompass the
+composition as claimed for use in the treatment of acne.
+
+Novelty (Article 54 EPC).
+
+Novelty objections were raised in the PCT phase (please refer to the WO
+ISA). These objections are stil valid forthe present set of claims, particularly
+the subjact matter of present claim 1.
+
+‘The subject matter of the present ciaim 1 concems a skin care composition
+comprising salleylic acid or a salt thereof in combination with at least two
+actives selected from: lactic acid (or a salt thereof}; glycyrthinic acid (or a
+salt or derivative thereo!); bisabolol; cetylhydroxyproline palmitamige;
+allantoin; nlacinamide; and epilobium angustifolum extract.
+
+‘Compositions falling within the scope of this claim are already known in the
+por art.
+
+D1 (US 2002/0084918) aiscloses in example 2 a composition comprising
+salicylic acid in combination with an epilobium angustifolum (Canadian
+willowherb) extract and aipotassium glycythizate.
+
+
+
+07.06.2016 Sot 3 meommonte: 10735 074.6
+Fase Sram
+
+38
+
+38
+
+37
+
+38
+
+39
+
+3.10
+
+D2 (US 2004/0081672) discloses an acne treatment gel composition
+comprising niacinamide, lactic acid and salicylic acid in combination (see
+‘example 10, paragraph 60). This example also falls within the scope of the
+present composition claims.
+
+D3 (US 564999) discloses a composition comprising salioylic acid in
+‘combination with lactic acid and allantoin forthe treatment of skin blemishes
+(see claims 1, 2, 16 and 17; with respective quantities provided in column 3,
+lines 22 to 48), The compositions according to this disciosure are intended for
+the treatment of acne vulgaris (see opening paragraphs). The composition
+‘column
+
+D4 (US 2004/0092482) discloses a gel composition for the treatment of acne
+in example 7 which comprises niacinamide, lactic acid and salicylic acid in
+‘combination, thus faling within the scope of the subject matter of the present
+claims for the composition ofthe present application
+
+D5 (WO 95/0378) discloses skin care compositions comprising salleyle acid
+ination with diammonium glycynthizinate and bisabolol (see all
+
+‘The application of such a composition by way of a fibrous article (present
+claim 21) has not been explicitly disclosed in the above cited documents D1 to
+D5. However, the application of a skin loon by means of an impregnated
+Wipe is well known in the cosmetic area. Furthermore, the simple application
+of the known lations of documents D1 to DS to a fibrous tissue followed by
+application to the skin is a common technique for delivering skin care
+preparations. Fibrous patches (which comprise cellulose) are already known
+from D6 (US2001/019722) forthe delivery ofan anti-acne composition similar
+to that ofthe present application (see D6, paragraphs 22 to 24 and 38 as well
+a the claims) to the skin,
+
+‘The subject mattor ofthe present claims 22 to 27 Is likewise not novel since all
+ofthe above mentioned examples in documents D1 to OS are intended for the
+treatment of acne.
+
+
+
+07.06.2016 mm 4 feneainte: 10 735 074.6
+
+3.11 As such, the subject matter of the present claims lacks novelty and does not
+‘meet the requirements of Article 54 EPC.
+
+4 Inventive stop (Article 56 EPC).
+
+4.1 While inventive step will not be discussed in depth until a novel and allowable
+set of claims has been agreed upon, a few points are lid out here to aid the
+‘applicant inthe drafting ofthe case.
+
+4.2. The present application concerns treatments for acne. The technical problem
+that the present application aims to solve isto improve the efficacy of topical
+‘acne treatments.
+
+4.3. Thisis achieved by combining salicylic acid, which is known to be effective in
+the treatment of acne, wit atleast two further components, also known to be
+‘effective in the treatment of acne. In this respect, what appears to be
+happening is @ mere accumulation of anti-acne activity in that a plurality of
+agents are used in combination to solve the problem.
+
+44 Given that all of these agents are already known for their anti-acne properties,
+‘2 composition comprising @ combination of them (if novel) is likely to lack
+Jnventve step, particularly in the absence of any surprising or unexpected
+‘advantage, of a synergistic eect.
+
+45 Furthermore, the composition of the present claim 1 comprises salicylic acid
+plus 2 actives from the list provided in claim 1, however, in the in-vitro tests
+‘provided in the example 11 (page 32) binary compositions appear to be more
+effective than those comprising salicylic acid with two further components.
+
+5 Clarity (Article 64 EPC).
+
+5.1 The combination of the defintion of the respective quantities of the individual
+‘components renders the subject matter of these claims unclear. Taking
+present caim 2, for example, only one of the components salicylic or lactic
+‘acid need be present in a quantily of at least 0.01 weight %. The second
+‘component, if present, can be present at 99.99 weight %,
+
+
+
+nm ow mate
+Bee” 07.06.2016 me 8 sede es 10 735 074.6
+5.2 Its not clear whether the composition according to present claim 1 comprises
+
+the salicylic acid plus at feast two of the actives listed, or whether it comprises
+only 2 ofthe actives selected (and not more)
+

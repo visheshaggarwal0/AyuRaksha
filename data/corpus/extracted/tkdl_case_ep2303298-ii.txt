@@ -1,0 +1,335 @@
+oe seman:
+ae ‘eseaton te: 09 768
+Fes Demande ==
+
+“ho exareation 6 berg carried eu on the folowing application documents,
+
+Description, Pages
+1.2424 as published
+
+3,38 fed in electron form on 24-10-2012
+Claims, Numbers
+
+1a filed in electronic orm on 24-10-2012
+Drawings, Sheets,
+
+113913,519, as published
+
+73.1303
+
+413,613 fe in electron form on 24-10-2012
+
+The following document is cited by the Examiner. A copy of the document is annexed
+to the communication and the numbering will be adhered to in the rest of the
+procedu
+D1t__ JAIN AND SUMITA SRIVASTAVA S K: “Traditional uses of some Incian
+plants among islanders of the Indian Ocean”,
+INDIAN JOURNAL OF TRADITIONAL KNOWLEDGE, RESOURCES,
+NEW DELHI, NEW DELHI INDIA,
+vol. 4, no. 4, 1 October 2005 (2005-10-01), pages 345-357,
+xP018021348,
+ISSN: 0972-5998,
+
+The present communication contains remarks undor the following sections:
+
+‘Amendments (Art. 123(2) EPC)
+
+Clarity (Art. 64 EPC) and sufficiency of disclosure (Art. 83 EPC)
+Unpatentable Matter (Art. 53(c) EPC)
+
+5 _Novelty (Art. 54(1) and (2) EPC)
+
+hoo
+
+
+
+ist some
+Set 2 ropes Ne 09 769° 808
+roam omanae
+
+Dae 13.
+
+6 Inventive Step (Art. 56 EPC)
+7 Formal Aspects
+8 Conclusion
+
+Amendments (Art. 123(2) EPC)
+
+The following ig.nat to be construed to give consent in the meaning of Rule 137(3)
+EPC to any future submitted amendments. It does apply to any already submitted
+amendment and future amendment.
+
+Under Rule 137(4) EPC, the applicant, when filing a sal of claims, has to provide a
+complete basis of the claims in the application as filed (where an attempt to comply
+with this Rule has been made, this is highly appreciated).
+
+Referring o claims sets that are not as filed does not comply with Rule 137(4) EPC
+or Art 123(2) EPC.
+
+‘A basis has to be indicated for each and every claim. The applicant should nate that
+9 adding multiple dependencies to claims of single dependency (US-style claims) is
+‘ot allowed unless there is a basis in the description as well.
+
+Further, the content of two or more independent claims cannot freely be combined
+since each independent claim represents a separate embodiment.
+
+‘Aso, when doteting non-optional features from an independent claim then a basis has
+tobe indicated elsewhere in the description showing that this feature was not
+essential, and/or that the embodiment without that feature also was encompassed by
+the original disclosure.
+
+‘The representative Is also kindly requested to indicate which single
+‘embodiment of the application as originally tiled supports each resulting
+‘combination of features of the claimed subject-matter. This includes as well a
+justification forthe omission of features of the embodiments.
+
+‘Without above information, the amendments are likely to be considered as not directly
+
+‘and unambiguously derivable from the application as originally filed and therefore as
+representing added subject-matter (Article 123(2) EPC).
+
+
+
+aun tee omecee
+bee” 13.01.2014 Shee 3 fomemsane 09 169 808.8
+Dae rome omande
+
+Any other indication in the present communication suggesting amendments to the
+applicant or relerring to a “new set of claims” cannot be construed to give consent in
+the meaning of Rule 137(3) EPC to any future submitted amendments.
+
+The entire amendments of fig. 4 and 6 violate Art. 123(2) EPC. No basis has been
+indicated other than thatthe values ofthe “arbitrary units" could be derived from the
+figures, which they cannot, particularly not withthe precision of three digits, Original
+fig. 4 and 6 have to be re-instated.
+
+‘The applicant has cited p3L28-32, pal.24-31 and p14L12-17 as a basis for the
+amendment of "respiratory disorders” of original ciaim 1 to “inflammatory respiratory
+disorders”. None of the passages recites the term “inflammatory respiratory disorders.
+3128-82 and p4L.24-31 disclose the treatment of “asthma and other inflammatory
+<iseasos" of “inflammation and asthm
+1412-27 discloses that composition 1 “reduced airway inflammation’, albeit in an in
+vivo asthma model.
+
+There is no basis for the term of “inflammatory respiratory diseases", which violates
+‘Ast. 123(2) EPC, Tho term has to be reverted to “respiratory disorders" selected from
+asthma, allorgi rhinitis, hay fever, typo-1 hypersensitivity and mild allergies as non-
+‘optional features - otherwise the Art. 83 EPC objection raised in the ESOP would
+apply again
+
+The applicant did not cite any basis for the term “fut ethanol extracts derived from
+‘Aegle marmelos" of claim 1, and the Examining Division could not find any, either.
+Example 1 provides a basis for the term “(Aegle marmelos) Bae! fruit ethanol extract”,
+while the term employed in claim 1 encompasses an extraction process followed by a
+further purification ("derived"), which violates Art. 123(2) EPC. Algo, the term is
+unclear (Art. 84 EPC) since the word “Irult”is no longer unambiguously associated
+with the term (Aggie marmelos) Bae! and rather indicatos that the ethanol employed
+stoms from fruit fermentation. The original wording of the application should be used
+‘Any amendment isthe sole responsibilty of the applicant.
+Examination is based on a hypothetical claim 1 limited to Aegle marmelos Bae! frit
+‘ethanol extract.
+
+Formal aspects
+
+
+
+mum ox sore te
+Dae” 13.01.2014 an ropmearon te: 09 769 808.8
+oe Fee omens
+
+In order to facilitate the examination of the conformity of the amended application with
+the requirements of Article 123(2) EPC, the applicant should clearly identiy the
+amendments made, irrespective of whether they concern amendments by addition,
+replacement or deletion, and indicate the passages of the application as fled (not of
+amended documents) on which these amendments are based (see Guidelines H-lI,
+2.2). Preferably, a copy showing all amendments accompanied by a clean typed copy
+should be submitted.
+
+‘2.Clarity (Art. 84 EPC) and sufficiency of disclosure (Art. 83 EPC)
+
+Al objections raised in the Extended Search Opinion (ESOP) under Art. 83 and 84
+EPC are herewith maintained
+
+‘The arguments and amendments submitted by the applicant on 24-10-2012 have
+been carefully considered, yet are not convincing since they fail to address the
+‘objections fully. Its noted that some if not the majority of objections raised previously
+have not been properly addressed.
+
+‘mn particular, the following objections are maintained under Art. 83 andlor 84 EPC
+(compare section ill of the ESOP):
+
+1) Lack of synergy
+
+‘The applicant failed to entirely address the point of the missing concentrations. Itis
+‘common erroneous practice in patent applications to test substance A at eg Sma/mL.
+land substance B at eg 5 mg/mL and compare it to the combination of substances A
+‘and B at Smg/mL each, ie twice the amount of substance, and interpret any increased
+‘elect of the combination as synergy, while the combination is bound to have an
+additive effect at 10mg/mL. total substance. In the present application, since no
+‘concentrations are given, such an error cannot be excluded. At any rate, itis
+impossible to add the concentrations to the application since this would violate Art.
+123(2) EPC.
+
+The applicant has added arbitrary units to fig. 4 and 6, which violate Art. 123(2) EPC
+(see above), and not even overcome the objection as to lack of synergy since an
+additive effect cannot be excluded, no error bars are provided and the effects are
+rather insignificant (compare ESOP)
+
+2) Protection, control
+3) Functionally defined diseases - claims 12-14
+
+4) Adaptogens, bio-protectants, bioavailability enhancers,
+5) Inconciseness
+
+
+
+xm oo
+Sm" 13.01.2014 ome 5 Reman 09 769 808.8
+= room oom
+
+6) Percentages
+7) Unclear dosage
+
+Topical conditions and wrinkles
+
+Further, the disclosure regarding the treatment of any “topical condition” (compare
+claim 1) is insufficiently disclosed (Art. 83 EPC) since “topical condition” eg includes
+skin cancer, kaposi sarcoma, etc, which are not necessarily amenable to an anti-
+inflammatory treatment. Also, wrinkles are not considered to invalve inflammation,
+which means that their treatment is insufficiently disclosed (Art. 88 EPC). Further,
+wrinkles are not considered a disease, which renders claim 1 unclear in that itis
+worded in the format required under Art. 54(5) EPC for medical uses yet refers to @
+‘non medical cosmetic use.
+
+‘Adaptation of the description
+The description has to be brought into conformity with the scope pf the claims (Art. 84
+EPC). Care should be taken during revision, especially ofthe ir portion and
+of any statements of problem or advantage, not to add subject: which extends:
+
+beyond the content of the application as originally filed (Article 123(2) EPC),
+
+‘Amendments should be made by fling replacement pages. U recasting of
+the description should be avoided. An amended abstract is not required. The applicant
+should also take account of the requirements of Rule 50(1) EPC. Mf handwritten
+amendments are submitted, they should be clearly legible to the printer. Preferably, @
+‘copy showing all amendments accompanied by a clean typed capy shoud be
+submitted
+
+4.Unpatentable Matter (Art, 53(c) EPC)
+
+References to methods for treatment in the description should be deleted (Art. 53(c)
+EPC),
+
+Claims 12-14 relate to methods for treatment of the human or animal body, which
+violate Art. §3(c) EPC. They would have to be reformulated into the so-called Swiss
+type claim
+
+
+
+mn ear somete
+Bae” 13.01.2014 Sree 6 Aepicatone: 09 769 808.8
+
+‘SNovelty (Art, 54(1) and (2) EPC)
+
+1 - US2006040000 - ISR.
+
+1 concems an extract from Boswellia serrata that contains 30% AKBA and is
+<istributed under the trademark 5-Loxin(R), AKBA inhiits S-ipoxygenase, iis used to
+cure and contol inflammatory diseases (claim 1)
+
+{§4:5-Lipoxygenase isthe target enzyme for identiying inhibitors, which have potential
+to cope with a variety of inflammations and hypersensitivity-based human diseases
+inckusing asthma, arthritis, bowel diseases such as ulcerative colts and circulatory
+disorders such as shock and ischaemia.
+
+D4 - Arul et al., 2004 - ISR
+
+4 deals with Aegle marmelos leaf ethanol extracts which are used for the treatment
+of asthma.
+
+07-Basch et
+
+07 discloses the use of Boswellia serrata extracts in asthma. The lipid-lowering effect
+is described as well.
+
+‘The standardised boswellia products Sallaki(R) and H15(R) contain 1.4% acetyi-11-
+keto-beta-boswollic acid.
+
+‘The standardised boswellia product S-compoundiA) contains 0.7% acetyi-11-keto-
+beta-boswellic acid. The latter was used in the oral treatment of asthma,
+
+‘The limitation of claim 1 to Aegle marmelos bael fruit ethanol extracts made it
+necessary to search for further art
+
+D1 - XPO18021348 - Jain et al., 2005
+‘According to table 1, entry 2 on p345, the fruit of Aegle marmolos is traditionally used
+‘among istanders of the Indian Ocean in the treatment of asthma. Also, on p352, itis
+
+Gisciosed that Aegle marmetos fruit pulp yields a refreshing drink, which is used for
+asthma,
+
+‘inventive Stop (Art. 56 EPC)
+
+
+
+regeaenve: 09 769 808.8
+
+Bae” 13.02.2014
+Doe Conanae 0"
+
+‘Since the arguments provided by the applicant regarding synergy are not accepted,
+compare section 3 above, synergy is not retained for the analysis of inventive step.
+‘The claims have been limited to a fruit ethanol extract of Aegle marmelos,
+"Nevertheless, the objection raised in the ESOP regarding the insignificance of the in
+vivo data of fig. 8 and 9 is maintained and the combination of the two extracts lacks
+therapeutic activity (compare ESOP section Vi).
+
+‘The juxtaposition of AKBA-rich Boswelia serrata extract with an Aegle marmelos bael
+fruit ethanol extract of Aegle marmetos can be analysed in partial echnical problems,
+Closest prior art for the partial technical problem involving AKBA-rich Boswellia
+serrata extract is D1, disclosing a 30%AKBA rich Boswellia serrata extract which can
+be used to treat asthma. No difference exists over the AKBA-rich extract component
+of claim 1. This partical technical problem is obvious over D1.
+
+Closest prior art for the partial technical problem involving the Aegle marmelos bael
+fruit ethanol extract is D11, disclosing that Aegle marmelos fruit pulp can be used for
+the treatment of asthma, from which this component of claim 1 differs in that an
+ethanol extract of the fruit is used. An extract generally is concentrated in active
+ingredients. The partial technical problem was thus the provision of a concentrated
+Composition forthe treatment of asthma,
+
+Ethanol extraction techniques are common genera knowledge when doaling with
+plant material, The skilled person, starting rom the Bael fruit pulp of 011, would have
+‘searched the art for providing concentrated compositions and would have come
+across D4 disclosing the use of an ethanol extract of Aeglo marmolos leaves in the
+treatment of asthma, He would have immediately understood that the aim of the
+ethanol extraction was to concentrate active ingredients. From 011 the skilled person
+would have learnt that the active ingredients present in Aegle marmolos leaves could
+be extracted using ethanol, and would have understood that the same technique could
+bbe applied to the fruit with a reasonable expectation of success, given that often
+several parts of Aegle marmeios can be used for the same disease - compare the
+traditional use of Aagle marmelos leaves, fruit, root, bark, wood against fever as
+<isclosed in D11, which means that similar plant metabolites can be found in the
+Giferent tissues,
+
+In consequence, the second partial technical problem lacks inventive step over the
+‘combination of D11 with D4.
+
+Since both partial technical problems lack inventive step, the juxtaposition of claim 1
+lacks inventive step.
+
+‘Z£ormal Aspects
+
+
+
+ame owe semen
+
+Dae” 13.01.2014 See 8 sepreamnte 09 769 808.8
+01, D4, and 11
+
+‘Conclusion
+
+‘Atleast some of the objections raised above are such that there appears to be no
+possibilty of overcoming them by amendment. Refusal of the application under Article
+'97(2) EPC is therefore to be expected.
+

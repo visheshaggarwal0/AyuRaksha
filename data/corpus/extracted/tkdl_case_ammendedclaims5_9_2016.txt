@@ -1,0 +1,281 @@
+CLAIMS
+
+1. Wheat grain (Triticum aestivum) comprising an embryo, an endosperm, starch
+and and a reduced level or activity of total starch branching enzyme II (SBEU)
+protein, wherein the embryo comprises a loss of function mutation in each of S
+to 12 alleles of endogenous SBEI genes selected from the group consisting of
+SBElla-A, SBEHa-B, SBEMa-D, SBEIb-A, SBENb-B and SBEMb-D, such that
+the evel or activity of total SBEHI protein inthe grain is between 2% and 30% of
+
+the level or activity of total SBEM protein in a wild-type wheat grain, said 5 10
+
+12 alleles including 4, $ or 6 SBEHIa alleles each comprising a loss of function
+mutation, wherein when the number of SBEtIa alleles comprising « loss of
+function mutation is only 4 then the number of SBEUb alleles compeising a loss
+of function mutation is 6, and wherein the grain comprises an amylose content of
+atleast $0% (ww) as « proportion ofthe total starch ofthe grain
+
+2, The wheat grain of elaim 1, wherein
+8) the embryo of the grain is homozygous for alleles in each of 2 or 3
+‘SBElla genes, cach of the homozygous alleles comprising a loss of function
+mutation,
+
+b) the grain comprises an allele which comprises a partial loss of function
+‘mutation which expresses an SBElla or SBEIIb enzyme which in amount andlor
+und 60%, oF between 10% and 50%, of the
+
+amount or activity of the corresponding wild-type allele,
+
+activity corresponds to between 2
+
+©) the number of null alleles of SBEtla genes in the embryo is 2 or 4,
+) the 4, 5 or 6 SBEIa alleles each comprising a loss of function mutation
+are cach null alleles,
+
+©) the embryo has no null alleles of SBEUID genes, or the number of null
+alleles of SBEHIb genes in the embryo is 2, 4 oF 6,
+
+1) the embryo comprises two SBEH1 alleles cach comprising partial loss
+
+‘of function mutation,
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+8) the grain comprises nul alleles of the SBEMa gene on the A genome, B
+‘genome, D yenome, A and B genomes, A and D genomes, or B and D genomes,
+fh) the grain comprises null alleles of the SEM gene on the A genome, B
+genome, D genome, A and B genomes, A and D genomes, B and D genomes, ot
+all three of the A, B and D genomes,
+
+i) the grain comprises only one or only two SBEUIb proteins which have
+starch branching enzyme activity when produced in developing endosperm, ot
+only one oF only two SBEIIb proteins which are detectable by Westem blot
+analysis,
+
+3) the grain comprises a null mutation which isa deletion mutation in the A,
+Bor D genome which deletes at least part of an SBEla gene and at least a part
+of an SBEMb gene on that genome,
+
+k) the grain comprises « null mutation which is « deletion mutation in the A,
+B or D genome which deletes the whole of the SBEHIa gene andlor the whole of
+the SBEIIb gene on that genome,
+
+1) the grain comprises a null mutation in an SBETIa gene which is an amino
+acid substitution mutation,
+
+m) the embryo comprises a null mutation in an SBEHIa gene, or null
+‘mutations in more than one SBEMa gene, wherein each mutation is
+independently selected from the group consisting of « deletion mutation, an
+insertion mutation, a splice-site mutation, « premature translation termination
+‘mutation and a frameshif' mutation,
+
+18) the grain has only one SBETIa protein as determined by Western blot
+analysis, wherein said protein is encoded by one of the SBEVa-A, SBElIa-B and
+SBEHIa-D genes and has reduced starch branching enzyme activity when
+produced in developing wheat endosperm when compared to an SBElla protein
+‘encoded by the comesponding wild-type gene, oF
+
+©) combination of more than one of a) ton).
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+The grain of claim 1 oF claim 2, in which the level or activity of total SBENL
+protein in the grain is between 2% and 15%, oF between 3% and 10%, or
+between 2% and 20% or between 2% and 25%, of the level or activity of total
+‘SBEII protein inthe wild-type wheat grain
+
+4. ‘The grain of any one of claims 1 to 3, in which the amount or activity of SBENla
+protsin in the grain is less than 2%, or between 2% and 15%, or between 3% and
+10%, oF between 2% and 20% or between 2% and 25°
+activity of SBEIIa protein in the wild-type wheat grain
+
+1 of the amount oF
+
+5. The grain of any one of claims 1 to 4, comprising an amylose content of at least
+(60% (wiw) or atleast 67% (w/w) a8 a proportion of the total starch of the grain,
+
+6. The grain of any one of claims 1 10 5, which is non-transgenic or is free of any
+exogenous nucleic acid that encodes an RNA which reduces expression of an
+SBETa gone,
+
+7. The grain of any one of claims 1 to 6, which has a germination rate of between
+about 7
+
+and about 100% relative to the germination rate ofa wild-type grain.
+
+8. The grain ofany one of claims | to 7, wherein the evel or activity of total SBELL
+protein is determined by assaying the SBEI protein in grain while it is
+developing in a wheat plant or by assaying the level or activity of SBEN protein
+
+by immunological means.
+
+9. The grain of any one of claims 1 t0 8, wherein the starch of the grain is
+characterised by one or more properties selected from the group consisting of:
+(comprising atleast 2% resistant starch,
+
+‘comprising « reduced glycaemic index (GI),
+
+‘comprising reduced level of amylopectin,
+
+iv) comprising distorted starch granules,
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+(9) reduced starch granule birefringence,
+(vi) reduced swelling volume,
+
+(vil) _ modified chain length distribution and/or branching frequency,
+oi
+
+layed end of gelatnisation temperature and increased peak
+temperature,
+
+(ix) reduced viscosity,
+
+(8) increased molecular weight of amylopectin,
+
+(xi) a modified percentage of starch crystallinity, and
+
+ii) a modified percentage crystallinity of A-type or Baype starch,
+
+relative to wild-type wheat starch granules or starch.
+
+10.
+
+“The grain of any one of claims 1 to 9, which is processed so that itis no longer
+capable of germinating, or which is kibbled, cracked, par-boiled, rolled, pearled,
+tilled or ground grain,
+
+The grain of any one of claims 1 to 10, which is capable of producing a wheat
+
+plant which is male and female fertile.
+
+A wheat plant (Triticum aestivum) which produces grain, the grain comprising
+aan embryo, an endosperm, starch and a reduced level or activity of total SBEI
+protein, wherein the embryo comprises a loss of function mutation in each of $
+to 12 alleles of endoyenous SBEIT genes selected from the group consisting of
+SBETIa-A, SBEIa-B, SBEa-D, SBEIb-A, SBEID-B and SBEITb-D, such that
+the level or activity of total SBEII protein in the grain is between 2% and 30% of
+the level or act
+12 alleles including 4, 5 or 6 SBEHIa alleles each comprising 2 loss of function
+‘mutation, wherein when the number of SBEIla allcles comprising a loss of
+function mutation is only 4 then the number of SBEUIb alleles comprising a loss
+
+of function mutation is 6, wherein the grain comprises an amylose content of at
+
+ity of total SBEM protein in a wild-type wheat grain, suid 5 to
+
+Teast 50% (w/w) as a proportion of the total starch of the grain, and wherein the
+‘wheat plant is male and female fertile
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+13, Wheat wholemeal or flour produced from the grain of any one of claims 1 t0 11,
+the wholemeal or flour comprising a reduced level or activity of total SBEHL
+protcin and a foss of function mutation in each of 5 to 12 alleles of endogenous
+‘SBEI genes selected from the group consisting of SBEMa-A, SBEMa-B, SBEIIa-
+D, SBEIlb-A, SBEIb-B and SBEUb-D, such that the level or activity of total
+‘SBEH protein in the wholemeal or flour is between 2% and 30% of the level or
+activity of total SBEI protein in a wildtype wheat wholemeal of flour, said $ to
+
+12 alleles including 4, 5 or 6 SBETIa alleles each comprising a loss of function
+‘mutation, wherein when the number of SBEtIa alleles comprising @ loss of
+function mutation is only 4 then the number of SBEIb alcles comprising a loss
+of function mutation is 6, and wherein the starch of the wholemeal or flour has
+
+aan amylose content of at Least 50% (w/w).
+
+14, The wholemeal or flour of claim 13 wherein the starch of the wholemeal or flour
+is characterised by one of more of:
+‘comprising at least 60% (w/w), or at least 67% (w/w) amylose,
+
+‘comprising atleast 2% resistant starch,
+
+‘comprising a reduced glycaemic index (Gl),
+Civ) comprising reduced level of amylopectin,
+
+() comprising distorted starch granules,
+
+(vi) reduced starch granule birefringence,
+
+(vil) reduced swelling volume,
+
+(vill) _ modified chain length distribution and/or branching frequency,
+
+(ix) delayed end of gelatinisation temperature and higher peak temperature,
+(x) reduced viscosity,
+
+(xi) increased molecular weight of amylopectin,
+
+(xii) modified % crystallinity
+
+(xii) _ modified percentage crystallinity of A-type or Betype starch,
+
+relative to « wild-type wheat starch granules or starch,
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+15, A food product comprising a food ingredient at a level of at least 10% on u dry
+‘weight basis, wherein the ingredient is wheat grain of any one of claims I to 11
+or the wholemeal or flour of claim 13 or claim 14,
+
+15 wherein the resistant starch content is
+
+1236. A method of producing starch, comprising the steps of i) obtaining wheat grain
+according to any one of claims 1 to 11, and ii) extracting the starch from the
+‘grain, thereby producing the starch.
+
+1817. A method of screening « wheat plant or wheat grain, the method comprising (i)
+dotermining the amount of activity of SBEHla and/or SBEIIb in a wheat plant or
+‘heat grain relative to the amount or activity in a wild-type plant or grain and
+
+i) selecting a plant or grain having between 2% and 30% of the amount or
+activity of total SBEH protein in a wild-type plant or grain, wherein the selected
+plant or grain comprises a loss of function mutation in each of 5 to 12 alleles of,
+endogenous SBEHI genes selected fiom the group consisting of SBEIla-A,
+SBElla-B, SBEMa-D, SBEHIb-A, SBEIIb-B and SBEUIb-D, such thatthe level or
+activity of total SBEI protein in the grain is between 2%% and
+
+of the level or
+activity of total SBEII protcin in the wild-type wheat grain, suid $ to 12 alleles
+including 4, 5 or 6 SBEIa alleles each comprising a loss of function mutation,
+‘wherein when the number of SBEIa alleles comprising a loss of function
+mutation is only 4 then the number of SBETIb alleles comprising a oss of
+function mutation is 6, and wherein the grain comprises an amylose content of at
+
+Teast 50% (ww) as « proportion of the total starch of the grain,
+
+1918. A method of producing « food or « drink comprising the following steps: (I)
+obtaining grain according to any one of claims 1 t0 11, (i) processing the grain
+to produce a food or drink ingredient, and (iti) adding a food or drink ingredient
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16
+
+
+from (ii) to another food or drink ingredient, thereby producing the food or
+drink,
+
+20. A method of producing grain, comprising the steps of ) obtaining a wheat plant
+according to claim 12, ii) harvesting wheat grain from the plant, and ii)
+optionally, processing the grain,
+
+ep 1ears298
+Ouro B10169-C8 05.0016
+Reeponse to naieaton AD4() of 24.02.16

@@ -1,0 +1,2749 @@
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 1 of 64 
+ 
+THE DRUGS AND COSMETICS ACT, 1940 
+(23 of 1940)1 
+[10th April, 1940] 
+ 
+An Act to regulate the import, manufacture, distribution and sale of drugs 
+2[and cosmetics]. 
+ 
+Whereas it is expedient to regulate the 3[import, manufacture, distribution 
+and sale] of drugs 2[and cosmetics];  
+And whereas the Legislatures of all the Provinces have passed resolutions 
+in terms of section 103 of the Government of India Act, 1935 in relation to such 
+of the above-mentioned matters and matters ancillary thereto as are enumerated 
+in List II of the Seventh Schedule to the said Act; 
+It is hereby enacted as follows:— 
+CHAPTER I 
+INTRODUCTORY 
+ 
+1. Short title, extent and commencement.—(1) This Act may be called the 
+Drugs 4[and Cosmetics] Act, 1940. 
+(2)    It extends to the whole of India 5[***]. 
+(3)    It shall come into force at once; but Chapter III shall take effect only 
+from such date6 as the Central Government may, by notification in the Official 
+Gazette, appoint in this behalf, and Chapter IV shall take effect in a particular 
+State only from such date6 as the State Government may, by like notification, 
+appoint in this behalf: 
+7[Provided that in relation to the State of Jammu and Kashmir, Chapter III shall 
+take effect only from such date6 after the commencement of the Drugs and 
+Cosmetics (Amendment) Act, 1972 (19 of 1972), as the Central Government 
+may, by notification in the Official Gazette, appoint in this behalf.] 
+2.    Application of other laws not barred.—The provisions of this Act 
+shall be in addition to, and not in derogation of, the Dangerous Drugs Act, 1930 
+(2 of 1930), and any other law for the time being in force. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 2 of 64 
+ 
+3.    Definitions.—In this Act, unless there is anything repugnant in the 
+subject or context,— 
+1[(a) "7lAyurvedic, Siddha or Unani] drug" includes all medicines intended for 
+internal or external use for or in the diagnosis, treatment, mitigation or 
+prevention of 
+8[disease or disorder in human beings or animals, and 
+manufactured] exclusively in accordance with the formulae described in, the 
+authoritative books of 9[Ayurvedic, Siddha and Unani Tibb systems of 
+medicine], specified in the First Schedule;] 
+5[(aa) "the Board" means— 
+(i)    in relation to 2[Ayurvedic, Siddha or Unani] drug, the 6[Ayurvedic, Siddha 
+and Unani Drugs Technical Advisory Board] constituted under section 33C; and 
+(ii)    in relation to any other drug or cosmetic, the Drugs Technical Advisory 
+Board constituted under section 5;] 
+5[7[(aaa)] "cosmetic" means any article intended to be rubbed, poured, sprinkled 
+or sprayed on, or introduced into, or otherwise applied to, the human body or 
+any part thereof for cleansing, beautifying, promoting attractiveness, or altering 
+the appearance, and includes any article intended for use as a component of 
+cosmetic 10[***];] 
+9[(b) "drug" includes— 
+10[(i) all medicines for internal or external use of human beings or animals and 
+all substances intended to be used for or in the diagnosis, treatment, mitigation 
+or prevention of any disease or disorder in human beings or animals, including 
+preparations applied on human body for the purpose of repelling insects like 
+mosquitoes;] 
+(ii) such substances (other than food) intended to affect the structure or any 
+function of the human body or intended to be used for the destruction of 
+11 [vermin] or insects which cause disease in human beings or animals, as may 
+be specified from time to time by the Central Government by notification in the 
+Official Gazette;] 2[(iii) all substances intended for use as components of a drug 
+including empty gelatin capsules; and 
+(iv) such devices* intended for internal or external use in the diagnosis, 
+treatment, mitigation or prevention of disease or disorder in human beings or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 3 of 64 
+ 
+animals, as may be specified from time to time by the Central Government by 
+notification in the Official Gazette, after consultation with the Board;] 
+3[(c) "Government Analyst" means— 
+(i)    in relation to 12[Ayurvedic, Siddha or Unani] drug, a Government Analyst 
+appointed by the Central Government or a State Government under section 33F; 
+and 
+(ii)    in relation to any other drug or cosmetic, a Government Analyst appointed 
+by the Central Government or a State Government under section 20;] 
+6[(e) "Inspector" means— 
+(i)    in relation to 13[Ayurvedic, Siddha or Unani] drug, an Inspector appointed 
+by the Central Government or a State Government under section 33G; and 
+(ii)    in relation to any other drug or cosmetic, an Inspector appointed by the 
+Central Government or a State Government under section 21;] 
+7[(f) "manufacture" in relation to any drug 14[or cosmetic] includes any process 
+or part of a process for making, altering, ornamenting, finishing, packing, 
+labelling, breaking up or otherwise treating or adopting any drug 8[or cosmetic] 
+with a view to its 15[sale or distribution] but does not include the compounding 
+or dispensing 10[of any drug, or the packing of any drug or cosmetic,] in the 
+ordinary course of retail business; and "to manufacture" shall be construed 
+accordingly;] 
+'[(g)] "to import", with its grammatical variations and cognate expressionsmeans 
+to bring into 16[India]; 
+3[(h) "patent or proprietary medicine" means,-— 
+(i)    in relation to Ayurvedic, Siddha or Unani Tibb systems of medicine all 
+formulations containing only such ingredients mentioned in the formulae 
+described in the authoritative books of Ayurveda, Siddha or Unani Tibb systems 
+of medicine specified in the First Schedule, but does not include a medicine 
+which is administered by parenteral route and also a formulation included in the 
+authoritative books as specified in clause (a); 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 4 of 64 
+ 
+(ii)    in relation to any other systems of medicine, a drug which is a remedy or 
+prescription presented in a form ready for internal or external administration of 
+human beings or animals and which is not included in the edition of the Indian 
+Pharmacopoeia for the time being or any other Pharmacopoeia authorised in this 
+behalf by the Central Government after consultation with the Drugs Technical 
+Advisory Board constituted under section 5;] 
+4[(i) "prescribed" means prescribed by rules made under this Act.] 
+6[3A. Construction of references to any law not in force or any 
+functionary not in existence in the State of Jammu and Kashmir.—Any 
+reference in this Act to any law which is not in force, or any functionary not in 
+existence, in the Stateof Jammu and Kashmir, shall, in relation to that State, be 
+construed as a reference to the corresponding law in force, or to the 
+corresponding functionary in existence, in that State.] 
+4.    Presumption as to poisonous substances.—Any substance specified 
+as poisonous by rule made under Chapter III or Chapter IV '[or Chapter IVA] 
+shall be deemed to be a poisonous substance for the purpose of Chapter III or 
+Chapter IV ![or Chapter IVA], as the case may be. 
+CHAPTER II 
+THE DRUGS TECHNICAL ADVISORY BOARD, 
+THE CENTRAL DRUGS LABORATORY AND 
+THE DRUGS CONSULTATIVE COMMITTEE 
+ 
+5.    The Drugs Technical Advisory Board.—(1) The Central Government 
+shall, as soon as may be, constitute a Board (to be called the Drugs Technical 
+Advisory Board) to advise the Central Government and the State Governments 
+on technical matters arising out of the administration of this Act and to carry out 
+the other functions assigned to it by this Act. 
+ 
+2[(2) The Board shall consist of the following members, namely:— 
+(i)    the Director General of Health Services, ex officio, who shall be Chairman; 
+(ii)    the Drugs Controller, India, ex officio; 
+(iii)    the Director of the Central Drugs Laboratory, Calcutta, ex officio; 
+(iv)    the Director of the Central Research Institute, Kasauli, ex officio; 
+(v)    the Director of the Indian Veterinary Research Institute, Izatnagar, ex 
+officio; 
+(vi)    the President of the Medical Council of India, ex officio; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 5 of 64 
+ 
+(vii)    the President of the Pharmacy Council of India, ex officio; 
+(viii)    the Director of the Central Drug Research Institute, Lucknow, ex 
+officio; 
+(ix)    two persons to be nominated by the Central Government from among 
+persons who are in charge of drugs control in the States; 
+(x)    one person, to be elected by the Executive Committee of the Pharmacy 
+Council of India, from among teachers in pharmacy or pharmaceutical 
+chemistry or Pharmacognosy on the staff of an Indian University or a college 
+affiliated thereto; 
+(xi)    one person, to be elected by the Executive Committee of the Medical 
+Council of India, from among teachers in medicine or therapeutics on the staff 
+of an Indian University or a college affiliated thereto; 
+(xii)    one person to be nominated by the Central Government from the 
+pharmaceutical industry; 
+(xiii)    one pharmacologist to be elected by the Governing Body of the Indian 
+Council of Medical Research; 
+(xiv)    one person to be elected by the Central Council of the Indian Medical 
+Association; 
+(xv)    one person to be elected by the Council of the Indian Pharmaceutical 
+Association; 
+(xvi)    two persons holding the appointment of Government Analyst under this 
+Act, to be nominated by the Central Government.] 
+(3) The nominated and elected members of the Board shall hold office for 
+three years, but shall be eligible for re-nomination and re-election: 
+1[Provided that the person nominated or elected, as the case may be, under 
+clause (ix) or clause (x) or clause (xi) or clause (xvi) of sub-section (2) shall 
+hold office for so long as he holds the appointment of the office by virtue of 
+which he was nominated or elected to the Board.] 
+(4) The Board may, subject to the previous approval of the Central 
+Government, make bye-laws fixing a quorum and regulating its own procedure 
+and the conduct of all business to be transacted by it. 
+(5)    The Board may constitute sub-committees and may appoint to such 
+subcommittees for such periods, not exceeding three years, as it may decide, or 
+temporarily for the consideration of particular matters, persons who are not 
+members of the Board. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 6 of 64 
+ 
+(6)    The functions of the Board may be exercised notwithstanding any 
+vacancy therein. 
+(7)    The Central Government shall appoint a person to be Secretary of the 
+Board and shall provide the Board with such clerical and other staff as the 
+Central Government considers necessary. 
+6. The Central Drugs Laboratory.—(1) The Central Government shall, as 
+soon as may be, establish a Central Drugs Laboratory under the control of a 
+Director to be appointed by the Central Government, to carry out the functions 
+entrusted to it by this Act or any rules made under this Chapter: 
+Provided that, if the Central Government so prescribes, the functions of the 
+Central Drugs Laboratory in respect of any drug or class of drugs 17[or cosmetic 
+or class of cosmetics] shall be carried out at the Central Research Institute, 
+Kasauli, or at any other prescribed Laboratory and the functions of the Director 
+of the Central Drugs Laboratory in respect of such drug or class of drugs 2[or 
+such cosmetic or class of cosmetics] shall be exercised by the Director of that 
+Institute or of that other Laboratory, as the case may be. 
+(2) The Central Government may, after consultation with the Board, make 
+rules prescribing— 
+(a) the functions of the Central Drugs Laboratory; 
+(b)[***] 
+(c) [***] 
+(d) the procedure for the submission of the said Laboratory 18[under Chapter IV 
+or Chapter IVA] of samples of drugs 2[or cosmetics] for analysis or test, the 
+forms of the Laboratory's reports thereon and the fees payable in respect of such 
+reports; 
+(e)    such other matters as may be necessary or expedient to enable the said 
+Laboratory to carry out its functions; 
+(f)    the matters necessary to be prescribed for the purposes of the proviso to 
+sub-section (1). 
+ 
+STATE AMENDMENTS 
+ 
+Uttar Pradesh.—In section 6, in sub-section (1), after the existing proviso, 
+insert the following proviso, namely.— 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 7 of 64 
+ 
+"Provided further that the State Government may, with the prior approval of 
+the Central Government, direct that the functions of the Central Drugs 
+Laboratory and of the Director may be carried out in Uttar Pradesh by such 
+authority and such officer respectively as may be specified by the State 
+Government by notification in the Official Gazette, and any reference in this 
+Act to the Central Drugs Laboratory or the Director shall then be construed as a 
+reference to such Authority or officer, as the case may be." 
+[Vide Uttar Pradesh Act 47 of 1975, sec. 5 (w.e.f. 5-9-1975).] 
+West Bengal.—In section 6, in sub-section (1), after the existing proviso, 
+insert the following proviso, namely:— 
+"Provided further that the State Government may, with the prior approval of 
+the Central Government direct that the functions of the Central Drugs 
+Laboratory and of the Director may be carried out in West Bengal by such 
+Authority and such Officer respectively as may be specified by the State 
+Government by notification in the Official Gazette, and any reference in this 
+Act to the Central Drugs Laboratory or the Director shall then be construed to 
+mean such Authority or officer, as the case may be." 
+[Vide West Bengal Act 42 of 1973, sec. 5 (w.e.f. 29-4-1974).] 
+7. The Drugs Consultative Committee.—(1) The Central Government may 
+constitute an advisory committee to be called "the Drugs Consultative 
+Committee" to advise the Central Government, the State Governments and the 
+Drugs Technical Advisory Board on any matter tending to secure uniformity 
+throughout 19 [India] in the administration of this Act. 
+(2)    The Drugs Consultative Committee shall consist of two representatives 
+of the Central Government to be nominated by that Government and one 
+representative of each State Government to be nominated by the State 
+Government concerned. 
+(3)    The Drugs Consultative Committee shall meet when required to do so 
+by the Central Government and shall have power to regulate its own procedure. 
+2[7A. Sections 5 and 7 not to apply to Ayurvedic, Siddha or Unani 
+drugs.—Nothing contained in sections 5 and 7 shall apply to 20[Ayurvedic, 
+Siddha or Unani] drugs.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 8 of 64 
+ 
+CHAPTER III 
+IMPORT OF DRUGS AND COSMETICS 
+ 
+8. Standards of quality.—21[(1) For the purposes of this Chapter, the 
+expression "standard quality" means— 
+(a)    in relation to a drug, that the drug complies with the standard set out in 
+22[the Second Schedule], and 
+(b)    in relation to a cosmetic, that the cosmetic complies with such standard as 
+may be prescribed.] 
+(2) The Central Government, after consultation with the Board and after 
+giving by notification in the Official Gazette not less than three months' notice 
+of its intention so to do, may by a like notification add to or otherwise amend 
+3[the Second Schedule], for the purposes of this Chapter, and thereupon 3[the 
+Second Schedule] shall be deemed to be amended accordingly. 
+4[9. Misbranded drugs.—For the purposes of this Chapter, a drug shall be 
+deemed to be misbranded,— 
+(a)    if it is so coloured, coated, powdered or polished that damage is concealed 
+or if it is made to appear of better or greater therapeutic value than it really is; or 
+(b)    if it is not labelled in the prescribed manner; or 
+(c)    if its label or container or anything accompanying the drug bears any 
+statement, design or device which makes any false claim for the drug or which 
+is false or misleading in any particular.] 
+5[9A. Adulterated drugs.—For the purposes of this Chapter, a drug shall be 
+deemed to be adulterated,— 
+(a)    if it consists, in whole or in part, of any filthy, putrid or decomposed 
+substance; or 
+(b)    if it has been prepared, packed or stored under insanitary conditions 
+whereby it may have been contaminated with filth or whereby it may have been 
+rendered injurious to health; or 
+(c)    if its container is composed in whole or in part, of any poisonous or 
+deleterious substance which may render the contents injurious to health; or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 9 of 64 
+ 
+(d)    if it bears or contains, for purposes of colouring only, a colour other than 
+one which is prescribed; or 
+(e)    if it contains any harmful or toxic substance which may render it injurious 
+to health; or 
+(f)    if any substance has been mixed therewith so as to reduce its quality or 
+strength.] 
+1[9B. Spurious drugs.—For the purposes of this Chapter, a drug shall be 
+deemed to be spurious,— 
+(a)    if it is imported under a name which belongs to another drug; or 
+(b)    if it is an imitation of, or is a substitute for, another drug or resembles 
+another drug in a manner likely to deceive or bears upon it or upon its label or 
+container the name of another drug unless it is plainly and conspicuously 
+marked so as to reveal its true character and its lack of identity with such other 
+drug; or 
+(c)    if the label or container bears the name of an individual or company 
+purporting to be the manufacturer of the drug, which individual or company is 
+fictitious or does not exist; or 
+(d)    if it has been substituted wholly or in part by another drug or substance; or 
+(e)    if it purports to be the product of a manufacturer of whom it is not truly a 
+product.] 
+2[9C. Misbranded cosmetics.—For the purposes of this Chapter, a cosmetic 
+shall be deemed to be misbranded— 
+(a)    if it contains a colour which is not prescribed; or 
+(b)    if it is not labelled in the prescribed manner; or 
+(c)    if the label or container or anything accompanying the cosmetic bears any 
+statement which is false or misleading in any particular.] 
+2[9D. Spurious cosmetics.—For the purposes of this Chapter, a cosmetic 
+shall be deemed to be spurious,— 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 10 of 64 
+ 
+(a)    if it is imported under a name which belongs to another cosmetic; or 
+(b)    if it is an imitation of, or is a substitute for, another cosmetic or resembles 
+another cosmetic in a manner likely to deceive or bears upon it or upon its label 
+or container the name of another cosmetic, unless it is plainly and 
+conspicuously marked so as to reveal its true character and its lack of identity 
+with such other cosmetic; or 
+(c)    if the label or container bears the name of an individual or a company 
+purporting to be the manufacturer of the cosmetic which individual or company 
+is fictitious or does not exist; or 
+(d)    if it purports to be the product of a manufacturer of whom it is not truly a 
+product.] 
+10. Prohibition of import of certain drugs or cosmetics.—From such 
+date23 as may be fixed by the Central Government by notification in the Official 
+Gazette in this behalf, no person shall import— 
+(a) any drug '[or cosmetic] which is not of standard quality; 
+2[(b) any misbranded drug 24[or misbranded or spurious cosmetic];] 
+4[(bb) any 25[adulterated or spurious] drug;] 
+(c) any drug '[or cosmetic] for the import of which a licence is prescribed, 
+otherwise than under, and in accordance with, such licence; 
+6[(d) any patent or proprietary medicine, unless there is displayed in the 
+prescribed manner on the label or container thereof 26[the true formula or list of 
+active ingredients contained in it together with the quantities thereof];] 
+(e)    any drug which by means of any statement, design or device 
+accompanying it or by any other means, purports or claims to cure or mitigate 
+any such disease or ailment, or to have any such other effect, as may be 
+prescribed; 
+'[(ee) any cosmetic containing any ingredient which may render it unsafe or 
+harmful or use under the directions indicated or recommended;] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 11 of 64 
+ 
+(f)    any drug '[or cosmetic] the import of which is prohibited by rule made 
+under this Chapter: 
+Provided that nothing in this section shall apply to the import, subject to 
+prescribed conditions, of small quantities of any drug for the purpose of 
+examination, test or analysis or for personal use: 
+Provided further that the Central Government may, after consultation with 
+the Board, by notification in the Official Gazette, permit, subject to any 
+conditions specified in the notification, the import of any drug or class of drugs 
+not being of standard quality. 
+9[10A. Power of Central Government to prohibit import of drugs and 
+cosmetics in public interest.—Without prejudice to any other provision 
+contained in this Chapter, if the Central Government is satisfied that the use of 
+any drug or cosmetic is likely to involve any risk to human beings or animals or 
+that any drug does not have the therapeutic value claimed for it or contains 
+ingredients and in such quantity for which there is no therapeutic justification 
+and that in the public interest it is necessary or expedient so to do then, that 
+Government may, by notification in the Official Gazette, prohibit the import of 
+such drug or cosmetic.] 
+11.    Application of law relating to sea customs and powers of Customs 
+Officers.—(1) The law for the time being in force relating to sea customs and to 
+goods, the import of which is prohibited by section 18 of the Sea Customs Act, 
+1878 (8 of 1878)27 shall, subject to the provisions of section 13 of this Act, 
+apply in respect of drugs 28[and cosmetics] the import of which is prohibited 
+under this Chapter, and officers of Customs and officers empowered under that 
+Act to perform the duties imposed thereby on a 29[Commissioner of Customs] 
+and other officers of Customs, shall have the same powers in respect of such 
+drugs 2[and cosmetics] as they have for the time being in respect of such goods 
+as aforesaid. 
+4[(2) Without prejudice to the provisions of sub-section (1), the 
+3[Commissioner of Customs] or any officer of the Government authorised by 
+the Central Government in this behalf, may detain any imported package which 
+he suspects to contain any drug 2[or cosmetic] the import of which is prohibited 
+under this Chapter and shall forthwith report such detention to the Drugs 
+Controller, India, and if necessary, forward the package or sample of any 
+suspected drug 2[or cosmetic] found therein to the Central Drugs Laboratory.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 12 of 64 
+ 
+12.    Power of Central Government to make rules.—(1) The Central 
+Government may, 30[after consultation with or on the recommendation of the 
+Board] and after previous publication by notification in the Official Gazette, 
+make rules for the purpose of giving effect to the provisions of this Chapter: 
+Provided that consultation with the Board may be dispensed with if the 
+Central Government is of opinion that circumstances have arisen which render 
+it necessary to make rules without such consultation, but in such a case the 
+Board shall be consulted within six months of the making of the rules and the 
+Central Government shall take into consideration any suggestions which the 
+Board may make in relation to the amendment of the said rules.] 
+(2) Without prejudice to the generality of the foregoing power, such rules 
+may— 
+(a)    specify the drugs or classes of drugs 31[or cosmetics or classes of 
+cosmetics] for the import of which a licence is required, 32[and prescribe the 
+form and conditions of such licences, the authority empowered to issue the 
+same, the fees payable therefor and provide for the cancellation, or suspension 
+of such licence in any case where any provision of this Chapter or the rules 
+made thereunder is contravened or any of the conditions subject to which the 
+licence is issued is not complied with]; 
+(b)    prescribe the methods of test or analysis to be employed in determining 
+whether a drug 2[or cosmetic] is of standard quality; 
+(c)    prescribe, in respect of biological and organometallic compounds, the units 
+or methods of standardisation; 
+4[(cc) prescribe under clause (d) of 33[section 9A] the colour or colours which a 
+drug may bear or contain for purposes of colouring;] 
+(d)    specify the diseases or ailments which an imported drug may not purport 
+or claim 34[to prevent, cure or mitigate] and such other effects which such drug 
+may not purport or claim to have; 
+(e)    prescribe the conditions subject to which small quantities of drugs, the 
+import of which is otherwise prohibited under this Chapter, may be imported for 
+the purpose of examination, test or analysis or for personal use; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 13 of 64 
+ 
+(f)    prescribe the places at which drugs 2[or cosmetics] may be imported, and 
+prohibit their import at any other place; 
+(g)    require the date of manufacture and the date of expiry of potency to be 
+clearly and truly stated on the label or container of any specified imported drug 
+or class of such drug, and prohibit the import of the said drug or class of drug 
+after the expiry of a specified period from the date of manufacture; 
+(h)    regulate the submission by importers, and the securing, of samples of 
+drugs 2[or cosmetics] for examination, test or analysis by the Central Drugs 
+Laboratory, and prescribe the fees, if any, payable for such examination, test or 
+analysis; 
+(i) prescribe the evidence to be supplied, whether by accompanying documents 
+or otherwise, of the quality of drugs 35 [or cosmetics] sought to be imported, the 
+procedure of officers of Customs in dealing with such evidence, and the manner 
+of storage at places of import of drugs x[or cosmetics] detained pending 
+admission; 
+(j) provide for the exemption, conditionally or otherwise, from all or any of the 
+provisions of this Chapter and the rules made thereunder of drugs *[or 
+cosmetics] imported for the purpose only of transport through, and export from, 
+36[India]; 
+(k) prescribe the conditions to be observed in the packing in bottles, packages or 
+other containers, of imported drugs 37[or cosmetics] 3[including the use of 
+packing material which comes into direct contact with the drugs]; 
+(1) regulate the mode of labelling drugs J[or cosmetics] imported for sale in 
+packages, and prescribe the matters which shall or shall not be included in such 
+labels; 
+(m) prescribe the maximum proportion of any poisonous substance which may 
+be added to or contained in any imported drug, prohibit the import of any drug 
+in which that proportion is exceeded, and specify substances which shall be 
+deemed to be poisonous for the purposes of this Chapter and the rules made 
+thereunder; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 14 of 64 
+ 
+(n) require that the accepted scientific name of any specified drug shall be 
+displayed in the prescribed manner on the label or wrapper of any imported, 
+patent or proprietary medicine containing such drug; 
+(o) provide for the exemption, conditionally or otherwise, from all or any of the 
+provisions of this Chapter or the rules made thereunder of any specified drug or 
+class of drugs L[or cosmetics or class of cosmetics].  
+4[13. Offences.—(1) Whoever himself or by any other person on his behalf 
+imports,— 
+(a)    any drug deemed to be adulterated under section 9 A or deemed to be a 
+spurious drug under section 9B or any spurious cosmetic referred to in 
+section 9D or any cosmetic of the nature referred to in clause (ee) of section 
+10 shall be punishable with imprisonment for a term which may extend to 
+three years and a fine which may extend to five thousand rupees; 
+(b)    any drug or cosmetic other than a drug or cosmetic referred to in clause 
+(a), the import of which is prohibited under section 10, or any rule made 
+under this Chapter, shall be punishable with imprisonment for a term 
+which may extend to six months, or with fine which may extend to five 
+hundred rupees, or with both; 
+(c) any drug or cosmetic in contravention of the provisions of any notification 
+issued under section 10A, shall be punishable with imprisonment for a term 
+which may extend to three years, or with fine which may extend to five 
+thousand rupees, or with both. 
+(2)    Whoever having been convicted of an offence— 
+(a)    under clause (a) or clause (c) of sub-section (1),    is    again convicted    of 
+an offence under that clause, shall be punishable with imprisonment for a term 
+which may extend to five years, or with fine which may extend to ten thousand 
+rupees, or with both; 
+(b)    under clause (b) of sub-section (1), is again convicted   of an offence under 
+that clause, shall be punishable with imprisonment for a term which may extend 
+to one year, or with fine which may extend to one thousand rupees, or with 
+both. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 15 of 64 
+ 
+(3)    The punishment provided by this section shall be in addition to any 
+penalty to which the offender may be liable under the provisions of section 11.] 
+14.    Confiscation.—Where any offence punishable under section 13 has 
+been committed, the consignment of the drugs 1[or cosmetics] in respect of 
+which the offence has been committed shall be liable to confiscation. 
+15.    Jurisdiction.—No Court inferior to that 38[of a Metropolitan 
+Magistrate or of a Judicial Magistrate of the first class] shall try an offence 
+punishable under section 13. 
+CHAPTER IV 
+MANUFACTURE, SALE AND DISTRIBUTION OF 
+39[DRUGS AND COSMETICS] 
+ 
+16.    Standards of quality.— 40[(1) For the purposes of this Chapter, the 
+expression "standard quality" means— 
+(a)    in relation to a drug, that the drug complies with the standard set out in 
+41[the Second Schedule], and 
+(b)    in relation to a cosmetic, that the cosmetic complies with such standard as 
+may be prescribed.] 
+(2) The 42[Central Government], after consultation with the Board and after 
+giving by notification in the Official Gazette not less than three months' notice 
+of its intention so to do, may by a like notification add to or otherwise amend 1 
+[the Second Schedule] for the purposes of this Chapter, and thereupon 1 [ the 
+Second Schedule] shall be deemed to be amended accordingly. 
+2[17. Misbranded drugs.—For the purposes of this Chapter, a drug shall 
+be deemed to be misbranded,— 
+(a)    if it is so coloured, coated, powdered or polished that damage is concealed 
+or if it is made to appear of better or greater therapeutic value than it really is; or 
+(b)    if it is not labelled in the prescribed manner; or 
+(c)    if its label or container or anything accompanying the drug bears any 
+statement, design or device which makes any false claim for the drug or which 
+is false or misleading in any particular.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 16 of 64 
+ 
+3[17A. Adulterated drugs.—For the purposes of this Chapter, a drug shall 
+be adeemed to be adulterated,— 
+(a)    if it consists in whole or in part, of any filthy, putrid or decomposed 
+substance; or 
+(b)    if it has been prepared, packed or stored under insanitary conditions 
+whereby it may have been contaminated with filth or whereby it may have been 
+rendered injurious to health; or 
+(c)    if its container is composed, in whole or in part, of any poisonous or 
+deleterious substance which may render the contents injurious to health; or 
+(d)    if it bears or contains, for purposes of colouring only, a colour other than 
+one which is prescribed; or 
+(e)    if it contains any harmful or toxic substance which may render it injurious 
+to health; or 
+(f)    if any substance has been mixed therewith so as to reduce its quality or 
+strength.] 
+4[17B. Spurious drugs.—For the purposes of this Chapter, a drug shall be 
+deemed to be spurious,— 
+(a)    if it is manufactured under a name which belongs to another drug; or 
+(b)    if it is an imitation of, or is a substitute for, another drug or resembles 
+another drug in a manner likely to deceive or bears upon it or upon its label or 
+container the name of another drug unless it is plainly and conspicuously 
+marked so as to reveal its true character and its lack of identity with such other 
+drug; or 
+(c)    if the label or container bears the name of an individual or company 
+purporting to be the manufacturer of the drug, which individual or company is 
+fictitious or does not exist; or 
+(d)    if it has been substituted wholly or in part by another drug or substance; or 
+(e)    if it purports to be the product of a manufacturer of whom it is not truly a 
+product.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 17 of 64 
+ 
+1[17C. Misbranded cosmetics.—For the purposes of this Chapter, a 
+cosmetic shall be deemed to be misbranded,— 
+(a)    if it contains a colour which is not prescribed; or 
+(b)    if it is not labelled in the prescribed manner; or 
+(c)    if the label or container or anything accompanying the cosmetic bears any 
+statement which is false or misleading in any particular.] 
+1[17D. Spurious cosmetics.—For the purposes of this Chapter, a cosmetic 
+shall be deemed to be spurious,— 
+(a)    if it is manufactured under a name which belongs to another cosmetic; 
+or 
+(b)    if it is an imitation of, or a substitute for, another cosmetic or 
+resembles another cosmetic in a manner likely to deceive or bears upon it or 
+upon its label or container the name of another cosmetic unless it is plainly 
+and conspicuously marked so as to reveal its true character and its lack of 
+identity with such other cosmetic; or 
+(c)    if the label or container bears the name of an individual or a company 
+purporting to be the manufacturer of the cosmetic which individual or 
+company is fictitious or does not exist; or 
+(d)    if it purports to be the product of a manufacturer of whom it is not 
+truly a product.] 
+2[17E. Adulterated cosmetics.—For the purposes of this Chapter, a cosmetic 
+shall be deemed to be adulterated,— 
+(a)    if it consists in whole or in part, of any filthy, putrid or decomposed 
+substance; or 
+(b)    if it has been prepared, packed or stored under insanitary conditions 
+whereby it may have been contaminated with filth or whereby it may have 
+been rendered injurious to health; or 
+(c)    if its container is composed, in whole or in part, of any poisonous or 
+deleterious substance which may render the contents injurious to health; or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 18 of 64 
+ 
+(d)    if it bears or contains, for purposes of colouring only, a colour other 
+than one which is prescribed; or 
+(e)    if it contains any harmful or toxic substance which may render it 
+injurious to health; or 
+(f)    if any substance has been mixed therewith so as to reduce its quality or 
+strength.] 
+18. Prohibition of manufacture and sale of certain drugs and cosmetics.— 
+From such date43 as may be fixed by the State Government by notification in the 
+Official Gazette in this behalf, no person shall himself or by any other person on 
+his behalf— 
+(a) 44[manufacture for sale or for distribution, or sell, or stock or exhibit or offer 
+for sale,] or distribute— 
+3[(i) any drug which is not of a standard quality, or is misbranded, 
+adulterated or spurious; 
+4[(ii) any cosmetic which is not of a standard quality, or is misbranded, 
+adulterated or spurious;]] 
+5[(iii) any patent or proprietary medicine, unless there is displayed in the 
+prescribed manner on the label or container thereof 45[the true formula or 
+list of active ingredients contained in it together with the quantities, 
+thereof];] 
+(iv) any drug which by means of any statement design or device 
+accompanying it or by any other means, purports or claims 46[to prevent, 
+cure or mitigate] any such disease or ailment, or to have any such other 
+effect as may be prescribed; 
+8[(v) any cosmetic containing any ingredient which may render it unsafe or 
+harmful for use under the directions indicated or recommended; 
+(vi) any drug or cosmetic in contravention of any of the provisions of this 
+Chapter or any rule made thereunder;] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 19 of 64 
+ 
+'/(b) 47[sell, or stock or exhibit or offer for sale,] or distribute any drug 48[or 
+cosmetic] which has been imported or manufactured in contravention of any of 
+the provisions of this Act or any rule made thereunder; 
+(c) 49[manufacture for sale or for distribution, or sell, or stock or exhibit or offer 
+for sale,] or distribute any drug 2[or cosmetic], except under, and in accordance 
+with the conditions of, a licence issued for such purpose under this Chapter: 
+Provided that nothing in this section shall apply to the manufacture, subject 
+to prescribed conditions, of small quantities of any drug for the purpose of 
+examination, test or analysis: 
+Provided further that the 50[Central Government] may, after consultation 
+with the Board, by notification in the Official Gazette, permit, subject to any 
+conditions specified in the notification, the 51[manufacture for sale or for 
+distribution, sale, stocking or exhibiting or offering for sale] or distribution of 
+any drug or class of drugs not being of standard quality. 
+7[18A. Disclosure of the name of the manufacturer, etc.—Every person, 
+not being the manufacturer of a drug or cosmetic or his agent for the distribution 
+thereof, shall, if so required, disclose to the Inspector the name, address and 
+other particulars of the person from whom he acquired the drug or cosmetic.] 
+8[18B. Maintenance of records and furnishing of information.—Every 
+person holding a licence under clause (c) of section 18 shall keep and maintain 
+such records, registers and other documents as may be prescribed and shall 
+furnish to any officer or authority exercising any power or discharging any 
+function under this Act such information as is required by such officer or 
+authority for carrying out the purposes of this Act.] 
+19. Pleas.—(1) Save as hereinafter provided in this section, it shall be no 
+defence in a prosecution under this Chapter to prove merely that the accused 
+was ignorant of the nature, substance or quality of the drug ’[or cosmetic] in 
+respect of which the offence has been committed or of the circumstances of its 
+manufacture or import, or that a purchaser, having bought only for the purpose 
+of test or analysis, has not been prejudiced by the sale. 
+(2) 2[For the purposes of section 18 a drug shall not be deemed to be 
+misbranded or 3[adulterated or spurious] or to be below standard quality nor 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 20 of 64 
+ 
+shall a cosmetic be deemed to be misbranded or to be below standard quality] 
+only by reason of the fact that— 
+(a)    there has been added thereto some innocuous substance or ingredient 
+because the same is required for the manufacture or preparation of the drug ’[or 
+cosmetic] as an article of commerce in a state fit for carriage or consumption, 
+and not to increase the bulk, weight or measure of the drug ’[or cosmetic] or to 
+conceal its inferior quality or other defects; or 
+(b)    in the process of manufacture, preparation or conveyance some extraneous 
+substance has unavoidably become intermixed with it: provided that this clause 
+shall not apply in relation to any sale or distribution of the drug ’[or cosmetic] 
+occurring after the vendor or distributor became aware of such intermixture. 
+5[(3) A person, not being the manufacturer of a drug or cosmetic or his agent 
+for the distribution thereof, shall not be liable for a contravention of section 18 
+if he proves— 
+(a)    that he acquired the drug or cosmetic from a duly licensed manufacturer, 
+distributor or dealer thereof; 
+(b)    that he did not know and could not, with reasonable diligence, have 
+ascertained that the drug or cosmetic in any way contravened the provisions of 
+that section; and 
+(c)    that the drug or cosmetic, while in his possession was properly stored and 
+remained in the same state as when he acquired it.] 
+STATE AMENDMENT  
+West Bengal.—After section 19, insert the following section, namely.— 
+"19A. Burden of proof.—When any drug or cosmetic is seized from any person 
+in the reasonable belief that such drug or cosmetic is misbranded or adulterated, 
+the burden of proving that such drug or cosmetic is not misbranded or 
+adulterated shall be on the person from whose possession such drug or cosmetic 
+was seized." 
+[Vide West Bengal Act 42 of 1973, sec. 5 (w.e.f. 29-4-1974).] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 21 of 64 
+ 
+1[20. Government Analysts.—(1) The State Government may, by 
+notification in the Official Gazette, appoint such persons as it thinks fit, having 
+the prescribed qualifications, to be Government Analysts for such areas in the 
+State and in respect of such drugs or 52[classes of drugs or such cosmetics or 
+classes of cosmetics] as may be specified in the notifications. 
+(2)    The Central Government may also, by notification in the Official 
+Gazette, appoint such persons as it thinks fit, having the prescribed 
+qualifications, to be Government Analysts in respect of such drugs or 53[classes 
+of drugs or such cosmetics or classes of cosmetics] as may be specified in the 
+notification. 
+(3)    Notwithstanding anything contained in sub-section (1) or sub-section 
+(2), neither the Central Government nor a State Government shall appoint as a 
+Government Analyst any official not serving under it without the previous 
+consent of the Government under which he is serving.] 
+3[(4) No person who has any financial interest in the import, manufacture or 
+sale of drugs or cosmetics shall be appointed to be a Government Analyst under 
+sub-section (1) or sub-section (2) of this section.] 
+4[21. Inspectors.—(1) The Central Government or a State Government may 
+by notification in the Official Gazette, appoint such persons as it thinks fit, 
+having the prescribed qualifications, to be Inspectors for such areas as may be 
+assigned to them by the Central Government or the State Government, as the 
+case may be. 
+(2) The powers which may be exercised by an Inspector and the duties which 
+may be performed by him, the drugs or 54[classes of drugs or cosmetics or 
+classes of cosmetics] in relation to which and the conditions, limitations or 
+restrictions subject to which, such powers and duties may be exercised or 
+performed shall be such as may be prescribed. 
+(3)    No person who has any financial interest ![in the import, manufacture 
+or sale of drugs or cosmetics] shall be appointed to be an Inspector under this 
+section. 
+(4)    Every Inspector shall be deemed to be a public servant within the 
+meaning of section 21 of the Indian Penal Code (45 of 1860), and shall be 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 22 of 64 
+ 
+officially subordinate to such authority 2[, having the prescribed qualifications,] 
+as the Government appointing him may specify in this behalf.] 
+4[22. Powers of Inspectors.—(1) Subject to the provisions of section 23 and 
+of any rules made by the Central Government in this behalf, an Inspector may, 
+within the local limits of the area for which he is appointed,— 
+4[(a) inspect,— 
+(i)    any premises wherein any drug or cosmetic is being manufactured and the 
+means employed for standardising and testing the drug or cosmetic; 
+(ii)    any premises wherein any drug or cosmetic is being sold, or stocked or 
+exhibited or offered for sale, or distributed; 
+(b)    take samples of any drug or cosmetic,— 
+(i)    which is being manufactured or being sold or is stocked or exhibited or 
+offered for sale, or is being distributed; 
+(ii)    from any person who is in the course of conveying, delivering or 
+preparing to deliver such drug or cosmetic to a purchaser or a consignee; 
+(c)    at all reasonable times, with such assistance, if any, as he considers 
+necessary,— 
+(i)    search any person, who, he has reason to believe, has secreted about his 
+person, any drug or cosmetic in respect of which an offence under this Chapter 
+has been, or is being, committed; or 
+(ii)    enter and search any place in which he has reason to believe that an 
+offence under this Chapter has been, or is being, committed; or 
+(iii)    stop and search any vehicle, vessel or other conveyance which, he has 
+reason to believe, is being used for carrying any drug or cosmetic in respect of 
+which an offence under this Chapter has been, or is being, committed, and order 
+in writing the person in possession of the drug or cosmetic in respect of which 
+the offence has been, or is being, committed, not to dispose of any stock of such 
+drug or cosmetic for a specified period not exceeding twenty days, or, unless the 
+alleged offence is such that the defect may be removed by the possessor of the 
+drug or cosmetic, seize the stock of such drug or cosmetic and any substance or 
+article by means of which the offence has been, or is being, committed or which 
+may be employed for the commission of such offence;] 
+1[(cc) examine any record, register, document or any other material object found 
+55[with any person, or in any place, vehicle, vessel or other conveyance referred 
+to in clause (c)], and seize the same if he has reason to believe that it may 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 23 of 64 
+ 
+furnish evidence of the commission of an offence punishable under this Act or 
+the Rules made thereunder;] 
+3[(cca) require any person to produce any record, register, or other document 
+relating to the manufacture for sale or for distribution, stocking, exhibition for 
+sale, offer for sale or distribution of any drug or cosmetic in respect of which he 
+has reason to believe that an offence under this Chapter has been, or is being, 
+committed;] 
+(d) exercise such other powers as may be necessary for carrying out the 
+purposes of this Chapter or any rules made thereunder. 
+(2)    The provisions of 56[the Code of Criminal Procedure, 1973 (2 of 1974)] 
+shall, so far as may be, apply to any search or seizure under this Chapter as they 
+apply to any search or seizure made under the authority of a warrant issued 
+under 57[section 94] of the said Code. 
+3[(2A) Every record, register or other document seized under clause (cc) or 
+produced under clause (cca) shall be returned to the person, from whom they 
+were seized or who produce the same, within a period of twenty days of the date 
+of such seizure or production, as the case may be, after copies thereof or 
+extracts therefrom certified by that person, in such manner as may be 
+prescribed, have been taken.] 
+(3)    If any person wilfully obstructs an Inspector in the exercise of the 
+powers conferred upon him by or under this Chapter 6[or refuses to produce any 
+record, register or other document when so required under clause (cca) of sub-
+section(1),] he shall be punishable with imprisonment which may extend to 
+three years, or with fine, or with both.] 
+23. Procedure of Inspectors.—(1) Where an Inspector takes any sample of 
+a drug '[or cosmetic] under this Chapter, he shall tender the fair price thereof 
+and may require a written acknowledgement therefor. 
+(2)    Where the price tendered under sub-section (1) is refused or where the 
+Inspector seizes the stock of any drug '[or cosmetic] under clause (c) of section 
+22, he shall tender a receipt therefor in the prescribed form. 
+(3)    Where an Inspector takes a sample of a drug '[or cosmetic] for the 
+purpose of test or analysis, he shall intimate such purpose in writing in the 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 24 of 64 
+ 
+prescribed form to the person from whom he takes it and, in the presence of 
+such person unless he wilfully absents himself, shall divide the sample into four 
+portions and effectively seal and suitably mark the same and permit such person 
+to add his own seal and mark to all or any of the portions so sealed and marked: 
+Provided that where the sample is taken from premises whereon the drug '[or 
+cosmetic] is being manufactured, it shall be necessary to divide the sample into 
+three portions only: 
+Provided further that where the drug J[or cosmetic] is made up in containers 
+of small volume, instead of dividing a sample as aforesaid, the Inspector may, 
+and if the drug *[or cosmetic] be such that it is likely to deteriorate or be 
+otherwise damaged by exposure shall, take three or four, as the case may be, of 
+the said containers after suitably marking the same and, where necessary, 
+sealing them. 
+(4)    The Inspector shall restore one portion of a sample so divided or one 
+container, as the case may be, to the person from whom he takes it, and shall 
+retain the remainder and dispose of the same as follows:— 
+(i)    one portion or container he shall forthwith send to the Government Analyst 
+for test or analysis; 
+(ii)    the second he shall produce to the Court before which proceedings, if any, 
+are instituted in respect of the drug 58[or cosmetic]; and 
+2[(iii) the third, where taken, he shall send to the person, if any, whose name, 
+address and other particulars have been disclosed under section 18A.] 
+(5)    Where an Inspector takes any action under clause (c) of section 22,— 
+(a) he shall use all despatch in ascertaining whether or not the drug '[or 
+cosmetic] contravenes any of the provisions of section 18 and, if it is 
+ascertained that the drug *[or cosmetic] does not so contravene forthwith revoke 
+the order passed under the said clause or, as the case may be, take such action as 
+may be necessary for the return of the stock seized; 
+(b)    if he seizes the stock of the drug ’[or cosmetic], he shall as soon as may 
+be, inform 59[a Judicial Magistrate] and take his orders as to the custody thereof; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 25 of 64 
+ 
+(c)    without prejudice to the institution of any prosecution, if the alleged 
+contravention be such that the defect may be remedied by the possessor of the 
+drug ’[or cosmetic], he shall, on being satisfied that the defect has been so 
+remedied, forthwith revoke his order under the said clause. 
+3[(6) Where an Inspector seizes any record, register, document or any other 
+material object under clause (cc) of sub-section (1) of section 22, he shall, as 
+soon as may be, inform 2[a Judicial Magistrate] and take his orders as to the 
+custody thereof.] 
+24.    Persons bound to disclose place where drugs or cosmetics are 
+manufactured or kept.—Every person for the time being in charge of any 
+premises whereon any drug ’[or cosmetic] is being manufactured or is kept for 
+sale or distribution shall, on being required by any Inspector so to do, be legally 
+bound to disclose to the Inspector the place where the drug ’[or cosmetic] is 
+being manufactured or is kept, as the case may be. 
+25.    Reports of Government Analysts.—(1) The Government Analyst to 
+whom a sample of any drug ’[or cosmetic] has been submitted for test or 
+analysis under sub-section (4) of section 23, shall deliver to the Inspector 
+submitting it a signed report in triplicate in the prescribed form. 
+(2)    The Inspector on receipt thereof shall deliver one copy of the report to 
+the person from whom the sample was taken 60[and another copy to the person, 
+if any, whose name, address and other particulars have been disclosed under 
+section 18A], and shall retain the third copy for use in any prosecution in 
+respect of the sample. 
+(3)    Any document purporting to be a report signed by a Government 
+Analyst under this Chapter shall be evidence of the facts stated therein, and such 
+evidence shall be conclusive unless the person from whom the sample was 
+taken 1[or the person whose name, address and other particulars have been 
+disclosed under section 18A] has, within twenty-eight days of the receipt of a 
+copy of the report, notified in writing the Inspector or the Court before which 
+any proceedings in respect of the sample are pending that he intends to adduce 
+evidence in controversion of the report. 
+(4)    Unless the sample has already been tested or analysed in the Central 
+Drugs Laboratory, where a person has under sub-section (3) notified his 
+intention of adducing evidence in controversion of a Government Analyst's 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 26 of 64 
+ 
+report, the Court may, of its own motion or in its discretion at the request either 
+of the complainant or the accused: cause the sample of the drug ][or cosmetic] 
+produced before the Magistrate under sub-section (4) of section 23 to be sent for 
+test or analysis to the said Laboratory, which shall make the test or analysis and 
+report in writing signed by or under the authority of, the Director of the Central 
+Drugs Laboratory the result thereof, and such report shall be conclusive 
+evidence of the facts stated therein. 
+(5)    The cost of a test or analysis made by the Central Drugs Laboratory 
+under sub-section (4) shall be paid by the complainant or accused as the Court 
+shall direct. 
+26. Purchaser of drug 61[or cosmetic] enabled to obtain test or 
+analysis.— 
+Any person 62[or any recognised consumer association, whether such person is a 
+member of that association or not] shall, on application in the prescribed 
+manner and on payment of the prescribed fee, be entitled to submit for test or 
+analysis to a Government Analyst any drug 2[or cosmetic] 63[purchased by him 
+or it] and to receive a report of such test or analysis signed by the Government 
+Analyst. 
+5[Explanation.—For the purposes of this section and section 32, "recognised 
+consumer association" means a voluntary consumer association registered under 
+the Companies Act, 1956 or any other law for the time being in force.] 
+6[26A. Powers of Central Government to prohibit manufacture, etc., of 
+drug and cosmetic in public interest.—Without prejudice to any other 
+provision contained in this Chapter, if the Central Government is satisfied, that 
+the use of any drug or cosmetic is likely to involve any risk to human beings or 
+animals or that any drug does not have the therapeutic value claimed or 
+purported to be claimed for it or contains ingredients and in such quantity for 
+which there is no therapeutic justification and that in the public interest it is 
+necessary or expedient so to do, then, that Government may, by notification in 
+the Official Gazette, ^regulate, restrict or prohibit] the manufacture, sale or 
+distribution of such drug or cosmetic.] 
+2[26B. Power of Central Government to regulate or restrict, 
+manufacture, etc., of drug in public interest.—Without prejudice to any other 
+provision contained in this Chapter, if the Central Government is satisfied that a 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 27 of 64 
+ 
+drug is essential to meet the requirements of an emergency arising due to 
+epidemic or natural calamities and that in the public interest, it is necessary or 
+expedient so to do, then, that Government may, by notification in the Official 
+Gazette, regulate or restrict the manufacture, sale or distribution of such drug.] 
+3[27. Penalty for manufacture, sale, etc., of drugs in contravention of this 
+Chapter.—Whoever, himself or by any other person on his behalf, 
+manufactures for sale or for distribution, or sells, or stocks or exhibits or offers 
+for sale or distributes,— 
+(a) any drug deemed to be adulterated under section 17A or spurious under 
+section 4[17B and which] when used by any person for or in the diagnosis, 
+treatment, mitigation, or prevention of any disease or disorder is likely to cause 
+his death or is likely to cause such harm on his body as would amount to 
+grievous hurt within the meaning of section 320 of the Indian Penal Code (45 of 
+1860), solely on account of such drug being adulterated or spurious or not of 
+standard quality, as the case may be, shall be 5[punishable with imprisonment 
+for a term which shall not be less than ten years but which may extend to 
+imprisonment for life and shall also be liable to fine which shall not be less than 
+ten lakh rupees or three times value of the drugs confiscated, whichever is 
+more:] 
+6[Provided that the fine imposed on and released from, the person convicted 
+under this clause shall be paid, by way of compensation, tothe person who had 
+used the adulterated or spurious drugs referred to in this clause: 
+Provided further that where the use of the adulterated or spurious drugs 
+referred to in this clause has caused the death of a person who used such drugs, 
+the fine imposed on and realised from, the person convicted under this clause, 
+shall be paid to the relative of the person who had died due to the use of the 
+adulterated or spurious drugs referred to in this clause. 
+Explanation.—For the purposes of the second proviso, the expression 
+"relative" means— 
+(i)    spouse of the deceased person; or 
+(ii)    a minor legitimate son, and unmarried legitimate daughter and a 
+widowed mother; or 
+(iii)    parent of the minor victim; or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 28 of 64 
+ 
+(iv)    if wholly dependent on the earnings of the deceased person at the time 
+of his death, a son or a daughter who has attained the age of eighteen years; 
+or 
+(v)    any person, if wholly or in part, dependent on the earnings of the 
+deceased person at the time of his death,— 
+(a)    the parent; or 
+(b)    a minor brother or an unmarried sister; or 
+(c)    a widowed daughter-in-law; or 
+(d)    a widowed sister; or 
+(e)    a minor child of a pre-deceased son; or 
+(f)    a minor child of a pre-deceased daughter where no parent of the 
+child is alive; or 
+(g)    the paternal grandparent if no parent of the member is alive;] 
+(b) any drug— 
+(i)    deemed to be adulterated under section 17A, but not being a drug 
+referred to in clause (a), or 
+(ii)    without a valid licence as required under clause (c) of section 18, 
+shall be punishable with imprisonment for a term which shall ’[not be less 
+than three years but which may extend to five years and with fine which 
+shall not be less than one lakh rupees or three times the value of the drugs 
+confiscated, whichever is more]: 
+Provided that the Court may, for any adequate and special reasons to be 
+recorded in the judgment, impose a sentence ofimprisonment for a term of 
+64[less than three years and of fine of less than one lakh rupees]; 
+(c)    any drug deemed to be spurious under section 17B, but not being a drug 
+referred to in clause (a) shall be punishable with imprisonment for a term which 
+shall 65[not be less than seven years but which may extend to imprisonment for 
+life and with fine which shall not be less than three lakh rupees or three times 
+the value of the drugs confiscated, whichever is more]: 
+Provided that the Court may, for any adequate and special reasons, to be 
+recorded in the judgment, impose a sentence of imprisonment for a term of 
+66[less than seven years but not less than three years and of fine of less than one 
+lakh rupees]; 
+(d)    any drug, other than a drug referred to in clause (a) or clause (b) or clause 
+(c), in contravention of any other provision of this Chapter or any rule made 
+thereunder, shall be punishable with imprisonment for a term which shall not be 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 29 of 64 
+ 
+less than one year but which may extend to two years 67[and with fine which 
+shall not be less than twenty thousand rupees]: 
+Provided that the Court may for any adequate and special reasons to be 
+recorded in the judgment impose a sentence of imprisonment for a term of less 
+than one year. 
+5[27A. Penalty for manufacture, sale, etc., of cosmetics in contravention 
+of this Chapter.—Whoever himself or by any other person on his behalf 
+manufactures for sale or for distribution, or sells, or stocks or exhibits or offers 
+for sale— 
+1[(i) any cosmetic deemed to be spurious under section 17D or adulterated under 
+section 17E shall be punishable with imprisonment for a term which may extend 
+to three years and with fine which shall not be less than fifty thousand rupees or 
+three times to value of the cosmetics confiscated, whichever is more; 
+(ii) any cosmetic other than a cosmetic referred to in clause (i) in contravention 
+of any provisions of this Chapter or any rule made thereunder shall be 
+punishable with imprisonment for a term which may extend to one year or with 
+fine which may extend to twenty thousand rupees, or with both.] 
+2[28. Penalty for non-disclosure of the name of the manufacturer, etc.— 
+Whoever contravenes the provisions of section 18A 3[or section 24] shall be 
+punishable with imprisonment for a term which may extend to one year, or 
+4[with fine which shall not be less than twenty thousand rupees or with both.] 
+5[28A. Penalty for not keeping documents, etc., and for non-disclosure of 
+information.—Whoever without reasonable cause or excuse, contravenes the 
+provisions of section 18B shall be punishable with imprisonment for a term 
+which may extend to one year or 6[with fine which shall not be less than twenty 
+thousand rupees or with both].] 
+7[28B. Penalty for manufacture, etc., of drugs or cosmetics in 
+contravention of section 26A.—Whoever himself or by any other person on 
+his behalf manufactures or sells or distributes any drug or cosmetic in 
+contravention of the provisions of any notification issued under section 26A, 
+shall be punishable with imprisonment for a term which may extend to three 
+years and shall also be liable to fine which may extend to five thousand rupees.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 30 of 64 
+ 
+29. Penalty for use of Government Analyst's report for advertising.— 
+Whoever uses any report of a test or analysis made by the Central Drugs 
+Laboratory or by a Government Analyst, or any extract from such report, for the 
+purpose of advertising any drug 8[or cosmetic], shall be punishable with fine 
+which may extend to 9[five thousand rupees]. 
+10[30. Penalty for subsequent offences.—n[(l) Whoever having been 
+convicted of an offence,— 
+(a)    under clause (b) of section 27 is again convicted of an offence under that 
+clause, shall be punishable with imprisonment for a term which shall ’[not be 
+less than seven years but which may extend to ten years and with fine which 
+shall not be less than two lakh rupees]: 
+Provided that the Court may, for any adequate and special reasons to be 
+mentioned in the judgment, impose a sentence of imprisonment for a term of 
+68[less than seven years and of fine of less than one lakh rupees]; 
+(b)    under clause (c) of section 27, is again convicted of an offence under that 
+clause shall be punishable with imprisonment for a term which 3[shall not be 
+less than ten years but which may extend to imprisonment for life and with fine 
+which shall not be less than three lakh rupees]; 
+(c)    under clause (d) of section 27, is again convicted of an offence under that 
+clause shall be punishable with imprisonment for a term which shall not be less 
+than two years but which may extend to four years or with fine which shall not 
+be less than 69[fifty thousand rupees], or with both.] 
+5[(1A) Whoever, having been convicted of an offence under section 27A is 
+again convicted under that section, shall be punishable with imprisonment for a 
+term which may extend to two years, or with fine which may extend to 70[two 
+thousand rupees], or with both.] 
+(2) Whoever, having been convicted of an offence under 71[***] section 29 is 
+again convicted of an offence under the same section, shall be punishable with 
+imprisonment which may extend to 72[two years, or with fine which shall not be 
+less than ten thousand rupees or with both]. 
+ 
+ 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 31 of 64 
+ 
+STATE AMENDMENTS 
+Uttar Pradesh.—For section 30, substitute the following section, namely.— 
+"30. All offences punishable tinder this chapter shall be cognizable and non-
+bailable" 
+[Vide Uttar Pradesh Act 47 of 1975, sec. 5 (w.e.f. 15-9-1975).] 
+West Bengal.—In section 30,— 
+(a) in sub-section (1), in clause (a), for the words "ten years", substitute the 
+words "imprisonment for life"; 
+(b)    in sub-section (1), in clause (b), for the words "may extent to ten years, or 
+with fine, or with both", substitute the words "shall not be less than two years 
+but which may extend to imprisonment for life and shall also be liable to fine"; 
+(c)    in sub-section (1A), for the words "may extend to two years, or with fine 
+which me extend to one thousand rupees, or with both", substitute the words 
+"shall not be less than two years but which may extend to imprisonment for life 
+and shall also be liable to fine". 
+[Vide West Bengal Act 42 of 1975, sec. 5 (w.e.f. 29-4-1974).] 
+Ed. This State Amendment relates to section 30, prior to its amendments 
+made by the Central Act 26 of 2008, sec. 11 (w.e.f. 10-8-2009) and Central Act 
+68 of 1982, sec. 25 (w.e.f. 1-2-1983). 
+ 
+31. Confiscation.—73[(1)] Where any person has been convicted under this 
+Chapter for contravening any such provision of this Chapter or any rule made 
+thereunder as may be specified by rule made in this behalf, the stock of the drug 
+2[or cosmetic] in respect of which the contravention has been made shall be 
+liable to confiscation 74[and if such contravention is in respect of— 
+4[(i) manufacture of any drug deemed to be misbranded under section 17, 
+adulterated under section 17A or spurious under section 17B; or] 
+(ii) 75[manufacture for sale, or for distribution, sale, or stocking or 
+exhibiting or offering for sale,] or distribution of any drug without a valid 
+licence as required under clause (c) of section 18, any implements or machinery 
+used in such manufacture, sale or distribution and any receptacles, packages or 
+coverings in which such drug is contained and the animals, vehicles, vessels or 
+other conveyances used in carrying such drug shall also be liable to 
+confiscation]. 
+6[(2) Without prejudice to the provisions contained in sub-section (1) where 
+the Court is satisfied, on the application of an Inspector or otherwise and after 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 32 of 64 
+ 
+such inquiry as may be necessary that the drug or cosmetic is not of standard 
+quality 76[or is a 77[misbranded, adulterated or spurious drug or misbranded or 
+spurious cosmetic,]] such drug or, as the case may be, such cosmetic shall be 
+liable to confiscation.] 
+9[31A. Application of provisions to Government departments.—The 
+provisions of this Chapter except those contained in section 31 shall apply in 
+relation to the manufacture, sale or distribution of drugs by any department of 
+Government as they apply in relation to the manufacture, sale or distribution of 
+drugs by any other person.] 
+32. Cognizance of offences.—'[(1) No prosecution under this Chapter shall 
+be instituted except by— 
+(a)    an Inspector; or 
+(b)    any gazetted officer of the Central Government or a State Government 
+authorised in writing in this behalf by the Central Government or a State 
+Government by a general or special order made in this behalf by that 
+Government; or 
+(c)    the person aggrieved; or 
+(d)    a recognised consumer association whether such person is a member of 
+that association or not. 
+(2)    Save as otherwise provided in this Act, no court inferior to that of a 
+Court of Session shall try an offence punishable under this Chapter.] 
+(3)    Nothing contained in this Chapter shall be deemed to prevent any 
+person from being prosecuted under any other law for any act or omission 
+which constitutes an offence against this Chapter. 
+STATE AMENDMENT 
+West Bengal.—For section 32, substitute the following section, namely:— 
+"32. Cognizance of offences and arrest without warrant.—(1) All offences 
+punishable under this Act shall be cognizable and non-bailable. 
+(2) Any police officer not below the rank of a sub-inspector of Police may arrest 
+without warrant any person against whom a reasonable complaint has been 
+made or Creditable information has been received of his having been concerned 
+in any of the offences punishable under this Act." 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 33 of 64 
+ 
+[Vide West Bengal Act 42 of 1973, sec. 5 (w.e.f. 29-4-1974).] 
+2[32A. Power of Court to implead the manufacturer, etc.—Where, at any 
+time during the trial of any offence under this Chapter alleged to have been 
+committed by any person, not being the manufacturer of a drug or cosmetic or 
+his agent for the distribution thereof the Court is satisfied, on the evidence 
+adduced before it, that such manufacturer or agent is also concerned in that 
+offence, then, the Court may, notwithstanding anything contained 
+3[in 
+subsections (1), (2) and (3) of section 319 of the Code of Criminal Procedure, 
+1973 (2 of 1974)], proceed against him as though a prosecution had been 
+instituted against him under section 32.] 
+1[32B. Compounding of certain offences.—(1) Notwithstanding anything 
+contained in the Code of Criminal Procedure, 1973 (2 of 1974), any offence 
+punishable under clause (b) of sub-section (1) of section 13, section 28 and 
+section 28A of this Act (whether committed by a company or any officer 
+thereof), not being an offence punishable with imprisonment only, or with 
+imprisonment and also with fine, may, either before or after the institution of 
+any prosecution, be compounded by the Central Government or by any State 
+Government or any officer authorised in this behalf by the Central Government 
+or a State Government, on payment for credit to that Government of such sum 
+as that Government may, by rules made in this behalf, specify: 
+Provided that such sum shall not, in any case, exceed the maximum amount 
+of the fine which may be imposed under this Act for the offence so 
+compounded: 
+Provided further that in cases of subsequent offences, the same shall not be 
+compoundable. 
+(2)    When the accused has been committed for trial or when he has been 
+convicted and an appeal is pending, no composition for the offence shall be 
+allowed without the leave of the court to which he is committed or, as the case 
+may be, before which the appeal is to be heard. 
+(3)    Where an offence is compounded under sub-section (1), no proceeding 
+or further proceeding, as the case may be, shall be taken against the offender in 
+respect of the offence so compounded and the offender, if in custody, shall be 
+released forthwith.] 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 34 of 64 
+ 
+33. Power of Central Government to make rules.—78[(1) The Central 
+Government may 79[after consultation with, or on the recommendation of, the 
+Board] and after previous publication by notification in the Official Gazette, 
+make rules for the purposes of giving effect to the provisions of this Chapter: 
+Provided that consultation with the Board may be dispensed with if the 
+Central Government is of opinion that circumstances have arisen which render 
+it necessary to make rules without such consultation, but in such a case the 
+Board shall be consulted within six months of the making of the rules and the 
+Central Government shall take into consideration any suggestions which the 
+Board may make in relation to the amendment of the said rules.] 
+(2) Without prejudice to the generality of the foregoing power, such rules 
+may— 
+(a)    provide for the establishment of laboratories for testing and analysing 
+drugs 80[or cosmetics]; 
+(b)    prescribe the qualifications and duties of Government Analysts and the 
+qualifications of Inspectors; 
+(c)    prescribe the methods of test or analysis to be employed in determining 
+whether a drug 4[or cosmetic] is of standard quality; 
+(d)    prescribe, in respect of biological and organometallic compounds, the 
+units or methods of standardisation; 
+:[(dd) prescribe under clause (d) of 81[section 17A] the colour or colours which a 
+drug may bear or contain for purposes of colouring;] 
+3[(dda) prescribe under clause (d) of section 17E the colour or colours which a 
+cosmetic may bear or contain for the purposes of colouring;] 
+(e)    prescribe the forms of licences 82[for the manufacture for sale or for 
+distribution], for the sale and for the distribution of drugs or any specified drug 
+or class of drugs 83[or of cosmetics or any specified cosmetic or class of 
+cosmetics], the form of application for such licences, the conditions subject to 
+which such licences may be issued, the authority empowered to issue the same 
+84[the qualifications of such authority] and the fees payable therefor; 6[and 
+provide for the cancellation or suspension of such licences in any case where 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 35 of 64 
+ 
+any provision of this Chapter or the rules made thereunder is contravened or any 
+of the conditions subject to which they are issued is not complied with]; 
+6[(ee) prescribe the records, registers or other documents to be kept and 
+maintained under section 18B;] 
+6[(eea) prescribe the fees for the inspection (for the purposes of grant or renewal 
+of licences) of premises, wherein any drug or cosmetic is being or is proposed 
+to be manufactured;] 
+6[(eeb) prescribe the manner in which copies are to be certified under subsection 
+(2A) of section 22;] 
+(f)    specify the diseases or ailments which a drug may not purport or claim 
+85[to prevent, cure or mitigate] and such other effects which a drug may not 
+purport or claim to have; 
+(g)    prescribe the conditions subject to which small quantities of drugs may be 
+manufactured for the purpose of examination, test or analysis; 
+(h)    require the date of manufacture and the date of expiry of potency to be 
+clearly and truly stated on the label or container of any specified drug or class of 
+drugs, and prohibit the sale, stocking or exhibition for sale, or distribution of the 
+said drug or class of drugs after the expiry of a specified period from the date of 
+manufacture or after the expiry of the date of potency; 
+(i)    prescribe the conditions to be observed in the packing in bottles, packages, 
+and other containers of drugs 5[or cosmetics], 6[including the use of packing 
+material which comes into direct contact with the drugs] and prohibit the sale, 
+stocking or exhibition for sale, or distribution of drugs '[or cosmetics] packed in 
+contravention of such conditions; 
+(j) regulate the mode of labelling packed drugs ’[or cosmetics], and prescribe 
+the matters which shall or shall not be included in such labels; 
+(k) prescribe the maximum proportion of any poisonous substance which may 
+be added to or contained in any drug, prohibit the manufacture, sale or stocking 
+or exhibition for sale, or distribution of any drug in which that proportion is 
+exceeded, and specify substances which shall be deemed to be poisonous for the 
+purposes of this Chapter and the rules made thereunder; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 36 of 64 
+ 
+(1) require that the accepted scientific name of any specified drug shall be 
+displayed in the prescribed manner on the label or wrapper of any patent or 
+proprietary medicine containing such drug; 
+3[(n) prescribe the powers and duties of Inspectors 86[and the qualifications of 
+the authority to which such Inspectors shall be subordinate] and 5[specify the 
+drugs or classes of drugs or cosmetics or classes of cosmetics] in relation to 
+which and the conditions, limitations or restrictions subject to which, such 
+powers and duties may be exercised or performed;] 
+(o) prescribe the forms of report to be given by Government Analysts, and the 
+manner of application for test or analysis under section 26 and the fees payable 
+therefor; 
+6[(p) specify the offences against this Chapter or any rule made thereunder in 
+relation to which an order of confiscation may be made under section 31; 
+87[***]] 
+(q) provide for the exemption, conditionally or otherwise, from all or any of the 
+provisions of this Chapter or the rules made thereunder, of any specified drug or 
+class of drugs J[or cosmetic or class of cosmetics]; 8[and] 
+9[(r) sum which may be specified by the Central Government under section 
+32B.] 
+STATE AMENDMENT 
+Maharashtra.—In section 33,— 
+(1)    in sub-section (2),— 
+(a)    in clause (e), omit the words "and the fees payable"; 
+(b)    omit clause (ee); 
+(c)    in clause (o), omit the words "and the fees payable therefor" 
+[Vide Maharashtra Act 31 of 1989, sec. 2 (w.e.f. 4-10-1989.] 
+(2)    after section 33, insert the following section, namely:— 
+"33A. Power of State Government to make rules.—The State Government may, 
+by notification in the Official Gazette and subject to the condition of previous 
+publication, make rules to prescribe the fees payable for the following 
+purposes of this chapter, namely:— 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 37 of 64 
+ 
+(a)    grant or renewal of a license for the manufacture for sale or distribution for 
+the sale and for the distribution of drugs or any specified drugs or class of drug 
+or of cosmetics or any specified cosmetics or class of cosmetics; 
+(b)    inspection (for the purposes of grant or renewal of licenses) or premises, 
+wherein any drug or cosmetic is being or is proposed to be manufactured; 
+(c)    test or analysis of any drug or cosmetic by Government Analyst; and 
+(d)    any other matter for which fees may be prescribed under this Chapter." 
+[Vide Maharashtra Act 31 of 1989, sec. 3 (w.e.f. 4-10-1989).] 
+ 
+1[33A. Chapter not to apply to 88[Ayurvedic, Siddha or Unani] drugs.—
+Save as otherwise provided in this Act, nothing contained in this Chapter shall 
+apply to 2[Ayurvedic, Siddha or Unani] drugs.] 
+3[CHAPTER IVA 
+PROVISIONS RELATING TO 2[AYURVEDIC, 
+SIDDHA AND UNANI] DRUGS 
+ 
+33B. Application of Chapter IVA.—This Chapter shall apply only to 
+2[Ayurvedic, Siddha and Unani] drugs. 
+33C. Ayurvedic and Unani Drugs Technical Advisory Board.—(1) 
+TheCentral Government shall, by notification in the Official Gazette and with 
+effect from such date as may be specified therein, constitute a Board (to be 
+called the 4[Ayurvedic, Siddha and Unani Drugs Technical Advisory Board]) to 
+advise the Central Government and the State Governments on technical matters 
+arising out of this Chapter and to carry out the other functions assigned to it by 
+this Chapter. 
+(2)    The Board shall consist of the following members, namely,— 
+(i)    the Director General of Health Services, ex officio; 
+(ii)    the Drugs Controller, India, ex officio; 
+![(iii) the principal officer dealing with Indian systems of medicine in the 
+Ministry of Health, ex officio;] 
+(iv)    the Director of the Central Drugs Laboratory, Calcutta, ex officio; 
+(v)    one person holding the appointment of Government Analyst under 
+section 33F, to be nominated by the Central Government; 
+(vi)    one Pharmacognocist to be nominated by the Central Government; 
+(vii)    one Phyto-chemist to be nominated by the Central Government; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 38 of 64 
+ 
+2[(viii) four persons to be nominated by the Central Government, two from 
+amongst the members of the Ayurvedic Pharmacopoeia Committee, one 
+from amongst the members of Unani Pharmacopoeia Committee and one 
+from amongst the members of the Siddha Pharmacopoeia Committee;] 
+(ix)    one teacher in Darvyaguna and Bhaishajya Kalpana, to be nominated 
+by the Central Government; 
+(x)    one teacher in Ilm-ul-Advia and Taklis-Wa-Dawa-Sazi, to be 
+nominated by the Central Government; 
+3[(xi) one teacher in Gunapadam to be nominated by the Central 
+Government; 
+(xii)    three persons, one each to represent the Ayurvedic, Siddha and 
+Unani drug industry, to be nominated by the Central Government; 
+(xiii)    three persons, one each from amongst the practitioners of 
+Ayurvedic, Siddha and Unani Tibb systems of medicine to be nominated by 
+the Central Government.] 
+(3)    The Central Government shall appoint a member of the Board as its 
+Chairman. 
+(4)    The nominated members of the Board shall hold office for three years 
+but shall be eligible for renomination. 
+(5)    The Board may, subject to the previous approval of the Central 
+Government, make bye-laws fixing quorum and regulating its own procedure 
+and conduct of all business to be transacted by it. 
+(6)    The functions of the Board may be exercised notwithstanding any 
+vacancy therein. 
+(7)    The Central Government shall appoint a person to be Secretary of the 
+Board and shall provide the Board with such clerical and other staff as the 
+Central Government considers necessary. 
+![33D. The Ayurvedic, Siddha and Unani Drugs Consultative 
+Committee.—(1) The Central Government may constitute an Advisory 
+Committee to be called the Ayurvedic, Siddha and Unani Drugs Consultative 
+Committee to advise the Central Government, the State Governments and the 
+Ayurvedic, Siddha and Unani Drugs Technical Advisory Board on any matter 
+for the purpose of securing uniformity throughout India in the administration of 
+this Act in so far as it relates to Ayurvedic, Siddha or Unani drugs. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 39 of 64 
+ 
+(2)    The Ayurvedic, Siddha and Unani Drugs Consultative Committee shall 
+consist of two persons to be nominated by the Central Government as 
+representatives of that Government and not more than one representative of 
+each State to be nominated by the State Government concerned. 
+(3)    The Ayurvedic, Siddha and Unani Drugs Consultative Committee shall 
+meet when required to do so by the Central Government and shall regulate its 
+own procedure.] 
+1[33E. Misbranded drugs.—For the purposes of this Chapter, an 
+Ayurvedic, Siddha or Unani drug shall be deemed to be misbranded— 
+(a)    if it is so coloured, coated, powdered or polished that damage is concealed, 
+or if it is made to appear of better or greater therapeutic value than it really is; or 
+(b)    if it is not labelled in the prescribed manner; or 
+(c)    if its label or container or anything accompanying the drug bears any 
+statement, design or device which makes any false claim for the drug or which 
+is false or misleading in any particular.] 
+1[33EE. Adulterated drugs.—For the purposes of this Chapter, an 
+Ayurvedic, Siddha or Unani drug shall be deemed to be adulterated,— 
+(a)    if it consists, in whole or in part, of any filthy, putrid or decomposed 
+substance; or 
+(b)    if it has been prepared, packed or stored under insanitary conditions 
+whereby it may have been contaminated with filth or whereby it may have been 
+rendered injurious to health; or 
+(c)    if its container is composed, in whole or in part, of any poisonous or 
+deleterious substance which may render the contents injurious to health; or 
+(d)    if it bears or contains, for purposes of colouring only, a colour other than 
+one which is prescribed; or 
+(e)    if it contains any harmful or toxic substance which may render it injurious 
+to health; or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 40 of 64 
+ 
+(f)    if any substance has been mixed therewith so as to reduce its quality or 
+strength. 
+Explanation.—For the purpose of clause (a), a drug shall not be deemed to 
+consist, in whole or in part, of any decomposed substance only by reason of the 
+fact that such decomposed substance is the result of any natural decomposition 
+of the drug: 
+Provided that such decomposition is not due to any negligence on the part of 
+the manufacturer of the drug or the dealer thereof and that it does not render the 
+drug injurious to health.] 
+1[33EEA. Spurious drugs.—For the purposes of this Chapter, an 
+Ayurvedic, Siddha or Unani drug shall be deemed to be spurious— 
+(a)    if it is sold, or offered or exhibited for sale, under a name which belongs to 
+another drug; or 
+(b)    if it is an imitation of, or is a substitute for, another drug or resembles 
+another drug in a manner likely to deceive, or bears upon it or upon its label or 
+container the name of another drug, unless it is plainly and conspicuously 
+marked so as to reveal its true character and its lack of identity with such other 
+drug; or 
+(c)    if the label or container bears the name of an individual or company 
+purporting to be the manufacturer of the drug, which individual or company is 
+fictitious or does not exist; or 
+(d)    if it has been substituted wholly or in part by any other drug or substance; 
+or 
+(e)    if it purports to be the product of a manufacturer of whom it is not truly a 
+product.] 
+1[33EEB. Regulation of manufacture for sale of Ayurvedic, Siddha and 
+Unani drugs.—No person shall manufacture for sale or for distribution any 
+Ayurvedic, Siddha or Unani drug except in accordance with such standards, if 
+any, as may be prescribed in relation to that drug.] 
+H33EEC. Prohibition of manufacture and sale of certain Ayurvedic, 
+Siddha and Unani drugs.—From such date as the State Government may, by 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 41 of 64 
+ 
+notification in the Official Gazette, specify in this behalf, no person, either by 
+himself or by any other person on his behalf, shall— 
+(a)    manufacture for sale or for distribution— 
+(i)    any misbranded, adulterated or spurious Ayurvedic, Siddha or Unani drug; 
+(ii)    any patent or proprietary medicine, unless there is displayed in the 
+prescribed manner on the label or container thereof the true list of all the 
+ingredients contained in it; and 
+(iii) any Ayurvedic, Siddha or Unani drug in contravention of any of the 
+provisions of this Chapter or any rule made thereunder; 
+(b)    sell, stock or exhibit or offer for sale or distribute any Ayurvedic, Siddha 
+or Unani drug which has been manufactured in contravention of any of the 
+provisions of this Act, or any rule made thereunder; 
+(c)    manufacture for sale or for distribution, any Ayurvedic, Siddha or Unani 
+drug, except under, and in accordance with the conditions of, a licence issued 
+for such purpose under this Chapter by the prescribed authority: 
+Provided that nothing in this section shall apply to Vaidyas and Hakims who 
+manufacture Ayurvedic, Siddha or Unani drug for the use of their own patients: 
+Provided further that nothing in this section shall apply to the manufacture, 
+subject to the prescribed conditions, of small quantities of any Ayurvedic, 
+Siddha or Unani drug for the purpose of examination, test or analysis.] 
+1[33EED. Power of Central Government to prohibit manufacture, etc., 
+of Ayurvedic, Siddha or Unani drugs in public interest.—Without prejudice 
+to any other provision contained in this Chapter, if the Central Government is 
+satisfied on the basis of any evidence or other material available before it that 
+the use of any Ayurvedic, Siddha or Unani drug is likely to involve any risk to 
+human beings or animals or that any such drug does not have the therapeutic 
+value claimed or purported to be claimed for it and that in the public interest it 
+is necessary or expedient so to do then, that Government may, by notification in 
+the Official Gazette, prohibit the manufacture, sale or distribution of such drug.] 
+33F. Government Analysts.—(1) The Central Government or a State 
+Government may, by notification in the Official Gazette, appoint such persons 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 42 of 64 
+ 
+as it thinks fit, having the prescribed qualifications, to be Government Analysts 
+for such areas as may be assigned to them by the Central Government or the 
+State Government, as the case may be. 
+(2) Notwithstanding anything contained in sub-section (1), neither the 
+Central Government nor a State Government shall appoint as a Government 
+Analyst any official not serving under it without the previous consent of the 
+Government under which he is serving. 
+2[(3) No person who has any financial interest in the manufacture or sale of 
+any drug shall be appointed to be a Government Analyst under this section.] 
+33G. Inspectors.—(1) The Central Government or a State Government may, 
+by notification in the Official Gazette, appoint such persons as it thinks fit, 
+having the prescribed qualifications, to be Inspectors for such areas as may be 
+assigned to them by the Central Government or the State Government as the 
+case may be. 
+(2)    The powers which may be exercised by an Inspector and the duties 
+which may be performed by him and the conditions, limitations or restrictions 
+subject to which such powers and duties may be exercised or performed shall be 
+such as may be prescribed. 
+(3)    No person who has any financial interest in the manufacture or sale of 
+any drug shall be appointed to be an Inspector under this section. 
+(4)    Every Inspector shall be deemed to be a public servant within the 
+meaning of section 21 of the Indian Penal Code (45 of 1860) and shall be 
+officially subordinate to such authority as the Government appointing him may 
+specify in this behalf. 
+33H. Application of provisions of sections 22, 23, 24 and 25.—The 
+provisions of sections 22, 23, 24 and 25 and the rules, if any, made thereunder 
+shall, so far as may be, apply in relation to an Inspector and a Government 
+Analyst appointed under this Chapter as they apply in relation to an Inspector 
+and a Government Analyst appointed under Chapter IV, subject to the 
+modification that the references to "drug" in the said sections, shall be construed 
+as references    to 89 [Ayurvedic, Siddha    or Unani] drug. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 43 of 64 
+ 
+2[33-I. Penalty for    manufacture,    sale, etc., of Ayurvedic, Siddha or 
+Unani drug in contravention of this Chapter.—Whoever himself or by any 
+other person on his behalf— 
+(1)    manufactures for sale or for distribution— 
+3[(a) any Ayurvedic, Siddha or Unani drug— 
+(i)    deemed to be misbranded under section 33E, 
+(ii)    deemed to be adulterated under section 33EE, or 
+(iii)    without a valid licence or in violation of any of the conditions thereof, as 
+required under section 33EEC, shall be punishable with imprisonment for a 
+term which may extend to one year and with fine which shall not be less than 
+twenty thousand rupees or three times the value of the drugs confiscated, 
+whichever is more;] 
+(b) any Ayurvedic, Siddha or Unani drug deemed to be spurious under section 
+33EEA, shall be punishable with imprisonment for a term    which shall not be 
+less than one year but which   may extend    to three years    and with fine which 
+shall not be less    than [fifty thousand rupees or three times the value of the 
+drugs confiscated, whichever is more]: 
+Provided that the Court may, for any adequate and special reasons to be 
+mentioned in the judgment, impose a sentence of imprisonment for a term of 
+less than one year and of fine of less than 90[fifty thousand rupees or three times 
+the value of the drugs confiscated, whichever is more]; or 
+5[(c) any Ayurvedic, Siddha or Unani drug in contravention of the provisions of 
+any notification issued under section 33EED shall be punishable with 
+imprisonment for a term which may extend to three years and with fine which 
+may extend to fifty thousand rupees or three times the value of the drugs 
+confiscated, whichever is more.] 
+(2)    contravenes any other provisions of this Chapter or of section 24 as 
+applied by section 33H or any rule made under this Chapter, shall be 
+punishable with imprisonment for a term which may extend to ’[six months and 
+with fine which shall not be less than ten thousand rupees]. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 44 of 64 
+ 
+2[33J. Penalty for subsequent offences.—Whoever having been convicted 
+of an offence,— 
+(a)    under clause (a) of sub-section (1) of section 33-1 is again convicted of an 
+offence under that clause, shall be punishable with imprisonment for a term 
+which may extend to two years and with fine which shall not be less than 91[fifty 
+thousand rupees or three times the value of the drugs confiscated, whichever is 
+more]; 
+(b)    under clause (b) of sub-section (1) of section 33-1 is again convicted of an 
+offence under that clause, shall be punishable with imprisonment for a term 
+which shall not be less than two years but which may extend to six years and 
+with fine which shall not be less than 92[one lakh rupees or three times the value 
+of the drugs confiscated, whichever is more]: 
+Provided that the Court may, for any adequate and special reasons to be 
+mentioned in the judgment, impose a sentence of imprisonment for a term of 
+less than two years and of fine of less than 4[one lakh rupees or three times the 
+value of the drugs confiscated, whichever is more]; 
+(c)    under sub-section (2) of section 33-1 is again convicted of an offence 
+under that sub-section, shall be punishable with imprisonment for a term which 
+may extend to 93[one year and with fine which shall not be less than twenty 
+thousand rupees or three times the value of the drugs confiscated, whichever is 
+more]. 
+33K. Confiscation.—Where any person has been convicted under this 
+Chapter, the stock of the 94[Ayurvedic, Siddha or Unani] drug, in respect of 
+which the contravention has been made, shall be liable to confiscation. 
+3[33KA. Disclosure of name of manufacturer, etc.—Every person, not 
+being the manufacturer of any Ayurvedic, Siddha or Unani drug or his agent for 
+the distribution thereof, shall, if so required, disclose to the Inspector the name, 
+address and other particulars of the person from whom he acquired the 
+Ayurvedic, Siddha or Unani drug.] 
+7[33KB. Maintenance of records and furnishing of information.—Every 
+person holding a licence under clause (c) of section 33EEC shall keep and 
+maintain such records, registers and other documents as may be prescribed and 
+shall furnish to any officer or authority exercising any power or discharging any 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 45 of 64 
+ 
+function under this Act such information as is required by such officer or 
+authority for carrying out the purposes of this Act.] 
+33L. Application of provisions to Government departments.—The 
+provisions of this Chapter except those contained in section 33K shall apply in 
+relation to the manufacture for sale, sale or distribution of any 95 [Ayurvedic, 
+Siddha or Unani] drug by any department of Government as they apply in 
+relation to the manufacture for sale, sale, or distribution of such drug by any 
+other person. 
+33M. Cognizance of offences.—(1) No prosecution under this Chapter shall 
+be instituted except by an Inspector 96[with the previous sanction of the 
+authority specified under sub-section (4) of section 33G]. 
+(2) No Court inferior to that 97[of a Metropolitan Magistrate or of a Judicial 
+Magistrate of the first class] shall try an offence punishable under this Chapter. 
+33N. Power of Central Government to make rules.—(1) The Central 
+Government may, 98[after consultation with, or on the recommendation of, the 
+Board] and after previous publication by notification in the Official Gazette, 
+make rules for the purpose of giving effect to the provisions of this Chapter: 
+Provided that consultation with the Board may be dispensed with if the 
+Central Government is of opinion that circumstances have arisen which render 
+it necessary to make rules without such consultation, but in such a case, the 
+Board shall be consulted within six months of the making of the rules and the 
+Central Government shall take into consideration any suggestions which the 
+Board may make in relation to the amendment of the said rules. 
+(2) Without prejudice to the generality of the foregoing power, such rules 
+may— 
+(a)    provide for the establishment of laboratories for testing and analysing 
+’[Ayurvedic, Siddha or Unani] drugs; 
+(b)    prescribe the qualifications and duties of Government Analysts and the 
+qualifications of Inspectors; 
+(c)    prescribe the methods of test or analysis to be employed in determining 
+whether any ’[Ayurvedic, Siddha or Unani] drug is labelled with the true list of 
+the ingredients which it is purported to contain; 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 46 of 64 
+ 
+(d)    specify any substance as a poisonous substance; 
+(e)    prescribe the forms of licences for the manufacture for sale of ’[Ayurvedic, 
+Siddha or Unani] drugs, 99[and for sale of processed Ayurvedic, Siddha or 
+Unani drugs,] the form of application for such licences, the conditions subject to 
+which such licences may be issued, the authority empowered to issue the same 
+and the fees payable therefor; J[and provide for the cancellation or suspension of 
+such licences in any case where any provision of this Chapter or rules made 
+thereunder is contravened or any of the conditions subject to which they are 
+issued is not complied with]; 
+2[(f) prescribe the conditions to be observed in the packing of Ayurvedic, 
+Siddha and Unani drugs including the use of packing material which comes into 
+direct contact with the drugs, regulate the mode of labelling packed drugs and 
+prescribe the matters which shall or shall not be included in such labels;] 
+(g)    prescribe the conditions subject to which small quantities of 1 [Ayurvedic, 
+Siddha or Unani] drugs may be manufactured for the purpose of examination, 
+test or analysis; and 
+1[(gg) prescribe under clause (d) of section 33EE the colour or colours which an 
+Ayurvedic, Siddha or Unani drug may bear or contain for purposes of 
+colouring;] 
+1 [ (gga) prescribe the standards for Ayurvedic, Siddha or Unani drugs under 
+section 33EEB 100[***];] 
+4[(ggb) prescribe the records, registers or other documents to be kept and 
+maintained under section 33KB; and] 
+(h)    any other matter which is to be or may be prescribed under this Chapter. 
+STATE AMENDMENT 
+Maharashtra.—In section 33N,— 
+(1)    in sub-section (2), in clause (e), omit the words "and the fees payable 
+therefore"; 
+(2)    after section 33N, insert the following section, namely:— 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 47 of 64 
+ 
+"33N-1. Power of State government to make roles.—The State Government 
+may, by notification in the Official Gazette and subject to the condition of 
+previous publication, make rules to prescribe the fees payable for the following 
+purposes of this chapter, namely.— 
+(a)    grant or renewal of a license for the manufacture for sale of Ayurvedic, 
+Siddha or Unani drugs, and for sale of processed Ayurvedic, Siddha or Unani 
+drugs; 
+(b)    inspection (for the purpose of grant or removal of licenses) of premises, 
+wherein any Ayurvedic, Siddha or Unani drug is being or is proposed to be 
+manufactured; 
+(c)    test or analysis of Ayurvedic, Siddha or Unani drug by Government 
+Analyst; and 
+(d)    any other matter for which fees may be prescribed under this chapter." 
+[Vide Maharashtra Act 31 of 1989, sec. 4 (w.e.f. 4-10-1989).] 
+33-0. Power to amend First Schedule.—The Central Government, after 
+consultation with the Board and after giving, by notification in the Official 
+Gazette, not less than three months' notice of its intention so to do, may, by a 
+like notification, add to or otherwise amend the First Schedule for the purposes 
+of this Chapter and thereupon the said Schedule shall be deemed to be amended 
+accordingly.] 
+CHAPTER V  
+MISCELLANEOUS 
+2[101[33P.] Power to give directions.—The Central Government may give 
+such directions to any State Government as may appear to the Central 
+Government to be necessary for carrying into execution in the State any of the 
+provisions of this Act or of any rule or order made thereunder.] 
+34. Offences by companies.—(1) Where an offence under this Act has been 
+committed by a company, every person who at the time the offence was 
+committed, was in charge of, and was responsible to the company for the 
+conduct of the business of the company, as well as the company shall be 
+deemed to be guilty of the offence and shall be liable to be proceeded against 
+and punished accordingly: 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 48 of 64 
+ 
+Provided that nothing contained in this sub-section shall render any such 
+person liable to any punishment provided in this Act if he proves that the 
+offence was committed without his knowledge or that he exercised all due 
+diligence to prevent the commission of such offence. 
+(2) Notwithstanding anything contained in sub-section (1), where an offence 
+under this Act has been committed by a company and it is proved that the 
+offence has been committed with the consent or connivance of, or is attributable 
+to any neglect on the part of, any director, manager, secretary or other officer of 
+the company, such director, manager, secretary or other officer shall also be 
+deemed to be guilty of that offence and shall be liable to be proceeded against 
+and punished accordingly. 
+Explanation.—For the purposes of this section— 
+(a)    "company" means a body corporate, and includes a firm or other 
+association of individuals; and 
+(b)    "director" in relation to a firm means a partner in the firm. 
+4[34A. Offences by Government departments.—Where an offence under 
+Chapter IV or Chapter IVA has been committed by any department of 
+Government, such authority as is specified by the Central Government to be in 
+charge of manufacture, sale or distribution of drugs or where no authority is 
+specified, the head of the department, shall be deemed to be guilty of the 
+offence and shall be liable to be proceeded against and punished accordingly: 
+Provided that nothing contained in this section shall render any such 
+authority or person liable to any punishment provided in Chapter IV or Chapter 
+IVA, as the case may be, if such authority or person proves that the offence was 
+committed without its or his knowledge or that such authority or person 
+exercised all due diligence to prevent the commission of such offence.] 
+1[34AA. Penalty for vexatious search or seizure.—Any Inspector 
+exercising powers under this Act or the rules made thereunder, who,— 
+(a)    without reasonable ground of suspicion searches any place, vehicle, vessel 
+or other conveyance; or 
+(b)    vexatiously and unnecessarily searches any person; or 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 49 of 64 
+ 
+(c)    vexatiously and unnecessarily seizes any drug or cosmetic, or any 
+substance or article, or any record, register, document or other material object; 
+or 
+(d)    commits, as such Inspector, any other act, to the injury of any person 
+without having reason to believe that such act is required for the execution of 
+his duty, shall be punishable with fine which may extend to one thousand 
+rupees.] 
+35.    Publication of sentences passed under this Act.—(1) If any person is 
+convicted of an offence under this Act, 102[the Court before which the 
+conviction takes place shall, on application made to it by the Inspector, cause] 
+the offender's name, place of residence, the offence of which he has been 
+convicted and the penalty which has been inflicted upon him, to be published at 
+the expense of such person in such newspapers or in such other manner as the 
+Court may direct. 
+(2) The expenses of such publication shall be deemed to form part of the 
+costs relating to the conviction and shall be recoverable in the same manner as 
+those costs are recoverable. 
+36. 
+   Magistrate's 
+power 
+to 
+impose 
+enhanced 
+penalties.—
+Notwithstanding anything contained in 103[***] 104[the Code of Criminal 
+Procedure, 1973 (2 of 1974)], it shall be lawful for 105[any Metropolitan 
+Magistrate or any Judicial Magistrate of the first class] to pass any sentence 
+authorized by this Act in excess of his powers under 3[***] the said Code. 
+1[36A. Certain offences to be tried summarily.—Notwithstanding 
+anything contained in the Code of Criminal Procedure, 1973 (2 of 1974), 106[all 
+offences (except the offences triable by the Special Court under section 36AB 
+or Court of Session) under this Act], punishable with imprisonment for a term 
+not exceeding three years, other than an offence under clause (b) of sub-section 
+(1) of section 33-I, shall be tried in a summary way by a Judicial Magistrate of 
+the first class specially empowered in this behalf by the State Government or by 
+a Metropolitan Magistrate and the provisions of sections 262 to 265 (both 
+inclusive) of the said Code shall, as far as may be, apply to such trial: 
+Provided that, in the case of any conviction in a summary trial under this 
+section, it shall be lawful for the Magistrate to pass a sentence of imprisonment 
+for a term not exceeding one year: 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 50 of 64 
+ 
+Provided further that when at the commencement of, or in the course of, a 
+summary trial under this section it appears to the Magistrate that the nature of 
+the case is such that a sentence of imprisonment for a term exceeding one year 
+may have to be passed or that it is, for any other reason, undesirable to try the 
+case summarily, the Magistrate shall, after hearing the parties, record an order 
+to that effect and thereafter recall any witness who has been examined and 
+proceed to hear or rehear the case in the manner provided by the said Code.] 
+3[36AB. Special Courts.—(1) The Central Government, or the State 
+Government, in consultation with the Chief Justice of the High Court, shall, for 
+trial of offences relating to adulterated drugs or spurious drugs and punishable 
+under clauses (a) and (b) of section 13, sub-section (3) of section 22, clauses (a) 
+and (c) of section 27, section 28, section 28A, section 28B and clause (b) of 
+subsection (1) of section 30 and other offences relating to adulterated drugs or 
+spurious drugs, by notification, designate one or more Courts of Session as a 
+Special Court or Special Courts for such area or areas or for such case or class 
+or group of cases as may be specified in the notification. 
+Explanation.—In this sub-section, "High Court" means the High Court of the 
+State in which a Court of Session designated as Special Court was functioning 
+immediately before such designation. 
+(2) While trying an offence under this Act, a Special Court shall also try an 
+offence, other than an offence referred to in sub-section (1), with which the 
+accused may, under the Code of Criminal Procedure, 1973 (2 of 1974), be 
+charged at the same trial.] 
+3[36AC. Offences to be cognizable and non-bailable in certain cases.—
+(1)Notwithstanding anything contained in the Code of Criminal Procedure, 
+1973 (2 of 1974),— 
+(a) every offence, relating to adulterated or spurious drug and punishable under 
+clauses (a) and (c) of sub-section (1) of section 13, clause (a) of sub-section (2) 
+of section 13, sub-section (3) of section 22, clauses (a) and (c) of section 27, 
+section 28, section 28A, section 28B and sub-sections (1) and (2) of section 30 
+and other offences relating to adulterated drugs or spurious drugs, shall be 
+cognizable. 
+(b) no person accused, of an offence punishable under clauses (a) and 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 51 of 64 
+ 
+(c) of sub-section (1) of section 13, clause (a) of sub-section (2) of section 13, 
+sub-section (3) of section 22, clauses (a) and (c) of section27, section 28, 
+section 28A, section 28B and sub-sections (1) and (2) of section 30 and other 
+offences relating to adulterated drugs or spurious drugs, shall be released on bail 
+or on his own bond unless— 
+(i)    the Public Prosecutor has been given an opportunity to oppose the 
+application for such release; and 
+(ii)    where the Public Prosecutor opposes the application, the Court is 
+satisfied that there are reasonable grounds for believing that he is not 
+guilty of such offence and that he is not likely to commit any offence 
+while on bail: 
+Provided that a person, who, is under the age of sixteen years, or is a woman 
+or is sick or infirm, may be released on bail, if the Special Court so directs. 
+(2)    The limitation on granting of bail specified in clause (b) of sub-section 
+(1) is in addition to the limitations under the Code of Criminal Procedure, 1973 
+(2 of 1974) or any other law for the time being in force on granting of bail. 
+(3)    Nothing contained in this section shall be deemed to affect the special 
+powers of the High Court regarding bail under section 439 of the Code of 
+Criminal Procedure, 1973 (2 of 1974) and the High Court may exercise such 
+powers including the power under clause (b) of sub-section (1) of that section as 
+if the reference to "Magistrate" in that section includes also a reference to a 
+"Special Court" designated under section 36AB.] 
+1[36AD. Application of Code of Criminal Procedure, 1973 to 
+proceedings before Special Court.—(1) Save as otherwise provided in this 
+Act, the provisions of the Code of Criminal Procedure, 1973 (2 of 1974) 
+(including the provisions as to bails or bonds), shall apply to the proceedings 
+before a Special Court and for the purposes of the said provisions, the Special 
+Court shall be deemed to be a Court of Session and the person conducting the 
+prosecution before the Special Court, shall be deemed to be a Public Prosecutor: 
+Provided that the Central Government or the State Government may also 
+appoint, for any case or class or group of cases, a Special Public Prosecutor. 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 52 of 64 
+ 
+(2)    A person shall not be qualified to be appointed as a Public Prosecutor 
+or a Special Public Prosecutor under this section unless he has been in practice 
+as an advocate for not less than seven years, under the Union or a State, 
+requiring special knowledge of law. 
+(3)    Every person appointed as a Public Prosecutor or a Special Public 
+Prosecutor under this section shall be deemed to be a Public Prosecutor within 
+the meaning of clause (u) of section 2 of the Code of Criminal Procedure, 1973 
+(2 of 1974) and the provisions of that Code shall have effect accordingly.] 
+1[36AE. Appeal and revision.—The High Court may exercise, so far as 
+may be applicable, all the powers conferred by Chapter XXIX or Chapter XXX 
+of the Code of Criminal Procedure, 1973 (2 of 1974), on a High Court, as if a 
+Special Court within the local limits of the jurisdiction of the High Court were a 
+Court of Session trying cases within the local limits of the jurisdiction of the 
+High Court.] 
+37. Protection of action taken in good faith.—No suit, prosecution or other 
+legal proceeding shall lie against any person for anything which is in good faith 
+done or intended to be done under this Act.] 
+2[38. Rules to be laid before Parliament.—Every rule made under this Act 
+shall be laid as soon as may be after it is made before each House of Parliament 
+while it is in session for a total period of thirty days which may be comprised in 
+one session or in two or more successive sessions, 107[and if, before the expiry 
+of the session immediately following the session or the successive sessions 
+aforesaid], both Houses agree in making any modification in the rule or both 
+Houses agree that the rule should not be made, the rule shall thereafter have 
+effect only in such modified form or be of no effect, as the case may be; so 
+however that any such modification or annulment shall be without prejudice to 
+the validity of anything previously done under that rule.] 
+STATE AMENDMENT 
+Maharashtra.—(1) In section 38, for the words "Every rule made", 
+substitute the words "Every rule made by the Central Government". 
+(2) After section 38, insert the following section, namely.— 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 53 of 64 
+ 
+"39. Rules to be laid before State Legislature.—Every rule made by State 
+Government under this Act shall be laid, as soon as may be after it is made, 
+before each House of the State Legislature, while it is in session for a total 
+period of thirty days which may be comprised in one session or in two or more 
+successive sessions and if before the expiry of the session immediately 
+following the session or the successive sessions afore said, both Houses agree in 
+making any modification in the rule or both Houses agree that the rule should 
+not be made, and notify such decision in the Official Gazette, the rule shall from 
+the date of publication of such notification have effect only in such modified 
+form or be of no effect, as the case may be; so, however, that any such 
+modification or annulment shall be without prejudice to the validity of anything 
+previously done or omitted to be done under that rule." 
+[Vide Maharashtra Act 31 of 1989, sec. 7 (w.e.f. 4-10-1989).] 
+'[THE FIRST SCHEDULE [See section 3(a)] 
+2[A.—AYURVEDIC AND SIDDHA SYSTEMS] 
+ 
+Serial 
+No. 
+Name of book 
+Ayurveda 
+1. 
+Arogya Kalpadruma 
+2. 
+Arka Prakasha 
+3. 
+Arya Bhishak 
+4. 
+Ashtanga Hridaya 
+5. 
+Ashtanga Samgraha 
+6. 
+Ayurveda Kalpadruma 
+7. 
+Ayurveda Prakasha 
+8. 
+Ayurveda Samgraha 
+9. 
+Bhaishajya Ratnavali 
+10. 
+Bharat Bhaishajya Ratnakara 
+11. 
+Bhava Prakasha 
+12. 
+Brihat Nighantu Ratnakara 
+13. 
+Charaka Samhita 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 54 of 64 
+ 
+14. 
+Chakra Datta 
+15. 
+Gada Nigraha 
+16. 
+Kupi Pakva Rasayana 
+17. 
+Nighantu Ratnakara 
+18. 
+Rasa Chandanshu 
+19. 
+Rasa Raja Sundara 
+20. 
+Rasaratna Samuchaya 
+21. 
+3[Rasatantra Sara Va Siddha Prayoga Samgraha - Part I] 
+4[21(a). 
+Rastantra Sara Va Siddha Prayog Samgraha - Part II (Edition 
+2006).] 
+22. 
+Rasa Tarangini 
+23. 
+Rasa Yoga Sagara 
+24. 
+Rasa Yoga Ratnakara 
+25. 
+Rasa Yoga Samgraha 
+26. 
+Rasendra Sara Samgraha 
+27. 
+Rasa Pradipika 
+28. 
+Sahasrayoga 
+29. 
+Sarvaroga Chikitsa Ratnam 
+30. 
+Sarvayoga Chikitsa Ratnam 
+31. 
+Sharangadhara Samhita 
+32. 
+Siddha Bhaishajya Manimala 
+33. 
+Siddha Yoga Samgraha 
+34. 
+Sushruta Samhita 
+35. 
+Vaidya Chintamani 
+36. 
+Vaidyaka Shabda Sindu 
+37. 
+Vaidyaka Chikitsa Sara 
+38. 
+Vaidya Jiwan 
+39. 
+Basava Rajeeyam 
+40. 
+Yoga Ratnakara 
+41. 
+Yoga Tarangini 
+42. 
+Yoga Chintamani 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 55 of 64 
+ 
+43. 
+Kashyapasamhita 
+44. 
+Bhelasamhita 
+45. 
+Vishwanathachikitsa 
+46. 
+Vrindachikitsa 
+47. 
+Ayurvedachintamani 
+48. 
+Abhinavachintamani 
+49. 
+Ayurveda-ratnakar 
+50. 
+Yogara tnasangraha 
+51, 
+Rasamrita 
+52. 
+Dravyagunanighantu 
+53. 
+Rasamanijari 
+54. 
+Bangasena 
+1[54A. 
+2[Ayurvedic Formulary of India and its Parts] 
+1[54B. 
+Ayurveda Sara Sangraha] 
+3[54C. 
+Ayurvedic Pharmacopoeia of India] 
+4[54D. 
+Ayurvedic Pharmacopoeia of India and its Parts]] 
+ 
+Siddha 
+55. 
+Siddha Vaidya Thirattu 
+56. 
+Therayar Maha Karisal 
+57. 
+Brahma Muni Karukkadai (300) 
+58. 
+Bhogar (700) 
+59. 
+Pulippani (500) 
+60. 
+Agasthiyar Paripuranam (400) 
+61. 
+Therayar Yamagam 
+62. 
+Agasthiyar Chenduram (300) 
+63. 
+Agasthiyar (1500) 
+64. 
+Athmarakshamrutham 
+65. 
+Agasthiyar Pin (80) 
+66. 
+Agasthiyar Rathna Churukkam 
+67. 
+Therayar Karisal (300) 
+68. 
+Veeramamuni Nasa Kandam 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 56 of 64 
+ 
+69. 
+Agasthiyar (600) 
+70. 
+Agasthiyar Kanma Soothiram 
+71. 
+18 Siddhar's Chillarai Kovai 
+72. 
+Yogi Vatha Kaviyam 
+73. 
+Therayar Tharu 
+74. 
+Agasthiyar Vaidya Kaviyam (1500) 
+75. 
+Bala Vagadam 
+76. 
+Chimittu Rathna (Rathna) Churukkam 
+77. 
+Nagamuni (200) 
+78. 
+Agasthiyar Chillarai Kovai 
+79. 
+Chikicha Rathna Deepam 
+80. 
+Agasthiyar Nayana Vidhi 
+81. 
+Yugi Karisal (151) 
+82. 
+Agasthiyar Vallathi (600) 
+83. 
+Therayar Thaila Varkam 
+1[84. 
+Siddha Formulary of Unani Medicine (Part I)] 
+2 [85. 
+Sidha Pharmacopoeia of India and its Parts] 
+3[B.—UNANI TIBB SYSTEM] 
+1. 
+Karabadin Qadri 
+2. 
+Karabadin Kabir 
+3. 
+Karabadin Azam 
+4. 
+Ilaj-ul-Amraz 
+5. 
+A1 Karabadin 
+6. 
+Biaz Kabir Vol. II 
+7. 
+Karabadin Jadid 
+8. 
+Kitalf-ul-Taklis 
+9. 
+Sanat-ul-Taklis 
+10. 
+Mifta-ul-Khazain 
+11. 
+Madan-ul-Aksir 
+12. 
+Makhzan-ul-Murabbat 
+M13. 
+National Formulary of Unani Medicine 4[***][ 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 57 of 64 
+ 
+5[14. 
+Unani Pharmacopoeia of India]] 
+ 
+ 
+6[THE SECOND SCHEDULE 
+(See sections 8 and 16) 
+STANDARDS TO BE COMPLIED WITH BY IMPORTED DRUGS AND 
+BY DRUGS MANUFACTURED FOR SALE, STOCKED OR 
+EXHIBITED FOR SALE OR DISTRIBUTED 
+ 
+Class of drug 
+Standard to be complied with 
+1. Patent or proprietary medicines 
+7[other than Homoeopathic medicines]. 
+8[2. Substances commonly known as 
+vaccines, 
+sera, 
+toxine, 
+toxoids, 
+antitoxins, and antigens and biological 
+products of like nature for human use 
+or for veterinary use. 
+The formula or list of ingredients 
+displayed in the prescribed manner on 
+the label or container and such other 
+standards as may be prescribed. The 
+standards 
+maintained 
+at 
+the 
+International Laboratory for Biological 
+Standards, 
+Stantans 
+Seruminstitute, 
+Copenhagen, 
+and 
+at 
+the 
+Central 
+Veterinary 
+Laboratory, 
+Weybridge 
+Surrey, UK and such other laboratories 
+recognised by the World Health 
+Organisation from time to time, such 
+further standards of strength, quality 
+and purity, as may be prescribed.] 
+ 
+Class of drug 
+4. 
+Substances 
+(other 
+than 
+food) 
+intended to affect the structure or any 
+function of the human body or intended 
+to be used for the destruction of vermin 
+or insects which cause disease in 
+human beings or animals. 
+2[4A. Homoeopathic Medicines— 
+(a) 
+   Drugs 
+included 
+in 
+the 
+Standard to be complied with 
+Such standards as may be prescribed. 
+Standards of identity, purity and 
+strength specified in the edition of the 
+Homoeopathic Pharmacopoeia of India 
+for the time being and such other 
+standards 
+as 
+may 
+be 
+prescribed. 
+Standards of identity, purity and 
+strength prescribed for the Drugs in the 
+edition of such Pharmacopoeia for the 
+time being in which they are given and 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 58 of 64 
+ 
+Homoeopathic Pharmacopoeia of India. 
+(b)    Drugs not included in the 
+Homoeopathic Pharmacopoeia of India 
+but 
+which 
+are 
+included 
+in 
+the 
+Homoeopathic 
+Pharmacopoeia 
+of 
+United States of America or the United 
+Kingdom or the German Homoeopathic 
+Pharmacopoeia. 
+(c)    Drugs not included in the 
+Homoeopathic Pharmacopoeia of India 
+or the United States of America, or the 
+United 
+Kingdom or the 
+German 
+Homoeopathic Pharmacopoeia. 
+3[5. Other drugs— 
+(a) Drugs included in the Indian 
+Pharmacopoeia. 
+(b) Drugs not included in the Indian 
+Pharmacopoeia but which are included 
+in the official Pharmacopoeia of any 
+other country. 
+such other standards as may be 
+prescribed. 
+The formula or list of ingredients 
+displayed in the prescribed manner on 
+the label of the container and such 
+other standards as may be prescribed 
+by the Central Government.] 
+Standards of identity, purity and 
+strength specified in the edition of the 
+Indian Pharmacopoeia for the time 
+being in force and such other standards 
+as may be prescribed. 
+In case the standards of identity, 
+purity and strength for drugs are not 
+specified in the edition of the Indian 
+Pharmacopoeia for the time being in 
+force but are specified in the edition of 
+the Indian Pharmacopoeia immediately 
+preceding the standards of identity, 
+purity and strength shall be those 
+occurring 
+in 
+such 
+immediately 
+preceding 
+edition 
+of 
+the 
+Indian 
+Pharmacopoeia 
+and 
+such 
+other 
+standards 
+as 
+may 
+be 
+prescribed. 
+Standards of identity, purity and 
+strength specified for drugs in the 
+edition of such official Pharmacopoeia 
+of any other country for the time being 
+in force and such other standards as 
+may be prescribed. In case the 
+standards of 
+identity, purity and 
+strength for drugs are not specified in 
+the 
+edition 
+of 
+such 
+official 
+Pharmacopoeia for the time being in 
+force, but are specified in the edition 
+immediately preceding the standards of 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 59 of 64 
+ 
+identity, purity and strength shall be 
+those occurring in such immediately 
+preceding edition of such official 
+Pharmacopoeia 
+and 
+such 
+other 
+standards as may be prescribed.]] 
+ 
+ 
+ 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 60 of 64 
+ 
+REFERENCES 
+ 
+1   For Statement of Objects and Reasons, see Gazette of India, 1940, Pt. V, p. 34; for the Report of 
+the Select Committee, see Gazette of India, 1940, Pt. V. p. 143.The Act has been applied to all the 
+partially excluded areas in the State of Orissa, see Orissa Government Notification No. 3358-LSG, 
+dated 25th August, 1941. 
+ 
+2   Ins. by Act 21 of 1962, sec. 2 (w.e.f. 27-7-1964). 
+ 
+3   Subs, by the A.O. 1950, for certain words. 
+ 
+4   Ins. by Act 21 of 1962, sec. 3 (w.e.f. 27-7-1964). 
+ 
+5   The words "except the State of Jammu and Kashmir" omitted by Act 19 of 1972, sec. 2 (w.e.f. 31-
+5-1972). 
+ 
+6   24th August, 1974, vide Notification No. S.O. 2185, dated 9th August, 1974, published in the 
+Gazette of India, 1974, Pt. II, Sec. 3(ii), p. 2331. 
+ 
+7   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+8   Subs, by Act 68 of 1982, sec. 3, for "disease in human beings, mentioned in, and processed and 
+manufactured" (w.e.f. 1-2-1983). 
+ 
+9   Subs, by Act 68 of 1982, sec. 3, for "Ayurvedic (including Siddha) and Unani (Tibb) system of 
+medicine" (w.e.f. 1-2-1983). 
+ 
+10   The words ", but does not include soap" omitted by Act 68 of 1982, sec. 3 (w.e.f. 1-2-1983). 
+11   Subs, by Act 13 of 1964, sec. 2, for "vermins" (w.e.f. 15-9-1964). 
+ 
+12   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+13   Clause (d) omitted by Act 19 of 1972, sec. 3 (w.e.f. 31-5-1972). 
+ 
+14   Ins. by Act 21 of 1962, sec. 4 (w.e.f. 27-7-1964). 
+ 
+15   Subs, by Act 68    of 1982,    sec.    3,    for "sale and distribution" (w.e.f. 1-2-1983) 
+ 
+16   Subs, by Act 3 of 1951,    sec. 3 and Sch., for "the States". 
+ 
+17   Subs, by Act 13 of 1964, sec. 4, for sub-section (2) (w.e.f. 15-9-1964). 
+ 
+18   Subs, by Act 13 of 1964, sec. 5, for "under Chapter IV" (w.e.f. 15-9-1964). 
+ 
+19Ins. by Act 3 of 1951, sec. 3 and Sch., for "the States" (w.e.f. 1-4-1951). 
+ 
+20   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+21   Subs,    by Act 21 of 1962, sec.    6,    for sub-section (1) (w.e.f. 27-7-1964). 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 61 of 64 
+ 
+ 
+22   Subs,    by Act 13 of 1964, sec.    7,    for "the Schedule" (w.e.f. 15-9-1964). 
+ 
+23Contd. from Previous page 
+1st April, 1953, for the States of Himachal Pradesh, Bilaspur, Kutch, Bhopal, Tripura, Vindhya 
+Pradesh and Manipur vide Notification No. S.R.O. 666, dated 30th March, 1953, Gazette of India, 
+1953, Pt. II. Sec. 3, p. 451. 
+ 
+24   Subs, by Act 68 of 1982, sec. 7, for "or misbranded cosmetic" (w.e.f. 1-2-1983). 
+ 
+25   Subs, by    Act    68 of    1982,    sec.    7,    for    "adulterated"    (w.e.f.    1-2-1983). 
+26   Subs, by    Act    68 of    1982,    sec.    7,    for    certain words    (w.e.f.    1-2-1983). 
+ 
+27   Now see the Customs Act, 1962 (52 of 1962). 
+ 
+28   Ins. by Act 21 of 1962, sec. 9    (w.e.f. 27-7-1964). 
+ 
+29   Subs,    by    Act    22 of    1995,    sec.    83, for "Customs Collector" (w.e.f. 26-5-1995). 
+ 
+30   Subs,    by    Act    68 of    1982,    sec.    9, for "after consultation with the Board"    (w.e.f. 1-2-
+1983). 
+ 
+31   Ins. by Act 21 of 1962, sec. 10 (w.e.f. 27-7-1964). 
+ 
+32   Subs, by Act 68 of 1982, sec. 9, for certain words (w.e.f. 1-2-1983). 
+ 
+33   Subs, by Act 68 of 1982, sec. 9 for "section 9B" (w.e.f. 1-2-1983). 
+ 
+34   Subs, by Act 11 of 1955, sec. 7, for "to cure or mitigate" (w.e.f. 15-4-1955). 
+ 
+35   Ins. by Act 21 of 1962, sec. 10 (w.e.f. 27-7-1964). 
+ 
+36   Subs, by Act 3 of 1951, sec. 3 and Sch., for "the States" (w.e.f. 1-4-1951). 
+ 
+37   Subs, by Act 68 of 1982, sec. 10, for section 13 (w.e.f. 1-2-1983). 
+ 
+38   Subs, by    Act    68 of    1982,    sec.    11,    for certain words (w.e.f. 1-2-1983). 
+ 
+39   Subs, by    Act    68 of    1982,    sec.    12,    for "DRUGS" (w.e.f. 1-2-1983). 
+ 
+40   Subs, by    Act    21 of    1962,    sec.    12,    for sub-section (1) (w.e.f. 27-7-1964). 
+ 
+41   Subs, by    Act    13 of    1964,    sec.    11,    for "the Schedule" (w.e.f. 15-9-1964). 
+ 
+42   Subs, by Act 11 of 1955, sec. 8, for "State Government" (w.e.f. 15-4-1955). 
+ 
+43Ins. by Act 68 of 1982, sec. 13 (w.e.f. 1-2-1983). 
+ 
+44Ins. by Act 26 of 2008, sec. 2 (w.e.f. 10-8-2009). 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 62 of 64 
+ 
+ 
+45   Subs,    by    Act    68    of    1982,    sec.    14, for certain words (w.e.f. 1-2-1983). 
+ 
+46   Subs,    by    Act    11    of    1955,    sec.    9, for "to cure or mitigate" (w.e.f. 15-4-1955). 
+ 
+47   Subs, by Act 68 of 1982, sec. 14, for "sell, or stock or exhibit for sale" (w.e.f. 1-2-1983). 
+ 
+48   Ins. by Act 21 of 1962, sec. 14 (w.e.f. 27-7-1964). 
+ 
+49   Subs, by Act 68 of 1982, sec. 14, for certain words (w.e.f. 1-2-1983). 
+ 
+50   Subs, by Act 11 of 1955, sec. 9, for "State Government" (w.e.f. 15-4-1955). 
+ 
+51   Subs, by Act 68 of 1982, sec. 14, for "manufacture for sale, sale" (w.e.f. 1-2-1983). 
+ 
+52   Subs,    by Act    21    of    1962,    sec.    16, for "class    of drugs"    (w.e.f. 27-7-1964). 
+ 
+53   Ins. by Act 68 of 1982, sec. 17 (w.e.f. 1-2-1983). 
+ 
+54   Subs,    by Act    21    of    1962,    sec.    17 for "class    of drugs"    (w.e.f. 27-7-1964). 
+ 
+55   Subs, by Act 68 of 1982, sec. 19, for "in any place mentioned in clause (c)" (w.e.f. 1-2-1983). 
+ 
+56   Subs, by Act 68 of 1982, sec. 19, for "the Code of Criminal Procedure, 1898 (5 of 1898)" 
+(w.e.f.1-2-1983). 
+ 
+57   Subs, by Act 68 of 1982, sec. 19, for "section 98" (w.e.f. 1-2-1983). 
+ 
+58   Ins. by Act 21 of 1962, sec. 15 (w.e.f. 27-7-1964). 
+ 
+59   Subs, by Act 13 of 1964, sec. 16, for clause (iii) (w.e.f. 15-9-1964). 
+ 
+60   Subs, by Act 13 of 1964, sec. 17, for certain words (w.e.f. 15-9-1964). 
+ 
+61   Ins.    by    Act 21 of 1962, sec.    15    (w.e.f. 27-7-1964). 
+ 
+62   Ins.    by    Act 71 of 1986, sec.    2 (w.e.f. 15-9-1987). 
+ 
+63   Subs, by Act 71 of 1986, sec. 2, for "purchased by him" (w.e.f. 15-9-1987). 
+ 
+64   Subs, by Act 26 of 2008, sec. 6(ii)(B), for "less than one year and of fine of less than five 
+thousand rupees" (w.e.f. 10-8-2009). 
+ 
+65   Subs, by Act 26 of 2008, sec. 6(iii)(A), for "not be less than three years but which may extend to 
+five years and with fine which shall not be less than five thousand rupees" (w.e.f. 10-8-2009). 
+ 
+66Subs, by Act 26 of 2008, sec. 6(iii)(B), for "less than three years but not less than one year" (w.e.f. 
+10-8-2009). 
+ 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 63 of 64 
+ 
+67   Subs, by Act 26 of 2008, sec. 6(iv), for "and with fine" (w.e.f. 10-8-2009). 
+ 
+68   Subs, by Act 26 of 2008, sec. ll(a)(i)(B), for "less than two years and of fine of less than ten 
+thousand rupees;" (w.e.f. 10-8-2009). 
+ 
+69   Subs, by Act 26 of 2008, sec. ll(a)(iii), for "five thousand rupees" (w.e.f. 10-8-2009). 
+ 
+70Subs, by Act 68 of 1982, sec. 25, for "one thousand rupees" (w.e.f. 1-2-1983). 
+ 
+71   The words "section 28 or" omitted by Act 13 of 1964, sec. 20 (w.e.f. 15-9-1964). 
+ 
+72   Subs, by Act 26 of 2008, sec. 11(b), for "ten years, or with fine, or with both" (w.e.f. 10-8-2009). 
+ 
+73   Section 31 re-numbered as sub-section (1) of that section by Act 35 of 1960, sec. 9 (w.e.f. 16-3-
+1961). 
+ 
+74   Added by Act 13 of 1964, sec. 21 (w.e.f. 15-9-1964). 
+ 
+75   Subs, by Act 68 of 1982, sec. 26, for certain words (w.e.f. 1-2-1983). 
+ 
+76   Subs, by Act 13 of 1964, sec. 21, for "or is a misbranded drug" (w.e.f. 15-9-1964). 
+ 
+77   Subs, by Act 68 of 1982, sec. 26, for "misbranded or adulterated drug, or misbranded cosmetic" 
+(w.e.f. 1-2-1983). 
+ 
+78   Ins. by Act 13 of 1964, sec. 23 (w.e.f. 15-9-1964). 
+ 
+79   Subs, by Act 68 of 1982, sec. 28, for "in sub-section (1) of section 351 of the Code of Criminal 
+Procedure, 1898 (5 of 1898)" (w.e.f. 1-2-1983). 
+ 
+80   Ins. by Act 21 of 1962, sec. 22 (w.e.f. 27-7-1964). 
+ 
+81   Subs, by Act 68 of 1982, sec. 29, for "section 17B" (w.e.f. 1-2-1983). 
+ 
+82   Subs, by Act 68 of 1982, sec. 29, for "for the manufacture for sale" (w.e.f. 1-2-1983) 
+ 
+83Ins. by Act 21 of 1962, sec. 22 (w.e.f. 27-7-1964). 
+ 
+84Ins. by Act 68 of 1982, sec. 29 (w.e.f. 1-2-1983). 
+ 
+85   Subs, by Act 11 of 1955, sec. 15, for "to cure or mitigate" (w.e.f. 15-4-1955). 
+ 
+86   Ins. by Act 68 of 1982, sec. 29 (w.e.f. 1-2-1983). 
+ 
+87   The word "and" omitted by Act 26 of 2008, sec. 14(ii) (w.e.f. 10-8-2009). 
+ 
+88   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+89   Subs, by Act 68 of 1982, sec. 31, for sections 33D and 33E (w.e.f. 1-2-1983). 
+
+
+ 
+Central Drugs Standard Control Organization, Ministry of Health and Family Welfare, Govt. of India 
+ 
+Page 64 of 64 
+ 
+ 
+90   Subs,    by Act 26    of    2008,    sec.    15(a)(ii), for "five thousand rupees" (w.e.f.    10-8-2009). 
+ 
+91   Subs,    by Act 26    of 2008, sec.    16(a), for "two thousand    rupees" (w.e.f.    10-8-2009). 
+ 
+92   Subs,    by Act 26    of 2008, sec.    16(b), for "five thousand    rupees" (w.e.f.    10-8-2009). 
+ 
+93   Subs,    by Act 26    of 2008, sec.    16(c), for "six months and with fine which shall not be less 
+thanone thousand rupees." (w.e.f. 10-8-2009). 
+ 
+94   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+95   Subs, by Act 68 of 1982, sec. 2, for "Ayurvedic (including Siddha) or Unani" (w.e.f. 1-2-1983). 
+ 
+96   Ins. by Act 68 of 1982, sec. 34 (w.e.f. 1-2-1983). 
+ 
+97   Subs, by Act 68 of 1982, sec. 34, for "of a Presidency Magistrate or of a Magistrate of the first 
+class" (w.e.f. 1-2-1983). 
+ 
+98   Subs, by Act 68 of 1982, sec. 35, for "after consultation with the Board" (w.e.f. 1-2-1983). 
+ 
+99   Ins. by Act 68 of 1982, sec. 35 (w.e.f. 1-2-1983). 
+ 
+100   The word "and" omitted by Act 26 of 2008, sec. 18(i) (w.e.f. 10-8-2009). 
+ 
+101   Section 33A re-numbered as section 33P by Act 13 of 1964, sec. 27 (w.e.f. 15-9-1964). 
+ 
+102   Subs, by Act 68 of 1982, sec. 37, for certain words (w.e.f. 1-2-1983). 
+ 
+103   The words "section 32 of" omitted by Act 13 of 1964, sec. 29 (w.e.f. 15-9-1964). 
+ 
+104   Subs, by Act 68 of 1982, sec. 38, for "the Code of Criminal Procedure, 1898 (5 of 1898)" (w.e.f. 
+1-2-1983). 
+ 
+105   Subs, by Act 68 of 1982, sec. 38, for "any Presidency Magistrate or any Magistrate of the first 
+class" (w.e.f. 1-2-1983). 
+ 
+106   Subs, by Act 26 of 2008, sec. 19, for "all offences under this Act" (w.e.f. 10-8-2009). 
+ 
+107   Subs, by Act 68 of 1982, sec. 40, for certain words (w.e.f. 1-2-1983). 
+ 
+*** End *** 

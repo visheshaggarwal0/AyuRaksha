@@ -1,0 +1,154 @@
+entity_id,disease_name_sanskrit,disease_name_english,synonyms,tkdl_original_text,verification_status,source_id
+TKDL-E0429,gulma,,Vayitru Kazhalaigal,gulma,verified,TKDL-001
+TKDL-E0430,khālitya,,"Daa-al-Salab, Puzhuvettu",kh¢litya,encoding_mapped,TKDL-001
+TKDL-E0431,āma,,"Seetham,Aamam",¢ma,encoding_mapped,TKDL-001
+TKDL-E0432,Pilla,,Soolnluidu Pillam,Pilla,verified,TKDL-001
+TKDL-E0433,Gudaroga,,"Amraaz-e-tanasuliyah, Asana Kudal Nolcial",Gudaroga,verified,TKDL-001
+TKDL-E0434,arocaka,,"Nuqsaan -ul- Shahvath / Zof-e-Ishteha, Rusi inmai",arocaka,verified,TKDL-001
+TKDL-E0435,indralupta,,"Sala, Vazhukkai",indralupta,verified,TKDL-001
+TKDL-E0436,raktātisāra,,"Rattha Kazhichal ,Kuruthi kazhichal",rakt¢tis¢ra,encoding_mapped,TKDL-001
+TKDL-E0437,vātajaṇūla,,"Dard-e-Badan, Udal Vali",v¢tajaº¦la,encoding_mapped,TKDL-001
+TKDL-E0438,p¤åikā,,"Phunsi, Koppula Perunoi",p¤åik¢,encoding_mapped,TKDL-001
+TKDL-E0439,rakasa,,Koppula Perunoi,rakasa,verified,TKDL-001
+TKDL-E0440,tamaka ṇvāsa,,"Zeeq-al-Nafas Shubi/Zeeq-al-Nafas/ Rabw, Eraippu Erunal",tamaka ºv¢sa,encoding_mapped,TKDL-001
+TKDL-E0441,ṇoṣa,,"Huzaal, Udal Ilaippu Noi",ºo¾a,encoding_mapped,TKDL-001
+TKDL-E0442,Mutrasmari,,"Kalladaippu,Achamari",Mutrasmari,verified,TKDL-001
+TKDL-E0443,hśda graha,,Iyya Thamaraganoi,h¨da graha,encoding_mapped,TKDL-001
+TKDL-E0444,timira,,"Thimiram, Pithakkaasam, Kan poo",timira,verified,TKDL-001
+TKDL-E0445,gaī²aroga,,Kadhuppu Veekkam,ga´²aroga,encoding_mapped,TKDL-001
+TKDL-E0446,vepathu,,"Larzah-wa-Qasha'reerah, Kulir/Nalir",vepathu,verified,TKDL-001
+TKDL-E0447,sannipāta,,Mukkutra Noigal/Theevira Noikal,sannip¢ta,encoding_mapped,TKDL-001
+TKDL-E0448,upadrava,,Shikkalaana,upadrava,verified,TKDL-001
+TKDL-E0449,khall¤,,Moottu isivu,khall¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0450,sādhya,,Theerum Noigal,s¢dhya,encoding_mapped,TKDL-001
+TKDL-E0451,kścchrasādhya,,Arithil Theerum noigal,k¨cchras¢dhya,encoding_mapped,TKDL-001
+TKDL-E0452,uṣīavāta,,"Waram-e-Masaanah/Waram-e-Majra-e-Baul, Neer pai/Moothira naala thaabitham",u¾´av¢ta,encoding_mapped,TKDL-001
+TKDL-E0453,dāruīaka,,"ibriyah/Abriyyah/bafa, Podugu",d¢ru´aka,encoding_mapped,TKDL-001
+TKDL-E0454,pralāpa,,Pithatral,pral¢pa,encoding_mapped,TKDL-001
+TKDL-E0455,prameha piåikā,,Meisa Koppulam/Raaja pilavai,prameha piåik¢,encoding_mapped,TKDL-001
+TKDL-E0456,jvarātisāra,,Adhisaara suram,jvar¢tis¢ra,encoding_mapped,TKDL-001
+TKDL-E0457,srāva,,"Tarashshuh, Kasivu/Ozhugal",sr¢va,encoding_mapped,TKDL-001
+TKDL-E0458,Vrana srava,,Pun Kasivu,Vrana srava,verified,TKDL-001
+TKDL-E0459,roga/ vyādhi,,"Noi,Viyaadhi,Pini",roga/ vy¢dhi,encoding_mapped,TKDL-001
+TKDL-E0460,kaphavikāra,,Iyya Noigal,kaphavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0461,pittavikāra,,AzhalNoigal,pittavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0462,vātavikāra,,Vali Noigal,v¢tavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0463,raktavikāra,,Ratha thaathu saarntha noikal,raktavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0464,udararoga,,"Amraaz-e-batn, Vayitru noigal",udararoga,verified,TKDL-001
+TKDL-E0465,ṇiroroga,,Thalai/Mandai Noi,ºiroroga,encoding_mapped,TKDL-001
+TKDL-E0466,urdhvajatrugataroga,,"Amraaz-e-raas wa unuq, Kazhutthu/Thalai Noigal",urdhvajatrugataroga,verified,TKDL-001
+TKDL-E0467,hśdayaroga,,"Amraaz-e-qalb, Eruthaya Noigal,Thamaraga noigal",h¨dayaroga,encoding_mapped,TKDL-001
+TKDL-E0468,vātavyādhi,,"Amraaz-e-Nizam-e-Aa'saab, Narambu Mandala Noigal",v¢tavy¢dhi,encoding_mapped,TKDL-001
+TKDL-E0469,kukṣiroga,,Koobaga Noigal,kuk¾iroga,encoding_mapped,TKDL-001
+TKDL-E0470,pl¤hāvikāra,,"Amraaz-e-tehaal, Peeliga Noigal",pl¤h¢vik¢ra,encoding_mapped,TKDL-001
+TKDL-E0471,netra roga,,"Amraaz-e-A'in, Kan Noigal",netra roga,verified,TKDL-001
+TKDL-E0472,mukharoga,,Vaai Noigal,mukharoga,verified,TKDL-001
+TKDL-E0473,mūtraroga,,"Amraaz-e-Nizaam-e-Bauliyah, Siriuneeraga  Noigal",m¦traroga,encoding_mapped,TKDL-001
+TKDL-E0474,mukhaṇoṣa,,Vaai Varatchi,mukhaºo¾a,encoding_mapped,TKDL-001
+TKDL-E0475,pariīāmaṇūla,,Vayitru Soolai,pari´¢maº¦la,encoding_mapped,TKDL-001
+TKDL-E0476,pravāhikā,,"Zaheer, Nina kazhichal",prav¢hik¢,encoding_mapped,TKDL-001
+TKDL-E0477,agnimāndya,,"Su-e-Hazm/Badhazmi/Nuqsan e shahwat, Pasi inmai",agnim¢ndya,encoding_mapped,TKDL-001
+TKDL-E0478,mūtrakścchra,,"Usr-e- Baul, Neer erichal,Neer kaduppu",m¦trak¨cchra,encoding_mapped,TKDL-001
+TKDL-E0479,karīaṇūla,,Sevi vaayu Soolai,kar´aº¦la,encoding_mapped,TKDL-001
+TKDL-E0480,ṇl¤pada,,"Daa-ul-Feel, Yanaikkaal,Sili padham,Paadha vanmeegam",ºl¤pada,encoding_mapped,TKDL-001
+TKDL-E0481,kṣaya,,Ilaippu noi,k¾aya,encoding_mapped,TKDL-001
+TKDL-E0482,kśṇatā,,Patchi Thodam,k¨ºat¢,encoding_mapped,TKDL-001
+TKDL-E0483,nija,,Ullaarntha,nija,verified,TKDL-001
+TKDL-E0484,vātodara,,Vali Peruvayiru,v¢todara,encoding_mapped,TKDL-001
+TKDL-E0485,pl¤hodara,,"Peeliga Veekkam, Edappaatteeral veekkam",pl¤hodara,unmapped_high_bytes_present,TKDL-001
+TKDL-E0486,netra srāva,,"Damah, NeerPaaychal",netra sr¢va,encoding_mapped,TKDL-001
+TKDL-E0487,yonikleda,,Yoni Kasivu,yonikleda,verified,TKDL-001
+TKDL-E0488,atisveda,,Adhi Viyarvai,atisveda,verified,TKDL-001
+TKDL-E0489,āgantuja,,Pura Kaaranigal,¢gantuja,encoding_mapped,TKDL-001
+TKDL-E0490,Bahya krmi,,Veli pura kirumigal,Bahya krmi,verified,TKDL-001
+TKDL-E0491,ardita,,Muga Vaatham,ardita,verified,TKDL-001
+TKDL-E0492,sannipātikajvara,,Mukkutra Suram,sannip¢tikajvara,encoding_mapped,TKDL-001
+TKDL-E0493,kāmajvara,,Kaama Suram,k¢majvara,encoding_mapped,TKDL-001
+TKDL-E0494,vātapaittikajvara,,Vali Azhal Suram,v¢tapaittikajvara,encoding_mapped,TKDL-001
+TKDL-E0495,pittakaphajajvara,,Azal iyyya Suram,pittakaphajajvara,verified,TKDL-001
+TKDL-E0496,paittikajvara,,Pitha suram,paittikajvara,verified,TKDL-001
+TKDL-E0497,yonidaurgandhya,,Yoni naatram,yonidaurgandhya,verified,TKDL-001
+TKDL-E0498,vyaṛga,,"Kalaf, Karun Themal",vya¼ga,encoding_mapped,TKDL-001
+TKDL-E0499,avabāhuka,,Tholpattai Vaatham,avab¢huka,encoding_mapped,TKDL-001
+TKDL-E0500,dhātukṣaya,,Palakeenam,dh¢tuk¾aya,encoding_mapped,TKDL-001
+TKDL-E0501,galagaī²a,,"Ghootar, Veethana kolaveekkam",galaga´²a,encoding_mapped,TKDL-001
+TKDL-E0502,upadaṛṇa,,"Suzaak, Seezh Megam,Vellai noi,Mega noi",upada¼ºa,encoding_mapped,TKDL-001
+TKDL-E0503,raktapitta,,"Rakt Pit, Kuruthi Azhal",raktapitta,verified,TKDL-001
+TKDL-E0504,svarabheda,,"Buhat-us-Saut, Kural Kammal,Sura pangam,Thondai kattu",svarabheda,verified,TKDL-001
+TKDL-E0505,amlapitta,,"Humoozat-e-Medah, Eri gunmam",amlapitta,verified,TKDL-001
+TKDL-E0506,agramāṛsa,,Thamaraga Thasaiperukka Noi,agram¢¼sa,encoding_mapped,TKDL-001
+TKDL-E0507,viruddhabhaiṣaja,,Maruthuvanaal Vantha noi,viruddhabhai¾aja,encoding_mapped,TKDL-001
+TKDL-E0508,asādhya,,Theeraa Noigal,as¢dhya,encoding_mapped,TKDL-001
+TKDL-E0509,jaladoṣajavikāra,,Nanju neer Kirumi noigal,jalado¾ajavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0510,vandhyatva,,Maladu,vandhyatva,verified,TKDL-001
+TKDL-E0511,vśṣaīa vśddhi,,Sadhai Vidhai Noi,v¨¾a´a v¨ddhi,encoding_mapped,TKDL-001
+TKDL-E0512,Braghna,,"Fatq-e-Urbi, Kudal Andam",Braghna,verified,TKDL-001
+TKDL-E0513,netra abhighāta/netrakṣata,,Kan kaayam,netra abhigh¢ta/netrak¾ata,encoding_mapped,TKDL-001
+TKDL-E0514,anidrā,,"Sahar, Thookkaminmai",anidr¢,encoding_mapped,TKDL-001
+TKDL-E0515,aṛtarvidradhi,,Ulkattikal,a¼tarvidradhi,encoding_mapped,TKDL-001
+TKDL-E0516,kaphaja,,"Iyyam,Kabam,Siletthumam",kaphaja,verified,TKDL-001
+TKDL-E0517,klama,,Ekkam,klama,verified,TKDL-001
+TKDL-E0518,ṇa¬khaka ṇiroroga,,Pakka Mandai vali,ºa¬khaka ºiroroga,encoding_mapped,TKDL-001
+TKDL-E0519,kalāyakhañja,,Kumbavaatham,kal¢yakha®ja,encoding_mapped,TKDL-001
+TKDL-E0520,ṇvetapradara,,"Sailaane-Rehm, Vellai noi,Vettai noi,Megam",ºvetapradara,encoding_mapped,TKDL-001
+TKDL-E0521,yakśtavikāra,,"Amraaz-e-Jigar, Eeeral Noigal",yak¨tavik¢ra,encoding_mapped,TKDL-001
+TKDL-E0522,hanustambha,,Thaal Pootu Vaatham,hanustambha,verified,TKDL-001
+TKDL-E0523,dantacala,,"Taharruk-e-Asnaan, Pallaattam",dantacala,verified,TKDL-001
+TKDL-E0524,pśṣ°haṇūla,,Iduppuvali,p¨¾°haº¦la,encoding_mapped,TKDL-001
+TKDL-E0525,viṣamajvara,,"Humma-e- Ajaamiya, Vida/Nanju Suram",vi¾amajvara,encoding_mapped,TKDL-001
+TKDL-E0526,rakta pradara / asśgdara,,"Kasrat-e-tams/ Istehaaza, Kuruthi ozhukku noikal,Perumpaadu",rakta pradara / as¨gdara,encoding_mapped,TKDL-001
+TKDL-E0527,ardhāvabhedaka,,Pakka Mandai Soolai,ardh¢vabhedaka,encoding_mapped,TKDL-001
+TKDL-E0528,nyaccha,,Sem Macham,nyaccha,verified,TKDL-001
+TKDL-E0529,hśllāsa,,"Ghasayaan, Ookkaalam,Vaikumattal",h¨ll¢sa,encoding_mapped,TKDL-001
+TKDL-E0530,maī²alakuṣ°ha,,Valaya Perunoi,ma´²alaku¾°ha,encoding_mapped,TKDL-001
+TKDL-E0531,medovśddhi,,"Seman-e-Mufrit, Udal Paruman,Athi thoola noi",medov¨ddhi,encoding_mapped,TKDL-001
+TKDL-E0532,udāvarta,,Kudal thadai Noigal,ud¢varta,encoding_mapped,TKDL-001
+TKDL-E0533,sandhigatavāta,,"Santhu Enbu vaatham,Azhal keel vaayu",sandhigatav¢ta,encoding_mapped,TKDL-001
+TKDL-E0534,karīapāka,,"Iltehaab-e-Uzn, Sevi Neer Soolai",kar´ap¢ka,encoding_mapped,TKDL-001
+TKDL-E0535,Karnasrava / karnasamsrava,,"Sailaan -ul- Uzn, Sevi Seezh",Karnasrava / karnasamsrava,verified,TKDL-001
+TKDL-E0536,rūjā/vedanā,,"Waja, Vali",r¦j¢/vedan¢,encoding_mapped,TKDL-001
+TKDL-E0537,Netraruja,,,Netraruja,verified,TKDL-001
+TKDL-E0538,vastiṇūla,,Siruneer pai vali,vastiº¦la,encoding_mapped,TKDL-001
+TKDL-E0539,prasupti,,Unarchi Kuraivu,prasupti,verified,TKDL-001
+TKDL-E0540,paṛgu,,"Faalij Tahtaani/Falij-e -Asfal, Patchavaatham",pa¼gu,encoding_mapped,TKDL-001
+TKDL-E0541,pittakaphaja,,Azhal iyya Noigal,pittakaphaja,verified,TKDL-001
+TKDL-E0542,pittaja,,"Azhal,Pittham",pittaja,verified,TKDL-001
+TKDL-E0543,daī²āpatānaka,,Naakku Vaatham,da´²¢pat¢naka,encoding_mapped,TKDL-001
+TKDL-E0544,pārṇvaṇūla,,"Shosah, Pakkasoolai",p¢rºvaº¦la,encoding_mapped,TKDL-001
+TKDL-E0545,yoni bhraṛṇa / yoni ṇaithilya,,Yoni Pithukkam,yoni bhra¼ºa / yoni ºaithilya,encoding_mapped,TKDL-001
+TKDL-E0546,ki°ibha,,"Sudaaf / Sadfiyyah / Taqashshur-e-Jild, Kalanjaga Padai",ki°ibha,unmapped_high_bytes_present,TKDL-001
+TKDL-E0547,mada,,"Maalikholiya Miraaqi, Serukku",mada,verified,TKDL-001
+TKDL-E0548,sūtikāroga,,"Amraaz-e-nifaas/parsoot, Pirasa Kala Noigal",s¦tik¢roga,encoding_mapped,TKDL-001
+TKDL-E0549,uraª kṣata,,Moluruppu Ilaippu,uraª k¾ata,encoding_mapped,TKDL-001
+TKDL-E0550,j¤rīajvara,,Naalpatta Suram,j¤r´ajvara,encoding_mapped,TKDL-001
+TKDL-E0551,vipādikā,,Sen Kuttam,vip¢dik¢,encoding_mapped,TKDL-001
+TKDL-E0552,dadru,,"Qoobaa, Thaddippu perunoi",dadru,verified,TKDL-001
+TKDL-E0553,trikṇūla,,Koopaga/Keel vayiru vali,trikº¦la,encoding_mapped,TKDL-001
+TKDL-E0554,sannipātaja / tridoṣaja,,Mukkutra Noigal,sannip¢taja / trido¾aja,encoding_mapped,TKDL-001
+TKDL-E0555,gśdhras¤,,"Irqun Nasaa, Peraasana Narambu thaabitham",g¨dhras¤,encoding_mapped,TKDL-001
+TKDL-E0556,Arumsika,,Koppula Peru Noi,Arumsika,verified,TKDL-001
+TKDL-E0557,ṇukra roga,,Vindhu Noigal,ºukra roga,encoding_mapped,TKDL-001
+TKDL-E0558,nā²¤,,Pavuthiram,n¢²¤,encoding_mapped,TKDL-001
+TKDL-E0559,masūrikā,,"Judaree, Periyammai Noi",mas¦rik¢,encoding_mapped,TKDL-001
+TKDL-E0560,lūtā viṣa,,"Lasat-ul- Ankaboot, Silanthikkadi",l¦t¢ vi¾a,encoding_mapped,TKDL-001
+TKDL-E0561,grahaī¤,,"Zarab-wa-khilfah, Naal Patta Kazhichal",graha´¤,encoding_mapped,TKDL-001
+TKDL-E0562,jā²ya/ graha,,Viraippu,j¢²ya/ graha,encoding_mapped,TKDL-001
+TKDL-E0563,sandhigraha,,Moottu Pidippu,sandhigraha,verified,TKDL-001
+TKDL-E0564,urustambha,,Kaal Mootu Pidippu,urustambha,verified,TKDL-001
+TKDL-E0565,pāka,,Seezh Korthal,p¢ka,encoding_mapped,TKDL-001
+TKDL-E0566,mūrcchā,,"Mayakka noi,Sanniyaasam",m¦rcch¢,encoding_mapped,TKDL-001
+TKDL-E0567,mukhavairasya,,Suvai Inmai,mukhavairasya,verified,TKDL-001
+TKDL-E0568,dantaṇūla,,"Waja-ul- Asnaan, Pal Vali",dantaº¦la,encoding_mapped,TKDL-001
+TKDL-E0569,Manyastambha,,Urakatha vaatham,Manyastambha,verified,TKDL-001
+TKDL-E0570,garaviṣa,,Oosipona unavu Nanju,garavi¾a,encoding_mapped,TKDL-001
+TKDL-E0571,kṣayaja kāsa,,Elaippu erumal,k¾ayaja k¢sa,encoding_mapped,TKDL-001
+TKDL-E0572,vraīa,,Pun,vra´a,encoding_mapped,TKDL-001
+TKDL-E0573,acaitanya / acetana,,"Faqd-ul-Waii, Moorchai",acaitanya / acetana,verified,TKDL-001
+TKDL-E0574,rakta gulma,,Karuppai Katti,rakta gulma,verified,TKDL-001
+TKDL-E0575,vātakaphaja,,Vali Iyyam,v¢takaphaja,encoding_mapped,TKDL-001
+TKDL-E0576,vātapittaja,,Vali-Azhal,v¢tapittaja,encoding_mapped,TKDL-001
+TKDL-E0577,Vataja,,"Vali,Vaatham,Vaayu",Vataja,verified,TKDL-001
+TKDL-E0578,ṇvitra,,"Baras, Ven Padai",ºvitra,encoding_mapped,TKDL-001
+TKDL-E0579,chardi,,"Qai, Vaanthi ,Sarthi,Vamanam,Vaayaalaedutthal",chardi,verified,TKDL-001
+TKDL-E0580,carmakuṣ°ha,,Thol perunoi,carmaku¾°ha,encoding_mapped,TKDL-001
+TKDL-E0581,ṇuṣkākṣipāka,,Padarthi Neer,ºu¾k¢k¾ip¢ka,encoding_mapped,TKDL-001

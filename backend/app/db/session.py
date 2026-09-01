@@ -42,7 +42,9 @@ try:
         autoflush=False
     )
 except Exception as e:
-    engine = None
+    import logging
+    logging.error(f"Failed to initialize database engine: {e}")
+    raise e
     AsyncSessionLocal = None
 
 class MockSession:

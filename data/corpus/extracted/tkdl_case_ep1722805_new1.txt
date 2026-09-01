@@ -1,0 +1,160 @@
+SEPITRQBOS —— Exarniet Reaper
+
+Bae” 29.01.2010 Sut Sepsis: 05 711 431.6
+
+‘The examinations boing cared out onthe following aplication documents
+
+Description, Pages
++66 2 pubishod
+
+Claims, Numbers
+142 ‘od with err ito the gional paso before tho EPO
+
+Drawings, Sheets
+198 as published
+
+Reference is made to the folowing documents; the numbering willbe adhered to in
+the rest of the procedure:
+
+Dt MATSUI ET AL: "Fatty acid hydroperoxide cleaving enzyme,
+hydroperoxide lyase, from tea leaves" PHYTOCHEMISTRY, PERGAMON
+PRESS, GB, vol. 30,no. 7, 1 January 1991 (1991-01-01) , pages
+2109-2113
+
+D2 GENSLER HELEN L ET AL: Prevention of photocarcinogenasis by
+topical administration of pure epigallocatechin gallate isolated from green
+tea’ NUTRITION AND CANCER, vol. 26, no. 3, 1996 , pages 925-395
+
+D3 ZHAO ET AL: “Photoprotectve effect of black tea extracts against UVB-
+Induced phototoxicty in skin.” PHOTOCHEMISTRY AND
+PHOTOBIOLOGY OCT 1999, vol. 70, no. 4, October 1999 (1899-10) ,
+pages 637-644
+
+D4 —_VAYALIL PRAVEEN K ET AL: "Treatment of geen tea polyphenols in
+hydrophilic cream prevents UVB-induced oxidation of lpids and proteins,
+{depletion of antioxidant enzymes and phosphorylation of MAPK proteins
+in SKH-1 hairless mouse skin.” CARCINOGENESIS (OXFORD), vol 24,
+ro. 5, May 2003 (2003-05) , pages 927-936
+
+‘The present application pertain to a method of fractionating green tea leaves
+(Camelia sinensis) and to use these fractions as photoprotective ingredient.
+
+
+
+2 opuanve: 05 711 431.6
+
+29.01.2010
+
+32
+
+Article 123(2) EP
+The present set of claims does not contravene Article 123(2) EPC.
+
+Clarity (Article 84 EPC) and Novelty (Article 54 EPC.
+
+The fractions claimed in claim 1-14 were obtained by the process ilustrated in
+Figure 1. However, said claims are not formulated as product by process.
+claims. Consequently, is any tea leaf membrane’ cytoplasmic fraction novelty
+destroying for the subject-matter of said claims.
+
+1 discloses on page 2110, 1. column the preparation of ta leave fractions.
+The leaves were homogenized with a buffer and centrifuged at 1.000 x 9. The
+resultant supernatant was again centfuged at 100.000 x g. The 1.000 xg
+pellet can be considered a cell wall racton, the 1.000 x g supernatant coll
+jtce, the 100.000 x g pellet a membrane fraction and the 100.000 x g
+supematant cell juice serum plus cytoplasm. Considering that the buffer
+stablises the pH it can be seen as "stabizer (claim 15).
+
+Consequently, is 01 novelty destroying for the subject-matter of claims 1-16.
+
+Inventive step (Article 56 EPC)
+
+The teaceae family comprises 40 genera and 600 species. The application
+discloses a skin protective effect only forthe fraction of one single species,
+‘namely Camelia sinensis. itis unikely that al other species have the same
+effect. Consequentiy, isthe problem underlying the present application, the
+provision of a fraction capable of preventing photocarcinogenesis not fl
+‘ver the entire scope of the claimed subject-matter. The claims should be
+limited to Camelia sinensis and closely elated plants.
+
+‘The closest prior artis represented by the teaching of D4. The document
+reveals that green tea polyphenols (GTP) or its most chemopreventive
+constituent epigallocatechin-3-gallate (EGCG) protects skin from adverse
+effect of solar ultraviolet radiation when topically applied in a hydrophilic
+cream.
+
+However, there isa diference between D4 using GTP or EGCG and the
+present application that uses chemically undefined cell fractions.
+
+‘The technical problem to be solved by the present application therefore lies in
+the provision of alternative compounds for preventing photocarcinogenesis
+‘The problem has been solved by the provision of Camelia sinensis cell wal
+fraction, cel juice serum and membrane fraction.
+
+For the assessment of inventive step, the question to be answered is whether
+‘twas obvious for a skiled person to have used fractions of tea leaves instead
+of puriied GTP or EGCG.
+
+
+
+Om” 29.01.2010 Smt 3 fepestonte 05 711 431.6
+
+GTP are well known antioxidants. It has been repeatedly demonstrated that
+‘ral and topical application of polyphenols before UVB irradiation protects
+mice skin from UV-induced skin cancer development (D3: sentence bridging
+page 637 and page 638)
+
+‘Several polyphenols present in green tea have been shown to possess
+anticarcinogenic activity: the most active is EGCG, which is also the major
+Constituent of GTP. D2 reveals in an animal model thatthe induction of skin
+tumours by UV radiation was significantly reduced by topical, but not by oral,
+administration of purified EGCG.
+
+‘Treating the skin with green tea polyphenols has been shown to modulate
+biochemical pathways involved in inflammation, cellular proliferation,
+‘expression of tumour promoters, and UV light-induced inflammation in the
+skin,
+
+‘The applicant detected the highest UV-protection property of Camellia
+‘products in the membrane fraction extract followed by cell juice serum and
+cell wall fraction extract which is identical to white tea extract (contro)
+
+‘The activity seen in white tea extract is most likely associated with the
+‘presence of polyphenols in this extract. It's therefore reasonable to assume
+that this activity which is inherent tothe plant can be found once the plant is
+fractionated. Even black tea, produced by cutting Camelia leaves and
+allowing its fermentation can be used as source for polyphenols which, when
+topically administered, protect mice from UVB damage of skin (03, page 642,
+last sentence),
+
+In the present application no comparative experiments have been performed
+with GTP or purified EGCG that alow to conclude a superior effect of a
+Camelia cel fraction
+
+Fractionating green tea leaves and using these fractions for preventing
+pphotocarcinogenesis therefore seem not to involve inventive step in the sense
+of Antcle 56 EPC.
+
+4 Third Party Observation under Article 115 EPC
+
+5 _Inview of the above objections, the applicant is asked to submit his comments,
+and! oF a new set of claims.
+
+
+
+29.01.2010 Sat 4 feomammies 05 721 431.6
+
+The attention of the applicant is drawn tothe fact thatthe application may not
+bbe amended in such a way that it contains subject-matter which extends
+beyond the content ofthe application as fled (Article 123(3) EPC),
+
+In order to facilitate the examination ofthe conformity of the amended
+application with the requirements of Article 123(2) EPC, the applicant is
+requested to clearly identity the amendments caried out, irrespective of
+whether they concern amendments by addition, replacement or deletion, and
+to indicate the passages of the application as filed on which these amend-
+‘ments are based,
+
+Ifthe applicant regards it as appropriate these indications could be submitted
+in handwritten form on a copy ofthe relevant parts ofthe application as filed
+

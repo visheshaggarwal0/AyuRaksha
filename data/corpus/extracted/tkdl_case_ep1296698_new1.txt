@@ -1,0 +1,220 @@
+‘Ta examinton i baingcarviad ou onthe following application documents
+
+Description, Pages
+
+12,2898, aspublehed
+
+seer
+
+s.37 ie wit tlotax on 02-10-2008,
+Claims, Numbers
+
+118
+
+ea wt tleax on 15.08-2010
+
+Drawings, Sheets
+
+weveves as published
+
+Roterence is made to the folowing documents;
+
+1
+
+03
+
+a
+
+AITKEN A: “THE ACTIVATION OF PROTEIN KINASE C BY DAPHNANE
+INGENANE AND TIGLIANE OITERPENOID ESTERS”,
+
+BOTANICAL JOURNAL OF THE LINNEAN SOCIETY,
+
+vol. 94, no. 1-2, 1987, pages 247-264, XP008040869,
+
+‘& JOINT MEETING OF THE LINNEAN SOCIETY AND THE
+PHYTOCHEMICAL SOCIETY, KEW, ENGLAND, UK, APRIL. 1986, 80
+ISSN: 0024-4074
+
+EL-MEKKAWY S ET AL: "Anti-HIV-1 phorbol esters from the seeds of
+Croton tight,
+PHYTOCHEMISTRY, PERGAMON PRESS, GB,
+vol. $3, no. 4, 9 February 2000 (2000-02-09). pages 457-464,
+xPo04291324
+ISSN: 0031-9422
+HOMANN J. ET AL. “Jatrophane diterpenoids from euphorbia peplus”.
+PHYTOCHEMISTRY.
+vol. 51, 1999, pages 673-677, xPO02986683,
+
+WO 99/08994 A
+
+
+
+Ba” 08.03.2013 ou 2 ‘eoemonhe 01 937 873.6
+oa Fate ‘Somanarn™
+D5 HOMANN4J. ET AL: "Diterpenoids rom Euphorbia peplus”
+
+PLANTA MEDICA,
+vol. 66, no. 3, 2000. pages 291-294, XP008016958,
+
+8
+
+OGBOURNE $ MET AL: “Proceedings of the First International
+Conference on PEPOOS",
+
+ANTI-CANCER DRUGS, LIPPINCOTT WILLIAMS & WILKINS, US; NL,
+vol. 18, no. 3, 1 March 2007 (2007-03-01), pages 357-362, XP008124412,
+ISSN: 0959-4973, DOI: 10.1087/CAD.08013E3280149ECS
+
+i
+
+
+
+Ber” 08.03.2013 Sen 3 fooeaonte: 01 937 873.6
+
+18 “Linga Chenduram-20")
+TKOL,, 1 January 1975 (1975-01-01), XP003028016, Exhibit 12)
+TROL, 1 January 1998 (1998-01-01), XPO03028017, Exhibit 13)
+
+1-02 were cited in tho European search report.
+103-05 were cited in the international search report.
+D6 was cited by the applicant in his telefax of 2.102008.
+
+Articles 83 and 84 EPC
+Giaims 1-15 do not meet the requirements of Article 84 EPC.
+
+21 Theterms analogues and derivatives in claims 1-15 render their scope
+unclear, since itis not known to the skilled reader which structures are
+Intended to be encompassed by these terms. Terms like analogues and
+‘derivatives include compounds obtained from another compound by a
+‘chemical reaction (including compounds which are structurally remote trom
+the_starting matarial) functional derivatives (such as compounds, wherein
+hetero atoms are exchanged by alternative atoms), compounds with
+‘numerous diferent types of side groups ete. Consequently the subject - mattor
+‘of claims 1-15 does not fulfil the requirements of Aricle 84 EPC. Said terms,
+‘should be deleted from the claims
+
+22 The torm “inflammatory condition’ in claim 1 is not clear (Article 84 EPC),
+‘According to the description of the present application (page 32 line 18 to
+page 33 line 3 and new claim 8) said term encompasses pathological
+‘conditions which are not unambiguously associated with an inflammatory
+response such as e.g. trauma, oxidative stress, celldeath, cancer, viral
+infection, juvenile diabetes, etc
+
+
+
+ig
+
+08.03.2013 fet 4 Neomante 01 937 873.6
+
+23
+
+24
+
+3a
+
+32
+
+‘The expressions “oxidative stress” and "call death” used in ciaim 9 are
+‘vague and unclear. It is not known which disoasos aro intonded to be
+‘encompassed by these terms.
+
+Moreover, the present application lacks support and disclosure in the meaning
+of Articles 84 and 83 EPC. Itis shown inthe present application that the
+‘claimed compounds have an antinfectious and an antitching activity (as well
+‘as a known anti-cancer activity). However, the present application does not
+provide evidence of the ant-inflammatory activity of the compounds. On the
+contrary, it emerges from the example 7 ofthe present application and from
+the prior art (soe @.9, examplo 14 of D4 and DS) that the compounds are pro-
+inflammatory. Theratore, serious doubts exists that the claimed
+‘compounds are effective in the treatment of inflammation and
+inflammatory conditions not associated with infection or itching (such
+‘95.6.4. organ transplantation, asthma, icerative colitis, lupus,
+‘rheumatoid arthritis, repertusion, autoimmune disorders etc...)
+
+Claim 1 should be restricted to the the woll-dotined diseases of claim 9 for
+‘hich support and disclosure can be found.
+
+Anticle 54 EPC
+
+‘The subjact-matter of claims 1-15 does not meet the requirements of Article
+54 EPC.
+
+104 discioses the use of 20-acetyingenol-3-angelate for the treatment of
+‘cancer (claims 1 and 9) Itis shown in D4 that a fraction of E. poplus crude
+‘sap consisting of 20-acatylingorol-3-angolate (raction A) is active against
+MM96L motanoma cells (examples 9-10 pages 43-51). Moreover, this fraction
+Induces protieration of normal melanocytes and T-cells and is thus useful in
+the treatment of wound healing, recovering from buns, multiplication of
+pancreatic islet cells for implantation, trauma and cell death (example 15
+[pages 61-63). Preferably, the compositions of D4 comprise beta-alanine
+betaine hydrochloride or t-4-hydroxy-N.N-<dimethyl proline as carrier (ciaim 10,
+page 16 lines 22-24, example 16 pages 63-64). Therefore, the subject-matter
+of claims 1-15 is not novel over D4
+
+
+
+if
+
+08.03.2013 owe 5 fopeaton te: 01 93
+
+33
+
+4a
+
+52
+
+53
+
+54
+
+Itis to be noted thatthe feature of claim 1 “capable of modulating PKC
+activity, PKC-dependent gene expression or PFKC enzyme turnover" which
+refers to the underlying mechanism of action ofthe claimed compounds,
+although not explicitly disclosed in the cited documents, is necessarily present
+as functional characteristic which is inherent to the compounds of formula IV
+and in particular to the compounds of claim 10. Therefore, this feature does
+‘not confer novelty over the known use of the compounds of formula IV in the
+treatment ofthe inftammatory conditions of claim 9.
+
+Article 56 EPC
+‘The subject-matter of claims 1-18 doos not meet the requirements of Article
+56 EPC.
+
+Even if rendered novel by appropriate amendments and as far as relerring to
+cancer, juvenile diabetes, coll death and trauma, tho subject-matter of claims
+1-15 would lack an inventive step in view of D4, which discioses the use of 20-
+(O-acety-ingeno!-3-angelate in the treatment of theso cisoasos.
+
+Remarks
+
+‘The use of the compounds of formula VI forthe treatment of infectious.
+diseases and skin allergies seems to be novel and inventive.
+
+‘The applicants invited to file a new set of claims wich takos account of the
+above objections and comments
+
+In order to facilitate the examination of the conformity of the amended
+‘application with the requirements of Article 123(2) EPC, the applicant is
+requested to clearly identify the amendments carried ou, irrespective of
+whether they concem amendments by addition, replacement or deletion, and
+clearly indicate the passages of the application as filad on which these
+‘amendments are based.
+
+‘When filing amended claims the applicant should at the same time bring the
+description into conformity with the amended claims. Care should be taken
+<during revision, especially of the introductory portion and of any statements of
+problem or advantage, not to add subject-matter which extends beyond the
+‘content of the application as originally filed (Article 123(2) EPC).
+
+
+
+Sex” 08.03.2013 ome femmamontix 01 937 87:
+
+55 To meet the requirements of Rule 42 (1) (b) EPC, documents D4 and D2
+should be identified in the description and the relevant background art
+disclosed therein should be briefly discussed.
+
+56 The wording of dependent claims must clearly reflect their dependency on the
+Independent claims. A suitable formulation may be "chemical agent of
+

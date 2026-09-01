@@ -1,0 +1,213 @@
+ate Shet Appieatonne: 09 844 722.0
+Sate Fee Semange n=
+
+‘The examinations being caried out onthe following application documents
+
+Description, Pages:
+110 ‘8 published
+
+Claims, Numbers
+115 ‘led wth entry into the regional phase belo the EPO
+
+‘Amendments (Article 123(2) EPC)
+
+‘The amended claims filed with the entry into the regional phase before the EPO
+introduce subject-matter going beyond the disclosure of the application as originally
+filed, contrary to the requirements of Art. 123(2) EPC. The amendments mentioned
+are the following
+
+claim 7
+
+‘There is no basis in the application as originally filed for the amount of lithium in the
+lithium salt being from 1.5 to 4.9 mg. The passages cited by the applicant in support of
+‘amended claim 7 do not teach such a range. Page 5, lines 21-22 discloses a range
+from 1.5 to 10 mg, page 10, ines 7-9 discloses a gelatin capsule comprising 4.9 mg of
+lithium as lithium orotate. The disclosure of a single value of lithium content in a
+capsule cannot be combined with a general disclosure of a range of lithium content in
+‘a formulation to form a new, originally undisclosed range. Such a combination violates
+the requirements of Art. 123(2) EPC.
+
+claim 10
+
+No basis can be found forthe combination tobe taken from once every other day to at
+least once per day. Page 7, lines 7-8 teaches that an individual may take one capsule
+every other day to prevent symptoms and may take one to three capsules three times
+‘aday to relieve the symptoms. Thus in fact, the amount of one capsule every other
+day is a separate dosage regiment rather than a lower limit of a range as presently
+Claimed. No disclosure of one capsule vary othor day, being the upper iit ofthe
+dosage range presently claimed, is to be found in the cited passage at all.
+
+
+
+Ome cf Form Shet 2 Josmatonne: 09 844 722
+Sate Fee Semange n=
+claim 11
+
+No general disclosure of the combination to be taken for more than four weeks as a
+preferred embodiment is to be found in the application as originally led. Page 9, line
+25 does not provide sufficient basis for this feature as firstly it concems a specific
+‘combination of active agents of Example 2 and secondly, the four weeks appear to be
+disclosed as a period during which the patient did not experienced any further gout
+symptoms or any adverse effect following the treatment with the combination forthe
+first four days on regimen of Example 2 and four additional days of regimen of
+Example 1 (see page 9, line 19 and lines 22-24). Thus, the actual treatment disclosed
+in Example 2 is eight days rather than more than four weeks as presently claimed,
+
+claim 12
+
+‘The fact thatthe treatment with the claimed combination causes no gastrointestinal
+distress is disclosed in the passage cited by the applicant (page 10, ines 11-14) only
+for the specific therapeutic combination of Example 8. There is no general disclosure
+inthe application as originally filed that the present combination causes no
+{gastrointestinal distress over the whole scope claimed.
+
+claim 13
+
+No disclosure ofthe use of the therapeutic combination wherein the symptoms are
+rellved within three days alter the intiation of ingestion thereof isto be found in the
+application as orginally filed. The disclosure at page 10, ines 10-12 cannot provide
+sufficient basis for this feature as firstly, it is restricted to a specific combination of
+active agents ofthe capsuies of Example 3, and secondly it teaches that a patient
+takes said capsules fortwo to four days unt all gout symptoms are are ablated.
+
+For the above reasons claims 7, 10-13 are not allowable under Art. 12382) EPC. No
+pinion on novelty/inventiveness of these claims wil be provided in this
+‘communication.
+
+Cited documents
+Reference is made to the following documents; the numbering will be adhered to in
+the rest of the procedure,
+D1 —_“Nuskha-e- Sang-e- Gurda’,
+TKDL,, 1 January 1909 (1909-01-01), XP003028851,
+
+
+
+cf Form Shet 3 Ropteatone: 09 844 722.0
+Fee Semange n=
+
+ee
+
+D2 WO 0040258 At (INT CELERY DEV ALLIANCE PTY LT [AU]; BUTTERS,
+DESLEY ETHEL [AU]; DAVIS) 13 July 2000 (2000-07-13)
+
+D3 DATABASE WPI, Week 200869 17 November 2007 (2007-11-17)
+‘Thomson Scientific, London, GB; AN 2008-L74769
+& CN 101 007 015 A (BENING TIANCHUAN JUNWE! MEDICINE TECH
+DEV CO LTD) 1 August 2007 (2007-08-01)
+
+D4 JACOB ROBERT A ET AL: "Consumption of cherries lowers plasma urate
+in healthy women.", JOURNAL OF NUTRITION,
+Vol. 133, no. 6, June 2003 (2003-06), pages 1826-1829,
+ISSN: 0022-3166
+
+DS —_ US2001/002407 At (NAIR MURALEEDHARAN G [US] ET AL) 31 May
+2001 (2001-05-31)
+
+Dé —-_ WO 2008/016823 A2 (PLEVA RAYMOND [US}) 7 February 2008
+(2008-02-07)
+
+07 —_ DATABASE WPI, Week 200805 23 May 2007 (2007-05-23)Thomson
+‘Scientific, London, GB; AN 2008-A59881
+& CN 1 965 858 A (UNIV LANZHOU) 23 May 2007 (2007-05-23)
+
+Unless indicated otherwise reference is made to the passages considered relevant in
+the search report.
+
+Third party observations (Article 115 EPC)
+
+‘The examining division notes that third party observations have been filed on
+01.06.2011 with a letter of 24.05.2011.
+
+The Examining Division has taken the translated references and the corresponding
+‘comments into consideration. However none of these exhibits discloses a composition
+‘comprising a combination of the three active ingredients as presently claimed - an
+extract of celery, an extract of cherry, and a lithium salt. Exhibit 9 (Mohammad Akmal
+Khan) discloses compositions comprising two out ofthe three active ingredients -
+celery extract and cherry extract. This document is cited herein as D1.
+
+‘The other documents that disclose the use of single ingredients - celery or cherry: for
+the treatment of gout, renal stones, urinary calculus, etc. have been considered, they
+are however not cited herein as they do not add any information to the prior art
+documents on file.
+
+
+
+Dae” cf Form 1507 Shet 4 Ropteatone: 09 844 722.0
+Sate Fee Semange n=
+
+Novelty (Article 54 EPC)
+
+‘The subject-matter of independent claims 1, 9 and 14 is considered to be novel in
+terms of Art. 54 EPC as none of the cited documents discloses a combination of an
+extract of celery, an extract of cherry, and a lithium sait, as presently claimed.
+
+Inventive step (Article 56 EPC)
+
+The present application does not meet the requirements of Aricle 52(1) EPC because
+the subject-matter of claims 1-6, 8, 9, 14, 15 does not involve an inventive step within
+the meaning of Article 56 EPC.
+
+The problem to be solved by the present application is the provision of an agent for
+relieving or preventing symptoms associated with uric acid crystals. The solution as
+Claimed is a therapeutic combination of three active ingredients: an extract of celery,
+an extract of cherry, and a lithium salt. The use of the single components of the
+Claimed combination for the same purpose is known from the prior art - see D2, 03 for
+celery extracts, D4-D6 for cherry extracts and D7 for Ithium salts. Use of a
+combination of known agents for a known therapeutic application can be considered
+Inventive only if such a combined use provides for an unexpected beneficial technical
+effect superior to the sum of the effects of the components when used alone (i.e.
+synergism). However, no such superior effect of the presently claimed combination is
+shown by the application. In the absence of an superior technical effect, the claimed
+‘composition represents a mere juxtaposition of known components using their known
+properties, which cannot be considered inventive. Thus, independent claims 1, 9 are
+‘considered to lack an inventive step in terms of Art, 56 EPC.
+
+Furthermore, D1 solves the same technical problem as the present application
+treatment of nephrolit renal stone, and cystolith, which are conditions faling within the
+‘scope of symptoms associated with uric acid crystals, by a formulation comprising
+inter alia extract of celery seeds and extract from sour cherry stones. Taking D1 as the
+closest prior art, the presently claimed subject-matter differs over the solution of D1 in
+that a lithium salt is added to the composition. However, itis known from the prior art
+that Ithium carbonate is effective in the prevention and treatment or renal calculus
+(07), therefore, it would have beon obvious to a person skilled in the art to combine
+the teachings of D1 and D7 and the claimed solution cannot be considered inventive.
+Moreover, the addition of (a) lithium salt to the composition of D1 is not shown to
+provide any technical effect which would not have been already provided by the
+‘composition of D1. As the feature distinguishing the claimed subject-matter over the
+closest prior art does not bring any technical effect, no inventiveness can be
+acknowledged for the subject-matter of independent claims 1 and 9
+
+
+
+‘Shet 5 ‘Appteatonve: 09 844 722.0
+Fee Semange n=
+
+‘The subject-matter of independent claim 14 cannot be considered inventive in terms,
+Of Art. 86 as mixing together three known active ingredients and forming the mixture,
+into a medicament is a common technique within ordinary skills of a person skilled in
+the art
+
+None ofthe features of dependent claims 2:6, 8 and 15 can be considered to convey
+inventiveness to the subject-matter claimed. The claimed contents of ingredients
+(claims 2-5) are arbitrary choices with no shown technical effecs. The choice of sweet
+cherries (claim 3) would be obvious in view of D4 or D5, the choice of ithium
+carbonate as a preferred lithium salt (claim 6) would be obvious from D7. The use of
+celery seed extract and (ctzim 15) is disclosed in D1-D3, cherry fruit extract (claim 15)
+is Gisclosed in D5, D6. The choice of Prunus maackii as the preferred cherry (claim 8)
+is not shown to provide for any technical effect.
+
+Concluding remarks
+
+Itis not at present apparent which part of the application could serve as a basis for a
+new, allowable claim, Should the applicant nevertheless regard some particular matter
+{as patentable, an independent claim should be filed taking account of Rule 43(1) EPC,
+‘The appiicant should also indicate how the subject-matter of the new claim differs
+from the state of the art and the significance thereof.
+
+In order to comply with the requirements of Rule 137(4) EPC, the applicant should
+clearly identify the amendments made, irrespective of whether they concern
+amendments by addition, replacement or deletion, and indicate the passages of the
+application as filed on which these amendments are based (see Guidelines H lll, 2.1).
+Ifthe applicant considers it appropriate, these indications could be submitted in
+handwritten form on a copy of the relevant parts of the application as filed.
+

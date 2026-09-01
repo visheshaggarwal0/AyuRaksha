@@ -12,6 +12,10 @@ from typing import List
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "backend"))
+
+from dotenv import load_dotenv
+load_dotenv(ROOT / ".env")
 
 from sqlalchemy import select
 from app.db.session import AsyncSessionLocal

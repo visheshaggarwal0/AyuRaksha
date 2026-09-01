@@ -1,0 +1,334 @@
+entity_id,scientific_name,sanskrit_name,common_name,unani_name,siddha_name,tkdl_original_text,verification_status,source_id
+TKDL-E0001,Abrus precatorius Linn.,guñjā,"crab's eye, jequerity, pois rouge, precatory bean, rosary pea, rosarypea, tento muido, Indian liquorice",Aninud deek/Ghonghchi/Achnata Phal,Kundrimani,gu®j¢,encoding_mapped,TKDL-001
+TKDL-E0002,Acacia arabica/nillotica Willd.,babbūla,"Babul, Black Babul, Indian Gum arabic tree",Aqaaqia/Mughilaan/Kikar/Babool/Qaraz,Karuvel,babb¦la,encoding_mapped,TKDL-001
+TKDL-E0003,Acacia catechu,khadira,cutch tree,Khair/Kath Safaid,Karungali,khadira,verified,TKDL-001
+TKDL-E0004,Aconitum chasmanthum Stapf & Holmes / Aconitum ferox Wall. ex Ser.,ṇśṛgika viṣa,Indian aconite,,,º¨¼gika vi¾a,encoding_mapped,TKDL-001
+TKDL-E0005,Aconitum ferox Wall. ex Ser.,vatsanābha bheda,Indian aconite,Khaaniq-al-Zeb,Vasha naabi,vatsan¢bha bheda,encoding_mapped,TKDL-001
+TKDL-E0006,Aconitum heterophyllum Wall. ex Royle,ativiṣā,indian atees,Atees/Patees,Ahividayam,ativi¾¢,encoding_mapped,TKDL-001
+TKDL-E0007,Acorus calamus Linn.,vacā,"calamus, sweetflag",Waj-e-Turki,Vasambu,vac¢,encoding_mapped,TKDL-001
+TKDL-E0008,Aegle marmelos Correa ex Roxb.,bilva,Indian bael,Bil/ Bel / Belgiri / Bael / Safarjal Hindi / Shull / Ball / Tull /Nall,Vilvam,bilva,verified,TKDL-001
+TKDL-E0009,Alangium salviifolium,aṛko°a,,Aankola/Dhira/Anbaku,Azhinjil,a¼ko°a,encoding_mapped,TKDL-001
+TKDL-E0010,Alhagi maurorum Baker Dexv /  Alhagi pseudalhagi,"yavāsaka, dhanvayāsa","camel thorn, persian manna plant",Haaj / Turanjabeen/Jawaasa/Jawaansa,Thurunjibin,"yav¢saka, dhanvay¢sa",encoding_mapped,TKDL-001
+TKDL-E0011,Allium sativum,"laṇuna, lahasuna","Garlic, cultivated garlic",Seer,Poondu,"laºuna, lahasuna",encoding_mapped,TKDL-001
+TKDL-E0012,Alocasia macrorrhiza,mānaka,Giant taro,Merugankilangu,Ulakkai,m¢naka,encoding_mapped,TKDL-001
+TKDL-E0013,Aloe barbadensis Mill.,kumār¤,"Barbedos aloe, Indian aloe, Curacao aloe, Jaffarabad aloe",Gheekawaar/Sibr,Katrazhai,kum¢r¤,encoding_mapped,TKDL-001
+TKDL-E0014,Alstonia scholaris,saptaparīa,Dita bark,Kashim/Chatim,Ezhilai palai,saptapar´a,encoding_mapped,TKDL-001
+TKDL-E0015,Amomum subulatum Roxb.,sthūlaelā bheda,Greater or Nepal Cardamom,Heel Kalaan/Qaaqulah Kabeer,Periya elakkai,sth¦lael¢ bheda,encoding_mapped,TKDL-001
+TKDL-E0016,Amorphophallus campanulatus,sūraīa,Elephant-foot Yam,Zamin Kand Beghi/Soran,Kaaraa karunai,s¦ra´a,encoding_mapped,TKDL-001
+TKDL-E0017,Anacyclus pyrethrum DC.,ākārakarabha,"Pellitory of Spain, Pyrethrum",Aaqarqarha /Oodul-Qarah,Akrakaaram,¢k¢rakarabha,encoding_mapped,TKDL-001
+TKDL-E0018,Andrographis paniculata,"bhūnimba, kālamegha",false waterwillow,Nila vembu,Kriyaathu,"bh¦nimba, k¢lamegha",encoding_mapped,TKDL-001
+TKDL-E0019,Anethum sowa Roxb. ex Flem.,ṇatāhvā,"Indian Dill, Sowa",Shibt/Soya,Sadha kuppai,ºat¢hv¢,encoding_mapped,TKDL-001
+TKDL-E0020,Angelica glauca Edgew.,coraka,"angelica, wild celery",Hasheeshat-al-Malik,,coraka,verified,TKDL-001
+TKDL-E0021,Aquilaria malaccensis Lam. Syn.,agaru,"Aloewood, Eaglewood, Agarwood",Ood Hindi/ Agar/Ood Qimari/Ood Gharqi/Aghaloojan/ Aghalooji,Akil,agaru,verified,TKDL-001
+TKDL-E0022,Areca catechu Linn.,pūga,betel palm,Fufal/Chalia/Chikni Supaari,Paakku,p¦ga,encoding_mapped,TKDL-001
+TKDL-E0023,Argyeria nervosa,"vśddhadāruka, bastāṛtr¤",Elephant Creeper,Samuthirapachhai,Samuthira palai,"v¨ddhad¢ruka, bast¢¼tr¤",encoding_mapped,TKDL-001
+TKDL-E0024,Arundo donax Linn.,Nala,"giant reed, giantreed",Qasab,Korukkai,Nala,verified,TKDL-001
+TKDL-E0025,Asparagus racemosus Willd.,"¹atāvar¤, Medā-Mahāmedā",Indian asparagus,Satawar,Seemai sathaveri,"¹at¢var¤, Med¢-Mah¢med¢",encoding_mapped,TKDL-001
+TKDL-E0026,Azadirachta indica A. Juss.,Nimba,neem,Neem,Vembu,Nimba,verified,TKDL-001
+TKDL-E0027,Bacopa monnieri,Brāhm¤,"coastal waterhyssop ,    herb of grace,    herb-of-grace",brahmi,Neerpirami,Br¢hm¤,encoding_mapped,TKDL-001
+TKDL-E0028,Balanites aegyptiaca,Ingud¤,desert date,Ingad/Hingot/Allabakh,Nanjundaan,Ingud¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0029,Baliospermum montanum,Dant¤,,Danti,Kattamanakku,Dant¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0030,Bambusa arundinacea,"Vaṛṇa, Vaṛṇalocana, Baṛsalocana",bamboo,Khumairah Bairah/Qirtas sokhtah/Tabasheer/Baans/Nae,Mungil,"Va¼ºa, Va¼ºalocana, Ba¼salocana",encoding_mapped,TKDL-001
+TKDL-E0031,Barleria cristata Linn.,Sahacara,crested Philippine violet,Nilachemulli,Udamulli,Sahacara,verified,TKDL-001
+TKDL-E0032,Barleria prionitis Linn.,Saireyaka,porcupine flower,Pya bansa/Jhinti,Semmulli,Saireyaka,verified,TKDL-001
+TKDL-E0033,Barleria strigosa Willd.,Sahacara,,Nilambaram,Nili,Sahacara,verified,TKDL-001
+TKDL-E0034,Barringtonia acutangula,"Nicula, samudra phala",Indian Oak,Samandarphal,Adambu,"Nicula, samudra phala",verified,TKDL-001
+TKDL-E0035,Basella alba Linn.,Upodikā,Ceylon spinach,Poi/Bachla,Pasalikkeerai,Upodik¢,encoding_mapped,TKDL-001
+TKDL-E0036,Bauhinia variegata Linn.,Kāñcanāra,"butterfly tree , mountain ebony,orchid tree, purple orchid tree",Kachnal/Kachnar,Segapu manchori,K¢®can¢ra,encoding_mapped,TKDL-001
+TKDL-E0037,Benincasa hispida,kūṣmāī²a,waxgourd,Petha / Mahdayah/Kohila,Boosani,k¦¾m¢´²a,encoding_mapped,TKDL-001
+TKDL-E0038,Berberis aristata DC. / Berberis asiatica Roxb. / Berberis lycium Royle,dāruharidrā,Indian Barberry,Maramanjal,Mullu kalaa,d¢ruharidr¢,encoding_mapped,TKDL-001
+TKDL-E0039,Bergenia ciliata,pāṣāīa bheda,"aerva ,sessile joyweed",Pakhan Bed/Kaasar-al-Shajr/Paashaan Bhed,,p¢¾¢´a bheda,encoding_mapped,TKDL-001
+TKDL-E0040,Bombax ceiba Linn.,ṇālmali,"red silk cottontree, Silk Cotton Tree, Red Cotton Tree",Saimul/Sembhal/Mocharas/Salmali,Mullilavu,º¢lmali,encoding_mapped,TKDL-001
+TKDL-E0041,Carum carvi Linn.,kśṣīaj¤raka,"caraway , cumin caraway",Karoya / Qirdmana / Qirtmann / Kamoon Kirmaani/ Zeerah Siyaah,Seemai sombu,k¨¾´aj¤raka,encoding_mapped,TKDL-001
+TKDL-E0042,Cassia fistula Linn.,āragvadha,golden shower,Amaltaas/Kheyaar shanbar,Kondrai,¢ragvadha,encoding_mapped,TKDL-001
+TKDL-E0043,Cassia occidentalis Linn.,kāsamarda,"coffee senna,septicweed",Kasondi,Nattam takarai,k¢samarda,encoding_mapped,TKDL-001
+TKDL-E0044,Cedrela toona Roxb.,"tuī¤, nand¤vśkṣa","Red Cedar, Toon, Indian Mahogany tree",Tun,Sandhana vembu,"tu´¤, nand¤v¨k¾a",encoding_mapped,TKDL-001
+TKDL-E0045,Cedrus deodara,devadāru,"pinus deodara, himalayan cedar",Deodar,Devataaru,devad¢ru,encoding_mapped,TKDL-001
+TKDL-E0046,Celastrus paniculatus Willd.,jyotiṣmat¤,staff tree,Malkangni/Nammilnaraa,Athi parichan,jyoti¾mat¤,encoding_mapped,TKDL-001
+TKDL-E0047,Chenopodium album Linn.,"vāstūka, cill¤","common lambsquarters, lambsquarters, lambsquarters goosefoot, white goosefoot",Bathwa/Qataf/ Sarmaq,Kattasambadam,"v¢st¦ka, cill¤",encoding_mapped,TKDL-001
+TKDL-E0048,Chlorophytum tuberosum Baker / Asparagus adscendens Roxb.,muṇal¤ ṇveta,,,,muºal¤ ºveta,encoding_mapped,TKDL-001
+TKDL-E0049,Cinnamomum camphora,karpūra,"camphor laurel, camphor tree, camphortree, Camphor",Kafoor,Karpooram,karp¦ra,encoding_mapped,TKDL-001
+TKDL-E0050,Cinnamomum cassia,tvak,cassia,Qirfah,Lavangapattai,tvak,verified,TKDL-001
+TKDL-E0051,Cinnamomum tamala Nees,"tejapatra, nalikā",indian bark,Sazaj Hindi/ Patraj,Lavangapathri,"tejapatra, nalik¢",encoding_mapped,TKDL-001
+TKDL-E0052,Cinnamomum zeylanicum Blume,tvak,cinnamon,Daarchini,Ilavangapattai,tvak,verified,TKDL-001
+TKDL-E0053,Cissampelos pareira Linn.,pā°hā,pareira brava,Paatha/Fareed Booti,Appatta,p¢°h¢,encoding_mapped,TKDL-001
+TKDL-E0054,Cissus quadrangularis Linn.,"asthisaṛhśta, asthiṇśṛkhalā","Square Stalked Vine, Adamant Creeper",Pirandai,Vajravalli,"asthisa¼h¨ta, asthiº¨¼khal¢",encoding_mapped,TKDL-001
+TKDL-E0055,Citrullus colocynthis,indravāruī¤,colocynth,Hanzal,Pei kummatti,indrav¢ru´¤,encoding_mapped,TKDL-001
+TKDL-E0056,Citrus limon,"jamb¤ra phala, nimbu",lemon,Utraj/Lemoon,Periya elumichai,"jamb¤ra phala, nimbu",unmapped_high_bytes_present,TKDL-001
+TKDL-E0057,Citrus medica Linn.,b¤japūra,citron,Beej Purah/Bajoorah/Turanj/ Naaranj,Elumichai,b¤jap¦ra,encoding_mapped,TKDL-001
+TKDL-E0058,Cleome gynandra Linn.,"ajagandhā, tilaparī¤?","spider whisp, spiderflower, spiderwisp",Thai velai,Nalvelai,"ajagandh¢, tilapar´¤?",encoding_mapped,TKDL-001
+TKDL-E0059,Clerodendrum divaricatum Jack Syn.,bhāra¬g¤,"Turks Turban, Tube-flower",Baharangi/Bharangi,Ankaravalli,bh¢ra¬g¤,encoding_mapped,TKDL-001
+TKDL-E0060,Clerodendrum indicum,bhāraṛg¤,turk's turbin,Baharangi,Kavalai,bh¢ra¼g¤,encoding_mapped,TKDL-001
+TKDL-E0061,Clerodendrum multiflorum,"agnimantha laghu, tarkār¤",,Taankal/Taankli/Arnie,Thaluthazhai,"agnimantha laghu, tark¢r¤",encoding_mapped,TKDL-001
+TKDL-E0062,Clitoria ternatea Linn.,"aparājitā, ṇa¬khapuṣp¤",Asian pigeonwings,Abrajita,Kakkarattan,"apar¢jit¢, ºa¬khapu¾p¤",encoding_mapped,TKDL-001
+TKDL-E0063,Coccinia grandis,bimb¤,"ivy gourd, scarlet-fruited gourd",Kandoori/Bambi,Kovai,bimb¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0064,Cocos nucifera Linn.,nārikela,coconut palm,Narjeel/Naryal,Thenkaai,n¢rikela,encoding_mapped,TKDL-001
+TKDL-E0065,Coleus vettiveroides K.C. Jacob /  Valeriana jatamansii Jones Syn.,"hr¤bera, bālaka",,Guru ver,Vetriver,"hr¤bera, b¢laka",encoding_mapped,TKDL-001
+TKDL-E0066,Commiphora myrrha,bola,Actiniopteris,Mur Makki / Beja Baul,Vellaippapolam,bola,verified,TKDL-001
+TKDL-E0067,Commiphora wightii Bhandari Syn.,guggulu,"Indian Bdellium, Gum Guggul",Muqil,Maisaatchi kungilium,guggulu,verified,TKDL-001
+TKDL-E0068,Convolvulus microphyllus Sieb. ex Spreng. Syn.,ṇa¬khapuṣp¤,,,,ºa¬khapu¾p¤,encoding_mapped,TKDL-001
+TKDL-E0069,Corallocarpus epigaeus Benth. ex Hook. f.,"ṇukanāsā, nahikā",,Aakaasa karudan,Kollankovai,"ºukan¢s¢, nahik¢",encoding_mapped,TKDL-001
+TKDL-E0070,Coriandrum sativum Linn.,dhānyaka,"Chinese parsley, Chinese-parsley, coriander",Kishneez,Kottha malli,dh¢nyaka,encoding_mapped,TKDL-001
+TKDL-E0071,Crateva nurvala Buch. -Ham.,varuīa,,Barna.,Mavilingam,varu´a,encoding_mapped,TKDL-001
+TKDL-E0072,Crinum latifolium Linn.,sudarṇana,Wide-leaved Crinum,Sukh Darshan,Vishamoongil,sudarºana,encoding_mapped,TKDL-001
+TKDL-E0073,Crocus sativus Linn.,kuṛkuma,"saffron crocus, Saffron",Zafran/Gumr/ Gumrah,Kungumapoo,ku¼kuma,encoding_mapped,TKDL-001
+TKDL-E0074,Croton tiglium Linn.,jayapāla,purging croton,Habb-al- Mulook/Maahudaana,Nervaalam,jayap¢la,encoding_mapped,TKDL-001
+TKDL-E0075,Cryptolepis buchanani,"kśṣīasārivā, jambūpatrā sārivā",,,,"k¨¾´as¢riv¢, jamb¦patr¢ s¢riv¢",encoding_mapped,TKDL-001
+TKDL-E0076,Cucumis melo Linn.,ervāru,Snake Cucumber,Kakri/Kheyaarzah/Qissa,Vellarikkai,erv¢ru,encoding_mapped,TKDL-001
+TKDL-E0077,Cuminum cyminum Linn.,ṇvetaj¤raka,"cumin, Cumin seed",Zeerah,Seerakam,ºvetaj¤raka,encoding_mapped,TKDL-001
+TKDL-E0078,Curculigo orchioides Gaertn.,"tālamūl¤, muṇal¤",,Musli Siyah,Nilappanankizhanku,"t¢lam¦l¤, muºal¤",encoding_mapped,TKDL-001
+TKDL-E0079,Curcuma amada Roxb.,haridrā āmragandhi,mango ginger,Aamba Haldi,Maankaai inji,haridr¢ ¢mragandhi,encoding_mapped,TKDL-001
+TKDL-E0080,Curcuma zedoaria,"ṇa°¤, karcūra",zedoary,Tumiri/Kacchuri/ Kachuri/Zarambad,Kichili kizhangu,"ºa°¤, karc¦ra",encoding_mapped,TKDL-001
+TKDL-E0081,Cymbopogon martini,rohiṣatśīa,rosha grass,Teen-e-Makkah,Kaavattampullu,rohi¾at¨´a,encoding_mapped,TKDL-001
+TKDL-E0082,Cynodon dactylon,dūrvā,"Bermudagrass, chiendent pied-de-poule, common bermudagrass, devilgrass, grama-seda, manienie, motie molulu",Doob / Najm,Arukan pull,d¦rv¢,encoding_mapped,TKDL-001
+TKDL-E0083,Cyperus rotundus Linn. / Cyperus scariosus R. Br. / Cyperus arundinaceum Baker,"mustaka, gaī²adūrvā","chaguan humatag, cocograss, kili'o'opu, nutgrass, pakopako, purple nutsedge",Nager motha/Saad Kufi / Sad Kufi,,"mustaka, ga´²ad¦rv¢",encoding_mapped,TKDL-001
+TKDL-E0084,Datura metel Linn. / Datura inoxia Mill. / Datura stramonium Linn.,dhattūra,"Thornapple, Downy Datura",Vel oomatthai,Ponoomathai,dhatt¦ra,encoding_mapped,TKDL-001
+TKDL-E0085,Dendrophthoe falcata,"bandāka, saṛharṣā, vśkṣādan¤",,Ottunni,Pulluruvi,"band¢ka, sa¼har¾¢, v¨k¾¢dan¤",encoding_mapped,TKDL-001
+TKDL-E0086,Desmodium gangeticum,ṇālaparī¤,,Patraheen/Salparni,Pulladi,º¢lapar´¤,encoding_mapped,TKDL-001
+TKDL-E0087,Desmostachya bipinnata,kuṇa,Sacrificial Grass,Daab,Tharuppai,kuºa,encoding_mapped,TKDL-001
+TKDL-E0088,Dichrostachys cinerea,v¤rataru,aroma,Vidatthalai,,v¤rataru,unmapped_high_bytes_present,TKDL-001
+TKDL-E0089,Diospyros discolor Willd.,tinduka,mabolo,,,tinduka,verified,TKDL-001
+TKDL-E0090,Eclipta prostrata,bhś¬garāja,"eclipta, false daisy",Bhangra,Kaiyanthakarai,bh¨¬gar¢ja,encoding_mapped,TKDL-001
+TKDL-E0091,Elaeocarpus sphaericus,rudrākṣa,Utrasum Bead tree,Uruthiraatcham,,rudr¢k¾a,encoding_mapped,TKDL-001
+TKDL-E0092,Elettaria cardamomum,sūkṣmailā,"cardamom, Lesser Cardamom",Heel Khurd/Qaaqulah Sagheer,Yaelakkai,s¦k¾mail¢,encoding_mapped,TKDL-001
+TKDL-E0093,Embelia ribes Burm. f. / Embelia tsjeriam-cottam A. Dc Syn. E. robusta  C.B Clarke,vi²a¬ga,Embelia.,Baobarang/Babrang/Bakaj Kabuli/Abranj/Barnaq,Vaayvidangam,vi²a¬ga,unmapped_high_bytes_present,TKDL-001
+TKDL-E0094,Erythrina variegata Linn.,pāribhadra,tiger's claw,Mandara,Kalyana murungai,p¢ribhadra,encoding_mapped,TKDL-001
+TKDL-E0095,Euphorbia dracunculoides Lam.,saptalā,,Tillakada,,saptal¢,encoding_mapped,TKDL-001
+TKDL-E0096,Euphorbia neriifolia Linn.,snuh¤,Indian spurgetree,Thuhar,Ilaikalli,snuh¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0097,Euphorbia thomsoniana Boiss. / Argemone mexicana Linn.,svarīakṣ¤r¤,"Argemone mexicana-Prickly Poppy, Mexican Poppy",Kudiyotti,Biramathandu,svar´ak¾¤r¤,encoding_mapped,TKDL-001
+TKDL-E0098,Euphorbia thymifolia Linn.,dugdhikā,,Chithirapaalaadai,Chiru ammaan pacharisi,dugdhik¢,encoding_mapped,TKDL-001
+TKDL-E0099,Fagonia cretica Linn. / Alhagi pseudalhagi,dhanvayāsa,"Camel Thorn, Persian Manna Plant",Dhamaya/Dhamasa/Shukaai',Ootagamul or Korandimul.,dhanvay¢sa,encoding_mapped,TKDL-001
+TKDL-E0100,Feronia limonia,kapittha,Wood Apple,Hab habu,Ootagamul or Korandimul,kapittha,verified,TKDL-001
+TKDL-E0101,Ferula foetida regel,hi¬gu,asafetida,Hilteet/Heeng/Anjodaan,Perungayam;Gayam,hi¬gu,unmapped_high_bytes_present,TKDL-001
+TKDL-E0102,Ficus benghalensis Linn.,"nyagrodha, va°a",Indian banyan,Aalamaram,Vadam,"nyagrodha, va°a",unmapped_high_bytes_present,TKDL-001
+TKDL-E0103,Ficus carica Linn.,"phalgu, bhadrodumbara","common fig, edible fig, fiku, piku",Injeer/Teen,Seemaiatthi,"phalgu, bhadrodumbara",verified,TKDL-001
+TKDL-E0104,Ficus hispid Linn.f.,"kākodumbara, phalgu malayū",,Teen-e-Banghali,Paeyatti,"k¢kodumbara, phalgu malay¦",encoding_mapped,TKDL-001
+TKDL-E0105,Ficus racemosa Linn.,udumbara,clustertree,Gular/ Jummaiz/Alaf Hindi,Atthi,udumbara,verified,TKDL-001
+TKDL-E0106,Ficus religiosa  Linn.,aṇvattha,peepul tree,Peepal,Arasu,aºvattha,encoding_mapped,TKDL-001
+TKDL-E0107,Ficus virens Ait.,plakṣa,White Fig,Kurugu,,plak¾a,encoding_mapped,TKDL-001
+TKDL-E0108,Foeniculum vulgare Mill.,"madhurikā, miṇreyā","sweet fennel, Fennel",Baadiyaan/Saunf/Baadiyaan Barri/Shivmaar/Shoomar/ Raazeyaana,Shombu,"madhurik¢, miºrey¢",encoding_mapped,TKDL-001
+TKDL-E0109,Fritillaria roylei Hook. / Withania somnifera,kṣ¤rakākol¤? kukku°¤,,,,k¾¤rak¢kol¤? kukku°¤,encoding_mapped,TKDL-001
+TKDL-E0110,Fumaria indica Pugsley Syn.,parpa°a bheda,"fine-leaf fumitory, fineleaf fumitory, Small Flowered Fumitory",Shaahtara / Shaahtraj,Tharaa,parpa°a bheda,unmapped_high_bytes_present,TKDL-001
+TKDL-E0111,Fumaria vaillantii Loisel.,parpa°a,earthsmoke,Thura,,parpa°a,unmapped_high_bytes_present,TKDL-001
+TKDL-E0112,Garcinia cambogia Desr.,vśkṣāmla bheda,Gamboge tree,Kodukkapuli,Aradal,v¨k¾¢mla bheda,encoding_mapped,TKDL-001
+TKDL-E0113,Garcinia indica Chois.,vśkṣāmla,garcinia,Murgal,,v¨k¾¢mla,encoding_mapped,TKDL-001
+TKDL-E0114,Garcinia morella,"kaṛkuṣ°ha, tamāla",Indian Gamboge,Seyaam Taal/Tamaal/Kaala Taad/Farfiraan-e-Hindi,Makki,"ka¼ku¾°ha, tam¢la",encoding_mapped,TKDL-001
+TKDL-E0115,Garcinia pedunculata Roxb.,amlavetasa,,,,amlavetasa,verified,TKDL-001
+TKDL-E0116,Gentiana kurroo Royle,"trāyamāīa, trāyant¤","Himalayan Gentian, Indian Gentian Root",Neel Kanthi/Pashanbheda/Utparbahi,Nilavembu,"tr¢yam¢´a, tr¢yant¤",encoding_mapped,TKDL-001
+TKDL-E0117,Gloriosa superba Linn.,lā¬gal¤,flame lily,Kalappaikizhangu,Karthikai kizhangu,l¢¬gal¤,encoding_mapped,TKDL-001
+TKDL-E0118,Glycyrrhiza glabra Linn.,"yaṣ°imadhu, kl¤taka",cultivated licorice,Rubb-al-Soos/Asl-al-Soos,Athimathuram,"ya¾°imadhu, kl¤taka",encoding_mapped,TKDL-001
+TKDL-E0119,Gmelina arborea Roxb.,gambhār¤,gumhar,Gumuaduteku,Gumadi,gambh¢r¤,encoding_mapped,TKDL-001
+TKDL-E0120,Gossypium herbaceum Linn.,kārpāsa,Levant cotton,Panbah Daanah/Habb-al-Qutn,Paruthi,k¢rp¢sa,encoding_mapped,TKDL-001
+TKDL-E0121,Grewia asiatica Linn.,paruṣaka,phalsa,Phaalsah,Palisa,paru¾aka,encoding_mapped,TKDL-001
+TKDL-E0122,Grewia tiliifolia Vahl,dhanvana,Dhaman,Unnu,Sadachi,dhanvana,verified,TKDL-001
+TKDL-E0123,Gymnema sylvestre,"meṣaṇśṛg¤,  madhunāṇin¤",miracle fruit,Gurmar Buti/ Gurmar Booti,Sirukurinjan,"me¾aº¨¼g¤,  madhun¢ºin¤",encoding_mapped,TKDL-001
+TKDL-E0124,Habenaria intermedia D. Don / Dioscorea bulbifera Linn.,śddhi-vśddhi bheda,,Vetrilai valli,Kaai vallikodi,¨ddhi-v¨ddhi bheda,encoding_mapped,TKDL-001
+TKDL-E0125,Hedychium spicatum Buch.- Ham.,ṇa°¤,Spiked Ginger Lily,Seemaikichilikizhangu,,ºa°¤,encoding_mapped,TKDL-001
+TKDL-E0126,Helianthus annuus Linn.,sūryāvarta,"annual sunflower, common sunflower, sunflower, wild sunflower",Surajmukhi/ Dowaar-al-Shamsh/ Abbaad-al-Shamsh/ Ain-al-Shamsh/ Hasheesh-al-Aqrab/ Saamir Yauma/ Tarishool,Suriyakanthi,s¦ry¢varta,encoding_mapped,TKDL-001
+TKDL-E0127,Hemidesmus indicus,sārivā,Indian Sarsaparilla,Ushbah Hindi / Anant Mol,Nannaari,s¢riv¢,encoding_mapped,TKDL-001
+TKDL-E0128,Holarrhena antidysenterica,"ku°aja, indrayava",tellicherry bark,Inderjao Talkh/Teewaj-e-Khatai,Kudasapaalai,"ku°aja, indrayava",unmapped_high_bytes_present,TKDL-001
+TKDL-E0129,Holoptelea integrifolia,pūtikarañja,,Aya,Ayil,p¦tikara®ja,encoding_mapped,TKDL-001
+TKDL-E0130,Hordeum vulgare Linn.,yava,"Barley, cereal barley, common barley",Jau/Sha'eer,Barley arici,yava,verified,TKDL-001
+TKDL-E0131,Hugonia mystax,kaṛsamāra,,Agori,Motirakkanni,ka¼sam¢ra,encoding_mapped,TKDL-001
+TKDL-E0132,Hybanthus enneaspermus,sthalapadma,,Purusharathnam,Suria gandhai,sthalapadma,verified,TKDL-001
+TKDL-E0133,Imperata cylindrica Beauv./ Imperata arundinacea Cyr.,darbha,"thatch grass,alang-alang, blady grass, cogon grass, cogongrass, kunai, paillotte, santintail",Kookha,Tharbaipul,darbha,verified,TKDL-001
+TKDL-E0134,Indigofera tinctoria Linn.,n¤l¤,"common indigo, indian indigo",Neel/Wasmah/Neelaj/Leenaj/Shaal Khatee/Katam/Neelaj janglee/Andgo/Wargamma/Kereneli,Neeli,n¤l¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0135,Inula helenium Linn./ Inula racemosa Hook.,puṣkara,Elecampane,Raasan,,pu¾kara,encoding_mapped,TKDL-001
+TKDL-E0136,Jasminum officinale Linn.,jāt¤,poet's jasmine,Chemeli/Yasmeen/Yasman,Mullai,j¢t¤,encoding_mapped,TKDL-001
+TKDL-E0137,Jatropha glandulifera,"dravant¤, vyāghrairaī²a",,Adalai,Eliyamanakku,"dravant¤, vy¢ghraira´²a",encoding_mapped,TKDL-001
+TKDL-E0138,Juniperus communis Linn.,"hapuṣā, hāubera","common juniper, dwarf juniper",Abhal/A'ra'r/Sarw Koohi,,"hapu¾¢, h¢ubera",encoding_mapped,TKDL-001
+TKDL-E0139,Justicia adhatoda Linn.,vāsā,Malabar nut,Adathodai,vasai,v¢s¢,encoding_mapped,TKDL-001
+TKDL-E0140,Lagenaria siceraria,"tumbin¤, ka°utumb¤, alābu","Bottle gourd, Calbash gourd",Kadu-e-Daraaz/ Lauki,Surakkai,"tumbin¤, ka°utumb¤, al¢bu",encoding_mapped,TKDL-001
+TKDL-E0141,Leea macrophylla Roxb. ex Horn.,"hastikarīapalāṇa, hast¤kanda",,,,"hastikar´apal¢ºa, hast¤kanda",encoding_mapped,TKDL-001
+TKDL-E0142,Lens culinaris Medic,masūra,Lentil,Adas/Masoor,Misurparuppu,mas¦ra,encoding_mapped,TKDL-001
+TKDL-E0143,Leonotis nepetiaefolia,granthiparī¤,Christmas candlestick,,,granthipar´¤,encoding_mapped,TKDL-001
+TKDL-E0144,Leptadenia reticulata Wight & Arn.,j¤vant¤,,Jeevanti,Palaikodi,j¤vant¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0145,Leucas cephalotes Spreng.,droīapuṣp¤,,Tumba,Thumbai keeri,dro´apu¾p¤,encoding_mapped,TKDL-001
+TKDL-E0146,Lilium polyphyllum D. Don / Withania somnifera,"kakol¤, kṣ¤rakākol¤",,Kaakoli,,"kakol¤, k¾¤rak¢kol¤",encoding_mapped,TKDL-001
+TKDL-E0147,Luffa aegyptiaca Mill.,"dhāmārgava, mahākoṇātak¤","Sponge gourd, Vegetable sponge",Pikku,Pichuku,"dh¢m¢rgava, mah¢koº¢tak¤",encoding_mapped,TKDL-001
+TKDL-E0148,Luffa echinata  Roxb.,"jimūtaka, devadāl¤",Bristly Luffa,Daab / Daangri/Leef/Lof-e-Misri,Mozhukupirkankai,"jim¦taka, devad¢l¤",encoding_mapped,TKDL-001
+TKDL-E0149,Lygodium flexuosum,rudraja°ā,,,,rudraja°¢,encoding_mapped,TKDL-001
+TKDL-E0150,Malaxis acuminata D. Don Syn.,śṣabhaka,,,,¨¾abhaka,encoding_mapped,TKDL-001
+TKDL-E0151,Malaxis muscifera,j¤vaka,,,,j¤vaka,unmapped_high_bytes_present,TKDL-001
+TKDL-E0152,Mallotus philippensis Muell.-Arg.,kampilla,Kamala tree,Kamila/Qimbeel,Kapli,kampilla,verified,TKDL-001
+TKDL-E0153,Malva rotundifolia Linn.,suvarcalā,"Round-leaved Mallow, DrawfMallow, Cheese Cake Flower",Kattu kadalai,,suvarcal¢,encoding_mapped,TKDL-001
+TKDL-E0154,Mangifera indica Linn.,āmra,Mango,Anba/Aam,Maa,¢mra,encoding_mapped,TKDL-001
+TKDL-E0155,Marsdenia tenacissima Wight. & Arn. / Chonemorpha fragrans,mūrvā,White Turpeth/Wood Vine,,,m¦rv¢,encoding_mapped,TKDL-001
+TKDL-E0156,Martynia annua Linn.,kākanāsā?,"Devil's claw, Tiger clw",Bakhoor-e-Maryam/Panja-e-Maryam/Haathajori,Thelkodukkukai,k¢kan¢s¢?,encoding_mapped,TKDL-001
+TKDL-E0157,Melia azedarach Linn.,"mahānimba, kai²arya","Persian liliac, Bead tree",Bakayin/Khasi-ud-deek,Thylukkanivembu,"mah¢nimba, kai²arya",encoding_mapped,TKDL-001
+TKDL-E0158,Mesua ferrea Linn.,nāgakeṇara,Mesua,Narmushk/Nagkesar,Chirunagappu,n¢gakeºara,encoding_mapped,TKDL-001
+TKDL-E0159,Michelia champaca Linn.,campaka,Champak,Champa,Shenbagam,campaka,verified,TKDL-001
+TKDL-E0160,Mimosa pudica Linn.,lajjālu,Sensitive plant,Chhuee Muee,Thottalvadi,lajj¢lu,encoding_mapped,TKDL-001
+TKDL-E0161,Mimusops elengi Linn.,bakula,Bulletwood,Mulsari,Magilam,bakula,verified,TKDL-001
+TKDL-E0162,Momordica charantia Linn.,kāravellikā,"Bitter gourd, carilla fruit",Karela,Pavakkai,k¢ravellik¢,encoding_mapped,TKDL-001
+TKDL-E0163,Momordica dioca Roxb.,vandhyākarko°ak¤,"Small Bitter Gourd, Bur Cucumber",Kakoda / Baqla-e-Yahoodia,Tholoopavai,vandhy¢karko°ak¤,encoding_mapped,TKDL-001
+TKDL-E0164,Moringa pterygosperma C.F. Gaertn.,ṇigru ṇveta,"Drumstick tree, Horse radish tree",Shajana/Sohanjana,Murungai,ºigru ºveta,encoding_mapped,TKDL-001
+TKDL-E0165,Mucuna pruriens,ātmaguptā,"Common cowitch, Cowhage",Konch/Koonch,Poonaikkali,¢tmagupt¢,encoding_mapped,TKDL-001
+TKDL-E0166,Musa paradisiaca Linn.,kadal¤,"Edible banana, Plantain, Banana",Kela/Mouz,Vazhai,kadal¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0167,Myrica esculenta Buch.-Ham. ex D. Don Syn.,ka°phla,Box myrtle,Kaaifal/Daar-e-Sheeshaan,marutham,ka°phla,unmapped_high_bytes_present,TKDL-001
+TKDL-E0168,Myristica fragrans Houtt.,"jāt¤phala, jātipatr¤",Nutmeg tree,Bisbasa / javetri / Jauzbuwa,Jathikai,"j¢t¤phala, j¢tipatr¤",encoding_mapped,TKDL-001
+TKDL-E0169,Nardostachys Jatamansi,"ja°āmāṛs¤, murā","Spikenard, Indian nard",Sunbul-al-Teeb/Baalchhar,Sadamangil,"ja°¢m¢¼s¤, mur¢",encoding_mapped,TKDL-001
+TKDL-E0170,Nelumbo nucifera Gaertn.,"kamala, prapauī²ar¤ka","Sacred lotus, Indian lotus, Chinese water lily",Padam Kesar/Kanwal gatta.,Ambal,"kamala, prapau´²ar¤ka",encoding_mapped,TKDL-001
+TKDL-E0171,Nigella sativa Linn.,"upakuñcikā, maṛgaraila","Small fennel, Black cumin",Kalonji/Shooneez,Karunjeerakam,"upaku®cik¢, ma¼garaila",encoding_mapped,TKDL-001
+TKDL-E0172,Nyctanthes arbor-tristis Linn.,"pārijātaka, ṇephālikā","Night jasmine, Coral jasmine",Har Singhar,Manjapu,"p¢rij¢taka, ºeph¢lik¢",encoding_mapped,TKDL-001
+TKDL-E0173,Nymphaea alba Linn.,kumuda,"European white water-lily, Water Lily",Nilofer/ Full,Neidhal kizhangu,kumuda,verified,TKDL-001
+TKDL-E0174,Nymphaea stellata Willd.,utpala,Indian blue water-lily,Karu neithal,Neelorpalam,utpala,verified,TKDL-001
+TKDL-E0175,Ocimum basilicum Linn.,barbar¤,"Sweet basil, Common basil",Firanjmushk/Bilu  Gandi/Slosamber  /Slosambar / Sisambar/ Susur,Thiruneetruppachai,barbar¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0176,Ocimum canum Sims,vanatulas¤,Hoary basil,Nammaam Bustani/Arqals/Kali Tulsi,Naay thulasi,vanatulas¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0177,Ocimum sanctum Linn.,"tulas¤, surasā","Sacred basil, Holy basil",Raihan/Shahasfaram/Tulsi/Zeemraan,Krishna thulasi,"tulas¤, suras¢",encoding_mapped,TKDL-001
+TKDL-E0178,Operculina petaloidea,"vśddhadārūka, ṇyāmā",,,,"v¨ddhad¢r¦ka, ºy¢m¢",encoding_mapped,TKDL-001
+TKDL-E0179,Operculina turpethum,trivśta,"Indian jalap, Turpeth",Turbud/Nisoot,Sivathai,triv¨ta,encoding_mapped,TKDL-001
+TKDL-E0180,Oroxylum indicum,ṇyonāka,Indian Trumpet Flower,Kharbaque Safed/Arloo,Achi,ºyon¢ka,encoding_mapped,TKDL-001
+TKDL-E0181,Oryza sativa Linn.,ṇāli,"Rice, Paddy",Biranj/Chaawal/Aruzz,Nellu,º¢li,encoding_mapped,TKDL-001
+TKDL-E0182,Oxalis corniculata Linn.,cā¬ger¤,Indian sorrel,Puliyarai,Puliakkeerai,c¢¬ger¤,encoding_mapped,TKDL-001
+TKDL-E0183,Paederia foetida Linn.,"prasāraī¤, gandha prasāraī¤","skunk vine,stinkvine",Gandaliya/Icchhi Patrika,Penarisangai,"pras¢ra´¤, gandha pras¢ra´¤",encoding_mapped,TKDL-001
+TKDL-E0184,Papaver somniferum Linn.,ahiphena,"Opium poppy, white poppy",Khashkhaash /,Abini,ahiphena,verified,TKDL-001
+TKDL-E0185,Phoenix dactylifera Linn.,kharjūra,Date palm,Khurma/Khajoor/Chohara/Jumaar/Kofarraa/Qiqus/Guncha-e-Khurma/Balh,Perichankai,kharj¦ra,encoding_mapped,TKDL-001
+TKDL-E0186,Phragmites karka Trin. ex. Steud Syn. P. roxburghii,"nala, narakula",tall reed,Nal,Perunaanal,"nala, narakula",verified,TKDL-001
+TKDL-E0187,Phyllanthus acidus,"laval¤, haraphāreva²¤",Tahitian gooseberry tree,Arunelli,,"laval¤, haraph¢reva²¤",encoding_mapped,TKDL-001
+TKDL-E0188,Phyllanthus emblica Linn. Syn.,āmalak¤,"emblic, Emblic Myrobalan",Aamla,Nelli,¢malak¤,encoding_mapped,TKDL-001
+TKDL-E0189,Phyllanthus fraternus Webster Syn.,"tāmalak¤, bhūmyāmalak¤",gulf leaf-flower,Achhata/Bhuin Amla,Keezha nelli,"t¢malak¤, bh¦my¢malak¤",encoding_mapped,TKDL-001
+TKDL-E0190,Picrorhiza kurroa,"ka°uk¤, ku°ak¤",Picrorhiza,Kutki,Kadukurogini,"ka°uk¤, ku°ak¤",unmapped_high_bytes_present,TKDL-001
+TKDL-E0191,Pinus roxburghii Sarg.,"sarala, kilima, dhūpasarala","Chir Pine,Himalayan Long Leaved Pine, Pine",Behroza/Biroza/Gandah Behrozah/Habb-e-Sanobar / Lab,Seemai devadaru,"sarala, kilima, dh¦pasarala",encoding_mapped,TKDL-001
+TKDL-E0192,Piper betle Linn.,"nāgavall¤, cavya bheda",Betel,Tambol/Paan,Vetrilai,"n¢gavall¤, cavya bheda",encoding_mapped,TKDL-001
+TKDL-E0193,Piper cubeba Linn. f.,ka¬kola,"Cubebs,Tailed Pepper",Kababchini/Kankol,Vaalmilaku,ka¬kola,unmapped_high_bytes_present,TKDL-001
+TKDL-E0194,Piper longum Linn.,pippal¤,"Indian Long Pepper, Long Pepper",Filfil Moya/Fasiwarees/Filfil Daraz,Thippili,pippal¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0195,Piper nigrum Linn.,marica,Black Pepper,Filfil,Milagu,marica,verified,TKDL-001
+TKDL-E0196,Piper retrofractum Vahl Syn.,cavya,Java Long Pepper,Peepal Chab/Chavika,Chavyam,cavya,verified,TKDL-001
+TKDL-E0197,Pistacia integerrima J.L.Stewart ex Brandis,karka°aṇśṛg¤,"pistache, pistacia",Kakkatashingi,,karka°aº¨¼g¤,encoding_mapped,TKDL-001
+TKDL-E0198,Pistacia lentiscus Linn.,"rūmakundarū, rūm¤ mastag¤",mastic tree,I'lk-al-Butm/Gond-e-Butm/Saqaz/Qarabiyoon/ Gandaroon / Mastagi Roomi / Dirw,Vellaik kungiliyam,"r¦makundar¦, r¦m¤ mastag¤",encoding_mapped,TKDL-001
+TKDL-E0199,Pluchea lanceolata Oliv.,rāsnā,camphorweed,Rasna,,r¢sn¢,encoding_mapped,TKDL-001
+TKDL-E0200,Plumbago indica Linn.,citraka rakta,leadwort,Chithiramoolam,Sengodi veli,citraka rakta,verified,TKDL-001
+TKDL-E0201,Plumbago zeylanica Linn.,citraka,"leadwort, Ceylon Lead Wort",Sheetraj Hindi/Chita Lakdi/ Cheeta,Chithiramoolam,citraka,verified,TKDL-001
+TKDL-E0202,Polyalthia longifolia Thwaites,"devadāru, kāṣ°hadāru",mast tree,Aashok/Asoka,Nettilingam,"devad¢ru, k¢¾°had¢ru",encoding_mapped,TKDL-001
+TKDL-E0203,Polygonatum cirrhifolium Royle / Asparagus racemosus Willd.,"mahāmedā, medā",,Maida Kalan,,"mah¢med¢, med¢",encoding_mapped,TKDL-001
+TKDL-E0204,Pongamia pinnata,"karañja, naktamāla, udak¤rya",pongame oiltree,Karanj,Pungu,"kara®ja, naktam¢la, udak¤rya",encoding_mapped,TKDL-001
+TKDL-E0205,Premna mucronata Roxb.,agnimantha,premna,,,agnimantha,verified,TKDL-001
+TKDL-E0206,Prunus avium,elavāluka,sweet cherry,,,elav¢luka,encoding_mapped,TKDL-001
+TKDL-E0207,Prunus cerasoides D. Don,padmaka,birdcherry,Padhmaakh,,padmaka,verified,TKDL-001
+TKDL-E0208,Psoralea corylifolia Linn.,bākuc¤,psoralea fruit,Babchi,Kaarboga arisi,b¢kuc¤,encoding_mapped,TKDL-001
+TKDL-E0209,Pterocarpus santalinus Linn. f.,raktacandana,red sandal wood,Sandal Surkh,Senchandanam,raktacandana,verified,TKDL-001
+TKDL-E0210,Pueraria tuberosa DC.,"vidār¤, śṣabhaka-j¤vaka",indian kudzu,Qissa-al-Himaar/Bandaal,,"vid¢r¤, ¨¾abhaka-j¤vaka",encoding_mapped,TKDL-001
+TKDL-E0211,Randia uliginosa DC.,piī²¤taka,,Perunkarai,Wagatta,pi´²¤taka,encoding_mapped,TKDL-001
+TKDL-E0212,Raphanus sativus Linn.,mūlaka,radish,Fujl/Mooli/Mulaka,Mullangi,m¦laka,encoding_mapped,TKDL-001
+TKDL-E0213,Rhus parviflora Roxb.,tinti²¤ka,Sumach,Samandarphal,,tinti²¤ka,unmapped_high_bytes_present,TKDL-001
+TKDL-E0214,Ricinus communis Linn.,eraī²a,"castor,Palmachristi, Castor Plant",Bedanjeer/Arand,Aamanakku,era´²a,encoding_mapped,TKDL-001
+TKDL-E0215,Rumex vesicarius Linn.,cukrama,"dock, Sorrel, Bladder Dock",Ambadah/Amratak/Ambadi/Hummaz,Shukkan keerai,cukrama,verified,TKDL-001
+TKDL-E0216,Saccharum officinarum Linn.,ikṣu,sugarcane,Ganna,Poovan karumbu,ik¾u,encoding_mapped,TKDL-001
+TKDL-E0217,Saccharum spontaneum Linn.,kāṇa,"ahlek, loa, wild cane, wild sugarcane",Naanal,,k¢ºa,encoding_mapped,TKDL-001
+TKDL-E0218,Salacia chinensis Linn.,"saptaraṛg¤, saptacakrā",bittersweet,,,"saptara¼g¤, saptacakr¢",encoding_mapped,TKDL-001
+TKDL-E0219,Salix caprea Linn.,"vañjula, vetasa",goat willow,Bed Mushk,,"va®jula, vetasa",encoding_mapped,TKDL-001
+TKDL-E0220,Santalum album Linn.,candana,sandalwood,Sandal Safaid/Sandal Zard,Sandhanam,candana,verified,TKDL-001
+TKDL-E0221,Saussurea lappa Clarke,kuṣ°ha,saw-wort,Koshtam,Jathi koshtam,ku¾°ha,encoding_mapped,TKDL-001
+TKDL-E0222,Schleichera oleosa,koṇāmra,lac tree,Ahreez/Muasfar/Range-e- Zafraan,Karanchi,koº¢mra,encoding_mapped,TKDL-001
+TKDL-E0223,Schrebera swientenioides Roxb.,"pā°al¤, ṇvetamokṣaka",Weavers Beam tree,Mahalingam,,"p¢°al¤, ºvetamok¾aka",encoding_mapped,TKDL-001
+TKDL-E0224,Scindapsus officinalis Schott,gajapippal¤,,Gaj peepal,Aanai thippili,gajapippal¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0225,Scirpus kysoor,kaṇeru,,Gundatungagaddi,,kaºeru,encoding_mapped,TKDL-001
+TKDL-E0226,Semecarpus anacardium Linn.f.,bhallātaka,markingnut tree,Baladur/Bhilavan,Chenkottai,bhall¢taka,encoding_mapped,TKDL-001
+TKDL-E0227,Sesamum indicum Linn.,tila,sesame,Kunjad Siyah/Til/Sheeraj,Ellu,tila,verified,TKDL-001
+TKDL-E0228,Sesbania grandiflora,"muni, agastya",vegetable hummingbird,Agasti,Agathi,"muni, agastya",verified,TKDL-001
+TKDL-E0229,Sesbania sesban Merril Syn. S. aegyptiaca Pers. / Sesbania aegyptiaca Poir,jayant¤,Egyptian riverhemp,Rawasan/Qurratulain/Saisabaan,Sitrakathi,jayant¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0230,Shorea robusta Gaertn.,ṇāla,the sal tree,Saal/Sakhu,Saalakkunkiliyam,º¢la,encoding_mapped,TKDL-001
+TKDL-E0231,Sida,"nāgabalā, bhūmibalā",heartleaf fanpetals,Pazham paasi,,"n¢gabal¢, bh¦mibal¢",encoding_mapped,TKDL-001
+TKDL-E0232,Sida cordifolia Linn.,balā,llima,Nilathuthi,Paniarthuthi,bal¢,encoding_mapped,TKDL-001
+TKDL-E0233,Solanum indicum Linn.,bśhat¤,nightshade,Badanjan Hindi,Mulli,b¨hat¤,encoding_mapped,TKDL-001
+TKDL-E0234,Solanum nigram Linn.,kākamāc¤,"black nightshade, deadly nightshade, garden nightshade",Inab-us-Salab / Makoh / Mako,Mana thakkaali,k¢kam¢c¤,encoding_mapped,TKDL-001
+TKDL-E0235,Solanum surattense Burm.,kaṛ°akār¤,nightshade,Katai,Kandangatthiri,ka¼°ak¢r¤,encoding_mapped,TKDL-001
+TKDL-E0236,Sphaeranthus indicus Linn.,"muī²itikā, bhūkadamba, ṇrāvaī¤",,Gorakh Mundi/Mundi/ Baloot-al-Arz/,Kotta karanthai,"mu´²itik¢, bh¦kadamba, ºr¢va´¤",encoding_mapped,TKDL-001
+TKDL-E0237,Spinacia oleracea Linn.,pālakyā,spinach,palak/akhinoos,Vasayley keerai,p¢laky¢,encoding_mapped,TKDL-001
+TKDL-E0238,Spondias pinnata,āmrātaka,"Hog-Plum, Wild Mango",Amrah,Mari man chedi,¢mr¢taka,encoding_mapped,TKDL-001
+TKDL-E0239,Stereospermum chelonoides,pā°alā,"Trumpet Flower, Yellow Snake tree",Padal/Patila,Paathiri,p¢°al¢,encoding_mapped,TKDL-001
+TKDL-E0240,Strychnos nuxvomica Linn.,"viṣamuṣ°i, kāraskara",strychnine tree,Azaraqi/Kuchla,Etti,"vi¾amu¾°i, k¢raskara",encoding_mapped,TKDL-001
+TKDL-E0241,Strychnos potatorum Linn. f.,kataka,Clearing Nut tree,Thetraan kottai,Illam,kataka,verified,TKDL-001
+TKDL-E0242,Swertia chirayita,kirātatikta,"chirayata, Chirata",Chiraitah/Qasab-al-Zareerah,Shiratkuchi,kir¢tatikta,encoding_mapped,TKDL-001
+TKDL-E0243,Swertia ciliata,kirātatikta bheda,chirayata,,,kir¢tatikta bheda,encoding_mapped,TKDL-001
+TKDL-E0244,Symplocos racemosa Roxb.,lodhra,"sweetleaf, symplocos",Lodh Pathani,Vellilatthi,lodhra,verified,TKDL-001
+TKDL-E0245,Syzygium aromaticum,lava¬ga,clove,Qaranful/Laung,Kiraambu,lava¬ga,unmapped_high_bytes_present,TKDL-001
+TKDL-E0246,Syzygium cuminii,jambū,"jambolan plum, Java plum, kavika ni India, mesegerak",Jamun,Naaval,jamb¦,encoding_mapped,TKDL-001
+TKDL-E0247,Syzygium jambos,jambū,"kavika ni India, kavika ni vavalangi, Malabar plum, rose-apple",Gulabjamun,Peru naaval,jamb¦,encoding_mapped,TKDL-001
+TKDL-E0248,Tamarindus indica Linn.,imal¤,tamarind,Tamar Hindi /Imli,Puli,imal¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0249,Tecomella undulata,rohitaka,Rohida tree,Yardook,,rohitaka,verified,TKDL-001
+TKDL-E0250,Tephrosia purpurea,"sarapoṛkhā, ṇarapu¬khā","purple tephrosia wild indigo, Purple Tephrosia",Sarphuka,Kolinji,"sarapo¼kh¢, ºarapu¬kh¢",encoding_mapped,TKDL-001
+TKDL-E0251,Teramnus labialis,māṣaparī¤,blue wiss,Jangali Urd / Ban Urd / Maash Parni,Kaattualandu,m¢¾apar´¤,encoding_mapped,TKDL-001
+TKDL-E0252,Terminalia arjuna,arjuna,arjuna,Arjun,Vellai marudhu,arjuna,verified,TKDL-001
+TKDL-E0253,Terminalia bellirica,bibh¤taka,"myrobalan, Beleric Myrobalan",Balela/Bahera,Thaandri,bibh¤taka,unmapped_high_bytes_present,TKDL-001
+TKDL-E0254,Terminalia chebula Retz.,har¤tak¤,"myrobalan,",Halelah,Kadukkaai,har¤tak¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0255,Tinospora cordifolia Miers,gu²ūc¤,tinospora,Gilo,Seendhil,gu²¦c¤,encoding_mapped,TKDL-001
+TKDL-E0256,Trachyspermum ammi,yavān¤,Ajowan caraway,Ajwayin,Omam,yav¢n¤,encoding_mapped,TKDL-001
+TKDL-E0257,Trachyspermum roxburghianum,ajamodā,Ajmud,Asamodhagam,Ashamtagam,ajamod¢,encoding_mapped,TKDL-001
+TKDL-E0258,Tragia involucrata Linn.,"vśṇcikāl¤, durālabhā","noseburh, noseburn",Poonai kaanchori,Siru kanchori,"v¨ºcik¢l¤, dur¢labh¢",encoding_mapped,TKDL-001
+TKDL-E0259,Tribulus terrestris Linn.,gokṣura,"bullhead, caltrop, goathead, Mexican sandbur, puncture vine, Small Caltrops",Khaar-e- Khasak /Hasak,Nerunjil,gok¾ura,encoding_mapped,TKDL-001
+TKDL-E0260,Tricholepis angustifolia,brahamadaī²¤ bheda,,Brahmdandi,,brahamada´²¤ bheda,encoding_mapped,TKDL-001
+TKDL-E0261,Trichosanthes bracteata,"viṇālā, mahākāla",,Koratti,Savuri pazham,"viº¢l¢, mah¢k¢la",encoding_mapped,TKDL-001
+TKDL-E0262,Trichosanthes dioica Roxb.,pa°ola,pointed gourd,Kombu pudalai,,pa°ola,unmapped_high_bytes_present,TKDL-001
+TKDL-E0263,Trigonella foenum-graecum Linn.,meth¤,sicklefruit fenugreek,Hulba/Methi,Vendhayam,meth¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0264,Triticum aestivum Linn.,godhūma,"common wheat, Wheat",Gandum,Kodhumai,godh¦ma,encoding_mapped,TKDL-001
+TKDL-E0265,Typha austrails Schum. & Thonn.,"guī°ha, gundra",Lesser Indian Reed-Mace,Halfa/Pateera/Bardi,,"gu´°ha, gundra",encoding_mapped,TKDL-001
+TKDL-E0266,Uraria picta,pśṇniparī¤,,Chithirapaladai,,p¨ºnipar´¤,encoding_mapped,TKDL-001
+TKDL-E0267,Valeriana hardwickii Wall.,"tagara, bālaka",,,,"tagara, b¢laka",encoding_mapped,TKDL-001
+TKDL-E0268,Valeriana jatamansii Jones Syn.,"tagara, bālaka",Indian Valerian,Farasiyun/Faristariun/Tagar / Balahhar,Kiranthithakaram,"tagara, b¢laka",encoding_mapped,TKDL-001
+TKDL-E0269,Vallaris solanacea,"āsphotā, sarivā, utpala",,Aasphoota/Veeroomal,Kattupalai,"¢sphot¢, sariv¢, utpala",encoding_mapped,TKDL-001
+TKDL-E0270,Vernonia cinerea,"sahadev¤, daī²otpalā",little ironweed,Sehdevi/Utpila Naunhiya,Mookkuthi poondu,"sahadev¤, da´²otpal¢",encoding_mapped,TKDL-001
+TKDL-E0271,Vetiveria zizanioides,uṇ¤ra,"vetivergrass, Cuscus, Vetiver",Khas,Vetri ver,uº¤ra,encoding_mapped,TKDL-001
+TKDL-E0272,Vigna mungo,māṣa,Black gram,Urd/ Maash,Ulundhu,m¢¾a,encoding_mapped,TKDL-001
+TKDL-E0273,Vigna radiata,mudga,"Green gram, Golden gram",Moong,Paasi payaru,mudga,verified,TKDL-001
+TKDL-E0274,Vigna trilobata,mudagaparī¤,Wild Gram,Panipayar,Naripayar,mudagapar´¤,encoding_mapped,TKDL-001
+TKDL-E0275,Vigna unguiculata,kulattha,catjang,Kaanam,Mudhirai,kulattha,verified,TKDL-001
+TKDL-E0276,Vitex agnus-castus Linn. / Vitex negundo Linn.,reīukā,"chaste tree, lilac chastetree",Panjangusht/Panjkisht,,re´uk¢,encoding_mapped,TKDL-001
+TKDL-E0277,Vitis vinifera Linn.,drākṣā,wine grape,Angoor / Angoor Siyah / Kishmish / Maweez/ Karm,Thiraatsai,dr¢k¾¢,encoding_mapped,TKDL-001
+TKDL-E0278,Wedelia chinensis,"bhś¬garāja p¤ta, keṇarāja",,Manjal karisalankanni,Porthalai kyan,"bh¨¬gar¢ja p¤ta, keºar¢ja",encoding_mapped,TKDL-001
+TKDL-E0279,Withania somnifera,aṇvagandhā,Winter Cherry,Asgand,Nattuamukira Irulichevi,aºvagandh¢,encoding_mapped,TKDL-001
+TKDL-E0280,Woodfordia fruticosa,dhātak¤,"Fire-flame Bush, Shiranjitea",Dhaatekee/ Dhaat Pushpi / Dhaae,Velakkai,dh¢tak¤,encoding_mapped,TKDL-001
+TKDL-E0281,Xeromphis spinosa,"madana, mainaphala",emetic nut,Marukkallankay,Madkarai,"madana, mainaphala",verified,TKDL-001
+TKDL-E0282,Zanthoxylum armatum DC. Syn.,tejovat¤,"Toothache tree, Indian Prickly Ash",Kabab-e-Khandan/Kabaaba,,tejovat¤,unmapped_high_bytes_present,TKDL-001
+TKDL-E0283,Zingiber officinale Roscoe,"ārdraka, ṇuī°h¤","garden ginger, Ginger",Adrak/Zanjabeel/Sindhi/ Sonth,Inji,"¢rdraka, ºu´°h¤",encoding_mapped,TKDL-001
+TKDL-E0284,Ziziphus jujuba Mill.,"kola, sauv¤ra",Chinese Tsao,Illanthi,Elladu,"kola, sauv¤ra",unmapped_high_bytes_present,TKDL-001
+TKDL-E0285,Zizyphus mauritiana Lam.,"badara, kola",,Ilandhai,Aditharam,"badara, kola",verified,TKDL-001
+TKDL-E0286,Zizyphus nummularia,karkandhu,Wild Jujube,Ghangher / Gangeri,Korkodi,karkandhu,verified,TKDL-001
+TKDL-E0287,Androecium,Pumkesara,,Tajammu' Tukhmdaan/Narkot,Makarandham,Pumkesara,verified,TKDL-001
+TKDL-E0288,Anther,parāgakoṇa,,Zardaan,Magarantha thool,par¢gakoºa,encoding_mapped,TKDL-001
+TKDL-E0289,Aril,koṇapatra,,Qishr-e-Zaayed,Vithai mel padar narrambu,koºapatra,encoding_mapped,TKDL-001
+TKDL-E0290,Bamboo manna,vaṛṇalocana,,Moongiluppu,,va¼ºalocana,encoding_mapped,TKDL-001
+TKDL-E0291,Branches,ṇākhā,,Shaakh,Kizhaikal,º¢kh¢,encoding_mapped,TKDL-001
+TKDL-E0292,Coconut water,Narikela jala,,Maajoz-e-Narjeel,Tenkai Paal,Narikela jala,verified,TKDL-001
+TKDL-E0293,Cold infusion,ṇ¤taṇśta/hima,,,,º¤taº¨ta/hima,encoding_mapped,TKDL-001
+TKDL-E0294,Endosperm,b¤jamajjā,,Daroon-e-Tukhm,Vithai Paruppu,b¤jamajj¢,encoding_mapped,TKDL-001
+TKDL-E0295,Expressed juice,Svarasa,,,,Svarasa,verified,TKDL-001
+TKDL-E0296,Fermented alcoholic product of crude drugs,āsava,,,,¢sava,encoding_mapped,TKDL-001
+TKDL-E0297,Fire/ Heat,agni,,,,agni,verified,TKDL-001
+TKDL-E0298,Flower,puṣpa,,Gul,Poo,pu¾pa,encoding_mapped,TKDL-001
+TKDL-E0299,Flower Bud,mukula,,Shagoofah-e-Gul,Poo Mokku,mukula,verified,TKDL-001
+TKDL-E0300,Fresh rhizome / tuber,Ardra kanda,,Jazar-e-taazah,Elam Verkombu,Ardra kanda,verified,TKDL-001
+TKDL-E0301,Fruit,phala,,Samar/Fawakeh,Pazham,phala,verified,TKDL-001
+TKDL-E0302,Fruit exudate,phalaniryāsa,,Taraavush-e-Samar,Vithai,phalaniry¢sa,encoding_mapped,TKDL-001
+TKDL-E0303,Fruit indumentum,phalaraja,,Ghilaaf-e-Samar,Pazha Thozh Melpodi,phalaraja,verified,TKDL-001
+TKDL-E0304,Fruit pulp,phalamajjā,,Goodah-e-Samar,Pazha Sathai,phalamajj¢,encoding_mapped,TKDL-001
+TKDL-E0305,Fruit rind,phalatvak,,Post-e-Samar,Pazha odu,phalatvak,verified,TKDL-001
+TKDL-E0306,Gall,k¤°agśha,,Maazu,Puzhukkoodu,k¤°ag¨ha,encoding_mapped,TKDL-001
+TKDL-E0307,Gruel,yavāgu,,,,yav¢gu,encoding_mapped,TKDL-001
+TKDL-E0308,Heart wood,kāṣ°hamajjā,,Qalb chob / Iedaan/Khashab,Ulthandu,k¢¾°hamajj¢,encoding_mapped,TKDL-001
+TKDL-E0309,Irregular patches of dark wood highly charged with oleoresin,kśmijagdhakāṣ°ha,,Samagh Roghni/Roghni Raal,Pisin Purani,k¨mijagdhak¢¾°ha,encoding_mapped,TKDL-001
+TKDL-E0310,Juice sacs,phalakesara,,Kesah-e-Arq,Saatru Koodu,phalakesara,verified,TKDL-001
+TKDL-E0311,Latex,kṣ¤ra,,Sheer-e-Shajari,Moolikai,k¾¤ra,encoding_mapped,TKDL-001
+TKDL-E0312,Leaf,patra,,Barg/Patti,Ilai,patra,verified,TKDL-001
+TKDL-E0313,Leaf pulp,patramajjā,,Maghz-e-barg,Ilai Soru,patramajj¢,encoding_mapped,TKDL-001
+TKDL-E0314,Parched rice,lājā/lāvā,,,,l¢j¢/l¢v¢,encoding_mapped,TKDL-001
+TKDL-E0315,Rhizome,prakanda,,Jazr/Zameen Saaq,Ver Kombu,prakanda,verified,TKDL-001
+TKDL-E0316,Root,mūla,,Beekh/Asl/Usool,Ver,m¦la,encoding_mapped,TKDL-001
+TKDL-E0317,Root bark,mūlatvak,,Post-e-Asl,Ver Pattai,m¦latvak,encoding_mapped,TKDL-001
+TKDL-E0318,Root tuber,mūlakanda,,Verkizhangu,,m¦lakanda,encoding_mapped,TKDL-001
+TKDL-E0319,Seed,b¤ja/ phalāsthi,,Tukhm/Bazr/Buzoor,Vidhai,b¤ja/ phal¢sthi,encoding_mapped,TKDL-001
+TKDL-E0320,Semiliquid formulation,leha,,,,leha,verified,TKDL-001
+TKDL-E0321,Shoot,praroha,,Insha'ab-e-Ghunchah,Kuruthu,praroha,verified,TKDL-001
+TKDL-E0322,"St.Bark,Leaf,Flower,Fruit&Root",Pancanga,,Nabat Musallam,Samoolam,Pancanga,verified,TKDL-001
+TKDL-E0323,Stalk,nāla,,Saaqah/Danthal,Valayam / Ilam Thandu,n¢la,encoding_mapped,TKDL-001
+TKDL-E0324,Stem,kāī²a,,Tana,Thandu,k¢´²a,encoding_mapped,TKDL-001
+TKDL-E0325,Stem bark,kān²atvak,,Post-e-Saaq / Chhaal,Thandu Pattai,k¢n²atvak,encoding_mapped,TKDL-001
+TKDL-E0326,Stem tuber,kāī²akanda,,Thandu Kizhangu,,k¢´²akanda,encoding_mapped,TKDL-001
+TKDL-E0327,Stigma,vartikāgra,,Zeerah geer,Magarantha pye,vartik¢gra,encoding_mapped,TKDL-001
+TKDL-E0328,Tender leaves,pallava,,Barg-e-Naazuk,Thazir Illai,pallava,verified,TKDL-001
+TKDL-E0329,Terminal tender twig,pravāla,,Shaakh-e Naazuk Intehaai,Nuni Kurutthu,prav¢la,encoding_mapped,TKDL-001
+TKDL-E0330,Tuber/bulb/corm,kanda,,Baslah,Kizhangu,kanda,verified,TKDL-001
+TKDL-E0331,Unripe fruit,apakvaphala,,Samar-e-khaam,Pazhakkaai,apakvaphala,verified,TKDL-001
+TKDL-E0332,Vegetable,ṇāka,,Baqlaat,Kaaikari,º¢ka,encoding_mapped,TKDL-001
+TKDL-E0333,Vegetative buds / Young bud,ṇu¬ga,,Shagoofah/Ghunchah,Ilanthazhir,ºu¬ga,encoding_mapped,TKDL-001

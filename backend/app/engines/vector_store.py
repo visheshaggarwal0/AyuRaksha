@@ -1,26 +1,27 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
-import hashlib
 import logging
-import math
 
 from sqlalchemy import func, select
+from sentence_transformers import SentenceTransformer
 
 from app.db.session import AsyncSessionLocal
 from app.db.models import DocumentChunk, Source, SourceSection, SourceVersion
 
 logger = logging.getLogger(__name__)
 
+# Initialize the local embedding model once (free, no API key needed)
+try:
+    embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+except Exception as e:
+    logger.error(f"Failed to load sentence-transformers model: {e}")
+    embedding_model = None
 
-def generate_deterministic_embedding(text_content: str, dim: int = 1536) -> List[float]:
-    """Offline-safe embedding fallback with stable dimensions for pgvector tests."""
-    vector = []
-    text_bytes = text_content.encode("utf-8")
-    for index in range(dim):
-        digest = hashlib.sha256(text_bytes + str(index).encode("utf-8")).digest()
-        vector.append(int.from_bytes(digest[:4], "big") / (2**32 - 1) - 0.5)
-    norm = math.sqrt(sum(value * value for value in vector)) or 1.0
-    return [value / norm for value in vector]
+def generate_deterministic_embedding(text_content: str, dim: int = 384) -> List[float]:
+    """Generates an embedding using all-MiniLM-L6-v2 (dim 384)."""
+    if embedding_model is None:
+        raise RuntimeError("Embedding model not initialized.")
+    return embedding_model.encode(text_content).tolist()
 
 
 class BaseVectorStore(ABC):

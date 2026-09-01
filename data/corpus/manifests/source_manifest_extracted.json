@@ -2945,6 +2945,2034 @@
       },
       "local_path": "data/corpus/raw_downloads/case_dabur_vs_state_of_mp_2018.pdf",
       "extracted_text_path": "data/corpus/extracted/case_dabur_vs_state_of_mp_2018.txt"
+    },
+    {
+      "document_id": "TKDL_CASE_20080199550",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20080199550",
+        "url": "https://tkdl.res.in",
+        "file_name": "20080199550.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20080206372_REJECTED_CLAIMS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20080206372_Rejected_claims",
+        "url": "https://tkdl.res.in",
+        "file_name": "20080206372_Rejected_claims.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20090104297_EXAMINERS_REPORT1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20090104297_Examiners_report1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20090104297_Examiners_report1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20090104297_EXAMINERS_REPORT2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20090104297_Examiners_report2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20090104297_Examiners_report2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20090269398",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20090269398",
+        "url": "https://tkdl.res.in",
+        "file_name": "20090269398.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100129296NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100129296new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100129296new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100173022",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100173022",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100173022.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100178367_1NEW",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100178367_1new",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100178367_1new.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100178367_2NEW",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100178367_2new",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100178367_2new.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100178367_3NEW",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100178367_3new",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100178367_3new.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100178367_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100178367_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100178367_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203078",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203078",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203078.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203117-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203117-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203117-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203117_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203117_New1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203117_New1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203117_NEW1A",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203117_new1a",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203117_new1a.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203117_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203117_New2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203117_New2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203117_NEW2A",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203117_New2a",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203117_New2a.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203178_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203178_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203178_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100203178_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100203178_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100203178_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100239696_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100239696_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100239696_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100291249",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100291249",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100291249.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20100291249_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20100291249_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20100291249_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_2010029296",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 2010029296",
+        "url": "https://tkdl.res.in",
+        "file_name": "2010029296.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110052737_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110052737_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110052737_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110052737_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110052737_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110052737_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110097424",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110097424",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110097424.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110097424_NEW1A",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110097424_new1a",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110097424_new1a.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110118346",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110118346",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110118346.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110118346_AMEND",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110118346_amend",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110118346_amend.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110177184",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110177184",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110177184.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110177184_AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110177184_amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110177184_amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110305779-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110305779-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110305779-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20110305779-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20110305779-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20110305779-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120115891-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120115891-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120115891-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120115891-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120115891-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120115891-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120115891-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120115891-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120115891-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120115891-IV",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120115891-IV",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120115891-IV.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120128808-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120128808-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120128808-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120128808-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120128808-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120128808-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120128808",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120128808",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120128808.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120231032",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120231032",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120231032.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120329739-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120329739-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120329739-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120329739-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120329739-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120329739-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20120329739-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20120329739-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "20120329739-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130005830-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130005830-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130005830-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130005830-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130005830-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130005830-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130005830-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130005830-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130005830-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130005830-IV",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130005830-IV",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130005830-IV.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130017279",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130017279",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130017279.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130337057-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130337057-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130337057-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20130337057-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20130337057-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "20130337057-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20140106002",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20140106002",
+        "url": "https://tkdl.res.in",
+        "file_name": "20140106002.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150050369_AMENDED-28042017",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150050369_Amended-28042017",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150050369_Amended-28042017.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150050369_EXAMINER-REPORT-06092017",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150050369_Examiner-report-06092017",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150050369_Examiner-report-06092017.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150050369_EXAMINER-REPORT-22042016",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150050369_Examiner-report-22042016",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150050369_Examiner-report-22042016.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150118333_ABANDONED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150118333_Abandoned",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150118333_Abandoned.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150157683_APPL-REPORT1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150157683_Appl-report1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150157683_Appl-report1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150157683_APPL-REPORT2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150157683_Appl-report2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150157683_Appl-report2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150157683_EX-REPORT1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150157683_ex-report1",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150157683_ex-report1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150157683_EX-REPORT2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150157683_ex-report2",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150157683_ex-report2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20150157683_EX-REPORT3",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20150157683_ex-report3",
+        "url": "https://tkdl.res.in",
+        "file_name": "20150157683_ex-report3.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_20160184374_ABANDONED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: 20160184374_Abandoned",
+        "url": "https://tkdl.res.in",
+        "file_name": "20160184374_Abandoned.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_AMENDED_CLAIMS_29-8-16",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: amended claims 29-8-16",
+        "url": "https://tkdl.res.in",
+        "file_name": "amended claims 29-8-16.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_AMENDED_CLAIMS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Amended claims",
+        "url": "https://tkdl.res.in",
+        "file_name": "Amended claims.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_AMENDEDCLAIMSEP1955602",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: amendedclaimsEP1955602",
+        "url": "https://tkdl.res.in",
+        "file_name": "amendedclaimsEP1955602.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_AMENDEDCLAIMS_20160074453",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: amendedclaims_20160074453",
+        "url": "https://tkdl.res.in",
+        "file_name": "amendedclaims_20160074453.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_AMMENDEDCLAIMS5_9_2016",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: AmmendedClaims5_9_2016",
+        "url": "https://tkdl.res.in",
+        "file_name": "AmmendedClaims5_9_2016.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_DRUGS_AND_COSMETICS_ACT,_1940",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Drugs and Cosmetics Act, 1940",
+        "url": "https://tkdl.res.in",
+        "file_name": "Drugs and Cosmetics Act, 1940.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP09844722_AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP09844722_Amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP09844722_Amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP09844722_EXAMINER",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP09844722_Examiner",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP09844722_Examiner.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1296698_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1296698_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1296698_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1296698_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1296698_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1296698_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP14735296_AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP14735296_Amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP14735296_Amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP14735296_EXAMINER",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP14735296_Examiner",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP14735296_Examiner.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP14898151_AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP14898151_amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP14898151_amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP14898151_EXAMINER",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP14898151_Examiner",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP14898151_Examiner.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP16201966_AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP16201966_Amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP16201966_Amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP16201966_EXAMINER",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP16201966_Examiner",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP16201966_Examiner.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1722805_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1722805_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1722805_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1722805_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1722805_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1722805_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1750651-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1750651-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1750651-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1750651-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1750651-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1750651-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1750651",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1750651",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1750651.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1795200_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1795200_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1795200_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1795200_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1795200_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1795200_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1827362_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1827362_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1827362_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1827362_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1827362_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1827362_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1849473_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1849473_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1849473_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1849473_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1849473_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1849473_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1859834_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1859834_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1859834_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1880719-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1880719-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1880719-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1880719",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1880719",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1880719.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP1880719_NEW",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP1880719_New",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP1880719_New.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP19873131_CLAIMS-AMENDED",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP19873131_Claims-amended",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP19873131_Claims-amended.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP19873131_EXAMINERS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP19873131_Examiners",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP19873131_Examiners.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2046324",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2046324",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2046324.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2062883_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2062883_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2062883_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2062883_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2062883_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2062883_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP20757830_CLAIMS-AMENDEMENT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP20757830_Claims-amendement",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP20757830_Claims-amendement.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP20757830_EXAMINERREPORT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP20757830_ExaminerReport",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP20757830_ExaminerReport.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2112929_1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2112929_1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2112929_1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2112929_2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2112929_2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2112929_2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2134316_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2134316_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2134316_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2134316_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2134316_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2134316_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2152281",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2152281",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2152281.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2152281_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2152281_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2152281_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2153831",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2153831",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2153831.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2155222_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2155222_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2155222_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2155222_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2155222_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2155222_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2157966_1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2157966_1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2157966_1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2157966_2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2157966_2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2157966_2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2157966_3",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2157966_3",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2157966_3.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2182963_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2182963_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2182963_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2223930_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2223930_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2223930_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2226071",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2226071",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2226071.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2226071_1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2226071_1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2226071_1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2229403_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2229403_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2229403_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2262503_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2262503_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2262503_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2269621_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2269621_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2269621_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2269621_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2269621_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2269621_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2275113-I",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2275113-I",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2275113-I.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2275113-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2275113-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2275113-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2275113",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2275113",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2275113.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2303298-CLAIMS-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2303298-claims-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2303298-claims-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2303298-II",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2303298-II",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2303298-II.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2303298-III",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2303298-III",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2303298-III.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2303298_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2303298_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2303298_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2303298_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2303298_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2303298_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2319537_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2319537_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2319537_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2319537_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2319537_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2319537_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2379092_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2379092_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2379092_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2379093_CLAIMS_23-10-15",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2379093 claims 23-10-15",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2379093 claims 23-10-15.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2379093_REPORT_28-4-15",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2379093 report 28-4-15",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2379093 report 28-4-15.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2379095_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2379095_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2379095_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2416793_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2416793_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2416793_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2416793_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2416793_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2416793_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2506724_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2506724_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2506724_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2506724_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2506724_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2506724_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2528577_AMENDED_CLAIMS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2528577 Amended claims",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2528577 Amended claims.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2528577_EXAMINER_REPORT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2528577 Examiner report",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2528577 Examiner report.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2684566_AMENDED_CLAIMS_17-2-15",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2684566 Amended claims 17-2-15",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2684566 Amended claims 17-2-15.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2684566_EXAMINATION_REPORT_21-7-14",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2684566 examination report 21-7-14",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2684566 examination report 21-7-14.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2941261AMENDEDCLAIMS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2941261Amendedclaims",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2941261Amendedclaims.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP2941261EXAMINERREPORT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP2941261Examinerreport",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP2941261Examinerreport.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP3212157_AMENDEDCLAIMS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP3212157_amendedclaims",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP3212157_amendedclaims.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EP3212157_EXAMINATION",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: EP3212157_examination",
+        "url": "https://tkdl.res.in",
+        "file_name": "EP3212157_examination.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EXAMINER_REPORT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Examiner report",
+        "url": "https://tkdl.res.in",
+        "file_name": "Examiner report.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EXAMINEROPINION_20160074453",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Examineropinion_20160074453",
+        "url": "https://tkdl.res.in",
+        "file_name": "Examineropinion_20160074453.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EXAMINERS_REPORT24_2_2016",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Examiners_report24_2_2016",
+        "url": "https://tkdl.res.in",
+        "file_name": "Examiners_report24_2_2016.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EXAMINERS_REPORT8_5_2015",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Examiners_report8_5_2015",
+        "url": "https://tkdl.res.in",
+        "file_name": "Examiners_report8_5_2015.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_EXAMINER_REPORTEP1955602",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: examiner_reportEP1955602",
+        "url": "https://tkdl.res.in",
+        "file_name": "examiner_reportEP1955602.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_IP_LEX,_MONTHLY_COMPILATION_OF_JUDGEMENTS_ON_IP_RIGHTS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: IP LEX, Monthly Compilation of judgements on IP Rights",
+        "url": "https://tkdl.res.in",
+        "file_name": "IP LEX, Monthly Compilation of judgements on IP Rights.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_PATENT_ANTI-ADIPOGENIC_COMPOSITIONS_CONTAINING_PIPER_BETLE_AND_DOLICHOS_BIFLORUS",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Patent ANTI-ADIPOGENIC COMPOSITIONS CONTAINING PIPER BETLE AND DOLICHOS BIFLORUS",
+        "url": "https://tkdl.res.in",
+        "file_name": "Patent ANTI-ADIPOGENIC COMPOSITIONS CONTAINING PIPER BETLE AND DOLICHOS BIFLORUS.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_REPORT_15-5-14",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: report 15-5-14",
+        "url": "https://tkdl.res.in",
+        "file_name": "report 15-5-14.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_REPORT_18-4-16",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: report 18-4-16",
+        "url": "https://tkdl.res.in",
+        "file_name": "report 18-4-16.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_THE_JAN_VISHWAS_(AMENDMENT_OF_PROVISIONS)_ACT,_2023",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: THE JAN VISHWAS (AMENDMENT OF PROVISIONS) ACT, 2023",
+        "url": "https://tkdl.res.in",
+        "file_name": "THE JAN VISHWAS (AMENDMENT OF PROVISIONS) ACT, 2023.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_THE_PATENTS_ACT,_1970",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: THE PATENTS ACT, 1970",
+        "url": "https://tkdl.res.in",
+        "file_name": "THE PATENTS ACT, 1970.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_THE_TRIBUNALS_REFORMS_ACT,_2021",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: The Tribunals Reforms Act, 2021",
+        "url": "https://tkdl.res.in",
+        "file_name": "The Tribunals Reforms Act, 2021.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_TRADE_MARKS_ACT_1999",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: Trade Marks Act 1999",
+        "url": "https://tkdl.res.in",
+        "file_name": "Trade Marks Act 1999.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_TRADE_MARKS_ACT,_1999_(AMENDED_UPTO_2023)",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: TRADE MARKS ACT, 1999 (Amended Upto 2023)",
+        "url": "https://tkdl.res.in",
+        "file_name": "TRADE MARKS ACT, 1999 (Amended Upto 2023).pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_US20090298941_EXAMINER_REPORT1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: US20090298941_Examiner_report1",
+        "url": "https://tkdl.res.in",
+        "file_name": "US20090298941_Examiner_report1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_US20090298941_EXAMINER_REPORT2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: US20090298941_Examiner_report2",
+        "url": "https://tkdl.res.in",
+        "file_name": "US20090298941_Examiner_report2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_US20100061944",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: US20100061944",
+        "url": "https://tkdl.res.in",
+        "file_name": "US20100061944.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_US20130095171",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: US20130095171",
+        "url": "https://tkdl.res.in",
+        "file_name": "US20130095171.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_US2040118346",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: US2040118346",
+        "url": "https://tkdl.res.in",
+        "file_name": "US2040118346.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_USPTO_20150174185_EXAMINER_REPORT",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: USPTO 20150174185 examiner report",
+        "url": "https://tkdl.res.in",
+        "file_name": "USPTO 20150174185 examiner report.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_USPTO.20100291249_NEW1",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: USPTO.20100291249_new1",
+        "url": "https://tkdl.res.in",
+        "file_name": "USPTO.20100291249_new1.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_USPTO_20100203078",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: USPTO_20100203078",
+        "url": "https://tkdl.res.in",
+        "file_name": "USPTO_20100203078.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
+    },
+    {
+      "document_id": "TKDL_CASE_USPTO_20110097424_NEW2",
+      "category": "TKDL_CASE_STUDIES",
+      "jurisdiction": "INT",
+      "source": {
+        "title": "TKDL Case Outcome: USPTO_20110097424_new2",
+        "url": "https://tkdl.res.in",
+        "file_name": "USPTO_20110097424_new2.pdf",
+        "extraction_status": "SUCCESS"
+      },
+      "embedding_status": "PENDING"
     }
   ]
 }

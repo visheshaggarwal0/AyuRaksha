@@ -1,0 +1,287 @@
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+Reference is made to the following documents:
+
+D1
+
+pe
+
+Ds
+
+Ds
+
+ps
+
+Mim ET AL: “ABSTRACTS | Anacarcic acid increases type |
+procollagen expression following ultraviolet radiation va inhibition of
+DNA methylation in the COL1A2 promoter region’,
+
+117 Journal of Investigative Dermatology, 18 Apri 2014 (2014-04-19),
+XP055185170,
+
+Retrieved from the Internet:
+
+URL-hitp www nature.comyjdijournalv134/n1s/patiid20141 1 1a.pdf
+[retrieved on 2015-04-22}
+
+GHIZZONI M ET AL: "Improved inhibition of the histone acetyltransferase
+PCAF by an anacardic acid derivative’,
+
+BIOORGANIC & MEDICINAL CHEMISTRY, PERGAMON, GB,
+
+vol. 18, no. 16, 15 August 2010 (2010-08-15), pages 5826-5834,
+xP027192824,
+
+ISSN: 0968-0896
+
+[retrieved on 2010-07-03]
+
+JP H6- 329 516 A (MIKIMOTO SEIYAKU KK) 29 November 1994
+(1994-11-29)
+
+‘JP H10 36883 A (ASAHI CHEMICAL IND) 10 February 1998
+(1998-02-10)
+
+T.M. CALLAGHAN ET AL: “A review of ageing and an examination of
+ciinical methods in the assessment of ageing skin. Part: Cellular and
+molecular perspectives of skin ageing",
+
+INTERNATIONAL JOURNAL OF COSMETIC SCIENCE,
+
+vol. 30, no. 5, 1 October 2008 (2008-10-01), pages 319-322,
+XP055057484,
+
+ISSN: 0142-5463, DOI: 10.111 1f,1468-2494,2008.00454.x
+
+Fam Pons amet Sant eet 1 PO Aen 0)
+
+
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+Beltem!
+Basis of the report
+
+1
+uw
+
+12
+
+13
+
+14
+
+The scope searched
+
+The present application relates to the cosmetic use of at least one compound
+of formula (I), of at least one of its salts of formula (II) or of a mixture
+comprising at least one compound of formula (I) and at least one compound
+of formula (I):
+
+o cy)
+8 agent(s) intended to prevent andlor reat cutaneous signs of ageing,
+
+In both formulae, Ris claimed to independently represent a saturated, linear
+or branched, alkyl radical comprising from 12 to 20 carbon atoms.
+
+However, the term “alkyl” is not defined in the claims, but based on the whole
+content ofthe description, it seems to depart from the standard IUPAC.
+meaning, The description namely on p.3 exemplifies the compounds of
+formula (Il) as those including unsaturations. Also according to the
+description, the term R is ambiguous. P. 7 defines it according to a first
+altematve form as not comprising an ethylenic unsaturation, but in a second
+alternative form, the R radical ofthe compounds according tothe invention
+comprises at least one ethylenic unsaturation, preferably one, two or three
+ethylenic unsaturations, etc. Such alternatives are depicted also in the
+preparation on p.13.
+
+Therefore the applicant was requested on 28.1.2016 to indicate if the
+searched subject matter isto be limited tothe literal meaning of the claims (in
+this case only limited part of the description can be used for the support and
+the disclosure) or should the term R as being “saturated” be disregarded and
+alky| interpreted as saturated or unsaturated in line with the description. The
+applicant desired with the letter of 10.2.2016 the search to be limited to the
+literal meaning of the claims
+
+
+
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+‘Bettem
+
+Priority
+
+2 Limitation compared to the priority application
+
+2.1. The priority application related to the use of compounds of formula (I) oF I)
+‘hich were much broader than the presently claimed subject matter. The
+limitation to only saturated compounds is a selection within the general
+teaching of the priority application and goes against the general teaching of
+the priority application. E.g. in claim 6 or on p.9-10 of the priority application a
+selection of the minority ofthe depicted compound is necessary to arrive at
+the presently claimed compounds.
+
+Beltemv
+
+Reasoned statement with regard to novelty, inventive step or industrial
+
+applicability; citations and explanations supporting such statement
+
+3 Novelty
+
+3.1 D1 discloses that anacardio acid (AA) has a significant effect on the increase
+in the expression of procollagen, which counteracts "photoaging” of the skin.
+Inherently the anacardic acid has been used in a composition.
+
+3.1.1. Reference is made to D2, which isa scientific article in the field of histone
+acetylation (see the third line in the abstract ofthis document) which is exactly
+the field of D1 (see the third line of D1). D2 depicts on Fig 1 and on Scheme 1
+exactly the 6-pentadecyisalcylic acid as the anacardic acid. In this regard it is
+‘noted that both documents use the same abbreviation (AA) for this
+compound,
+
+3.1.2 This authority is not in the position to retrieve the full content of the
+presentation abstracted by the document D1, however assumes that the
+disclosure AA to counteract the “photoaging” ofthe skin corresponds to the
+the subject matter of the present claims 1,2,9, 12 and 14
+
+3.2. This application explains that “the signs of skin aging” include a lack of
+Uniformity of the complexion. The acids of formula (I) (as anacardic acid) are
+known for bleaching ofthe skin, which-is considered as treatment ofthe lack
+of uniformity of the complexion. D3 teaches cosmetic composition having
+
+
+
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+3.21
+38
+
+42
+
+5
+S14
+
+between 0.05% (eg. 11) and 5% (ex. 6) by weight of such acids to combat
+patches of skin pigmentation (see paragraph 2 and 26), particularly for skin
+‘whitening (see paragraph 4 and 27). In particular this document (in the
+examples on p.3-6) teaches 6-pentadecy/salicylic acid which is the compound
+A’of present claims 9. In example on. p.3 this document teaches the
+combination of 6-pentadecyisalicyic acid with potassium hydroxide. Such
+combination will result in formation of the salt of formula (I), which falls under
+Present claim 3.
+
+Therefore, claims 1,2,3, 9,12-14 lack novelty vis-a-vis this document.
+
+‘Similarly, the subject matter of at least claim 1 is not new vis-a-vis D4, which
+‘provides use of anacardium (which contains anacardic acid) against vitiligo
+(which is also a lack of uniformity of the complexion).
+
+Joventive step
+
+‘The application relates to the use of the compound of the acids of formula (I)
+or their salts (of formula (I) for preventing and / or treating cutaneous signs
+of aging.
+
+The specific compound of examples (Compound A ‘of this application),
+recited in claim 9 is one of the compounds used in D3 to combat uneven skin
+pigmentation (see skin stains mentioned in para [0002]. Hence even the
+preferred compound of the present application has been used against the
+signs of skin aging (skin pigmentation stains is the change to the external
+appearance of the skin which is skin aging according to the present
+application). The same compound is the (AA) of D1 disclosed as effective
+against skin photoaging,
+
+In view of the lack of novelty, the following must be considered forthe
+assessment of inventive step ifthe applicant is able to restore novelty.
+
+1D3 and D1 both relate tothe present compounds and the field of use:
+‘Structurally, compared to D3, the subject matter of the present application
+itfers by either converting the 6-pentadecylsalicylic acid into salts with amino
+acids (claims 4 to 8) or using them against wrinkles, fine lines, or withered,
+flabby andior thinned skin (claims 10,11).
+
+
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+5.1.2. Mechanistically, D1 discloses that anacardic acid has a significant effect on
+the increase in the expression of procollagen to combat "photoaging” of the
+skin. The subject matter of the present application differs by converting this
+(or similar) compounds into salts with amino acids (claims 4 to 8) or using
+them against wrinkles, fine lines, or withered, flabby andor thinned skin
+(claims 10,11),
+
+5.1.3 For the sake of the argument, due to the same scientific mechanism
+Underiying the present example 2 (procollagen synthesis), this document is
+taken as the closest prior at.
+
+5.1.4 The present application in generally tested only the compound falling under
+the salts of formula () (the compound F) in example 2 for anti-aging, but the
+compounds A’ and F (free acid of formula (!) and its salt) for a very specific
+use to combat withered skin in example 3. Therefore the objective technical
+Problems which are solved by the presently claimed subject matter (in as far
+as novel) may be seen in the provision ofthe formulation of the anacardic
+acid or the specific use thereof,
+
+5.1.5 Ione case, the solution is proposed by the formulation as the amino acid
+salt and in the other case, by the specific use.
+
+5.2 D1 onits own does not disclose how the anacardic acid should be
+formulated. However a skilled person working in the field of cosmetics is
+aware of DS, This document discloses (see para [0012)) that free anacardic
+acid is irritating and causes skin rash. To solve this problem, this documents,
+Proposes to convert it into salts (see para [0014]-0015)) and proposes i.a
+basic amino acids ((see para (0019}{0020)), such as lysine (ex.2).
+
+5.2.1 Consequently starting from the mechanicist study elaborated in D1. a skilled
+person wanting to formulate the tested compound for cosmetic purposes
+‘would be motivated by DS to avoid skin rash and would employ the
+formulation strategy (salt formation) proposed by DS. The skilled person
+‘would have primarily used lysine as exemplified by DS and arrive at the
+
+present specific compound F of claim 8. The solution proposed in claims 4-8
+is this obvious.
+
+5.3 For the specific uses of claims 10 and 11, a skilled person is aware of the
+review article D6, which is considered as a part of a general knowledge in the
+filed of collagen synthesis (the field of D1). This review article explains the
+similarities between photoaged and chronologically aged skin and indicates
+(see abstract) such skin as thin, flattened, dry and unblemished as well as
+
+
+
+WRITTEN OPINION OF THE Intemational appication No.
+INTERNATIONAL SEARCHING
+AUTHORITY (SEPARATE SHEET) PCTIEP2015/075273
+
+loosing architectural regularity. These are considered synonyms to herein
+claimed signs of aging recited in claims 10 and 11 and the skilled person
+‘would expect the compounds active on procollagen synthesis to alleviate
+these signs.
+
+Beltem Vill
+
+Certain observations on the international application
+
+6 — Glanty of the terminology
+
+6.1 The term “cutaneous signs of aging” has been interpreted broadly enough,
+because according to the present application (p.5-6) these signs include any
+changes to the external appearance of the skin including also changes of the
+complexion
+
+6.2 The term alkyl used in the clams is not compatible with the whole disclosure
+of the application. The alkyl is defined as saturated,but the description
+
+exemplifies (see p.9) as the very particularly preferred form of the invention
+the compounds in which alky! is not saturated.
+
