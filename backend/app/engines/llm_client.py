@@ -2,54 +2,56 @@ import httpx
 from typing import List, Dict, Any, Optional
 from app.core.config import settings
 
-class OpenRouterLLMClient:
+class LocalOllamaClient:
     """
-    Async client for OpenRouter inference using Google Gemma 4 31B (or configured model).
+    Async client for local Ollama inference using llama3.1:8b.
+    100% free and private RAG pipeline.
     """
 
     def __init__(self):
-        self.api_key = settings.OPENROUTER_API_KEY
-        self.base_url = settings.OPENROUTER_BASE_URL.rstrip("/")
-        self.model = settings.LLM_MODEL
+        self.base_url = "http://localhost:11434/api/chat"
+        self.model = "llama3.1:8b"
 
     async def generate_response(
         self,
         messages: List[Dict[str, str]],
         temperature: float = 0.1,
-        max_tokens: int = 1000
+        max_tokens: int = 1000,
+        json_format: bool = False
     ) -> Optional[str]:
-        if not self.api_key:
-            return None
-
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "HTTP-Referer": "https://ayuraksha.ai",
-            "X-Title": "AyuRaksha",
-            "Content-Type": "application/json"
-        }
-
+        
         payload = {
             "model": self.model,
             "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens
+            "stream": False,
+            "options": {
+                "temperature": temperature,
+                "num_predict": max_tokens
+            }
         }
+        
+        if json_format:
+            payload["format"] = "json"
 
         try:
-            async with httpx.AsyncClient(timeout=30.0) as client:
+            async with httpx.AsyncClient(timeout=60.0) as client:
                 resp = await client.post(
-                    f"{self.base_url}/chat/completions",
-                    json=payload,
-                    headers=headers
+                    self.base_url,
+                    json=payload
                 )
                 if resp.status_code == 200:
                     data = resp.json()
-                    choices = data.get("choices", [])
-                    if choices:
-                        return choices[0].get("message", {}).get("content", "")
+                    # Ollama returns {"message": {"role": "assistant", "content": "..."}}
+                    return data.get("message", {}).get("content", "")
                 else:
-                    print(f"[!] OpenRouter API Error {resp.status_code}: {resp.text}")
+                    import logging
+                    logging.error(f"[!] Ollama API Error {resp.status_code}: {resp.text}")
                     return None
+        except httpx.ConnectError:
+            import logging
+            logging.error("[!] Failed to connect to Ollama. Is it running on localhost:11434?")
+            return None
         except Exception as e:
-            print(f"[!] OpenRouter Request Exception: {e}")
+            import logging
+            logging.error(f"[!] Ollama Request Exception: {e}")
             return None

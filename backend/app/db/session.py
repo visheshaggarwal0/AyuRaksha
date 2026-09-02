@@ -20,6 +20,10 @@ try:
         raise RuntimeError("DATABASE_URL is not configured")
     if db_url.startswith("postgresql://"):
         db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+    
+    # asyncpg does not support sslmode in the connection string via SQLAlchemy
+    if "?sslmode=" in db_url:
+        db_url = db_url.split("?")[0]
 
     # Neon requires TLS. The default context validates both the certificate and host.
     ssl_context = ssl.create_default_context()

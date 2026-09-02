@@ -17,7 +17,7 @@ async def evaluate_product_classification(
     statutory governing act, patentability analysis, and verified citations.
     """
     try:
-        result = ProductClassifier.evaluate(req)
+        result = await ProductClassifier.evaluate(req)
         
         # Persist to Neon Postgres
         product = Product(

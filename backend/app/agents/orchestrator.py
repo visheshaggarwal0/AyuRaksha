@@ -4,7 +4,7 @@ from app.agents.router import QueryRouterAgent
 from app.engines.safety import SafetyGuardrailEngine
 from app.engines.search import HybridLegalSearchEngine
 from app.engines.verifier import CitationEntailmentVerifier
-from app.engines.llm_client import OpenRouterLLMClient
+from app.engines.llm_client import LocalOllamaClient
 from app.models.schemas import StructuredAnswer, Citation, ClaimVerification
 
 class AyuRakshaOrchestrator:
@@ -22,7 +22,7 @@ class AyuRakshaOrchestrator:
         self.safety = SafetyGuardrailEngine()
         self.search_engine = HybridLegalSearchEngine()
         self.verifier = CitationEntailmentVerifier()
-        self.llm_client = OpenRouterLLMClient()
+        self.llm_client = LocalOllamaClient()
 
     async def process_query(
         self,
@@ -69,73 +69,41 @@ class AyuRakshaOrchestrator:
             for s in retrieved_sources
         ])
 
-        # Step 5: Generate Synthesis via OpenRouter Gemma 4 31B if available
+        # Step 5: Generate Synthesis via Local Ollama (llama3.1:8b)
         direct_ans = None
-        if self.llm_client.api_key:
-            system_prompt = (
-                "You are AyuRaksha, a helpful and highly detailed AI IP & Regulatory Navigator for Ayurvedic Innovation "
-                "under the Ministry of Ayush. Answer the user query using the provided statutory context. "
-                "Be highly descriptive, supportive, and structure your answer in easy-to-read paragraphs. "
-                "At the end of each paragraph or claim, add a citation marker like [1], [2] corresponding to the statutory sources used. "
-                "NEVER hallucinate non-existent law."
+        system_prompt = (
+            "You are AyuRaksha, a highly detailed AI IP & Regulatory Navigator for Ayurvedic Innovation "
+            "under the Ministry of Ayush. Answer the user query using ONLY the provided statutory context. "
+            "Be highly descriptive, supportive, and structure your answer in easy-to-read paragraphs. "
+            "At the end of each paragraph or claim, add a citation marker like [1], [2] corresponding to the statutory sources used. "
+            "NEVER hallucinate non-existent law. If the context does not answer the question, state that."
+        )
+        user_msg = f"User Question: {query}\n\nStatutory Context:\n{context_blocks}\n\nProvide a detailed and helpful response with inline [1] citations:"
+        
+        llm_res = await self.llm_client.generate_response(
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_msg}
+            ],
+            temperature=0.1
+        )
+        
+        if llm_res and len(llm_res.strip()) > 30:
+            direct_ans = llm_res.strip()
+        else:
+            # Fallback only if the LLM connection completely fails
+            direct_ans = (
+                f"I have carefully evaluated your query against {len(retrieved_sources)} verified statutory authorities "
+                f"under the {effective_jurisdiction} regulatory namespace.\n\n"
+                "However, the Local AI Synthesis Engine (Ollama) failed to respond. Please review the detailed citations below to understand the exact statutory provisions."
             )
-            user_msg = f"User Question: {query}\n\nStatutory Context:\n{context_blocks}\n\nProvide a detailed and helpful response with inline [1] citations:"
-            llm_res = await self.llm_client.generate_response(
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_msg}
-                ],
-                temperature=0.1
-            )
-            if llm_res and len(llm_res.strip()) > 30:
-                direct_ans = llm_res.strip()
-
-        # Deterministic Fallback if LLM is unavailable or unconfigured
-        if not direct_ans:
-            if intent == "PATENTABILITY_ASSESSMENT":
-                direct_ans = (
-                    "Thank you for reaching out! Assessing patentability for Ayurvedic formulations requires careful navigation of the Indian Patents Act.\n\n"
-                    "An Ayurvedic formulation based on known classical herbs cannot be patented as a mere composition "
-                    "under Section 3(p) of the Patents Act, 1970 [1]. To be patentable, you must demonstrate a novel extraction "
-                    "process, a non-obvious synergistic technical effect (Section 3(e)), or a novel formulation platform [1].\n\n"
-                    "I recommend exploring a process patent or compiling a strong defensive publication to protect your IP."
-                )
-            elif intent == "ABS_ASSESSMENT":
-                direct_ans = (
-                    "Navigating Access and Benefit Sharing (ABS) is a crucial step in ethical Ayurvedic commerce. Here is how the law applies to your case:\n\n"
-                    "Under the Biological Diversity Act, 2002 (as amended in 2023), Indian commercial entities must submit "
-                    "Prior Intimation to the respective State Biodiversity Board (SBB) under Section 7 [1]. If you are a foreign entity or "
-                    "a company with foreign shareholding, you will require prior approval directly from the National Biodiversity Authority (NBA) under Section 3 [2].\n\n"
-                    "Let me know if you need help initiating the NBA forms!"
-                )
-            elif intent == "PRODUCT_CLASSIFICATION":
-                direct_ans = (
-                    "I'd be happy to help you classify your herbal formulation. The regulatory pathway depends heavily on your ingredients and how you intend to market it.\n\n"
-                    "Under the Drugs & Cosmetics Act 1940, if your formulation strictly follows recipes in First Schedule texts "
-                    "(like Charaka or Sharangadhara Samhita), it is classified as a Classical ASU Drug under Section 3(a) [1]. However, if it contains modified ratios or new extraction methods, "
-                    "it requires a Patent/Proprietary license under Rule 158B [1].\n\n"
-                    "Alternatively, if you plan to market it as a food product without specific disease-curing claims, it falls under the FSSAI Ayurveda Aahara 2022 regulations [2]. Let's walk through the Product Classifier tool together if you want to be sure!"
-                )
-            elif intent == "EXPORT_ASSESSMENT":
-                direct_ans = (
-                    "Exporting Ayurvedic formulations is an exciting step! To do so successfully, you must satisfy both domestic and international standards.\n\n"
-                    "First, you need to meet Indian manufacturing standards (WHO-GMP / Schedule T) before leaving the country [1]. Once in the destination market, local frameworks apply. "
-                    "For example, in the US, products typically enter under US FDA DSHEA as Dietary Supplements with allowable Structure/Function claims [2]. In the EU, compliance with heavy metal limits and THMPD (Directive 2004/24/EC) is strictly required [2].\n\n"
-                    "Would you like to generate a detailed compliance dossier for a specific country?"
-                )
-            else:
-                direct_ans = (
-                    f"I have carefully evaluated your query against {len(retrieved_sources)} verified statutory authorities "
-                    f"under the {effective_jurisdiction} regulatory namespace [1].\n\n"
-                    "Based on the analysis, you are currently operating within a highly regulated space. Please review the detailed citations below to understand the exact statutory provisions."
-                )
 
         # Assessment Table
         assessment_table = {
             "Jurisdiction": f"{effective_jurisdiction} Regulatory Namespace",
             "Intent Category": intent.replace("_", " ").title(),
             "Statutory Sources Evaluated": f"{len(retrieved_sources)} Official Provisions",
-            "LLM Synthesizer": "Google Gemma 4 31B (OpenRouter)" if self.llm_client.api_key else "Deterministic Baseline"
+            "LLM Synthesizer": "llama3.1:8b (Ollama Local)"
         }
 
         # Step 6: Build Verified Citations
