@@ -1,27 +1,57 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
+import hashlib
+import math
 import logging
 
 from sqlalchemy import func, select
-from sentence_transformers import SentenceTransformer
 
 from app.db.session import AsyncSessionLocal
 from app.db.models import DocumentChunk, Source, SourceSection, SourceVersion
 
 logger = logging.getLogger(__name__)
 
-# Initialize the local embedding model once (free, no API key needed)
-try:
-    embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-except Exception as e:
-    logger.error(f"Failed to load sentence-transformers model: {e}")
-    embedding_model = None
+_embedding_model: Any = None
+_sentence_transformers_available: Optional[bool] = None
+
+def get_embedding_model():
+    global _embedding_model, _sentence_transformers_available
+    if _sentence_transformers_available is False:
+        return None
+    if _embedding_model is None:
+        try:
+            from sentence_transformers import SentenceTransformer
+            logger.info("Initializing SentenceTransformer('all-MiniLM-L6-v2')...")
+            _embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+            _sentence_transformers_available = True
+        except Exception as e:
+            logger.warning(f"sentence-transformers not available or failed to load ({e}). Using 384-dim normalized hash fallback.")
+            _sentence_transformers_available = False
+            _embedding_model = None
+    return _embedding_model
 
 def generate_deterministic_embedding(text_content: str, dim: int = 384) -> List[float]:
-    """Generates an embedding using all-MiniLM-L6-v2 (dim 384)."""
-    if embedding_model is None:
-        raise RuntimeError("Embedding model not initialized.")
-    return embedding_model.encode(text_content).tolist()
+    """
+    Generates a 384-dimensional embedding.
+    Uses SentenceTransformer('all-MiniLM-L6-v2') when available;
+    otherwise falls back to a deterministic 384-dimensional unit vector.
+    """
+    model = get_embedding_model()
+    if model is not None:
+        raw_vector = model.encode(text_content, normalize_embeddings=True)
+        return [float(val) for val in raw_vector]
+    
+    # Resilient fallback: 384-dim normalized hash projection
+    vector = []
+    text_bytes = text_content.encode("utf-8")
+    for index in range(dim):
+        digest = hashlib.sha256(text_bytes + str(index).encode("utf-8")).digest()
+        vector.append(int.from_bytes(digest[:4], "big") / (2**32 - 1) - 0.5)
+    norm = math.sqrt(sum(value * value for value in vector)) or 1.0
+    return [float(value / norm) for value in vector]
+
+# Alias for semantic clarity
+generate_embedding = generate_deterministic_embedding
 
 
 class BaseVectorStore(ABC):

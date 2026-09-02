@@ -42,8 +42,8 @@ class Settings:
         return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
         
     # AI / Embedding settings
-    EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "text-embedding-3-small")
-    EMBEDDING_DIMENSION: int = int(os.getenv("EMBEDDING_DIMENSION", "1536"))
+    EMBEDDING_MODEL: str = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
+    EMBEDDING_DIMENSION: int = int(os.getenv("EMBEDDING_DIMENSION", "384"))
     RERANKER_MODEL: str = os.getenv("RERANKER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
     
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
