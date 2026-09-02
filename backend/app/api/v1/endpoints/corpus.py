@@ -61,3 +61,72 @@ async def get_corpus_statistics() -> Dict[str, Any]:
     stats = taxonomy_engine.get_corpus_statistics()
     stats["statutory_manifest_count"] = len(chunker.parse_manifest())
     return stats
+
+@router.get("/patent-forms")
+async def get_patent_forms(
+    query: str = Query(default="", description="Search patent forms by number, title, or purpose")
+) -> List[Dict[str, Any]]:
+    """
+    Returns official CGPDTM Patent Filing Forms (Form 1 to Form 30) from Patents Rules 2003/2024.
+    """
+    import csv
+    from pathlib import Path
+    forms_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patent_forms.csv"
+    if not forms_path.exists():
+        return []
+
+    results = []
+    q_lower = query.lower().strip()
+    with open(forms_path, "r", encoding="utf-8", errors="replace") as f:
+        for row in csv.DictReader(f):
+            form_num = row.get("form_number", "")
+            form_title = row.get("form_title", "")
+            purpose = row.get("purpose", "")
+            rel = row.get("related_section_or_rule", "")
+            if not q_lower or (q_lower in form_num.lower() or q_lower in form_title.lower() or q_lower in purpose.lower() or q_lower in rel.lower()):
+                results.append(row)
+    return results
+
+@router.get("/patent-provisions")
+async def get_patent_provisions(
+    query: str = Query(default="", description="Search by section, rule, title, or topic"),
+    relevance_filter: Optional[str] = Query(default=None, description="Filter by ayurveda or tk relevance")
+) -> List[Dict[str, Any]]:
+    """
+    Returns canonical sections and rules from Patents Act 1970 and Patents Rules 2003.
+    """
+    import csv
+    from pathlib import Path
+    provisions_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patents_act_rules_full.csv"
+    if not provisions_path.exists():
+        return []
+
+    results = []
+    q_lower = query.lower().strip()
+    with open(provisions_path, "r", encoding="utf-8", errors="replace") as f:
+        for row in csv.DictReader(f):
+            sec_rule = row.get("section_or_rule", "")
+            title = row.get("title", "")
+            summary = row.get("summary", "")
+            ayur = row.get("relevance_to_ayurveda", "")
+            tk = row.get("relevance_to_traditional_knowledge", "")
+
+            if relevance_filter == "ayurveda" and ayur in ("None", ""):
+                continue
+            if relevance_filter == "tk" and tk in ("None", ""):
+                continue
+
+            if not q_lower or (q_lower in sec_rule.lower() or q_lower in title.lower() or q_lower in summary.lower()):
+                results.append(row)
+                if len(results) >= 100:
+                    break
+    return results
+
+@router.get("/graph")
+async def get_statutory_knowledge_graph() -> Dict[str, Any]:
+    """
+    Returns the complete multi-hop statutory & traditional knowledge graph
+    linking botanicals, classical texts, patent exclusions, filing forms, and treaties.
+    """
+    from app.ai.retrieval.graph import GraphRetriever
+    return GraphRetriever.get_full_knowledge_graph()

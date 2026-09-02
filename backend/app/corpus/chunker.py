@@ -1,3 +1,4 @@
+import csv
 import json
 import hashlib
 import re
@@ -394,6 +395,152 @@ class LegalDocumentChunker:
                         })
             except Exception as e:
                 pass
+
+        # 4. Official CGPDTM Patents Act, Rules, Forms & Amendments (data/IPINDIA)
+        ipindia_dir = Path(__file__).resolve().parents[3] / "data" / "IPINDIA"
+        if ipindia_dir.exists():
+            # A. Full Canonical Patents Act & Rules Provisions
+            patents_full_path = ipindia_dir / "patents_act_rules_full.csv"
+            if patents_full_path.exists():
+                try:
+                    with open(patents_full_path, "r", encoding="utf-8", errors="replace") as f:
+                        for row in csv.DictReader(f):
+                            prov_id = row.get("provision_id", "").strip()
+                            instrument = row.get("instrument", "Patents Act").strip()
+                            sec_rule = row.get("section_or_rule", "").strip()
+                            title = row.get("title", "").strip()
+                            summary = row.get("summary", "").strip()
+                            prov_type = row.get("provision_type", "Section").strip()
+                            ayur_rel = row.get("relevance_to_ayurveda", "None").strip()
+                            tk_rel = row.get("relevance_to_traditional_knowledge", "None").strip()
+                            bio_rel = row.get("relevance_to_biodiversity", "None").strip()
+                            pat_rel = row.get("relevance_to_patentability", "None").strip()
+                            source_url = row.get("source_url", "").strip()
+
+                            if not sec_rule or not summary:
+                                continue
+
+                            is_act = "Act" in instrument
+                            source_id = "IND_PATENTS_ACT_1970" if is_act else "IND_PATENTS_RULES_2003"
+                            source_title = "The Patents Act, 1970 (as amended 2024)" if is_act else "The Patents Rules, 2003 (as amended 2024)"
+                            auth_level = 5 if is_act else 4
+
+                            combined_text = (
+                                f"[Official Patent Provision: {instrument} {prov_type} {sec_rule} - {title}]\n"
+                                f"Statute: {source_title}\n"
+                                f"Provision: {prov_type} {sec_rule} ({title})\n"
+                                f"Statutory Content: {summary}\n"
+                                f"Relevance: Traditional Knowledge: {tk_rel} | Ayurveda: {ayur_rel} | Biodiversity: {bio_rel} | Patentability: {pat_rel}\n"
+                                f"Authority: Controller General of Patents, Designs and Trade Marks (CGPDTM), India."
+                            )
+
+                            chunks.append({
+                                "source_id": source_id,
+                                "source_title": source_title,
+                                "authority": "Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)",
+                                "jurisdiction": "IN",
+                                "document_type": "ACT" if is_act else "RULES",
+                                "authority_level": auth_level,
+                                "domain": "PATENTS_AND_IP",
+                                "section_number": f"{prov_type} {sec_rule}",
+                                "heading": title,
+                                "text": combined_text,
+                                "raw_statute": f"{prov_type} {sec_rule} ({title}): {summary}",
+                                "source_url": source_url or "https://ipindia.gov.in/",
+                                "source_sha256": self.compute_sha256(combined_text),
+                                "chunk_hash": self.compute_sha256(combined_text),
+                                "topics": ["patents", "ipindia", prov_type.lower(), tk_rel.lower(), ayur_rel.lower()]
+                            })
+                except Exception:
+                    pass
+
+            # B. Official Patent Filing Forms (patent_forms.csv)
+            forms_path = ipindia_dir / "patent_forms.csv"
+            if forms_path.exists():
+                try:
+                    with open(forms_path, "r", encoding="utf-8", errors="replace") as f:
+                        for row in csv.DictReader(f):
+                            form_num = row.get("form_number", "").strip()
+                            form_title = row.get("form_title", "").strip()
+                            purpose = row.get("purpose", "").strip()
+                            related_sec = row.get("related_section_or_rule", "").strip()
+                            source_url = row.get("source_url", "").strip()
+
+                            if not form_num or not form_title:
+                                continue
+
+                            combined_text = (
+                                f"[Official CGPDTM Patent Form: {form_num} - {form_title}]\n"
+                                f"Form Number: {form_num}\n"
+                                f"Form Title: {form_title}\n"
+                                f"Official Purpose: {purpose}\n"
+                                f"Governing Sections & Rules: {related_sec}\n"
+                                f"Issuing Authority: Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM), India\n"
+                                f"Regulatory Function: Statutory procedural filing prescribed under The Patents Rules, 2003 (as amended 2024)."
+                            )
+
+                            chunks.append({
+                                "source_id": "IND_PATENT_FORMS_CGPDTM",
+                                "source_title": "Official CGPDTM Patent Filing Forms (Patents Rules 2003/2024)",
+                                "authority": "Office of the Controller General of Patents, Designs and Trade Marks (CGPDTM)",
+                                "jurisdiction": "IN",
+                                "document_type": "FORM",
+                                "authority_level": 4,
+                                "domain": "PATENTS_AND_IP",
+                                "section_number": f"Form: {form_num}",
+                                "heading": form_title,
+                                "text": combined_text,
+                                "raw_statute": f"{form_num} - {form_title}: {purpose}. Governing: {related_sec}",
+                                "source_url": source_url or "https://ipindia.gov.in/",
+                                "source_sha256": self.compute_sha256(combined_text),
+                                "chunk_hash": self.compute_sha256(combined_text),
+                                "topics": ["patent_forms", "filing_procedure", form_num.lower(), "cgpdtm"]
+                            })
+                except Exception:
+                    pass
+
+            # C. Patent Amendments (patent_amendments.csv)
+            amends_path = ipindia_dir / "patent_amendments.csv"
+            if amends_path.exists():
+                try:
+                    with open(amends_path, "r", encoding="utf-8", errors="replace") as f:
+                        for row in csv.DictReader(f):
+                            amend_name = row.get("amendment_name", "").strip()
+                            amend_year = row.get("amendment_year", "").strip()
+                            affected = row.get("affected_section_or_rule", "").strip()
+                            summary = row.get("change_summary", "").strip()
+                            source_url = row.get("official_gazette_url", "").strip()
+
+                            if not amend_name:
+                                continue
+
+                            combined_text = (
+                                f"[Official Patent Legislative Reform: {amend_name} ({amend_year})]\n"
+                                f"Statutory Reform: {amend_name}\n"
+                                f"Affected Provisions: {affected}\n"
+                                f"Summary of Legal Changes: {summary}\n"
+                                f"Authority: Ministry of Commerce & Industry (DPIIT) / Ministry of Law & Justice, India."
+                            )
+
+                            chunks.append({
+                                "source_id": "IND_PATENTS_AMENDMENTS",
+                                "source_title": f"{amend_name} ({amend_year})",
+                                "authority": "Ministry of Commerce and Industry (DPIIT) / Ministry of Law and Justice",
+                                "jurisdiction": "IN",
+                                "document_type": "AMENDMENT",
+                                "authority_level": 5,
+                                "domain": "PATENTS_AND_IP",
+                                "section_number": f"Reform: {amend_name}",
+                                "heading": amend_name,
+                                "text": combined_text,
+                                "raw_statute": f"{amend_name}: {summary}",
+                                "source_url": source_url or "https://egazette.gov.in/",
+                                "source_sha256": self.compute_sha256(combined_text),
+                                "chunk_hash": self.compute_sha256(combined_text),
+                                "topics": ["patent_amendments", "legal_reforms", amend_year]
+                            })
+                except Exception:
+                    pass
 
         return chunks
 

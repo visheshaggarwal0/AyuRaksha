@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ShieldCheck, BookOpen, AlertCircle, ExternalLink, Hash, CheckCircle2 } from 'lucide-react';
+import { X, ShieldCheck, BookOpen, ExternalLink, Hash, CheckCircle2 } from 'lucide-react';
 import { Citation } from '../../types';
 
 interface CitationModalProps {

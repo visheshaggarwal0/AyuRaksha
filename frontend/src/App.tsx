@@ -19,7 +19,8 @@ import {
   Globe,
   AlertTriangle,
   ArrowLeft,
-  Sparkles
+  Sparkles,
+  Network
 } from 'lucide-react';
 import { api } from './services/api';
 import { Citation, StructuredAnswer, Jurisdiction } from './types';
@@ -27,6 +28,7 @@ import { ProductJourneyWizard } from './components/wizards/ProductJourneyWizard'
 import { IPMatrixView } from './components/cards/IPMatrixView';
 import { ABSWizard } from './components/wizards/ABSWizard';
 import { CorpusExplorer } from './components/corpus/CorpusExplorer';
+import { KnowledgeGraphExplorer } from './components/graph/KnowledgeGraphExplorer';
 import { CitationModal } from './components/modals/CitationModal';
 import { StatutoryMarkdownRenderer } from './components/common/StatutoryMarkdownRenderer';
 import { ComplianceDossierModal } from './components/common/ComplianceDossierModal';
@@ -39,7 +41,7 @@ interface ChatMessage {
   answerData?: StructuredAnswer;
 }
 
-type ActiveView = 'chat' | 'classification' | 'ip_matrix' | 'abs_wizard' | 'corpus';
+type ActiveView = 'chat' | 'classification' | 'ip_matrix' | 'abs_wizard' | 'corpus' | 'knowledge_graph';
 
 export function App() {
   const [activeView, setActiveView] = useState<ActiveView>('chat');
@@ -307,7 +309,8 @@ export function App() {
                       { id: 'classification', label: 'Product Classifier', icon: Compass },
                       { id: 'ip_matrix', label: 'IP Opportunity Matrix', icon: Scale },
                       { id: 'abs_wizard', label: 'ABS Compliance Check', icon: Leaf },
-                      { id: 'corpus', label: 'Statutory Corpus & TKDL', icon: BookOpen }
+                      { id: 'corpus', label: 'Statutory Corpus & TKDL', icon: BookOpen },
+                      { id: 'knowledge_graph', label: 'Knowledge Graph', icon: Network }
                     ].map((item, idx) => (
                       <motion.button
                         key={item.id}
@@ -812,6 +815,18 @@ export function App() {
             {activeView === 'corpus' && (
               <div className="max-w-5xl mx-auto p-6 sm:p-12">
                 <CorpusExplorer />
+              </div>
+            )}
+
+            {/* VIEW: KNOWLEDGE GRAPH */}
+            {activeView === 'knowledge_graph' && (
+              <div className="h-full p-3 sm:p-5 flex flex-col">
+                <KnowledgeGraphExplorer
+                  onAskCopilot={(query) => {
+                    setActiveView('chat');
+                    handleSendMessage(query);
+                  }}
+                />
               </div>
             )}
           </div>

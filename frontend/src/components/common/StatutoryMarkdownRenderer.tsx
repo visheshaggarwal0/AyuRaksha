@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ChevronRight, AlertCircle, Bookmark } from 'lucide-react';
+import { CheckCircle2, ChevronRight } from 'lucide-react';
 import { Citation } from '../../types';
 
 interface StatutoryMarkdownRendererProps {
@@ -29,7 +29,7 @@ export const StatutoryMarkdownRenderer: React.FC<StatutoryMarkdownRendererProps>
         parts.push(text.substring(lastIndex, match.index));
       }
 
-      const [fullMatch, citationMatch, boldMatch, italicMatch] = match;
+      const [, citationMatch, boldMatch, italicMatch] = match;
 
       if (citationMatch) {
         // Parse citation index, e.g. "[2]" -> 2, "[1(I)]" -> 1

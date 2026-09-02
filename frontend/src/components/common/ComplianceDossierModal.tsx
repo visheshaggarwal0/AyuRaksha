@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { X, Shield, Printer, Download, Sparkles, CheckCircle2, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, Shield, Printer, Download } from 'lucide-react';
 import { ProductClassificationResponse, ABSAssessmentResponse } from '../../types';
 import { api } from '../../services/api';
 

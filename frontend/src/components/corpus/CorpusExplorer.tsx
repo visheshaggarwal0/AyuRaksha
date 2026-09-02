@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
-import { BookOpen, CheckCircle2, ExternalLink, Hash, Search, Leaf, Library, HelpCircle, Loader2 } from 'lucide-react';
+import { BookOpen, CheckCircle2, ExternalLink, Hash, Search, Leaf, Library, HelpCircle, Loader2, FileText } from 'lucide-react';
 import { api } from '../../services/api';
 
 export function CorpusExplorer() {
-  const [activeCategory, setActiveCategory] = useState<'acts' | 'books' | 'botanicals' | 'glossary'>('acts');
+  const [activeCategory, setActiveCategory] = useState<'acts' | 'books' | 'botanicals' | 'glossary' | 'patent_forms'>('acts');
   const [searchQuery, setSearchQuery] = useState('');
   const [books, setBooks] = useState<any[]>([]);
   const [plants, setPlants] = useState<any[]>([]);
   const [glossary, setGlossary] = useState<any[]>([]);
+  const [patentForms, setPatentForms] = useState<any[]>([]);
   const [stats, setStats] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
@@ -183,6 +184,12 @@ export function CorpusExplorer() {
         .then((data) => setGlossary(data))
         .catch(() => setGlossary([]))
         .finally(() => setLoading(false));
+    } else if (activeCategory === 'patent_forms') {
+      setLoading(true);
+      api.getPatentForms(searchQuery)
+        .then((data) => setPatentForms(data))
+        .catch(() => setPatentForms([]))
+        .finally(() => setLoading(false));
     }
   }, [activeCategory, searchQuery]);
 
@@ -200,7 +207,7 @@ export function CorpusExplorer() {
               Authoritative Legal & TKDL Taxonomy Registry
             </h1>
             <p className="text-xs text-ayush-slate mt-1 max-w-2xl">
-              Inspect official primary statutes, First Schedule authoritative texts, 335+ verified medicinal plants, and TKDL regulatory terms with cryptographic checksums.
+              Inspect official primary statutes, First Schedule authoritative texts, 335+ verified medicinal plants, official CGPDTM patent forms, and TKDL regulatory terms with cryptographic checksums.
             </p>
           </div>
 
@@ -213,6 +220,15 @@ export function CorpusExplorer() {
               }`}
             >
               Statutes ({statutoryActs.length})
+            </button>
+            <button
+              onClick={() => { setActiveCategory('patent_forms'); setSearchQuery(''); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 ${
+                activeCategory === 'patent_forms' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
+              }`}
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>Patent Forms (37)</span>
             </button>
             <button
               onClick={() => { setActiveCategory('books'); setSearchQuery(''); }}
@@ -443,6 +459,54 @@ export function CorpusExplorer() {
               <p className="text-xs text-slate-700 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
                 {item.definition}
               </p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Category 5: Patent Forms (patent_forms.csv from IPINDIA) */}
+      {!loading && activeCategory === 'patent_forms' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {patentForms.map((form, idx) => (
+            <div key={idx} className="bg-white border border-ayush-border rounded-2xl p-5 shadow-card hover:shadow-floating transition-all flex flex-col justify-between space-y-4">
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between">
+                  <span className="px-2.5 py-1 bg-emerald-50 text-emerald-900 border border-emerald-200 rounded-lg text-xs font-mono font-bold">
+                    {form.form_number}
+                  </span>
+                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50/60 px-2 py-0.5 rounded border border-emerald-200/60">
+                    {form.verification_status || 'Verified IP India'}
+                  </span>
+                </div>
+
+                <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                  {form.form_title}
+                </h3>
+
+                <p className="text-xs text-slate-600 leading-relaxed bg-slate-50/80 p-3 rounded-xl border border-slate-100">
+                  {form.purpose}
+                </p>
+
+                {form.related_section_or_rule && (
+                  <div className="text-[11px] text-slate-500 font-mono flex items-center gap-1.5">
+                    <span className="font-bold text-slate-700">Governing:</span>
+                    <span className="truncate">{form.related_section_or_rule}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span className="text-[10px] font-mono text-slate-400">CGPDTM Rules 2003/2024</span>
+                <a
+                  href={form.source_url || 'https://ipindia.gov.in'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-1 text-emerald-700 hover:text-emerald-900 font-bold hover:underline"
+                >
+                  <span>Official Form</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           ))}
         </div>

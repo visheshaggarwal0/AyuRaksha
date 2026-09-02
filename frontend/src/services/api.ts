@@ -142,6 +142,23 @@ export const api = {
     return response.data;
   },
 
+  getPatentForms: async (query: string = '') => {
+    const response = await apiClient.get('/corpus/patent-forms', { params: { query } });
+    return response.data;
+  },
+
+  getPatentProvisions: async (query: string = '', relevanceFilter?: string) => {
+    const response = await apiClient.get('/corpus/patent-provisions', {
+      params: { query, relevance_filter: relevanceFilter }
+    });
+    return response.data;
+  },
+
+  getKnowledgeGraph: async () => {
+    const response = await apiClient.get('/corpus/graph');
+    return response.data;
+  },
+
   // Active Compliance Dossier (SIH 26045)
   generateDossier: async (data: any) => {
     const response = await apiClient.post('/dossier/generate', data);
