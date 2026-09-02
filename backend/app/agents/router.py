@@ -43,7 +43,7 @@ class QueryRouterAgent:
 
         # 3. Intent classification
         intent = "GENERAL_RESEARCH"
-        if re.search(r"\b(patent|patentable|section 3p|section 3e|inventive step|prior art)\b", q_lower):
+        if re.search(r"\b(patents?|patentable|section\s*3\(?[a-z]\)?|inventive step|prior art)", q_lower):
             intent = "PATENTABILITY_ASSESSMENT"
         elif re.search(r"\b(abs|biodiversity|nba|sbb|benefit sharing|biological resource|prior intimation)\b", q_lower):
             intent = "ABS_ASSESSMENT"

@@ -46,7 +46,9 @@ async def ingest_corpus():
             print(f" -> Ingesting: {title} [{jurisdiction}] (SHA-256: {sha256_hash[:10]}...)")
 
             source_data = chunker.parse_source_file(rel_path)
-            validation_warnings = validate_normalized_document(source_data)
+            validation_warnings = []
+            if "provisions" in source_data and "source" in source_data:
+                validation_warnings = validate_normalized_document(source_data)
             for warning in validation_warnings:
                 print(f"    [warning] {warning}")
 

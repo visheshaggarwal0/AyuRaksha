@@ -19,28 +19,36 @@ class CitationEntailmentVerifier:
             )
 
         claim_lower = claim.lower()
-        supported = False
+        claim_words = set(re.findall(r'\b\w{4,}\b', claim_lower))
+        if not claim_words:
+            return ClaimVerification(
+                claim=claim,
+                is_supported=False,
+                confidence_score=0.0,
+                supporting_citations=[]
+            )
+
+        matched_citations: List[Citation] = []
         max_score = 0.0
 
         for c in citations:
-            section_token = c.section.lower().replace("section", "").replace(" ", "").strip()
             verbatim_lower = c.verbatim_quote.lower()
-            
-            claim_words = set(re.findall(r'\b\w{4,}\b', claim_lower))
             statute_words = set(re.findall(r'\b\w{4,}\b', verbatim_lower))
             
             overlap = len(claim_words.intersection(statute_words))
             ratio = overlap / max(len(claim_words), 1)
             
-            if ratio >= 0.20 or (section_token and section_token in claim_lower):
-                supported = True
+            if ratio >= 0.20:
+                matched_citations.append(c)
                 max_score = max(max_score, min(0.75 + ratio * 0.25, 1.0))
+
+        is_supported = len(matched_citations) > 0
 
         return ClaimVerification(
             claim=claim,
-            is_supported=supported,
-            confidence_score=round(max_score if supported else 0.0, 2),
-            supporting_citations=citations if supported else []
+            is_supported=is_supported,
+            confidence_score=round(max_score if is_supported else 0.0, 2),
+            supporting_citations=matched_citations
         )
 
 # Alias for backward compatibility

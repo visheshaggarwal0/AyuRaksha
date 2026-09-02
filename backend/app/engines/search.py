@@ -51,23 +51,26 @@ class HybridLegalSearchEngine:
 
     @staticmethod
     def _candidate_key(candidate: Dict[str, Any]) -> str:
-        return "|".join([
-            str(candidate.get("chunk_id", "")),
-            str(candidate.get("source_id", "")),
-            str(candidate.get("section_number", "")),
-            candidate.get("text", "")[:80],
-        ])
+        source_id = str(candidate.get("source_id", "")).strip().upper()
+        sec_norm = re.sub(r"[^a-z0-9]", "", str(candidate.get("section_number", "")).lower())
+        if source_id and sec_norm:
+            return f"{source_id}|{sec_norm}"
+        return f"{source_id}|{sec_norm}|{candidate.get('text', '')[:80].strip()}"
 
     def _fuse_rankings(self, rankings: List[List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
         merged: Dict[str, Dict[str, Any]] = {}
         for ranking in rankings:
             for rank, candidate in enumerate(ranking, start=1):
                 key = self._candidate_key(candidate)
-                current = merged.setdefault(key, {**candidate, "fused_score": 0.0})
+                if key not in merged:
+                    merged[key] = {**candidate, "fused_score": 0.0}
+                current = merged[key]
                 current["fused_score"] += 1.0 / (60 + rank)
                 current["authority_level"] = max(
                     current.get("authority_level", 1), candidate.get("authority_level", 1)
                 )
+                if candidate.get("support_score", 0.0) > current.get("support_score", 0.0):
+                    current["support_score"] = candidate["support_score"]
         return list(merged.values())
 
     async def search(
