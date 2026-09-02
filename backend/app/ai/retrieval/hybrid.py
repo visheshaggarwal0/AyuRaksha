@@ -1,6 +1,6 @@
 import logging
 from typing import List, Dict, Any, Optional
-from app.engines.vector_store import NeonPgVectorStore
+from app.engines.vector_store import NeonPgVectorStore, generate_embedding
 from app.corpus.chunker import LegalDocumentChunker
 from app.ai.retrieval.graph import GraphRetriever
 from app.ai.retrieval.reranker import LegalAuthorityReranker
@@ -35,35 +35,44 @@ class HybridRetriever:
         dense_query = plan.get("dense_query", query)
 
         raw_candidates: List[Dict[str, Any]] = []
+        retrieval_status = {"dense": False, "lexical": False, "fallback": False}
 
         # 1. Dense Vector Search (pgvector)
         try:
+            dense_vector = generate_embedding(dense_query)
             dense_results = await self.vector_store.search(
-                query=dense_query,
+                query_vector=dense_vector,
                 jurisdiction=jurisdiction,
                 limit=plan.get("max_candidates", 10),
                 domain_filter=domain_filter
             )
             raw_candidates.extend(dense_results)
+            retrieval_status["dense"] = True
         except Exception as e:
-            logger.debug(f"Vector store search bypassed: {e}")
+            logger.warning(f"Vector store search failed: {e}")
+            retrieval_status["dense"] = False
 
         # 2. Sparse Lexical Search (Postgres tsvector)
         try:
             sparse_results = await self.vector_store.search_lexical(
-                query=reformulated_query,
+                query_text=reformulated_query,
                 jurisdiction=jurisdiction,
                 limit=plan.get("max_candidates", 10),
                 domain_filter=domain_filter
             )
             raw_candidates.extend(sparse_results)
+            retrieval_status["lexical"] = True
         except Exception as e:
-            logger.debug(f"Lexical store search bypassed: {e}")
+            logger.warning(f"Lexical store search failed: {e}")
+            retrieval_status["lexical"] = False
 
         # 3. Local In-Memory Fallback if Postgres returned few results
         if len(raw_candidates) < 3:
             local_results = self._local_search(reformulated_query, jurisdiction, domain_filter)
             raw_candidates.extend(local_results)
+            retrieval_status["fallback"] = True
+        else:
+            retrieval_status["fallback"] = False
 
         # 4. Deduplicate Candidates by key
         deduped = {}
@@ -72,6 +81,10 @@ class HybridRetriever:
             if key not in deduped or c.get("support_score", 0) > deduped[key].get("support_score", 0):
                 deduped[key] = c
         candidates = list(deduped.values())
+
+        # Attach retrieval status to first candidate for pipeline access
+        if candidates:
+            candidates[0]["retrieval_status"] = retrieval_status
 
         # 5. Knowledge Graph Expansion
         if plan.get("enable_graph_expansion", True):
@@ -90,11 +103,18 @@ class HybridRetriever:
         if not terms:
             return []
 
+        if isinstance(domain_filter, str):
+            allowed_domains = {domain_filter}
+        elif isinstance(domain_filter, (list, tuple, set)):
+            allowed_domains = set(domain_filter)
+        else:
+            allowed_domains = None
+
         candidates = []
         for chunk in self._get_local_chunks():
             if jurisdiction != "CROSS_BORDER" and chunk.get("jurisdiction") != jurisdiction:
                 continue
-            if domain_filter and chunk.get("domain") != domain_filter:
+            if allowed_domains and chunk.get("domain") not in allowed_domains:
                 continue
 
             target = chunk.get("text", "").lower()

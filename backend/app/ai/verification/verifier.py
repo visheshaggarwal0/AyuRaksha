@@ -24,8 +24,24 @@ class SentenceClaimVerifier:
                 "status": "UNVERIFIED"
             }
 
-        # 1. Decompose into sentences
-        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", answer_text) if len(s.strip()) > 15]
+        # 1. Decompose into sentences, keeping citation markers attached to the
+        #    sentence they follow (a marker may trail the sentence-ending period).
+        sentences = []
+        for part in re.split(r"(?<=[.!?])\s+", answer_text):
+            part = part.strip()
+            if not part:
+                continue
+            # Reattach a leading citation marker (e.g. "[2]") to the prior sentence
+            if part.startswith("[") and sentences:
+                leading = re.match(r"^(\[\d+\])", part).group(1)
+                sentences[-1] = sentences[-1] + " " + leading
+                rest = part[len(leading):].strip()
+                if rest:
+                    sentences.append(rest)
+            else:
+                sentences.append(part)
+
+        sentences = [s for s in sentences if len(s) > 15]
 
         verified_claims = []
         unsupported_claims = []

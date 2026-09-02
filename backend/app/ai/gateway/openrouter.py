@@ -33,27 +33,38 @@ class OpenRouterProvider(BaseLLMProvider):
             "X-Title": "AyuRaksha Legal Navigator",
             "Content-Type": "application/json"
         }
-        payload: Dict[str, Any] = {
-            "model": self.model_name,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens
-        }
-        if json_mode:
-            payload["response_format"] = {"type": "json_object"}
+        candidate_models = list(dict.fromkeys([
+            self.model_name,
+            "google/gemini-2.5-flash",
+            "google/gemini-3.5-flash",
+            "meta-llama/llama-3.3-70b-instruct",
+            "google/gemma-4-31b-it:free"
+        ]))
 
-        try:
-            async with httpx.AsyncClient(timeout=25.0) as client:
-                url = f"{self.base_url}/chat/completions"
-                resp = await client.post(url, headers=headers, json=payload)
-                if resp.status_code == 200:
-                    data = resp.json()
-                    content = data["choices"][0]["message"]["content"]
-                    if content and len(content.strip()) > 5:
-                        return content.strip()
-                else:
-                    logger.warning(f"OpenRouter returned {resp.status_code}: {resp.text[:200]}")
-        except Exception as e:
-            logger.warning(f"OpenRouter call error: {e}")
+        for mod in candidate_models:
+            payload: Dict[str, Any] = {
+                "model": mod,
+                "messages": messages,
+                "temperature": temperature,
+                "max_tokens": max_tokens
+            }
+            if json_mode:
+                payload["response_format"] = {"type": "json_object"}
+
+            try:
+                async with httpx.AsyncClient(timeout=25.0) as client:
+                    url = f"{self.base_url}/chat/completions"
+                    resp = await client.post(url, headers=headers, json=payload)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        content = data["choices"][0]["message"]["content"]
+                        if content and len(content.strip()) > 5:
+                            return content.strip()
+                    elif resp.status_code == 404:
+                        continue
+                    else:
+                        logger.warning(f"OpenRouter ({mod}) returned {resp.status_code}: {resp.text[:200]}")
+            except Exception as e:
+                logger.warning(f"OpenRouter ({mod}) call error: {e}")
 
         return None

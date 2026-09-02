@@ -124,8 +124,7 @@ CREATE TABLE patent_forms (
 
 ## 3. Knowledge Graph Engine & Relational Topology
 
-In Ayurvedic regulatory affairs, legal determination is inherently multi-hop:
-$$\text{Botanical} \xrightarrow{\text{Codified in}} \text{Classical Text} \xrightarrow{\text{Triggers Bar}} \text{Patents Act § 3(p)} \xrightarrow{\text{Enforced by}} \text{Form 7A Pre-Grant Opposition}$$
+> **Botanical** → *(Codified in)* → **Classical Text** → *(Triggers Bar)* → **Patents Act § 3(p)** → *(Enforced by)* → **Form 7A Pre-Grant Opposition**
 
 ### Node Taxonomy
 - 🌿 **Medicinal Biological Resources** (*Withania somnifera*, *Curcuma longa*, *Bacopa monnieri*, *Tinospora cordifolia*, *Picrorhiza kurroa*)

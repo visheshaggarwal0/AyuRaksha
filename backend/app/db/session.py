@@ -28,15 +28,20 @@ try:
     # Neon requires TLS. The default context validates both the certificate and host.
     ssl_context = ssl.create_default_context()
 
+    import sys
+    from sqlalchemy.pool import NullPool
+
+    is_testing = "pytest" in sys.modules or bool(os.environ.get("PYTEST_CURRENT_TEST"))
+    pool_kwargs = {"poolclass": NullPool} if is_testing else {"pool_pre_ping": True, "pool_recycle": 300}
+
     engine = create_async_engine(
         db_url,
         echo=False,
-        pool_pre_ping=True,
-        pool_recycle=300,
         connect_args={
             "ssl": ssl_context,
             "server_settings": {"application_name": "AyuRaksha_Backend"}
-        }
+        },
+        **pool_kwargs
     )
     AsyncSessionLocal = async_sessionmaker(
         bind=engine,

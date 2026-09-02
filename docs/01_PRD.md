@@ -21,7 +21,7 @@ Innovators, researchers, startups, MSMEs, and Ayurvedic practitioners (Vaidyas) 
 
 **AyuRaksha** is an AI-powered, citation-grounded regulatory and IP copilot that operationalizes the journey:
 
-$$\textbf{Ask} \longrightarrow \textbf{Classify} \longrightarrow \textbf{Research} \longrightarrow \textbf{Verify} \longrightarrow \textbf{Act}$$
+> **Ask → Classify → Research → Verify → Act**
 
 It replaces fragmented legal research and generic AI hallucinations with **instant, verified statutory guidance backed by Official Gazette checksums, interactive knowledge graphs, and exportable compliance dossiers**.
 
@@ -43,7 +43,7 @@ It replaces fragmented legal research and generic AI hallucinations with **insta
 
 ### F1: Natural Language Regulatory Copilot
 - Conversational chat powered by **Google Gemini 2.5 Flash** with low-latency Server-Sent Events (SSE) streaming (~500ms TTFT).
-- Real-time stage visibility: `TRI_RETRIEVAL` $\to$ `RERANKING` $\to$ `GENERATION` $\to$ `CITATION_PROVENANCE`.
+- Real-time stage visibility: `TRI_RETRIEVAL` → `RERANKING` → `GENERATION` → `CITATION_PROVENANCE`.
 - Mandatory citation entailment verification ensuring zero ungrounded legal claims.
 - High-contrast, dark-glass Gazette modal providing direct links to `indiacode.nic.in` and cryptographic hash proofs.
 
@@ -82,10 +82,10 @@ It replaces fragmented legal research and generic AI hallucinations with **insta
 
 | Metric | Target Threshold | Actual Performance | Status |
 | :--- | :---: | :---: | :---: |
-| **Response Latency (TTFT)** | $< 1.5\text{s}$ | **~500ms** (Gemini 2.5 Flash via AI Studio) | **EXCEEDED** |
-| **Statutory Grounding Rate** | $\ge 90\%$ | **94.2%** | **PASSED** |
-| **Citation Precision** | $\ge 95\%$ | **97.1%** | **PASSED** |
-| **Supported Claim Rate** | $\ge 90\%$ | **93.8%** | **PASSED** |
-| **Zero Legal Hallucination** | $100\%$ | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
-| **Procedural Form Match** | $\ge 95\%$ | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
+| **Response Latency (TTFT)** | < 1.50s | **~500ms** (Gemini 2.5 Flash via AI Studio) | **EXCEEDED** |
+| **Statutory Grounding Rate** | ≥ 90.0% | **94.2%** | **PASSED** |
+| **Citation Precision** | ≥ 95.0% | **97.1%** | **PASSED** |
+| **Supported Claim Rate** | ≥ 90.0% | **93.8%** | **PASSED** |
+| **Zero Legal Hallucination** | 100.0% | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
+| **Procedural Form Match** | ≥ 95.0% | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
 | **Language Support** | Multilingual | English, Hindi (हिन्दी), Sanskrit (संस्कृतम्) | **PASSED** |

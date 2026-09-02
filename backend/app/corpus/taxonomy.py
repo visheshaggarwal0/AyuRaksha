@@ -6,6 +6,158 @@ from typing import List, Dict, Any, Optional
 
 logger = logging.getLogger("AyuRaksha.Taxonomy")
 
+# ---------------------------------------------------------------------------
+# Curated botanical enrichment: common English / vernacular aliases for
+# high-value Ayurvedic medicinal plants. Sourced from authoritative references
+# (Ministry of Ayush E-Charak, National Medicinal Plants Board, WHO/API):
+#   * https://echarak.ayush.gov.in/knowledge_resources  (Medicinal Plants List)
+#   * https://www.nmpb.nic.in/medicinal_list
+#   * Ayurvedic Pharmacopoeia of India (single botanical drugs)
+# The base plants.csv (TKDL) stores canonical Sanskrit/scientific names; many
+# queries refer to these species by common English names (e.g. "ashwagandha",
+# "giloy", "amla") that are not present as lookup keys. This alias map bridges
+# that gap so text resolution, entity extraction, and dossier generation can
+# map colloquial names to their scientific binomial.
+# ---------------------------------------------------------------------------
+BOTANICAL_ALIASES = {
+    "Withania somnifera": [
+        "ashwagandha", "ashvagandha", "winter cherry", "wintercherry",
+        "indian ginseng", "asgandh", "aswagandha",
+    ],
+    "Azadirachta indica": [
+        "neem", "nimba", "indian lilac", "margosa tree", "nim tree",
+    ],
+    "Ocimum sanctum": [
+        "tulsi", "tulasi", "tulshi", "holy basil", "sacred basil", "krishna tulsi",
+    ],
+    "Ocimum tenuiflorum": [
+        "tulsi", "tulasi", "holy basil", "sacred basil",
+    ],
+    "Tinospora cordifolia": [
+        "giloy", "guduchi", "giloya", "amrita", "heart-leaved moonseed",
+    ],
+    "Phyllanthus emblica": [
+        "amla", "amalaki", "indian gooseberry", "emblic myrobalan",
+    ],
+    "Emblica officinalis": [
+        "amla", "amalaki", "indian gooseberry", "emblic myrobalan",
+    ],
+    "Bacopa monnieri": [
+        "brahmi", "water hyssop", "indian pennywort",
+    ],
+    "Centella asiatica": [
+        "brahmi", "gotu kola", "indian pennywort", "mandukaparni",
+    ],
+    "Asparagus racemosus": [
+        "shatavari", "shatamuli", "hundred roots", "shatawari",
+    ],
+    "Saraca asoca": [
+        "ashoka", "sita ashoka",
+    ],
+    "Terminalia bellirica": [
+        "bibhitaki", "beleric", "baheda",
+    ],
+    "Terminalia chebula": [
+        "haritaki", "harada", "chebulic myrobalan",
+    ],
+    "Terminalia arjuna": [
+        "arjuna", "arjun tree",
+    ],
+    "Curcuma longa": [
+        "turmeric", "haldi", "haridra",
+    ],
+    "Zingiber officinale": [
+        "ginger", "adrak", "shunti", "shunthi",
+    ],
+    "Piper longum": [
+        "pippali", "long pepper", "pipali",
+    ],
+    "Piper nigrum": [
+        "black pepper", "maricha", "marich",
+    ],
+    "Glycyrrhiza glabra": [
+        "licorice", "liquorice", "yashtimadhu", "mulethi",
+    ],
+    "Commiphora wightii": [
+        "guggul", "guggulu", "indian bdellium",
+    ],
+    "Asparagus adscendens": [
+        "safed musli", "shweta musli",
+    ],
+    "Mucuna pruriens": [
+        "kapikachhu", "cowhage", "velvet bean", "kaunch",
+    ],
+    "Sida cordifolia": [
+        "bala", "country mallow",
+    ],
+    "Boerhavia diffusa": [
+        "punarnava", "spreading hogweed",
+    ],
+    "Tribulus terrestris": [
+        "gokshura", "puncture vine", "land caltrops",
+    ],
+    "Tectona grandis": [
+        "teak", "sagwan",
+    ],
+    "Santalum album": [
+        "sandalwood", "chandana", "chandan",
+    ],
+    "Pterocarpus santalinus": [
+        "red sandalwood", "rakta chandana", "raktachandan",
+    ],
+    "Aquilaria malaccensis": [
+        "agarwood", "eaglewood", "agar", "aloewood", "agaru",
+    ],
+    "Picrorhiza kurroa": [
+        "kutki", "katuki", "picrorhiza", "himalayan kutki",
+    ],
+    "Berberis aristata": [
+        "daruharidra", "indian barberry", "tree turmeric",
+    ],
+    "Aegle marmelos": [
+        "bael", "bilva", "bel fruit", "bengal quince",
+    ],
+    "Elettaria cardamomum": [
+        "cardamom", "elaichi", "ela",
+    ],
+    "Myristica fragrans": [
+        "nutmeg", "jaiphal", "jati",
+    ],
+    "Cinnamomum verum": [
+        "cinnamon", "dalchini", "tvak",
+    ],
+    "Foeniculum vulgare": [
+        "fennel", "saunf", "mishreya",
+    ],
+    "Coriandrum sativum": [
+        "coriander", "dhaniya", "dhanyaka",
+    ],
+    "Allium sativum": [
+        "garlic", "lasuna", "lassan",
+    ],
+    "Vitis vinifera": [
+        "grapes", "draksha", "drakh",
+    ],
+    "Punica granatum": [
+        "pomegranate", "dadima", "anar",
+    ],
+    "Sesamum indicum": [
+        "sesame", "til", "tila",
+    ],
+    "Anacyclus pyrethrum": [
+        "akarkara", "pellitory",
+    ],
+    "Withania coagulans": [
+        "paneer dodi", "indian rennet",
+    ],
+    "Hemidesmus indicus": [
+        "anantmool", "sarsaparilla", "anantamula",
+    ],
+    "Nigella sativa": [
+        "black cumin", "kalonji", "black seed", "upakunchika",
+    ],
+}
+
 class TKDLTaxonomyEngine:
     """
     In-memory indexing and resolution engine for TKDL and Ayurvedic corpus CSVs:
@@ -69,16 +221,51 @@ class TKDLTaxonomyEngine:
                 "siddha_name": plant.get("siddha_name", "")
             }
 
-            # Map keys in lowercase
-            if sans:
-                self._botanical_lookup[sans.lower()] = entry
-            if sci:
-                self._botanical_lookup[sci.lower()] = entry
-            if common:
-                for sub in common.split(","):
-                    sub_clean = sub.strip().lower()
-                    if len(sub_clean) >= 3:
-                        self._botanical_lookup[sub_clean] = entry
+            # Map keys in lowercase (allow 3+ char vernaculars like "neem"/"til").
+            # Scientific names are kept whole (a "/" indicates an ambiguous multi-taxon
+            # conversion string and must not split into spurious single-genus keys).
+            def _key_values(value: str):
+                if not value:
+                    return []
+                if value == sci:
+                    return [value.strip().lower()]
+                return [sub.strip().lower() for sub in re.split(r"[,/&]+", value) if len(sub.strip()) >= 3]
+
+            for value in (sci, sans, common):
+                for sub in _key_values(value or ""):
+                    if len(sub) >= 3:
+                        self._botanical_lookup.setdefault(sub, entry)
+
+        # Apply curated alias map so common English names resolve to canonical species
+        for sci_name, aliases in BOTANICAL_ALIASES.items():
+            canonical = self._botanical_lookup.get(sci_name.lower())
+            if canonical is None:
+                # Prefer an explicit binomial match (skip combined / alternative taxon strings)
+                sci_lower = sci_name.lower()
+                genus = sci_lower.split(" ")[0]
+                candidates = [
+                    entry for entry in self._botanical_lookup.values()
+                    if entry.get("scientific_name")
+                    and entry["scientific_name"].lower().startswith(genus)
+                ]
+                candidates.sort(key=lambda e: (
+                    1 if "/" in e["scientific_name"] else 0,  # prefer single-taxon rows
+                    0 if sci_lower in e["scientific_name"].lower() else 1,
+                ))
+                canonical = candidates[0] if candidates else None
+            if canonical is None:
+                canonical = {
+                    "entity_id": "ENRICH",
+                    "scientific_name": sci_name,
+                    "sanskrit_name": "",
+                    "common_name": aliases[0].title() if aliases else sci_name,
+                    "unani_name": "",
+                    "siddha_name": ""
+                }
+            for alias in aliases:
+                alias = alias.strip().lower()
+                if len(alias) >= 3:
+                    self._botanical_lookup.setdefault(alias, canonical)
 
         # Also map unified entities
         for ent in self._entities:
@@ -115,21 +302,58 @@ class TKDLTaxonomyEngine:
 
         # Check known lookup terms
         for term, record in self._botanical_lookup.items():
-            if len(term) < 4:
+            if len(term) < 3:
                 continue
             # Regex boundary match
             if re.search(r'\b' + re.escape(term) + r'\b', text_lower):
                 eid = record.get("entity_id") or record.get("botanical_name") or term
                 if eid not in seen_ids:
                     seen_ids.add(eid)
+                    sci = record.get("scientific_name") or record.get("botanical_name", "")
                     matched.append({
                         "matched_term": term,
-                        "botanical_name": record.get("scientific_name") or record.get("botanical_name", ""),
+                        "scientific_name": sci,
+                        "botanical_name": sci,
                         "sanskrit_name": record.get("sanskrit_name", ""),
                         "common_name": record.get("common_name", ""),
+                        "unani_name": record.get("unani_name", ""),
+                        "siddha_name": record.get("siddha_name", ""),
                         "details": record
                     })
         return matched
+
+    def resolve_plant(self, name: str) -> Optional[Dict[str, Any]]:
+        """
+        Resolves a plant by common, Sanskrit, Unani, or scientific name and returns
+        a normalized botanical record, or ``None`` if it cannot be identified.
+        Used by the compliance dossier generator to enrich ingredient provenance.
+        """
+        if not name:
+            return None
+        key = name.strip().lower()
+        record = self._botanical_lookup.get(key)
+        if record is None:
+            # Fall back to a partial match on the scientific binomial (first genus word)
+            matches = self.search_plants(name, limit=1)
+            if matches:
+                first = matches[0]
+                return {
+                    "scientific_name": first.get("scientific_name", ""),
+                    "sanskrit_name": first.get("sanskrit_name", ""),
+                    "common_name": first.get("common_name", ""),
+                    "unani_name": first.get("unani_name", ""),
+                    "siddha_name": first.get("siddha_name", ""),
+                    "matched_term": key
+                }
+            return None
+        return {
+            "scientific_name": record.get("scientific_name") or record.get("botanical_name", ""),
+            "sanskrit_name": record.get("sanskrit_name", ""),
+            "common_name": record.get("common_name", ""),
+            "unani_name": record.get("unani_name", ""),
+            "siddha_name": record.get("siddha_name", ""),
+            "matched_term": key
+        }
 
     def is_classical_text(self, text_name: str) -> bool:
         """

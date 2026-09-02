@@ -24,6 +24,7 @@ class Citation(BaseModel):
     official_url: Optional[str] = None
     support_score: float = Field(default=1.0, ge=0.0, le=1.0)
     verbatim_quote: str
+    document_sha256: Optional[str] = None
 
 class ClaimVerification(BaseModel):
     claim: str
@@ -85,6 +86,9 @@ class ABSAssessmentResponse(BaseModel):
     governing_statute: str
     applicable_authority: str # NBA or SBB
     approval_type: str # Prior Intimation (Sec 7) or Prior Approval (Sec 3)
+    risk_level: str  # e.g. HIGH_COMPLIANCE_MANDATE | STANDARD_DOMESTIC_COMPLIANCE
+    benefit_sharing_applicable: bool = True
+    statutory_citations: List[Citation] = Field(default_factory=list)
     mandatory_next_steps: List[str] = []
 
 

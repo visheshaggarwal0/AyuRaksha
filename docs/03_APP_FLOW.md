@@ -60,23 +60,23 @@ AyuRaksha Application Shell
    - Direct connected neighbors (*Charaka Samhita*, *Bhaishajya Ratnavali*, *BDA § 6*) light up; unrelated nodes smoothly dim to 15% opacity.
    - Right inspector drawer slides open displaying API Vol. I references, traditional rasayana attributes, and legal substance.
    - User clicks `CODIFIED_IN → Charaka Samhita` to traverse the statutory path to First Schedule recognition under DCA Section 3(a).
-5. **Handoff to Copilot**: User clicks **"Ask Copilot about this Node"** $\to$ transitions automatically to Chat Copilot with pre-filled relational prompt.
+5. **Handoff to Copilot**: User clicks **"Ask Copilot about this Node"** → transitions automatically to Chat Copilot with pre-filled relational prompt.
 
 ---
 
 ### Journey 3: Product Classification Decision Tree
 1. **Start Wizard**: User selects **Product Classifier** from sidebar.
 2. **Question 1 (Textual Alignment)**: Is the formulation described verbatim in one of the 56 books in the First Schedule?
-   - *Yes* $\to$ **Classical ASU Drug** (Form 25D manufacturing license, barred from patents under § 3(p)).
-   - *No* $\to$ Proceed to Question 2.
+   - *Yes* → **Classical ASU Drug** (Form 25D manufacturing license, barred from patents under § 3(p)).
+   - *No* → Proceed to Question 2.
 3. **Question 2 (Modified ASU)**: Does it introduce new excipients, aqueous extracts, or novel dosage forms?
-   - *Yes* $\to$ **Patent or Proprietary ASU Medicine** (Rule 158B, Form 25D + Safety Dossier). Patentable if synergistic under § 3(e).
-   - *No* $\to$ Proceed to Question 3.
+   - *Yes* → **Patent or Proprietary ASU Medicine** (Rule 158B, Form 25D + Safety Dossier). Patentable if synergistic under § 3(e).
+   - *No* → Proceed to Question 3.
 4. **Question 3 (Purified Fractions)**: Is it an isolated, standardized chemical fraction?
-   - *Yes* $\to$ **Phytopharmaceutical Drug** (CDSCO Rule 122E, Form CT-18 + Phase I–IV clinical trials).
-   - *No* $\to$ Proceed to Question 4.
+   - *Yes* → **Phytopharmaceutical Drug** (CDSCO Rule 122E, Form CT-18 + Phase I–IV clinical trials).
+   - *No* → Proceed to Question 4.
 5. **Question 4 (Food & Dietary Supplements)**: Is it marketed as a food supplement or general nutritional support?
-   - *Yes* $\to$ **FSSAI Ayurveda Aahara** (FoSCoS registration, strictly barred from disease claims under Regulation 5).
+   - *Yes* → **FSSAI Ayurveda Aahara** (FoSCoS registration, strictly barred from disease claims under Regulation 5).
 6. **Result Presentation**: Displays comprehensive statutory breakdown, governing forms, and an "Add to Compliance Dossier" action.
 
 ---
@@ -84,11 +84,11 @@ AyuRaksha Application Shell
 ### Journey 4: ABS Compliance & Form Routing
 1. **Start Wizard**: User selects **ABS Compliance Check**.
 2. **Applicant Entity Determination**:
-   - Indian Citizen / Domestic Entity $\to$ Governed by Section 7 (State Biodiversity Board prior intimation).
-   - Non-Indian / Foreign Entity / NRI $\to$ Governed by Section 3 (National Biodiversity Authority prior approval via Form I).
+   - Indian Citizen / Domestic Entity → Governed by Section 7 (State Biodiversity Board prior intimation).
+   - Non-Indian / Foreign Entity / NRI → Governed by Section 3 (National Biodiversity Authority prior approval via Form I).
 3. **Ayush Practitioner Exemption**: Evaluates 2023 Amendment Section 7 exemption for registered Vaidyas/Hakims.
 4. **Commercial Patent Filing**:
-   - If user intends to file an Indian or foreign patent based on Indian biological resources $\to$ Mandatory **NBA Form III** approval under Section 6 before grant of patent.
+   - If user intends to file an Indian or foreign patent based on Indian biological resources → Mandatory **NBA Form III** approval under Section 6 before grant of patent.
 
 ---
 

@@ -227,27 +227,31 @@ class TestPluggableGenerationSwapping:
             async def complete(self, messages, temperature=0.1, max_tokens=1500, response_format=None):
                 return "Mock synthesized legal opinion under Patents Act Section 3(p). [1]"
 
-        custom_provider = MockCustomLLMProvider()
-        generation_module.set_primary_provider(custom_provider)
+        original_providers = list(generation_module._providers)
+        try:
+            custom_provider = MockCustomLLMProvider()
+            generation_module.set_primary_provider(custom_provider)
 
-        test_evidence = [
-            Evidence(
-                evidence_id="EV-1",
-                source_id="IND_PATENTS_ACT_1970",
-                source_title="Patents Act 1970",
-                section_number="3(p)",
-                verbatim_text="Traditional knowledge exclusions",
-                relevance_score=0.95
+            test_evidence = [
+                Evidence(
+                    evidence_id="EV-1",
+                    source_id="IND_PATENTS_ACT_1970",
+                    source_title="Patents Act 1970",
+                    section_number="3(p)",
+                    verbatim_text="Traditional knowledge exclusions",
+                    relevance_score=0.95
+                )
+            ]
+
+            answer = await generation_module.generate_legal_answer(
+                query="Can I patent traditional herbs?",
+                evidence=test_evidence
             )
-        ]
 
-        answer = await generation_module.generate_legal_answer(
-            query="Can I patent traditional herbs?",
-            evidence=test_evidence
-        )
-
-        assert "Mock synthesized legal opinion" in answer
-        assert generation_module.active_provider_name == "MockCustomLLM"
+            assert "Mock synthesized legal opinion" in answer
+            assert generation_module.active_provider_name == "MockCustomLLM"
+        finally:
+            generation_module._providers = original_providers
 
 
 class TestIndependentRetrievers:

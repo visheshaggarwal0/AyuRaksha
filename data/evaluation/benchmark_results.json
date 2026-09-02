@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-09-03T02:18:17.872245",
+  "total_scenarios_tested": 5,
+  "mean_latency_seconds": 17.788,
+  "jurisdiction_leakage_rate_pct": 0.0,
+  "safe_abstention_accuracy_pct": 100.0,
+  "citation_precision_pct": 100.0,
+  "statutory_citation_recall_pct": 33.33,
+  "results": [
+    {
+      "id": "BENCH_001",
+      "domain": "PATENTS",
+      "query": "Can I get a patent in India for an Ayurvedic formulation combining Ashwagandha and Brahmi for memory enhancement?",
+      "jurisdiction": "IN",
+      "latency_s": 37.37,
+      "safe_abstention": false,
+      "expected_abstention": false,
+      "abstention_correct": true,
+      "jlr_clean": true,
+      "citations_retrieved": 7,
+      "valid_citations": 7,
+      "required_citations": [
+        "Section 3(p)",
+        "Section 3(e)"
+      ],
+      "recall_hits": "1/2",
+      "passed": true
+    },
+    {
+      "id": "BENCH_002",
+      "domain": "PATENTS",
+      "query": "Is a novel nano-emulsion extraction process of Withaferin-A from Withania somnifera patentable in India?",
+      "jurisdiction": "IN",
+      "latency_s": 21.979,
+      "safe_abstention": false,
+      "expected_abstention": false,
+      "abstention_correct": true,
+      "jlr_clean": true,
+      "citations_retrieved": 6,
+      "valid_citations": 6,
+      "required_citations": [
+        "Section 2(1)(j)",
+        "Section 2(1)(ja)",
+        "Section 3(d)"
+      ],
+      "recall_hits": "0/3",
+      "passed": true
+    },
+    {
+      "id": "BENCH_003",
+      "domain": "PATENTS",
+      "query": "Can a doctor patent a new method of administering Triphala Kashaya to cure diabetic ulcers?",
+      "jurisdiction": "IN",
+      "latency_s": 11.61,
+      "safe_abstention": false,
+      "expected_abstention": false,
+      "abstention_correct": true,
+      "jlr_clean": true,
+      "citations_retrieved": 5,
+      "valid_citations": 5,
+      "required_citations": [
+        "Section 3(i)"
+      ],
+      "recall_hits": "1/1",
+      "passed": true
+    },
+    {
+      "id": "BENCH_004",
+      "domain": "PATENTS",
+      "query": "Do I need to disclose where I collected the wild Kutki herb from Himachal Pradesh in my patent application?",
+      "jurisdiction": "IN",
+      "latency_s": 6.68,
+      "safe_abstention": false,
+      "expected_abstention": false,
+      "abstention_correct": true,
+      "jlr_clean": true,
+      "citations_retrieved": 5,
+      "valid_citations": 5,
+      "required_citations": [
+        "Section 10(4)",
+        "Section 6"
+      ],
+      "recall_hits": "0/2",
+      "passed": true
+    },
+    {
+      "id": "BENCH_005",
+      "domain": "BIODIVERSITY_ABS",
+      "query": "We are an Indian private limited company in Delhi manufacturing herbal skin cream using Aloe Vera and Neem from UP. Do we need NBA approval or SBB intimation?",
+      "jurisdiction": "IN",
+      "latency_s": 11.299,
+      "safe_abstention": false,
+      "expected_abstention": false,
+      "abstention_correct": true,
+      "jlr_clean": true,
+      "citations_retrieved": 6,
+      "valid_citations": 6,
+      "required_citations": [
+        "Section 7"
+      ],
+      "recall_hits": "1/1",
+      "passed": true
+    }
+  ]
+}

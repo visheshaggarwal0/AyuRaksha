@@ -30,7 +30,15 @@ class JurisdictionIntentRouter:
         if has_intl and has_india:
             jurisdiction = "CROSS_BORDER"
         elif has_intl:
-            jurisdiction = "CROSS_BORDER" if requested_jurisdiction == "IN" else "INT"
+            # International terms present. Honor an explicit CROSS_BORDER request; an
+            # Indian-entity request (IN) implies an Indian-origin export scenario;
+            # otherwise treat the query as an international-regime inquiry.
+            if requested_jurisdiction == "CROSS_BORDER":
+                jurisdiction = "CROSS_BORDER"
+            elif requested_jurisdiction == "IN":
+                jurisdiction = "CROSS_BORDER"
+            else:
+                jurisdiction = "INT"
         elif requested_jurisdiction in ["IN", "INT", "CROSS_BORDER"]:
             jurisdiction = requested_jurisdiction
         else:

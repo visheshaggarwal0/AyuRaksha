@@ -91,4 +91,4 @@ Early testing revealed a 5.5-second response latency caused by two compounding f
    - Level 5: Primary Parliamentary Acts (Patents Act, BDA, DCA).
    - Level 4: Statutory Subordinate Rules & Official Forms (Patents Rules, Rule 158B, Form 7A).
    - Level 3: Authoritative First Schedule Books & TKDL Taxonomic Records.
-3. **Zero-Hallucination Circuit Breakers**: If candidate evidence relevance scores fall below $0.65$ or contradictory statutory provisions exist, the system triggers mandatory abstention and provides a human escalation brief.
+3. **Zero-Hallucination Circuit Breakers**: If candidate evidence relevance scores fall below 0.65 or contradictory statutory provisions exist, the system triggers mandatory abstention and provides a human escalation brief.

@@ -72,11 +72,20 @@ class NeonPgVectorStore(BaseVectorStore):
         ).where(Source.current_status == "ACTIVE")
 
     @staticmethod
-    def _apply_filters(statement, jurisdiction: str, domain_filter: Optional[str]):
+    def _apply_filters(statement, jurisdiction: str, domain_filter):
         if jurisdiction and jurisdiction != "CROSS_BORDER":
             statement = statement.where(DocumentChunk.jurisdiction == jurisdiction)
         if domain_filter:
-            statement = statement.where(DocumentChunk.chunk_metadata["domain"].astext == domain_filter)
+            if isinstance(domain_filter, (list, tuple, set)):
+                domains = list(domain_filter)
+                if len(domains) == 1:
+                    statement = statement.where(DocumentChunk.chunk_metadata["domain"].astext == domains[0])
+                else:
+                    statement = statement.where(
+                        DocumentChunk.chunk_metadata["domain"].astext.in_(domains)
+                    )
+            else:
+                statement = statement.where(DocumentChunk.chunk_metadata["domain"].astext == domain_filter)
         return statement
 
     @staticmethod

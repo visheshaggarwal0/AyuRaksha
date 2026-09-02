@@ -18,10 +18,22 @@ class ModularEvaluationEngine(IEvaluationModule):
         "therein", "thereof", "act", "acts", "schedule", "first"
     }
 
+    def _evidence_support(self, terms: set, evidence: Evidence) -> float:
+        """Computes normalized term-overlap support of a claim's terms against a single evidence."""
+        source_text = (
+            f"{evidence.source_title} {evidence.section_number} "
+            f"{evidence.verbatim_text} {evidence.authority or ''}".lower()
+        )
+        if not terms:
+            return 0.0
+        matches = sum(1 for t in terms if t in source_text)
+        return matches / len(terms)
+
     def verify_claims(
         self,
         answer: str,
-        evidence: List[Evidence]
+        evidence: List[Evidence],
+        support_threshold: float = 0.20
     ) -> Dict[str, Any]:
         if not answer or not evidence:
             return {
@@ -49,28 +61,40 @@ class ModularEvaluationEngine(IEvaluationModule):
                 continue
 
             max_support = 0.0
+            supporting_markers = []
+
             if markers:
+                # Only check evidence that the answer explicitly cited.
                 for m in markers:
                     ev = evidence_lookup.get(m)
                     if ev:
-                        source_text = f"{ev.source_title} {ev.section_number} {ev.verbatim_text}".lower()
-                        matches = sum(1 for t in terms if t in source_text)
-                        score = matches / len(terms)
+                        score = self._evidence_support(terms, ev)
                         if score > max_support:
                             max_support = score
+                        # Any cited evidence with non-trivial overlap is recorded as a supporter.
+                        if score >= support_threshold:
+                            supporting_markers.append(m)
             else:
-                # Scan across all evidence if markers were omitted
-                for ev in evidence[:3]:
-                    source_text = f"{ev.source_title} {ev.section_number} {ev.verbatim_text}".lower()
-                    matches = sum(1 for t in terms if t in source_text)
-                    score = matches / len(terms)
+                # Markers omitted: scan top candidates for proximate grounding.
+                for idx, ev in enumerate(evidence[:3], start=1):
+                    score = self._evidence_support(terms, ev)
                     if score > max_support:
                         max_support = score
+                    if score >= support_threshold:
+                        supporting_markers.append(idx)
 
-            if max_support >= 0.20:
-                verified_claims.append({"claim": sent_clean, "support_score": round(max_support, 3)})
+            is_supported = max_support >= support_threshold
+            claim_record = {
+                "claim": sent_clean,
+                "support_score": round(max_support, 3),
+                "cited_markers": markers,
+                "supporting_markers": sorted(set(supporting_markers)),
+            }
+
+            if is_supported:
+                verified_claims.append(claim_record)
             else:
-                unsupported_claims.append({"claim": sent_clean, "support_score": round(max_support, 3)})
+                unsupported_claims.append(claim_record)
 
         total = len(verified_claims) + len(unsupported_claims)
         grounding_rate = (len(verified_claims) / total) if total > 0 else 1.0

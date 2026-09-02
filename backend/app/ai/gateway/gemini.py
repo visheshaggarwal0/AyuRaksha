@@ -55,12 +55,18 @@ class GeminiProvider(BaseLLMProvider):
         if json_mode:
             payload["generationConfig"]["responseMimeType"] = "application/json"
 
-        models_to_try = [self.model_name, "gemini-2.0-flash", "gemini-1.5-pro"]
+        models_to_try = [self.model_name, "gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
         for mod in models_to_try:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent?key={self.api_key}"
+            req_headers = {"Content-Type": "application/json"}
+            if self.api_key.startswith("AQ.") or self.api_key.startswith("ya29."):
+                req_headers["Authorization"] = f"Bearer {self.api_key}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent"
+            else:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent?key={self.api_key}"
+
             try:
                 async with httpx.AsyncClient(timeout=25.0) as client:
-                    resp = await client.post(url, json=payload, headers={"Content-Type": "application/json"})
+                    resp = await client.post(url, json=payload, headers=req_headers)
                     if resp.status_code == 200:
                         data = resp.json()
                         candidates = data.get("candidates", [])

@@ -60,65 +60,60 @@ class GeminiProvider(ILLMProvider):
         models_to_try = list(dict.fromkeys(models_to_try))
 
         headers = {
-            "Content-Type": "application/json",
-            "x-goog-api-key": self._api_key
+            "Content-Type": "application/json"
         }
 
+        # Query v1beta directly with ?key parameter
+        models_to_try = [
+            "gemini-2.5-flash",
+            "gemini-2.0-flash",
+            "gemini-1.5-flash"
+        ]
+
         for mod in models_to_try:
-            for api_version in ["v1beta", "v1"]:
-                url = f"https://generativelanguage.googleapis.com/{api_version}/models/{mod}:generateContent?key={self._api_key}"
+            if self._api_key.startswith("AQ.") or self._api_key.startswith("ya29."):
+                headers["Authorization"] = f"Bearer {self._api_key}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent"
+            else:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent?key={self._api_key}"
 
-                payload: Dict[str, Any] = {
-                    "contents": contents,
-                    "generationConfig": {
-                        "temperature": temperature,
-                        "maxOutputTokens": max_tokens
-                    }
+            payload: Dict[str, Any] = {
+                "contents": contents,
+                "generationConfig": {
+                    "temperature": temperature,
+                    "maxOutputTokens": max_tokens
                 }
-                if response_format == "json":
-                    payload["generationConfig"]["responseMimeType"] = "application/json"
+            }
+            if response_format == "json":
+                payload["generationConfig"]["responseMimeType"] = "application/json"
 
-                # v1beta supports top-level systemInstruction (camelCase!)
-                if system_instruction:
-                    if api_version == "v1beta":
-                        payload["systemInstruction"] = {
-                            "parts": [{"text": system_instruction.strip()}]
-                        }
+            if system_instruction:
+                payload["systemInstruction"] = {
+                    "parts": [{"text": system_instruction.strip()}]
+                }
+
+            try:
+                async with httpx.AsyncClient(timeout=10.0) as client:
+                    resp = await client.post(url, json=payload, headers=headers)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        candidates = data.get("candidates", [])
+                        if candidates:
+                            parts = candidates[0].get("content", {}).get("parts", [])
+                            if parts:
+                                text = parts[0].get("text", "").strip()
+                                if text:
+                                    logger.info("Successfully received answer from Google Gemini (%s via v1beta)", mod)
+                                    return text
+                    elif resp.status_code in (401, 403, 404):
+                        logger.info("Gemini %s returned %s; checking next model.", mod, resp.status_code)
                     else:
-                        # For v1, prepend system instructions into the first user turn
-                        if contents and contents[0]["parts"]:
-                            original_text = contents[0]["parts"][0].get("text", "")
-                            payload["contents"] = [
-                                {
-                                    "role": "user",
-                                    "parts": [{"text": f"{system_instruction.strip()}\n\n{original_text}"}]
-                                }
-                            ] + contents[1:]
-
-                try:
-                    async with httpx.AsyncClient(timeout=25.0) as client:
-                        resp = await client.post(url, json=payload, headers=headers)
-                        if resp.status_code == 200:
-                            data = resp.json()
-                            candidates = data.get("candidates", [])
-                            if candidates:
-                                parts = candidates[0].get("content", {}).get("parts", [])
-                                if parts:
-                                    text = parts[0].get("text", "").strip()
-                                    if text:
-                                        logger.info("Successfully received answer from Google Gemini (%s via %s)", mod, api_version)
-                                        return text
-                        elif resp.status_code in (403, 404):
-                            logger.info("Gemini returned %s; tripping circuit breaker to eliminate delay.", resp.status_code)
-                            self._circuit_broken = True
-                            return None
-                        else:
-                            logger.warning(
-                                "Gemini %s (%s) returned HTTP %s: %s",
-                                mod, api_version, resp.status_code, resp.text[:200]
-                            )
-                except Exception as e:
-                    logger.debug("Gemini %s (%s) connection error: %s", mod, api_version, e)
+                        logger.warning(
+                            "Gemini %s returned HTTP %s: %s",
+                            mod, resp.status_code, resp.text[:200]
+                        )
+            except Exception as e:
+                logger.debug("Gemini %s connection error: %s", mod, e)
 
         return None
 
@@ -156,10 +151,10 @@ class OpenRouterProvider(ILLMProvider):
         }
         candidate_models = [
             self._model,
-            "google/gemma-2-9b-it:free",
-            "meta-llama/llama-3.3-70b-instruct:free",
-            "mistralai/mistral-7b-instruct:free",
-            "meta-llama/llama-3.1-8b-instruct"
+            "google/gemini-2.5-flash",
+            "google/gemini-2.0-flash-001",
+            "meta-llama/llama-3.3-70b-instruct",
+            "mistralai/mistral-7b-instruct:free"
         ]
         # Deduplicate while preserving order
         candidate_models = list(dict.fromkeys(candidate_models))

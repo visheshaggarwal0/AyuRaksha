@@ -34,13 +34,16 @@ class RetrievalPlanner:
         reformulated_query = " ".join(dict.fromkeys(" ".join(expanded_terms).split()))
 
         # 3. Domain filtering & graph traversal strategy
-        domain_filter = None
+        # Use a set of candidate domains so international treaties (INTELLECTUAL_PROPERTY)
+        # are not excluded when filtering to PATENTS for patentability questions.
+        domain_filters = None
         if intent == "PATENTABILITY_ASSESSMENT":
-            domain_filter = "PATENTS"
+            domain_filters = ["PATENTS", "INTELLECTUAL_PROPERTY", "PATENTS_AND_IP"]
         elif intent == "ABS_ASSESSMENT":
-            domain_filter = "BIODIVERSITY_ABS"
+            domain_filters = ["BIODIVERSITY_ABS"]
         elif intent == "PRODUCT_CLASSIFICATION":
-            domain_filter = "DRUGS_COSMETICS"
+            domain_filters = ["AYUSH_DRUG_REGULATION", "DRUGS_COSMETICS", "FOOD_AYURVEDA_AAHARA"]
+        domain_filter = domain_filters[0] if domain_filters and len(domain_filters) == 1 else domain_filters
 
         # Determine whether to traverse knowledge graph relations
         enable_graph_expansion = intent in ["PATENTABILITY_ASSESSMENT", "ABS_ASSESSMENT", "PRODUCT_CLASSIFICATION"] or entities.get("has_biological_resources", False)

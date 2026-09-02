@@ -93,3 +93,7 @@ logs/
 temp/
 tmp/
 .tempmediaStorage/
+
+# AI & Assistant Tool Artifacts
+.claude/
+.codex/

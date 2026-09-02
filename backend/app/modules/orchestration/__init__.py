@@ -89,15 +89,23 @@ class ModularOrchestrator(IOrchestrationModule):
         claim_audit = evaluation_module.verify_claims(generated_answer, reranked_evidence)
         confidence = evaluation_module.compute_confidence(retrieval_result, claim_audit)
 
-        verified_claims = [
-            ClaimVerificationResult(
-                claim=c["claim"],
-                is_supported=True,
-                confidence_score=c["support_score"],
-                supporting_citations=citations
+        # Build per-claim citations: each claim maps ONLY to the evidence that supports it.
+        verification_records = []
+        for c in claim_audit.get("verified_claims", []):
+            claim_citations = [
+                citation_module.extract_citations_from_evidence(idx, reranked_evidence)
+                for idx in c.get("supporting_markers", [])
+            ]
+            claim_citations = [cit for cit in claim_citations if cit is not None]
+            claim_citations = claim_citations or (citations[:1])
+            verification_records.append(
+                ClaimVerificationResult(
+                    claim=c["claim"],
+                    is_supported=True,
+                    confidence_score=c["support_score"],
+                    supporting_citations=claim_citations
+                )
             )
-            for c in claim_audit.get("verified_claims", [])
-        ]
 
         # 8. Cross-Border Posture Isolation if requested
         cross_border_posture = None
@@ -139,7 +147,7 @@ class ModularOrchestrator(IOrchestrationModule):
                 "Confidence Grade": confidence.level.value
             },
             citations=citations,
-            verified_claims=verified_claims,
+            verified_claims=verification_records,
             cross_border_posture=cross_border_posture,
             next_actions=next_actions,
             confidence=confidence,
@@ -280,15 +288,23 @@ class ModularOrchestrator(IOrchestrationModule):
         claim_audit = evaluation_module.verify_claims(generated_answer, reranked_evidence)
         confidence = evaluation_module.compute_confidence(retrieval_result, claim_audit)
 
-        verified_claims = [
-            ClaimVerificationResult(
-                claim=c["claim"],
-                is_supported=True,
-                confidence_score=c["support_score"],
-                supporting_citations=citations
+        # Build per-claim citations: each claim maps ONLY to the evidence that supports it.
+        verification_records = []
+        for c in claim_audit.get("verified_claims", []):
+            claim_citations = [
+                citation_module.extract_citations_from_evidence(idx, reranked_evidence)
+                for idx in c.get("supporting_markers", [])
+            ]
+            claim_citations = [cit for cit in claim_citations if cit is not None]
+            claim_citations = claim_citations or (citations[:1])
+            verification_records.append(
+                ClaimVerificationResult(
+                    claim=c["claim"],
+                    is_supported=True,
+                    confidence_score=c["support_score"],
+                    supporting_citations=claim_citations
+                )
             )
-            for c in claim_audit.get("verified_claims", [])
-        ]
 
         cross_border_posture = None
         if jurisdiction == "CROSS_BORDER":
@@ -323,7 +339,7 @@ class ModularOrchestrator(IOrchestrationModule):
                 "Confidence Grade": confidence.level.value
             },
             citations=citations,
-            verified_claims=verified_claims,
+            verified_claims=verification_records,
             cross_border_posture=cross_border_posture,
             next_actions=next_actions,
             confidence=confidence,

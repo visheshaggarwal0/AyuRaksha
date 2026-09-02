@@ -14,7 +14,7 @@
 - **ASU Drug Licensing vs Food Boundaries**: Drugs & Cosmetics Act 1940 (Rule 158B) vs FSSAI Ayurveda Aahara Regulations 2022 (Regulation 5 disease claim prohibitions).
 - **Procedural Filing Routing**: Instant guidance on official CGPDTM forms (Form 1, 7A, 18A, 25, 27) and NBA Form I/III.
 
-$$\textbf{Ask} \longrightarrow \textbf{Classify} \longrightarrow \textbf{Research} \longrightarrow \textbf{Verify} \longrightarrow \textbf{Act}$$
+> **Ask → Classify → Research → Verify → Act**
 
 ---
 
@@ -157,12 +157,12 @@ All product specifications, technical architectures, interaction designs, and re
 
 | Evaluation Metric | Target Threshold | AyuRaksha Measured Benchmark | Status |
 | :--- | :---: | :---: | :---: |
-| **Inference Latency (TTFT)** | $< 1.5\text{s}$ | **~500ms** (Gemini 2.5 Flash via AI Studio) | **EXCEEDED** |
-| **Statutory Grounding Rate** | $\ge 90\%$ | **94.2%** | **PASSED** |
-| **Citation Precision** | $\ge 95\%$ | **97.1%** | **PASSED** |
-| **Supported Claim Rate** | $\ge 90\%$ | **93.8%** | **PASSED** |
-| **Zero Legal Hallucination** | $100\%$ | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
-| **Procedural Form Resolution**| $\ge 95\%$ | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
+| **Inference Latency (TTFT)** | < 1.50s | **~500ms** (Gemini 2.5 Flash via AI Studio) | **EXCEEDED** |
+| **Statutory Grounding Rate** | ≥ 90.0% | **94.2%** | **PASSED** |
+| **Citation Precision** | ≥ 95.0% | **97.1%** | **PASSED** |
+| **Supported Claim Rate** | ≥ 90.0% | **93.8%** | **PASSED** |
+| **Zero Legal Hallucination** | 100.0% | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
+| **Procedural Form Resolution**| ≥ 95.0% | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
 
 ---
 

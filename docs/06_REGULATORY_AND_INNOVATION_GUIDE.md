@@ -73,9 +73,9 @@ All 37 official Patent Forms from `data/IPINDIA/patent_forms.csv` are indexed in
 
 | Evaluation Parameter | SIH Target Threshold | AyuRaksha Measured Benchmark | Status |
 | :--- | :---: | :---: | :---: |
-| **Inference Latency (TTFT)** | $< 1.5\text{s}$ | **~500ms** (Gemini 2.5 Flash) | **EXCEEDED** |
-| **Statutory Grounding Rate** | $\ge 90\%$ | **94.2%** | **PASSED** |
-| **Citation Precision** | $\ge 95\%$ | **97.1%** | **PASSED** |
-| **Supported Claim Rate** | $\ge 90\%$ | **93.8%** | **PASSED** |
-| **Zero Legal Hallucination** | $100\%$ | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
-| **Procedural Form Match** | $\ge 95\%$ | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
+| **Inference Latency (TTFT)** | < 1.50s | **~500ms** (Gemini 2.5 Flash) | **EXCEEDED** |
+| **Statutory Grounding Rate** | ≥ 90.0% | **94.2%** | **PASSED** |
+| **Citation Precision** | ≥ 95.0% | **97.1%** | **PASSED** |
+| **Supported Claim Rate** | ≥ 90.0% | **93.8%** | **PASSED** |
+| **Zero Legal Hallucination** | 100.0% | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
+| **Procedural Form Match** | ≥ 95.0% | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
