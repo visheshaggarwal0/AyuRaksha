@@ -1,6 +1,16 @@
 import asyncio
 import uuid
+import sys
+from pathlib import Path
 from datetime import datetime
+
+ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "backend"))
+
+from dotenv import load_dotenv
+load_dotenv(ROOT / ".env")
+
 from sqlalchemy import select
 from app.db.session import AsyncSessionLocal
 from app.db.models import Source, SourceVersion, SourceSection, DocumentChunk, KnowledgeRelation
@@ -115,8 +125,8 @@ async def ingest_corpus():
                 await session.flush()
                 total_sections_inserted += 1
 
-                # Generate 1536-dim vector
-                embedding_vec = generate_deterministic_embedding(full_text, dim=1536)
+                # Generate 384-dim semantic vector
+                embedding_vec = generate_deterministic_embedding(full_text)
 
                 # Create document chunk
                 chunk = DocumentChunk(

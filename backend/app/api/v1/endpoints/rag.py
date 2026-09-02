@@ -38,29 +38,34 @@ async def query_rag(request: RAGQuery, db: AsyncSession = Depends(get_db)):
         # 1. Generate query embedding
         query_embedding = generate_deterministic_embedding(request.query)
         
-        # 2. Vector similarity search using pgvector (L2 distance: <->)
-        # We query DocumentChunk and join with SourceSection and Source for citation metadata
+        # 2. Vector similarity search using pgvector (Cosine distance: <=>)
+        # We query DocumentChunk and compute cosine similarity
+        distance = DocumentChunk.embedding.cosine_distance(query_embedding).label("distance")
         stmt = (
-            select(DocumentChunk)
+            select(DocumentChunk, distance)
             .filter(DocumentChunk.jurisdiction == request.jurisdiction)
-            .order_by(DocumentChunk.embedding.l2_distance(query_embedding))
+            .filter(DocumentChunk.embedding.is_not(None))
+            .order_by(distance)
             .limit(request.top_k)
         )
         
         result = await db.execute(stmt)
-        chunks = result.scalars().all()
+        rows = result.all()
         
         # 3. Format citations
         citations = []
-        for i, chunk in enumerate(chunks):
-            # In a real app, we'd eager load the relations. Here we simulate the metadata
+        for row in rows:
+            chunk = row[0]
+            dist = float(row[1]) if row[1] is not None else 1.0
+            similarity = round(max(0.0, min(1.0 - dist, 1.0)), 4)
+            metadata = chunk.chunk_metadata or {}
             citations.append(
                 CitationModel(
                     id=str(chunk.id),
                     text=chunk.text,
-                    source_title=chunk.chunk_metadata.get("source_title", "Unknown Source"),
-                    section_number=chunk.chunk_metadata.get("section_number", "Unknown Section"),
-                    similarity=0.95 - (i * 0.05) # Simulated similarity score since we didn't fetch the exact distance in the ORM
+                    source_title=metadata.get("source_title", "Unknown Source"),
+                    section_number=metadata.get("section_number", "Unknown Section"),
+                    similarity=similarity
                 )
             )
             

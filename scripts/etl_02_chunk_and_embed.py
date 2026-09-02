@@ -137,7 +137,7 @@ async def process_and_embed():
 
             # 5. Embedding & Insertion
             for c_idx, chunk_text_content in enumerate(chunks):
-                # Generate deterministic offline embedding (1536 dim)
+                # Generate 384-dim semantic embedding via all-MiniLM-L6-v2
                 vector = generate_deterministic_embedding(chunk_text_content)
                 
                 db_chunk = DocumentChunk(

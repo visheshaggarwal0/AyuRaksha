@@ -43,8 +43,8 @@ try:
     )
 except Exception as e:
     import logging
-    logging.error(f"Failed to initialize database engine: {e}")
-    raise e
+    logging.warning(f"Database engine offline or not configured: {e}")
+    engine = None
     AsyncSessionLocal = None
 
 class MockSession:
