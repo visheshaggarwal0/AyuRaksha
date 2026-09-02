@@ -16,17 +16,17 @@ class LegalDocumentChunker:
         return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
     def parse_manifest(self) -> List[Dict[str, Any]]:
-        # Check upgraded manifest first
-        manifest_v2 = self.corpus_root / "manifest" / "sources_manifest.json"
-        if manifest_v2.exists():
-            with open(manifest_v2, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            return data.get("sources", [])
-
-        # Fallback to base manifest
+        # Primary production manifest
         manifest_v1 = self.corpus_root / "corpus_manifest.json"
         if manifest_v1.exists():
             with open(manifest_v1, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data.get("sources", [])
+
+        # Fallback manifest
+        manifest_v2 = self.corpus_root / "manifest" / "sources_manifest.json"
+        if manifest_v2.exists():
+            with open(manifest_v2, "r", encoding="utf-8") as f:
                 data = json.load(f)
             return data.get("sources", [])
 
