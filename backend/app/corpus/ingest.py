@@ -177,11 +177,145 @@ async def ingest_corpus():
 
         await session.commit()
 
+        # Ingest and embed CSV taxonomy records
+        tax_sections, tax_chunks = await ingest_taxonomy_csvs(session, chunker)
+        total_sections_inserted += tax_sections
+        total_chunks_inserted += tax_chunks
+
     print("=" * 60)
     print(f"[✓] Provenance Ingestion Complete!")
-    print(f"    - Total Statutory Sections: {total_sections_inserted}")
-    print(f"    - Total Indexed Vector Chunks: {total_chunks_inserted}")
+    print(f"    - Total Sections (Statutory + Taxonomy): {total_sections_inserted}")
+    print(f"    - Total Vector Chunks (pgvector): {total_chunks_inserted}")
     print("=" * 60)
+
+async def ingest_taxonomy_csvs(session, chunker: LegalDocumentChunker):
+    print("\n[*] Ingesting and embedding TKDL CSV Taxonomy datasets...")
+    csv_chunks = chunker.extract_chunks_from_csvs()
+    print(f"[*] Found {len(csv_chunks)} total taxonomy chunks from CSVs.")
+
+    chunks_by_source = {}
+    for c in csv_chunks:
+        sid = c["source_id"]
+        chunks_by_source.setdefault(sid, []).append(c)
+
+    taxonomy_sources_meta = {
+        "TKDL_AYURVEDA_BOOKS": {
+            "title": "First Schedule Classical Ayurvedic Texts",
+            "authority": "Drugs & Cosmetics Act, 1940 (First Schedule) / CSIR",
+            "document_type": "CATALOGUE",
+            "authority_level": 4,
+            "url": "https://www.tkdl.res.in/"
+        },
+        "TKDL_MEDICINAL_PLANTS": {
+            "title": "TKDL Medicinal Plants & Botanical Taxonomy",
+            "authority": "Council of Scientific & Industrial Research (CSIR) & Ministry of Ayush",
+            "document_type": "TAXONOMY",
+            "authority_level": 3,
+            "url": "https://www.tkdl.res.in/"
+        },
+        "TKDL_AYURVEDIC_GLOSSARY": {
+            "title": "TKDL Ayurvedic Clinical & Regulatory Glossary",
+            "authority": "CSIR & Ministry of Ayush",
+            "document_type": "GLOSSARY",
+            "authority_level": 3,
+            "url": "https://www.tkdl.res.in/"
+        }
+    }
+
+    total_tax_chunks = 0
+    total_tax_sections = 0
+
+    for sid, chunk_list in chunks_by_source.items():
+        meta = taxonomy_sources_meta.get(sid, {
+            "title": chunk_list[0]["source_title"],
+            "authority": chunk_list[0]["authority"],
+            "document_type": chunk_list[0].get("document_type", "TAXONOMY"),
+            "authority_level": chunk_list[0].get("authority_level", 3),
+            "url": chunk_list[0].get("source_url", "https://www.tkdl.res.in/")
+        })
+
+        stmt = select(Source).where(Source.source_code == sid)
+        res = await session.execute(stmt)
+        source = res.scalars().first()
+        if not source:
+            source = Source(
+                id=uuid.uuid4(),
+                source_code=sid,
+                title=meta["title"],
+                authority=meta["authority"],
+                document_type=meta["document_type"],
+                jurisdiction="IN",
+                authority_level=meta["authority_level"],
+                current_status="ACTIVE",
+                source_url=meta["url"],
+                publication_date=datetime.utcnow()
+            )
+            session.add(source)
+            await session.flush()
+
+        stmt_v = select(SourceVersion).where(
+            SourceVersion.source_id == source.id,
+            SourceVersion.version_label == "1.0"
+        )
+        res_v = await session.execute(stmt_v)
+        version = res_v.scalars().first()
+        if not version:
+            version = SourceVersion(
+                id=uuid.uuid4(),
+                source_id=source.id,
+                version_label="1.0",
+                effective_from=datetime(2024, 1, 1),
+                storage_uri="data/corpus/csv files"
+            )
+            session.add(version)
+            await session.flush()
+
+        print(f" -> Embedding & indexing {len(chunk_list)} entries for {meta['title']}...")
+        for c in chunk_list:
+            sec_num = c["section_number"]
+            heading = c["heading"]
+            raw_text = c["raw_statute"]
+            full_text = c["text"]
+
+            section = SourceSection(
+                id=uuid.uuid4(),
+                source_version_id=version.id,
+                section_number=sec_num,
+                heading=heading,
+                text=raw_text
+            )
+            session.add(section)
+            await session.flush()
+            total_tax_sections += 1
+
+            embedding_vec = generate_deterministic_embedding(full_text)
+
+            chunk = DocumentChunk(
+                id=uuid.uuid4(),
+                section_id=section.id,
+                text=full_text,
+                embedding=embedding_vec,
+                token_count=len(full_text.split()),
+                language="en",
+                jurisdiction="IN",
+                chunk_metadata={
+                    "source_id": sid,
+                    "source_title": meta["title"],
+                    "authority": meta["authority"],
+                    "authority_level": meta["authority_level"],
+                    "domain": c.get("domain", "GENERAL"),
+                    "section_number": sec_num,
+                    "heading": heading,
+                    "source_url": meta["url"],
+                    "topics": c.get("topics", [])
+                }
+            )
+            session.add(chunk)
+            total_tax_chunks += 1
+
+    await session.commit()
+    print(f"[✓] Successfully embedded {total_tax_chunks} taxonomy vector records.")
+    return total_tax_sections, total_tax_chunks
 
 if __name__ == "__main__":
     asyncio.run(ingest_corpus())

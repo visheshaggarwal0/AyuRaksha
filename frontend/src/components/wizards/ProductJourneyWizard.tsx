@@ -21,15 +21,18 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ProductClassificationResponse | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage(null);
     try {
       const res = await api.evaluateClassification(formData);
       setResult(res);
-    } catch (err) {
+    } catch (err: any) {
       console.error('Classification error', err);
+      setErrorMessage(err.response?.data?.detail || 'Failed to evaluate product classification. Please verify connection and retry.');
     } finally {
       setLoading(false);
     }
@@ -37,6 +40,7 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
 
   const handleReset = () => {
     setResult(null);
+    setErrorMessage(null);
   };
 
   return (
@@ -52,6 +56,13 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
           Map your formulation to the Drugs & Cosmetics Act 1940 (First Schedule), Rule 158B, FSSAI Ayurveda Aahara, and Patents Act Section 3(p) statutory exclusions.
         </p>
       </div>
+
+      {errorMessage && (
+        <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs flex items-center justify-between">
+          <span>{errorMessage}</span>
+          <button onClick={() => setErrorMessage(null)} className="font-bold ml-4">✕</button>
+        </div>
+      )}
 
       {!result ? (
         /* Questionnaire Form */

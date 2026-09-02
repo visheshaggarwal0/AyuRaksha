@@ -34,6 +34,7 @@ app.add_middleware(
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 @app.get("/health", tags=["Health"])
+@app.get("/api/v1/health", tags=["Health"])
 async def health_check():
     return {
         "status": "healthy",

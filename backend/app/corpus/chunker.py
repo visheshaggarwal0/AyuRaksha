@@ -164,6 +164,162 @@ class LegalDocumentChunker:
 
         return chunks
 
+    def extract_chunks_from_csvs(self) -> List[Dict[str, Any]]:
+        """
+        Extracts semantic, searchable chunks from TKDL CSV taxonomy datasets:
+        - plants.csv (Botanical taxonomy, vernaculars, BDA biological resource context)
+        - ayurveda_books.csv (First Schedule classical authoritative books)
+        - glossary.csv (Ayurvedic clinical and statutory definitions)
+        - minerals.csv (Rasashastra mineral substances)
+        """
+        import csv
+        chunks = []
+        csv_dir = self.corpus_root / "csv files"
+        if not csv_dir.exists():
+            return chunks
+
+        # 1. Plants (plants.csv)
+        plants_path = csv_dir / "plants.csv"
+        if plants_path.exists():
+            try:
+                with open(plants_path, "r", encoding="utf-8", errors="replace") as f:
+                    for row in csv.DictReader(f):
+                        sci = row.get("scientific_name", "").strip()
+                        sans = row.get("sanskrit_name", "").strip()
+                        common = row.get("common_name", "").strip()
+                        unani = row.get("unani_name", "").strip()
+                        siddha = row.get("siddha_name", "").strip()
+                        eid = row.get("entity_id", "TKDL-E")
+
+                        if not sci and not sans:
+                            continue
+
+                        heading = f"{sci} ({sans})" if sans else sci
+                        combined_text = (
+                            f"[TKDL Botanical Entity: {heading}]\n"
+                            f"Scientific / Botanical Binomial: {sci}\n"
+                            f"Sanskrit Nomenclature: {sans}\n"
+                            f"Common English Vernaculars: {common}\n"
+                            f"Unani / Tibb Synonym: {unani}\n"
+                            f"Siddha Synonym: {siddha}\n"
+                            f"Statutory Relevance: Biological resource originating from India governed by Section 3 and "
+                            f"Section 7 of the Biological Diversity Act, 2002. Commercial utilization requires SBB prior "
+                            f"intimation (for Indian entities) or NBA approval (for foreign entities/exports). Subject to "
+                            f"Section 3(p) prior art assessment when claimed in patent applications."
+                        )
+                        chunks.append({
+                            "source_id": "TKDL_MEDICINAL_PLANTS",
+                            "source_title": "TKDL Medicinal Plants & Botanical Taxonomy",
+                            "authority": "Council of Scientific & Industrial Research (CSIR) & Ministry of Ayush",
+                            "jurisdiction": "IN",
+                            "document_type": "TAXONOMY",
+                            "authority_level": 3,
+                            "domain": "BOTANICAL_TAXONOMY",
+                            "section_number": f"Plant: {sci}",
+                            "heading": heading,
+                            "text": combined_text,
+                            "raw_statute": f"{sci} ({sans}) - Vernaculars: {common}. Regulated biological resource under BDA 2002.",
+                            "source_url": "https://www.tkdl.res.in/",
+                            "source_sha256": self.compute_sha256(combined_text),
+                            "chunk_hash": self.compute_sha256(combined_text),
+                            "topics": ["botanical_taxonomy", "biological_resource", "medicinal_plants"]
+                        })
+            except Exception as e:
+                pass
+
+        # 2. Classical Books (ayurveda_books.csv)
+        books_path = csv_dir / "ayurveda_books.csv"
+        if books_path.exists():
+            try:
+                with open(books_path, "r", encoding="utf-8", errors="replace") as f:
+                    for row in csv.DictReader(f):
+                        title = row.get("title", "").strip()
+                        author = row.get("author", "").strip()
+                        publisher = row.get("publisher", "").strip()
+                        pub_year = row.get("publication_year", "").strip()
+                        edition = row.get("edition", "").strip()
+                        description = row.get("description", "").strip()
+                        tkdl_url = row.get("tkdl_url", "").strip()
+                        bid = row.get("source_text_id", "TKDL-BK")
+
+                        if not title:
+                            continue
+
+                        combined_text = (
+                            f"[First Schedule Classical Ayurvedic Text: {title}]\n"
+                            f"Text Title: {title}\n"
+                            f"Author / Sage: {author or 'Traditional Authority'}\n"
+                            f"Publisher & Edition: {publisher} ({edition}, {pub_year})\n"
+                            f"Details: {description}\n"
+                            f"Statutory Legal Standing: Recognized under the First Schedule of the Drugs and Cosmetics Act, "
+                            f"1940 (Section 3(a)). Formulations prepared strictly in accordance with recipes in this authoritative "
+                            f"text are categorized as Classical (Shastriya) Ayurvedic medicines and are subject to the Section 3(p) "
+                            f"Traditional Knowledge patent bar under the Indian Patents Act, 1970."
+                        )
+                        chunks.append({
+                            "source_id": "TKDL_AYURVEDA_BOOKS",
+                            "source_title": "First Schedule Classical Ayurvedic Texts",
+                            "authority": "Drugs & Cosmetics Act, 1940 (First Schedule) / CSIR",
+                            "jurisdiction": "IN",
+                            "document_type": "CATALOGUE",
+                            "authority_level": 4,
+                            "domain": "CLASSICAL_TEXTS",
+                            "section_number": f"Book: {title}",
+                            "heading": title,
+                            "text": combined_text,
+                            "raw_statute": f"{title} (Author: {author}). Recognized under First Schedule, Drugs & Cosmetics Act 1940.",
+                            "source_url": tkdl_url or "https://www.tkdl.res.in/",
+                            "source_sha256": self.compute_sha256(combined_text),
+                            "chunk_hash": self.compute_sha256(combined_text),
+                            "topics": ["classical_texts", "first_schedule", "shastriya_ayurveda"]
+                        })
+            except Exception as e:
+                pass
+
+        # 3. Glossary Terms (glossary.csv)
+        glossary_path = csv_dir / "glossary.csv"
+        if glossary_path.exists():
+            try:
+                with open(glossary_path, "r", encoding="utf-8", errors="replace") as f:
+                    for row in csv.DictReader(f):
+                        term = row.get("term", "").strip()
+                        category = row.get("category", "").strip()
+                        definition = row.get("definition", "").strip()
+                        gid = row.get("glossary_id", "GLOS")
+
+                        if not term or not definition:
+                            continue
+
+                        combined_text = (
+                            f"[Ayurvedic Concept & Terminology: {term}]\n"
+                            f"Term: {term}\n"
+                            f"Category / Branch: {category}\n"
+                            f"Definition: {definition}\n"
+                            f"Statutory Context: Standardized under Traditional Knowledge Digital Library (TKDL) and "
+                            f"Ayush clinical practice frameworks for therapeutic claims evaluation."
+                        )
+                        chunks.append({
+                            "source_id": "TKDL_AYURVEDIC_GLOSSARY",
+                            "source_title": "TKDL Ayurvedic Clinical & Regulatory Glossary",
+                            "authority": "CSIR & Ministry of Ayush",
+                            "jurisdiction": "IN",
+                            "document_type": "GLOSSARY",
+                            "authority_level": 3,
+                            "domain": "GLOSSARY",
+                            "section_number": f"Term: {term}",
+                            "heading": f"{term} ({category})",
+                            "text": combined_text,
+                            "raw_statute": f"{term} ({category}): {definition}",
+                            "source_url": "https://www.tkdl.res.in/",
+                            "source_sha256": self.compute_sha256(combined_text),
+                            "chunk_hash": self.compute_sha256(combined_text),
+                            "topics": ["ayurvedic_glossary", "clinical_terminology", category.lower()]
+                        })
+            except Exception as e:
+                pass
+
+        return chunks
+
     def process_all_sources(self) -> List[Dict[str, Any]]:
         sources_meta = self.parse_manifest()
         all_chunks = []
@@ -173,4 +329,9 @@ class LegalDocumentChunker:
             if data:
                 chunks = self.extract_chunks_from_source(data)
                 all_chunks.extend(chunks)
+
+        # Include structured taxonomy chunks from CSVs
+        csv_chunks = self.extract_chunks_from_csvs()
+        all_chunks.extend(csv_chunks)
+
         return all_chunks

@@ -54,11 +54,24 @@ class QueryRouterAgent:
         elif re.search(r"\b(export|germany|us fda|directive 2004/24/ec)\b", q_lower):
             intent = "EXPORT_ASSESSMENT"
 
-        # 4. Resolved botanicals
+        # 4. Resolved botanicals via TKDL taxonomy
         detected_botanicals = []
-        for local_name, botanical_name in self.BOTANICAL_MAP.items():
-            if local_name in q_lower:
-                detected_botanicals.append({"local_name": local_name, "botanical_name": botanical_name})
+        try:
+            from app.corpus.taxonomy import taxonomy_engine
+            resolved = taxonomy_engine.resolve_botanicals_in_text(query)
+            for r in resolved:
+                detected_botanicals.append({
+                    "local_name": r.get("sanskrit_name") or r.get("matched_term"),
+                    "botanical_name": r.get("botanical_name")
+                })
+        except Exception:
+            pass
+
+        # Fallback to hardcoded map if no taxonomy match
+        if not detected_botanicals:
+            for local_name, botanical_name in self.BOTANICAL_MAP.items():
+                if local_name in q_lower:
+                    detected_botanicals.append({"local_name": local_name, "botanical_name": botanical_name})
 
         return {
             "query": query,

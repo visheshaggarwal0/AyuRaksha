@@ -4,7 +4,7 @@ from app.agents.router import QueryRouterAgent
 from app.engines.safety import SafetyGuardrailEngine
 from app.engines.search import HybridLegalSearchEngine
 from app.engines.verifier import CitationEntailmentVerifier
-from app.engines.llm_client import LocalOllamaClient
+from app.engines.llm_client import UnifiedLLMClient, LocalOllamaClient
 from app.models.schemas import StructuredAnswer, Citation, ClaimVerification
 
 class AyuRakshaOrchestrator:
@@ -13,7 +13,7 @@ class AyuRakshaOrchestrator:
     1. Query Router Agent (Intent + Language + Jurisdiction)
     2. Safety & Guardrail Engine (Safe Abstention + Biopiracy Check)
     3. Hybrid Legal Search (PostgreSQL full-text + pgvector + RRF)
-    4. OpenRouter Google Gemma 4 31B LLM Synthesis (with fallback)
+    4. Unified LLM Synthesis (OpenRouter / Ollama / Deterministic Fallback)
     5. Citation Entailment Verification
     """
 
@@ -22,7 +22,7 @@ class AyuRakshaOrchestrator:
         self.safety = SafetyGuardrailEngine()
         self.search_engine = HybridLegalSearchEngine()
         self.verifier = CitationEntailmentVerifier()
-        self.llm_client = LocalOllamaClient()
+        self.llm_client = UnifiedLLMClient()
 
     async def process_query(
         self,
@@ -99,11 +99,12 @@ class AyuRakshaOrchestrator:
             )
 
         # Assessment Table
+        llm_label = getattr(self.llm_client, "active_provider", "Unified Statutory Synthesizer")
         assessment_table = {
             "Jurisdiction": f"{effective_jurisdiction} Regulatory Namespace",
             "Intent Category": intent.replace("_", " ").title(),
             "Statutory Sources Evaluated": f"{len(retrieved_sources)} Official Provisions",
-            "LLM Synthesizer": "llama3.1:8b (Ollama Local)"
+            "LLM Synthesizer": llm_label
         }
 
         # Step 6: Build Verified Citations

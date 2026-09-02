@@ -20,15 +20,18 @@ export const ABSWizard: React.FC<ABSWizardProps> = ({ onOpenCitation }) => {
 
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<ABSAssessmentResponse | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage(null);
     try {
       const res = await api.evaluateABS(formData);
       setResult(res);
-    } catch (err) {
+    } catch (err: any) {
       console.error('ABS evaluation error', err);
+      setErrorMessage(err.response?.data?.detail || 'Failed to evaluate ABS compliance. Please check connection and retry.');
     } finally {
       setLoading(false);
     }
@@ -36,6 +39,7 @@ export const ABSWizard: React.FC<ABSWizardProps> = ({ onOpenCitation }) => {
 
   const handleReset = () => {
     setResult(null);
+    setErrorMessage(null);
   };
 
   return (
@@ -51,6 +55,13 @@ export const ABSWizard: React.FC<ABSWizardProps> = ({ onOpenCitation }) => {
           Determine statutory obligations under the Biological Diversity Act, 2002 (as amended 2023) for State Biodiversity Board (SBB) Prior Intimation or National Biodiversity Authority (NBA) approval.
         </p>
       </div>
+
+      {errorMessage && (
+        <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800 text-xs flex items-center justify-between">
+          <span>{errorMessage}</span>
+          <button onClick={() => setErrorMessage(null)} className="font-bold ml-4">✕</button>
+        </div>
+      )}
 
       {!result ? (
         /* Questionnaire Form */

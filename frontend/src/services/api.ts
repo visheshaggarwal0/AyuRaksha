@@ -42,5 +42,36 @@ export const api = {
   checkHealth: async () => {
     const response = await apiClient.get('/health');
     return response.data;
+  },
+
+  // Corpus & TKDL Taxonomy
+  getManifest: async () => {
+    const response = await apiClient.get('/corpus/manifest');
+    return response.data;
+  },
+
+  getBooks: async (query: string = '', limit: number = 50) => {
+    const response = await apiClient.get('/corpus/books', { params: { query, limit } });
+    return response.data;
+  },
+
+  getPlants: async (query: string = '', limit: number = 50) => {
+    const response = await apiClient.get('/corpus/plants', { params: { query, limit } });
+    return response.data;
+  },
+
+  getGlossary: async (query: string = '', limit: number = 50) => {
+    const response = await apiClient.get('/corpus/glossary', { params: { query, limit } });
+    return response.data;
+  },
+
+  getEntities: async (query: string = '', entityType: string = '', limit: number = 50) => {
+    const response = await apiClient.get('/corpus/entities', { params: { query, entity_type: entityType, limit } });
+    return response.data;
+  },
+
+  getCorpusStats: async () => {
+    const response = await apiClient.get('/corpus/stats');
+    return response.data;
   }
 };

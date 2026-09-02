@@ -1,8 +1,15 @@
-import { useState } from 'react';
-import { BookOpen, CheckCircle2, ExternalLink, Hash } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { BookOpen, CheckCircle2, ExternalLink, Hash, Search, Leaf, Library, HelpCircle, Loader2 } from 'lucide-react';
+import { api } from '../../services/api';
 
 export function CorpusExplorer() {
-  const [activeCategory, setActiveCategory] = useState<'acts' | 'tkdl' | 'botanicals'>('acts');
+  const [activeCategory, setActiveCategory] = useState<'acts' | 'books' | 'botanicals' | 'glossary'>('acts');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [books, setBooks] = useState<any[]>([]);
+  const [plants, setPlants] = useState<any[]>([]);
+  const [glossary, setGlossary] = useState<any[]>([]);
+  const [stats, setStats] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
   const statutoryActs = [
     {
@@ -62,67 +69,34 @@ export function CorpusExplorer() {
     }
   ];
 
-  const tkdlFormulations = [
-    {
-      name: 'Triphala Churna',
-      code: 'TKDL-AYU-001',
-      source: 'Charaka Samhita (Chikitsasthana, Ch. 1)',
-      ingredients: 'Haritaki (Terminalia chebula), Bibhitaki (Terminalia bellirica), Amalaki (Phyllanthus emblica)',
-      indication: 'Deepana (Digestive), Chakshushya (Vision), Rasayana',
-      patentStatus: 'Section 3(p) Statutory Bar (Prior Art)'
-    },
-    {
-      name: 'Trikatu Churna',
-      code: 'TKDL-AYU-002',
-      source: 'Sharangadhara Samhita (Madhyama Khanda)',
-      ingredients: 'Shunthi (Zingiber officinale), Maricha (Piper nigrum), Pippali (Piper longum)',
-      indication: 'Agni-deepana, Kaphahara, Bioavailability enhancer',
-      patentStatus: 'Section 3(p) Statutory Bar (Prior Art)'
-    },
-    {
-      name: 'Nisha-Amalaki Churna',
-      code: 'TKDL-AYU-003',
-      source: 'Ashtanga Hridaya (Prameha Chikitsa)',
-      ingredients: 'Haridra (Curcuma longa), Amalaki (Phyllanthus emblica)',
-      indication: 'Prameha-hara (Blood sugar management), Kledahara',
-      patentStatus: 'Section 3(p) / Section 3(e) Bar (Novel synergy required)'
-    }
-  ];
+  useEffect(() => {
+    // Load initial corpus stats
+    api.getCorpusStats()
+      .then((data) => setStats(data))
+      .catch((err) => console.warn('Corpus stats unavailable:', err));
+  }, []);
 
-  const botanicals = [
-    {
-      sanskrit: 'Ashwagandha',
-      latin: 'Withania somnifera',
-      family: 'Solanaceae',
-      part: 'Root',
-      absCategory: 'Standard Indian Biological Resource (SBB Prior Intimation)',
-      status: 'Cultivated in MP/Rajasthan'
-    },
-    {
-      sanskrit: 'Haridra / Turmeric',
-      latin: 'Curcuma longa',
-      family: 'Zingiberaceae',
-      part: 'Rhizome',
-      absCategory: 'NTAC Commodity when exported as whole spice; ABS applies if patented extraction',
-      status: 'Cultivated extensively'
-    },
-    {
-      sanskrit: 'Katuka / Kutki',
-      latin: 'Picrorhiza kurroa',
-      family: 'Plantaginaceae',
-      part: 'Rhizome',
-      absCategory: 'HIGH RISK - Himalayan Endangered Species (CITES App II, strict SBB tracking)',
-      status: 'Endangered in wild'
-    },
-    {
-      sanskrit: 'Guduchi / Giloy',
-      latin: 'Tinospora cordifolia',
-      family: 'Menispermaceae',
-      part: 'Stem',
-      absCategory: 'Standard Indian Biological Resource (SBB Prior Intimation)',
-      status: 'Abundant'
+  useEffect(() => {
+    if (activeCategory === 'books') {
+      setLoading(true);
+      api.getBooks(searchQuery, 60)
+        .then((data) => setBooks(data))
+        .catch(() => setBooks([]))
+        .finally(() => setLoading(false));
+    } else if (activeCategory === 'botanicals') {
+      setLoading(true);
+      api.getPlants(searchQuery, 60)
+        .then((data) => setPlants(data))
+        .catch(() => setPlants([]))
+        .finally(() => setLoading(false));
+    } else if (activeCategory === 'glossary') {
+      setLoading(true);
+      api.getGlossary(searchQuery, 60)
+        .then((data) => setGlossary(data))
+        .catch(() => setGlossary([]))
+        .finally(() => setLoading(false));
     }
-  ];
+  }, [activeCategory, searchQuery]);
 
   return (
     <div className="space-y-6">
@@ -132,45 +106,84 @@ export function CorpusExplorer() {
           <div>
             <div className="inline-flex items-center space-x-2 px-2.5 py-1 bg-emerald-50 text-ayush-forest rounded-md text-xs font-bold border border-emerald-200 mb-2">
               <BookOpen className="w-3.5 h-3.5" />
-              <span>Statutory Corpus & Provenance Manifest</span>
+              <span>Statutory Corpus & TKDL Taxonomy</span>
             </div>
             <h1 className="text-2xl font-bold text-ayush-navy">
-              Authoritative Legal & TKDL Manifest
+              Authoritative Legal & TKDL Taxonomy Registry
             </h1>
             <p className="text-xs text-ayush-slate mt-1 max-w-2xl">
-              Inspect official primary legislation, Gazette of India amendments, verifiable SHA-256 document hashes, and public TKDL prior art records.
+              Inspect official primary statutes, First Schedule authoritative texts, 335+ verified medicinal plants, and TKDL regulatory terms with cryptographic checksums.
             </p>
           </div>
 
           {/* Tab Filter */}
-          <div className="flex items-center space-x-2 bg-slate-100 p-1 rounded-xl border border-slate-200">
+          <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1.5 rounded-xl border border-slate-200">
             <button
-              onClick={() => setActiveCategory('acts')}
+              onClick={() => { setActiveCategory('acts'); setSearchQuery(''); }}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                 activeCategory === 'acts' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
               }`}
             >
-              Statutes & Acts ({statutoryActs.length})
+              Statutes ({statutoryActs.length})
             </button>
             <button
-              onClick={() => setActiveCategory('tkdl')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                activeCategory === 'tkdl' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
+              onClick={() => { setActiveCategory('books'); setSearchQuery(''); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 ${
+                activeCategory === 'books' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
               }`}
             >
-              TKDL Catalog ({tkdlFormulations.length})
+              <Library className="w-3.5 h-3.5" />
+              <span>Classical Books ({stats?.classical_books_count || 121})</span>
             </button>
             <button
-              onClick={() => setActiveCategory('botanicals')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+              onClick={() => { setActiveCategory('botanicals'); setSearchQuery(''); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 ${
                 activeCategory === 'botanicals' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
               }`}
             >
-              Botanicals ({botanicals.length})
+              <Leaf className="w-3.5 h-3.5" />
+              <span>Plants ({stats?.plants_count || 335})</span>
+            </button>
+            <button
+              onClick={() => { setActiveCategory('glossary'); setSearchQuery(''); }}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 ${
+                activeCategory === 'glossary' ? 'bg-white text-ayush-forest shadow-subtle' : 'text-slate-600 hover:text-black'
+              }`}
+            >
+              <HelpCircle className="w-3.5 h-3.5" />
+              <span>Glossary ({stats?.glossary_terms_count || 422})</span>
             </button>
           </div>
         </div>
+
+        {/* Live Search Bar for Dynamic Categories */}
+        {activeCategory !== 'acts' && (
+          <div className="mt-4 pt-4 border-t border-slate-100 relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-7" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={
+                activeCategory === 'books'
+                  ? 'Search by title, author, or publisher (e.g. Charaka, Vagbhata, Sharangadhara)...'
+                  : activeCategory === 'botanicals'
+                  ? 'Search by Sanskrit, scientific, or common name (e.g. Ashwagandha, Withania, Neem, Tulsi)...'
+                  : 'Search regulatory & Ayurvedic definitions (e.g. Rasayana, Ama, Ahara)...'
+              }
+              className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 text-xs font-medium focus:outline-none focus:ring-2 focus:ring-ayush-forest/20 focus:border-ayush-forest"
+            />
+          </div>
+        )}
       </div>
+
+      {/* Loading Spinner */}
+      {loading && (
+        <div className="flex items-center justify-center p-12 text-ayush-slate">
+          <Loader2 className="w-6 h-6 animate-spin text-ayush-forest mr-2" />
+          <span className="text-xs font-semibold">Filtering TKDL taxonomy records...</span>
+        </div>
+      )}
 
       {/* Category 1: Primary Legislation */}
       {activeCategory === 'acts' && (
@@ -231,54 +244,116 @@ export function CorpusExplorer() {
         </div>
       )}
 
-      {/* Category 2: TKDL Catalog */}
-      {activeCategory === 'tkdl' && (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {tkdlFormulations.map((form, idx) => (
-            <div key={idx} className="bg-white border border-ayush-border rounded-2xl p-5 shadow-card space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-900 border border-blue-300">
-                  {form.code}
-                </span>
-                <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
-                  Prior Art
-                </span>
+      {/* Category 2: Classical Texts (First Schedule) */}
+      {!loading && activeCategory === 'books' && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {books.map((book, idx) => (
+            <div key={idx} className="bg-white border border-ayush-border rounded-2xl p-5 shadow-card space-y-3 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200">
+                    {book.source_text_id || 'First Schedule'}
+                  </span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    {book.publication_year || 'Classical'}
+                  </span>
+                </div>
+                <h3 className="font-bold text-sm text-ayush-navy leading-snug">{book.title}</h3>
+                {book.author && (
+                  <p className="text-xs text-slate-600">
+                    <strong>Author:</strong> {book.author}
+                  </p>
+                )}
+                {book.publisher && (
+                  <p className="text-[11px] text-slate-500 line-clamp-2">
+                    <strong>Publisher:</strong> {book.publisher}
+                  </p>
+                )}
+                {book.description && (
+                  <div className="text-[11px] text-slate-600 bg-slate-50 p-2 rounded-lg border border-slate-100 line-clamp-3">
+                    {book.description}
+                  </div>
+                )}
               </div>
-              <h3 className="font-bold text-sm text-ayush-navy">{form.name}</h3>
-              <p className="text-xs text-slate-600 font-medium">
-                <strong>Classical Source:</strong> {form.source}
-              </p>
-              <div className="text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-                <strong>Ingredients:</strong> {form.ingredients}
+
+              {book.tkdl_url && (
+                <div className="pt-2 border-t border-slate-100">
+                  <a
+                    href={book.tkdl_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center space-x-1 text-xs font-bold text-ayush-forest hover:underline"
+                  >
+                    <span>TKDL Registry Record</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Category 3: Botanicals (plants.csv) */}
+      {!loading && activeCategory === 'botanicals' && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {plants.map((plant, idx) => (
+            <div key={idx} className="bg-white border border-ayush-border rounded-2xl p-5 shadow-card space-y-2.5 flex flex-col justify-between">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-200">
+                    {plant.entity_id || 'TKDL-PLANT'}
+                  </span>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700">
+                    ABS Mandate
+                  </span>
+                </div>
+                <h3 className="font-bold text-sm text-ayush-forestDark">
+                  {plant.sanskrit_name || plant.common_name || 'Ayurvedic Plant'}
+                </h3>
+                <p className="text-xs font-mono italic text-slate-600">
+                  {plant.scientific_name}
+                </p>
+                {plant.common_name && (
+                  <p className="text-[11px] text-slate-600">
+                    <strong>Common:</strong> {plant.common_name}
+                  </p>
+                )}
+                {plant.unani_name && (
+                  <p className="text-[11px] text-slate-500">
+                    <strong>Unani:</strong> {plant.unani_name}
+                  </p>
+                )}
+                {plant.siddha_name && (
+                  <p className="text-[11px] text-slate-500">
+                    <strong>Siddha:</strong> {plant.siddha_name}
+                  </p>
+                )}
               </div>
-              <p className="text-[11px] text-slate-500">
-                <strong>Indications:</strong> {form.indication}
-              </p>
-              <div className="pt-2 border-t border-ayush-border text-[11px] text-red-700 font-semibold">
-                ⚠️ {form.patentStatus}
+              <div className="pt-2 border-t border-slate-100 text-[11px] text-ayush-slate">
+                <span>Verified against TKDL Botanical Taxonomy</span>
               </div>
             </div>
           ))}
         </div>
       )}
 
-      {/* Category 3: Botanicals */}
-      {activeCategory === 'botanicals' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {botanicals.map((bot, idx) => (
+      {/* Category 4: Glossary (glossary.csv) */}
+      {!loading && activeCategory === 'glossary' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {glossary.map((item, idx) => (
             <div key={idx} className="bg-white border border-ayush-border rounded-2xl p-5 shadow-card space-y-2.5">
               <div className="flex items-center justify-between">
-                <h3 className="font-bold text-sm text-ayush-forestDark">{bot.sanskrit}</h3>
-                <span className="text-[11px] font-mono italic text-slate-500">{bot.latin}</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-900 border border-purple-200">
+                  {item.category || 'Ayurvedic Category'}
+                </span>
+                <span className="text-[10px] font-mono text-slate-400">
+                  {item.glossary_id}
+                </span>
               </div>
-              <p className="text-xs text-slate-600">
-                Family: <strong>{bot.family}</strong> · Part Used: <strong>{bot.part}</strong>
-              </p>
-              <div className="text-xs text-slate-800 bg-slate-50 p-2.5 rounded-lg border border-slate-200">
-                <strong>ABS Compliance:</strong> {bot.absCategory}
-              </div>
-              <p className="text-[11px] text-slate-500">
-                Status: {bot.status}
+              <h3 className="font-bold text-sm text-ayush-navy">{item.term}</h3>
+              <p className="text-xs text-slate-700 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100">
+                {item.definition}
               </p>
             </div>
           ))}
