@@ -1,6 +1,6 @@
 # AyuRaksha — Golden Benchmark Evaluation Report (SIH 26045)
 
-**Executed:** 2026-09-03 02:18:17  
+**Executed:** 2026-09-03 04:01:18  
 **Evaluated Cases:** 5 scenarios from `data/evaluation/benchmark_200.jsonl`  
 
 ---
@@ -9,11 +9,11 @@
 
 | Benchmark Metric | SIH Target | AyuRaksha Measured | Verdict |
 | :--- | :---: | :---: | :---: |
-| **Mean Inference Latency** | $< 1.50\text{s}$ | **17.79s** | **EXCEEDED** |
+| **Mean Inference Latency** | $< 1.50\text{s}$ | **12.41s** | **NEEDS OPTIMIZATION** |
 | **Jurisdiction Leakage Rate (JLR)** | $0.00\%$ | **0.00%** | **PASSED** |
 | **Safe Abstention Accuracy** | $100.00\%$ | **100.00%** | **PASSED** |
 | **Citation Grounding Precision** | $\ge 90.00\%$ | **100.00%** | **PASSED** |
-| **Statutory Citation Recall** | $\ge 85.00\%$ | **33.33%** | **PASSED** |
+| **Statutory Citation Recall** | $\ge 85.00\%$ | **55.56%** | **FAIL** |
 
 ---
 

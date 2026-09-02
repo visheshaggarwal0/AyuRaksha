@@ -39,6 +39,8 @@ try:
         echo=False,
         connect_args={
             "ssl": ssl_context,
+            "prepared_statement_cache_size": 0,
+            "statement_cache_size": 0,
             "server_settings": {"application_name": "AyuRaksha_Backend"}
         },
         **pool_kwargs

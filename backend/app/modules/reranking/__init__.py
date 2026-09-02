@@ -59,16 +59,45 @@ class LegalAuthorityReranker(IRerankingModule):
                     domain_boost -= 0.35  # Suppress trademark goods classes for drug regulatory questions
 
             # Patentability and Traditional Knowledge questions
-            if any(k in q_lower for k in ["patent", "invent", "novelty", "3(p)", "3(e)", "tkdl"]):
+            if any(k in q_lower for k in ["patent", "invent", "novelty", "3(p)", "3(e)", "tkdl", "extract", "formulation"]):
                 if "PATENTS" in src_id:
                     domain_boost += 0.25
 
             # Biodiversity and ABS questions
-            if any(k in q_lower for k in ["biodiversity", "abs", "nba", "sbb", "biological", "benefit sharing"]):
+            if any(k in q_lower for k in ["biodiversity", "abs", "nba", "sbb", "biological", "benefit sharing", "wild", "herb"]):
                 if "BIOLOGICAL_DIVERSITY" in src_id or "ABS" in src_id:
                     domain_boost += 0.25
 
-            final_score = max(0.0, min(1.0, base_score + authority_bonus + term_score + exact_boost + domain_boost))
+            # 5. Substantive Regulatory Intent Alignment Boost
+            substantive_boost = 0.0
+            substantive_map = {
+                "3(p)": ["traditional", "ayurvedic", "herbal", "formulation", "knowledge", "ashwagandha", "brahmi"],
+                "3(e)": ["formulation", "combining", "mixture", "admixture", "synergy", "aggregation"],
+                "3(d)": ["derivative", "extract", "form", "efficacy", "nano", "enhancement", "withaferin"],
+                "3(i)": ["method", "treatment", "cure", "administer", "disease", "ulcer", "patient"],
+                "3(c)": ["naturally", "occurring", "plant", "isolate", "substance"],
+                "10(4)": ["disclose", "source", "origin", "geographical", "collected", "himachal"],
+                "2(1)(j)": ["inventive", "process", "extraction", "novel", "patentable", "nano"],
+                "2(1)(ja)": ["inventive step", "technical advance", "economic significance"],
+                "section 3": ["foreign", "nri", "non-citizen", "overseas", "approval", "nba"],
+                "section 6": ["ipr", "patent", "outside india", "nba approval", "disclose"],
+                "section 7": ["indian", "domestic", "vaidya", "local", "practitioner", "intimation", "sbb", "delhi"],
+                "regulation 3": ["synthetic", "vitamins", "minerals", "prohibited", "aahara"],
+                "regulation 2(1)(a)": ["ayurveda aahara", "recipe", "authoritative", "definition"]
+            }
+            for sec_key, triggers in substantive_map.items():
+                if sec_key in sec_num:
+                    matching_triggers = sum(1 for trig in triggers if trig in q_lower)
+                    if matching_triggers >= 1:
+                        substantive_boost = 0.22 * min(1.0, matching_triggers / 2.0)
+                        break
+
+            # Procedural de-prioritization: demote pre/post-grant opposition unless query specifically asks about opposition
+            procedural_penalty = 0.0
+            if ("section 25" in sec_num or "section 64" in sec_num or "section 92" in sec_num or "rule 24" in sec_num) and "opposition" not in q_lower and "revocation" not in q_lower:
+                procedural_penalty = 0.15
+
+            final_score = max(0.0, min(1.0, base_score + authority_bonus + term_score + exact_boost + domain_boost + substantive_boost - procedural_penalty))
             cand_copy = cand.model_copy()
             cand_copy.relevance_score = round(final_score, 4)
             scored_candidates.append(cand_copy)

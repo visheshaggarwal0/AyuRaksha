@@ -33,7 +33,7 @@ class ModularCitationEngine(ICitationModule):
                 continue
 
             # Include if explicitly cited in text, or if it was top evidence candidate
-            if marker_num in referenced_markers or idx < 5:
+            if marker_num in referenced_markers or idx < 8:
                 seen_keys.add(key)
                 citations.append(
                     Citation(

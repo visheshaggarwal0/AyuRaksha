@@ -61,7 +61,7 @@ class AyuRakshaAIPipeline:
         plan = RetrievalPlanner.plan(normalized_query, route, entities)
 
         # Stage 5 & 6: Hybrid Retrieval & Legal Reranking
-        candidates = await self.retriever.retrieve(normalized_query, plan, top_k=5)
+        candidates = await self.retriever.retrieve(normalized_query, plan, top_k=8)
 
         # Stage 7: Evidence Sufficiency Gate & Statutory Safety Check
         abstention = AbstentionGate.evaluate(normalized_query, candidates, route)

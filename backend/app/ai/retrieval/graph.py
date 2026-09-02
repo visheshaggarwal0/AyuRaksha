@@ -91,18 +91,41 @@ class GraphRetriever:
         """
         Expands top candidate sources with relational links from knowledge_relations.
         """
+        if not candidates:
+            return []
+
         expanded = list(candidates)
         seen_keys = {c.get("source_id") for c in candidates}
+        top_candidates = candidates[:5]
+        source_codes = [c.get("source_id") for c in top_candidates if c.get("source_id")]
 
-        for candidate in candidates[:5]:
+        # Single batch query to DB for all top sources
+        db_relations_by_src: Dict[str, List[Dict[str, Any]]] = {}
+        if source_codes:
+            try:
+                async with AsyncSessionLocal() as session:
+                    stmt = (
+                        select(KnowledgeRelation, Source.source_code)
+                        .join(Source, KnowledgeRelation.subject_source_id == Source.id)
+                        .where(Source.source_code.in_(source_codes))
+                    )
+                    res = await session.execute(stmt)
+                    for kr, sc in res.all():
+                        db_relations_by_src.setdefault(sc, []).append({
+                            "relation_type": kr.relation_type,
+                            "target_label": kr.target_label,
+                            "evidence": kr.evidence or "",
+                            "confidence": kr.confidence
+                        })
+            except Exception as e:
+                logger.debug(f"DB knowledge_relations batch query bypassed: {e}")
+
+        for candidate in top_candidates:
             src_id = candidate.get("source_id")
             if not src_id:
                 continue
 
-            # 1. Check database relations
-            db_relations = await cls._fetch_db_relations(src_id)
-
-            # 2. Merge with static statutory graph
+            db_relations = db_relations_by_src.get(src_id, [])
             static_relations = cls.STATIC_STATUTORY_GRAPH.get(src_id, [])
             all_relations = db_relations + static_relations
 
@@ -110,7 +133,6 @@ class GraphRetriever:
                 target_src = rel.get("target_source") or rel.get("target_label")
                 if target_src and target_src not in seen_keys:
                     seen_keys.add(target_src)
-                    # Add synthetic relation node to provide graph context to the LLM
                     expanded.append({
                         "source_id": f"GRAPH_RELATION_{target_src}",
                         "source_title": f"Statutory Relation: {rel.get('relation_type')} -> {target_src}",

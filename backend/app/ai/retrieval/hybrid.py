@@ -27,7 +27,7 @@ class HybridRetriever:
         self,
         query: str,
         plan: Dict[str, Any],
-        top_k: int = 5
+        top_k: int = 8
     ) -> List[Dict[str, Any]]:
         jurisdiction = plan.get("jurisdiction", "IN")
         domain_filter = plan.get("domain_filter")
@@ -36,35 +36,40 @@ class HybridRetriever:
 
         raw_candidates: List[Dict[str, Any]] = []
         retrieval_status = {"dense": False, "lexical": False, "fallback": False}
+        import asyncio
+        dense_vector = generate_embedding(dense_query)
 
-        # 1. Dense Vector Search (pgvector)
-        try:
-            dense_vector = generate_embedding(dense_query)
-            dense_results = await self.vector_store.search(
-                query_vector=dense_vector,
-                jurisdiction=jurisdiction,
-                limit=plan.get("max_candidates", 10),
-                domain_filter=domain_filter
-            )
-            raw_candidates.extend(dense_results)
+        async def _run_dense():
+            try:
+                return await self.vector_store.search(
+                    query_vector=dense_vector,
+                    jurisdiction=jurisdiction,
+                    limit=plan.get("max_candidates", 10),
+                    domain_filter=domain_filter
+                )
+            except Exception as e:
+                logger.warning(f"Vector store search failed: {e}")
+                return []
+
+        async def _run_lexical():
+            try:
+                return await self.vector_store.search_lexical(
+                    query_text=reformulated_query,
+                    jurisdiction=jurisdiction,
+                    limit=plan.get("max_candidates", 10),
+                    domain_filter=domain_filter
+                )
+            except Exception as e:
+                logger.warning(f"Lexical store search failed: {e}")
+                return []
+
+        dense_res, lexical_res = await asyncio.gather(_run_dense(), _run_lexical())
+        if dense_res:
+            raw_candidates.extend(dense_res)
             retrieval_status["dense"] = True
-        except Exception as e:
-            logger.warning(f"Vector store search failed: {e}")
-            retrieval_status["dense"] = False
-
-        # 2. Sparse Lexical Search (Postgres tsvector)
-        try:
-            sparse_results = await self.vector_store.search_lexical(
-                query_text=reformulated_query,
-                jurisdiction=jurisdiction,
-                limit=plan.get("max_candidates", 10),
-                domain_filter=domain_filter
-            )
-            raw_candidates.extend(sparse_results)
+        if lexical_res:
+            raw_candidates.extend(lexical_res)
             retrieval_status["lexical"] = True
-        except Exception as e:
-            logger.warning(f"Lexical store search failed: {e}")
-            retrieval_status["lexical"] = False
 
         # 3. Local In-Memory Fallback if Postgres returned few results
         if len(raw_candidates) < 3:

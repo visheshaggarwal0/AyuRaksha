@@ -8,19 +8,22 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "backend"))
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 from dotenv import load_dotenv
 load_dotenv(ROOT / ".env")
 
-from sqlalchemy import select
+from sqlalchemy import select, func
 from app.db.session import AsyncSessionLocal
 from app.db.models import Source, SourceVersion, SourceSection, DocumentChunk, KnowledgeRelation
 from app.corpus.chunker import LegalDocumentChunker
 from app.corpus.validation import validate_normalized_document
-from app.engines.vector_store import generate_deterministic_embedding
+from app.modules.embeddings import embedding_module
 
 async def ingest_corpus():
     print("=" * 60)
-    print("AyuRaksha (IP-SAKTI Sahayak) — Provenance-Preserving Ingestion")
+    print("AyuRaksha (IP-SAKTI Sahayak) -- Provenance-Preserving Ingestion")
     print("=" * 60)
 
     chunker = LegalDocumentChunker()
@@ -43,16 +46,20 @@ async def ingest_corpus():
             storage_uri = src_meta.get("storage_uri", "")
             official_url = src_meta.get("official_url", "")
 
-            print(f" -> Ingesting: {title} [{jurisdiction}] (SHA-256: {sha256_hash[:10]}...)")
+            print(f"\n -> Processing Source: {title} [{jurisdiction}]")
 
             source_data = chunker.parse_source_file(rel_path)
+            if not source_data:
+                print(f"    [warn] File not found or empty: {rel_path}")
+                continue
+
             validation_warnings = []
             if "provisions" in source_data and "source" in source_data:
                 validation_warnings = validate_normalized_document(source_data)
             for warning in validation_warnings:
                 print(f"    [warning] {warning}")
 
-            # Check if source already exists
+            # 1. Upsert Source entity
             stmt = select(Source).where(Source.source_code == src_id_str)
             res = await session.execute(stmt)
             source = res.scalars().first()
@@ -69,7 +76,7 @@ async def ingest_corpus():
                     current_status="ACTIVE",
                     source_url=official_url,
                     content_hash=sha256_hash,
-                    publication_date=datetime.utcnow()
+                    publication_date=datetime.now()
                 )
                 session.add(source)
                 await session.flush()
@@ -80,7 +87,13 @@ async def ingest_corpus():
                 source.content_hash = sha256_hash
                 source.current_status = "ACTIVE"
 
-            # A source version is immutable. Re-ingesting an unchanged hash is a no-op.
+            # 2. Extract statutory chunks
+            chunks = chunker.extract_chunks_from_source(source_data)
+            if not chunks:
+                print(f"    [warn] No chunks extracted for {title}")
+                continue
+
+            # 3. Check SourceVersion and existing chunks
             stmt_v = select(SourceVersion).where(
                 SourceVersion.source_id == source.id,
                 SourceVersion.content_hash == sha256_hash,
@@ -89,33 +102,44 @@ async def ingest_corpus():
             version = res_v.scalars().first()
 
             if version:
-                print("    [skip] identical source version is already indexed")
-                continue
+                stmt_c_count = select(func.count(DocumentChunk.id)).join(
+                    SourceSection, DocumentChunk.section_id == SourceSection.id
+                ).where(SourceSection.source_version_id == version.id)
+                res_c = await session.execute(stmt_c_count)
+                existing_count = res_c.scalar() or 0
+                if existing_count >= len(chunks) and len(chunks) > 0:
+                    print(f"    [skip] Source version already indexed ({existing_count}/{len(chunks)} chunks)")
+                    continue
+                else:
+                    print(f"    [re-indexing] Found partial chunks ({existing_count}/{len(chunks)}), completing index...")
+            else:
+                version = SourceVersion(
+                    id=uuid.uuid4(),
+                    source_id=source.id,
+                    version_label=source_data.get("version", {}).get("version_label", "Extracted"),
+                    effective_from=datetime(2024, 1, 1),
+                    content_hash=sha256_hash,
+                    storage_uri=storage_uri
+                )
+                session.add(version)
+                await session.flush()
 
-            version = SourceVersion(
-                id=uuid.uuid4(),
-                source_id=source.id,
-                version_label=source_data.get("version", {}).get("version_label", "Extracted"),
-                effective_from=datetime(2024, 1, 1),
-                content_hash=sha256_hash,
-                storage_uri=storage_uri
-            )
-            session.add(version)
-            await session.flush()
+            # 4. Batch embed chunks using SentenceTransformer / ModularEmbeddingEngine
+            print(f"    -> Generating dense embeddings for {len(chunks)} chunks in batch...")
+            texts_to_embed = [c["text"] for c in chunks]
+            embeddings = await embedding_module.embed_documents(texts_to_embed)
 
-            # Parse and insert sections & chunks
-            chunks = chunker.extract_chunks_from_source(source_data)
-
-            for chunk_data in chunks:
+            for chunk_data, embedding_vec in zip(chunks, embeddings):
                 sec_num = chunk_data["section_number"]
                 heading = chunk_data["heading"]
                 raw_text = chunk_data["raw_statute"]
                 full_text = chunk_data["text"]
                 location = chunk_data.get("location", {})
+                section_id = uuid.uuid4()
 
                 # Create section
                 section = SourceSection(
-                    id=uuid.uuid4(),
+                    id=section_id,
                     source_version_id=version.id,
                     section_number=sec_num,
                     heading=heading,
@@ -124,16 +148,12 @@ async def ingest_corpus():
                     page_end=location.get("page_end")
                 )
                 session.add(section)
-                await session.flush()
                 total_sections_inserted += 1
-
-                # Generate 384-dim semantic vector
-                embedding_vec = generate_deterministic_embedding(full_text)
 
                 # Create document chunk
                 chunk = DocumentChunk(
                     id=uuid.uuid4(),
-                    section_id=section.id,
+                    section_id=section_id,
                     text=full_text,
                     embedding=embedding_vec,
                     token_count=len(full_text.split()),
@@ -156,7 +176,7 @@ async def ingest_corpus():
                 session.add(chunk)
                 total_chunks_inserted += 1
 
-            # Source-to-source and source-to-concept relations form the knowledge layer.
+            # 5. Insert Knowledge Relations
             for relation_data in source_data.get("knowledge_relations", []):
                 target_code = relation_data.get("target_source_id")
                 target_source = None
@@ -177,18 +197,20 @@ async def ingest_corpus():
                     confidence=relation_data.get("confidence", 1.0),
                 ))
 
-        await session.commit()
+            await session.commit()
+            print(f"    [OK] Committed {len(chunks)} statutory chunks for {title}")
 
         # Ingest and embed CSV taxonomy records
         tax_sections, tax_chunks = await ingest_taxonomy_csvs(session, chunker)
         total_sections_inserted += tax_sections
         total_chunks_inserted += tax_chunks
 
-    print("=" * 60)
-    print(f"[✓] Provenance Ingestion Complete!")
+    print("\n" + "=" * 60)
+    print(f"[OK] Provenance Ingestion Complete!")
     print(f"    - Total Sections (Statutory + Taxonomy): {total_sections_inserted}")
     print(f"    - Total Vector Chunks (pgvector): {total_chunks_inserted}")
     print("=" * 60)
+
 
 async def ingest_taxonomy_csvs(session, chunker: LegalDocumentChunker):
     print("\n[*] Ingesting and embedding TKDL CSV Taxonomy datasets...")
@@ -250,7 +272,7 @@ async def ingest_taxonomy_csvs(session, chunker: LegalDocumentChunker):
                 authority_level=meta["authority_level"],
                 current_status="ACTIVE",
                 source_url=meta["url"],
-                publication_date=datetime.utcnow()
+                publication_date=datetime.now()
             )
             session.add(source)
             await session.flush()
@@ -272,29 +294,39 @@ async def ingest_taxonomy_csvs(session, chunker: LegalDocumentChunker):
             session.add(version)
             await session.flush()
 
-        print(f" -> Embedding & indexing {len(chunk_list)} entries for {meta['title']}...")
-        for c in chunk_list:
+        stmt_c_count = select(func.count(DocumentChunk.id)).join(
+            SourceSection, DocumentChunk.section_id == SourceSection.id
+        ).where(SourceSection.source_version_id == version.id)
+        res_c = await session.execute(stmt_c_count)
+        existing_count = res_c.scalar() or 0
+        if existing_count >= len(chunk_list) and len(chunk_list) > 0:
+            print(f"    [skip] {existing_count} taxonomy chunks already indexed for {meta['title']}")
+            continue
+
+        print(f" -> Generating embeddings & indexing {len(chunk_list)} entries for {meta['title']} in batch...")
+        texts_to_embed = [c["text"] for c in chunk_list]
+        embeddings = await embedding_module.embed_documents(texts_to_embed)
+
+        for c, embedding_vec in zip(chunk_list, embeddings):
             sec_num = c["section_number"]
             heading = c["heading"]
             raw_text = c["raw_statute"]
             full_text = c["text"]
+            sec_id = uuid.uuid4()
 
             section = SourceSection(
-                id=uuid.uuid4(),
+                id=sec_id,
                 source_version_id=version.id,
                 section_number=sec_num,
                 heading=heading,
                 text=raw_text
             )
             session.add(section)
-            await session.flush()
             total_tax_sections += 1
-
-            embedding_vec = generate_deterministic_embedding(full_text)
 
             chunk = DocumentChunk(
                 id=uuid.uuid4(),
-                section_id=section.id,
+                section_id=sec_id,
                 text=full_text,
                 embedding=embedding_vec,
                 token_count=len(full_text.split()),
@@ -315,9 +347,12 @@ async def ingest_taxonomy_csvs(session, chunker: LegalDocumentChunker):
             session.add(chunk)
             total_tax_chunks += 1
 
-    await session.commit()
-    print(f"[✓] Successfully embedded {total_tax_chunks} taxonomy vector records.")
+        await session.commit()
+        print(f"    [OK] Committed {len(chunk_list)} taxonomy vector records for {meta['title']}.")
+
+    print(f"[OK] Successfully processed {total_tax_chunks} taxonomy vector records.")
     return total_tax_sections, total_tax_chunks
+
 
 if __name__ == "__main__":
     asyncio.run(ingest_corpus())

@@ -22,12 +22,25 @@ class RetrievalPlanner:
                 expanded_terms.append(sans)
 
         # 2. Add intent-specific statutory hooks
+        q_lower = normalized_query.lower()
         if intent == "PATENTABILITY_ASSESSMENT":
             expanded_terms.extend(["Section 3(p) Traditional Knowledge", "Section 3(e) Synergistic Admixture", "Novelty"])
+            if any(w in q_lower for w in ["process", "extraction", "novel", "inventive", "nano", "method of manufacture"]):
+                expanded_terms.extend(["Section 2(1)(j) Invention", "Section 2(1)(ja) Inventive Step", "Section 3(d) New Form Efficacy"])
+            if any(w in q_lower for w in ["treatment", "cure", "administer", "doctor", "disease", "ulcer", "patient"]):
+                expanded_terms.extend(["Section 3(i) Method of Treatment"])
+            if any(w in q_lower for w in ["disclose", "source", "origin", "where", "collected", "himachal", "geographical"]):
+                expanded_terms.extend(["Section 10(4) Source of Biological Material", "Section 6 BDA Approval"])
         elif intent == "ABS_ASSESSMENT":
             expanded_terms.extend(["Biological Diversity Act Section 7 SBB", "Section 3 NBA Approval", "Fair and Equitable Benefit Sharing"])
+            if any(w in q_lower for w in ["indian", "domestic", "vaidya", "local", "delhi", "manufacturing"]):
+                expanded_terms.extend(["Section 7 SBB Prior Intimation"])
+            if any(w in q_lower for w in ["foreign", "nri", "overseas", "foreign company"]):
+                expanded_terms.extend(["Section 3 NBA Approval", "Form I"])
         elif intent == "PRODUCT_CLASSIFICATION":
             expanded_terms.extend(["Drugs & Cosmetics Act Section 3(a)", "Rule 158B", "FSSAI Ayurveda Aahara Regulation"])
+            if any(w in q_lower for w in ["synthetic", "vitamin", "mineral", "food", "aahara"]):
+                expanded_terms.extend(["Regulation 3 Prohibitions", "Regulation 2(1)(a) Definition"])
         elif intent == "EXPORT_ASSESSMENT":
             expanded_terms.extend(["Directive 2004/24/EC", "US FDA Dietary Supplement", "Export Compliance"])
 

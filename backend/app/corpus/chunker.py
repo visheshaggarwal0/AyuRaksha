@@ -240,6 +240,61 @@ class LegalDocumentChunker:
                     "chunk_hash": self.compute_sha256(combined_text)
                 })
 
+        # Format 6: Classical Texts (e.g. First Schedule Authoritative Books)
+        elif "classical_texts" in source_data:
+            for txt in source_data["classical_texts"]:
+                txt_id = txt.get("id", "")
+                name = txt.get("name", "")
+                author = txt.get("author", "Classical Author")
+                period = txt.get("period", "Classical")
+                desc = f"First Schedule Authoritative Ayurvedic Text: {name} by {author} ({period}). Recognized under Section 3(a) of Drugs and Cosmetics Act, 1940 for classical Ayurvedic formulation manufacturing and prior art defense under Patents Act Section 3(p)."
+
+                chunks.append({
+                    "source_id": source_id,
+                    "source_title": title,
+                    "authority": authority,
+                    "jurisdiction": jurisdiction,
+                    "document_type": doc_type,
+                    "authority_level": authority_level,
+                    "domain": "CLASSICAL_TEXTS",
+                    "section_number": f"First Schedule: {name}",
+                    "heading": name,
+                    "text": desc,
+                    "raw_statute": desc,
+                    "source_url": source_url,
+                    "source_sha256": source_sha256,
+                    "chunk_hash": self.compute_sha256(desc)
+                })
+
+        # Format 7: Export jurisdictions (e.g. US FDA & EU EMA)
+        elif "jurisdictions" in source_data:
+            for jur in source_data["jurisdictions"]:
+                mkt = jur.get("market", "")
+                pathway = jur.get("regulatory_pathway", "")
+                for r in jur.get("rules", []):
+                    clause = r.get("clause", "")
+                    text = r.get("text", "")
+                    relevance = r.get("relevance", "")
+                    combined = f"[{mkt} ({pathway}) - {clause}]\n{text}"
+                    if relevance:
+                        combined += f"\nStatutory Relevance: {relevance}"
+                    chunks.append({
+                        "source_id": source_id,
+                        "source_title": title,
+                        "authority": authority,
+                        "jurisdiction": "INT",
+                        "document_type": doc_type,
+                        "authority_level": authority_level,
+                        "domain": "INTERNATIONAL_IP",
+                        "section_number": f"{mkt}: {clause}",
+                        "heading": clause,
+                        "text": combined,
+                        "raw_statute": text,
+                        "source_url": source_url,
+                        "source_sha256": source_sha256,
+                        "chunk_hash": self.compute_sha256(combined)
+                    })
+
         return chunks
 
     def extract_chunks_from_csvs(self) -> List[Dict[str, Any]]:

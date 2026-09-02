@@ -49,8 +49,8 @@ class SourceSection(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     source_version_id = Column(UUID(as_uuid=True), ForeignKey("source_versions.id", ondelete="CASCADE"), nullable=False)
     parent_section_id = Column(UUID(as_uuid=True), ForeignKey("source_sections.id", ondelete="SET NULL"), nullable=True)
-    section_number = Column(String(50), nullable=False) # e.g. "3(p)", "Section 7"
-    heading = Column(String(255), nullable=True)
+    section_number = Column(String(150), nullable=False) # e.g. "3(p)", "Section 7", botanical identifiers
+    heading = Column(String(512), nullable=True)
     text = Column(Text, nullable=False)
     page_start = Column(Integer, nullable=True)
     page_end = Column(Integer, nullable=True)

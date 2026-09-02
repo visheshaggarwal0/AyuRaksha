@@ -20,6 +20,9 @@ from datetime import datetime
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "backend"))
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 from app.agents.orchestrator import AyuRakshaOrchestrator
 
 BENCHMARK_PATH = ROOT / "data" / "evaluation" / "benchmark_200.jsonl"
@@ -221,8 +224,8 @@ The benchmark evaluated queries across the full Ayurvedic innovation lifecycle:
     print(f" Citation Grounding Precision : {citation_prec:.2f}% (Target: > 90.0%) [{'PASS' if citation_prec >= 90 else 'FAIL'}]")
     print(f" Statutory Citation Recall    : {citation_recall:.2f}% (Target: > 85.0%) [{'PASS' if citation_recall >= 85 else 'FAIL'}]")
     print("=" * 80)
-    print(f"[✓] Full itemized JSON report saved to: {OUTPUT_JSON_PATH}")
-    print(f"[✓] Executive Markdown summary saved to: {OUTPUT_MD_PATH}\n")
+    print(f"[OK] Full itemized JSON report saved to: {OUTPUT_JSON_PATH}")
+    print(f"[OK] Executive Markdown summary saved to: {OUTPUT_MD_PATH}\n")
 
 
 if __name__ == "__main__":

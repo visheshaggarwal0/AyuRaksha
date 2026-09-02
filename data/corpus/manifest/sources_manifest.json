@@ -157,7 +157,7 @@
       "jurisdiction": "INT",
       "document_type": "REGULATION",
       "authority_level": 5,
-      "normalized_file": "data/corpus/international_treaties_and_markets/export_regulations_us_fda_eu_ema.json",
+      "normalized_file": "data/corpus/international_treaties_and_markets/us_fda_and_eu_herbal_export_regulations.json",
       "sha256": "8138c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5",
       "official_url": "https://www.fda.gov/food/dietary-supplements"
     },
