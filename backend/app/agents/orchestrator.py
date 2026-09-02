@@ -77,7 +77,8 @@ class AyuRakshaOrchestrator:
                 "under the Ministry of Ayush. Answer the user query using the provided statutory context. "
                 "Be highly descriptive, supportive, and structure your answer in easy-to-read paragraphs. "
                 "At the end of each paragraph or claim, add a citation marker like [1], [2] corresponding to the statutory sources used. "
-                "NEVER hallucinate non-existent law."
+                "NEVER hallucinate non-existent law. "
+                "Provide ONLY the final user-facing response. Do NOT include internal chain-of-thought, hidden reasoning, scratchpad analysis, prompt analysis, instructions, or meta-commentary. Do not describe how you analyzed the question. Start directly with the answer intended for the user. You may use normal Markdown headings, lists, tables, and citations such as [1], [2]."
             )
             user_msg = f"User Question: {query}\n\nStatutory Context:\n{context_blocks}\n\nProvide a detailed and helpful response with inline [1] citations:"
             llm_res = await self.llm_client.generate_response(
@@ -93,13 +94,27 @@ class AyuRakshaOrchestrator:
         # Deterministic Fallback if LLM is unavailable or unconfigured
         if not direct_ans:
             if intent == "PATENTABILITY_ASSESSMENT":
-                direct_ans = (
-                    "Thank you for reaching out! Assessing patentability for Ayurvedic formulations requires careful navigation of the Indian Patents Act.\n\n"
-                    "An Ayurvedic formulation based on known classical herbs cannot be patented as a mere composition "
-                    "under Section 3(p) of the Patents Act, 1970 [1]. To be patentable, you must demonstrate a novel extraction "
-                    "process, a non-obvious synergistic technical effect (Section 3(e)), or a novel formulation platform [1].\n\n"
-                    "I recommend exploring a process patent or compiling a strong defensive publication to protect your IP."
-                )
+                if not retrieved_sources:
+                    direct_ans = (
+                        "No authoritative statutory provisions were retrieved for this patentability query. "
+                        "Please consult official patent examination guidelines under the relevant jurisdiction."
+                    )
+                else:
+                    top_src = retrieved_sources[0]
+                    sec_num = top_src.get("section_number", "Statutory Provision")
+                    src_title = top_src.get("source_title", "Applicable Patent Statute")
+                    raw_quote = (top_src.get("raw_statute") or "").strip()
+
+                    if raw_quote:
+                        direct_ans = (
+                            f"Assessing patentability under {sec_num} of the {src_title} establishes the statutory standard: "
+                            f"\"{raw_quote}\" [1]."
+                        )
+                    else:
+                        direct_ans = (
+                            f"Assessing patentability relates to {sec_num} of the {src_title} [1]. "
+                            "An authoritative statutory provision was retrieved, but its text was unavailable for display."
+                        )
             elif intent == "ABS_ASSESSMENT":
                 direct_ans = (
                     "Navigating Access and Benefit Sharing (ABS) is a crucial step in ethical Ayurvedic commerce. Here is how the law applies to your case:\n\n"
@@ -161,7 +176,24 @@ class AyuRakshaOrchestrator:
         ][:5]
         verified_claims = [self.verifier.verify(claim, citations) for claim in candidate_claims]
         supported_claims = [claim for claim in verified_claims if claim.is_supported]
-        confidence_level = "HIGH" if supported_claims else "LOW"
+
+        total_claims = len(verified_claims)
+        supported_count = len(supported_claims)
+
+        if total_claims == 0:
+            confidence_level = "LOW"
+            support_ratio = 0.0
+        else:
+            support_ratio = supported_count / total_claims
+            if support_ratio >= 0.85:
+                confidence_level = "HIGH"
+            elif support_ratio >= 0.60:
+                confidence_level = "MEDIUM"
+            else:
+                confidence_level = "LOW"
+
+        assessment_table["Claim Verification Ratio"] = f"{supported_count}/{total_claims} ({int(support_ratio * 100)}%)"
+
         caveats = []
         if not citations:
             caveats.append("No authoritative provision was retrieved. Treat this response as general guidance only.")
