@@ -42,6 +42,8 @@ class StructuredAnswer(BaseModel):
     safe_abstention: bool = False
     abstention_reason: Optional[str] = None
     recommended_next_action: str
+    cross_border_posture: Optional[Dict[str, str]] = None
+    language: str = "en"
 
 # Product Classification Request & Response
 class ProductClassificationRequest(BaseModel):
@@ -49,6 +51,7 @@ class ProductClassificationRequest(BaseModel):
     in_classical_text: bool = Field(..., description="Is the formulation from an authoritative classical Ayurvedic text?")
     is_formulation_modified: bool = Field(..., description="Is the composition or ratio modified?")
     has_novel_excipients: bool = Field(default=False, description="Are novel excipients or extraction techniques used?")
+    is_purified_standardized_fraction: bool = Field(default=False, description="Is the formulation a purified and standardized fraction with defined marker compounds (Phytopharmaceutical)?")
     intended_use: str = Field(default="therapeutic", description="therapeutic, supplement, cosmetic, food")
     disease_treatment_claims: bool = Field(default=True, description="Does the product claim to treat/cure/mitigate disease?")
     has_biological_resources: bool = Field(default=True, description="Does it contain plants/animals/microbes sourced from India?")
@@ -82,7 +85,25 @@ class ABSAssessmentResponse(BaseModel):
     governing_statute: str
     applicable_authority: str # NBA or SBB
     approval_type: str # Prior Intimation (Sec 7) or Prior Approval (Sec 3)
-    benefit_sharing_applicable: bool
-    risk_level: str # HIGH, MODERATE, LOW
-    statutory_citations: List[Citation] = []
     mandatory_next_steps: List[str] = []
+
+
+# Re-export core domain models for module-wide access
+from app.models.domain import (
+    SourceDocument,
+    DocumentVersion,
+    Provision,
+    CorpusChunk,
+    Evidence,
+    GraphEntity,
+    GraphRelationship,
+    RetrievalResult,
+    RAGResponse,
+    Confidence,
+    ConfidenceLevel,
+    AbstentionReason,
+    AbstentionCode,
+    RetrievalModality,
+    JurisdictionEnum,
+    DocumentTypeEnum,
+)

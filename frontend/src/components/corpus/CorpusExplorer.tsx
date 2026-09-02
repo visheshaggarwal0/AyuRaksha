@@ -66,6 +66,94 @@ export function CorpusExplorer() {
       sha256: '9a721811e59273c509cfae4f88410292f7543a6d962058444a169123019be12',
       officialUrl: 'https://www.fssai.gov.in',
       keySections: ['Regulation 2(1)(a) - Definition', 'Regulation 5 - Disease Cure Claims Prohibited', 'Regulation 6 - Mandatory Ayurveda Aahara Logo', 'Schedule A - Permissible Classical Recipes']
+    },
+    {
+      id: 'INT_WIPO_GRATK_TREATY_2024',
+      title: 'WIPO Treaty on IP, Genetic Resources & Associated Traditional Knowledge (2024)',
+      shortTitle: 'WIPO GRATK Treaty, 2024',
+      authority: 'World Intellectual Property Organization (WIPO)',
+      authorityLevel: 'Level 5 (Multilateral Treaty)',
+      jurisdiction: '🌐 International',
+      sha256: '1b898fd1a1655cd34a91060cbfa948d354eb99c0cee4a9ca83357b337c1e0f38',
+      officialUrl: 'https://www.wipo.int/edocs/mdocs/tk/en/gratk_dc/gratk_dc_7.pdf',
+      keySections: ['Article 3.1 - Mandatory Origin Disclosure for Genetic Resources', 'Article 3.2 - Mandatory Traditional Knowledge Disclosure', 'Article 5 - Sanctions for Fraudulent Concealment', 'Article 6 - International TKDL Recognition']
+    },
+    {
+      id: 'IND_PATENTS_AMENDMENT_RULES_2024',
+      title: 'The Patents (Amendment) Rules, 2024 (G.S.R. 211(E))',
+      shortTitle: 'Patents (Amendment) Rules, 2024',
+      authority: 'Intellectual Property India (CGPDTM)',
+      authorityLevel: 'Level 4 (Statutory Subordinate Rules)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '5c9b1428f804595e87a2a095b54d39e24a8731b9d4f40f09a18d1a6c117b3f99',
+      officialUrl: 'https://ipindia.gov.in/writereaddata/Portal/Images/pdf/Patents_Amendment_Rules_2024.pdf',
+      keySections: ['Rule 12 - Form 3 Foreign Filing Filing Post-FER', 'Rule 24B - RFE Timeline Reduced from 48 to 31 Months', 'Rule 131 - Commercial Working Form 27 Every 3 Years', 'Rule 138 - Extension of Time / Delay Condonation']
+    },
+    {
+      id: 'IND_TRADE_MARKS_ACT_1999',
+      title: 'The Trade Marks Act, 1999 and Trade Marks Rules, 2017',
+      shortTitle: 'Trade Marks Act, 1999',
+      authority: 'Trade Marks Registry / CGPDTM (IP India)',
+      authorityLevel: 'Level 5 (Primary Statute)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '9b12852eb34e7fbf155452f14ea348ea6198f3b8909f19318b762cae6c8e3128',
+      officialUrl: 'https://ipindia.gov.in/acts-rules-tm.htm',
+      keySections: ['Section 9(1)(b) - Descriptive Traditional Names Bar', 'Section 13 - Generic Botanical / INN Names Bar', 'Class 5 - Ayurvedic Medicines & Pharma', 'Class 3 - Ayurvedic Herbal Cosmetics']
+    },
+    {
+      id: 'IND_GEOGRAPHICAL_INDICATIONS_ACT_1999',
+      title: 'The Geographical Indications of Goods Act, 1999',
+      shortTitle: 'Geographical Indications Act, 1999',
+      authority: 'Geographical Indications Registry (Chennai)',
+      authorityLevel: 'Level 5 (Primary Statute)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '472e38c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5',
+      officialUrl: 'https://ipindia.gov.in/act-1999.htm',
+      keySections: ['Section 2(1)(e) - Geographical Indication Definition', 'Section 8 - Prohibition of Certain Marks', 'Section 20 - Protection of Traditional Agro-Herbal Goods', 'Form GI-1 - Collective Community Application']
+    },
+    {
+      id: 'IND_DRUGS_MAGIC_REMEDIES_ACT_1954',
+      title: 'Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954',
+      shortTitle: 'Drugs & Magic Remedies Act, 1954',
+      authority: 'Ministry of Health & Family Welfare',
+      authorityLevel: 'Level 5 (Primary Statute)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '6b38c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5',
+      officialUrl: 'https://www.indiacode.nic.in/handle/123456789/1512',
+      keySections: ['Section 3 - Prohibition of Advertisement for 54 Specified Diseases', 'Section 4 - Prohibition of Misleading Advertisements', 'Section 7 - Penalties & Prosecution for False AYUSH Claims']
+    },
+    {
+      id: 'INT_EXPORT_REGULATIONS_US_EU',
+      title: 'Export Regimes: US FDA DSHEA 1994 & EU Directive 2004/24/EC',
+      shortTitle: 'US FDA & EU EMA Export Regs',
+      authority: 'US FDA / European Medicines Agency (EMA)',
+      authorityLevel: 'Level 5 (Foreign Statutory Frameworks)',
+      jurisdiction: '🌐 International',
+      sha256: '8138c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5',
+      officialUrl: 'https://www.fda.gov/food/dietary-supplements',
+      keySections: ['US DSHEA Section 8 - 75-Day New Dietary Ingredient (NDI) Notice', '21 CFR 111 - Dietary Supplement cGMP', 'EU Directive 2004/24/EC - 30-Year Traditional Use Proof (15 Years in EU)', 'Banned Heavy Metal & Aristolochic Acid Limits']
+    },
+    {
+      id: 'IND_NBA_ABS_REGULATIONS_2014',
+      title: 'Guidelines on Access to Biological Resources and Associated Knowledge, 2014',
+      shortTitle: 'NBA ABS Regulations, 2014',
+      authority: 'National Biodiversity Authority (NBA)',
+      authorityLevel: 'Level 4 (Statutory Regulations)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '9238c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5',
+      officialUrl: 'http://nbaindia.org/uploaded/pdf/Gazette_Notification_of_ABS_Guidlines.pdf',
+      keySections: ['Regulation 3 - Upfront Share of Ex-Factory Sale (0.1% - 0.5%)', 'Regulation 4 - Benefit Sharing for Transfer of Research', 'Regulation 9 - Prior Approval for Intellectual Property Rights', 'Exemption for Normally Traded Commodities (NTC)']
+    },
+    {
+      id: 'IND_FIRST_SCHEDULE_AYURVEDIC_BOOKS',
+      title: 'First Schedule of Authoritative Classical Ayurvedic Texts',
+      shortTitle: 'First Schedule Classical Books (56 Texts)',
+      authority: 'Ministry of Ayush / Drugs & Cosmetics Act, 1940',
+      authorityLevel: 'Level 5 (Statutory Schedule)',
+      jurisdiction: '🇮🇳 India',
+      sha256: '5138c208c90967ceeb51e9e2a65a3d077c570f7cf7c082725bc7ee0ebaa9e5',
+      officialUrl: 'https://ayush.gov.in',
+      keySections: ['Section 3(a) - Classical ASU Formulation Criteria', 'Schedule 1 - 56 Approved Classical Sanskrit Texts', 'Rule 158B Exemption from Clinical Safety Trials', 'Charaka Samhita, Sushruta Samhita, Ashtanga Hridaya, Sharangadhara Samhita']
     }
   ];
 

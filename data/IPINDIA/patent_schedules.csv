@@ -1,0 +1,6 @@
+schedule_id,schedule_name,schedule_type,title,description,related_rules,source_url,source_reference,verification_status,notes
+IN-PS-1,THE FIRST SCHEDULE,Schedule,Fees,"The the first schedule of the Patents Rules, 2003.",,https://ipindia.gov.in/acts/patent-rules-2003,IP-IN-RULES-2003,Verified,
+IN-PS-2,SECOND SCHEDULE FORMS,Schedule,LIST OF FORMS,"The second schedule forms of the Patents Rules, 2003.",,https://ipindia.gov.in/acts/patent-rules-2003,IP-IN-RULES-2003,Verified,
+IN-PS-3,THE THIRD SCHEDULE,Schedule,Third Schedule,"The the third schedule of the Patents Rules, 2003.",,https://ipindia.gov.in/acts/patent-rules-2003,IP-IN-RULES-2003,Verified,
+IN-PS-4,THE FOURTH SCHEDULE,Schedule,Fourth Schedule,"The the fourth schedule of the Patents Rules, 2003.",,https://ipindia.gov.in/acts/patent-rules-2003,IP-IN-RULES-2003,Verified,
+IN-PS-5,THE FIFTH SCHEDULE,Schedule,FIFTH SCHEDULE,"The the fifth schedule of the Patents Rules, 2003.",,https://ipindia.gov.in/acts/patent-rules-2003,IP-IN-RULES-2003,Verified,

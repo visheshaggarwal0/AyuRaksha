@@ -67,6 +67,65 @@ class ProductClassifier:
                 ]
             )
 
+        # Rule 1B — Phytopharmaceutical Drug (CDSCO / GSR 918(E) & New Drugs Rules 2019)
+        # Purified, standardized fractions with defined marker compounds from medicinal plants,
+        # intended for therapeutic disease treatment claims. Legally distinct from Proprietary ASU.
+        is_phytopharmaceutical = (
+            getattr(req, "is_purified_standardized_fraction", False)
+            and req.intended_use == "therapeutic"
+            and req.disease_treatment_claims
+            and not req.in_classical_text
+        )
+
+        if is_phytopharmaceutical:
+            return ProductClassificationResponse(
+                product_name=req.name,
+                category="PHYTOPHARMACEUTICAL_DRUG (CDSCO / GSR 918E)",
+                governing_act="Drugs and Cosmetics Rules, 1945 (Rule 122E / GSR 918(E)) & New Drugs Rules 2019",
+                patentability="PATENTABLE_SUBJECT_TO_NOVELTY_AND_EFFICACY",
+                patent_rationale=(
+                    "High patentability potential under Section 2(1)(j) of the Patents Act, 1970 as an isolated, "
+                    "purified, and standardized herbal bioactive fraction. Must overcome Section 3(p) prior art "
+                    "by demonstrating non-obvious therapeutic activity exceeding raw crude plant material and "
+                    "Section 3(e) synergistic efficacy."
+                ),
+                abs_required=True,
+                regulatory_authority="Central Drugs Standard Control Organization (CDSCO) / DCGI",
+                citations=[
+                    Citation(
+                        source_id="IND_DRUGS_COSMETICS_RULES_1945_GSR_918E",
+                        source_title="Drugs and Cosmetics Rules, 1945 (Gazette G.S.R. 918(E))",
+                        section="Rule 122E / Fourth Schedule",
+                        jurisdiction=Jurisdiction.INDIA,
+                        verbatim_quote=(
+                            "Phytopharmaceutical drug means a purified and standardized fraction with defined minimum "
+                            "four bioactive or analytical marker compounds of an extract of a medicinal plant or its part, "
+                            "for internal or external use of human beings or animals for diagnosis, treatment, mitigation "
+                            "or prevention of any disease or disorder, but does not include administration by parenteral route."
+                        ),
+                        support_score=1.0
+                    ),
+                    Citation(
+                        source_id="IND_PATENTS_ACT_1970",
+                        source_title="The Patents Act, 1970",
+                        section="Section 2(1)(j) & Section 3(p)",
+                        jurisdiction=Jurisdiction.INDIA,
+                        verbatim_quote=(
+                            "Invention means a new product or process involving an inventive step and capable of industrial "
+                            "application, distinguished from mere aggregation of traditional knowledge."
+                        ),
+                        support_score=0.95
+                    )
+                ],
+                confidence=0.98,
+                next_actions=[
+                    "Submit Investigational New Drug (IND) Application in Form CT-18 / CT-21 to CDSCO (DCGI).",
+                    "Develop Common Technical Document (CTD) dossier establishing chemical fingerprinting with minimum 4 analytical/bioactive marker compounds.",
+                    "Conduct non-clinical safety pharmacology, toxicology, and Phase I-III human clinical trials as per New Drugs and Clinical Trials Rules, 2019.",
+                    "Obtain National Biodiversity Authority (NBA) approval on Form III prior to patent grant under Section 6 of BDA 2002."
+                ]
+            )
+
         # Rule 2 — Patent / Proprietary ASU Medicine (Anubhuta / Modified)
         # Classical formulation modified OR non-classical with disease claims OR novel excipients with disease claims.
         is_modified_classical = req.in_classical_text and req.is_formulation_modified

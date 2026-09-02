@@ -54,5 +54,18 @@ class Settings:
     OPENROUTER_API_KEY: str = os.getenv("OPENROUTER_API_KEY", "")
     OPENROUTER_BASE_URL: str = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
     LLM_MODEL: str = os.getenv("LLM_MODEL", "google/gemma-4-31b-it:free")
+    
+    # Groq LLM
+    GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
+    GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+    
+    # Digital India Bhashini Multilingual Service
+    BHASHINI_API_KEY: str = os.getenv("BHASHINI_API_KEY", "")
+    BHASHINI_USER_ID: str = os.getenv("BHASHINI_USER_ID", "")
+    BHASHINI_PIPELINE_ID: str = os.getenv("BHASHINI_PIPELINE_ID", "")
+    BHASHINI_INFERENCE_URL: str = os.getenv(
+        "BHASHINI_INFERENCE_URL",
+        "https://dhruva-api.bhashini.gov.in/services/inference/pipeline"
+    )
 
 settings = Settings()

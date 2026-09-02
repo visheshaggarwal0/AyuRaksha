@@ -11,44 +11,23 @@ from app.db.models import DocumentChunk, Source, SourceSection, SourceVersion
 
 logger = logging.getLogger(__name__)
 
-_embedding_model: Any = None
-_sentence_transformers_available: Optional[bool] = None
-
 def get_embedding_model():
-    global _embedding_model, _sentence_transformers_available
-    if _sentence_transformers_available is False:
-        return None
-    if _embedding_model is None:
-        try:
-            from sentence_transformers import SentenceTransformer
-            logger.info("Initializing SentenceTransformer('all-MiniLM-L6-v2')...")
-            _embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
-            _sentence_transformers_available = True
-        except Exception as e:
-            logger.warning(f"sentence-transformers not available or failed to load ({e}). Using 384-dim normalized hash fallback.")
-            _sentence_transformers_available = False
-            _embedding_model = None
-    return _embedding_model
+    from app.modules.embeddings import embedding_module
+    return embedding_module._get_model()
 
 def generate_deterministic_embedding(text_content: str, dim: int = 384) -> List[float]:
     """
     Generates a 384-dimensional embedding.
-    Uses SentenceTransformer('all-MiniLM-L6-v2') when available;
+    Uses unified SentenceTransformer('all-MiniLM-L6-v2') singleton when available;
     otherwise falls back to a deterministic 384-dimensional unit vector.
     """
+    from app.modules.embeddings import embedding_module
     model = get_embedding_model()
     if model is not None:
         raw_vector = model.encode(text_content, normalize_embeddings=True)
         return [float(val) for val in raw_vector]
     
-    # Resilient fallback: 384-dim normalized hash projection
-    vector = []
-    text_bytes = text_content.encode("utf-8")
-    for index in range(dim):
-        digest = hashlib.sha256(text_bytes + str(index).encode("utf-8")).digest()
-        vector.append(int.from_bytes(digest[:4], "big") / (2**32 - 1) - 0.5)
-    norm = math.sqrt(sum(value * value for value in vector)) or 1.0
-    return [float(value / norm) for value in vector]
+    return embedding_module._fallback_vector(text_content)
 
 # Alias for semantic clarity
 generate_embedding = generate_deterministic_embedding

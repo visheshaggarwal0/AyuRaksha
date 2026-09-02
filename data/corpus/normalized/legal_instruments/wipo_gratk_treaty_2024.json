@@ -1,0 +1,117 @@
+{
+  "document_id": "INT_WIPO_GRATK_TREATY_2024",
+  "title": "WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (2024)",
+  "short_title": "WIPO GRATK Treaty 2024",
+  "jurisdiction": "INT",
+  "country": "International",
+  "authority": "World Intellectual Property Organization (WIPO)",
+  "issuing_body": "Diplomatic Conference on Intellectual Property, Genetic Resources and Associated Traditional Knowledge",
+  "domain": ["INTELLECTUAL_PROPERTY", "GENETIC_RESOURCES", "TRADITIONAL_KNOWLEDGE", "PATENTS"],
+  "document_type": "TREATY",
+  "authority_level": 5,
+  "source": {
+    "url": "https://www.wipo.int/meetings/en/details.jsp?meeting_id=81108",
+    "source_type": "OFFICIAL_WIPO_DIPLOMATIC_CONFERENCE_TEXT",
+    "retrieved_at": "2026-08-31",
+    "file_name": "int_wipo_gratk_treaty_2024.pdf",
+    "sha256": "1b898fd1a1655cd34a91060cbfa948d354eb99c0cee4a9ca83357b337c1e0f38",
+    "mime_type": "application/pdf",
+    "extracted_text_path": "data/corpus/extracted/int_wipo_gratk_treaty_2024.txt",
+    "storage_uri": "gs://ayuraksha-corpus/raw/international/wipo/int_wipo_gratk_treaty_2024.pdf"
+  },
+  "version": {
+    "published_date": "2024-05-24",
+    "effective_from": "2024-05-24",
+    "effective_until": null,
+    "version_label": "Diplomatic Conference Final Text",
+    "supersedes_version": null
+  },
+  "provisions": [
+    {
+      "provision_id": "WIPO_GRATK_2024_ART_001",
+      "type": "ARTICLE",
+      "number": "Article 1",
+      "heading": "Objectives",
+      "text": "The objectives of this Treaty are to: (a) enhance the efficacy, transparency and quality of the patent system in relation to genetic resources and traditional knowledge associated with genetic resources; and (b) prevent patents from being granted erroneously for inventions that are not novel or inventive with respect to genetic resources and traditional knowledge associated with genetic resources.",
+      "location": {
+        "chapter": "Substantive Provisions",
+        "page_start": 2,
+        "page_end": 2
+      },
+      "topics": ["OBJECTIVES", "PATENT_QUALITY", "PREVENT_MISAPPROPRIATION", "TRADITIONAL_KNOWLEDGE"],
+      "statutory_significance": "Establishes global consensus that patent systems must actively prevent biopiracy and erroneous patents on traditional Ayurvedic and biological knowledge."
+    },
+    {
+      "provision_id": "WIPO_GRATK_2024_ART_003_1",
+      "type": "ARTICLE",
+      "number": "Article 3.1",
+      "heading": "Mandatory Disclosure Requirement for Genetic Resources",
+      "text": "Where the claimed invention in a patent application is materially or directly based on genetic resources, each Contracting Party shall require applicants to disclose: (a) the country of origin of the genetic resources; or (b) in cases where the information in sub-paragraph (a) is not known to the applicant, or where sub-paragraph (a) does not apply, the source of the genetic resources.",
+      "location": {
+        "chapter": "Substantive Provisions",
+        "page_start": 3,
+        "page_end": 3
+      },
+      "topics": ["MANDATORY_DISCLOSURE", "COUNTRY_OF_ORIGIN", "GENETIC_RESOURCES", "PATENT_APPLICATIONS"],
+      "statutory_significance": "Mandates that foreign and domestic patent applicants globally must disclose the country of origin when utilizing Indian medicinal plants or biological resources."
+    },
+    {
+      "provision_id": "WIPO_GRATK_2024_ART_003_2",
+      "type": "ARTICLE",
+      "number": "Article 3.2",
+      "heading": "Mandatory Disclosure Requirement for Associated Traditional Knowledge",
+      "text": "Where the claimed invention in a patent application is materially or directly based on traditional knowledge associated with genetic resources, each Contracting Party shall require applicants to disclose: (a) the Indigenous Peoples or local community, as applicable, who provided the traditional knowledge; or (b) in cases where the information in sub-paragraph (a) is not known to the applicant, or where sub-paragraph (a) does not apply, the source of the traditional knowledge.",
+      "location": {
+        "chapter": "Substantive Provisions",
+        "page_start": 3,
+        "page_end": 3
+      },
+      "topics": ["TRADITIONAL_KNOWLEDGE_DISCLOSURE", "COMMUNITY_RIGHTS", "TKDL", "PATENT_APPLICATIONS"],
+      "statutory_significance": "Directly defends codified Ayurvedic knowledge (TKDL) and community heritage by requiring explicit disclosure of source or community in patent filings worldwide."
+    },
+    {
+      "provision_id": "WIPO_GRATK_2024_ART_005",
+      "type": "ARTICLE",
+      "number": "Article 5",
+      "heading": "Sanctions and Remedies",
+      "text": "Each Contracting Party shall put in place appropriate, effective and proportionate legal, administrative, and/or policy measures to address an applicant's failure to provide the information required under Article 3. Each Contracting Party shall provide an applicant with an opportunity to rectify a failure to disclose, before implementing sanctions or directing remedies. Revocation or rendering unenforceable of a patent solely on the basis of non-disclosure is prohibited unless there has been fraudulent intent.",
+      "location": {
+        "chapter": "Substantive Provisions",
+        "page_start": 4,
+        "page_end": 4
+      },
+      "topics": ["SANCTIONS", "RECTIFICATION", "REVOCATION", "FRAUDULENT_INTENT"],
+      "statutory_significance": "Sets international standard for handling non-disclosure; permits patent revocation if fraudulent concealment of Indian biological resource or Ayurvedic source is proven."
+    },
+    {
+      "provision_id": "WIPO_GRATK_2024_ART_006",
+      "type": "ARTICLE",
+      "number": "Article 6",
+      "heading": "Information Systems and Databases",
+      "text": "Contracting Parties may establish information systems (such as databases) of genetic resources and traditional knowledge associated with genetic resources, in consultation with Indigenous Peoples, local communities and other stakeholders. These databases should be accessible to patent examiners for search and examination purposes to prevent erroneous grants.",
+      "location": {
+        "chapter": "Substantive Provisions",
+        "page_start": 5,
+        "page_end": 5
+      },
+      "topics": ["DATABASES", "TKDL", "PATENT_EXAMINATION", "PRIOR_ART"],
+      "statutory_significance": "Provides international legal sanction and operational mandate for the Indian Traditional Knowledge Digital Library (TKDL) as an authoritative prior-art database in foreign patent offices."
+    }
+  ],
+  "knowledge_relations": [
+    {
+      "target_source_id": "IND_PATENTS_ACT_1970",
+      "relation_type": "IMPLEMENTS",
+      "target_label": "Patents Act, 1970 (Section 10(4)(ii)(D))",
+      "evidence": "WIPO GRATK Treaty internationalizes India's mandatory biological source disclosure requirement under Section 10(4)(ii)(D) of the Indian Patents Act.",
+      "confidence": 1.0
+    },
+    {
+      "target_source_id": "IND_BIOLOGICAL_DIVERSITY_ACT_2002",
+      "relation_type": "SUPPORTS",
+      "target_label": "Biological Diversity Act, 2002 (Section 6)",
+      "evidence": "Aligns international patent offices with India's requirement for National Biodiversity Authority (NBA) approval prior to patent grant.",
+      "confidence": 0.98
+    }
+  ]
+}

@@ -12,6 +12,12 @@ logger = logging.getLogger("AyuRaksha")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"Starting {settings.APP_NAME} connected to Neon Postgres (Project: {settings.NEON_PROJECT_ID})...")
+    # Pre-warm embedding model once on startup to eliminate query latency
+    try:
+        from app.modules.embeddings import embedding_module
+        embedding_module._get_model()
+    except Exception as e:
+        logger.warning(f"Embedding model pre-warming skipped: {e}")
     yield
     logger.info(f"Shutting down {settings.APP_NAME}...")
 
@@ -33,13 +39,25 @@ app.add_middleware(
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
+@app.get("/", tags=["System"])
+async def root():
+    return {
+        "app": settings.APP_NAME,
+        "status": "online",
+        "docs": "/docs",
+        "api": settings.API_V1_STR
+    }
+
+@app.get("/favicon.ico", tags=["System"])
+async def favicon():
+    return {}
+
 @app.get("/health", tags=["Health"])
 @app.get("/api/v1/health", tags=["Health"])
 async def health_check():
     return {
         "status": "healthy",
         "app": settings.APP_NAME,
-        "neon_project": settings.NEON_PROJECT_ID,
-        "neon_org": settings.NEON_ORG_ID,
-        "environment": settings.APP_ENV
+        "environment": settings.APP_ENV,
+        "database_configured": bool(settings.DATABASE_URL)
     }

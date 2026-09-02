@@ -29,6 +29,11 @@ export interface StructuredAnswer {
   safe_abstention: boolean;
   abstention_reason?: string;
   recommended_next_action: string;
+  cross_border_posture?: {
+    india_posture: string;
+    international_posture: string;
+  };
+  language?: string;
 }
 
 export interface ProductClassificationRequest {
@@ -36,6 +41,7 @@ export interface ProductClassificationRequest {
   in_classical_text: boolean;
   is_formulation_modified: boolean;
   has_novel_excipients: boolean;
+  is_purified_standardized_fraction?: boolean;
   intended_use: string;
   disease_treatment_claims: boolean;
   has_biological_resources: boolean;

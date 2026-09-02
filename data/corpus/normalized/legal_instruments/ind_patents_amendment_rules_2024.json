@@ -1,0 +1,95 @@
+{
+  "document_id": "IND_PATENTS_AMENDMENT_RULES_2024",
+  "title": "The Patents (Amendment) Rules, 2024 (G.S.R. 211(E))",
+  "short_title": "Patents (Amendment) Rules 2024",
+  "jurisdiction": "IN",
+  "country": "India",
+  "authority": "Intellectual Property India (CGPDTM)",
+  "issuing_body": "Ministry of Commerce and Industry (DPIIT)",
+  "domain": ["PATENTS", "INTELLECTUAL_PROPERTY", "PROCEDURE"],
+  "document_type": "RULES",
+  "authority_level": 4,
+  "source": {
+    "url": "https://ipindia.gov.in/writereaddata/Portal/Images/pdf/Patents_Amendment_Rules_2024.pdf",
+    "source_type": "OFFICIAL_GAZETTE_EXTRAORDINARY",
+    "retrieved_at": "2026-08-31",
+    "file_name": "patents_amendment_rules_2024.pdf",
+    "extracted_text_path": "data/corpus/extracted/ind_patents_amendment_rules_2024.txt",
+    "mime_type": "application/pdf",
+    "storage_uri": "gs://ayuraksha-corpus/raw/india/ip/patents/patents_amendment_rules_2024.pdf"
+  },
+  "version": {
+    "published_date": "2024-03-15",
+    "effective_from": "2024-03-15",
+    "effective_until": null,
+    "version_label": "G.S.R. 211(E) Notification",
+    "supersedes_version": "Patents Rules 2003 (as amended 2021)"
+  },
+  "provisions": [
+    {
+      "provision_id": "PATENTS_RULES_2024_RULE_012",
+      "type": "RULE",
+      "number": "Rule 12 (as amended 2024)",
+      "heading": "Statement and Undertaking Regarding Foreign Applications (Form 3)",
+      "text": "The applicant shall file the statement and undertaking under sub-section (1) of section 8 in Form 3 within three months from the date of issuance of the first statement of objections (FER), rather than periodic six-month updates. The Controller may utilize accessible databases including WIPO CASE to verify foreign filing details, reducing compliance burdens on applicants.",
+      "location": {
+        "chapter": "Chapter III",
+        "page_start": 3,
+        "page_end": 4
+      },
+      "topics": ["FORM_3", "FOREIGN_APPLICATIONS", "SECTION_8", "COMPLIANCE_EASE"],
+      "statutory_significance": "Crucial procedural shift for AYUSH innovators filing patent applications in both India and foreign jurisdictions (US, EU, PCT)."
+    },
+    {
+      "provision_id": "PATENTS_RULES_2024_RULE_024B",
+      "type": "RULE",
+      "number": "Rule 24B (as amended 2024)",
+      "heading": "Request for Examination (Form 18) Timeline Reduction",
+      "text": "The period for filing a Request for Examination under section 11B shall be thirty-one months (31 months) from the date of priority of the application or from the date of filing of the application, whichever is earlier, for all patent applications filed on or after 15th March, 2024 (shortened from the erstwhile 48 months).",
+      "location": {
+        "chapter": "Chapter IV",
+        "page_start": 4,
+        "page_end": 5
+      },
+      "topics": ["REQUEST_FOR_EXAMINATION", "RFE", "FORM_18", "TIMELINE_ACCELERATION"],
+      "statutory_significance": "Significantly accelerates examination cycle for Ayurvedic biotech and herbal formulations, requiring earlier filing of Form 18."
+    },
+    {
+      "provision_id": "PATENTS_RULES_2024_RULE_131",
+      "type": "RULE",
+      "number": "Rule 131 (as amended 2024)",
+      "heading": "Form and Manner of Statements Concerning the Commercial Working of Patents (Form 27)",
+      "text": "The statement regarding commercial working of patented inventions shall be furnished once in respect of every period of three financial years, starting from the financial year commencing immediately after the financial year in which the patent was granted, within six months from the expiry of each such period. Annual filing of Form 27 is no longer required.",
+      "location": {
+        "chapter": "Chapter XV",
+        "page_start": 7,
+        "page_end": 8
+      },
+      "topics": ["FORM_27", "WORKING_OF_PATENTS", "COMMERCIAL_EXPLOITATION", "THREE_YEAR_REPORTING"],
+      "statutory_significance": "Substantial relief for Ayurvedic pharmaceutical patent holders; commercial working reporting moved from annual to once every three years."
+    },
+    {
+      "provision_id": "PATENTS_RULES_2024_RULE_138",
+      "type": "RULE",
+      "number": "Rule 138 (as amended 2024)",
+      "heading": "Power to Extend Time and Condonation of Delay",
+      "text": "The Controller may extend the time for doing any act or taking any proceeding under these rules for a period of up to six months, or condone any delay in doing such act, upon a petition filed in Form 4 before the expiry of the said period of six months.",
+      "location": {
+        "chapter": "Chapter XV",
+        "page_start": 8,
+        "page_end": 9
+      },
+      "topics": ["EXTENSION_OF_TIME", "CONDONATION_OF_DELAY", "FORM_4", "CONTROLLER_DISCRETION"],
+      "statutory_significance": "Provides flexible mechanism for Ayush startups and university researchers to condone procedural delays in patent prosecution."
+    }
+  ],
+  "knowledge_relations": [
+    {
+      "target_source_id": "IND_PATENTS_ACT_1970",
+      "relation_type": "AMENDS_RULES_UNDER",
+      "target_label": "Patents Act, 1970 (Sections 8, 11B, 146, 159)",
+      "evidence": "Notified under the powers conferred by Section 159 of the Patents Act, 1970 to modernize prosecution timelines and Form 27/Form 3 filings.",
+      "confidence": 1.0
+    }
+  ]
+}

@@ -11,15 +11,15 @@ import {
   Shield,
   ExternalLink,
   X,
-  Bot,
   User,
   PanelLeftClose,
   PanelLeftOpen,
   ArrowUpRight,
   FileText,
   Globe,
-  AlertTriangle
-  ,ArrowLeft
+  AlertTriangle,
+  ArrowLeft,
+  Sparkles
 } from 'lucide-react';
 import { api } from './services/api';
 import { Citation, StructuredAnswer, Jurisdiction } from './types';
@@ -28,6 +28,7 @@ import { IPMatrixView } from './components/cards/IPMatrixView';
 import { ABSWizard } from './components/wizards/ABSWizard';
 import { CorpusExplorer } from './components/corpus/CorpusExplorer';
 import { CitationModal } from './components/modals/CitationModal';
+import { StatutoryMarkdownRenderer } from './components/common/StatutoryMarkdownRenderer';
 import { ComplianceDossierModal } from './components/common/ComplianceDossierModal';
 
 interface ChatMessage {
@@ -44,12 +45,13 @@ export function App() {
   const [activeView, setActiveView] = useState<ActiveView>('chat');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [jurisdiction, setJurisdiction] = useState<Jurisdiction>('IN');
-  const [language, setLanguage] = useState<'en' | 'hi'>('en');
+  const [language, setLanguage] = useState<'en' | 'hi' | 'sa'>('en');
   const [inputQuery, setInputQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [selectedCitation, setSelectedCitation] = useState<Citation | null>(null);
   const [inspectorCitation, setInspectorCitation] = useState<Citation | null>(null);
   const [isDossierOpen, setIsDossierOpen] = useState(false);
+  const [currentStage, setCurrentStage] = useState<string | null>(null);
 
   // Chat conversation messages
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -103,34 +105,108 @@ export function App() {
       textareaRef.current.style.height = 'auto';
     }
     setLoading(true);
+    setCurrentStage('Analyzing query & detecting statutory jurisdiction...');
 
-    try {
-      const response = await api.askAyuRaksha(textToSend, jurisdiction, language);
-      const assistantMsg: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        sender: 'assistant',
-        text: response.direct_answer,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        answerData: response
-      };
-      setMessages((prev) => [...prev, assistantMsg]);
+    const assistantMsgId = (Date.now() + 1).toString();
+    let accumulatedText = '';
 
-      const citations = response.verified_claims?.flatMap((c) => c.supporting_citations) || [];
-      if (citations.length > 0) {
-        setInspectorCitation(citations[0]);
+    await api.streamChatQuery(
+      textToSend,
+      jurisdiction,
+      language,
+      (stageData) => {
+        setCurrentStage(stageData.message);
+      },
+      (token) => {
+        accumulatedText += token;
+        setMessages((prev) => {
+          const existing = prev.find((m) => m.id === assistantMsgId);
+          if (existing) {
+            return prev.map((m) => (m.id === assistantMsgId ? { ...m, text: accumulatedText } : m));
+          } else {
+            return [
+              ...prev,
+              {
+                id: assistantMsgId,
+                sender: 'assistant',
+                text: accumulatedText,
+                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+              }
+            ];
+          }
+        });
+      },
+      (structuredResult) => {
+        setCurrentStage(null);
+        setMessages((prev) => {
+          const existing = prev.find((m) => m.id === assistantMsgId);
+          if (existing) {
+            return prev.map((m) =>
+              m.id === assistantMsgId
+                ? { ...m, text: structuredResult.direct_answer, answerData: structuredResult }
+                : m
+            );
+          } else {
+            return [
+              ...prev,
+              {
+                id: assistantMsgId,
+                sender: 'assistant',
+                text: structuredResult.direct_answer,
+                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                answerData: structuredResult
+              }
+            ];
+          }
+        });
+
+        const citations = structuredResult.verified_claims?.flatMap((c) => c.supporting_citations) || [];
+        if (citations.length > 0) {
+          setInspectorCitation(citations[0]);
+        }
+      },
+      async (err) => {
+        console.warn('Stream failed, falling back to sync query:', err);
+        try {
+          const fallback = await api.askAyuRaksha(textToSend, jurisdiction, language);
+          setMessages((prev) => {
+            const filtered = prev.filter((m) => m.id !== assistantMsgId);
+            return [
+              ...filtered,
+              {
+                id: assistantMsgId,
+                sender: 'assistant',
+                text: fallback.direct_answer,
+                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                answerData: fallback
+              }
+            ];
+          });
+          const citations = fallback.verified_claims?.flatMap((c) => c.supporting_citations) || [];
+          if (citations.length > 0) {
+            setInspectorCitation(citations[0]);
+          }
+        } catch (syncErr) {
+          setMessages((prev) => {
+            const filtered = prev.filter((m) => m.id !== assistantMsgId);
+            return [
+              ...filtered,
+              {
+                id: assistantMsgId,
+                sender: 'assistant',
+                text: 'AyuRaksha decision engine is processing requests. Please verify your backend server connection.',
+                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+              }
+            ];
+          });
+        } finally {
+          setCurrentStage(null);
+        }
       }
-    } catch (err) {
-      console.error('Chat error', err);
-      const errorMsg: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        sender: 'assistant',
-        text: 'AyuRaksha decision engine is processing requests. Please verify your backend server connection.',
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
-      setMessages((prev) => [...prev, errorMsg]);
-    } finally {
-      setLoading(false);
-    }
+    );
+
+    setLoading(false);
+    setCurrentStage(null);
   };
 
   const promptStarters = [
@@ -363,14 +439,89 @@ export function App() {
               )}
             </div>
 
-            <div className="flex items-center space-x-3 text-xs">
+            <div className="flex items-center space-x-2.5 text-xs">
+              {/* Jurisdiction Toggle (SIH 26045 Isolation) */}
+              <div className="hidden md:flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+                <button
+                  onClick={() => setJurisdiction('IN')}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    jurisdiction === 'IN'
+                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="Indian Domestic Statutory Framework"
+                >
+                  🇮🇳 India
+                </button>
+                <button
+                  onClick={() => setJurisdiction('INT')}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    jurisdiction === 'INT'
+                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="International Treaties & Export Regimes"
+                >
+                  🌐 International
+                </button>
+                <button
+                  onClick={() => setJurisdiction('CROSS_BORDER')}
+                  className={`px-2.5 py-1 rounded-lg transition-all ${
+                    jurisdiction === 'CROSS_BORDER'
+                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="Visibly Isolated Dual-Pane Compliance"
+                >
+                  ⚖️ Cross-Border
+                </button>
+              </div>
+
+              {/* Digital India Bhashini Language Toggle */}
+              <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
+                <Globe className="w-3.5 h-3.5 text-slate-500 ml-1.5 mr-0.5" />
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`px-2 py-1 rounded-lg transition-all ${
+                    language === 'en'
+                      ? 'bg-white text-slate-900 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="English"
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage('hi')}
+                  className={`px-2 py-1 rounded-lg transition-all ${
+                    language === 'hi'
+                      ? 'bg-white text-slate-900 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="Digital India Bhashini Hindi Translation"
+                >
+                  हिन्दी
+                </button>
+                <button
+                  onClick={() => setLanguage('sa')}
+                  className={`px-2 py-1 rounded-lg transition-all ${
+                    language === 'sa'
+                      ? 'bg-white text-slate-900 shadow-sm font-bold'
+                      : 'text-slate-600 hover:text-slate-900'
+                  }`}
+                  title="Sanskrit (Devanagari)"
+                >
+                  संस्कृतम्
+                </button>
+              </div>
+
               <motion.button
                 whileHover={{ scale: 0.97 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsDossierOpen(true)}
-                className="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-bold transition-all border border-slate-200 flex items-center space-x-2 shadow-subtle group"
+                className="px-3.5 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-bold transition-all border border-slate-200 flex items-center space-x-1.5 shadow-subtle group"
               >
-                <FileText className="w-4 h-4 text-ayush-saffron group-hover:text-ayush-saffronLight transition-colors" />
+                <FileText className="w-3.5 h-3.5 text-ayush-saffron group-hover:text-ayush-saffronLight transition-colors" />
                 <span className="hidden sm:inline">Compliance Dossier</span>
               </motion.button>
             </div>
@@ -459,13 +610,51 @@ export function App() {
                         }`}
                       >
                         {/* Message Body */}
-                        <div className="whitespace-pre-line">
-                          {msg.text}
-                        </div>
+                        {msg.sender === 'assistant' ? (
+                          <StatutoryMarkdownRenderer
+                            content={msg.text}
+                            citations={msg.answerData?.citations || []}
+                            onCitationClick={(c) => setInspectorCitation(c)}
+                          />
+                        ) : (
+                          <div className="whitespace-pre-line">{msg.text}</div>
+                        )}
 
                         {/* Structured Findings & Citations */}
                         {msg.sender === 'assistant' && msg.answerData && (
                           <div className="space-y-6 pt-5 border-t border-slate-100 text-xs">
+                            {/* Dual-Pane Cross-Border Statutory View (SIH 26045 Isolation) */}
+                            {msg.answerData.cross_border_posture && (
+                              <div className="bg-gradient-to-br from-emerald-50/60 to-sky-50/60 p-5 rounded-[1.5rem] border border-emerald-200/80 space-y-3">
+                                <div className="flex items-center justify-between">
+                                  <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 bg-emerald-700 text-white rounded-md">
+                                    SIH 26045 Isolated Jurisdiction Framework
+                                  </span>
+                                  <span className="text-[10px] font-bold text-slate-500">
+                                    Domestic vs. Destination Regimes Kept Visibly Separate
+                                  </span>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs">
+                                  <div className="bg-white p-4 rounded-xl border border-emerald-200/90 shadow-sm space-y-2">
+                                    <h5 className="font-extrabold text-xs text-emerald-950 flex items-center space-x-1.5">
+                                      <span>🇮🇳 India Domestic Regulatory Posture</span>
+                                    </h5>
+                                    <div className="text-[11px] text-slate-700 whitespace-pre-line leading-relaxed">
+                                      {msg.answerData.cross_border_posture.india_posture}
+                                    </div>
+                                  </div>
+                                  <div className="bg-white p-4 rounded-xl border border-sky-200/90 shadow-sm space-y-2">
+                                    <h5 className="font-extrabold text-xs text-sky-950 flex items-center space-x-1.5">
+                                      <span>🌐 International Destination Posture</span>
+                                    </h5>
+                                    <div className="text-[11px] text-slate-700 whitespace-pre-line leading-relaxed">
+                                      {msg.answerData.cross_border_posture.international_posture}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+
                             {/* Assessment Table */}
                             {msg.answerData.assessment_table && Object.keys(msg.answerData.assessment_table).length > 0 && (
                               <div className="bg-slate-50/50 p-5 rounded-[1.5rem] border border-slate-100 space-y-3">
@@ -484,15 +673,26 @@ export function App() {
                             )}
 
                             {/* Citation Chips */}
-                            {msg.answerData.verified_claims.length > 0 && (
+                            {((msg.answerData.citations && msg.answerData.citations.length > 0) || (msg.answerData.verified_claims && msg.answerData.verified_claims.length > 0)) && (
                               <div className="space-y-3">
                                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                                   Verified Statutory Evidence
                                 </p>
                                 <div className="flex flex-wrap gap-2.5">
-                                  {msg.answerData.verified_claims
-                                    .flatMap((vc) => vc.supporting_citations)
-                                    .map((cit, idx) => (
+                                  {(() => {
+                                    const allCits = (msg.answerData.citations && msg.answerData.citations.length > 0)
+                                      ? msg.answerData.citations
+                                      : msg.answerData.verified_claims.flatMap((vc) => vc.supporting_citations);
+
+                                    const seen = new Set<string>();
+                                    const uniqueCits = allCits.filter((cit) => {
+                                      const key = `${cit.source_id}_${cit.section}`;
+                                      if (seen.has(key)) return false;
+                                      seen.add(key);
+                                      return true;
+                                    });
+
+                                    return uniqueCits.map((cit, idx) => (
                                       <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
@@ -509,7 +709,8 @@ export function App() {
                                         </span>
                                         <ArrowUpRight className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
                                       </motion.button>
-                                    ))}
+                                    ));
+                                  })()}
                                 </div>
                               </div>
                             )}
@@ -519,20 +720,25 @@ export function App() {
                     </motion.div>
                   ))}
 
-                  {/* Loading Skeleton */}
+                  {/* Real-Time Multi-Stage Loading Indicator */}
                   {loading && (
                     <motion.div 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="max-w-4xl mx-auto flex space-x-6"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="max-w-4xl mx-auto flex space-x-4 sm:space-x-6 w-full"
                     >
-                      <div className="w-10 h-10 rounded-[14px] bg-slate-100 text-slate-400 flex items-center justify-center shrink-0 border border-slate-100 mt-1">
-                        <Bot className="w-5 h-5" />
+                      <div className="w-8 h-8 rounded bg-ayush-forest/10 text-ayush-forest flex items-center justify-center shrink-0 mt-1">
+                        <Shield className="w-4 h-4" />
                       </div>
-                      <div className="bg-white border border-slate-100 p-8 rounded-[2rem] w-full max-w-md shadow-sm space-y-4">
-                        <div className="h-3 bg-slate-100 rounded-full w-3/4 animate-pulse" />
-                        <div className="h-3 bg-slate-100 rounded-full w-1/2 animate-pulse" />
-                        <div className="h-3 bg-slate-100 rounded-full w-5/6 animate-pulse" />
+                      <div className="bg-white border border-slate-200/90 p-5 rounded-2xl w-full max-w-lg shadow-sm space-y-3">
+                        <div className="flex items-center space-x-2 text-xs font-semibold text-ayush-forest">
+                          <Sparkles className="w-3.5 h-3.5 animate-spin text-emerald-600" />
+                          <span className="font-mono text-[11px]">{currentStage || 'Executing statutory RAG pipeline...'}</span>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="h-2 bg-slate-100 rounded-full w-4/5 animate-pulse" />
+                          <div className="h-2 bg-slate-100 rounded-full w-3/5 animate-pulse" />
+                        </div>
                       </div>
                     </motion.div>
                   )}

@@ -1,5 +1,6 @@
 import json
 import hashlib
+import re
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
@@ -15,18 +16,26 @@ class LegalDocumentChunker:
     def compute_sha256(self, content: str) -> str:
         return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
-    def parse_manifest(self) -> List[Dict[str, Any]]:
-        # Primary production manifest
-        manifest_v1 = self.corpus_root / "corpus_manifest.json"
-        if manifest_v1.exists():
-            with open(manifest_v1, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            return data.get("sources", [])
+    @staticmethod
+    def compute_file_sha256(filepath: Path) -> str:
+        hasher = hashlib.sha256()
+        with open(filepath, "rb") as f:
+            while chunk := f.read(65536):
+                hasher.update(chunk)
+        return hasher.hexdigest()
 
-        # Fallback manifest
+    def parse_manifest(self) -> List[Dict[str, Any]]:
+        # Check layer 2 manifest first
         manifest_v2 = self.corpus_root / "manifest" / "sources_manifest.json"
         if manifest_v2.exists():
             with open(manifest_v2, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return data.get("sources", [])
+
+        # Fallback to base manifest
+        manifest_v1 = self.corpus_root / "corpus_manifest.json"
+        if manifest_v1.exists():
+            with open(manifest_v1, "r", encoding="utf-8") as f:
                 data = json.load(f)
             return data.get("sources", [])
 
@@ -58,6 +67,16 @@ class LegalDocumentChunker:
         source_url = source_meta.get("url", "")
         source_sha256 = source_meta.get("sha256", "")
         raw_file_name = source_meta.get("file_name", "")
+
+        # Compute authentic cryptographic hash from disk file if available
+        raw_rel = source_data.get("extracted_text_path") or source_meta.get("extracted_text_path")
+        if raw_rel:
+            full_raw = Path(__file__).resolve().parents[3] / raw_rel
+            if full_raw.exists():
+                try:
+                    source_sha256 = self.compute_file_sha256(full_raw)
+                except Exception:
+                    pass
 
         # Format 1: Upgraded Normalized Provisions (Layer 2)
         if "provisions" in source_data:
@@ -154,6 +173,64 @@ class LegalDocumentChunker:
                     "authority_level": authority_level,
                     "domain": domains[0] if domains else "GENERAL",
                     "section_number": rule_num,
+                    "heading": heading,
+                    "text": combined_text,
+                    "raw_statute": text,
+                    "source_url": source_url,
+                    "source_sha256": source_sha256,
+                    "chunk_hash": self.compute_sha256(combined_text)
+                })
+
+        # Format 4: Regulations (e.g. FSSAI Ayurveda Aahara, NBA ABS)
+        elif "regulations" in source_data:
+            for reg in source_data["regulations"]:
+                reg_num = reg.get("regulation_number", "")
+                heading = reg.get("heading", "")
+                text = reg.get("text", "")
+                relevance = reg.get("relevance", "")
+
+                combined_text = f"[{title} - {reg_num}: {heading}]\n{text}"
+                if relevance:
+                    combined_text += f"\nStatutory Relevance: {relevance}"
+
+                chunks.append({
+                    "source_id": source_id,
+                    "source_title": title,
+                    "authority": authority,
+                    "jurisdiction": jurisdiction,
+                    "document_type": doc_type,
+                    "authority_level": authority_level,
+                    "domain": domains[0] if domains else "GENERAL",
+                    "section_number": reg_num,
+                    "heading": heading,
+                    "text": combined_text,
+                    "raw_statute": text,
+                    "source_url": source_url,
+                    "source_sha256": source_sha256,
+                    "chunk_hash": self.compute_sha256(combined_text)
+                })
+
+        # Format 5: Articles (e.g. International Treaties)
+        elif "articles" in source_data:
+            for art in source_data["articles"]:
+                art_num = art.get("article_number", "")
+                heading = art.get("heading", "")
+                text = art.get("text", "")
+                relevance = art.get("relevance", "")
+
+                combined_text = f"[{title} - {art_num}: {heading}]\n{text}"
+                if relevance:
+                    combined_text += f"\nStatutory Relevance: {relevance}"
+
+                chunks.append({
+                    "source_id": source_id,
+                    "source_title": title,
+                    "authority": authority,
+                    "jurisdiction": jurisdiction,
+                    "document_type": doc_type,
+                    "authority_level": authority_level,
+                    "domain": domains[0] if domains else "GENERAL",
+                    "section_number": art_num,
                     "heading": heading,
                     "text": combined_text,
                     "raw_statute": text,
@@ -320,15 +397,114 @@ class LegalDocumentChunker:
 
         return chunks
 
+    def extract_chunks_from_extracted_text(
+        self,
+        extracted_rel_path: str,
+        source_meta: Dict[str, Any]
+    ) -> List[Dict[str, Any]]:
+        """
+        Parses full authentic statute text into atomic section chunks using standard India Code formatting.
+        Extracts all enacted sections, titles, and verbatim text.
+        """
+        full_path = Path(__file__).resolve().parents[3] / extracted_rel_path
+        if not full_path.exists():
+            return []
+
+        try:
+            with open(full_path, "r", encoding="utf-8", errors="replace") as f:
+                content = f.read()
+        except Exception:
+            return []
+
+        source_id = source_meta.get("source_id", "UNKNOWN_SOURCE")
+        title = source_meta.get("title", source_meta.get("short_title", ""))
+        authority = source_meta.get("authority", "")
+        jurisdiction = source_meta.get("jurisdiction", "IN")
+        doc_type = source_meta.get("document_type", "ACT")
+        authority_level = source_meta.get("authority_level", 5)
+        source_url = source_meta.get("official_url", "")
+        file_sha256 = self.compute_file_sha256(full_path)
+
+        chunks = []
+
+        # Locate where enacted sections start (skip Table of Contents / Arrangement of Sections)
+        enacted_start = 0
+        match_enact = re.search(
+            r"(?:BE it enacted|CHAPTER I\s*\n\s*PRELIMINARY|CHAPTER I\s*\n\s*INTRODUCTORY)",
+            content,
+            re.IGNORECASE
+        )
+        if match_enact:
+            enacted_start = match_enact.start()
+
+        body_content = content[enacted_start:]
+
+        # Standard India Code section pattern: "<num>. <heading>.—<text>"
+        sec_pattern = re.compile(
+            r"\n\s*(?P<sec_num>\d+[A-Z]?)\.\s+(?P<heading>[^—\n\.\?]{3,80}?)(?:[—\.\-]|(?:\.\s*—))\s*(?P<body>[\s\S]*?)(?=\n\s*\d+[A-Z]?\.\s+[^—\n\.\?]{3,80}?(?:[—\.\-]|(?:\.\s*—))|\n\s*THE SCHEDULE|\Z)"
+        )
+
+        for match in sec_pattern.finditer(body_content):
+            sec_num = match.group("sec_num").strip()
+            heading = match.group("heading").strip()
+            body = match.group("body").strip()
+
+            # Clean out page headers and standalone page numbers
+            clean_body = re.sub(r"Central Drugs Standard.*Page \d+ of \d+", "", body, flags=re.IGNORECASE)
+            clean_body = re.sub(r"\n\s*\d+\s*\n", "\n", clean_body)
+            clean_body = re.sub(r"\s+", " ", clean_body).strip()
+
+            if len(clean_body) < 15:
+                continue
+
+            sec_display = f"Section {sec_num}"
+            combined_text = f"[{title} — {sec_display}: {heading}]\n{clean_body[:1200]}"
+
+            chunks.append({
+                "source_id": source_id,
+                "provision_id": f"{source_id}_SEC_{sec_num}",
+                "source_title": title,
+                "authority": authority,
+                "jurisdiction": jurisdiction,
+                "document_type": doc_type,
+                "authority_level": authority_level,
+                "domain": source_meta.get("domain", "PATENTS"),
+                "section_number": sec_display,
+                "heading": heading,
+                "text": combined_text,
+                "raw_statute": clean_body[:1000],
+                "source_url": source_url,
+                "source_sha256": file_sha256,
+                "chunk_hash": self.compute_sha256(combined_text)
+            })
+
+        return chunks
+
     def process_all_sources(self) -> List[Dict[str, Any]]:
         sources_meta = self.parse_manifest()
         all_chunks = []
         for src in sources_meta:
+            covered_sections = set()
             rel_path = src.get("normalized_file") or src.get("file_path", "")
             data = self.parse_source_file(rel_path)
             if data:
                 chunks = self.extract_chunks_from_source(data)
                 all_chunks.extend(chunks)
+                for c in chunks:
+                    sec_str = c.get("section_number", "")
+                    if sec_str:
+                        covered_sections.add(sec_str.lower().strip())
+
+            # Parse full-text statute from disk if available to achieve comprehensive section coverage
+            extracted_rel = src.get("extracted_text_path")
+            if extracted_rel:
+                raw_chunks = self.extract_chunks_from_extracted_text(extracted_rel, src)
+                for rc in raw_chunks:
+                    rc_sec = rc.get("section_number", "").lower().strip()
+                    # Include if not already covered by high-precision curated provision
+                    if rc_sec not in covered_sections:
+                        all_chunks.append(rc)
+                        covered_sections.add(rc_sec)
 
         # Include structured taxonomy chunks from CSVs
         csv_chunks = self.extract_chunks_from_csvs()

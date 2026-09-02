@@ -68,8 +68,8 @@ async def run_benchmark():
             if not ans.safe_abstention:
                 passed_abstention += 1
 
-        # 3. Check Citation Grounding
-        citations = ans.verified_claims[0].supporting_citations if ans.verified_claims else []
+        # 3. Check Citation Grounding & Provenance
+        citations = ans.citations if ans.citations else (ans.verified_claims[0].supporting_citations if ans.verified_claims else [])
         for cit in citations:
             total_citations_checked += 1
             if cit.section and cit.source_title:

@@ -1,0 +1,42 @@
+MINISTRY OF COMMERCE AND INDUSTRY
+(Department for Promotion of Industry and Internal Trade)
+NOTIFICATION
+New Delhi, the 15th March, 2024
+
+G.S.R. 211(E).—In exercise of the powers conferred by section 159 of the Patents Act, 1970 (39 of 1970), the Central Government hereby makes the following rules further to amend the Patents Rules, 2003, namely:—
+
+1. Short title and commencement.—
+(1) These rules may be called the Patents (Amendment) Rules, 2024.
+(2) They shall come into force on the date of their publication in the Official Gazette (15th March, 2024).
+
+2. In the Patents Rules, 2003 (hereinafter referred to as the principal rules), in rule 12,—
+(a) in sub-rule (1), for the words "six months", the words "three months from the date of issuance of first examination report" shall be substituted;
+(b) after sub-rule (1), the following sub-rule shall be inserted, namely:—
+"(1A) The Controller may use accessible public databases, including WIPO CASE, for considering the information relating to corresponding applications filed in a country outside India.";
+(c) in sub-rule (2), the Controller may direct the applicant to furnish a fresh statement and undertaking in Form 3 within two months from the date of such communication.
+
+3. In the principal rules, in rule 13, after sub-rule (2), the following sub-rule shall be inserted, namely:—
+"(3) An applicant may file one or more further applications (divisional applications) under section 16, including in respect of an invention disclosed in the provisional or complete specification or a further application filed under section 16."
+
+4. In the principal rules, in rule 24B, in sub-rule (1), in clause (i), for the words "forty-eight months", the words "thirty-one months" shall be substituted:
+Provided that for applications filed before the commencement of the Patents (Amendment) Rules, 2024, the period shall continue to be forty-eight months.
+
+5. In the principal rules, after rule 29, the following rule shall be inserted, namely:—
+"29A. Grace period.—An applicant desiring to avail the grace period under section 31 shall file an application in Form 31 accompanied by the fee specified in the First Schedule, with documentary evidence showing that the invention was displayed or exhibited in accordance with the provisions of section 31."
+
+6. In the principal rules, in rule 55, regarding pre-grant opposition,—
+(a) the procedure for representation under section 25(1) is streamlined to prevent frivolous applications against legitimate patent filings while maintaining third-party traditional knowledge objection rights;
+(b) the Controller shall first consider whether a prima facie case is made out before notifying the applicant.
+
+7. In the principal rules, after rule 70, the following rule shall be inserted, namely:—
+"70A. Certificate of inventorship.—The Controller may, upon an application in Form 8A along with the prescribed fee, issue a Certificate of Inventorship to an inventor named in an application for a patent or a granted patent."
+
+8. In the principal rules, in rule 80, after sub-rule (2), the following proviso shall be inserted, namely:—
+"Provided that a discount of ten per cent (10%) on the official fee shall be offered where the renewal fees are paid in advance through electronic mode for a period of not less than four years."
+
+9. In the principal rules, in rule 131, for sub-rule (2), the following sub-rule shall be substituted, namely:—
+"(2) The statement referred to in sub-rule (1) (Form 27 - Commercial Working of Patent) shall be furnished once in respect of every period of three financial years, starting from the financial year commencing immediately after the financial year in which the patent was granted, and shall be furnished within six months from the expiry of each such period:
+Provided that the Controller may call for such information from the patentee or licensee at any time where required."
+
+10. In the principal rules, for rule 138, the following rule shall be substituted, namely:—
+"138. Power to extend time and condone delay.—(1) The Controller may, upon a petition in Form 4 before the expiry of the period of six months, extend the time for doing any act or taking any proceeding under these rules, or condone any delay in doing so, for a period of up to six months."

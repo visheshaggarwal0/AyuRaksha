@@ -13,6 +13,7 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
     in_classical_text: true,
     is_formulation_modified: true,
     has_novel_excipients: false,
+    is_purified_standardized_fraction: false,
     intended_use: 'therapeutic',
     disease_treatment_claims: true,
     has_biological_resources: true,
@@ -186,6 +187,38 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
                     className="text-ayush-forest focus:ring-ayush-forest"
                   />
                   <span>No (General Wellness)</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Phytopharmaceutical Drug (Standardized Fraction) */}
+            <div className="p-4 rounded-xl border border-slate-200 bg-slate-50/70 space-y-2 md:col-span-2">
+              <label className="block text-xs font-bold text-ayush-navy">
+                6. Is this a Purified & Standardized Fraction (Phytopharmaceutical)?
+              </label>
+              <p className="text-[11px] text-ayush-slate">
+                Defined under Gazette G.S.R. 918(E) & New Drugs Rules 2019: minimum 4 analytical/bioactive marker compounds with specific extraction protocols, regulated directly by CDSCO (DCGI) rather than State Ayush SLAs.
+              </p>
+              <div className="flex space-x-4 pt-1">
+                <label className="flex items-center space-x-2 text-xs font-medium cursor-pointer">
+                  <input
+                    type="radio"
+                    name="phytopharmaceutical"
+                    checked={formData.is_purified_standardized_fraction}
+                    onChange={() => setFormData({ ...formData, is_purified_standardized_fraction: true })}
+                    className="text-ayush-forest focus:ring-ayush-forest"
+                  />
+                  <span>Yes (Standardized Bioactive Fraction / CDSCO Pathway)</span>
+                </label>
+                <label className="flex items-center space-x-2 text-xs font-medium cursor-pointer">
+                  <input
+                    type="radio"
+                    name="phytopharmaceutical"
+                    checked={!formData.is_purified_standardized_fraction}
+                    onChange={() => setFormData({ ...formData, is_purified_standardized_fraction: false })}
+                    className="text-ayush-forest focus:ring-ayush-forest"
+                  />
+                  <span>No (Crude Extract / Classical Whole Herb Formulation)</span>
                 </label>
               </div>
             </div>
