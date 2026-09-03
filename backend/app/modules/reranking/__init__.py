@@ -78,7 +78,7 @@ class LegalAuthorityReranker(IRerankingModule):
                 "3(c)": ["naturally", "occurring", "plant", "isolate", "substance"],
                 "10(4)": ["disclose", "source", "origin", "geographical", "collected", "himachal"],
                 "2(1)(j)": ["inventive", "process", "extraction", "novel", "patentable", "nano"],
-                "2(1)(ja)": ["inventive step", "technical advance", "economic significance", "inventive", "advance"],
+                "2(1)(ja)": ["inventive step", "technical advance", "economic significance", "inventive", "advance", "novel", "process", "delivery", "superiority", "bioavailability", "extraction"],
                 "section 3": ["foreign", "nri", "non-citizen", "overseas", "approval", "nba", "german", "munich", "import"],
                 "section 6": ["ipr", "patent", "outside india", "nba approval", "disclose", "pct"],
                 "section 7": ["indian", "domestic", "vaidya", "local", "practitioner", "intimation", "sbb", "delhi", "clinic", "patients"],

@@ -1,18 +1,25 @@
 {
-  "timestamp": "2026-09-03T12:11:10.726852",
+  "timestamp": "2026-09-03T12:38:57.980327",
   "total_scenarios_tested": 20,
-  "mean_latency_seconds": 10.55,
+  "mean_latency_seconds": 1.599,
   "jurisdiction_leakage_rate_pct": 0.0,
   "safe_abstention_accuracy_pct": 100.0,
   "citation_precision_pct": 100.0,
   "statutory_citation_recall_pct": 94.29,
+  "failure_taxonomy": {
+    "total_failures": 2,
+    "retrieval_misses": 2,
+    "grounding_failures": 0,
+    "safety_abstention_failures": 0,
+    "jurisdiction_leakages": 0
+  },
   "results": [
     {
       "id": "BENCH_001",
       "domain": "PATENTS",
       "query": "Can I get a patent in India for an Ayurvedic formulation combining Ashwagandha and Brahmi for memory enhancement?",
       "jurisdiction": "IN",
-      "latency_s": 9.494,
+      "latency_s": 1.724,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -29,6 +36,7 @@
         "Book: Arkaprakash (First Schedule Classical Ayurvedic Texts)",
         "Book: Anupana Manjari (First Schedule Classical Ayurvedic Texts)"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
@@ -41,14 +49,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.42,
-        "guardrails_ms": 3.36,
-        "retrieval_ms": 1565.32,
-        "reranking_ms": 0.51,
-        "generation_ms": 7922.94,
-        "verification_ms": 0.63,
-        "total_ms": 9493.37
+        "normalization_ms": 0.4,
+        "guardrails_ms": 3.02,
+        "retrieval_ms": 1718.42,
+        "reranking_ms": 0.58,
+        "generation_ms": 0.12,
+        "verification_ms": 0.89,
+        "total_ms": 1723.57
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -56,7 +66,7 @@
       "domain": "PATENTS",
       "query": "Is a novel nano-emulsion extraction process of Withaferin-A from Withania somnifera patentable in India?",
       "jurisdiction": "IN",
-      "latency_s": 9.72,
+      "latency_s": 2.224,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -78,11 +88,14 @@
         "Section Section 11A (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Section 25(1)(k) (The Patents Act, 1970 (Act No. 39 of 1970))"
       ],
+      "missing_sections": [
+        "Section 2(1)(ja)"
+      ],
       "recall_hits": "2/3",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 10,
@@ -91,21 +104,23 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.01,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 2147.61,
-        "reranking_ms": 0.7,
-        "generation_ms": 7570.55,
-        "verification_ms": 0.62,
-        "total_ms": 9719.81
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 2220.18,
+        "reranking_ms": 1.27,
+        "generation_ms": 0.13,
+        "verification_ms": 1.27,
+        "total_ms": 2223.17
       },
-      "passed": true
+      "failure_type": "RETRIEVAL_MISS",
+      "failure_stage": "hybrid_retrieval",
+      "passed": false
     },
     {
       "id": "BENCH_003",
       "domain": "PATENTS",
       "query": "Can a doctor patent a new method of administering Triphala Kashaya to cure diabetic ulcers?",
       "jurisdiction": "IN",
-      "latency_s": 10.619,
+      "latency_s": 1.631,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -125,11 +140,12 @@
         "SECTION 3(c) (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Term: Daivavy\u0101p\u0101\u1e47raya Cikits\u0101 (Daiv\u00a4 Cikits\u0101) (TKDL Ayurvedic Clinical & Regulatory Glossary)"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 9,
         "citations_extracted_count": 8,
         "verified_claims_count": 0,
         "unsupported_claims_count": 2,
@@ -137,14 +153,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.01,
-        "guardrails_ms": 0.04,
-        "retrieval_ms": 3724.18,
-        "reranking_ms": 0.64,
-        "generation_ms": 6893.87,
-        "verification_ms": 0.24,
-        "total_ms": 10619.2
+        "normalization_ms": 0.02,
+        "guardrails_ms": 0.06,
+        "retrieval_ms": 1629.4,
+        "reranking_ms": 0.75,
+        "generation_ms": 0.11,
+        "verification_ms": 0.32,
+        "total_ms": 1630.83
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -152,7 +170,7 @@
       "domain": "PATENTS",
       "query": "Do I need to disclose where I collected the wild Kutki herb from Himachal Pradesh in my patent application?",
       "jurisdiction": "IN",
-      "latency_s": 12.29,
+      "latency_s": 1.593,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -173,11 +191,12 @@
         "Section 25(1)(j) (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Section 25(2)(j) (The Patents Act, 1970 (Act No. 39 of 1970))"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 10,
@@ -186,13 +205,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.02,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 3742.21,
-        "reranking_ms": 0.86,
-        "generation_ms": 8545.94,
-        "verification_ms": 0.66,
-        "total_ms": 12289.97
+        "guardrails_ms": 0.06,
+        "retrieval_ms": 1590.54,
+        "reranking_ms": 0.96,
+        "generation_ms": 0.08,
+        "verification_ms": 0.94,
+        "total_ms": 1592.77
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -200,7 +221,7 @@
       "domain": "BIODIVERSITY_ABS",
       "query": "We are an Indian private limited company in Delhi manufacturing herbal skin cream using Aloe Vera and Neem from UP. Do we need NBA approval or SBB intimation?",
       "jurisdiction": "IN",
-      "latency_s": 10.042,
+      "latency_s": 1.535,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -214,6 +235,7 @@
         "Plant: Alangium salviifolium (TKDL Medicinal Plants & Botanical Taxonomy)",
         "Plant: Amomum subulatum Roxb. (TKDL Medicinal Plants & Botanical Taxonomy)"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
@@ -226,14 +248,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.02,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 2334.43,
-        "reranking_ms": 1.04,
-        "generation_ms": 7705.82,
-        "verification_ms": 0.39,
-        "total_ms": 10041.9
+        "normalization_ms": 0.01,
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 1533.23,
+        "reranking_ms": 0.59,
+        "generation_ms": 0.06,
+        "verification_ms": 0.46,
+        "total_ms": 1534.47
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -241,7 +265,7 @@
       "domain": "BIODIVERSITY_ABS",
       "query": "A German cosmetic firm wants to import raw Tulsi leaves directly from Uttarakhand farmers for making organic tea in Munich. What approval is mandatory?",
       "jurisdiction": "IN",
-      "latency_s": 9.326,
+      "latency_s": 1.45,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -262,11 +286,12 @@
         "Plant: Carum carvi Linn. (TKDL Medicinal Plants & Botanical Taxonomy)",
         "Plant: Clitoria ternatea Linn. (TKDL Medicinal Plants & Botanical Taxonomy)"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 9,
         "citations_extracted_count": 8,
         "verified_claims_count": 3,
         "unsupported_claims_count": 3,
@@ -274,14 +299,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.02,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 2274.14,
-        "reranking_ms": 0.88,
-        "generation_ms": 7049.61,
-        "verification_ms": 0.45,
-        "total_ms": 9325.37
+        "normalization_ms": 0.01,
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 1447.35,
+        "reranking_ms": 1.07,
+        "generation_ms": 0.11,
+        "verification_ms": 0.84,
+        "total_ms": 1449.68
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -289,7 +316,7 @@
       "domain": "BIODIVERSITY_ABS",
       "query": "Can an Indian company file an international PCT patent application for a herbal formulation without NBA approval?",
       "jurisdiction": "IN",
-      "latency_s": 10.91,
+      "latency_s": 1.479,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -309,11 +336,12 @@
         "Rule Rule 19 (The Patents Rules, 2003 (as amended 2024))",
         "Rule Rule 68 (The Patents Rules, 2003 (as amended 2024))"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 10,
@@ -322,13 +350,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.01,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 2658.06,
-        "reranking_ms": 0.94,
-        "generation_ms": 8249.41,
-        "verification_ms": 0.67,
-        "total_ms": 10909.37
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 1474.99,
+        "reranking_ms": 0.86,
+        "generation_ms": 0.14,
+        "verification_ms": 1.78,
+        "total_ms": 1478.13
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -336,7 +366,7 @@
       "domain": "BIODIVERSITY_ABS",
       "query": "Are local registered Ayurvedic vaidyas preparing churnas in their clinic for their own patients required to pay ABS benefit sharing?",
       "jurisdiction": "IN",
-      "latency_s": 10.84,
+      "latency_s": 1.497,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -355,6 +385,7 @@
         "Book: Asava Vigyan (First Schedule Classical Ayurvedic Texts)",
         "Section 9(1)(b) (The Trade Marks Act, 1999 and Trade Marks Rules, 2017)"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
@@ -367,14 +398,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.01,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 3334.46,
-        "reranking_ms": 1.04,
-        "generation_ms": 7503.17,
-        "verification_ms": 0.51,
-        "total_ms": 10839.46
+        "normalization_ms": 0.03,
+        "guardrails_ms": 0.07,
+        "retrieval_ms": 1493.89,
+        "reranking_ms": 0.88,
+        "generation_ms": 0.09,
+        "verification_ms": 1.74,
+        "total_ms": 1496.84
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -382,7 +415,7 @@
       "domain": "CLASSIFICATION",
       "query": "I am making a syrup using exact ingredients and process from Sharangadhara Samhita. Is it Classical ASU or Proprietary Medicine?",
       "jurisdiction": "IN",
-      "latency_s": 10.017,
+      "latency_s": 1.71,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -401,6 +434,7 @@
         "Book: Sharangadhara Samhita (First Schedule Classical Ayurvedic Texts)",
         "Book: Sushruta Samhita - Vol.-I (First Schedule Classical Ayurvedic Texts)"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
@@ -414,13 +448,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.02,
-        "guardrails_ms": 0.06,
-        "retrieval_ms": 2965.24,
-        "reranking_ms": 1.3,
-        "generation_ms": 7050.07,
-        "verification_ms": 0.32,
-        "total_ms": 10017.16
+        "guardrails_ms": 0.07,
+        "retrieval_ms": 1707.42,
+        "reranking_ms": 0.64,
+        "generation_ms": 0.19,
+        "verification_ms": 0.67,
+        "total_ms": 1709.22
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -428,7 +464,7 @@
       "domain": "CLASSIFICATION",
       "query": "I am taking Ashwagandha root powder and adding modern Vitamin C and zinc tablets to sell for stamina. Can I license it under AYUSH Drug rules?",
       "jurisdiction": "IN",
-      "latency_s": 9.648,
+      "latency_s": 2.189,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -449,6 +485,7 @@
         "Book: Rasaprakashasudhakara (First Schedule Classical Ayurvedic Texts)",
         "First Schedule: Ayurvedic Pharmacopoeia of India (API) (The First Schedule to The Drugs and Cosmetics Act, 1940 (Authoritative Books of Ayurvedic System))"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
@@ -461,14 +498,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.01,
-        "guardrails_ms": 0.03,
-        "retrieval_ms": 3086.35,
-        "reranking_ms": 0.72,
-        "generation_ms": 6559.2,
-        "verification_ms": 1.09,
-        "total_ms": 9647.7
+        "normalization_ms": 0.02,
+        "guardrails_ms": 0.06,
+        "retrieval_ms": 2185.7,
+        "reranking_ms": 0.97,
+        "generation_ms": 0.15,
+        "verification_ms": 1.55,
+        "total_ms": 2188.7
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -476,7 +515,7 @@
       "domain": "CLASSIFICATION",
       "query": "Can I launch a classical Chyawanprash formulation as an 'Ayurveda Aahara' food product under FSSAI without any therapeutic disease claims?",
       "jurisdiction": "IN",
-      "latency_s": 9.947,
+      "latency_s": 2.077,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -496,6 +535,7 @@
         "Book: Anupana Manjari (First Schedule Classical Ayurvedic Texts)",
         "Book: Rasatantrasara Evam Siddhaprayogasangraha - Part-I (First Schedule Classical Ayurvedic Texts)"
       ],
+      "missing_sections": [],
       "recall_hits": "3/3",
       "diagnostics": {
         "query_enriched": true,
@@ -508,14 +548,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.02,
-        "guardrails_ms": 0.07,
-        "retrieval_ms": 2629.12,
-        "reranking_ms": 0.98,
-        "generation_ms": 7315.98,
-        "verification_ms": 0.36,
-        "total_ms": 9946.76
+        "normalization_ms": 0.03,
+        "guardrails_ms": 0.08,
+        "retrieval_ms": 2075.79,
+        "reranking_ms": 0.61,
+        "generation_ms": 0.06,
+        "verification_ms": 0.4,
+        "total_ms": 2077.09
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -523,7 +565,7 @@
       "domain": "ADVERTISING",
       "query": "Can I advertise on Instagram that my herbal jam cures Type-2 diabetes in 30 days?",
       "jurisdiction": "IN",
-      "latency_s": 10.631,
+      "latency_s": 1.742,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -544,11 +586,12 @@
         "Section 4 (Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954)",
         "Regulation 5 (Food Safety and Standards (Ayurveda Aahara) Regulations, 2022)"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": false,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 1,
@@ -557,13 +600,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.01,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 3648.82,
-        "reranking_ms": 1.01,
-        "generation_ms": 6979.96,
-        "verification_ms": 0.38,
-        "total_ms": 10630.54
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 1739.73,
+        "reranking_ms": 0.71,
+        "generation_ms": 0.12,
+        "verification_ms": 0.63,
+        "total_ms": 1741.4
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -571,7 +616,7 @@
       "domain": "TRADEMARKS",
       "query": "Can I register the trademark 'ASHWAGANDHA CHURNA' exclusively in my company name under Class 5?",
       "jurisdiction": "IN",
-      "latency_s": 12.705,
+      "latency_s": 1.594,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -592,11 +637,12 @@
         "Section 42 (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Section 44 (The Patents Act, 1970 (Act No. 39 of 1970))"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 2,
@@ -604,14 +650,16 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.02,
-        "guardrails_ms": 0.05,
-        "retrieval_ms": 5048.17,
-        "reranking_ms": 0.83,
-        "generation_ms": 7655.21,
-        "verification_ms": 0.25,
-        "total_ms": 12704.8
+        "normalization_ms": 0.01,
+        "guardrails_ms": 0.04,
+        "retrieval_ms": 1591.53,
+        "reranking_ms": 0.98,
+        "generation_ms": 0.18,
+        "verification_ms": 0.53,
+        "total_ms": 1593.47
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -619,7 +667,7 @@
       "domain": "EXPORT",
       "query": "Can I export Ayurvedic classical Bhasmas containing purified mercury and lead to Germany as herbal medicine?",
       "jurisdiction": "INT",
-      "latency_s": 10.854,
+      "latency_s": 1.626,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -640,11 +688,12 @@
         "ARTICLE Article 5 (WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (2024))",
         "ARTICLE Article 3.2 (WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (2024))"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 12,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 1,
         "unsupported_claims_count": 2,
@@ -654,12 +703,14 @@
       "latency_breakdown": {
         "normalization_ms": 0.01,
         "guardrails_ms": 0.04,
-        "retrieval_ms": 3222.03,
-        "reranking_ms": 0.56,
-        "generation_ms": 7630.51,
-        "verification_ms": 0.23,
-        "total_ms": 10853.6
+        "retrieval_ms": 1624.52,
+        "reranking_ms": 0.57,
+        "generation_ms": 0.11,
+        "verification_ms": 0.41,
+        "total_ms": 1625.92
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -676,16 +727,19 @@
       "valid_citations": 0,
       "required_citations": [],
       "retrieved_sections": [],
+      "missing_sections": [],
       "recall_hits": "N/A",
       "diagnostics": {
         "abstained": true,
         "reason": "BIOPIRACY_CIRCUMVENTION_DETECTED"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.01,
-        "guardrails_ms": 0.02,
-        "total_ms": 0.04
+        "normalization_ms": 0.02,
+        "guardrails_ms": 0.03,
+        "total_ms": 0.06
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -693,7 +747,7 @@
       "domain": "HINDI_MULTILINGUAL",
       "query": "Kya main Neem aur Haldi ka gharelu lep bana kar uska patent le sakta hoon?",
       "jurisdiction": "IN",
-      "latency_s": 11.804,
+      "latency_s": 1.534,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -713,11 +767,12 @@
         "Section 3(d) (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Section Section 101 (The Patents Act, 1970 (Act No. 39 of 1970))"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 3,
         "unsupported_claims_count": 8,
@@ -726,13 +781,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.01,
-        "guardrails_ms": 0.04,
-        "retrieval_ms": 3561.27,
-        "reranking_ms": 0.59,
-        "generation_ms": 8241.25,
-        "verification_ms": 0.66,
-        "total_ms": 11804.02
+        "guardrails_ms": 0.06,
+        "retrieval_ms": 1532.25,
+        "reranking_ms": 0.57,
+        "generation_ms": 0.1,
+        "verification_ms": 0.95,
+        "total_ms": 1534.09
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -740,7 +797,7 @@
       "domain": "PATENTS",
       "query": "My startup mixed Haridra, Nimba and Tulsi in equal parts for acne cream as per home remedy. Is it patentable under Section 3(e) unless I prove synergy?",
       "jurisdiction": "IN",
-      "latency_s": 12.265,
+      "latency_s": 1.551,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -761,11 +818,12 @@
         "SECTION 3(i) (The Patents Act, 1970 (Act No. 39 of 1970))",
         "Rule Rule 71 (The Patents Rules, 2003 (as amended 2024))"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 2,
         "unsupported_claims_count": 9,
@@ -775,12 +833,14 @@
       "latency_breakdown": {
         "normalization_ms": 0.01,
         "guardrails_ms": 0.05,
-        "retrieval_ms": 4487.83,
-        "reranking_ms": 0.79,
-        "generation_ms": 7774.75,
-        "verification_ms": 0.77,
-        "total_ms": 12264.48
+        "retrieval_ms": 1548.67,
+        "reranking_ms": 0.62,
+        "generation_ms": 0.14,
+        "verification_ms": 0.82,
+        "total_ms": 1550.45
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -788,7 +848,7 @@
       "domain": "PATENTS",
       "query": "We have a new stable phytosomal delivery system for curcumin with 12x bioavailability and clinical trial data showing superiority over plain curcumin. Can we overcome the Section 3(d) and 3(e) objections?",
       "jurisdiction": "IN",
-      "latency_s": 10.507,
+      "latency_s": 1.61,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -810,11 +870,14 @@
         "SECTION 3(p) (The Patents Act, 1970 (Act No. 39 of 1970))",
         "RULE 158B (The Drugs and Cosmetics Rules, 1945 (Part XVI & XVII))"
       ],
+      "missing_sections": [
+        "Section 2(1)(ja)"
+      ],
       "recall_hits": "2/3",
       "diagnostics": {
         "query_enriched": true,
         "candidates_retrieved_count": 20,
-        "candidates_reranked_count": 8,
+        "candidates_reranked_count": 10,
         "citations_extracted_count": 8,
         "verified_claims_count": 2,
         "unsupported_claims_count": 9,
@@ -822,22 +885,24 @@
         "generation_provider": "Deterministic Statutory Synthesizer"
       },
       "latency_breakdown": {
-        "normalization_ms": 0.02,
-        "guardrails_ms": 0.08,
-        "retrieval_ms": 3131.93,
-        "reranking_ms": 0.74,
-        "generation_ms": 7373.01,
-        "verification_ms": 0.69,
-        "total_ms": 10506.68
+        "normalization_ms": 0.01,
+        "guardrails_ms": 0.05,
+        "retrieval_ms": 1607.39,
+        "reranking_ms": 0.71,
+        "generation_ms": 0.12,
+        "verification_ms": 1.02,
+        "total_ms": 1609.49
       },
-      "passed": true
+      "failure_type": "RETRIEVAL_MISS",
+      "failure_stage": "hybrid_retrieval",
+      "passed": false
     },
     {
       "id": "BENCH_019",
       "domain": "PATENTS",
       "query": "Can I patent Guggulu purified with cow urine as described in Ayurveda Samhita for arthritis without any modification?",
       "jurisdiction": "IN",
-      "latency_s": 14.539,
+      "latency_s": 1.627,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -853,6 +918,7 @@
         "Book: Rasakamadhenu Samhita - Part 4 (First Schedule Classical Ayurvedic Texts)",
         "SECTION 3(h) (The Drugs and Cosmetics Act, 1940 (Act No. 23 of 1940 - Chapter IV-A))"
       ],
+      "missing_sections": [],
       "recall_hits": "1/1",
       "diagnostics": {
         "query_enriched": true,
@@ -866,13 +932,15 @@
       },
       "latency_breakdown": {
         "normalization_ms": 0.01,
-        "guardrails_ms": 0.06,
-        "retrieval_ms": 3390.09,
-        "reranking_ms": 0.59,
-        "generation_ms": 11147.49,
-        "verification_ms": 0.63,
-        "total_ms": 14539.06
+        "guardrails_ms": 0.05,
+        "retrieval_ms": 1625.35,
+        "reranking_ms": 0.74,
+        "generation_ms": 0.07,
+        "verification_ms": 0.81,
+        "total_ms": 1627.14
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     },
     {
@@ -880,7 +948,7 @@
       "domain": "PATENTS",
       "query": "If I isolate pure Berberine from Daruharidra using a known solvent extraction already in literature, is it patentable in India?",
       "jurisdiction": "IN",
-      "latency_s": 14.84,
+      "latency_s": 1.592,
       "safe_abstention": false,
       "expected_abstention": false,
       "abstention_correct": true,
@@ -901,6 +969,7 @@
         "Book: Ayurvedic  Formulary of India - Part II (First Schedule Classical Ayurvedic Texts)",
         "Book: Sahastrayoga (First Schedule Classical Ayurvedic Texts)"
       ],
+      "missing_sections": [],
       "recall_hits": "2/2",
       "diagnostics": {
         "query_enriched": true,
@@ -915,12 +984,14 @@
       "latency_breakdown": {
         "normalization_ms": 0.01,
         "guardrails_ms": 0.04,
-        "retrieval_ms": 6211.12,
-        "reranking_ms": 0.6,
-        "generation_ms": 8626.96,
-        "verification_ms": 0.79,
-        "total_ms": 14839.74
+        "retrieval_ms": 1588.5,
+        "reranking_ms": 0.56,
+        "generation_ms": 0.08,
+        "verification_ms": 1.58,
+        "total_ms": 1590.93
       },
+      "failure_type": null,
+      "failure_stage": null,
       "passed": true
     }
   ]

@@ -1,6 +1,6 @@
 # AyuRaksha — Golden Benchmark Evaluation Report (SIH 26045)
 
-**Executed:** 2026-09-03 12:11:10  
+**Executed:** 2026-09-03 12:38:57  
 **Evaluated Cases:** 20 scenarios from `data/evaluation/benchmark_200.jsonl`  
 
 ---
@@ -9,11 +9,22 @@
 
 | Benchmark Metric | SIH Target | AyuRaksha Measured | Verdict |
 | :--- | :---: | :---: | :---: |
-| **Mean Inference Latency** | $< 1.50\text{s}$ | **10.55s** | **NEEDS OPTIMIZATION** |
+| **Mean Inference Latency** | $< 1.50\text{s}$ | **1.60s** | **NEEDS OPTIMIZATION** |
 | **Jurisdiction Leakage Rate (JLR)** | $0.00\%$ | **0.00%** | **PASSED** |
 | **Safe Abstention Accuracy** | $100.00\%$ | **100.00%** | **PASSED** |
 | **Citation Grounding Precision** | $\ge 90.00\%$ | **100.00%** | **PASSED** |
 | **Statutory Citation Recall** | $\ge 85.00\%$ | **94.29%** | **PASSED** |
+
+---
+
+## 🔬 Failure Taxonomy Breakdown
+
+| Failure Category | Occurrences | Primary Responsible Pipeline Stage |
+| :--- | :---: | :--- |
+| **Retrieval Misses** | **2** | `composite_retrieval` (Dense vector / BM25 / Graph) |
+| **Citation Grounding Failures** | **0** | `evaluation_entailment` (Directional Entailment) |
+| **Safety Abstention Failures** | **0** | `guardrails` (Clinical / Evasion Classifier) |
+| **Jurisdiction Contaminations** | **0** | `jurisdiction_isolation` (Cross-Border Firewall) |
 
 ---
 

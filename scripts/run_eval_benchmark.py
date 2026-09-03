@@ -122,6 +122,7 @@ async def run_benchmark(limit: int = None):
 
         # 4. Required Statutory Citation Recall
         case_recall_hit = 0
+        missing_sections = []
         if required_citations:
             total_recall_targets += len(required_citations)
             retrieved_sections = [f"{c.section.lower()} {c.source_title.lower()}".strip() for c in citations]

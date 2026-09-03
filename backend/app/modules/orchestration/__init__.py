@@ -146,7 +146,7 @@ class ModularOrchestrator(IOrchestrationModule):
         reranked_evidence = reranking_module.rerank(
             query=normalized_query,
             candidates=retrieval_result.candidates,
-            top_k=8
+            top_k=10
         )
         t_rerank_ms = round((time.perf_counter() - t_rerank_start) * 1000, 2)
 
