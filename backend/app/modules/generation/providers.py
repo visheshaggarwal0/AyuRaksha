@@ -19,6 +19,21 @@ class GeminiProvider(ILLMProvider):
         self._api_key = (api_key or settings.GEMINI_API_KEY or "").strip()
         self._model = model
         self._circuit_broken = False
+        self._last_token_usage = None
+
+    @property
+    def model_name(self) -> str:
+        return self._model
+
+    @property
+    def circuit_status(self) -> str:
+        if self._circuit_broken:
+            return "circuit_open"
+        return "healthy" if self.is_available() else "unavailable"
+
+    @property
+    def last_token_usage(self):
+        return self._last_token_usage
 
     @property
     def provider_name(self) -> str:
@@ -103,6 +118,14 @@ class GeminiProvider(ILLMProvider):
                             if parts:
                                 text = parts[0].get("text", "").strip()
                                 if text:
+                                    usage_meta = data.get("usageMetadata", {})
+                                    if usage_meta:
+                                        from app.telemetry.models import TokenUsage
+                                        self._last_token_usage = TokenUsage(
+                                            input_tokens=usage_meta.get("promptTokenCount"),
+                                            output_tokens=usage_meta.get("candidatesTokenCount"),
+                                            total_tokens=usage_meta.get("totalTokenCount")
+                                        )
                                     logger.info("Successfully received answer from Google Gemini (%s via v1beta)", mod)
                                     return text
                     elif resp.status_code in (401, 403):
@@ -131,6 +154,21 @@ class OpenRouterProvider(ILLMProvider):
         self._api_key = (api_key or settings.OPENROUTER_API_KEY or "").strip()
         self._model = model or settings.LLM_MODEL or "google/gemma-2-9b-it:free"
         self._circuit_broken = False
+        self._last_token_usage = None
+
+    @property
+    def model_name(self) -> str:
+        return self._model
+
+    @property
+    def circuit_status(self) -> str:
+        if self._circuit_broken:
+            return "circuit_open"
+        return "healthy" if self.is_available() else "unavailable"
+
+    @property
+    def last_token_usage(self):
+        return self._last_token_usage
 
     @property
     def provider_name(self) -> str:
@@ -187,6 +225,14 @@ class OpenRouterProvider(ILLMProvider):
                         if choices:
                             text = choices[0].get("message", {}).get("content", "").strip()
                             if text:
+                                usage = data.get("usage", {})
+                                if usage:
+                                    from app.telemetry.models import TokenUsage
+                                    self._last_token_usage = TokenUsage(
+                                        input_tokens=usage.get("prompt_tokens"),
+                                        output_tokens=usage.get("completion_tokens"),
+                                        total_tokens=usage.get("total_tokens")
+                                    )
                                 return text
                     elif resp.status_code in (401, 402, 403):
                         logger.warning("OpenRouter quota/auth rejected (%s). Tripping circuit breaker.", resp.status_code)
@@ -209,6 +255,21 @@ class GroqProvider(ILLMProvider):
         self._api_key = (api_key or settings.GROQ_API_KEY or "").strip()
         self._model = model
         self._circuit_broken = False
+        self._last_token_usage = None
+
+    @property
+    def model_name(self) -> str:
+        return self._model
+
+    @property
+    def circuit_status(self) -> str:
+        if self._circuit_broken:
+            return "circuit_open"
+        return "healthy" if self.is_available() else "unavailable"
+
+    @property
+    def last_token_usage(self):
+        return self._last_token_usage
 
     @property
     def provider_name(self) -> str:
@@ -253,6 +314,14 @@ class GroqProvider(ILLMProvider):
                     data = resp.json()
                     choices = data.get("choices", [])
                     if choices:
+                        usage = data.get("usage", {})
+                        if usage:
+                            from app.telemetry.models import TokenUsage
+                            self._last_token_usage = TokenUsage(
+                                input_tokens=usage.get("prompt_tokens"),
+                                output_tokens=usage.get("completion_tokens"),
+                                total_tokens=usage.get("total_tokens")
+                            )
                         return choices[0].get("message", {}).get("content", "").strip()
                 elif resp.status_code in (401, 403):
                     self._circuit_broken = True
@@ -270,6 +339,21 @@ class LocalOllamaProvider(ILLMProvider):
         self._base_url = base_url.rstrip("/")
         self._model = model
         self._circuit_broken = False
+        self._last_token_usage = None
+
+    @property
+    def model_name(self) -> str:
+        return self._model
+
+    @property
+    def circuit_status(self) -> str:
+        if self._circuit_broken:
+            return "circuit_open"
+        return "healthy" if self.is_available() else "unavailable"
+
+    @property
+    def last_token_usage(self):
+        return self._last_token_usage
 
     @property
     def provider_name(self) -> str:
@@ -308,6 +392,15 @@ class LocalOllamaProvider(ILLMProvider):
                     data = resp.json()
                     content = data.get("message", {}).get("content", "")
                     if content:
+                        prompt_eval = data.get("prompt_eval_count")
+                        eval_count = data.get("eval_count")
+                        if prompt_eval or eval_count:
+                            from app.telemetry.models import TokenUsage
+                            self._last_token_usage = TokenUsage(
+                                input_tokens=prompt_eval,
+                                output_tokens=eval_count,
+                                total_tokens=(prompt_eval or 0) + (eval_count or 0)
+                            )
                         return content.strip()
         except (httpx.ConnectError, httpx.TimeoutException):
             self._circuit_broken = True
@@ -320,6 +413,18 @@ class LocalOllamaProvider(ILLMProvider):
 
 class DeterministicStatutoryProvider(ILLMProvider):
     """Zero-crash, dynamically grounded statutory legal synthesis fallback."""
+
+    @property
+    def model_name(self) -> str:
+        return "statutory-rules-engine"
+
+    @property
+    def circuit_status(self) -> str:
+        return "ready"
+
+    @property
+    def last_token_usage(self):
+        return None
 
     @property
     def provider_name(self) -> str:

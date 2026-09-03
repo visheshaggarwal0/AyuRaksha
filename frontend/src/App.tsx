@@ -20,7 +20,8 @@ import {
   AlertTriangle,
   ArrowLeft,
   Sparkles,
-  Network
+  Network,
+  Activity
 } from 'lucide-react';
 import { api } from './services/api';
 import { Citation, StructuredAnswer, Jurisdiction } from './types';
@@ -32,6 +33,7 @@ import { KnowledgeGraphExplorer } from './components/graph/KnowledgeGraphExplore
 import { CitationModal } from './components/modals/CitationModal';
 import { StatutoryMarkdownRenderer } from './components/common/StatutoryMarkdownRenderer';
 import { ComplianceDossierModal } from './components/common/ComplianceDossierModal';
+import { ObservabilityConsole } from './components/observability/ObservabilityConsole';
 
 interface ChatMessage {
   id: string;
@@ -41,7 +43,7 @@ interface ChatMessage {
   answerData?: StructuredAnswer;
 }
 
-type ActiveView = 'chat' | 'classification' | 'ip_matrix' | 'abs_wizard' | 'corpus' | 'knowledge_graph';
+type ActiveView = 'chat' | 'classification' | 'ip_matrix' | 'abs_wizard' | 'corpus' | 'knowledge_graph' | 'observability';
 
 export function App() {
   const [activeView, setActiveView] = useState<ActiveView>('chat');
@@ -310,7 +312,8 @@ export function App() {
                       { id: 'ip_matrix', label: 'IP Opportunity Matrix', icon: Scale },
                       { id: 'abs_wizard', label: 'ABS Compliance Check', icon: Leaf },
                       { id: 'corpus', label: 'Statutory Corpus & TKDL', icon: BookOpen },
-                      { id: 'knowledge_graph', label: 'Knowledge Graph', icon: Network }
+                      { id: 'knowledge_graph', label: 'Knowledge Graph', icon: Network },
+                      { id: 'observability', label: 'Observability Console', icon: Activity }
                     ].map((item, idx) => (
                       <motion.button
                         key={item.id}
@@ -827,6 +830,13 @@ export function App() {
                     handleSendMessage(query);
                   }}
                 />
+              </div>
+            )}
+
+            {/* VIEW: OBSERVABILITY CONSOLE */}
+            {activeView === 'observability' && (
+              <div className="h-full overflow-y-auto">
+                <ObservabilityConsole />
               </div>
             )}
           </div>
