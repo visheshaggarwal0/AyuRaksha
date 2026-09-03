@@ -92,6 +92,9 @@ class AyuRakshaOrchestrator:
             abstention_reason=resp.abstention_reason.description if resp.abstention_reason else None,
             cross_border_posture=resp.cross_border_posture,
             language=resp.language,
+            execution_mode=getattr(resp, "execution_mode", "GUIDED_RAG"),
+            resolved_concepts=getattr(resp, "resolved_concepts", []),
+            evidence_pack=resp.evidence_pack.model_dump() if getattr(resp, "evidence_pack", None) else None,
             diagnostics=resp.diagnostics,
             latency_breakdown=resp.latency_breakdown
         )

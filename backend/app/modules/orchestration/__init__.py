@@ -21,6 +21,7 @@ from app.modules.reranking import reranking_module
 from app.modules.generation import generation_module
 from app.modules.citations import citation_module
 from app.modules.evaluation import evaluation_module
+from app.modules.concepts import concept_engine
 from app.ai.multilingual.bhashini import BhashiniService
 
 logger = logging.getLogger("AyuRaksha.Orchestration")
@@ -71,68 +72,10 @@ class ModularOrchestrator(IOrchestrationModule):
                 latency_breakdown={"normalization_ms": t_norm_ms, "guardrails_ms": t_guard_ms, "total_ms": total_ms}
             )
 
-        # 3. Independent / Composite Retrieval with Statutory Query Enrichment
+        # 3. Semantic Legal Concept Resolution & Query Expansion
         t_ret_start = time.perf_counter()
-        retrieval_query = normalized_query
-        q_lower = normalized_query.lower()
-        statutory_hooks = []
-
-        # Patents & Traditional Knowledge
-        if any(w in q_lower for w in ["patent", "patentable", "invention", "novelty", "inventive", "objection"]):
-            # Direct section hooks when explicitly queried
-            if "3(p)" in q_lower:
-                statutory_hooks.append("Section 3(p) traditional knowledge")
-            if "3(e)" in q_lower or "synergy" in q_lower or "admixture" in q_lower:
-                statutory_hooks.append("Section 3(e) mere admixture aggregation components")
-            if "3(d)" in q_lower or "efficacy" in q_lower or "bioavailability" in q_lower:
-                statutory_hooks.append("Section 3(d) new form enhanced efficacy")
-            if "3(i)" in q_lower:
-                statutory_hooks.append("Section 3(i) medicinal method of treatment")
-            if "2(1)(j)" in q_lower or "2(1)(ja)" in q_lower or "inventive step" in q_lower:
-                statutory_hooks.extend(["Section 2(1)(j) invention product process", "Section 2(1)(ja) inventive step"])
-
-            if any(w in q_lower for w in ["ayurvedic", "herbal", "traditional", "extract", "formulation", "combining", "mixture", "mixed", "mixing", "neem", "nimba", "haldi", "haridra", "churna", "ashwagandha", "brahmi", "guggulu", "samhita", "purified", "cow urine", "tulsi", "home remedy"]):
-                statutory_hooks.extend(["Section 3(p) traditional knowledge", "Section 3(e) mere admixture aggregation components"])
-            if any(w in q_lower for w in ["process", "extraction", "novel", "nano", "isolate", "withaferin", "curcumin", "phytosomal", "bioavailability"]):
-                statutory_hooks.extend(["Section 2(1)(j) invention product process", "Section 2(1)(ja) inventive step", "Section 3(d) new form efficacy"])
-            if any(w in q_lower for w in ["method", "treatment", "cure", "administer", "doctor", "ulcer", "disease"]):
-                statutory_hooks.extend(["Section 3(i) medicinal method of treatment"])
-            if any(w in q_lower for w in ["disclose", "source", "origin", "collected", "himachal"]):
-                statutory_hooks.extend(["Section 10(4) biological source origin", "Section 6 BDA approval"])
-
-        # Multilingual / Romanized Hindi queries
-        elif any(w in q_lower for w in ["kya", "kaise", "sakta", "hai", "ho sakta"]):
-            statutory_hooks.extend(["Section 3(p) traditional knowledge", "Section 3(e) mere admixture"])
-
-        # Biodiversity & ABS
-        if any(w in q_lower for w in ["biodiversity", "abs", "nba", "sbb", "biological", "vaidya", "vaidyas", "tulsi", "leaves", "farmers", "uttarakhand"]):
-            if any(w in q_lower for w in ["pct", "international", "outside india", "foreign patent"]):
-                statutory_hooks.extend(["Section 6 NBA approval for intellectual property rights"])
-            if any(w in q_lower for w in ["vaidya", "vaidyas", "clinic", "patients", "indigenous"]):
-                statutory_hooks.extend(["Section 7 proviso exemption for local vaidyas and hakims"])
-            elif any(w in q_lower for w in ["indian", "domestic", "company", "private limited", "delhi"]):
-                statutory_hooks.extend(["Section 7 SBB prior intimation"])
-            if any(w in q_lower for w in ["foreign", "nri", "overseas", "german", "munich", "import"]):
-                statutory_hooks.extend(["Section 3 NBA prior approval", "Section 19 Form I"])
-
-        # Classification (Classical vs Proprietary ASU vs Ayurveda Aahara vs Phytopharmaceutical)
-        if any(w in q_lower for w in ["phytopharmaceutical", "cdsco", "standardized fraction", "fractions", "purified fraction"]):
-            statutory_hooks.extend(["Rule 122E phytopharmaceutical drug", "Form CT-18 CDSCO approval", "minimum four bioactive markers"])
-        elif any(w in q_lower for w in ["classical", "proprietary", "samhita", "asu", "shastriya", "syrup", "license", "ayush drug", "classify"]):
-            statutory_hooks.extend(["Section 3(a) ASU classical definition", "First Schedule authoritative books", "Rule 158B proprietary medicine"])
-        if any(w in q_lower for w in ["aahara", "food", "supplement", "fssai"]):
-            statutory_hooks.extend(["Regulation 3 synthetic vitamins prohibited", "Regulation 2(1)(a) Ayurveda Aahara definition", "Regulation 5", "Schedule A"])
-
-        # Trademarks & Generic Drug Names
-        if any(w in q_lower for w in ["trademark", "trade mark", "brand", "class 5", "register", "churna"]):
-            statutory_hooks.extend(["Section 9(1)(b) descriptive character", "Section 13 generic names prohibited"])
-
-        # Export & International Standards
-        if any(w in q_lower for w in ["export", "germany", "europe", "eu", "us fda", "fda", "bhasma", "lead", "mercury", "heavy metal"]):
-            statutory_hooks.extend(["Directive 2004/24/EC EU THMPD traditional herbal", "Heavy metal standards limits quality control"])
-
-        if statutory_hooks:
-            retrieval_query = f"{normalized_query} {' '.join(statutory_hooks)}"
+        resolved_concepts = concept_engine.resolve_concepts(normalized_query)
+        retrieval_query = concept_engine.expand_retrieval_query(normalized_query, resolved_concepts)
 
         retrieval_result: RetrievalResult = await retrieval_module.retrieve(
             query=retrieval_query,
@@ -148,6 +91,10 @@ class ModularOrchestrator(IOrchestrationModule):
             candidates=retrieval_result.candidates,
             top_k=10
         )
+        t_rerank_ms = round((time.perf_counter() - t_rerank_start) * 1000, 2)
+
+        # Build Canonical EvidencePack for UI, Citation Drawer, and LLM Context
+        evidence_pack = concept_engine.build_evidence_pack(reranked_evidence)
         t_rerank_ms = round((time.perf_counter() - t_rerank_start) * 1000, 2)
 
         # 5. Pluggable Generation
@@ -274,6 +221,9 @@ class ModularOrchestrator(IOrchestrationModule):
             confidence=confidence,
             safe_abstention=False,
             language=eff_lang,
+            execution_mode="GUIDED_RAG",
+            resolved_concepts=[c.concept_id for c in resolved_concepts],
+            evidence_pack=evidence_pack,
             trace_id=trace_id,
             diagnostics=diagnostics,
             latency_breakdown=latency_breakdown

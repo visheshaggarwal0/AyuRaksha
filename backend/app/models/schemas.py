@@ -45,6 +45,9 @@ class StructuredAnswer(BaseModel):
     recommended_next_action: str
     cross_border_posture: Optional[Dict[str, str]] = None
     language: str = "en"
+    execution_mode: str = "GUIDED_RAG"
+    resolved_concepts: List[str] = []
+    evidence_pack: Optional[Dict[str, Any]] = None
     diagnostics: Dict[str, Any] = {}
     latency_breakdown: Dict[str, float] = {}
 

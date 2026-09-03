@@ -130,10 +130,24 @@ class Evidence(BaseModel):
     verbatim_text: str = Field(..., description="Exact statutory text")
     authority: Optional[str] = Field(None, description="Issuing authority")
     authority_level: int = Field(default=4, ge=1, le=5)
+    jurisdiction: JurisdictionEnum = Field(default=JurisdictionEnum.IN)
+    provision: Optional[str] = Field(None, description="Formal provision identifier")
     relevance_score: float = Field(default=0.0, ge=0.0, le=1.0)
     retrieval_modality: RetrievalModality = Field(default=RetrievalModality.COMPOSITE)
     official_url: Optional[str] = None
     document_sha256: Optional[str] = None
+    verification_status: str = Field(default="VERIFIED", description="VERIFIED, PARTIALLY_SUPPORTED, or UNVERIFIED")
+
+
+class EvidencePack(BaseModel):
+    """Canonical grouped statutory evidence package delivered to UI and generator."""
+    model_config = ConfigDict(from_attributes=True)
+
+    primary_statutes: List[Evidence] = Field(default_factory=list, description="Primary Acts (e.g. Patents Act, BDA, DCA)")
+    implementing_rules: List[Evidence] = Field(default_factory=list, description="Subordinate Rules and Regulations")
+    international_treaties: List[Evidence] = Field(default_factory=list, description="International Treaties and Directives")
+    regulatory_guidelines: List[Evidence] = Field(default_factory=list, description="Guidelines, Standards, and FSSAI notifications")
+    total_count: int = Field(default=0)
 
 
 class Citation(BaseModel):
@@ -242,6 +256,9 @@ class RAGResponse(BaseModel):
     safe_abstention: bool = Field(default=False)
     abstention_reason: Optional[AbstentionReason] = None
     language: str = Field(default="en")
+    execution_mode: str = Field(default="GUIDED_RAG", description="DIRECT_STATUTORY, GUIDED_RAG, or MULTI_HOP_PLANNER")
+    resolved_concepts: List[str] = Field(default_factory=list, description="Detected legal concept tags")
+    evidence_pack: Optional[EvidencePack] = None
     trace_id: Optional[str] = None
     diagnostics: Dict[str, Any] = Field(default_factory=dict, description="Internal retrieval diagnostics")
     latency_breakdown: Dict[str, float] = Field(default_factory=dict, description="Stage latencies in milliseconds")
