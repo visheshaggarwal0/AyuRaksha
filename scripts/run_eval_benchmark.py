@@ -106,11 +106,17 @@ async def run_benchmark(limit: int = None):
             passed_abstention += 1
 
         # 3. Citation Grounding Precision
+        # Validates that citations are genuinely grounded with verified source, section, positive support score, and authentic verbatim statutory quote
         citations = ans.citations if ans.citations else []
         case_valid_citations = 0
         for cit in citations:
             total_citations_checked += 1
-            if cit.section and cit.source_title:
+            has_section = bool(cit.section and len(cit.section.strip()) >= 2)
+            has_source = bool(cit.source_id and len(cit.source_id.strip()) >= 3)
+            has_quote = bool(cit.verbatim_quote and len(cit.verbatim_quote.strip()) >= 15)
+            has_support = (cit.support_score or 0.0) > 0.0
+
+            if has_section and has_source and has_quote and has_support:
                 valid_citations += 1
                 case_valid_citations += 1
 
@@ -147,8 +153,25 @@ async def run_benchmark(limit: int = None):
                 if matched:
                     matched_recall_targets += 1
                     case_recall_hit += 1
+                else:
+                    missing_sections.append(req)
 
-        case_passed = is_jlr_clean and is_abstention_correct
+        case_passed = is_jlr_clean and is_abstention_correct and (case_recall_hit == len(required_citations) if required_citations else True)
+
+        failure_type = None
+        failure_stage = None
+        if not is_abstention_correct:
+            failure_type = "SAFETY_ABSTENTION_FAILURE"
+            failure_stage = "guardrails"
+        elif not is_jlr_clean:
+            failure_type = "JURISDICTION_LEAKAGE"
+            failure_stage = "jurisdiction_isolation"
+        elif required_citations and case_recall_hit < len(required_citations):
+            failure_type = "RETRIEVAL_MISS"
+            failure_stage = "hybrid_retrieval"
+        elif case_valid_citations < len(citations):
+            failure_type = "CITATION_GROUNDING_FAILURE"
+            failure_stage = "evaluation_entailment"
 
         case_results.append({
             "id": qid,
@@ -163,11 +186,17 @@ async def run_benchmark(limit: int = None):
             "citations_retrieved": len(citations),
             "valid_citations": case_valid_citations,
             "required_citations": required_citations,
+            "retrieved_sections": [f"{c.section} ({c.source_title})" for c in citations],
+            "missing_sections": missing_sections,
             "recall_hits": f"{case_recall_hit}/{len(required_citations)}" if required_citations else "N/A",
+            "diagnostics": getattr(ans, "diagnostics", {}),
+            "latency_breakdown": getattr(ans, "latency_breakdown", {}),
+            "failure_type": failure_type,
+            "failure_stage": failure_stage,
             "passed": case_passed
         })
 
-        status_flag = "PASS" if case_passed else "FAIL"
+        status_flag = "PASS" if case_passed else f"FAIL ({failure_type})"
         print(f"[{idx:02d}/{total_cases:02d}] {qid} ({domain[:14]:14s}) - {latency:0.2f}s - {status_flag}")
 
     # Compute Aggregates
@@ -177,6 +206,14 @@ async def run_benchmark(limit: int = None):
     citation_prec = (valid_citations / max(1, total_citations_checked)) * 100
     citation_recall = (matched_recall_targets / max(1, total_recall_targets)) * 100 if total_recall_targets else 100.0
 
+    failure_taxonomy = {
+        "total_failures": sum(1 for c in case_results if not c["passed"]),
+        "retrieval_misses": sum(1 for c in case_results if c.get("failure_type") == "RETRIEVAL_MISS"),
+        "grounding_failures": sum(1 for c in case_results if c.get("failure_type") == "CITATION_GROUNDING_FAILURE"),
+        "safety_abstention_failures": sum(1 for c in case_results if c.get("failure_type") == "SAFETY_ABSTENTION_FAILURE"),
+        "jurisdiction_leakages": sum(1 for c in case_results if c.get("failure_type") == "JURISDICTION_LEAKAGE")
+    }
+
     summary = {
         "timestamp": datetime.now().isoformat(),
         "total_scenarios_tested": total_cases,
@@ -185,6 +222,7 @@ async def run_benchmark(limit: int = None):
         "safe_abstention_accuracy_pct": round(abstention_acc, 2),
         "citation_precision_pct": round(citation_prec, 2),
         "statutory_citation_recall_pct": round(citation_recall, 2),
+        "failure_taxonomy": failure_taxonomy,
         "results": case_results
     }
 
@@ -209,6 +247,17 @@ async def run_benchmark(limit: int = None):
 | **Safe Abstention Accuracy** | $100.00\\%$ | **{abstention_acc:.2f}%** | **{'PASSED' if abstention_acc >= 95.0 else 'FAIL'}** |
 | **Citation Grounding Precision** | $\\ge 90.00\\%$ | **{citation_prec:.2f}%** | **{'PASSED' if citation_prec >= 90.0 else 'FAIL'}** |
 | **Statutory Citation Recall** | $\\ge 85.00\\%$ | **{citation_recall:.2f}%** | **{'PASSED' if citation_recall >= 85.0 else 'FAIL'}** |
+
+---
+
+## 🔬 Failure Taxonomy Breakdown
+
+| Failure Category | Occurrences | Primary Responsible Pipeline Stage |
+| :--- | :---: | :--- |
+| **Retrieval Misses** | **{failure_taxonomy['retrieval_misses']}** | `composite_retrieval` (Dense vector / BM25 / Graph) |
+| **Citation Grounding Failures** | **{failure_taxonomy['grounding_failures']}** | `evaluation_entailment` (Directional Entailment) |
+| **Safety Abstention Failures** | **{failure_taxonomy['safety_abstention_failures']}** | `guardrails` (Clinical / Evasion Classifier) |
+| **Jurisdiction Contaminations** | **{failure_taxonomy['jurisdiction_leakages']}** | `jurisdiction_isolation` (Cross-Border Firewall) |
 
 ---
 

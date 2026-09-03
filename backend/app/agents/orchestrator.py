@@ -91,7 +91,9 @@ class AyuRakshaOrchestrator:
             safe_abstention=resp.safe_abstention,
             abstention_reason=resp.abstention_reason.description if resp.abstention_reason else None,
             cross_border_posture=resp.cross_border_posture,
-            language=resp.language
+            language=resp.language,
+            diagnostics=resp.diagnostics,
+            latency_breakdown=resp.latency_breakdown
         )
 
     async def stream_query(

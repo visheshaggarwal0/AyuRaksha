@@ -97,3 +97,5 @@ tmp/
 # AI & Assistant Tool Artifacts
 .claude/
 .codex/
+.agents/
+.agent/

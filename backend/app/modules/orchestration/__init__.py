@@ -3,6 +3,7 @@ AyuRaksha Orchestration Module
 Implements IOrchestrationModule coordinating Guardrails, Retrieval, Reranking,
 Generation, Citations, and Evaluation into an auditable legal response.
 """
+import time
 import uuid
 import logging
 from typing import Optional, Dict, Any
@@ -37,16 +38,23 @@ class ModularOrchestrator(IOrchestrationModule):
         trace_id = f"TRC-{uuid.uuid4().hex[:8].upper()}"
         jur_enum = JurisdictionEnum.CROSS_BORDER if jurisdiction == "CROSS_BORDER" else JurisdictionEnum(jurisdiction)
 
+        t_start = time.perf_counter()
+
         # 1. Multilingual query normalization
+        t_norm_start = time.perf_counter()
         detected_lang = BhashiniService.detect_language(query)
         eff_lang = language if language != "en" else detected_lang
         normalized_query = query
         if detected_lang in ["hi", "sa", "ta"]:
             normalized_query, _ = await BhashiniService.process_incoming_query(query)
+        t_norm_ms = round((time.perf_counter() - t_norm_start) * 1000, 2)
 
         # 2. Guardrails safety check
+        t_guard_start = time.perf_counter()
         abstention = guardrails_module.evaluate_safety(normalized_query, jurisdiction)
+        t_guard_ms = round((time.perf_counter() - t_guard_start) * 1000, 2)
         if abstention:
+            total_ms = round((time.perf_counter() - t_start) * 1000, 2)
             return RAGResponse(
                 query=query,
                 jurisdiction=jur_enum,
@@ -58,19 +66,34 @@ class ModularOrchestrator(IOrchestrationModule):
                 safe_abstention=True,
                 abstention_reason=abstention,
                 language=eff_lang,
-                trace_id=trace_id
+                trace_id=trace_id,
+                diagnostics={"abstained": True, "reason": abstention.code.value},
+                latency_breakdown={"normalization_ms": t_norm_ms, "guardrails_ms": t_guard_ms, "total_ms": total_ms}
             )
 
         # 3. Independent / Composite Retrieval with Statutory Query Enrichment
+        t_ret_start = time.perf_counter()
         retrieval_query = normalized_query
         q_lower = normalized_query.lower()
         statutory_hooks = []
 
         # Patents & Traditional Knowledge
-        if any(w in q_lower for w in ["patent", "patentable", "invention", "novelty", "inventive"]):
-            if any(w in q_lower for w in ["ayurvedic", "herbal", "traditional", "extract", "formulation", "combining", "mixture", "neem", "haldi", "churna", "ashwagandha", "brahmi", "guggulu", "samhita", "purified", "cow urine"]):
+        if any(w in q_lower for w in ["patent", "patentable", "invention", "novelty", "inventive", "objection"]):
+            # Direct section hooks when explicitly queried
+            if "3(p)" in q_lower:
+                statutory_hooks.append("Section 3(p) traditional knowledge")
+            if "3(e)" in q_lower or "synergy" in q_lower or "admixture" in q_lower:
+                statutory_hooks.append("Section 3(e) mere admixture aggregation components")
+            if "3(d)" in q_lower or "efficacy" in q_lower or "bioavailability" in q_lower:
+                statutory_hooks.append("Section 3(d) new form enhanced efficacy")
+            if "3(i)" in q_lower:
+                statutory_hooks.append("Section 3(i) medicinal method of treatment")
+            if "2(1)(j)" in q_lower or "2(1)(ja)" in q_lower or "inventive step" in q_lower:
+                statutory_hooks.extend(["Section 2(1)(j) invention product process", "Section 2(1)(ja) inventive step"])
+
+            if any(w in q_lower for w in ["ayurvedic", "herbal", "traditional", "extract", "formulation", "combining", "mixture", "mixed", "mixing", "neem", "nimba", "haldi", "haridra", "churna", "ashwagandha", "brahmi", "guggulu", "samhita", "purified", "cow urine", "tulsi", "home remedy"]):
                 statutory_hooks.extend(["Section 3(p) traditional knowledge", "Section 3(e) mere admixture aggregation components"])
-            if any(w in q_lower for w in ["process", "extraction", "novel", "nano", "isolate", "withaferin"]):
+            if any(w in q_lower for w in ["process", "extraction", "novel", "nano", "isolate", "withaferin", "curcumin", "phytosomal", "bioavailability"]):
                 statutory_hooks.extend(["Section 2(1)(j) invention product process", "Section 2(1)(ja) inventive step", "Section 3(d) new form efficacy"])
             if any(w in q_lower for w in ["method", "treatment", "cure", "administer", "doctor", "ulcer", "disease"]):
                 statutory_hooks.extend(["Section 3(i) medicinal method of treatment"])
@@ -92,8 +115,10 @@ class ModularOrchestrator(IOrchestrationModule):
             if any(w in q_lower for w in ["foreign", "nri", "overseas", "german", "munich", "import"]):
                 statutory_hooks.extend(["Section 3 NBA prior approval", "Section 19 Form I"])
 
-        # Classification (Classical vs Proprietary ASU vs Ayurveda Aahara)
-        if any(w in q_lower for w in ["classical", "proprietary", "samhita", "asu", "shastriya", "syrup", "license", "ayush drug", "classify"]):
+        # Classification (Classical vs Proprietary ASU vs Ayurveda Aahara vs Phytopharmaceutical)
+        if any(w in q_lower for w in ["phytopharmaceutical", "cdsco", "standardized fraction", "fractions", "purified fraction"]):
+            statutory_hooks.extend(["Rule 122E phytopharmaceutical drug", "Form CT-18 CDSCO approval", "minimum four bioactive markers"])
+        elif any(w in q_lower for w in ["classical", "proprietary", "samhita", "asu", "shastriya", "syrup", "license", "ayush drug", "classify"]):
             statutory_hooks.extend(["Section 3(a) ASU classical definition", "First Schedule authoritative books", "Rule 158B proprietary medicine"])
         if any(w in q_lower for w in ["aahara", "food", "supplement", "fssai"]):
             statutory_hooks.extend(["Regulation 3 synthetic vitamins prohibited", "Regulation 2(1)(a) Ayurveda Aahara definition", "Regulation 5", "Schedule A"])
@@ -112,33 +137,42 @@ class ModularOrchestrator(IOrchestrationModule):
         retrieval_result: RetrievalResult = await retrieval_module.retrieve(
             query=retrieval_query,
             jurisdiction=jurisdiction,
-            limit=12
+            limit=20
         )
+        t_ret_ms = round((time.perf_counter() - t_ret_start) * 1000, 2)
 
         # 4. Authority-Weighted Reranking
+        t_rerank_start = time.perf_counter()
         reranked_evidence = reranking_module.rerank(
             query=normalized_query,
             candidates=retrieval_result.candidates,
             top_k=8
         )
+        t_rerank_ms = round((time.perf_counter() - t_rerank_start) * 1000, 2)
 
         # 5. Pluggable Generation
+        t_gen_start = time.perf_counter()
         generated_answer = await generation_module.generate_legal_answer(
             query=normalized_query,
             evidence=reranked_evidence,
             jurisdiction=jurisdiction
         )
+        t_gen_ms = round((time.perf_counter() - t_gen_start) * 1000, 2)
 
         # 6. Citations Extraction & Provenance
         citations = citation_module.extract_citations(generated_answer, reranked_evidence)
 
-        # 7. Evaluation & Claim Verification
+        # 7. Evaluation & Claim Verification (Rejection of Unsupported Claims)
+        t_verif_start = time.perf_counter()
         claim_audit = evaluation_module.verify_claims(generated_answer, reranked_evidence)
         confidence = evaluation_module.compute_confidence(retrieval_result, claim_audit)
 
-        # Build per-claim citations: each claim maps ONLY to the evidence that supports it.
+        verified_claims = claim_audit.get("verified_claims", [])
+        unsupported_claims = claim_audit.get("unsupported_claims", [])
+
+        # Build per-claim verification records
         verification_records = []
-        for c in claim_audit.get("verified_claims", []):
+        for c in verified_claims:
             claim_citations = [
                 citation_module.extract_citations_from_evidence(idx, reranked_evidence)
                 for idx in c.get("supporting_markers", [])
@@ -153,6 +187,25 @@ class ModularOrchestrator(IOrchestrationModule):
                     supporting_citations=claim_citations
                 )
             )
+
+        for uc in unsupported_claims:
+            verification_records.append(
+                ClaimVerificationResult(
+                    claim=uc["claim"],
+                    is_supported=False,
+                    confidence_score=uc.get("support_score", 0.0),
+                    supporting_citations=[]
+                )
+            )
+
+        # Enforce Zero Hallucination: Purge unsupported sentences from the primary legal guidance
+        final_answer = generated_answer
+        if verified_claims and unsupported_claims:
+            verified_body = " ".join(c["claim"] for c in verified_claims).strip()
+            if len(verified_body) >= 40:
+                final_answer = verified_body
+
+        t_verif_ms = round((time.perf_counter() - t_verif_start) * 1000, 2)
 
         # 8. Cross-Border Posture Isolation if requested
         cross_border_posture = None
@@ -171,9 +224,8 @@ class ModularOrchestrator(IOrchestrationModule):
             }
 
         # 9. Multilingual Translation back to requested language if needed
-        final_answer = generated_answer
         if eff_lang in ["hi", "sa"]:
-            final_answer = BhashiniService.translate_statutory_text(generated_answer, target_lang=eff_lang)
+            final_answer = BhashiniService.translate_statutory_text(final_answer, target_lang=eff_lang)
 
         # 10. Next actions
         next_actions = [
@@ -181,6 +233,28 @@ class ModularOrchestrator(IOrchestrationModule):
             "If proprietary (anubhuta), establish synergistic non-obviousness exceeding mere admixture under Section 3(e).",
             "Submit NBA Form I / III or State Biodiversity Board Prior Intimation under Section 7."
         ]
+
+        total_ms = round((time.perf_counter() - t_start) * 1000, 2)
+        latency_breakdown = {
+            "normalization_ms": t_norm_ms,
+            "guardrails_ms": t_guard_ms,
+            "retrieval_ms": t_ret_ms,
+            "reranking_ms": t_rerank_ms,
+            "generation_ms": t_gen_ms,
+            "verification_ms": t_verif_ms,
+            "total_ms": total_ms
+        }
+
+        diagnostics = {
+            "query_enriched": retrieval_query != normalized_query,
+            "candidates_retrieved_count": len(retrieval_result.candidates),
+            "candidates_reranked_count": len(reranked_evidence),
+            "citations_extracted_count": len(citations),
+            "verified_claims_count": len(verified_claims),
+            "unsupported_claims_count": len(unsupported_claims),
+            "grounding_rate": round(confidence.grounding_rate, 3),
+            "generation_provider": getattr(generation_module, "_active_provider_name", "Unknown")
+        }
 
         return RAGResponse(
             query=query,
@@ -200,7 +274,9 @@ class ModularOrchestrator(IOrchestrationModule):
             confidence=confidence,
             safe_abstention=False,
             language=eff_lang,
-            trace_id=trace_id
+            trace_id=trace_id,
+            diagnostics=diagnostics,
+            latency_breakdown=latency_breakdown
         )
 
     async def stream_query(

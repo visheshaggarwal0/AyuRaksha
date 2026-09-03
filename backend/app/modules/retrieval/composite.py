@@ -2,6 +2,7 @@
 Composite Multi-Modal Retrieval Module
 Implements IRetrievalModule by fusing independent vector, keyword, and graph retrievers with RRF.
 """
+import re
 import time
 import asyncio
 from typing import List, Optional, Dict, Any

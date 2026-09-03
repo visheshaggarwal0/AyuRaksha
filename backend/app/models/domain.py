@@ -243,3 +243,5 @@ class RAGResponse(BaseModel):
     abstention_reason: Optional[AbstentionReason] = None
     language: str = Field(default="en")
     trace_id: Optional[str] = None
+    diagnostics: Dict[str, Any] = Field(default_factory=dict, description="Internal retrieval diagnostics")
+    latency_breakdown: Dict[str, float] = Field(default_factory=dict, description="Stage latencies in milliseconds")

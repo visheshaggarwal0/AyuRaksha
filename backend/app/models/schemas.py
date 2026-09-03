@@ -45,6 +45,8 @@ class StructuredAnswer(BaseModel):
     recommended_next_action: str
     cross_border_posture: Optional[Dict[str, str]] = None
     language: str = "en"
+    diagnostics: Dict[str, Any] = {}
+    latency_breakdown: Dict[str, float] = {}
 
 # Product Classification Request & Response
 class ProductClassificationRequest(BaseModel):

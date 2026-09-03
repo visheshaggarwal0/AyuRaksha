@@ -14,7 +14,7 @@ class OllamaProvider(BaseLLMProvider):
         self.endpoint = f"{self.base_url}/api/chat"
 
     def is_available(self) -> bool:
-        return True
+        return not self.is_circuit_open()
 
     async def generate_completion(
         self,
@@ -23,6 +23,9 @@ class OllamaProvider(BaseLLMProvider):
         max_tokens: int = 1200,
         json_mode: bool = False
     ) -> Optional[str]:
+        if not self.is_available():
+            return None
+
         payload: Dict[str, Any] = {
             "model": self.model_name,
             "messages": messages,
@@ -36,7 +39,7 @@ class OllamaProvider(BaseLLMProvider):
             payload["format"] = "json"
 
         try:
-            async with httpx.AsyncClient(timeout=6.0) as client:
+            async with httpx.AsyncClient(timeout=1.5) as client:
                 resp = await client.post(self.endpoint, json=payload)
                 if resp.status_code == 200:
                     data = resp.json()
@@ -44,8 +47,9 @@ class OllamaProvider(BaseLLMProvider):
                     if content and len(content.strip()) > 5:
                         return content.strip()
         except (httpx.ConnectError, httpx.TimeoutException):
-            pass
+            self.trip_circuit(300, reason="Ollama daemon unreachable")
         except Exception as e:
             logger.warning(f"Ollama call error: {e}")
+            self.trip_circuit(120, reason=str(e))
 
         return None

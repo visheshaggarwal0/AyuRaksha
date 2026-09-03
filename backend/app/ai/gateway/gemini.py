@@ -14,7 +14,7 @@ class GeminiProvider(BaseLLMProvider):
         self.api_key = settings.GEMINI_API_KEY.strip() if settings.GEMINI_API_KEY else ""
 
     def is_available(self) -> bool:
-        return bool(self.api_key)
+        return bool(self.api_key) and not self.is_circuit_open()
 
     async def generate_completion(
         self,
@@ -65,7 +65,7 @@ class GeminiProvider(BaseLLMProvider):
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{mod}:generateContent?key={self.api_key}"
 
             try:
-                async with httpx.AsyncClient(timeout=25.0) as client:
+                async with httpx.AsyncClient(timeout=4.0) as client:
                     resp = await client.post(url, json=payload, headers=req_headers)
                     if resp.status_code == 200:
                         data = resp.json()
@@ -76,11 +76,17 @@ class GeminiProvider(BaseLLMProvider):
                                 text = parts[0].get("text", "").strip()
                                 if text:
                                     return text
+                    elif resp.status_code in (401, 403):
+                        logger.warning(f"Gemini credentials rejected ({resp.status_code}). Tripping circuit breaker for 300s.")
+                        self.trip_circuit(300, reason=f"Gemini {resp.status_code}")
+                        break
                     elif resp.status_code == 404:
                         continue
                     else:
                         logger.warning(f"Gemini ({mod}) returned {resp.status_code}: {resp.text[:200]}")
             except Exception as e:
                 logger.warning(f"Gemini ({mod}) error: {e}")
+                self.trip_circuit(60, reason=str(e))
+                break
 
         return None

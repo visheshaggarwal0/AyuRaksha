@@ -15,7 +15,7 @@ class OpenRouterProvider(BaseLLMProvider):
         self.base_url = settings.OPENROUTER_BASE_URL.rstrip("/")
 
     def is_available(self) -> bool:
-        return bool(self.api_key)
+        return bool(self.api_key) and not self.is_circuit_open()
 
     async def generate_completion(
         self,
@@ -52,7 +52,7 @@ class OpenRouterProvider(BaseLLMProvider):
                 payload["response_format"] = {"type": "json_object"}
 
             try:
-                async with httpx.AsyncClient(timeout=25.0) as client:
+                async with httpx.AsyncClient(timeout=4.0) as client:
                     url = f"{self.base_url}/chat/completions"
                     resp = await client.post(url, headers=headers, json=payload)
                     if resp.status_code == 200:
@@ -60,11 +60,17 @@ class OpenRouterProvider(BaseLLMProvider):
                         content = data["choices"][0]["message"]["content"]
                         if content and len(content.strip()) > 5:
                             return content.strip()
+                    elif resp.status_code in (401, 402, 403):
+                        logger.warning(f"OpenRouter quota/auth rejected ({resp.status_code}). Tripping circuit breaker for 300s.")
+                        self.trip_circuit(300, reason=f"OpenRouter {resp.status_code}")
+                        break
                     elif resp.status_code == 404:
                         continue
                     else:
                         logger.warning(f"OpenRouter ({mod}) returned {resp.status_code}: {resp.text[:200]}")
             except Exception as e:
                 logger.warning(f"OpenRouter ({mod}) call error: {e}")
+                self.trip_circuit(60, reason=str(e))
+                break
 
         return None

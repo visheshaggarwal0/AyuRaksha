@@ -18,14 +18,55 @@ class ModularEvaluationEngine(IEvaluationModule):
         "therein", "thereof", "act", "acts", "schedule", "first"
     }
 
-    def _evidence_support(self, terms: set, evidence: Evidence) -> float:
-        """Computes normalized term-overlap support of a claim's terms against a single evidence."""
+    UNGROUNDED_LEGAL_ASSERTIONS = {
+        "geographical indication", "gi tag", "automatic grant", "guaranteed approval",
+        "criminal arrest", "blanket immunity", "exclusive copyright", "fda approved",
+        "without regulatory oversight", "unconditional patent"
+    }
+
+    POLARITY_OPPOSITES = [
+        ({"not patentable", "non-patentable", "shall not", "excludes", "prohibits", "barred"},
+         {"freely patentable", "guaranteed patent", "unconditional grant", "permitted without approval"}),
+        ({"mandatory approval", "prior approval required", "obligatory intimation"},
+         {"exempted from approval", "no approval needed", "no compliance required", "freely exportable"})
+    ]
+
+    def _check_entailment_consistency(self, claim_text: str, evidence_text: str) -> bool:
+        """
+        Validates directional semantic entailment between a claim and statutory evidence.
+        Catches unauthorized legal grants (e.g. asserting GI protection under Section 3(p))
+        and polarity reversals (asserting permission where statute prohibits).
+        """
+        c_low = claim_text.lower()
+        e_low = evidence_text.lower()
+
+        # 1. Catch ungrounded high-stakes assertions
+        for assertion in self.UNGROUNDED_LEGAL_ASSERTIONS:
+            if assertion in c_low and assertion not in e_low:
+                return False
+
+        # 2. Catch polarity reversals
+        for neg_set, pos_set in self.POLARITY_OPPOSITES:
+            claim_has_pos = any(p in c_low for p in pos_set)
+            evidence_has_neg = any(n in e_low for n in neg_set)
+            if claim_has_pos and evidence_has_neg:
+                return False
+
+        return True
+
+    def _evidence_support(self, terms: set, claim_text: str, evidence: Evidence) -> float:
+        """Computes semantic entailment and normalized term-overlap support of a claim against a single evidence."""
         source_text = (
             f"{evidence.source_title} {evidence.section_number} "
             f"{evidence.verbatim_text} {evidence.authority or ''}".lower()
         )
         if not terms:
             return 0.0
+
+        # Enforce semantic entailment consistency
+        if not self._check_entailment_consistency(claim_text, source_text):
+            return 0.0
+
         matches = sum(1 for t in terms if t in source_text)
         return matches / len(terms)
 
@@ -68,7 +109,7 @@ class ModularEvaluationEngine(IEvaluationModule):
                 for m in markers:
                     ev = evidence_lookup.get(m)
                     if ev:
-                        score = self._evidence_support(terms, ev)
+                        score = self._evidence_support(terms, sent_clean, ev)
                         if score > max_support:
                             max_support = score
                         # Any cited evidence with non-trivial overlap is recorded as a supporter.
@@ -77,7 +118,7 @@ class ModularEvaluationEngine(IEvaluationModule):
             else:
                 # Markers omitted: scan top candidates for proximate grounding.
                 for idx, ev in enumerate(evidence[:3], start=1):
-                    score = self._evidence_support(terms, ev)
+                    score = self._evidence_support(terms, sent_clean, ev)
                     if score > max_support:
                         max_support = score
                     if score >= support_threshold:
