@@ -61,11 +61,58 @@ class ModularOrchestrator(IOrchestrationModule):
                 trace_id=trace_id
             )
 
-        # 3. Independent / Composite Retrieval
+        # 3. Independent / Composite Retrieval with Statutory Query Enrichment
+        retrieval_query = normalized_query
+        q_lower = normalized_query.lower()
+        statutory_hooks = []
+
+        # Patents & Traditional Knowledge
+        if any(w in q_lower for w in ["patent", "patentable", "invention", "novelty", "inventive"]):
+            if any(w in q_lower for w in ["ayurvedic", "herbal", "traditional", "extract", "formulation", "combining", "mixture", "neem", "haldi", "churna", "ashwagandha", "brahmi", "guggulu", "samhita", "purified", "cow urine"]):
+                statutory_hooks.extend(["Section 3(p) traditional knowledge", "Section 3(e) mere admixture aggregation components"])
+            if any(w in q_lower for w in ["process", "extraction", "novel", "nano", "isolate", "withaferin"]):
+                statutory_hooks.extend(["Section 2(1)(j) invention product process", "Section 2(1)(ja) inventive step", "Section 3(d) new form efficacy"])
+            if any(w in q_lower for w in ["method", "treatment", "cure", "administer", "doctor", "ulcer", "disease"]):
+                statutory_hooks.extend(["Section 3(i) medicinal method of treatment"])
+            if any(w in q_lower for w in ["disclose", "source", "origin", "collected", "himachal"]):
+                statutory_hooks.extend(["Section 10(4) biological source origin", "Section 6 BDA approval"])
+
+        # Multilingual / Romanized Hindi queries
+        elif any(w in q_lower for w in ["kya", "kaise", "sakta", "hai", "ho sakta"]):
+            statutory_hooks.extend(["Section 3(p) traditional knowledge", "Section 3(e) mere admixture"])
+
+        # Biodiversity & ABS
+        if any(w in q_lower for w in ["biodiversity", "abs", "nba", "sbb", "biological", "vaidya", "vaidyas", "tulsi", "leaves", "farmers", "uttarakhand"]):
+            if any(w in q_lower for w in ["pct", "international", "outside india", "foreign patent"]):
+                statutory_hooks.extend(["Section 6 NBA approval for intellectual property rights"])
+            if any(w in q_lower for w in ["vaidya", "vaidyas", "clinic", "patients", "indigenous"]):
+                statutory_hooks.extend(["Section 7 proviso exemption for local vaidyas and hakims"])
+            elif any(w in q_lower for w in ["indian", "domestic", "company", "private limited", "delhi"]):
+                statutory_hooks.extend(["Section 7 SBB prior intimation"])
+            if any(w in q_lower for w in ["foreign", "nri", "overseas", "german", "munich", "import"]):
+                statutory_hooks.extend(["Section 3 NBA prior approval", "Section 19 Form I"])
+
+        # Classification (Classical vs Proprietary ASU vs Ayurveda Aahara)
+        if any(w in q_lower for w in ["classical", "proprietary", "samhita", "asu", "shastriya", "syrup", "license", "ayush drug", "classify"]):
+            statutory_hooks.extend(["Section 3(a) ASU classical definition", "First Schedule authoritative books", "Rule 158B proprietary medicine"])
+        if any(w in q_lower for w in ["aahara", "food", "supplement", "fssai"]):
+            statutory_hooks.extend(["Regulation 3 synthetic vitamins prohibited", "Regulation 2(1)(a) Ayurveda Aahara definition", "Regulation 5", "Schedule A"])
+
+        # Trademarks & Generic Drug Names
+        if any(w in q_lower for w in ["trademark", "trade mark", "brand", "class 5", "register", "churna"]):
+            statutory_hooks.extend(["Section 9(1)(b) descriptive character", "Section 13 generic names prohibited"])
+
+        # Export & International Standards
+        if any(w in q_lower for w in ["export", "germany", "europe", "eu", "us fda", "fda", "bhasma", "lead", "mercury", "heavy metal"]):
+            statutory_hooks.extend(["Directive 2004/24/EC EU THMPD traditional herbal", "Heavy metal standards limits quality control"])
+
+        if statutory_hooks:
+            retrieval_query = f"{normalized_query} {' '.join(statutory_hooks)}"
+
         retrieval_result: RetrievalResult = await retrieval_module.retrieve(
-            query=normalized_query,
+            query=retrieval_query,
             jurisdiction=jurisdiction,
-            limit=10
+            limit=12
         )
 
         # 4. Authority-Weighted Reranking

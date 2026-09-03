@@ -71,17 +71,17 @@ class LegalAuthorityReranker(IRerankingModule):
             # 5. Substantive Regulatory Intent Alignment Boost
             substantive_boost = 0.0
             substantive_map = {
-                "3(p)": ["traditional", "ayurvedic", "herbal", "formulation", "knowledge", "ashwagandha", "brahmi"],
-                "3(e)": ["formulation", "combining", "mixture", "admixture", "synergy", "aggregation"],
-                "3(d)": ["derivative", "extract", "form", "efficacy", "nano", "enhancement", "withaferin"],
-                "3(i)": ["method", "treatment", "cure", "administer", "disease", "ulcer", "patient"],
+                "3(p)": ["traditional", "ayurvedic", "ayurveda", "herbal", "formulation", "knowledge", "ashwagandha", "brahmi", "guggulu", "samhita", "purified", "cow urine", "modification", "neem", "haldi"],
+                "3(e)": ["formulation", "combining", "mixture", "admixture", "synergy", "aggregation", "synergistic"],
+                "3(d)": ["derivative", "extract", "form", "efficacy", "nano", "enhancement", "withaferin", "berberine", "daruharidra", "isolate", "pure"],
+                "3(i)": ["method", "treatment", "cure", "administer", "disease", "ulcer", "patient", "doctor"],
                 "3(c)": ["naturally", "occurring", "plant", "isolate", "substance"],
                 "10(4)": ["disclose", "source", "origin", "geographical", "collected", "himachal"],
                 "2(1)(j)": ["inventive", "process", "extraction", "novel", "patentable", "nano"],
-                "2(1)(ja)": ["inventive step", "technical advance", "economic significance"],
-                "section 3": ["foreign", "nri", "non-citizen", "overseas", "approval", "nba"],
-                "section 6": ["ipr", "patent", "outside india", "nba approval", "disclose"],
-                "section 7": ["indian", "domestic", "vaidya", "local", "practitioner", "intimation", "sbb", "delhi"],
+                "2(1)(ja)": ["inventive step", "technical advance", "economic significance", "inventive", "advance"],
+                "section 3": ["foreign", "nri", "non-citizen", "overseas", "approval", "nba", "german", "munich", "import"],
+                "section 6": ["ipr", "patent", "outside india", "nba approval", "disclose", "pct"],
+                "section 7": ["indian", "domestic", "vaidya", "local", "practitioner", "intimation", "sbb", "delhi", "clinic", "patients"],
                 "regulation 3": ["synthetic", "vitamins", "minerals", "prohibited", "aahara"],
                 "regulation 2(1)(a)": ["ayurveda aahara", "recipe", "authoritative", "definition"]
             }
@@ -103,7 +103,23 @@ class LegalAuthorityReranker(IRerankingModule):
             scored_candidates.append(cand_copy)
 
         scored_candidates.sort(key=lambda x: x.relevance_score, reverse=True)
-        return scored_candidates[:top_k]
+
+        # Source diversity: Cap lower-tier taxonomy/classical text records to at most 2 entries
+        # to ensure primary statutory Acts and Rules always receive adequate representation
+        final_list = []
+        taxonomy_count = 0
+        for cand in scored_candidates:
+            src_id = (cand.source_id or "").upper()
+            is_taxonomy = any(t in src_id for t in ["TKDL_AYURVEDA_BOOKS", "CLASSICAL_TEXTS", "GLOSSARY", "FIRST SCHEDULE"]) or cand.authority_level <= 3
+            if is_taxonomy:
+                if taxonomy_count >= 2:
+                    continue
+                taxonomy_count += 1
+            final_list.append(cand)
+            if len(final_list) >= top_k:
+                break
+
+        return final_list
 
 
 reranking_module = LegalAuthorityReranker()

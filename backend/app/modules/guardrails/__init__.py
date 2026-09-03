@@ -13,15 +13,16 @@ class ModularGuardrailEngine(IGuardrailModule):
     """Enforces statutory safety and proactive compliance boundaries."""
 
     BIOPIRACY_BYPASS_PATTERNS = [
+        r"\bsmuggle\b",
+        r"\bsecretly\b.{0,30}\b(export|transfer|harvest|take|send|move)\b",
         r"bypass\s+(nba|sbb|national\s+biodiversity\s+authority)",
         r"bypass\s+[\w\s]{0,12}\s*(prior\s+approval|approval|benefit\s+sharing)",
         r"(loophole|loopholes|trick|tricks|hack|hacks|shortcut|workaround|evade|evading|dodge|get\s+around|way\s+around)\s+.{0,40}\b(nba|sbb|approval|regulation|law|biodiversity|authority)\b",
         r"avoid\s+(prior\s+approval|benefit\s+sharing|nba|sbb|paying)",
-        r"smuggle\s+biological\s+resources",
         r"circumvent\s+(bda|biological\s+diversity\s+act|approval|nba|sbb)",
-        r"export\s+without\s+(nba|approval|permission)",
+        r"export\s+without\s+(nba|approval|permission)\s+(knowledge|notice|clearance)",
+        r"(how\s+can\s+i|how\s+to|ways?\s+to)\s+.{0,40}(without|avoiding)\s+(nba|sbb)\s*(knowledge|approval|permission|clearance)",
         r"(forge|fake|counterfeit)\s+(an?\s+)?(sbb|nba|certificate|license|permit)",
-        r"(bina|without)\s+(nba|sbb)\s+approval",
         r"without\s+(being\s+)?(caught|detected|noticed)",
         r"illegal(ly)?\s+(harvest|supply|export|sell)",
         r"pakda\s+na\s+jaoon",

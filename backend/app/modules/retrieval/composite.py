@@ -67,7 +67,8 @@ class CompositeRetrievalModule(IRetrievalModule):
 
         for rank_list in [vector_results, keyword_results]:
             for rank, ev in enumerate(rank_list, start=1):
-                key = f"{ev.source_id}|{ev.section_number}"
+                clean_sec = re.sub(r"\s+", " ", (ev.section_number or "").strip().upper())
+                key = f"{(ev.source_id or '').upper()}|{clean_sec}"
                 if key not in fused_candidates:
                     fused_candidates[key] = ev
                     rrf_scores[key] = 0.0
@@ -81,7 +82,8 @@ class CompositeRetrievalModule(IRetrievalModule):
             if graph_results:
                 modalities.append(RetrievalModality.GRAPH)
                 for ev in graph_results:
-                    key = f"{ev.source_id}|{ev.section_number}"
+                    clean_sec = re.sub(r"\s+", " ", (ev.section_number or "").strip().upper())
+                    key = f"{(ev.source_id or '').upper()}|{clean_sec}"
                     if key not in fused_candidates:
                         fused_candidates[key] = ev
                         rrf_scores[key] = 0.0

@@ -67,8 +67,8 @@ class PluggableGenerationModule(IGenerationModule):
             "Your role is to provide rigorous, objective statutory analysis based on verified legal provisions from the Drugs & Cosmetics Act 1940, "
             "Patents Act 1970, Biological Diversity Act 2002, and FSSAI regulations. "
             "Do NOT output generic disclaimers refusing to answer (such as 'I cannot provide legal advice'); directly deliver the objective statutory classification, "
-            "comparative legal criteria, and licensing pathways requested. "
-            "Structure your answer into clear, comprehensive paragraphs with headings or bullet points where helpful. "
+            "Deliver direct, objective statutory classification, comparative legal criteria, and actionable licensing pathways. "
+            "Keep the response structured, clear, and concise (under 250 words). "
             "At the end of each factual statement, add citation markers like [1], [2] corresponding strictly to the provided sources."
         )
         user_prompt = f"User Question: {query}\n\nVerified Context:\n{full_context}\n\nRegulatory Guidance:"
@@ -82,7 +82,7 @@ class PluggableGenerationModule(IGenerationModule):
         for _, provider in self._providers:
             if provider.is_available():
                 try:
-                    result = await provider.complete(messages, temperature=0.1, max_tokens=3000)
+                    result = await provider.complete(messages, temperature=0.1, max_tokens=600)
                     if result and len(result.strip()) > 20:
                         self._active_provider_name = provider.provider_name
                         return result.strip()
