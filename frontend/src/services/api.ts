@@ -7,6 +7,12 @@ import {
   StructuredAnswer,
   Jurisdiction
 } from '../types';
+import {
+  SystemHealthResponse,
+  AggregatedMetrics,
+  ProviderHealth,
+  RequestTelemetryRecord
+} from '../types/observability';
 
 const apiBase = (import.meta as any).env?.VITE_API_BASE_URL
   ? `${(import.meta as any).env.VITE_API_BASE_URL.replace(/\/$/, '')}/api/v1`
@@ -174,6 +180,29 @@ export const api = {
 
   getSampleDossier: async () => {
     const response = await apiClient.get('/dossier/sample');
+    return response.data;
+  },
+
+  // Observability Console
+  getObservabilityHealth: async (): Promise<SystemHealthResponse> => {
+    const response = await apiClient.get<SystemHealthResponse>('/observability/health');
+    return response.data;
+  },
+
+  getObservabilityMetrics: async (): Promise<AggregatedMetrics> => {
+    const response = await apiClient.get<AggregatedMetrics>('/observability/metrics');
+    return response.data;
+  },
+
+  getObservabilityRequests: async (limit: number = 20): Promise<RequestTelemetryRecord[]> => {
+    const response = await apiClient.get<RequestTelemetryRecord[]>('/observability/requests', {
+      params: { limit }
+    });
+    return response.data;
+  },
+
+  getObservabilityProviders: async (): Promise<ProviderHealth[]> => {
+    const response = await apiClient.get<ProviderHealth[]>('/observability/providers');
     return response.data;
   }
 };

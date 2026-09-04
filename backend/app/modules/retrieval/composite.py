@@ -31,6 +31,9 @@ class CompositeRetrievalModule(IRetrievalModule):
         self.vector_retriever = vector_retriever or IndependentVectorRetriever()
         self.keyword_retriever = keyword_retriever or IndependentKeywordRetriever()
         self.graph_retriever = graph_retriever or IndependentGraphRetriever()
+        self.last_vector_count = 0
+        self.last_keyword_count = 0
+        self.last_graph_count = 0
 
     async def retrieve(
         self,
@@ -57,6 +60,9 @@ class CompositeRetrievalModule(IRetrievalModule):
         )
 
         vector_results, keyword_results = await asyncio.gather(vector_task, keyword_task)
+        self.last_vector_count = len(vector_results)
+        self.last_keyword_count = len(keyword_results)
+        self.last_graph_count = 0
         if vector_results:
             modalities.append(RetrievalModality.VECTOR)
         if keyword_results:
@@ -80,6 +86,7 @@ class CompositeRetrievalModule(IRetrievalModule):
         entities_for_graph = [k.split("|")[1] for k in top_keys if "|" in k and k.split("|")[1]]
         if entities_for_graph:
             graph_results = await self.graph_retriever.retrieve_graph(entities_for_graph, limit=3)
+            self.last_graph_count = len(graph_results)
             if graph_results:
                 modalities.append(RetrievalModality.GRAPH)
                 for ev in graph_results:

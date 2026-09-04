@@ -26,6 +26,7 @@ from app.modules.citations import citation_module
 from app.modules.evaluation import evaluation_module
 from app.modules.concepts import concept_engine
 from app.ai.multilingual.bhashini import BhashiniService
+from app.telemetry.collector import telemetry_collector
 
 logger = logging.getLogger("AyuRaksha.Orchestration")
 
@@ -37,9 +38,11 @@ class ModularOrchestrator(IOrchestrationModule):
         self,
         query: str,
         jurisdiction: str = "IN",
-        language: str = "en"
+        language: str = "en",
+        request_id: Optional[str] = None
     ) -> RAGResponse:
         trace_id = f"TRC-{uuid.uuid4().hex[:8].upper()}"
+        req_id = request_id or f"REQ-{trace_id[-8:]}"
         jur_enum = JurisdictionEnum.CROSS_BORDER if jurisdiction == "CROSS_BORDER" else JurisdictionEnum(jurisdiction)
 
         t_start = time.perf_counter()
@@ -59,7 +62,7 @@ class ModularOrchestrator(IOrchestrationModule):
         t_guard_ms = round((time.perf_counter() - t_guard_start) * 1000, 2)
         if abstention:
             total_ms = round((time.perf_counter() - t_start) * 1000, 2)
-            return RAGResponse(
+            abstained_resp = RAGResponse(
                 query=query,
                 jurisdiction=jur_enum,
                 detected_intent="SAFETY_ABSTENTION",
@@ -74,6 +77,14 @@ class ModularOrchestrator(IOrchestrationModule):
                 diagnostics={"abstained": True, "reason": abstention.code.value},
                 latency_breakdown={"normalization_ms": t_norm_ms, "guardrails_ms": t_guard_ms, "total_ms": total_ms}
             )
+            telemetry_collector.record_orchestration_response(
+                response_obj=abstained_resp,
+                query=query,
+                request_id=req_id,
+                token_usage=None,
+                success=True
+            )
+            return abstained_resp
 
         # 3. Determine Execution Mode & Semantic Legal Concepts
         resolved_concepts = concept_engine.resolve_concepts(normalized_query)
@@ -570,10 +581,13 @@ class ModularOrchestrator(IOrchestrationModule):
             "verified_claims_count": len(verified_claims),
             "unsupported_claims_count": len(unsupported_claims),
             "grounding_rate": round(confidence.grounding_rate, 3),
-            "generation_provider": getattr(generation_module, "_active_provider_name", "Unknown")
+            "generation_provider": getattr(generation_module, "_active_provider_name", "Unknown"),
+            "vector_candidates_count": getattr(retrieval_module, "last_vector_count", len(retrieval_result.candidates)),
+            "keyword_candidates_count": getattr(retrieval_module, "last_keyword_count", 0),
+            "graph_candidates_count": getattr(retrieval_module, "last_graph_count", 0),
         }
 
-        return RAGResponse(
+        final_response = RAGResponse(
             query=query,
             jurisdiction=jur_enum,
             detected_intent="REGULATORY_INQUIRY",
@@ -598,12 +612,21 @@ class ModularOrchestrator(IOrchestrationModule):
             diagnostics=diagnostics,
             latency_breakdown=latency_breakdown
         )
+        telemetry_collector.record_orchestration_response(
+            response_obj=final_response,
+            query=query,
+            request_id=req_id,
+            token_usage=getattr(generation_module, "last_token_usage", None),
+            success=True
+        )
+        return final_response
 
     async def stream_query(
         self,
         query: str,
         jurisdiction: str = "IN",
-        language: str = "en"
+        language: str = "en",
+        request_id: Optional[str] = None
     ):
         """
         Asynchronous generator emitting live multi-stage pipeline events, streaming tokens,
@@ -611,6 +634,7 @@ class ModularOrchestrator(IOrchestrationModule):
         """
         import asyncio
         trace_id = f"TRC-{uuid.uuid4().hex[:8].upper()}"
+        req_id = request_id or f"REQ-{trace_id[-8:]}"
         jur_enum = JurisdictionEnum.CROSS_BORDER if jurisdiction == "CROSS_BORDER" else JurisdictionEnum(jurisdiction)
 
         # Stage 1: Multilingual & Language Detection
@@ -653,6 +677,13 @@ class ModularOrchestrator(IOrchestrationModule):
                 abstention_reason=abstention,
                 language=eff_lang,
                 trace_id=trace_id
+            )
+            telemetry_collector.record_orchestration_response(
+                response_obj=resp,
+                query=query,
+                request_id=req_id,
+                token_usage=None,
+                success=True
             )
             yield {"event": "result", "data": resp.model_dump()}
             return
@@ -789,6 +820,14 @@ class ModularOrchestrator(IOrchestrationModule):
             safe_abstention=False,
             language=eff_lang,
             trace_id=trace_id
+        )
+
+        telemetry_collector.record_orchestration_response(
+            response_obj=rag_response,
+            query=query,
+            request_id=req_id,
+            token_usage=getattr(generation_module, "last_token_usage", None),
+            success=True
         )
 
         yield {"event": "result", "data": rag_response.model_dump()}

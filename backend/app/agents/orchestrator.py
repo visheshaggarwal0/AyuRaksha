@@ -4,7 +4,7 @@ Bridges FastAPI endpoints to the production 10-module orchestration_module,
 guaranteeing 100% backwards compatibility with existing UI contracts.
 """
 import logging
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 from app.modules.orchestration import orchestration_module
 from app.models.schemas import StructuredAnswer, Citation, ClaimVerification
@@ -26,12 +26,14 @@ class AyuRakshaOrchestrator:
         self,
         query: str,
         user_jurisdiction: str = "IN",
-        language: str = "en"
+        language: str = "en",
+        request_id: Optional[str] = None
     ) -> StructuredAnswer:
         resp = await self.orchestrator.process_query(
             query=query,
             jurisdiction=user_jurisdiction,
-            language=language
+            language=language,
+            request_id=request_id
         )
 
         jur_val = resp.jurisdiction.value if hasattr(resp.jurisdiction, "value") else str(resp.jurisdiction)
@@ -103,13 +105,15 @@ class AyuRakshaOrchestrator:
         self,
         query: str,
         user_jurisdiction: str = "IN",
-        language: str = "en"
+        language: str = "en",
+        request_id: Optional[str] = None
     ):
         """Streams multi-stage pipeline events, tokens, and final StructuredAnswer."""
         async for event in self.orchestrator.stream_query(
             query=query,
             jurisdiction=user_jurisdiction,
-            language=language
+            language=language,
+            request_id=request_id
         ):
             if event["event"] == "result":
                 raw_resp = event["data"]

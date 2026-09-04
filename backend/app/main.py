@@ -28,6 +28,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+import uuid
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+
 # Enable CORS for web and mobile frontends
 app.add_middleware(
     CORSMiddleware,
@@ -35,7 +39,19 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["X-Request-ID", "X-Trace-ID"]
 )
+
+class RequestCorrelationMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        req_id = request.headers.get("X-Request-ID") or f"REQ-{uuid.uuid4().hex[:8].upper()}"
+        request.state.request_id = req_id
+        response = await call_next(request)
+        if "X-Request-ID" not in response.headers:
+            response.headers["X-Request-ID"] = req_id
+        return response
+
+app.add_middleware(RequestCorrelationMiddleware)
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
