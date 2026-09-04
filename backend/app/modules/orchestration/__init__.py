@@ -467,6 +467,7 @@ class ModularOrchestrator(IOrchestrationModule):
         t_norm_ms: float,
         t_guard_ms: float
     ) -> RAGResponse:
+        req_id = f"REQ-{trace_id[-8:]}"
         t_ret_start = time.perf_counter()
         retrieval_query = concept_engine.expand_retrieval_query(normalized_query, resolved_concepts)
 
