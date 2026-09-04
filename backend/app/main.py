@@ -11,7 +11,7 @@ logger = logging.getLogger("AyuRaksha")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info(f"Starting {settings.APP_NAME} connected to Neon Postgres (Project: {settings.NEON_PROJECT_ID})...")
+    logger.info(f"Starting {settings.APP_NAME}...")
     # Pre-warm embedding model once on startup to eliminate query latency
     try:
         from app.modules.embeddings import embedding_module
@@ -37,7 +37,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
     expose_headers=["X-Request-ID", "X-Trace-ID"]
 )
@@ -46,7 +46,12 @@ class RequestCorrelationMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         req_id = request.headers.get("X-Request-ID") or f"REQ-{uuid.uuid4().hex[:8].upper()}"
         request.state.request_id = req_id
-        response = await call_next(request)
+        import asyncio
+        try:
+            response = await asyncio.wait_for(call_next(request), timeout=120.0)
+        except asyncio.TimeoutError:
+            from starlette.responses import JSONResponse
+            return JSONResponse({"error": "Request timeout"}, status_code=504)
         if "X-Request-ID" not in response.headers:
             response.headers["X-Request-ID"] = req_id
         return response
@@ -71,9 +76,22 @@ async def favicon():
 @app.get("/health", tags=["Health"])
 @app.get("/api/v1/health", tags=["Health"])
 async def health_check():
+    db_configured = bool(settings.DATABASE_URL)
+    db_reachable = False
+    if db_configured:
+        try:
+            from app.db.session import get_engine
+            engine = get_engine()
+            if engine:
+                with engine.connect() as conn:
+                    conn.execute(__import__("sqlalchemy").text("SELECT 1"))
+                db_reachable = True
+        except Exception:
+            pass
     return {
         "status": "healthy",
         "app": settings.APP_NAME,
         "environment": settings.APP_ENV,
-        "database_configured": bool(settings.DATABASE_URL)
+        "database_configured": db_configured,
+        "database_reachable": db_reachable
     }

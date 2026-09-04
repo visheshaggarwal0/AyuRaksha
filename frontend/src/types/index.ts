@@ -24,7 +24,7 @@ export interface ClaimVerification {
 export interface StructuredAnswer {
   direct_answer: string;
   jurisdiction: Jurisdiction;
-  assessment_table: Record<string, any>;
+  assessment_table: Record<string, string | number | boolean>;
   verified_claims: ClaimVerification[];
   citations: Citation[];
   confidence_level: 'HIGH' | 'MODERATE' | 'LOW';

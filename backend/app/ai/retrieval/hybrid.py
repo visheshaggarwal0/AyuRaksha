@@ -37,7 +37,7 @@ class HybridRetriever:
         raw_candidates: List[Dict[str, Any]] = []
         retrieval_status = {"dense": False, "lexical": False, "fallback": False}
         import asyncio
-        dense_vector = generate_embedding(dense_query)
+        dense_vector = await asyncio.to_thread(generate_embedding, dense_query)
 
         async def _run_dense():
             try:

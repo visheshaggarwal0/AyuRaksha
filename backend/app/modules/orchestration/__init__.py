@@ -7,6 +7,7 @@ import time
 import uuid
 import logging
 import re
+import asyncio
 from typing import Optional, Dict, Any, List
 
 from app.modules.interfaces import IOrchestrationModule
@@ -341,8 +342,11 @@ class ModularOrchestrator(IOrchestrationModule):
         retrieval_jur = "CROSS_BORDER" if (jurisdiction in ["INT", "CROSS_BORDER"] or is_export_q) else jurisdiction
 
         all_candidates = []
-        for pq in pillar_queries:
-            sub_res = await retrieval_module.retrieve(query=pq, jurisdiction=retrieval_jur, limit=20)
+        sub_results = await asyncio.gather(*[
+            retrieval_module.retrieve(query=pq, jurisdiction=retrieval_jur, limit=20)
+            for pq in pillar_queries
+        ])
+        for sub_res in sub_results:
             all_candidates.extend(sub_res.candidates)
 
         seen = set()
@@ -759,12 +763,8 @@ class ModularOrchestrator(IOrchestrationModule):
         if eff_lang in ["hi", "sa"]:
             final_answer = BhashiniService.translate_statutory_text(generated_answer, target_lang=eff_lang)
 
-        # Stream tokens
-        words = final_answer.split(" ")
-        for i in range(0, len(words), 3):
-            chunk = " ".join(words[i:i+3]) + (" " if i + 3 < len(words) else "")
-            yield {"event": "token", "data": {"token": chunk}}
-            await asyncio.sleep(0.01)
+        # Stream full answer as a single token event (real streaming is handled by the LLM provider)
+        yield {"event": "token", "data": {"token": final_answer}}
 
         # Stage 6: Citations
         yield {

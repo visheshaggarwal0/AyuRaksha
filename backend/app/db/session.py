@@ -59,6 +59,11 @@ except Exception as e:
     AsyncSessionLocal = None
 
 class MockSession:
+    def __init__(self):
+        import logging
+        logging.getLogger("AyuRaksha.DB").warning(
+            "Database not configured — using MockSession. All DB operations are no-ops."
+        )
     def add(self, *args, **kwargs):
         pass
     async def flush(self):

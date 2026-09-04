@@ -3,7 +3,7 @@ AyuRaksha Reranking Module
 Implements IRerankingModule using statutory authority hierarchy weighting and exact-section boosts.
 """
 import re
-from typing import List
+from typing import List, Dict
 from app.modules.interfaces import IRerankingModule
 from app.models.domain import Evidence
 

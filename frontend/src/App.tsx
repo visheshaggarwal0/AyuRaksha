@@ -45,6 +45,7 @@ import { InnovationDiscoveryWorkflow } from './components/wizards/InnovationDisc
 import { EvidenceInspector } from './components/evidence/EvidenceInspector';
 import { InitialLoadingScreen } from './components/common/InitialLoadingScreen';
 import { BRAND_NAME, HACKATHON_ID, MINISTRY_NAME } from './constants/branding';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 
 // Dynamic code-splitting for heavy non-critical modules
 const InternationalView = React.lazy(() =>
@@ -236,7 +237,7 @@ export function App() {
     setActiveContextAnswer(null);
 
     const userMsg: ChatMessage = {
-      id: Date.now().toString(),
+      id: crypto.randomUUID(),
       sender: 'user',
       text: textToSend,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
@@ -440,6 +441,7 @@ export function App() {
               onClick={() => setSidebarOpen(!sidebarOpen)}
               className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
               title={sidebarOpen ? 'Collapse Sidebar' : 'Expand Sidebar'}
+              aria-label={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
             >
               {sidebarOpen ? <PanelLeftClose className="w-4 h-4" /> : <PanelLeftOpen className="w-4 h-4" />}
             </button>
@@ -617,10 +619,11 @@ export function App() {
         </header>
 
         {/* Content Body Routing */}
-        <main className="flex-1 min-w-0 min-h-0 overflow-y-auto p-4 sm:p-6 relative">
+        <main className="flex-1 min-w-0 min-h-0 overflow-y-auto p-4 sm:p-6 relative" role="main" aria-label="Main content">
           
           {/* 1. LANDING PAGE VIEW */}
           {activeView === 'landing' && (
+            <ErrorBoundary fallbackLabel="Landing Page">
             <LandingPage
               activeCase={activeCase}
               onStartAssessment={() => setActiveView('classification')}
@@ -634,6 +637,7 @@ export function App() {
               onNavigateView={(v) => setActiveView(v as ActiveView)}
               onOpenDossier={() => setIsDossierOpen(true)}
             />
+            </ErrorBoundary>
           )}
 
           {/* 2. CLASSIFICATION WIZARD VIEW */}
@@ -723,6 +727,7 @@ export function App() {
 
           {/* 8. ASK AYUरक्षा (COPILOT & INNOVATION DISCOVERY) VIEW */}
           {activeView === 'chat' && (
+            <ErrorBoundary fallbackLabel="Copilot Chat">
             <div className="max-w-4xl mx-auto h-full min-h-0 flex flex-col justify-between space-y-4">
               
               {/* Mode Switcher Pill */}
@@ -853,7 +858,7 @@ export function App() {
                         </div>
                       </div>
                     ) : (
-                  messages.map((msg) =>
+                  messages.map((msg, idx) =>
                     msg.sender === 'user' ? (
                       <div key={msg.id} className="flex flex-col space-y-1.5 items-end animate-fadeIn max-w-2xl ml-auto">
                         <div className="rounded-2xl px-5 py-3 bg-ayush-forest text-white shadow-subtle">
@@ -866,7 +871,7 @@ export function App() {
                     ) : (
                       <div key={msg.id} className="flex flex-col space-y-1.5 items-start w-full animate-fadeIn">
                         <DecisionBriefAnswer
-                          questionText={messages[messages.findIndex((m) => m.id === msg.id) - 1]?.text}
+                          questionText={idx > 0 ? messages[idx - 1]?.text : undefined}
                           answerText={msg.text}
                           answerData={msg.answerData}
                           jurisdiction={msg.answerData?.jurisdiction || jurisdiction}
@@ -923,20 +928,23 @@ export function App() {
                     placeholder={`Ask ${BRAND_NAME} about Ayurvedic product classification, patentability under Sec 3(p), ABS, or export rules...`}
                     className="flex-1 max-h-32 resize-none bg-transparent px-3 py-1.5 text-xs sm:text-sm focus:outline-none font-medium text-slate-800"
                     rows={1}
+                    aria-label={`Ask ${BRAND_NAME} a question`}
                   />
                   <button
                     onClick={() => handleSendMessage()}
                     disabled={!inputQuery.trim() || loading}
                     className="p-2.5 bg-ayush-forest hover:bg-ayush-forestDark disabled:bg-slate-200 text-white rounded-xl transition-all shrink-0 shadow-subtle"
+                    aria-label="Send message"
                   >
                     <Send className="w-4 h-4" />
                   </button>
                 </div>
               </div>
             </>
+            )}
+            </div>
+            </ErrorBoundary>
           )}
-        </div>
-      )}
 
         </main>
       </div>

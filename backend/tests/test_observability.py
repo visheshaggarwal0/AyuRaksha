@@ -1,7 +1,3 @@
-import builtins
-import typing
-builtins.Optional = typing.Optional
-
 import pytest
 import math
 from datetime import datetime, timezone

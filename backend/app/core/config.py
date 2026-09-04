@@ -23,11 +23,11 @@ class Settings:
     APP_NAME: str = os.getenv("APP_NAME", "AyuRaksha")
     APP_ENV: str = os.getenv("APP_ENV", "development")
     API_V1_STR: str = os.getenv("API_V1_STR", "/api/v1")
-    SECRET_KEY: str = os.getenv("SECRET_KEY", "development-only-change-before-deployment")
+    SECRET_KEY: str = os.getenv("SECRET_KEY", "")
     
     # Neon Serverless Postgres
-    NEON_PROJECT_ID: str = os.getenv("NEON_PROJECT_ID", "hidden-wind-77590258")
-    NEON_ORG_ID: str = os.getenv("NEON_ORG_ID", "org-damp-frost-09319742")
+    NEON_PROJECT_ID: str = os.getenv("NEON_PROJECT_ID", "")
+    NEON_ORG_ID: str = os.getenv("NEON_ORG_ID", "")
     NEON_BRANCH: str = os.getenv("NEON_BRANCH", "main")
     NEON_API_KEY: str = os.getenv("NEON_API_KEY", "")
     
