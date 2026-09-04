@@ -5,7 +5,7 @@ filing milestone timelines, and cryptographic citations into an audit-ready doss
 """
 import uuid
 from datetime import datetime
-from typing import Dict, Any, List
+from typing import Dict, Any, List,Optional 
 
 from app.models.dossier import (
     DossierGenerationRequest,
