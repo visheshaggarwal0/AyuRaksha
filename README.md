@@ -1,4 +1,4 @@
-# AyuRaksha (आयुसुरक्षा)
+# AyuRaksha (आयुरक्षा)
 
 ### **AI-Powered IP & Regulatory Navigator for Ayurvedic Innovation**
 *Built for Smart India Hackathon (Problem Statement #26045: IP-SAKTI Sahayak)*  
