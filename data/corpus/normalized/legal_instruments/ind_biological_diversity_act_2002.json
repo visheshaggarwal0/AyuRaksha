@@ -6,17 +6,22 @@
   "country": "India",
   "authority": "National Biodiversity Authority (NBA)",
   "issuing_body": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
-  "domain": ["BIODIVERSITY_ABS", "ENVIRONMENT"],
+  "domain": [
+    "BIODIVERSITY_ABS",
+    "ENVIRONMENT"
+  ],
   "document_type": "ACT",
   "authority_level": 5,
   "source": {
-    "url": "https://www.indiacode.nic.in/handle/123456789/2046",
-    "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
-    "retrieved_at": "2026-08-31",
-    "file_name": "the_biological_diversity_act_2002.pdf",
-    "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "url": "https://wipolex.wipo.int/en/legislation/details/23111",
+    "official_pdf_url": "https://wipolex-res.wipo.int/edocs/lexdocs/laws/en/in/in196en_1.pdf",
+    "source_type": "OFFICIAL_PARLIAMENTARY_ACT",
+    "retrieved_at": "2026-09-03",
+    "file_name": "ind_biological_diversity_act_2002.pdf",
+    "sha256": "341646b54ec22f0ff04878abc00d8e0fcd9209e4236618ab6a3a16356e88dc9b",
     "mime_type": "application/pdf",
-    "storage_uri": "gs://ayuraksha-corpus/raw/india/biodiversity/the_biological_diversity_act_2002.pdf"
+    "extracted_text_path": "data/corpus/extracted/ind_biological_diversity_act_2002.txt",
+    "local_path": "data/corpus/raw_downloads/ind_biological_diversity_act_2002.pdf"
   },
   "version": {
     "published_date": "2003-02-05",
@@ -31,70 +36,169 @@
       "type": "SECTION",
       "number": "2(c)",
       "heading": "Biological Resources",
-      "text": "'biological resources' means plants, animals and microorganisms or parts thereof, their genetic material and by-products (excluding value added products) with actual or potential use or value, but does not include human genetic material.",
+      "text": "plants, animals, micro-organisms or parts of their genetic material and derivatives (excluding value added products), with actual or potential use or value for humanity, but does not include human genetic material;",
       "location": {
-        "chapter": "Chapter I (Preliminary)",
-        "page_start": 2,
-        "page_end": 2
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
       },
-      "topics": ["BIOLOGICAL_RESOURCES", "SCOPE", "MEDICINAL_PLANTS"],
+      "topics": [
+        "BIOLOGICAL_RESOURCES",
+        "SCOPE",
+        "MEDICINAL_PLANTS"
+      ],
       "statutory_significance": "Defines statutory scope across all Ayurvedic raw botanicals."
     },
     {
       "provision_id": "BDA_2002_SEC_003",
       "type": "SECTION",
       "number": "3",
-      "heading": "Certain Persons Not to Undertake Biodiversity Related Activities Without Approval of NBA",
-      "text": "(1) No person who is not a citizen of India; or a citizen of India who is an NRI; or a body corporate, association or organization not incorporated or registered in India, or incorporated or registered in India having any non-Indian participation in its share capital or management, shall obtain any biological resource occurring in India or knowledge associated thereto for research or for commercial utilisation or for bio-survey and bio-utilisation without previous approval of the National Biodiversity Authority on Form I.",
+      "heading": "Certain Persons Not to Undertake Biodiversity Related Activities Without Approval of National Biodiversity Authority",
+      "text": "(1) No person referred to in sub-section (2) shall, without previous approval of the National Biodiversity Authority, obtain any biological resource occurring in India or knowledge associated thereto for research or for commercial utilisation or for bio-survey and bio-utilisation. (2) The persons who shall be required to take the approval of the National Biodiversity Authority under sub-section (1) are the following, namely:— (a) a person who is not a citizen of India; (b) a citizen of India, who is a non-resident as defined in clause (30) of section 2 of the Income-tax Act, 1961 (43 of 1961); (c) a body corporate, association or organisation— (i) not incorporated or registered in India; or (ii) incorporated or registered in India under any law for the time being in force, which is controlled by a foreigner within the meaning of clause (27) of section 2 of the Companies Act, 2013 (18 of 2013).",
       "location": {
-        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
-        "page_start": 4,
-        "page_end": 5
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
       },
-      "topics": ["FOREIGN_ENTITIES", "NBA_APPROVAL", "COMMERCIAL_UTILISATION", "FORM_I"],
+      "topics": [
+        "FOREIGN_ENTITIES",
+        "NBA_APPROVAL",
+        "COMMERCIAL_UTILISATION",
+        "FORM_I"
+      ],
       "statutory_significance": "Mandatory prior approval barrier for foreign/NRI investors and export entities."
     },
     {
       "provision_id": "BDA_2002_SEC_006",
       "type": "SECTION",
       "number": "6",
-      "heading": "Application for Intellectual Property Rights (IPR Approval)",
-      "text": "(1) No person shall apply for any intellectual property right, by whatever name called, in or outside India for any invention based on any research or information on a biological resource obtained from India without obtaining the previous approval of the National Biodiversity Authority before the grant of such IPR on Form III.\n(2) The National Biodiversity Authority may, while granting approval, impose benefit sharing requirements.",
+      "heading": "Application for Intellectual Property Rights Not to Be Made Without Approval of National Biodiversity Authority",
+      "text": "(1) Any person or entity covered under sub-section (2) of section 3 applying for an intellectual property right, by whatever name called, in or outside India, for any invention based on any research or information on a biological resource which is accessed from India, including those deposited in repositories outside India, or traditional knowledge associated thereto, shall obtain prior approval of the National Biodiversity Authority before grant of such intellectual property rights. (1A) Any person covered under section 7 applying for any intellectual property right, by whatever name called, in or outside India, for any invention based on any research or information on a biological resource which is accessed from India, including those deposited in repositories outside India, or traditional knowledge associated thereto, shall register with the National Biodiversity Authority before grant of such intellectual property rights. (1B) Any person covered under section 7 who has obtained intellectual property right, by whatever name called, in or outside India, for any invention based on any research or information on a biological resource which is accessed from India, including those deposited in repositories outside India, or traditional knowledge associated thereto, shall obtain prior approval of the National Biodiversity Authority at the time of commercialisation. (2) The National Biodiversity Authority may, while granting the approval under this section, impose benefit sharing fee or royalty or both or impose conditions including the sharing of financial benefits arising out of the commercial utilisation of such rights. (3) The provisions of this section shall not apply to any person making an application for any right under any law relating to protection of plant varieties 2***. (4) Where any right is granted under law referred to in sub-section (3), the concerned authority granting such right shall endorse a copy of such document granting the right to the National Biodiversity Authority.",
       "location": {
-        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
-        "page_start": 6,
-        "page_end": 7
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
       },
-      "topics": ["PATENT_LINKAGE", "IPR_APPROVAL", "FORM_III", "BENEFIT_SHARING"],
-      "statutory_significance": "Direct statutory linkage: Patents on Indian botanicals cannot be granted without NBA Form III approval."
+      "topics": [
+        "PATENT_LINKAGE",
+        "NBA_APPROVAL",
+        "FORM_III",
+        "BENEFIT_SHARING"
+      ],
+      "statutory_significance": "Mandates NBA Form III approval prior to grant of patent by the Indian Patent Office."
     },
     {
       "provision_id": "BDA_2002_SEC_007",
       "type": "SECTION",
       "number": "7",
-      "heading": "Prior Intimation to State Biodiversity Board",
-      "text": "No person who is a citizen of India or a body corporate, association or organisation which is registered in India shall obtain any biological resource for commercial utilisation, or bio-survey and bio-utilisation for commercial utilisation except after giving prior intimation to the State Biodiversity Board concerned in the manner as may be prescribed by the State Government.\nProvided that the provisions of this section shall not apply to the local people and communities of the area, including vaids, hakims and registered AYUSH practitioners.",
+      "heading": "Prior Intimation to State Biodiversity Board for Accessing Biological Resource for Certain Purposes",
+      "text": "(1) No person, other than the person covered under sub-section (2) of section 3, shall access any biological resource and its associated knowledge for commercial utilisation, without giving prior intimation to the concerned State Biodiversity Board, but such access shall be subject to the provisions of clause (b) of section 23 and sub-section (2) of section 24: Provided that the provisions of this section shall not apply to the codified traditional knowledge, cultivated medicinal plants and its products, local people and communities of the area, including growers and cultivators of biodiversity and to vaids, hakims and registered AYUSH practitioners only who have been practicing indigenous medicines, including Indian systems of medicine as profession for sustenance and livelihood.",
       "location": {
-        "chapter": "Chapter II (Regulation of Access to Biological Diversity)",
-        "page_start": 7,
-        "page_end": 7
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
       },
-      "topics": ["DOMESTIC_ENTITIES", "SBB_PRIOR_INTIMATION", "AYUSH_VAIDYA_EXEMPTION"],
-      "statutory_significance": "Governs domestic AYUSH manufacturing; 2023 amendment explicitly exempts local registered practitioners."
+      "topics": [
+        "DOMESTIC_ENTITIES",
+        "SBB_PRIOR_INTIMATION",
+        "COMMERCIAL_UTILISATION",
+        "VAIDS_EXEMPTION"
+      ],
+      "statutory_significance": "Prior intimation obligation for Indian entities; statutory exemption for local vaids and AYUSH practitioners."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_019",
+      "type": "SECTION",
+      "number": "19",
+      "heading": "Approval by National Biodiversity Authority for Undertaking Certain Activities",
+      "text": "(1) Any person referred to in sub-section (2) of section 3 who intends to obtain any biological resource occurring in India or knowledge associated thereto for research or for commercial utilisation or for bio-survey and bio-utilisation or transfer the results of any research relating to biological resources occurring in, or obtained from, India, shall make application in such form and payment of such fees as may be prescribed, to the National Biodiversity Authority. (2) Any person referred to in sub-section (2) of section 3 who intends to apply for a patent or any other form of intellectual property rights, whether in India or outside India, referred to in sub-section (1) of section 6, may make an application to the National Biodiversity Authority in such form, on payment of such fee, and in such manner, as may be prescribed. (2A) Any person referred to in sub-section (1A) of section 6 shall register with the National Biodiversity Authority at the time of making application under sub-section (2), and persons referred to in sub-section (1B) of section 6 shall obtain prior approval from the National Biodiversity Authority at the time of commercialisation. (3) On receipt of an application under sub-section (1) or sub-section (2), the National Biodiversity Authority may, after making such enquiries as it may deem fit and if necessary after consulting an expert committee constituted for this purpose, by order, grant approval subject to any regulations made in this behalf and subject to such terms and conditions as it may deem fit, including the imposition of charges by way of royalty or for reasons to be recorded in writing, reject the application: Provided that no such order for rejection shall be made without giving an opportunity of being heard to the person affected. (3A) The National Biodiversity Authority shall, while granting approval under this section, determine the benefit sharing in such manner as may be specified by regulations made in this behalf: Provided that if the National Biodiversity Authority is of the opinion that such an activity is detrimental or contrary to the objectives of conservation and sustainable use of biodiversity or fair and equitable sharing of benefits arising out of such activity, it may, by order, for reasons to be recorded in writing, prohibit or restrict any such activity:",
+      "location": {
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
+      },
+      "topics": [
+        "NBA_APPROVAL",
+        "COMMERCIAL_UTILISATION",
+        "FORM_I",
+        "BIO_SURVEY"
+      ],
+      "statutory_significance": "Statutory procedure for applying for approval to access biological resources on Form I."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_020",
+      "type": "SECTION",
+      "number": "20",
+      "heading": "Transfer of Results of Research",
+      "text": "(1) Any person or entity who intends to transfer the results of any research on biological resources, which are found in or brought from India, including those deposited in repositories outside India or traditional knowledge associated thereto, to persons referred to under sub-section (2) of section 3 for monetary consideration or otherwise, he shall make an application to the National Biodiversity Authority in such form, and on payment of such fee, as may be prescribed. (2) Any person who intends to transfer the results of research referred to in sub-section (1) shall make an application in such form and in such manner as may be prescribed to the National Biodiversity Authority. (3) On receipt of an application under sub-section (2), the National Biodiversity Authority may, after making such enquiries, as it deems fit, by order, grant approval, subject to such terms and conditions, as it may deem fit, including benefit sharing or otherwise, as per the guidelines or for reasons to be recorded in writing, or reject the application: Provided that no such order for rejection shall be made without giving an opportunity of being heard to the person concerned. (4) The National Biodiversity Authority shall place in public domain the details of every approval granted or rejected under this section.",
+      "location": {
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
+      },
+      "topics": [
+        "RESEARCH_TRANSFER",
+        "FORM_II",
+        "FOREIGN_PARTNERS",
+        "THIRD_PARTY_TRANSFER"
+      ],
+      "statutory_significance": "Prohibits third-party transfer of research results to foreign entities without NBA approval on Form II."
     },
     {
       "provision_id": "BDA_2002_SEC_021",
       "type": "SECTION",
       "number": "21",
-      "heading": "Determination of Equitable Benefit Sharing by National Biodiversity Authority",
-      "text": "The National Biodiversity Authority shall ensure that the terms and conditions agreed to secure equitable sharing of benefits arising out of the use of accessed biological resources, their derivatives, innovations and practices associated with their use and applications and knowledge relating thereto in accordance with mutually agreed terms.",
+      "heading": "Determination of Fair and Equitable Benefit Sharing by National Biodiversity Authority",
+      "text": "(1) The National Biodiversity Authority shall, while determining benefit sharing for the approval granted under this Act, ensure that the terms and conditions subject to which the approval is granted secures fair and equitable sharing of benefits arising out of the use of accessed biological resources, their derivatives, innovations and practices associated with their use and applications and knowledge relating thereto in accordance with mutually agreed terms and conditions between the person applying for such approval, and the Biodiversity Management Committee represented by the National Biodiversity Authority. (2) The National Biodiversity Authority shall, subject to any regulations made in this behalf, determine the benefit sharing which shall be given effect in all or any of the following manner, namely:— (a) grant of joint ownership of intellectual property rights to the National Biodiversity Authority, or where benefit claimers are identified, to such benefit claimers; (b) transfer of technology; (c) location of production, research and development units in such areas which will facilitate better living standards to the benefit claimers; (d) association of Indian scientists, benefit claimers and the local people with research and development in biological resources and bio-survey and bio-utilisation; (e) setting up of venture capital fund for aiding the cause of benefit claimers; (f) payment of monetary compensation and other non-monetary benefits to the benefit claimers as the National Biodiversity Authority may deem fit.",
       "location": {
-        "chapter": "Chapter V (Functions and Powers of NBA)",
-        "page_start": 12,
-        "page_end": 13
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
       },
-      "topics": ["BENEFIT_SHARING", "EQUITY", "LOCAL_COMMUNITIES", "BMC"],
-      "statutory_significance": "Legal authority for calculating benefit sharing royalties."
+      "topics": [
+        "BENEFIT_SHARING",
+        "EQUITABLE_BENEFIT_SHARING",
+        "ROYALTY",
+        "ABS_REGULATIONS"
+      ],
+      "statutory_significance": "Determination of monetary and non-monetary benefit sharing terms by the National Biodiversity Authority."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_040",
+      "type": "SECTION",
+      "number": "40",
+      "heading": "Provisions of This Act Not to Apply in Certain Cases (Normally Traded Commodities)",
+      "text": "Notwithstanding anything contained in this Act, the Central Government may, in consultation with the National Biodiversity Authority, by notification in the Official Gazette, declare that all or any of the provisions of this Act shall not apply to biological resources when normally traded as commodities or to the items derived from them, including agricultural wastes, as notified and cultivated medicinal plants and their products for entities covered under section 7, registered as per the regulations made or as may prescribed: Provided that no exemption shall be made for the activities referred to in sub-sections (1) and (2) of section 6.",
+      "location": {
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
+      },
+      "topics": [
+        "NTAC_EXEMPTION",
+        "COMMODITY_EXPORT",
+        "SPICES",
+        "AGRICULTURAL_WASTES"
+      ],
+      "statutory_significance": "Central Government power to exempt biological resources when normally traded as commodities (NTAC list like ginger, pepper) from NBA/SBB provisions."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_041",
+      "type": "SECTION",
+      "number": "41",
+      "heading": "Constitution of Biodiversity Management Committee",
+      "text": "(1) Every local body at the Gram Panchayat level in the rural areas and at the Nagar Panchayat or Municipal Committee at Municipal Corporation level in the urban areas shall constitute a Biodiversity Management Committee (by whatever name called) within its area for the purpose of promoting conservation, sustainable use and documentation of biological diversity including preservation of habitats, conservation of landraces, folk varieties, farmers' varieties, and cultivars, domesticated stocks and breeds of animals, living things in water bodies and microorganisms and chronicling of knowledge relating to biological diversity: Provided that the State Government may constitute Biodiversity Management Committees at the intermediate or district Panchayat level for achieving the objectives of the Act. (1A) The functions of Biodiversity Management Committee so constituted shall include conservation, sustainable use and documentation of biological diversity, including conservation of habitats, landraces, folk varieties, cultivars, domesticated breeds of animals, and microorganisms, and chronicling of traditional knowledge associated thereto relating to biological diversity (1B) The composition of the Biodiversity Management Committee shall be such as may be prescribed by the State Government: Provided that the number of members of the said Committee shall not be less than seven and not exceeding eleven. (2) The National Biodiversity Authority and the State Biodiversity Boards shall consult the Biodiversity Management Committees while taking any decision relating to the use of biological",
+      "location": {
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
+      },
+      "topics": [
+        "BMC_CONSTITUTION",
+        "MANDATORY_CONSULTATION",
+        "BENEFIT_SHARING_CONSULTATION",
+        "LOCAL_COMMUNITIES"
+      ],
+      "statutory_significance": "Mandates local body constitution of BMCs and requires NBA and SBBs to consult BMCs in decisions on biological resources and traditional knowledge."
+    },
+    {
+      "provision_id": "BDA_2002_SEC_055",
+      "type": "SECTION",
+      "number": "55",
+      "heading": "Penalties (Decriminalized Civil Adjudication)",
+      "text": "If any person or entity covered under sub-section (2) of section 3 or section 7 contravenes or attempts to contravene or abets the contravention of the provisions of section 3 or section 4 or section 6 or section 7, such person shall be liable to pay penalty which shall not be less than one lakh rupees, but which may extend to fifty lakh rupees, but where the damage caused exceeds the amount of penalty, such penalty shall be commensurate with the damage caused, and in case, the failure or contravention continues, an additional penalty may be imposed, which shall not exceed one crore rupees and such penalty shall be decided by the adjudicating officer appointed under section 55A.",
+      "location": {
+        "chapter": "Official Gazette Act No. 18 of 2003 as amended by Act No. 10 of 2023"
+      },
+      "topics": [
+        "DECRIMINALIZATION",
+        "CIVIL_PENALTIES",
+        "MONETARY_FINES",
+        "ADJUDICATING_OFFICER"
+      ],
+      "statutory_significance": "Substitutes criminal imprisonment with civil adjudication and monetary penalties between ₹1 lakh and ₹50 lakh."
     }
   ]
 }

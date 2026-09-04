@@ -9,6 +9,9 @@ export interface Citation {
   official_url?: string;
   support_score: number;
   verbatim_quote: string;
+  document_sha256?: string;
+  authority?: string;
+  authority_level?: number;
 }
 
 export interface ClaimVerification {

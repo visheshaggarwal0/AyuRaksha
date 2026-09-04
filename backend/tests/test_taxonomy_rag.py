@@ -46,7 +46,7 @@ class TestTaxonomyChunking:
         charaka_matches = [b for b in book_chunks if "Charaka" in b["heading"] or "Caraka" in b["heading"]]
         assert len(charaka_matches) > 0
         assert "First Schedule" in charaka_matches[0]["text"]
-        assert charaka_matches[0]["authority_level"] == 4
+        assert charaka_matches[0]["authority_level"] == 3
 
 
 class TestTaxonomyEngineLookups:

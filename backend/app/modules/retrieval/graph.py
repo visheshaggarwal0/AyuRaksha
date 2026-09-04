@@ -91,6 +91,9 @@ class IndependentGraphRetriever(IGraphRetriever):
         ]
     }
 
+    def __init__(self):
+        self._cache: Dict[tuple, List[Evidence]] = {}
+
     async def retrieve_graph(
         self,
         entities: List[str],
@@ -102,6 +105,10 @@ class IndependentGraphRetriever(IGraphRetriever):
         clean_entities = [e.strip().upper() for e in entities if e and len(e.strip()) >= 2]
         if not clean_entities:
             return []
+
+        cache_key = tuple(sorted(clean_entities))
+        if cache_key in self._cache:
+            return self._cache[cache_key][:limit]
 
         # 1. Query database KnowledgeRelation table if available
         db_relations: List[Dict[str, Any]] = []
@@ -163,4 +170,5 @@ class IndependentGraphRetriever(IGraphRetriever):
                 )
             )
 
+        self._cache[cache_key] = evidence_list
         return evidence_list

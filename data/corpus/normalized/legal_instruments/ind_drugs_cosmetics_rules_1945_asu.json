@@ -67,6 +67,26 @@
       },
       "topics": ["GMP", "SCHEDULE_T", "QUALITY_CONTROL", "MANUFACTURING_PREMISES"],
       "statutory_significance": "Prerequisite for manufacturing license issuance and international WHO-GMP export certification."
+    },
+    {
+      "provision_id": "DCR_1945_RULE_122E",
+      "type": "RULE",
+      "number": "Rule 122E",
+      "heading": "Definition of Phytopharmaceutical Drug & Clinical Trial Requirements",
+      "text": "A phytopharmaceutical drug is defined as a purified and standardized fraction with defined minimum four bioactive or analytical markers of an extract of a medicinal plant or its part, for internal or external use of human beings or animals for diagnosis, treatment, mitigation or prevention of any disease or disorder, but does not include administration by parenteral route. Requires regulatory approval from CDSCO on Form CT-18 with human phase II and phase III clinical trials under Schedule Y / New Drugs and Clinical Trials Rules.",
+      "location": {"part": "Part X-A", "page_start": 120, "page_end": 125},
+      "topics": ["PHYTOPHARMACEUTICAL", "STANDARDIZED_FRACTION", "CDSCO", "CLINICAL_TRIALS"],
+      "statutory_significance": "Modern scientific botanical drug approval pathway under CDSCO."
+    },
+    {
+      "provision_id": "DCR_1945_RULE_157",
+      "type": "RULE",
+      "number": "Rule 157",
+      "heading": "Conditions for the Grant or Renewal of a License in Form 25D",
+      "text": "Before a license in Form 25D is granted or renewed, the licensing authority must satisfy itself that the manufacture shall be conducted under the active direction and personal supervision of competent technical staff and that the premises comply with Good Manufacturing Practices prescribed in Schedule T.",
+      "location": {"part": "Part XVI", "page_start": 180, "page_end": 182},
+      "topics": ["MANUFACTURING_LICENSE", "FORM_25D", "SCHEDULE_T_COMPLIANCE"],
+      "statutory_significance": "Statutory prerequisite tying manufacturing licenses to Schedule T GMP."
     }
   ]
 }

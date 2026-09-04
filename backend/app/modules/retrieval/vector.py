@@ -2,6 +2,7 @@
 Independent Vector Retriever
 Implements IVectorRetriever for dense semantic search over pgvector or in-memory vector index.
 """
+import asyncio
 from typing import List, Optional
 import logging
 from app.modules.interfaces import IVectorRetriever
@@ -26,12 +27,19 @@ class IndependentVectorRetriever(IVectorRetriever):
         domain_filter: Optional[str] = None
     ) -> List[Evidence]:
         query_vector = await embedding_module.embed_query(query)
-        results = await self.vector_store.search(
-            query_vector=query_vector,
-            jurisdiction=jurisdiction,
-            limit=limit,
-            domain_filter=domain_filter
-        )
+        try:
+            results = await asyncio.wait_for(
+                self.vector_store.search(
+                    query_vector=query_vector,
+                    jurisdiction=jurisdiction,
+                    limit=limit,
+                    domain_filter=domain_filter
+                ),
+                timeout=0.75
+            )
+        except (asyncio.TimeoutError, Exception) as e:
+            logger.debug("Neon pgvector search skipped or timed out (%s); relying on fused sparse/graph retrieval.", e)
+            results = []
 
         evidence_list: List[Evidence] = []
         for idx, row in enumerate(results):

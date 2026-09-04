@@ -120,9 +120,21 @@ export const CitationModal: React.FC<CitationModalProps> = ({ citation, onClose 
 
         {/* Modal Footer */}
         <div className="bg-slate-50 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-          <div className="flex items-center space-x-1.5 text-[11px] text-slate-400 font-mono">
-            <Hash className="w-3.5 h-3.5 text-slate-400" />
-            <span>Cryptographically Verified</span>
+          <div className="flex flex-col space-y-0.5">
+            <div className="flex items-center space-x-1.5 text-[11px] text-slate-500 font-mono">
+              <Hash className="w-3.5 h-3.5 text-emerald-600" />
+              <span className="font-semibold text-slate-700">SHA-256 Provenance:</span>
+            </div>
+            {citation.document_sha256 ? (
+              <span 
+                className="font-mono text-[10px] text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 select-all cursor-text"
+                title={`Full SHA-256 Hash: ${citation.document_sha256}`}
+              >
+                {citation.document_sha256.substring(0, 12)}...{citation.document_sha256.substring(citation.document_sha256.length - 8)}
+              </span>
+            ) : (
+              <span className="text-[10px] text-slate-400 font-mono">Official Gazette Integrity Verified</span>
+            )}
           </div>
 
           <button

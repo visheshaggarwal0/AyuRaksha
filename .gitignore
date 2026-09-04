@@ -92,6 +92,7 @@ Thumbs.db
 logs/
 temp/
 tmp/
+scratch/
 .tempmediaStorage/
 
 # AI & Assistant Tool Artifacts

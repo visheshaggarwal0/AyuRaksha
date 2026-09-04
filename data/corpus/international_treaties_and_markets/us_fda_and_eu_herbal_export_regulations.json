@@ -43,6 +43,17 @@
           "relevance": "Laboratory testing specification for EU export batches."
         }
       ]
+    },
+    {
+      "market": "International Wildlife Trade (CITES)",
+      "regulatory_pathway": "CITES Appendix II / Foreign Trade Policy",
+      "rules": [
+        {
+          "clause": "CITES Export Permits & Non-Detriment Findings",
+          "text": "Species listed in CITES Appendix II (e.g. Red Sandalwood Pterocarpus santalinus, Agarwood Aquilaria malaccensis, Kutki Picrorhiza kurroa) require a valid CITES Export Permit issued by the Assistant Management Authority of India (Wildlife Crime Control Bureau) accompanied by Legal Procurement Certificates (LPC).",
+          "relevance": "Mandatory customs clearance permit for international shipment of protected botanicals."
+        }
+      ]
     }
   ]
 }

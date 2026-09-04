@@ -69,6 +69,42 @@
       "relevance": "CSIR/TKDL opposition pathway to challenge unmerited biopiracy patents."
     },
     {
+      "section_number": "Section 3(a)",
+      "heading": "Frivolous Inventions & Contrary to Natural Laws",
+      "text": "An invention which is frivolous or which claims anything obviously contrary to well established natural laws is not an invention within the meaning of this Act.",
+      "relevance": "Exclusion for unscientific, impossible, or perpetual motion claims."
+    },
+    {
+      "section_number": "Section 3(h)",
+      "heading": "Method of Agriculture or Horticulture Exclusion",
+      "text": "A method of agriculture or horticulture is not an invention within the meaning of this Act.",
+      "relevance": "Excludes cultivation, hydroponic, and farming techniques for medicinal herbs."
+    },
+    {
+      "section_number": "Section 3(j)",
+      "heading": "Plants, Animals, Varieties and Species Exclusion",
+      "text": "Plants and animals in whole or any part thereof other than micro-organisms; but including seeds, varieties and species and essentially biological processes for production or propagation of plants and animals are not inventions within the meaning of this Act.",
+      "relevance": "Excludes botanical varieties and wild plants; protectable under PPV&FR Act 2001."
+    },
+    {
+      "section_number": "Section 25(1)(j)",
+      "heading": "Pre-Grant Opposition on Non-Disclosure of Biological Origin",
+      "text": "A patent may be opposed on the ground that the complete specification does not disclose or wrongly mentions the source or geographical origin of biological material used for the invention.",
+      "relevance": "Statutory pre-grant ground for origin non-disclosure."
+    },
+    {
+      "section_number": "Section 39",
+      "heading": "Residents Not to Apply for Patents Outside India without Prior Permission",
+      "text": "No person resident in India shall, except under the authority of a written permit sought in the manner prescribed and granted by or on behalf of the Controller, make or cause to be made any application outside India for the grant of a patent for an invention.",
+      "relevance": "Mandatory Foreign Filing License (FFL) for Indian residents."
+    },
+    {
+      "section_number": "Section 40",
+      "heading": "Liability for Contravention of Section 35 or Section 39",
+      "text": "Without prejudice to the provisions contained in Chapter XX, if in respect of an application for a patent any person contravenes any direction as to secrecy given by the Controller under section 35 or makes or causes to be made an application for grant of a patent outside India in contravention of section 39 the application for patent under this Act shall be deemed to be abandoned and any patent granted shall be liable to be revoked under section 64.",
+      "relevance": "Consequences of failing to obtain Foreign Filing License under Section 39."
+    },
+    {
       "section_number": "Section 64(1)(p)",
       "heading": "Revocation of Patent on Traditional Knowledge Grounds",
       "text": "A patent may be revoked on a petition on the ground that the complete specification does not disclose or wrongly mentions the source and geographical origin of biological material, or that the invention claimed was anticipated having regard to the knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",

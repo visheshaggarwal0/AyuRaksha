@@ -14,9 +14,9 @@
     "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
     "retrieved_at": "2026-08-31",
     "file_name": "the_drugs_and_cosmetics_act_1940.pdf",
-    "sha256": "7a9332158872bcae4751433f4a30a845e1281eec956279f584e03b29c9ef63e3",
-    "mime_type": "application/pdf",
-    "storage_uri": "gs://ayuraksha-corpus/raw/india/ayush/the_drugs_and_cosmetics_act_1940.pdf"
+    "sha256": "ee37c57b638dfba89aed35212308ef10ae2e7f9d2aaa0812b72340ca81cd2f8c",
+    "mime_type": "text/plain",
+    "extracted_text_path": "data/corpus/extracted/tkdl_case_drugs_and_cosmetics_act,_1940.txt"
   },
   "version": {
     "published_date": "1940-04-10",
@@ -39,6 +39,20 @@
       },
       "topics": ["CLASSICAL_MEDICINE", "FIRST_SCHEDULE", "SHASTRIYA", "MANUFACTURING"],
       "statutory_significance": "Legal foundation of Classical (Shastriya) Ayurvedic medicines."
+    },
+    {
+      "provision_id": "DCA_1940_SEC_003_B",
+      "type": "SECTION",
+      "number": "3(b)",
+      "heading": "Definition of Drug",
+      "text": "“drug” includes— (i) all medicines for internal or external use of human beings or animals and all substances intended to be used for or in the diagnosis, treatment, mitigation or prevention of any disease or disorder in human beings or animals, including preparations applied on human body for the purpose of repelling insects like mosquitoes; (ii) such substances (other than food) intended to affect the structure or any function of the human body or intended to be used for the destruction of vermin or insects which cause disease in human beings or animals, as may be specified from time to time by the Central Government by notification in the Official Gazette; (iii) all substances intended for use as components of a drug including empty gelatin capsules; and (iv) such devices intended for internal or external use in the diagnosis, treatment, mitigation or prevention of disease or disorder in human beings or animals.",
+      "location": {
+        "chapter": "Chapter I (Introductory)",
+        "page_start": 2,
+        "page_end": 3
+      },
+      "topics": ["DEFINITION_OF_DRUG", "THERAPEUTIC_CLAIMS", "COSMETICS_BOUNDARY", "DISEASE_MITIGATION"],
+      "statutory_significance": "Distinguishes medicines and therapeutic topical formulations from cosmetics; formulations with disease mitigation claims fall under Section 3(b)."
     },
     {
       "provision_id": "DCA_1940_SEC_003_H",
@@ -67,6 +81,16 @@
       },
       "topics": ["MISBRANDING", "LABELLING", "FALSE_CLAIMS", "ENFORCEMENT"],
       "statutory_significance": "Statutory offence for unauthorized therapeutic claims on ASU packaging."
+    },
+    {
+      "provision_id": "DCA_1940_SCHEDULE_SECOND",
+      "type": "SCHEDULE",
+      "number": "Second Schedule",
+      "heading": "Standards to be Complied with by Imported Drugs and by Drugs Manufactured for Sale, Sold, Stocked or Exhibited for Sale, or Distributed",
+      "text": "For Ayurvedic, Siddha and Unani drugs, the standard of quality is the standards set forth in the Ayurvedic Pharmacopoeia of India (API), Siddha Pharmacopoeia, or Unani Pharmacopoeia for the time being in force.",
+      "location": {"chapter": "Schedules to DCA 1940", "page_start": 45, "page_end": 46},
+      "topics": ["STANDARDS_OF_QUALITY", "AYURVEDIC_PHARMACOPOEIA", "API", "PURITY"],
+      "statutory_significance": "Mandatory statutory benchmark for raw material and finished product monograph standards."
     }
   ]
 }

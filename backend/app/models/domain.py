@@ -52,6 +52,12 @@ class AbstentionCode(str, Enum):
     OUT_OF_REGULATORY_SCOPE = "OUT_OF_REGULATORY_SCOPE"
 
 
+class ExecutionMode(str, Enum):
+    DIRECT_STATUTORY = "DIRECT_STATUTORY"
+    GUIDED_RAG = "GUIDED_RAG"
+    MULTI_HOP_PLANNER = "MULTI_HOP_PLANNER"
+
+
 # ============================================================================
 # 1. Statutory & Corpus Hierarchy Models
 # ============================================================================
@@ -256,7 +262,7 @@ class RAGResponse(BaseModel):
     safe_abstention: bool = Field(default=False)
     abstention_reason: Optional[AbstentionReason] = None
     language: str = Field(default="en")
-    execution_mode: str = Field(default="GUIDED_RAG", description="DIRECT_STATUTORY, GUIDED_RAG, or MULTI_HOP_PLANNER")
+    execution_mode: ExecutionMode = Field(default=ExecutionMode.GUIDED_RAG, description="DIRECT_STATUTORY, GUIDED_RAG, or MULTI_HOP_PLANNER")
     resolved_concepts: List[str] = Field(default_factory=list, description="Detected legal concept tags")
     evidence_pack: Optional[EvidencePack] = None
     trace_id: Optional[str] = None

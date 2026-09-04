@@ -873,8 +873,13 @@ export function App() {
                     <div className="bg-white p-4 rounded-xl border border-slate-200 text-xs italic text-slate-600 leading-relaxed shadow-subtle">
                       "{inspectorCitation.verbatim_quote}"
                     </div>
-                    <div className="text-[10px] text-slate-400 font-mono font-medium">
-                      Source ID: {inspectorCitation.source_id}
+                    <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono font-medium">
+                      <span>Source ID: {inspectorCitation.source_id}</span>
+                      {inspectorCitation.document_sha256 && (
+                        <span className="text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-mono text-[9px]" title={`SHA-256: ${inspectorCitation.document_sha256}`}>
+                          SHA: {inspectorCitation.document_sha256.substring(0, 8)}...
+                        </span>
+                      )}
                     </div>
                   </div>
 

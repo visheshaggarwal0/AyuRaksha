@@ -90,13 +90,28 @@ class CompositeRetrievalModule(IRetrievalModule):
                         rrf_scores[key] = 0.0
                     rrf_scores[key] += 0.015  # Graph bonus
 
-        # Sort and assemble final evidence
-        sorted_keys = sorted(rrf_scores.keys(), key=lambda k: rrf_scores[k], reverse=True)
-        final_candidates: List[Evidence] = []
-        for k in sorted_keys[:limit]:
+        # Sort and assemble final evidence with statutory authority weighting
+        def _get_effective_score(k: str) -> float:
             ev = fused_candidates[k]
-            ev.relevance_score = round(min(1.0, rrf_scores[k] * 10), 4)
+            auth_level = getattr(ev, "authority_level", 4) or 4
+            # Primary statutes (Level 5) receive boost over secondary book lists (Level 3)
+            return rrf_scores[k] + max(0, (auth_level - 3) * 0.005)
+
+        sorted_keys = sorted(rrf_scores.keys(), key=_get_effective_score, reverse=True)
+        final_candidates: List[Evidence] = []
+        source_counts: Dict[str, int] = {}
+        for k in sorted_keys:
+            ev = fused_candidates[k]
+            src_id = (ev.source_id or "").upper()
+            # Prevent secondary book catalogues from crowding out primary statutes
+            if "BOOK" in src_id or "CATALOGUE" in str(getattr(ev, "document_type", "")).upper():
+                if source_counts.get(src_id, 0) >= 2:
+                    continue
+            source_counts[src_id] = source_counts.get(src_id, 0) + 1
+            ev.relevance_score = round(min(1.0, _get_effective_score(k) * 10), 4)
             final_candidates.append(ev)
+            if len(final_candidates) >= limit:
+                break
 
         latency = round((time.time() - start_time) * 1000, 2)
         jur_enum = JurisdictionEnum.CROSS_BORDER if jurisdiction == "CROSS_BORDER" else JurisdictionEnum(jurisdiction)

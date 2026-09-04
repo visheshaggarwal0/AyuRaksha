@@ -13,10 +13,11 @@
     "url": "https://www.indiacode.nic.in/handle/123456789/1392",
     "source_type": "OFFICIAL_STATUTE_INDIA_CODE",
     "retrieved_at": "2026-08-31",
-    "file_name": "the_patents_act_1970.pdf",
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file_name": "THE PATENTS ACT, 1970.pdf",
+    "sha256": "d57084888c69d70b16ed6a52a612363a526994203effa58880a26faaaa6e0678",
     "mime_type": "application/pdf",
-    "storage_uri": "gs://ayuraksha-corpus/raw/india/ip/patents/the_patents_act_1970.pdf"
+    "local_path": "data/corpus/raw_downloads/THE PATENTS ACT, 1970.pdf",
+    "extracted_text_path": "data/corpus/extracted/tkdl_case_the_patents_act,_1970.txt"
   },
   "version": {
     "published_date": "1970-09-19",
@@ -39,6 +40,20 @@
       },
       "topics": ["INVENTION", "NOVELTY", "INDUSTRIAL_APPLICABILITY"],
       "statutory_significance": "Defines basic statutory threshold for patentability."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_002_1_JA",
+      "type": "SECTION",
+      "number": "2(1)(ja)",
+      "heading": "Inventive Step",
+      "text": "'inventive step' means a feature of an invention that involves technical advance as compared to the existing knowledge or having economic significance or both and that makes the invention not obvious to a person skilled in the art.",
+      "location": {
+        "chapter": "Chapter I (Preliminary)",
+        "page_start": 8,
+        "page_end": 8
+      },
+      "topics": ["INVENTIVE_STEP", "TECHNICAL_ADVANCE", "ECONOMIC_SIGNIFICANCE", "NON_OBVIOUSNESS"],
+      "statutory_significance": "Statutory standard for non-obviousness and technical advance required to overcome Section 3(e) and 3(p) challenges in herbal formulations."
     },
     {
       "provision_id": "PATENTS_ACT_1970_SEC_003_P",
@@ -123,6 +138,86 @@
       },
       "topics": ["PRE_GRANT_OPPOSITION", "TKDL", "INDIGENOUS_KNOWLEDGE", "BIOPIRACY"],
       "statutory_significance": "Legal mechanism for CSIR and third parties to challenge biopiracy patents."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_A",
+      "type": "SECTION",
+      "number": "3(a)",
+      "heading": "Frivolous Inventions & Contrary to Natural Laws",
+      "text": "An invention which is frivolous or which claims anything obviously contrary to well established natural laws is not an invention within the meaning of this Act.",
+      "location": {"chapter": "Chapter II (Inventions Not Patentable)", "page_start": 7, "page_end": 7},
+      "topics": ["FRIVOLOUS", "NATURAL_LAWS", "EXCLUSION"],
+      "statutory_significance": "Excludes unscientific claims and perpetual motion assertions."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_D",
+      "type": "SECTION",
+      "number": "3(d)",
+      "heading": "New Form of Known Substance / Enhanced Efficacy",
+      "text": "The mere discovery of a new form of a known substance which does not result in the enhancement of the known efficacy of that substance or the mere discovery of any new property or new use for a known substance is not patentable.",
+      "location": {"chapter": "Chapter II (Inventions Not Patentable)", "page_start": 7, "page_end": 7},
+      "topics": ["KNOWN_SUBSTANCE", "THERAPEUTIC_EFFICACY", "BIOAVAILABILITY"],
+      "statutory_significance": "Requires demonstrated enhanced therapeutic efficacy for botanical derivatives."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_H",
+      "type": "SECTION",
+      "number": "3(h)",
+      "heading": "Method of Agriculture or Horticulture Exclusion",
+      "text": "A method of agriculture or horticulture is not an invention within the meaning of this Act.",
+      "location": {"chapter": "Chapter II (Inventions Not Patentable)", "page_start": 8, "page_end": 8},
+      "topics": ["AGRICULTURE", "HORTICULTURE", "CULTIVATION"],
+      "statutory_significance": "Excludes herbal farming, vertical cultivation, and harvesting methods."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_J",
+      "type": "SECTION",
+      "number": "3(j)",
+      "heading": "Plants, Animals, Varieties and Species Exclusion",
+      "text": "Plants and animals in whole or any part thereof other than micro-organisms; but including seeds, varieties and species and essentially biological processes for production or propagation of plants and animals are not inventions within the meaning of this Act.",
+      "location": {"chapter": "Chapter II (Inventions Not Patentable)", "page_start": 8, "page_end": 8},
+      "topics": ["PLANTS", "SEEDS", "VARIETIES", "PPVFR"],
+      "statutory_significance": "Excludes living plant species and wild botanicals; protectable under PPV&FR Act 2001."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_025_1_J",
+      "type": "SECTION",
+      "number": "25(1)(j)",
+      "heading": "Pre-Grant Opposition on Non-Disclosure of Origin",
+      "text": "Where an application for a patent has been published, any person may oppose the grant on the ground that the complete specification does not disclose or wrongly mentions the source or geographical origin of biological material used for the invention.",
+      "location": {"chapter": "Chapter V (Opposition to Grant of Patent)", "page_start": 23, "page_end": 24},
+      "topics": ["PRE_GRANT_OPPOSITION", "SOURCE_DISCLOSURE", "NON_DISCLOSURE"],
+      "statutory_significance": "Ground for opposing grant when biological origin is withheld."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_039",
+      "type": "SECTION",
+      "number": "39",
+      "heading": "Residents Not to Apply for Patents Outside India without Prior Permission",
+      "text": "No person resident in India shall, except under the authority of a written permit sought in the manner prescribed and granted by or on behalf of the Controller, make or cause to be made any application outside India for the grant of a patent for an invention.",
+      "location": {"chapter": "Chapter VII (Provisions for Secrecy of Inventions)", "page_start": 35, "page_end": 36},
+      "topics": ["FOREIGN_FILING_LICENSE", "FFL", "CGPDTM_PERMIT"],
+      "statutory_significance": "Mandatory prior permission for Indian residents filing patents abroad."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_040",
+      "type": "SECTION",
+      "number": "40",
+      "heading": "Liability for Contravention of Section 35 or Section 39",
+      "text": "If in respect of an application for a patent any person contravenes section 39 the application for patent under this Act shall be deemed to be abandoned and any patent granted shall be liable to be revoked under section 64.",
+      "location": {"chapter": "Chapter VII (Provisions for Secrecy of Inventions)", "page_start": 36, "page_end": 36},
+      "topics": ["ABANDONMENT", "REVOCATION", "CONTRAVENTION"],
+      "statutory_significance": "Deemed abandonment and patent revocation consequences for Section 39 violations."
+    },
+    {
+      "provision_id": "PATENTS_ACT_1970_SEC_064_1_P",
+      "type": "SECTION",
+      "number": "64(1)(p)",
+      "heading": "Revocation of Patent on Traditional Knowledge Grounds",
+      "text": "A patent may be revoked on the ground that the complete specification does not disclose or wrongly mentions the source and geographical origin of biological material, or that the invention claimed was anticipated having regard to the knowledge, oral or otherwise, available within any local or indigenous community in India or elsewhere.",
+      "location": {"chapter": "Chapter XII (Revocation of Patents)", "page_start": 50, "page_end": 51},
+      "topics": ["REVOCATION", "POST_GRANT", "GROUNDS", "TKDL"],
+      "statutory_significance": "Statutory ground for invalidating patents obtained through biopiracy."
     }
   ]
 }

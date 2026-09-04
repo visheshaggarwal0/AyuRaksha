@@ -77,7 +77,7 @@ class LegalConceptEngine:
             return query
 
         statutory_anchors: List[str] = []
-        for c in concepts[:3]:  # Top 3 concepts
+        for c in concepts[:5]:  # Top 5 concepts across active domains
             for hook in c.statutory_hooks:
                 statutory_anchors.append(hook)
 
