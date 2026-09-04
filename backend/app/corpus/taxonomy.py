@@ -379,7 +379,14 @@ class TKDLTaxonomyEngine:
     def search_plants(self, query: str = "", limit: int = 50) -> List[Dict[str, Any]]:
         if not query.strip():
             return self._plants[:limit]
-        q = query.lower()
+        q = query.lower().strip()
+        
+        # Also check curated botanical aliases for vernacular queries (e.g. Ashwagandha, Tulsi, Giloy)
+        matched_sci_names = set()
+        for sci, aliases in BOTANICAL_ALIASES.items():
+            if q in sci.lower() or any(q in a.lower() or a.lower() in q for a in aliases):
+                matched_sci_names.add(sci.lower())
+
         res = [
             p for p in self._plants
             if q in p.get("scientific_name", "").lower()
@@ -387,6 +394,7 @@ class TKDLTaxonomyEngine:
             or q in p.get("common_name", "").lower()
             or q in p.get("unani_name", "").lower()
             or q in p.get("siddha_name", "").lower()
+            or any(m in p.get("scientific_name", "").lower() for m in matched_sci_names)
         ]
         return res[:limit]
 

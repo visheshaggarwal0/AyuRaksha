@@ -85,3 +85,34 @@ export interface ABSAssessmentResponse {
   statutory_citations: Citation[];
   mandatory_next_steps: string[];
 }
+
+export interface InnovationProfile {
+  productName: string;
+  baseline: string;
+  differenceType: string;
+  userStatedDifference: string;
+  technicalFeature: string;
+  technicalEffect: string;
+  evidenceTypes: string[];
+  evidenceDetails?: string;
+  isTraditionalKnowledge: 'YES' | 'NO' | 'PARTIALLY' | 'UNSURE';
+  classicalSourceText?: string;
+  commercialIntent: string;
+  targetJurisdiction: Jurisdiction;
+  completedAt?: string;
+}
+
+export interface ActiveCaseState {
+  caseId: string;
+  createdAt: string;
+  updatedAt: string;
+  productRequest: ProductClassificationRequest | null;
+  classificationResult: ProductClassificationResponse | null;
+  absRequest?: ABSAssessmentRequest | null;
+  absResult?: ABSAssessmentResponse | null;
+  innovationProfile?: InnovationProfile | null;
+  recentCitations?: Citation[];
+  status: 'NO_CASE' | 'ACTIVE' | 'EVALUATED';
+}
+
+
