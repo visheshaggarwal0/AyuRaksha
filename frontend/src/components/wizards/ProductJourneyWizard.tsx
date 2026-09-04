@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Compass, ArrowRight, RotateCcw, BookOpen, ExternalLink, Scale } from 'lucide-react';
 import { api } from '../../services/api';
 import { ProductClassificationRequest, ProductClassificationResponse, Citation } from '../../types';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 interface ProductJourneyWizardProps {
   onOpenCitation: (c: Citation) => void;
 }
 
 export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOpenCitation }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<ProductClassificationRequest>({
     name: 'DiabaRakshak Synergistic Extract',
     in_classical_text: true,
@@ -50,11 +52,11 @@ export const ProductJourneyWizard: React.FC<ProductJourneyWizardProps> = ({ onOp
       <div className="bg-white rounded-2xl p-6 border border-ayush-border shadow-card">
         <div className="inline-flex items-center space-x-2 px-2.5 py-1 bg-emerald-50 text-ayush-forest rounded-md text-xs font-bold border border-emerald-200 mb-2">
           <Compass className="w-3.5 h-3.5" />
-          <span>Module 1 · Deterministic Regulatory Classifier</span>
+          <span>{t('wizard.module1')}</span>
         </div>
-        <h2 className="text-2xl font-bold text-ayush-navy">Product Classification & Regulatory Pathway</h2>
+        <h2 className="text-2xl font-bold text-ayush-navy">{t('wizard.title')}</h2>
         <p className="text-xs text-ayush-slate mt-1">
-          Map your formulation to the Drugs & Cosmetics Act 1940 (First Schedule), Rule 158B, FSSAI Ayurveda Aahara, and Patents Act Section 3(p) statutory exclusions.
+          {t('wizard.subtitle')}
         </p>
       </div>
 

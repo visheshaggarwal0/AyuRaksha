@@ -34,6 +34,7 @@ import { CitationModal } from './components/modals/CitationModal';
 import { StatutoryMarkdownRenderer } from './components/common/StatutoryMarkdownRenderer';
 import { ComplianceDossierModal } from './components/common/ComplianceDossierModal';
 import { ObservabilityConsole } from './components/observability/ObservabilityConsole';
+import { useTranslation } from './i18n/LanguageContext';
 
 interface ChatMessage {
   id: string;
@@ -49,7 +50,7 @@ export function App() {
   const [activeView, setActiveView] = useState<ActiveView>('chat');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [jurisdiction, setJurisdiction] = useState<Jurisdiction>('IN');
-  const [language, setLanguage] = useState<'en' | 'hi' | 'sa'>('en');
+  const { language, setLanguage, t } = useTranslation();
   const [inputQuery, setInputQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [selectedCitation, setSelectedCitation] = useState<Citation | null>(null);
@@ -109,7 +110,7 @@ export function App() {
       textareaRef.current.style.height = 'auto';
     }
     setLoading(true);
-    setCurrentStage('Analyzing query & detecting statutory jurisdiction...');
+    setCurrentStage(t('app.analyzing'));
 
     const assistantMsgId = (Date.now() + 1).toString();
     let accumulatedText = '';
@@ -528,7 +529,7 @@ export function App() {
                 className="px-3.5 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-bold transition-all border border-slate-200 flex items-center space-x-1.5 shadow-subtle group"
               >
                 <FileText className="w-3.5 h-3.5 text-ayush-saffron group-hover:text-ayush-saffronLight transition-colors" />
-                <span className="hidden sm:inline">Compliance Dossier</span>
+                <span className="hidden sm:inline">{t('app.complianceDossier')}</span>
               </motion.button>
             </div>
           </header>
@@ -552,10 +553,10 @@ export function App() {
                           <Shield className="w-8 h-8 text-emerald-300" />
                         </div>
                         <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tighter font-display leading-[1.1]">
-                          Ayurvedic IP &<br/>Regulatory Copilot
+                          {t('app.heroTitleLine1')}<br/>{t('app.heroTitleLine2')}
                         </h1>
                         <p className="text-sm sm:text-base text-slate-500 max-w-lg mx-auto leading-relaxed">
-                          Instant, citation-grounded guidance for Section 3(p) patents, BDA 2023 ABS compliance, and classical ASU licensing.
+                          {t('app.heroSubtitle')}
                         </p>
                       </div>
 
@@ -767,7 +768,7 @@ export function App() {
                             handleSendMessage();
                           }
                         }}
-                        placeholder="Ask about Ayurvedic IP, Section 3(p), or ABS..."
+                        placeholder={t('app.typeMessage')}
                         className="w-full bg-transparent resize-none focus:outline-none text-[15px] text-zinc-800 placeholder-zinc-400 py-2.5 pr-12 max-h-40 leading-relaxed"
                       />
                       

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Shield, Globe, Compass, Scale, Leaf, Search, BookOpen, Menu, X } from 'lucide-react';
 import { Jurisdiction } from '../../types';
+import { useTranslation } from '../../i18n/LanguageContext';
 
 interface NavbarProps {
   currentTab: string;
@@ -20,14 +21,15 @@ export function Navbar({
   setLanguage,
 }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navItems = [
-    { id: 'home', label: 'Overview', icon: Shield },
-    { id: 'product-journey', label: 'Product Classification', icon: Compass },
-    { id: 'ip-matrix', label: 'IP Opportunity Matrix', icon: Scale },
-    { id: 'abs', label: 'ABS & Biodiversity', icon: Leaf },
-    { id: 'chat', label: 'Ask AyuRaksha (RAG)', icon: Search },
-    { id: 'corpus', label: 'Statutory Corpus', icon: BookOpen },
+    { id: 'home', label: t('nav.overview'), icon: Shield },
+    { id: 'product-journey', label: t('nav.productClassification'), icon: Compass },
+    { id: 'ip-matrix', label: t('nav.ipMatrix'), icon: Scale },
+    { id: 'abs', label: t('nav.abs'), icon: Leaf },
+    { id: 'chat', label: t('nav.askAyuraksha'), icon: Search },
+    { id: 'corpus', label: t('nav.corpus'), icon: BookOpen },
   ];
 
   return (
@@ -40,14 +42,14 @@ export function Navbar({
               SIH 26045
             </span>
             <span className="text-slate-200">
-              Ministry of Ayush & AIIA · IP-SAKTI Sahayak
+              {t('topBanner.ministry')}
             </span>
           </div>
 
           <div className="flex items-center space-x-4">
             {/* Language Selector */}
             <div className="flex items-center space-x-1">
-              <span className="text-slate-400 text-[11px]">Language:</span>
+              <span className="text-slate-400 text-[11px]">{t('topBanner.language')}</span>
               <button
                 onClick={() => setLanguage('en')}
                 className={`px-1.5 py-0.5 rounded text-[11px] font-semibold ${
@@ -64,20 +66,28 @@ export function Navbar({
               >
                 हिन्दी
               </button>
+              <button
+                onClick={() => setLanguage('sa')}
+                className={`px-1.5 py-0.5 rounded text-[11px] font-semibold ${
+                  language === 'sa' ? 'bg-white text-ayush-forestDark' : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                संस्कृतम्
+              </button>
             </div>
 
             {/* Jurisdiction Firewall Switcher */}
             <div className="flex items-center space-x-1.5 bg-black/30 px-2 py-0.5 rounded border border-white/10">
               <Globe className="w-3 h-3 text-ayush-saffron" />
-              <span className="text-[11px] text-slate-300">Jurisdiction:</span>
+              <span className="text-[11px] text-slate-300">{t('topBanner.jurisdiction')}</span>
               <select
                 value={jurisdiction}
                 onChange={(e) => setJurisdiction(e.target.value as Jurisdiction)}
                 className="bg-transparent text-white text-[11px] font-bold focus:outline-none cursor-pointer"
               >
-                <option value="IN" className="text-black">🇮🇳 India (IN)</option>
-                <option value="INT" className="text-black">🌎 International (INT)</option>
-                <option value="CROSS_BORDER" className="text-black">🌐 Cross-Border</option>
+                <option value="IN" className="text-black">{t('topBanner.india')}</option>
+                <option value="INT" className="text-black">{t('topBanner.international')}</option>
+                <option value="CROSS_BORDER" className="text-black">{t('topBanner.crossBorder')}</option>
               </select>
             </div>
           </div>
@@ -98,14 +108,14 @@ export function Navbar({
             <div>
               <div className="flex items-center space-x-1.5">
                 <span className="font-extrabold text-lg text-ayush-forestDark tracking-tight">
-                  AyuRaksha
+                  {t('brand.title')}
                 </span>
                 <span className="text-[10px] font-bold bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded border border-amber-300">
-                  DECISION ENGINE
+                  {t('brand.badge')}
                 </span>
               </div>
               <p className="text-[11px] text-ayush-slate font-medium">
-                AI IP & Regulatory Navigator for Ayurvedic Innovation
+                {t('brand.subtitle')}
               </p>
             </div>
           </div>
