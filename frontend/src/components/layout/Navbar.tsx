@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Shield, Globe, Compass, Scale, Leaf, Search, BookOpen, Menu, X } from 'lucide-react';
 import { Jurisdiction } from '../../types';
 import { useTranslation } from '../../i18n/LanguageContext';
+import { BrandLogo } from '../common/BrandLogo';
 
 interface NavbarProps {
   currentTab: string;
@@ -24,12 +25,12 @@ export function Navbar({
   const { t } = useTranslation();
 
   const navItems = [
-    { id: 'home', label: t('nav.overview'), icon: Shield },
-    { id: 'product-journey', label: t('nav.productClassification'), icon: Compass },
-    { id: 'ip-matrix', label: t('nav.ipMatrix'), icon: Scale },
-    { id: 'abs', label: t('nav.abs'), icon: Leaf },
-    { id: 'chat', label: t('nav.askAyuraksha'), icon: Search },
-    { id: 'corpus', label: t('nav.corpus'), icon: BookOpen },
+    { id: 'home', label: t('nav.overview') || 'Overview', icon: Shield },
+    { id: 'product-journey', label: t('nav.productClassification') || 'Product Classification', icon: Compass },
+    { id: 'ip-matrix', label: t('nav.ipMatrix') || 'IP Opportunity Matrix', icon: Scale },
+    { id: 'abs', label: t('nav.abs') || 'ABS & Biodiversity', icon: Leaf },
+    { id: 'chat', label: t('nav.askAyuraksha') || 'Ask Ayuरक्षा (RAG)', icon: Search },
+    { id: 'corpus', label: t('nav.corpus') || 'Statutory Corpus', icon: BookOpen },
   ];
 
   return (
@@ -98,27 +99,11 @@ export function Navbar({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo & Brand Identity */}
-          <div
+          <BrandLogo
+            size="lg"
+            showSubtitle={true}
             onClick={() => setCurrentTab('home')}
-            className="flex items-center space-x-3 cursor-pointer group"
-          >
-            <div className="w-10 h-10 bg-ayush-forest rounded-xl flex items-center justify-center text-white shadow-card group-hover:bg-ayush-forestDark transition-colors">
-              <Shield className="w-6 h-6 text-emerald-300" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-1.5">
-                <span className="font-extrabold text-lg text-ayush-forestDark tracking-tight">
-                  {t('brand.title')}
-                </span>
-                <span className="text-[10px] font-bold bg-amber-100 text-amber-900 px-1.5 py-0.2 rounded border border-amber-300">
-                  {t('brand.badge')}
-                </span>
-              </div>
-              <p className="text-[11px] text-ayush-slate font-medium">
-                {t('brand.subtitle')}
-              </p>
-            </div>
-          </div>
+          />
 
           {/* Desktop Navigation Tabs */}
           <nav className="hidden lg:flex items-center space-x-1">

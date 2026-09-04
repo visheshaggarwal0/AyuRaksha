@@ -8,6 +8,7 @@ import logging
 
 from app.modules.interfaces import IGenerationModule, ILLMProvider
 from app.models.domain import Evidence
+from app.core.config import settings
 from app.modules.generation.providers import (
     GeminiProvider,
     OpenRouterProvider,
@@ -31,9 +32,17 @@ class PluggableGenerationModule(IGenerationModule):
         self._setup_default_providers()
 
     def _setup_default_providers(self):
-        # Priority order: Gemini (1) -> OpenRouter (2) -> Groq (3) -> Local Ollama (4) -> Deterministic Fallback (99)
-        self.register_provider(GeminiProvider(), priority=1)
-        self.register_provider(OpenRouterProvider(), priority=2)
+        # Priority order: dynamically assign top priority to the configured cloud provider
+        if settings.OPENROUTER_API_KEY:
+            self.register_provider(OpenRouterProvider(), priority=1)
+            self.register_provider(GeminiProvider(), priority=2)
+        elif settings.GEMINI_API_KEY:
+            self.register_provider(GeminiProvider(), priority=1)
+            self.register_provider(OpenRouterProvider(), priority=2)
+        else:
+            self.register_provider(OpenRouterProvider(), priority=1)
+            self.register_provider(GeminiProvider(), priority=2)
+
         self.register_provider(GroqProvider(), priority=3)
         self.register_provider(LocalOllamaProvider(), priority=4)
         self.register_provider(DeterministicStatutoryProvider(), priority=99)

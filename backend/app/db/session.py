@@ -21,8 +21,8 @@ try:
     if db_url.startswith("postgresql://"):
         db_url = db_url.replace("postgresql://", "postgresql+asyncpg://", 1)
     
-    # asyncpg does not support sslmode in the connection string via SQLAlchemy
-    if "?sslmode=" in db_url:
+    # asyncpg does not support query parameters (sslmode, ssl, channel_binding) in the connection string via SQLAlchemy
+    if "?" in db_url:
         db_url = db_url.split("?")[0]
 
     # Neon requires TLS. The default context validates both the certificate and host.

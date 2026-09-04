@@ -16,13 +16,13 @@ interface ExportDossierButtonProps {
 
 /**
  * ExportDossierButton — compiles Product Journey + ABS + IP Matrix into
- * an official-looking "AyuRaksha Regulatory & IP Compliance Dossier" PDF.
+ * an official-looking "Ayuरक्षा Regulatory & IP Compliance Dossier" PDF.
  * Strategy: uses browser print-to-PDF via hidden iframe (no extra deps).
  * Optionally lazy-loads jspdf if available, falling back to print.
  */
 export const ExportDossierButton: React.FC<ExportDossierButtonProps> = ({
   dossier,
-  fileNamePrefix = "AyuRaksha_Dossier",
+  fileNamePrefix = "Ayuरक्षा_Dossier",
 }) => {
   const [exporting, setExporting] = useState(false);
   const hiddenRef = useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ export const ExportDossierButton: React.FC<ExportDossierButtonProps> = ({
       `<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #a7f3d0;background:#ecfdf5;color:#065f46;border-radius:10px;font-size:11px;font-weight:600;margin:4px 6px 0 0;">${c.source_title} · ${c.section}</span>`;
 
     const html = `<!doctype html><html><head><meta charset="utf-8"/>
-<title>AyuRaksha Regulatory & IP Compliance Dossier</title>
+<title>Ayuरक्षा Regulatory & IP Compliance Dossier</title>
 <style>
 @page { size: A4; margin: 18mm 14mm 18mm 14mm; }
 *{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; box-sizing:border-box;}
@@ -77,12 +77,12 @@ body{color:#17211B; line-height:1.5; margin:0; padding:0;}
 .watermark{position:fixed; inset:0; display:flex; align-items:center; justify-content:center; opacity:0.04; font-size:120px; font-weight:900; color:#166534; transform:rotate(-18deg); pointer-events:none;}
 @media print { .no-print{display:none;} }
 </style></head><body>
-<div class="watermark">AyuRaksha</div>
+<div class="watermark">Ayuरक्षा</div>
 <div class="header">
   <div class="brand">
     <div class="badge">AR</div>
     <div>
-      <div class="h1">AyuRaksha — Regulatory & IP Compliance Dossier</div>
+      <div class="h1">Ayuरक्षा — Regulatory & IP Compliance Dossier</div>
       <div class="subtitle">SIH 26045 · Ministry of Ayush & AIIA · Citation-grounded Decision Support · Jurisdiction: ${dossier.jurisdiction || "IN"}</div>
     </div>
   </div>
@@ -153,7 +153,7 @@ ${
 </div>
 
 <div class="footer">
-  <span>AyuRaksha · SIH 26045 · Ministry of Ayush & AIIA</span>
+  <span>Ayuरक्षा · SIH 26045 · Ministry of Ayush & AIIA</span>
   <span>Generated ${today} · Neon + pgvector · Hash-verified sources recommended</span>
 </div>
 </body></html>`;

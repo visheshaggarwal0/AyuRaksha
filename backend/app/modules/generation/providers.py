@@ -128,8 +128,8 @@ class GeminiProvider(ILLMProvider):
                                         )
                                     logger.info("Successfully received answer from Google Gemini (%s via v1beta)", mod)
                                     return text
-                    elif resp.status_code in (401, 403):
-                        logger.warning("Gemini credentials rejected (%s). Tripping circuit breaker.", resp.status_code)
+                    elif resp.status_code in (400, 401, 403):
+                        logger.warning("Gemini credentials/request rejected (%s). Tripping circuit breaker.", resp.status_code)
                         self._circuit_broken = True
                         break
                     elif resp.status_code == 404:
@@ -386,7 +386,7 @@ class LocalOllamaProvider(ILLMProvider):
             payload["format"] = "json"
 
         try:
-            async with httpx.AsyncClient(timeout=1.0) as client:
+            async with httpx.AsyncClient(timeout=2.0) as client:
                 resp = await client.post(endpoint, json=payload)
                 if resp.status_code == 200:
                     data = resp.json()

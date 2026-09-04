@@ -60,8 +60,12 @@ class OpenRouterProvider(BaseLLMProvider):
                         content = data["choices"][0]["message"]["content"]
                         if content and len(content.strip()) > 5:
                             return content.strip()
-                    elif resp.status_code in (401, 402, 403):
-                        logger.warning(f"OpenRouter quota/auth rejected ({resp.status_code}). Tripping circuit breaker for 300s.")
+                    elif resp.status_code in [401, 402, 403]:
+                        logger.warning(
+                            f"OpenRouter ({mod}) auth/credit failure "
+                            f"({resp.status_code}): {resp.text[:200]}. "
+                            "Tripping circuit breaker for 300s."
+                        )
                         self.trip_circuit(300, reason=f"OpenRouter {resp.status_code}")
                         break
                     elif resp.status_code == 404:
