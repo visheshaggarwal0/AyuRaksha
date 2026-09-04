@@ -14,6 +14,12 @@
       "relevance": "The exact statutory evidentiary threshold for licensing proprietary Ayurvedic formulations."
     },
     {
+      "rule_number": "Schedule Y",
+      "heading": "Requirements and Guidelines for Permission to Import and/or Manufacture New Drugs for Sale or to Undertake Clinical Trials",
+      "text": "Specifies detailed protocols, phase I to phase IV human clinical trials, animal toxicological studies, and protocol design requirements. Mandatory under Rule 158B clause (c) for patent or proprietary Ayurvedic medicines claiming treatment for a novel indication or containing novel extracts/phytopharmaceuticals.",
+      "relevance": "Defines mandatory clinical trial data requirements for new indication proprietary medicines under Rule 158B."
+    },
+    {
       "rule_number": "Rule 161",
       "heading": "Labelling, Packing and Limit of Alcohol in Ayurvedic Drugs",
       "text": "Every container of ASU drug shall bear on its label:\n- The true list of all ingredients with their Sanskrit botanical names and quantities.\n- Name of classical text (for Shastriya drugs) or 'Patent/Proprietary Medicine'.\n- Batch number, manufacturing license number, date of manufacture, date of expiry (shelf life as per Rule 161B).\n- Warning text: 'To be taken under medical supervision' for Schedule E(1) drugs.",

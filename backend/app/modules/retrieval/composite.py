@@ -83,7 +83,14 @@ class CompositeRetrievalModule(IRetrievalModule):
 
         # Graph expansion on top candidates
         top_keys = sorted(rrf_scores.keys(), key=lambda k: rrf_scores[k], reverse=True)[:3]
-        entities_for_graph = [k.split("|")[1] for k in top_keys if "|" in k and k.split("|")[1]]
+        entities_for_graph = []
+        for k in top_keys:
+            if "|" in k:
+                src, sec = k.split("|", 1)
+                if src:
+                    entities_for_graph.append(src)
+                if sec:
+                    entities_for_graph.append(sec)
         if entities_for_graph:
             graph_results = await self.graph_retriever.retrieve_graph(entities_for_graph, limit=3)
             self.last_graph_count = len(graph_results)

@@ -100,7 +100,16 @@ class IndependentKeywordRetriever(IKeywordRetriever):
                 for term in terms:
                     clean_term = re.sub(r"[^\w]", "", term)
                     clean_sec = re.sub(r"[^\w]", "", sec_lower)
-                    if clean_term and clean_term in clean_sec:
+                    is_exact_sec = False
+                    if any(c.isdigit() for c in clean_term):
+                        if clean_term.isdigit() and len(clean_term) <= 2:
+                            is_exact_sec = bool(re.search(r"\b" + re.escape(clean_term) + r"\b", sec_lower))
+                        elif clean_term:
+                            is_exact_sec = clean_term in clean_sec or term in sec_lower
+                    elif clean_term.startswith("schedule") and len(clean_term) > 8:
+                        is_exact_sec = clean_term in clean_sec or term in sec_lower
+
+                    if is_exact_sec:
                         match_score += 15.0
                     elif term in sec_tokens:
                         match_score += 4.0
@@ -112,6 +121,8 @@ class IndependentKeywordRetriever(IKeywordRetriever):
                         match_score += 1.0
 
                 if match_score > 0:
+                    auth_val = chunk.get("authority_level", 4)
+                    match_score += auth_val * 0.5
                     candidates.append((match_score, chunk))
 
             candidates.sort(key=lambda x: x[0], reverse=True)

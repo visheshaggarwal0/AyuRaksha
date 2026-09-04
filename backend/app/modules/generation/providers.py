@@ -499,6 +499,17 @@ class DeterministicStatutoryProvider(ILLMProvider):
                 "supported by rigorous chromatographic fingerprinting, minimum 4 bioactive markers, preclinical safety data, and Phase I-III clinical trial evidence under New Drugs and Clinical Trials Rules. [2]"
             )
 
+        # Domain 6: Foreign Filing License (Patents Act Section 39 & Section 40)
+        if any(k in q_lower for k in ["section 39", "foreign filing", "outside india", "foreign patent"]):
+            return (
+                "Under Section 39 of the Patents Act, 1970, no person resident in India is permitted to file or cause to be filed "
+                "any patent application outside India without obtaining prior written permission (Foreign Filing License) from the Controller. [1]\n\n"
+                "To file abroad, an applicant must either: (1) obtain prior written permission from the Controller on Form 25 under Section 39(1), or "
+                "(2) have filed an initial patent application in India at least six weeks prior, with no secrecy directions issued under Section 35. [1]\n\n"
+                "Crucially, contravention of Section 39 triggers severe statutory consequences under Section 40: deemed abandonment of the Indian application "
+                "or revocation of any granted patent, along with criminal liability and imprisonment under Section 118."
+            )
+
         is_patent_q = any(k in q_lower for k in ["patent", "invent", "novelty", "section 3", "3(p)", "3(e)"])
         is_abs_q = any(k in q_lower for k in ["abs", "biodiversity", "nba", "sbb", "biological", "benefit sharing"])
         is_polyherbal = any(k in q_lower for k in ["polyherbal", "formulation", "combination", "ashwagandha", "brahmi"])

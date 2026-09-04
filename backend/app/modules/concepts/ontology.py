@@ -41,9 +41,10 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "inventive step", "inventive", "technical advance", "economic significance",
             "non-obvious", "non obvious", "skilled in the art", "advance over prior art",
             "technological superiority", "inventive feature", "superior bioavailability",
-            "extraction process", "delivery system", "phytosomal delivery", "nano-emulsion"
+            "extraction process", "delivery system", "phytosomal delivery", "nano-emulsion",
+            "extraction method", "higher yield", "yield", "cavitation", "improved extraction"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_2_1_JA"],
+        statutory_provisions=["PATENTS_ACT_1970_SEC_002_1_JA", "PATENTS_ACT_1970_SEC_2_1_JA"],
         statutory_hooks=["Section 2(1)(ja) inventive step technical advance economic significance"],
         hierarchy_priority=9
     ),
@@ -58,7 +59,7 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "prior publication", "prior use", "public knowledge", "industrial application",
             "patentable product", "patentable process"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_2_1_J", "PATENTS_ACT_1970_SEC_2_1_L"],
+        statutory_provisions=["PATENTS_ACT_1970_SEC_002_1_J", "PATENTS_ACT_1970_SEC_2_1_J", "PATENTS_ACT_1970_SEC_2_1_L"],
         statutory_hooks=["Section 2(1)(j) invention product process", "Section 2(1)(l) new invention novelty"],
         hierarchy_priority=8
     ),
@@ -73,7 +74,7 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "aggregation of known properties", "prior art ayurveda", "patent classical",
             "patent herbal formulation", "patenting ayurveda", "tk prior art"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_3_P"],
+        statutory_provisions=["PATENTS_ACT_1970_SEC_003_P", "PATENTS_ACT_1970_SEC_3_P"],
         statutory_hooks=["Section 3(p) traditional knowledge aggregation known properties not an invention"],
         hierarchy_priority=10
     ),
@@ -88,7 +89,7 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "aggregation", "compound formulation", "ratio", "mixing", "combining components",
             "herbal mixture", "multi-herb", "polyherbal"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_3_E"],
+        statutory_provisions=["PATENTS_ACT_1970_SEC_003_E", "PATENTS_ACT_1970_SEC_3_E"],
         statutory_hooks=["Section 3(e) mere admixture aggregation of properties synergistic interaction"],
         hierarchy_priority=9
     ),
@@ -101,9 +102,10 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
         semantic_triggers={
             "derivative", "enhancement", "bioavailability", "nanoparticle", "isolated extract",
             "pure isolate", "polymorph", "salt", "ester", "efficacy", "enhanced efficacy",
-            "therapeutic efficacy", "withaferin", "berberine", "phytochemical isolate"
+            "therapeutic efficacy", "withaferin", "withanolides", "withania", "withania somnifera",
+            "cavitation", "higher yield", "extraction method", "berberine", "phytochemical isolate"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_3_D"],
+        statutory_provisions=["PATENTS_ACT_1970_SEC_003_D", "PATENTS_ACT_1970_SEC_3_D"],
         statutory_hooks=["Section 3(d) new form known substance enhanced therapeutic efficacy"],
         hierarchy_priority=9
     ),
@@ -222,9 +224,11 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
         description="Manufactured strictly in accordance with authoritative books listed in the First Schedule of DCA.",
         semantic_triggers={
             "classical medicine", "classical text", "first schedule", "charaka", "sushruta",
-            "ashtanga", "authoritative books", "sharangadhara", "bhavaprakasha"
+            "ashtanga", "authoritative books", "sharangadhara", "bhavaprakasha",
+            "ayush drug license", "ayush drug", "dawa", "ilaj", "punarnava", "kidney failure",
+            "synthetic vitamins", "vitamins added"
         },
-        statutory_provisions=["DCA_1940_SEC_3_A"],
+        statutory_provisions=["DCA_1940_SEC_003_A", "DCA_1940_SEC_3_A"],
         statutory_hooks=["Section 3(a) DCA First Schedule authoritative books classical formulation"],
         hierarchy_priority=9
     ),
@@ -236,10 +240,14 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
         description="Formulation containing ingredients in First Schedule but not matching classical formula; requires Rule 158B licensing.",
         semantic_triggers={
             "patent or proprietary", "proprietary medicine", "rule 158b", "modified ratio",
-            "modified formula", "ayurvedic proprietary", "safety proof", "pilot clinical"
+            "modified formula", "ayurvedic proprietary", "safety proof", "pilot clinical",
+            "clinical trial", "novel indication", "schedule y", "synthetic vitamins", "minerals added"
         },
-        statutory_provisions=["DCR_1945_RULE_158B"],
-        statutory_hooks=["Rule 158B Drugs and Cosmetics Rules patent proprietary licensing safety data"],
+        statutory_provisions=["DCR_1945_RULE_158B", "DCR_1945_SCHEDULE_Y"],
+        statutory_hooks=[
+            "Rule 158B Drugs and Cosmetics Rules patent proprietary licensing safety data",
+            "Schedule Y clinical trials and novel indication requirements"
+        ],
         hierarchy_priority=9
     ),
 
@@ -252,7 +260,7 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "phytopharmaceutical", "standardized fraction", "rule 122e", "cdsco", "form ct-18",
             "four marker compounds", "new phytopharmaceutical", "clinical trials cdsco"
         },
-        statutory_provisions=["DCR_1945_RULE_122E"],
+        statutory_provisions=["DCR_1945_RULE_122E", "DCR_1945_SCHEDULE_Y"],
         statutory_hooks=["Rule 122E Drugs and Cosmetics Rules Phytopharmaceutical Drug CDSCO Form CT-18"],
         hierarchy_priority=10
     ),
@@ -263,11 +271,23 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
         name="Ayurveda Aahara Food Boundary",
         description="Food supplements prepared according to authoritative books, strictly prohibiting synthetic vitamins, minerals, and disease cure claims.",
         semantic_triggers={
-            "ayurveda aahara", "food supplement", "dietary supplement", "synthetic vitamins",
-            "minerals prohibited", "fssai", "schedule a", "aahara logo", "no disease cure claim"
+            "ayurveda aahara", "food supplement", "dietary supplement",
+            "fssai", "schedule a", "aahara logo", "no disease cure claim", "regulation 5",
+            "arjuna", "energy bar", "recipe", "authoritative books of ayurveda",
+            "synthetic vitamins in aahara", "minerals prohibited in aahara"
         },
-        statutory_provisions=["FSSAI_AYURVEDA_AAHARA_2022_REG_2_1_A", "FSSAI_AYURVEDA_AAHARA_2022_REG_3"],
-        statutory_hooks=["Regulation 2(1)(a) Ayurveda Aahara FSSAI", "Regulation 3 synthetic vitamins prohibited"],
+        statutory_provisions=[
+            "FSSAI_AYURVEDA_AAHARA_2022_REG_2_1_A",
+            "FSSAI_AYURVEDA_AAHARA_2022_REG_3",
+            "FSSAI_AYURVEDA_AAHARA_2022_REG_5",
+            "FSSAI_AYURVEDA_AAHARA_2022_SCHED_A"
+        ],
+        statutory_hooks=[
+            "Regulation 2(1)(a) Ayurveda Aahara FSSAI",
+            "Regulation 3 synthetic vitamins prohibited",
+            "Regulation 5 permissible and prohibited disease claims FSSAI",
+            "Schedule A authoritative books Ayurveda Aahara FSSAI"
+        ],
         hierarchy_priority=9
     ),
 
@@ -371,7 +391,10 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "foreign filing license", "foreign patent filing", "filing abroad", "file in us first",
             "file patent in germany", "pct application without", "section 39", "ffl"
         },
-        statutory_provisions=["PATENTS_ACT_1970_SEC_39", "PATENTS_ACT_1970_SEC_40"],
+        statutory_provisions=[
+            "PATENTS_ACT_1970_SEC_039", "PATENTS_ACT_1970_SEC_39",
+            "PATENTS_ACT_1970_SEC_040", "PATENTS_ACT_1970_SEC_40"
+        ],
         statutory_hooks=["Section 39 Patents Act foreign filing license written permit", "Section 40 liability for contravention"],
         hierarchy_priority=9
     ),
@@ -537,8 +560,28 @@ LEGAL_CONCEPTS_TAXONOMY: Dict[str, ConceptDefinition] = {
             "commercial factories", "commercial factory", "ayurvedic factories", "schedule t",
             "rule 157", "bhasmas", "swarna", "rajata", "premises standard"
         },
-        statutory_provisions=["DRUGS_COSMETICS_RULES_1945_RULE_157", "DRUGS_COSMETICS_RULES_1945_SCHED_T"],
+        statutory_provisions=[
+            "DCR_1945_RULE_157", "DCR_1945_SCHEDULE_T",
+            "DRUGS_COSMETICS_RULES_1945_RULE_157", "DRUGS_COSMETICS_RULES_1945_SCHED_T"
+        ],
         statutory_hooks=["Rule 157 Drugs and Cosmetics Rules factory premises requirements", "Schedule T Good Manufacturing Practices ASU medicines"],
+        hierarchy_priority=9
+    ),
+
+    "DRUG_DEFINITION_THERAPEUTIC_BOUNDARY": ConceptDefinition(
+        concept_id="DRUG_DEFINITION_THERAPEUTIC_BOUNDARY",
+        domain=LegalDomain.DRUG_CLASSIFICATION,
+        name="Statutory Drug Definition vs Cosmetics",
+        description="Section 3(b) of the Drugs and Cosmetics Act defines drugs as substances intended for diagnosis, treatment, mitigation, or prevention of diseases. Therapeutic claims on cosmetics (e.g. anti-fungal soap) reclassify products as drugs under Cosmetics Rules 2020.",
+        semantic_triggers={
+            "cosmetic with therapeutic claim", "anti-fungal soap", "therapeutic claim", "cosmetics rules 2020",
+            "section 3(b)", "drug definition", "cosmetic vs drug", "medicinal soap", "medicated cosmetic", "anti-fungal"
+        },
+        statutory_provisions=["DCA_1940_SEC_003_B", "DCA_1940_SEC_3_B"],
+        statutory_hooks=[
+            "Section 3(b) Drugs and Cosmetics Act definition of drug therapeutic treatment mitigation",
+            "Rule 2 Cosmetics Rules 2020 cosmetic boundary"
+        ],
         hierarchy_priority=9
     )
 }

@@ -132,7 +132,7 @@ class ModularOrchestrator(IOrchestrationModule):
         )
 
     DIRECT_STATUTORY_REGEX = re.compile(
-        r"^\s*(?:what\s+(?:is|does|are)|text\s+of|show\s+me|explain|define|provision\s+of)?\s*(section|sec\.?|rule|regulation|article)\s+([0-9]+[a-zA-Z0-9\(\)\-_/]*)",
+        r"(?:^|\b)(?:what\s+(?:is|does|are|says)|text\s+of|show\s+me|explain|define|provision\s+of|under|cite|state|meaning\s+of)?\s*(?:the\s+)?(section|sec\.?|rule|regulation|article)\s+([0-9]+[a-zA-Z0-9\(\)\-_/]*)",
         re.IGNORECASE
     )
 
@@ -149,18 +149,26 @@ class ModularOrchestrator(IOrchestrationModule):
         3. GUIDED_RAG: Standard regulatory compliance inquiries (~85% of queries).
         """
         q_strip = query.strip()
-        # 1. Direct Statutory Check (concise direct section/rule inquiry)
-        if self.DIRECT_STATUTORY_REGEX.search(q_strip) and len(q_strip.split()) <= 12:
-            return ExecutionMode.DIRECT_STATUTORY
-
-        # 2. Multi-Hop Planner Check (cross-border or spanning >= 2 regulatory pillars)
-        domains = {c.domain for c in resolved_concepts}
+        # Cross-border / export query detection
         cross_border_match = bool(
             re.search(r"\b(export|germany|europe|eu|us|usa|fda|united states|america|abroad|foreign|overseas)\b", query.lower())
         ) and bool(
-            re.search(r"\b(patent|formulation|plant|ayurvedic|community|source|botanical)\b", query.lower())
+            re.search(r"\b(patent|formulation|plant|ayurvedic|community|source|botanical|bhasma)\b", query.lower())
         )
-        is_multi_pillar = len(domains) >= 2 or cross_border_match
+
+        # 1. Direct Statutory Check (concise direct section/rule inquiry)
+        if self.DIRECT_STATUTORY_REGEX.search(q_strip) and len(q_strip.split()) <= 15 and not cross_border_match and jurisdiction != "CROSS_BORDER":
+            return ExecutionMode.DIRECT_STATUTORY
+
+        # 2. Multi-Hop Planner Check (cross-border or spanning >= 2 regulatory pillars / statutes)
+        domains = {c.domain for c in resolved_concepts}
+        statute_prefixes = set()
+        for c in resolved_concepts:
+            for prov in getattr(c, "statutory_provisions", []):
+                raw_prefix = prov.split("_")[0]
+                canon_prefix = "DRUGS_COSMETICS" if raw_prefix in ["DCA", "DCR", "DRUGS"] else ("PATENTS" if raw_prefix in ["PATENTS", "PATENT"] else raw_prefix)
+                statute_prefixes.add(canon_prefix)
+        is_multi_pillar = len(domains) >= 2 or len(statute_prefixes) >= 2 or cross_border_match
         if jurisdiction == "CROSS_BORDER" or is_multi_pillar:
             return ExecutionMode.MULTI_HOP_PLANNER
 
@@ -301,31 +309,47 @@ class ModularOrchestrator(IOrchestrationModule):
         domains = {c.domain for c in resolved_concepts}
         pillar_queries = []
 
-        if "PATENTABILITY" in domains or any(w in normalized_query.lower() for w in ["patent", "invent", "novel", "withaferin", "curcumin", "extract"]):
-            pillar_queries.append(f"{normalized_query} [IP_PILLAR: Section 3(p) Section 3(e) Section 3(d) Section 2(1)(ja) Patents Act]")
+        # Collect concept anchors across active resolved concepts
+        concept_anchors = " ".join([h for c in resolved_concepts for h in getattr(c, "statutory_hooks", [])])
 
-        if "BIODIVERSITY_ABS" in domains or any(w in normalized_query.lower() for w in ["biological", "abs", "nba", "sbb", "community", "vaidya", "wild", "herb"]):
-            pillar_queries.append(f"{normalized_query} [ABS_PILLAR: Section 3 Section 6 Section 7 Biological Diversity Act NBA SBB Form I Form III]")
+        if "PATENTABILITY" in domains or any(w in normalized_query.lower() for w in ["patent", "invent", "novel", "withaferin", "curcumin", "extract", "section 39", "foreign filing", "pct", "fungus", "antimicrobial", "rule 24b", "form 18"]):
+            pillar_queries.append(f"{normalized_query} [IP_PILLAR: {concept_anchors} Section 3(p) Section 3(e) Section 3(d) Section 3(c) Section 3(j) Section 2(1)(ja) Section 39 'Foreign Filing License PCT application originating in India' Section 40 Rule 24B Patents Act 1970 Amendments 2024]")
 
-        if "DRUG_CLASSIFICATION" in domains or any(w in normalized_query.lower() for w in ["medicine", "aahara", "food", "drug", "rule 158b", "rule 122e"]):
-            pillar_queries.append(f"{normalized_query} [DRUG_PILLAR: Section 3(a) First Schedule Rule 158B Rule 122E FSSAI Aahara 2022]")
+        if "BIODIVERSITY_ABS" in domains or any(w in normalized_query.lower() for w in ["biological", "abs", "nba", "sbb", "community", "vaidya", "wild", "herb", "kutki", "fungus"]):
+            pillar_queries.append(f"{normalized_query} [ABS_PILLAR: {concept_anchors} Section 3 Section 6 Section 7 Section 19 Biological Diversity Act NBA SBB Form I Form III]")
 
-        is_export_q = bool(re.search(r"\b(export|germany|europe|eu|wipo|foreign|us|usa|fda|america|overseas)\b", normalized_query.lower()))
+        if any(w in normalized_query.lower() for w in ["aahara", "food", "fssai", "energy bar", "regulation 3", "regulation 5", "regulation 8", "schedule a", "logo"]):
+            pillar_queries.append(f"{normalized_query} [AAHARA_PILLAR: {concept_anchors} Regulation 2(1)(a) Regulation 3 Regulation 5 Regulation 6 Regulation 8 Schedule A FSSAI Ayurveda Aahara 2022]")
+
+        if "DRUG_CLASSIFICATION" in domains or any(w in normalized_query.lower() for w in ["medicine", "drug", "classical", "proprietary", "rule 158b", "rule 122e", "bhasma", "schedule t", "schedule y", "dawa", "ilaj", "punarnava", "section 3(a)"]):
+            pillar_queries.append(f"{normalized_query} [ASU_DRUG_PILLAR: {concept_anchors} Section 3(a) 'Ayurvedic, Siddha or Unani drug' Section 3(b) Section 3(h) Rule 158B Schedule T Schedule Y Drugs and Cosmetics Act 1940 ASU Rules 1945]")
+
+        is_export_q = bool(re.search(r"\b(export|germany|europe|eu|wipo|foreign|us|usa|united states|fda|america|overseas|cites|sandalwood)\b", normalized_query.lower()))
         if "EXPORT_INTERNATIONAL" in domains or jurisdiction == "CROSS_BORDER" or is_export_q:
-            pillar_queries.append(f"{normalized_query} [EXPORT_PILLAR: 21 CFR Part 111 DSHEA US FDA Directive 2004/24/EC THMPD WIPO GRATK Treaty 2024 Article 3]")
+            pillar_queries.append(f"{normalized_query} [EXPORT_PILLAR: Directive 2004/24/EC THMPD traditional herbal simplified registration Germany EU Europe 21 CFR Part 111 DSHEA US FDA NDI notification CITES Appendix II WIPO GRATK Treaty 2024 Article 3 Article 4 Article 5 Article 6]")
+
+        if "TRADEMARKS_IP" in domains or any(w in normalized_query.lower() for w in ["trademark", "trade mark", "brand", "logo", "distinctive", "bottle design", "passing off", "section 9", "section 29", "class 5", "ashwagandha churna"]):
+            pillar_queries.append(f"{normalized_query} [TRADEMARK_PILLAR: {concept_anchors} Section 2 Section 9(1)(b) Section 9 Section 11 Section 13 Section 28 Section 29 Rule 28 Trade Marks Act 1999 Class 5]")
+
+        if "SAFETY_PROHIBITION" in domains or any(w in normalized_query.lower() for w in ["dmr", "magic remedies", "cure", "objectionable", "newspaper ad", "advertisement", "guaranteed"]):
+            pillar_queries.append(f"{normalized_query} [ADVERTISING_PILLAR: {concept_anchors} Section 3 Section 3(d) Section 4 Schedule Drugs and Magic Remedies Act 1954]")
 
         if not pillar_queries:
             pillar_queries.append(normalized_query)
 
+        # Reconcile cross-border queries across domestic and international corpuses
+        retrieval_jur = "CROSS_BORDER" if (jurisdiction in ["INT", "CROSS_BORDER"] or is_export_q) else jurisdiction
+
         all_candidates = []
         for pq in pillar_queries:
-            sub_res = await retrieval_module.retrieve(query=pq, jurisdiction=jurisdiction, limit=10)
+            sub_res = await retrieval_module.retrieve(query=pq, jurisdiction=retrieval_jur, limit=20)
             all_candidates.extend(sub_res.candidates)
 
         seen = set()
         deduped_candidates = []
         for c in all_candidates:
-            key = f"{c.source_id}:{c.section_number}"
+            sec_clean = re.sub(r"^(?:section|rule|regulation|article|\s)+", "", (c.section_number or "").lower()).strip()
+            key = f"{c.source_id}:{sec_clean}" if sec_clean else f"{c.source_id}:{c.section_number}"
             if key not in seen:
                 seen.add(key)
                 deduped_candidates.append(c)

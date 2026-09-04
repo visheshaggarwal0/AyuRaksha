@@ -37,6 +37,12 @@
       "heading": "Expert Committee Mechanism",
       "text": "Constitutes an Expert Committee with representatives from the Ministry of Ayush to evaluate novel food formulations, classical textual validation, and consumer safety.",
       "relevance": "Approval pathway for new Ayurveda Aahara submissions."
+    },
+    {
+      "regulation_number": "Schedule A",
+      "heading": "List of Authoritative Books of Ayurveda Permitted for Ayurveda Aahara",
+      "text": "Lists authoritative classical Ayurvedic treatises from which recipes, ingredients, and processing methods may be sourced for Ayurveda Aahara, including Charaka Samhita, Sushruta Samhita, Ashtanga Hridaya, Sharangadhara Samhita, and Bhavaprakasha.",
+      "relevance": "Permissible classical recipe and ingredient source list for FSSAI Ayurveda Aahara food products."
     }
   ]
 }

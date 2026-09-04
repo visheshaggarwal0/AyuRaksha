@@ -75,7 +75,7 @@ export const CitationModal: React.FC<CitationModalProps> = ({ citation, onClose 
             </div>
 
             <span className="shrink-0 px-3 py-1.5 bg-emerald-50 text-emerald-900 border border-emerald-300/80 rounded-xl text-xs font-mono font-bold shadow-xs">
-              {citation.section}
+              {(citation.section || '').replace(/^(?:section|rule|regulation|article|\s)+\s*(section|rule|regulation|article)/i, '$1')}
             </span>
           </div>
 
@@ -92,7 +92,7 @@ export const CitationModal: React.FC<CitationModalProps> = ({ citation, onClose 
             </div>
             <div className="pl-3 border-l-2 border-emerald-600 my-2">
               <p className="text-[13px] text-slate-700 leading-relaxed font-sans italic">
-                "{citation.verbatim_quote}"
+                "{(citation.verbatim_quote || '').replace(/^Section\s+Section/i, 'Section')}"
               </p>
             </div>
           </div>

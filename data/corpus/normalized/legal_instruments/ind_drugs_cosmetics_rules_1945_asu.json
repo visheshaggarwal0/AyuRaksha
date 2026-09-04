@@ -87,6 +87,16 @@
       "location": {"part": "Part XVI", "page_start": 180, "page_end": 182},
       "topics": ["MANUFACTURING_LICENSE", "FORM_25D", "SCHEDULE_T_COMPLIANCE"],
       "statutory_significance": "Statutory prerequisite tying manufacturing licenses to Schedule T GMP."
+    },
+    {
+      "provision_id": "DCR_1945_SCHEDULE_Y",
+      "type": "SCHEDULE",
+      "number": "Schedule Y",
+      "heading": "Requirements and Guidelines for Clinical Trials and Permission to Manufacture New Drugs",
+      "text": "Specifies detailed protocols, phase I to phase IV human clinical trials, animal toxicological studies, and protocol design requirements. Mandatory under Rule 158B clause (c) for patent or proprietary Ayurvedic medicines claiming treatment for a novel indication or containing novel extracts/phytopharmaceuticals.",
+      "location": {"part": "Schedule Y", "page_start": 230, "page_end": 260},
+      "topics": ["CLINICAL_TRIALS", "SCHEDULE_Y", "NOVEL_INDICATION", "SAFETY_STUDIES"],
+      "statutory_significance": "Statutory clinical trial guidelines referenced by Rule 158B for proprietary ASU drugs."
     }
   ]
 }

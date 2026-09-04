@@ -84,6 +84,20 @@
       "statutory_significance": "Mandates technical proof of non-obvious synergistic effect when combining multiple known botanical ingredients."
     },
     {
+      "provision_id": "PATENTS_ACT_1970_SEC_003_D",
+      "type": "SECTION",
+      "number": "3(d)",
+      "heading": "Enhanced Therapeutic Efficacy Requirement for Known Substance Derivatives",
+      "text": "The mere discovery of a new form of a known substance which does not result in the enhancement of the known efficacy of that substance or the mere discovery of any new property or new use for a known substance or of the mere use of a known process, machine or apparatus unless such known process results in a new product or employs at least one new reactant is not an invention. Explanation.—For the purposes of this clause, salts, esters, ethers, polymorphs, metabolites, pure form, particle size, isomers, mixtures of isomers, complexes, combinations and other derivatives of known substance shall be considered to be the same substance, unless they differ significantly in properties with regard to efficacy.",
+      "location": {
+        "chapter": "Chapter II (Inventions Not Patentable)",
+        "page_start": 7,
+        "page_end": 7
+      },
+      "topics": ["ENHANCED_EFFICACY", "KNOWN_SUBSTANCE", "DERIVATIVES", "CURCUMIN", "WITHANOLIDES", "BIOAVAILABILITY"],
+      "statutory_significance": "Crucial patentability bar requiring technical proof of enhanced therapeutic efficacy for botanical isolates, nano-formulations, and phytosomes."
+    },
+    {
       "provision_id": "PATENTS_ACT_1970_SEC_003_C",
       "type": "SECTION",
       "number": "3(c)",

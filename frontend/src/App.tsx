@@ -712,7 +712,7 @@ export function App() {
                                       >
                                         <BookOpen className="w-3.5 h-3.5 text-ayush-saffron group-hover:text-ayush-saffronLight" />
                                         <span>
-                                          {cit.section} ({cit.source_title})
+                                          {(cit.section || '').replace(/^(?:section|rule|regulation|article|\s)+\s*(section|rule|regulation|article)/i, '$1')} ({cit.source_title})
                                         </span>
                                         <ArrowUpRight className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
                                       </motion.button>
@@ -879,10 +879,10 @@ export function App() {
                       {inspectorCitation.source_title}
                     </h4>
                     <p className="text-xs font-bold text-ayush-saffron">
-                      Provision: {inspectorCitation.section}
+                      Provision: {(inspectorCitation.section || '').replace(/^(?:section|rule|regulation|article|\s)+\s*(section|rule|regulation|article)/i, '$1')}
                     </p>
                     <div className="bg-white p-4 rounded-xl border border-slate-200 text-xs italic text-slate-600 leading-relaxed shadow-subtle">
-                      "{inspectorCitation.verbatim_quote}"
+                      "{(inspectorCitation.verbatim_quote || '').replace(/^Section\s+Section/i, 'Section')}"
                     </div>
                     <div className="flex items-center justify-between text-[10px] text-slate-400 font-mono font-medium">
                       <span>Source ID: {inspectorCitation.source_id}</span>
