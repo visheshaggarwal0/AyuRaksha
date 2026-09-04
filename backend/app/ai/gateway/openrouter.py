@@ -60,6 +60,9 @@ class OpenRouterProvider(BaseLLMProvider):
                         content = data["choices"][0]["message"]["content"]
                         if content and len(content.strip()) > 5:
                             return content.strip()
+                    elif resp.status_code in (401, 402, 403):
+                        logger.warning(f"OpenRouter ({mod}) auth/credit failure ({resp.status_code}): {resp.text[:200]}")
+                        break
                     elif resp.status_code == 404:
                         continue
                     else:

@@ -105,8 +105,10 @@ class GeminiProvider(ILLMProvider):
                                 if text:
                                     logger.info("Successfully received answer from Google Gemini (%s via v1beta)", mod)
                                     return text
-                    elif resp.status_code in (401, 403, 404):
-                        logger.info("Gemini %s returned %s; checking next model.", mod, resp.status_code)
+                    elif resp.status_code in (400, 401, 403, 404):
+                        logger.info("Gemini %s returned %s; tripping circuit breaker for fast fallback.", mod, resp.status_code)
+                        self._circuit_broken = True
+                        break
                     else:
                         logger.warning(
                             "Gemini %s returned HTTP %s: %s",
@@ -124,12 +126,15 @@ class OpenRouterProvider(ILLMProvider):
     def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
         self._api_key = (api_key or settings.OPENROUTER_API_KEY or "").strip()
         self._model = model or settings.LLM_MODEL or "google/gemma-2-9b-it:free"
+        self._circuit_broken = False
 
     @property
     def provider_name(self) -> str:
         return f"OpenRouter ({self._model})"
 
     def is_available(self) -> bool:
+        if self._circuit_broken:
+            return False
         return bool(self._api_key and len(self._api_key) > 10)
 
     async def complete(
@@ -179,6 +184,10 @@ class OpenRouterProvider(ILLMProvider):
                             text = choices[0].get("message", {}).get("content", "").strip()
                             if text:
                                 return text
+                    elif resp.status_code in (401, 402, 403):
+                        logger.info("OpenRouter auth/credit failure (HTTP %s); tripping circuit breaker for fast fallback.", resp.status_code)
+                        self._circuit_broken = True
+                        break
                     else:
                         logger.info("OpenRouter model %s returned %s: %s", mod, resp.status_code, resp.text[:120])
             except Exception as e:
@@ -248,12 +257,15 @@ class LocalOllamaProvider(ILLMProvider):
     def __init__(self, base_url: str = "http://localhost:11434", model: str = "llama3.1:8b"):
         self._base_url = base_url.rstrip("/")
         self._model = model
+        self._circuit_broken = False
 
     @property
     def provider_name(self) -> str:
         return f"Local Ollama ({self._model})"
 
     def is_available(self) -> bool:
+        if self._circuit_broken:
+            return False
         return True  # Probe on demand
 
     async def complete(
@@ -263,6 +275,9 @@ class LocalOllamaProvider(ILLMProvider):
         max_tokens: int = 1500,
         response_format: Optional[str] = None
     ) -> Optional[str]:
+        if not self.is_available():
+            return None
+
         url = f"{self._base_url}/api/chat"
         payload = {
             "model": self._model,
@@ -274,13 +289,13 @@ class LocalOllamaProvider(ILLMProvider):
             payload["format"] = "json"
 
         try:
-            async with httpx.AsyncClient(timeout=15.0) as client:
+            async with httpx.AsyncClient(timeout=3.0) as client:
                 resp = await client.post(url, json=payload)
                 if resp.status_code == 200:
                     data = resp.json()
                     return data.get("message", {}).get("content", "").strip()
         except Exception:
-            pass  # Expected if Ollama is not running locally
+            self._circuit_broken = True  # Circuit break immediately if local Ollama daemon is offline
 
         return None
 

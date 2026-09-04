@@ -5,12 +5,14 @@ import { Citation } from '../../types';
 interface StatutoryMarkdownRendererProps {
   content: string;
   citations?: Citation[];
+  activeCitation?: Citation | null;
   onCitationClick?: (citation: Citation) => void;
 }
 
 export const StatutoryMarkdownRenderer: React.FC<StatutoryMarkdownRendererProps> = ({
   content,
   citations = [],
+  activeCitation = null,
   onCitationClick
 }) => {
   if (!content) return null;
@@ -36,6 +38,8 @@ export const StatutoryMarkdownRenderer: React.FC<StatutoryMarkdownRendererProps>
         const numMatch = citationMatch.match(/\d+/);
         const citIdx = numMatch ? parseInt(numMatch[0], 10) - 1 : -1;
         const matchingCitation = citations[citIdx] || (citations.length > 0 ? citations[0] : null);
+        const isCurrentlyActive = matchingCitation && activeCitation &&
+          (matchingCitation.source_id === activeCitation.source_id && matchingCitation.section === activeCitation.section);
 
         parts.push(
           <button
@@ -46,7 +50,11 @@ export const StatutoryMarkdownRenderer: React.FC<StatutoryMarkdownRendererProps>
                 onCitationClick(matchingCitation);
               }
             }}
-            className="inline-flex items-center px-1.5 py-0.2 mx-1 text-[11px] font-mono font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 border border-emerald-200 rounded transition-colors align-baseline cursor-pointer"
+            className={`inline-flex items-center px-1.5 py-0.2 mx-1 text-[11px] font-mono font-bold rounded transition-all align-baseline cursor-pointer ${
+              isCurrentlyActive
+                ? 'bg-ayush-forest text-white shadow-sm ring-2 ring-emerald-400 scale-105'
+                : 'text-emerald-800 bg-emerald-50 hover:bg-emerald-100 active:bg-emerald-200 border border-emerald-200'
+            }`}
             title={matchingCitation ? `View Statutory Source: ${matchingCitation.source_title} (${matchingCitation.section})` : 'Statutory Reference'}
           >
             {citationMatch}

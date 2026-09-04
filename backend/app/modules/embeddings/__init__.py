@@ -62,7 +62,8 @@ class ModularEmbeddingEngine(IEmbeddingModule):
         model = self._get_model()
         if model is not None:
             try:
-                vec = model.encode(text, normalize_embeddings=True)
+                import asyncio
+                vec = await asyncio.to_thread(model.encode, text, normalize_embeddings=True)
                 return [float(v) for v in vec]
             except Exception as e:
                 logger.warning("Embedding encode error (%s); falling back.", e)
@@ -73,7 +74,8 @@ class ModularEmbeddingEngine(IEmbeddingModule):
         model = self._get_model()
         if model is not None:
             try:
-                vectors = model.encode(texts, normalize_embeddings=True)
+                import asyncio
+                vectors = await asyncio.to_thread(model.encode, texts, normalize_embeddings=True)
                 return [[float(v) for v in vec] for vec in vectors]
             except Exception as e:
                 logger.warning("Batch embedding encode error (%s); falling back.", e)
@@ -82,3 +84,4 @@ class ModularEmbeddingEngine(IEmbeddingModule):
 
 
 embedding_module = ModularEmbeddingEngine()
+

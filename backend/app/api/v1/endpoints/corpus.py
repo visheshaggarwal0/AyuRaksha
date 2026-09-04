@@ -71,7 +71,9 @@ async def get_patent_forms(
     """
     import csv
     from pathlib import Path
-    forms_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patent_forms.csv"
+    forms_path = Path(__file__).resolve().parents[5] / "data" / "IPINDIA" / "patent_forms.csv"
+    if not forms_path.exists():
+        forms_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patent_forms.csv"
     if not forms_path.exists():
         return []
 
@@ -97,7 +99,9 @@ async def get_patent_provisions(
     """
     import csv
     from pathlib import Path
-    provisions_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patents_act_rules_full.csv"
+    provisions_path = Path(__file__).resolve().parents[5] / "data" / "IPINDIA" / "patents_act_rules_full.csv"
+    if not provisions_path.exists():
+        provisions_path = Path(__file__).resolve().parents[4] / "data" / "IPINDIA" / "patents_act_rules_full.csv"
     if not provisions_path.exists():
         return []
 

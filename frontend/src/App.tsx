@@ -1,37 +1,61 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  MessageSquare,
-  Plus,
+  Home,
   Compass,
+  MessageSquare,
   Scale,
   Leaf,
+  Globe,
+  Network,
   BookOpen,
   Send,
-  Shield,
-  ExternalLink,
-  X,
-  User,
   PanelLeftClose,
   PanelLeftOpen,
-  ArrowUpRight,
-  FileText,
-  Globe,
-  AlertTriangle,
-  ArrowLeft,
+  FileCheck,
+  Plus,
   Sparkles,
-  Network
+  ShieldCheck,
+  ArrowRight
 } from 'lucide-react';
 import { api } from './services/api';
-import { Citation, StructuredAnswer, Jurisdiction } from './types';
+import {
+  Citation,
+  StructuredAnswer,
+  Jurisdiction,
+  ActiveCaseState,
+  InnovationProfile,
+  ProductClassificationRequest,
+  ProductClassificationResponse,
+  ABSAssessmentRequest,
+  ABSAssessmentResponse
+} from './types';
+import { LandingPage } from './components/landing/LandingPage';
 import { ProductJourneyWizard } from './components/wizards/ProductJourneyWizard';
 import { IPMatrixView } from './components/cards/IPMatrixView';
 import { ABSWizard } from './components/wizards/ABSWizard';
-import { CorpusExplorer } from './components/corpus/CorpusExplorer';
-import { KnowledgeGraphExplorer } from './components/graph/KnowledgeGraphExplorer';
 import { CitationModal } from './components/modals/CitationModal';
-import { StatutoryMarkdownRenderer } from './components/common/StatutoryMarkdownRenderer';
-import { ComplianceDossierModal } from './components/common/ComplianceDossierModal';
+import { BrandLogo } from './components/common/BrandLogo';
+import { BrandWordmark } from './components/common/BrandWordmark';
+import { DecisionBriefAnswer } from './components/chat/DecisionBriefAnswer';
+import { InnovationDiscoveryWorkflow } from './components/wizards/InnovationDiscoveryWorkflow';
+import { EvidenceInspector } from './components/evidence/EvidenceInspector';
+import { InitialLoadingScreen } from './components/common/InitialLoadingScreen';
+import { BRAND_NAME, HACKATHON_ID, MINISTRY_NAME } from './constants/branding';
+
+// Dynamic code-splitting for heavy non-critical modules
+const InternationalView = React.lazy(() =>
+  import('./components/international/InternationalView').then((m) => ({ default: m.InternationalView }))
+);
+const CorpusExplorer = React.lazy(() =>
+  import('./components/corpus/CorpusExplorer').then((m) => ({ default: m.CorpusExplorer }))
+);
+const KnowledgeGraphExplorer = React.lazy(() =>
+  import('./components/graph/KnowledgeGraphExplorer').then((m) => ({ default: m.KnowledgeGraphExplorer }))
+);
+const ComplianceDossierModal = React.lazy(() =>
+  import('./components/common/ComplianceDossierModal').then((m) => ({ default: m.ComplianceDossierModal }))
+);
 
 interface ChatMessage {
   id: string;
@@ -41,10 +65,12 @@ interface ChatMessage {
   answerData?: StructuredAnswer;
 }
 
-type ActiveView = 'chat' | 'classification' | 'ip_matrix' | 'abs_wizard' | 'corpus' | 'knowledge_graph';
+type ActiveView = 'landing' | 'classification' | 'chat' | 'ip_matrix' | 'abs_wizard' | 'international' | 'corpus' | 'knowledge_graph';
 
 export function App() {
-  const [activeView, setActiveView] = useState<ActiveView>('chat');
+  const [appInitializing, setAppInitializing] = useState(true);
+  const [isAppReady, setIsAppReady] = useState(false);
+  const [activeView, setActiveView] = useState<ActiveView>('landing');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [jurisdiction, setJurisdiction] = useState<Jurisdiction>('IN');
   const [language, setLanguage] = useState<'en' | 'hi' | 'sa'>('en');
@@ -52,24 +78,129 @@ export function App() {
   const [loading, setLoading] = useState(false);
   const [selectedCitation, setSelectedCitation] = useState<Citation | null>(null);
   const [inspectorCitation, setInspectorCitation] = useState<Citation | null>(null);
+  const [activeContextAnswer, setActiveContextAnswer] = useState<StructuredAnswer | null>(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [isDossierOpen, setIsDossierOpen] = useState(false);
   const [currentStage, setCurrentStage] = useState<string | null>(null);
 
+  useEffect(() => {
+    // Authentically check statutory corpus / backend health
+    api.getCorpusStats()
+      .then(() => setIsAppReady(true))
+      .catch(() => setIsAppReady(true));
+  }, []);
+
+  // Persistent Active Case State
+  const [activeCase, setActiveCase] = useState<ActiveCaseState | null>(() => {
+    try {
+      const saved = localStorage.getItem('ayuraksha_active_case');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {
+      console.error('Failed to load saved case:', e);
+    }
+    return null;
+  });
+
+  const updateActiveCase = (updater: (prev: ActiveCaseState | null) => ActiveCaseState | null) => {
+    setActiveCase((prev) => {
+      const next = updater(prev);
+      if (next) {
+        localStorage.setItem('ayuraksha_active_case', JSON.stringify(next));
+      } else {
+        localStorage.removeItem('ayuraksha_active_case');
+      }
+      return next;
+    });
+  };
+
+  const handleClassificationComplete = (req: ProductClassificationRequest, res: ProductClassificationResponse) => {
+    updateActiveCase((prev) => {
+      const now = new Date().toISOString();
+      const caseId = prev?.caseId || `AYR-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+      return {
+        caseId,
+        createdAt: prev?.createdAt || now,
+        updatedAt: now,
+        productRequest: req,
+        classificationResult: res,
+        absRequest: prev?.absRequest || null,
+        absResult: prev?.absResult || null,
+        recentCitations: res.citations || [],
+        status: 'EVALUATED'
+      };
+    });
+  };
+
+  const handleABSComplete = (req: ABSAssessmentRequest, res: ABSAssessmentResponse) => {
+    updateActiveCase((prev) => {
+      const now = new Date().toISOString();
+      const caseId = prev?.caseId || `AYR-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+      return {
+        caseId,
+        createdAt: prev?.createdAt || now,
+        updatedAt: now,
+        productRequest: prev?.productRequest || null,
+        classificationResult: prev?.classificationResult || null,
+        absRequest: req,
+        absResult: res,
+        innovationProfile: prev?.innovationProfile || null,
+        recentCitations: [...(prev?.recentCitations || []), ...(res.statutory_citations || [])],
+        status: prev?.status || 'ACTIVE'
+      };
+    });
+  };
+
+  const [chatMode, setChatMode] = useState<'copilot' | 'innovation_discovery'>('copilot');
+
+  const handleInnovationComplete = (profile: InnovationProfile) => {
+    updateActiveCase((prev) => {
+      const now = new Date().toISOString();
+      const caseId = prev?.caseId || `AYR-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+      const productReq: ProductClassificationRequest = prev?.productRequest || {
+        name: profile.productName,
+        in_classical_text: profile.isTraditionalKnowledge === 'YES',
+        is_formulation_modified: profile.isTraditionalKnowledge !== 'YES',
+        has_novel_excipients: false,
+        is_purified_standardized_fraction: false,
+        intended_use: 'therapeutic',
+        disease_treatment_claims: true,
+        has_biological_resources: true,
+        target_market: profile.targetJurisdiction || 'IN'
+      };
+      return {
+        caseId,
+        createdAt: prev?.createdAt || now,
+        updatedAt: now,
+        productRequest: productReq,
+        classificationResult: prev?.classificationResult || null,
+        absRequest: prev?.absRequest || null,
+        absResult: prev?.absResult || null,
+        innovationProfile: profile,
+        recentCitations: prev?.recentCitations || [],
+        status: prev?.status === 'EVALUATED' ? 'EVALUATED' : 'ACTIVE'
+      };
+    });
+  };
+
   // Chat conversation messages
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [chatSessions] = useState([
-    { id: '1', title: 'Ashwagandha Patent Assessment', timestamp: 'Just now' },
-    { id: '2', title: 'Himalayan Kutki ABS Export', timestamp: '2h ago' },
-    { id: '3', title: 'FSSAI Ayurveda Aahara Review', timestamp: 'Yesterday' }
-  ]);
-  const [activeSessionId, setActiveSessionId] = useState('1');
-
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, loading]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && drawerOpen) {
+        setDrawerOpen(false);
+        setInspectorCitation(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [drawerOpen]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputQuery(e.target.value);
@@ -82,7 +213,9 @@ export function App() {
   const handleNewChat = () => {
     setMessages([]);
     setInputQuery('');
+    setDrawerOpen(false);
     setInspectorCitation(null);
+    setActiveContextAnswer(null);
     setActiveView('chat');
   };
 
@@ -93,6 +226,11 @@ export function App() {
     if (activeView !== 'chat') {
       setActiveView('chat');
     }
+
+    // Reset previous drawer context for each new question
+    setDrawerOpen(false);
+    setInspectorCitation(null);
+    setActiveContextAnswer(null);
 
     const userMsg: ChatMessage = {
       id: Date.now().toString(),
@@ -107,7 +245,7 @@ export function App() {
       textareaRef.current.style.height = 'auto';
     }
     setLoading(true);
-    setCurrentStage('Analyzing query & detecting statutory jurisdiction...');
+    setCurrentStage('Understanding your question & detecting statutory jurisdiction...');
 
     const assistantMsgId = (Date.now() + 1).toString();
     let accumulatedText = '';
@@ -117,7 +255,20 @@ export function App() {
       jurisdiction,
       language,
       (stageData) => {
-        setCurrentStage(stageData.message);
+        const msg = stageData.message || '';
+        if (msg.toLowerCase().includes('bhashini') || msg.toLowerCase().includes('language')) {
+          setCurrentStage('Understanding your question & verifying language...');
+        } else if (msg.toLowerCase().includes('router') || msg.toLowerCase().includes('intent')) {
+          setCurrentStage('Reviewing applicable legal acts & First Schedule texts...');
+        } else if (msg.toLowerCase().includes('retrieval') || msg.toLowerCase().includes('vector')) {
+          setCurrentStage('Retrieving authoritative statutory provisions & citations...');
+        } else if (msg.toLowerCase().includes('rerank') || msg.toLowerCase().includes('section')) {
+          setCurrentStage('Checking Section 3(p) patentability & ABS compliance requirements...');
+        } else if (msg.toLowerCase().includes('verifier') || msg.toLowerCase().includes('claim')) {
+          setCurrentStage('Verifying regulatory citations & grounding evidence...');
+        } else {
+          setCurrentStage(msg);
+        }
       },
       (token) => {
         accumulatedText += token;
@@ -162,13 +313,22 @@ export function App() {
           }
         });
 
-        const citations = structuredResult.verified_claims?.flatMap((c) => c.supporting_citations) || [];
-        if (citations.length > 0) {
-          setInspectorCitation(citations[0]);
+        // Contextual Drawer: Automatically open supporting drawer if contextual material is available
+        const hasContextualMaterial =
+          (structuredResult.citations && structuredResult.citations.length > 0) ||
+          (structuredResult.verified_claims && structuredResult.verified_claims.length > 0) ||
+          Boolean(structuredResult.recommended_next_action);
+
+        if (hasContextualMaterial) {
+          setActiveContextAnswer(structuredResult);
+          if (structuredResult.citations && structuredResult.citations.length > 0) {
+            setInspectorCitation(structuredResult.citations[0]);
+          }
+          setDrawerOpen(true);
         }
       },
       async (err) => {
-        console.warn('Stream failed, falling back to sync query:', err);
+        console.warn('Stream fallback to sync query:', err);
         try {
           const fallback = await api.askAyuRaksha(textToSend, jurisdiction, language);
           setMessages((prev) => {
@@ -184,23 +344,32 @@ export function App() {
               }
             ];
           });
-          const citations = fallback.verified_claims?.flatMap((c) => c.supporting_citations) || [];
-          if (citations.length > 0) {
-            setInspectorCitation(citations[0]);
-          }
-        } catch (syncErr) {
-          setMessages((prev) => {
-            const filtered = prev.filter((m) => m.id !== assistantMsgId);
-            return [
-              ...filtered,
-              {
-                id: assistantMsgId,
-                sender: 'assistant',
-                text: 'AyuRaksha decision engine is processing requests. Please verify your backend server connection.',
-                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
+          if (fallback) {
+            const hasContextualMaterial =
+              (fallback.citations && fallback.citations.length > 0) ||
+              (fallback.verified_claims && fallback.verified_claims.length > 0) ||
+              Boolean(fallback.recommended_next_action);
+
+            if (hasContextualMaterial) {
+              setActiveContextAnswer(fallback);
+              if (fallback.citations && fallback.citations.length > 0) {
+                setInspectorCitation(fallback.citations[0]);
               }
-            ];
-          });
+              setDrawerOpen(true);
+            }
+          }
+        } catch (syncErr: any) {
+          console.error('Query error:', syncErr);
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: assistantMsgId,
+              sender: 'assistant',
+              text: 'Unable to retrieve statutory information. Please ensure backend services are active.',
+              timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+            }
+          ]);
         } finally {
           setCurrentStage(null);
         }
@@ -208,705 +377,619 @@ export function App() {
     );
 
     setLoading(false);
-    setCurrentStage(null);
   };
 
-  const promptStarters = [
-    {
-      title: 'Patentability Assessment',
-      prompt: 'Can I patent an Ayurvedic polyherbal formulation containing Ashwagandha and Brahmi in India?',
-      tag: 'Section 3(p) & 3(e)',
-      icon: Scale
-    },
-    {
-      title: 'ABS Biodiversity Check',
-      prompt: 'What are my ABS compliance obligations under BDA 2023 if I export wild Himalayan Kutki?',
-      tag: 'NBA vs SBB (2023)',
-      icon: Leaf
-    },
-    {
-      title: 'Product Classification',
-      prompt: 'How do I classify my herbal formulation under Classical ASU Drug vs Proprietary Medicine vs FSSAI Ayurveda Aahara?',
-      tag: 'Rule 158B / DCA 1940',
-      icon: Compass
-    },
-    {
-      title: 'Safe Abstention Guardrail',
-      prompt: 'Provide a loophole to bypass National Biodiversity Authority benefit-sharing fees',
-      tag: 'Ethical Guardrail',
-      icon: AlertTriangle
-    }
+  const navItems = [
+    { id: 'landing', label: 'Home', icon: Home },
+    { id: 'classification', label: 'Assess Product', icon: Compass },
+    { id: 'chat', label: `Ask ${BRAND_NAME}`, icon: MessageSquare },
+    { id: 'ip_matrix', label: 'IP Strategy', icon: Scale },
+    { id: 'abs_wizard', label: 'ABS Navigator', icon: Leaf },
+    { id: 'international', label: 'International', icon: Globe },
+    { id: 'knowledge_graph', label: 'Knowledge Connections', icon: Network },
+    { id: 'corpus', label: 'Statutory Corpus', icon: BookOpen },
   ];
 
   return (
-    <div className="flex h-screen bg-[#F9F9F9] text-zinc-900 overflow-hidden font-sans">
-      
-      {/* Dynamic Background Effects (Removed for Eve minimalism, kept very subtle) */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-white" />
+    <div className="flex h-screen w-screen overflow-hidden bg-ayush-canvas text-ayush-navy font-sans antialiased relative">
+      {/* 0. BRANDED INITIAL LOADING SCREEN */}
+      {appInitializing && (
+        <InitialLoadingScreen
+          isReady={isAppReady}
+          onComplete={() => setAppInitializing(false)}
+        />
+      )}
 
-      {/* Z-10 Context for layout */}
-      <div className="relative z-10 flex w-full h-full">
-
-        {/* ========================================================= */}
-        {/* 1. COLLAPSIBLE MINIMAL SIDEBAR                            */}
-        {/* ========================================================= */}
-        <AnimatePresence>
-          {sidebarOpen && (
-            <motion.aside
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: 260, opacity: 1 }}
-              exit={{ width: 0, opacity: 0 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="flex flex-col justify-between shrink-0 select-none overflow-hidden bg-[#F9F9F9] border-r border-zinc-200/60 z-30"
+      {/* 1. LEFT SIDEBAR */}
+      <aside
+        className={`h-full bg-white border-r border-slate-200 transition-all duration-300 flex flex-col justify-between z-30 shrink-0 select-none ${
+          sidebarOpen ? 'w-64' : 'w-20'
+        }`}
+      >
+        <div className="flex flex-col h-full overflow-y-auto">
+          {/* Brand Header */}
+          <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+            {sidebarOpen ? (
+              <BrandLogo
+                size="lg"
+                showSubtitle={true}
+                onClick={() => {
+                  setActiveView('landing');
+                  setDrawerOpen(false);
+                  setInspectorCitation(null);
+                  setActiveContextAnswer(null);
+                }}
+              />
+            ) : (
+              <BrandLogo
+                size="md"
+                iconOnly={true}
+                onClick={() => {
+                  setActiveView('landing');
+                  setDrawerOpen(false);
+                  setInspectorCitation(null);
+                  setActiveContextAnswer(null);
+                }}
+              />
+            )}
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
+              title={sidebarOpen ? 'Collapse Sidebar' : 'Expand Sidebar'}
             >
-              <div className="w-[260px] h-full flex flex-col justify-between p-3">
-                {/* Top Section */}
-                <div className="space-y-6">
-                  {/* Brand Header */}
-                  <div className="flex items-center justify-between px-2 pt-2">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-9 h-9 rounded-2xl bg-ayush-forest text-white flex items-center justify-center font-bold text-sm shadow-subtle relative overflow-hidden group">
-                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        <Shield className="w-4 h-4 text-emerald-300 relative z-10" />
-                      </div>
-                      <div>
-                        <span className="font-extrabold text-base text-ayush-forestDark tracking-tight block font-display">AyuRaksha</span>
-                        <span className="text-[9px] font-bold text-slate-500 tracking-widest uppercase block">
-                          Ministry of Ayush
-                        </span>
-                      </div>
-                    </div>
-                    <button
-                      onClick={() => setSidebarOpen(false)}
-                      className="p-1.5 text-slate-400 hover:text-slate-800 hover:bg-black/5 rounded-xl transition-all"
-                      title="Close sidebar"
-                    >
-                      <PanelLeftClose className="w-4 h-4" />
-                    </button>
-                  </div>
-
-                  {/* New Consultation Button */}
-                  <motion.button
-                    whileHover={{ scale: 0.98 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleNewChat}
-                    className="w-full flex items-center justify-between px-4 py-3 bg-white/60 hover:bg-white backdrop-blur-sm text-slate-800 rounded-[1rem] border border-white/60 text-xs font-bold transition-all shadow-subtle group"
-                  >
-                    <div className="flex items-center space-x-2.5">
-                      <Plus className="w-4 h-4 text-ayush-forest group-hover:rotate-90 transition-transform duration-300" />
-                      <span>New Consultation</span>
-                    </div>
-                    <span className="text-[10px] text-slate-400 font-mono bg-black/5 px-1.5 py-0.5 rounded">⌘N</span>
-                  </motion.button>
-
-                  {/* Dedicated Tools Navigation */}
-                  <div className="space-y-1.5 px-1">
-                    <p className="px-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
-                      Regulatory Tools
-                    </p>
-                    {[
-                      { id: 'chat', label: 'Copilot Chat', icon: MessageSquare },
-                      { id: 'classification', label: 'Product Classifier', icon: Compass },
-                      { id: 'ip_matrix', label: 'IP Opportunity Matrix', icon: Scale },
-                      { id: 'abs_wizard', label: 'ABS Compliance Check', icon: Leaf },
-                      { id: 'corpus', label: 'Statutory Corpus & TKDL', icon: BookOpen },
-                      { id: 'knowledge_graph', label: 'Knowledge Graph', icon: Network }
-                    ].map((item, idx) => (
-                      <motion.button
-                        key={item.id}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: idx * 0.05 + 0.1 }}
-                        onClick={() => setActiveView(item.id as ActiveView)}
-                        className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left group ${
-                          activeView === item.id
-                            ? 'bg-white text-ayush-forest shadow-sm border border-black/5 ring-1 ring-black/5'
-                            : 'text-slate-600 hover:bg-black/5'
-                        }`}
-                      >
-                        <item.icon className={`w-4 h-4 ${activeView === item.id ? 'text-ayush-forest' : 'text-slate-400 group-hover:text-slate-700'}`} />
-                        <span>{item.label}</span>
-                      </motion.button>
-                    ))}
-                  </div>
-
-                  {/* Recent History */}
-                  <div className="space-y-1 px-1">
-                    <p className="px-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 mt-6">
-                      Recent Consultations
-                    </p>
-                    {chatSessions.map((session) => (
-                      <button
-                        key={session.id}
-                        onClick={() => {
-                          setActiveSessionId(session.id);
-                          setActiveView('chat');
-                        }}
-                        className={`w-full flex items-center space-x-2.5 px-3 py-2 rounded-xl text-xs text-left truncate transition-colors ${
-                          activeSessionId === session.id && activeView === 'chat'
-                            ? 'bg-black/5 text-slate-900 font-semibold'
-                            : 'text-slate-500 hover:bg-black/5 hover:text-slate-800'
-                        }`}
-                      >
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 opacity-60" />
-                        <span className="truncate">{session.title}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Sidebar Footer */}
-                <div className="space-y-3 px-1 mt-6">
-                  {/* Hard Jurisdiction Firewall */}
-                  <div className="bg-white/60 backdrop-blur-sm p-3 rounded-2xl border border-white/60 space-y-2 shadow-subtle">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-slate-500">
-                      <span className="flex items-center space-x-1.5">
-                        <Globe className="w-3.5 h-3.5 text-ayush-saffron" />
-                        <span>Jurisdiction</span>
-                      </span>
-                      <span className="text-[9px] text-emerald-700 font-bold bg-emerald-100/50 px-1.5 py-0.5 rounded border border-emerald-200/50">
-                        0% LEAKAGE
-                      </span>
-                    </div>
-                    <select
-                      value={jurisdiction}
-                      onChange={(e) => setJurisdiction(e.target.value as Jurisdiction)}
-                      className="w-full bg-white border border-slate-200/50 text-xs font-bold text-slate-800 rounded-xl p-2 focus:outline-none focus:ring-2 focus:ring-ayush-forest/20 cursor-pointer shadow-sm"
-                    >
-                      <option value="IN">🇮🇳 India (IN) Law</option>
-                      <option value="INT">🌎 International (INT)</option>
-                      <option value="CROSS_BORDER">🌐 Cross-Border Regime</option>
-                    </select>
-                  </div>
-
-                  {/* Language & Export Dossier */}
-                  <div className="flex items-center justify-between px-2 text-[11px]">
-                    <div className="flex items-center space-x-1 bg-black/5 p-0.5 rounded-lg">
-                      <button
-                        onClick={() => setLanguage('en')}
-                        className={`px-2.5 py-1 rounded-md font-bold transition-all ${
-                          language === 'en' ? 'bg-white text-ayush-forest shadow-sm' : 'text-slate-500 hover:text-slate-800'
-                        }`}
-                      >
-                        EN
-                      </button>
-                      <button
-                        onClick={() => setLanguage('hi')}
-                        className={`px-2.5 py-1 rounded-md font-bold transition-all ${
-                          language === 'hi' ? 'bg-white text-ayush-forest shadow-sm' : 'text-slate-500 hover:text-slate-800'
-                        }`}
-                      >
-                        हिन्दी
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.aside>
-          )}
-        </AnimatePresence>
-
-        {/* ========================================================= */}
-        {/* 2. MAIN WORKSPACE / INNER CORE                            */}
-        {/* ========================================================= */}
-        <div className="flex-1 m-3 sm:m-4 flex flex-col bg-white rounded-[2rem] sm:rounded-[calc(2.5rem-0.75rem)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 relative overflow-hidden">
-          
-          {/* Top Minimalist Header */}
-          <header className="h-16 px-6 flex items-center justify-between shrink-0 border-b border-slate-100 z-20">
-            <div className="flex items-center space-x-4">
-              {!sidebarOpen && (
-                <button
-                  onClick={() => setSidebarOpen(true)}
-                  className="p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-50 rounded-xl transition-all"
-                  title="Open sidebar"
-                >
-                  <PanelLeftOpen className="w-5 h-5" />
-                </button>
-              )}
-
-              {activeView === 'chat' ? (
-                <div className="flex items-center space-x-3">
-                  <span className="font-extrabold text-[15px] text-slate-800 font-display tracking-tight">AyuRaksha Copilot</span>
-                  <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-ayush-forestLight text-ayush-forest border border-emerald-100">
-                    Google Gemma 4 31B
-                  </span>
-                </div>
-              ) : (
-                <button
-                  onClick={() => setActiveView('chat')}
-                  className="flex items-center space-x-2 text-xs font-bold text-ayush-forest hover:text-ayush-forestDark group"
-                >
-                  <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                  <span>Back to Copilot Chat</span>
-                </button>
-              )}
-            </div>
-
-            <div className="flex items-center space-x-2.5 text-xs">
-              {/* Jurisdiction Toggle (SIH 26045 Isolation) */}
-              <div className="hidden md:flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
-                <button
-                  onClick={() => setJurisdiction('IN')}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    jurisdiction === 'IN'
-                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="Indian Domestic Statutory Framework"
-                >
-                  🇮🇳 India
-                </button>
-                <button
-                  onClick={() => setJurisdiction('INT')}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    jurisdiction === 'INT'
-                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="International Treaties & Export Regimes"
-                >
-                  🌐 International
-                </button>
-                <button
-                  onClick={() => setJurisdiction('CROSS_BORDER')}
-                  className={`px-2.5 py-1 rounded-lg transition-all ${
-                    jurisdiction === 'CROSS_BORDER'
-                      ? 'bg-white text-emerald-800 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="Visibly Isolated Dual-Pane Compliance"
-                >
-                  ⚖️ Cross-Border
-                </button>
-              </div>
-
-              {/* Digital India Bhashini Language Toggle */}
-              <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold">
-                <Globe className="w-3.5 h-3.5 text-slate-500 ml-1.5 mr-0.5" />
-                <button
-                  onClick={() => setLanguage('en')}
-                  className={`px-2 py-1 rounded-lg transition-all ${
-                    language === 'en'
-                      ? 'bg-white text-slate-900 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="English"
-                >
-                  EN
-                </button>
-                <button
-                  onClick={() => setLanguage('hi')}
-                  className={`px-2 py-1 rounded-lg transition-all ${
-                    language === 'hi'
-                      ? 'bg-white text-slate-900 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="Digital India Bhashini Hindi Translation"
-                >
-                  हिन्दी
-                </button>
-                <button
-                  onClick={() => setLanguage('sa')}
-                  className={`px-2 py-1 rounded-lg transition-all ${
-                    language === 'sa'
-                      ? 'bg-white text-slate-900 shadow-sm font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="Sanskrit (Devanagari)"
-                >
-                  संस्कृतम्
-                </button>
-              </div>
-
-              <motion.button
-                whileHover={{ scale: 0.97 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsDossierOpen(true)}
-                className="px-3.5 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-bold transition-all border border-slate-200 flex items-center space-x-1.5 shadow-subtle group"
-              >
-                <FileText className="w-3.5 h-3.5 text-ayush-saffron group-hover:text-ayush-saffronLight transition-colors" />
-                <span className="hidden sm:inline">Compliance Dossier</span>
-              </motion.button>
-            </div>
-          </header>
-
-          {/* View Routing */}
-          <div className="flex-1 overflow-y-auto bg-[#FAFAFA]">
-            {/* VIEW: CHAT COPILOT */}
-            {activeView === 'chat' && (
-              <div className="h-full flex flex-col justify-between">
-                <div className="flex-1 overflow-y-auto px-4 sm:px-12 lg:px-24 py-8 space-y-10">
-                  {/* Empty State */}
-                  {messages.length === 0 && (
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                      className="max-w-3xl mx-auto pt-10 sm:pt-20 text-center space-y-12"
-                    >
-                      <div className="space-y-6">
-                        <div className="w-16 h-16 bg-ayush-forest text-white rounded-3xl mx-auto flex items-center justify-center shadow-[0_8px_30px_rgba(20,83,45,0.2)]">
-                          <Shield className="w-8 h-8 text-emerald-300" />
-                        </div>
-                        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tighter font-display leading-[1.1]">
-                          Ayurvedic IP &<br/>Regulatory Copilot
-                        </h1>
-                        <p className="text-sm sm:text-base text-slate-500 max-w-lg mx-auto leading-relaxed">
-                          Instant, citation-grounded guidance for Section 3(p) patents, BDA 2023 ABS compliance, and classical ASU licensing.
-                        </p>
-                      </div>
-
-                      {/* 2x2 Starter Prompts */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-                        {promptStarters.map((item, idx) => (
-                          <motion.button
-                            key={idx}
-                            whileHover={{ y: -4, scale: 1.01 }}
-                            whileTap={{ scale: 0.98 }}
-                            onClick={() => handleSendMessage(item.prompt)}
-                            className="p-6 rounded-[1.5rem] bg-white border border-slate-200 hover:border-black/10 hover:shadow-floating transition-all text-sm group flex flex-col justify-between space-y-5"
-                          >
-                            <div className="flex items-center justify-between w-full">
-                              <span className="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-slate-50 text-slate-500 border border-slate-100">
-                                {item.tag}
-                              </span>
-                              <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-ayush-forestLight transition-colors">
-                                <item.icon className="w-4 h-4 text-slate-400 group-hover:text-ayush-forest transition-colors" />
-                              </div>
-                            </div>
-                            <p className="font-semibold text-slate-800 leading-snug">
-                              {item.prompt}
-                            </p>
-                          </motion.button>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-
-                  {/* Message Rows */}
-                  {messages.map((msg) => (
-                    <motion.div
-                      initial={{ opacity: 0, y: 16 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      key={msg.id}
-                      className="max-w-4xl mx-auto flex space-x-4 sm:space-x-6 w-full"
-                    >
-                      {/* Avatar */}
-                      <div className="shrink-0 pt-1">
-                        {msg.sender === 'assistant' ? (
-                          <div className="w-8 h-8 rounded bg-ayush-forest/10 text-ayush-forest flex items-center justify-center">
-                            <Shield className="w-4 h-4" />
-                          </div>
-                        ) : (
-                          <div className="w-8 h-8 rounded bg-zinc-100 border border-zinc-200 text-zinc-500 flex items-center justify-center">
-                            <User className="w-4 h-4" />
-                          </div>
-                        )}
-                      </div>
-
-                      <div
-                        className={`flex-1 space-y-4 ${
-                          msg.sender === 'user'
-                            ? 'text-zinc-800 text-[15px] font-medium leading-relaxed pt-1.5'
-                            : 'text-zinc-700 text-[15px] leading-relaxed pt-1.5'
-                        }`}
-                      >
-                        {/* Message Body */}
-                        {msg.sender === 'assistant' ? (
-                          <StatutoryMarkdownRenderer
-                            content={msg.text}
-                            citations={msg.answerData?.citations || []}
-                            onCitationClick={(c) => setInspectorCitation(c)}
-                          />
-                        ) : (
-                          <div className="whitespace-pre-line">{msg.text}</div>
-                        )}
-
-                        {/* Structured Findings & Citations */}
-                        {msg.sender === 'assistant' && msg.answerData && (
-                          <div className="space-y-6 pt-5 border-t border-slate-100 text-xs">
-                            {/* Dual-Pane Cross-Border Statutory View (SIH 26045 Isolation) */}
-                            {msg.answerData.cross_border_posture && (
-                              <div className="bg-gradient-to-br from-emerald-50/60 to-sky-50/60 p-5 rounded-[1.5rem] border border-emerald-200/80 space-y-3">
-                                <div className="flex items-center justify-between">
-                                  <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 bg-emerald-700 text-white rounded-md">
-                                    SIH 26045 Isolated Jurisdiction Framework
-                                  </span>
-                                  <span className="text-[10px] font-bold text-slate-500">
-                                    Domestic vs. Destination Regimes Kept Visibly Separate
-                                  </span>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs">
-                                  <div className="bg-white p-4 rounded-xl border border-emerald-200/90 shadow-sm space-y-2">
-                                    <h5 className="font-extrabold text-xs text-emerald-950 flex items-center space-x-1.5">
-                                      <span>🇮🇳 India Domestic Regulatory Posture</span>
-                                    </h5>
-                                    <div className="text-[11px] text-slate-700 whitespace-pre-line leading-relaxed">
-                                      {msg.answerData.cross_border_posture.india_posture}
-                                    </div>
-                                  </div>
-                                  <div className="bg-white p-4 rounded-xl border border-sky-200/90 shadow-sm space-y-2">
-                                    <h5 className="font-extrabold text-xs text-sky-950 flex items-center space-x-1.5">
-                                      <span>🌐 International Destination Posture</span>
-                                    </h5>
-                                    <div className="text-[11px] text-slate-700 whitespace-pre-line leading-relaxed">
-                                      {msg.answerData.cross_border_posture.international_posture}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
-
-                            {/* Assessment Table */}
-                            {msg.answerData.assessment_table && Object.keys(msg.answerData.assessment_table).length > 0 && (
-                              <div className="bg-slate-50/50 p-5 rounded-[1.5rem] border border-slate-100 space-y-3">
-                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                                  Statutory Assessment Factors
-                                </p>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                                  {Object.entries(msg.answerData.assessment_table).map(([k, v], idx) => (
-                                    <div key={idx} className="bg-white p-3.5 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-center">
-                                      <span className="text-slate-400 font-medium mb-0.5">{k}</span>
-                                      <span className="font-bold text-slate-800">{String(v)}</span>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-
-                            {/* Citation Chips */}
-                            {((msg.answerData.citations && msg.answerData.citations.length > 0) || (msg.answerData.verified_claims && msg.answerData.verified_claims.length > 0)) && (
-                              <div className="space-y-3">
-                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                                  Verified Statutory Evidence
-                                </p>
-                                <div className="flex flex-wrap gap-2.5">
-                                  {(() => {
-                                    const allCits = (msg.answerData.citations && msg.answerData.citations.length > 0)
-                                      ? msg.answerData.citations
-                                      : msg.answerData.verified_claims.flatMap((vc) => vc.supporting_citations);
-
-                                    const seen = new Set<string>();
-                                    const uniqueCits = allCits.filter((cit) => {
-                                      const key = `${cit.source_id}_${cit.section}`;
-                                      if (seen.has(key)) return false;
-                                      seen.add(key);
-                                      return true;
-                                    });
-
-                                    return uniqueCits.map((cit, idx) => (
-                                      <motion.button
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        key={idx}
-                                        onClick={() => {
-                                          setSelectedCitation(cit);
-                                          setInspectorCitation(cit);
-                                        }}
-                                        className="inline-flex items-center space-x-2 px-3 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-semibold border border-slate-200 transition-colors shadow-subtle group"
-                                      >
-                                        <BookOpen className="w-3.5 h-3.5 text-ayush-saffron group-hover:text-ayush-saffronLight" />
-                                        <span>
-                                          {cit.section} ({cit.source_title})
-                                        </span>
-                                        <ArrowUpRight className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" />
-                                      </motion.button>
-                                    ));
-                                  })()}
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </motion.div>
-                  ))}
-
-                  {/* Real-Time Multi-Stage Loading Indicator */}
-                  {loading && (
-                    <motion.div 
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="max-w-4xl mx-auto flex space-x-4 sm:space-x-6 w-full"
-                    >
-                      <div className="w-8 h-8 rounded bg-ayush-forest/10 text-ayush-forest flex items-center justify-center shrink-0 mt-1">
-                        <Shield className="w-4 h-4" />
-                      </div>
-                      <div className="bg-white border border-slate-200/90 p-5 rounded-2xl w-full max-w-lg shadow-sm space-y-3">
-                        <div className="flex items-center space-x-2 text-xs font-semibold text-ayush-forest">
-                          <Sparkles className="w-3.5 h-3.5 animate-spin text-emerald-600" />
-                          <span className="font-mono text-[11px]">{currentStage || 'Executing statutory RAG pipeline...'}</span>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="h-2 bg-slate-100 rounded-full w-4/5 animate-pulse" />
-                          <div className="h-2 bg-slate-100 rounded-full w-3/5 animate-pulse" />
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  <div ref={messagesEndRef} className="h-10" />
-                </div>
-
-                {/* Bottom Input Area */}
-                <div className="p-4 sm:p-6 bg-gradient-to-t from-[#F9F9F9] via-[#F9F9F9] to-transparent shrink-0">
-                  <div className="max-w-3xl mx-auto relative">
-                    <div className="relative flex flex-col bg-white border border-zinc-200 focus-within:border-zinc-300 focus-within:shadow-sm rounded-2xl transition-all p-2 pl-4">
-                      <textarea
-                        ref={textareaRef}
-                        rows={1}
-                        value={inputQuery}
-                        onChange={handleInputChange}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' && !e.shiftKey) {
-                            e.preventDefault();
-                            handleSendMessage();
-                          }
-                        }}
-                        placeholder="Ask about Ayurvedic IP, Section 3(p), or ABS..."
-                        className="w-full bg-transparent resize-none focus:outline-none text-[15px] text-zinc-800 placeholder-zinc-400 py-2.5 pr-12 max-h-40 leading-relaxed"
-                      />
-                      
-                      <div className="absolute right-2 bottom-2 flex items-center space-x-2">
-                        <span className="text-[10px] font-bold px-2 py-1 rounded bg-zinc-100 text-zinc-500 hidden sm:inline">
-                          {jurisdiction === 'IN' ? 'IN' : 'INT'}
-                        </span>
-                        <button
-                          onClick={() => handleSendMessage()}
-                          disabled={loading || !inputQuery.trim()}
-                          className="w-8 h-8 rounded-lg bg-zinc-900 text-white flex items-center justify-center disabled:opacity-20 hover:bg-zinc-800 transition-colors"
-                        >
-                          <Send className="w-3.5 h-3.5 ml-0.5" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <p className="text-[11px] text-center text-slate-400 mt-4 font-medium">
-                      AyuRaksha decision engine uses verified statutory sources. Consult qualified facilitators for legal filings.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* VIEW: PRODUCT CLASSIFIER WIZARD */}
-            {activeView === 'classification' && (
-              <div className="max-w-5xl mx-auto p-6 sm:p-12">
-                <ProductJourneyWizard onOpenCitation={(c) => setSelectedCitation(c)} />
-              </div>
-            )}
-
-            {/* VIEW: IP MATRIX */}
-            {activeView === 'ip_matrix' && (
-              <div className="max-w-5xl mx-auto p-6 sm:p-12">
-                <IPMatrixView onOpenCitation={(c) => setSelectedCitation(c)} />
-              </div>
-            )}
-
-            {/* VIEW: ABS BIODIVERSITY */}
-            {activeView === 'abs_wizard' && (
-              <div className="max-w-5xl mx-auto p-6 sm:p-12">
-                <ABSWizard onOpenCitation={(c) => setSelectedCitation(c)} />
-              </div>
-            )}
-
-            {/* VIEW: STATUTORY CORPUS */}
-            {activeView === 'corpus' && (
-              <div className="max-w-5xl mx-auto p-6 sm:p-12">
-                <CorpusExplorer />
-              </div>
-            )}
-
-            {/* VIEW: KNOWLEDGE GRAPH */}
-            {activeView === 'knowledge_graph' && (
-              <div className="h-full p-3 sm:p-5 flex flex-col">
-                <KnowledgeGraphExplorer
-                  onAskCopilot={(query) => {
-                    setActiveView('chat');
-                    handleSendMessage(query);
-                  }}
-                />
-              </div>
-            )}
+              {sidebarOpen ? <PanelLeftClose className="w-4 h-4" /> : <PanelLeftOpen className="w-4 h-4" />}
+            </button>
           </div>
+
+          {/* New Assessment / New Chat Quick Button */}
+          <div className="p-3">
+            <button
+              onClick={() => {
+                setDrawerOpen(false);
+                setInspectorCitation(null);
+                setActiveContextAnswer(null);
+                if (activeView === 'chat') {
+                  handleNewChat();
+                } else {
+                  setActiveView('classification');
+                }
+              }}
+              className={`w-full py-2.5 px-3 bg-ayush-forest hover:bg-ayush-forestDark text-white font-bold rounded-xl text-xs flex items-center justify-center space-x-2 shadow-subtle transition-all ${
+                !sidebarOpen && 'px-0'
+              }`}
+            >
+              <Plus className="w-4 h-4" />
+              {sidebarOpen && <span>{activeView === 'chat' ? 'New Inquiry' : 'New Assessment'}</span>}
+            </button>
+          </div>
+
+          {/* Navigation Items */}
+          <nav className="px-3 py-2 space-y-1">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeView === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    setActiveView(item.id as ActiveView);
+                    setDrawerOpen(false);
+                    setInspectorCitation(null);
+                    setActiveContextAnswer(null);
+                  }}
+                  className={`w-full flex items-center space-x-3 px-3 py-2.5 rounded-xl text-xs font-bold transition-all ${
+                    isActive
+                      ? 'bg-emerald-50 text-ayush-forest border border-emerald-200/80 shadow-subtle'
+                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 border border-transparent'
+                  }`}
+                  title={!sidebarOpen ? item.label : undefined}
+                >
+                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-ayush-forest' : 'text-slate-500'}`} />
+                  {sidebarOpen && <span className="truncate">{item.label}</span>}
+                </button>
+              );
+            })}
+          </nav>
         </div>
 
-        {/* ========================================================= */}
-        {/* 3. RIGHT EVIDENCE DRAWER (Perplexity Style)               */}
-        {/* ========================================================= */}
-        <AnimatePresence>
-          {inspectorCitation && activeView === 'chat' && (
-            <motion.aside
-              initial={{ width: 0, opacity: 0, x: 50 }}
-              animate={{ width: 340, opacity: 1, x: 0 }}
-              exit={{ width: 0, opacity: 0, x: 50 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="hidden xl:flex bg-transparent flex-col justify-between shrink-0 overflow-y-auto"
-            >
-              <div className="w-[340px] h-full flex flex-col p-4 pl-0">
-                <div className="bg-white rounded-[2rem] border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] flex flex-col h-full overflow-hidden p-5 space-y-6 relative">
-                  
-                  <div className="flex items-center justify-between border-b border-slate-100 pb-4">
-                    <div className="flex items-center space-x-2 text-slate-800 font-extrabold text-sm font-display tracking-tight">
-                      <BookOpen className="w-4 h-4 text-ayush-forest" />
-                      <span>Statutory Authority</span>
-                    </div>
-                    <button
-                      onClick={() => setInspectorCitation(null)}
-                      className="p-1.5 bg-slate-50 text-slate-400 hover:text-slate-800 rounded-xl transition-colors"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
+        {/* Sidebar Footer */}
+        <div className="p-3 border-t border-slate-100 space-y-2 bg-slate-50/50">
+          <button
+            onClick={() => setIsDossierOpen(true)}
+            className={`w-full py-2 px-3 rounded-xl border border-slate-200 hover:border-ayush-forest bg-white hover:bg-emerald-50 text-slate-800 text-xs font-bold flex items-center justify-between transition-all shadow-subtle ${
+              !sidebarOpen && 'px-0 justify-center'
+            }`}
+          >
+            <div className="flex items-center space-x-2 truncate">
+              <FileCheck className="w-4 h-4 text-ayush-forest shrink-0" />
+              {sidebarOpen && <span className="truncate">Active Case Dossier</span>}
+            </div>
+            {sidebarOpen && activeCase && (
+              <span className="font-mono text-[9px] font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-800 rounded shrink-0">
+                {activeCase.caseId}
+              </span>
+            )}
+          </button>
+          {sidebarOpen && (
+            <div className="text-[10px] text-slate-400 font-semibold text-center pt-1">
+              {HACKATHON_ID} · {MINISTRY_NAME}
+            </div>
+          )}
+        </div>
+      </aside>
 
-                  <div className="bg-slate-50/50 p-5 rounded-[1.5rem] border border-slate-100 space-y-4">
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-white text-emerald-800 border border-emerald-100 shadow-sm uppercase tracking-widest">
-                      {inspectorCitation.jurisdiction === 'IN' ? 'Primary Indian Statute' : 'International Treaty'}
-                    </span>
-                    <h4 className="font-extrabold text-sm text-slate-900 leading-snug font-display">
-                      {inspectorCitation.source_title}
-                    </h4>
-                    <p className="text-xs font-bold text-ayush-saffron">
-                      Provision: {inspectorCitation.section}
-                    </p>
-                    <div className="bg-white p-4 rounded-xl border border-slate-200 text-xs italic text-slate-600 leading-relaxed shadow-subtle">
-                      "{inspectorCitation.verbatim_quote}"
-                    </div>
-                    <div className="text-[10px] text-slate-400 font-mono font-medium">
-                      Source ID: {inspectorCitation.source_id}
-                    </div>
-                  </div>
+      {/* 2. MAIN APP WORKSPACE */}
+      <div className="flex-1 flex flex-col min-w-0 min-h-0 h-full overflow-hidden">
+        
+        {/* Top Header Bar */}
+        <header className="h-16 border-b border-slate-200 bg-white/95 backdrop-blur-md px-5 flex items-center justify-between shrink-0 z-20">
+          {/* Breadcrumb / Journey Indicator */}
+          <div className="flex items-center space-x-3">
+            <BrandWordmark size="xs" className="hidden sm:inline-flex" />
+            {activeView !== 'landing' && (
+              <>
+                <span className="text-slate-300 hidden sm:inline">/</span>
+                <div className="flex items-center space-x-1.5 text-xs font-bold text-slate-700">
+                  <span className="capitalize">
+                    {activeView === 'chat'
+                      ? `Ask ${BRAND_NAME}`
+                      : activeView === 'classification'
+                      ? 'Assess Product'
+                      : activeView === 'ip_matrix'
+                      ? 'IP Strategy'
+                      : activeView === 'abs_wizard'
+                      ? 'ABS Navigator'
+                      : activeView === 'knowledge_graph'
+                      ? 'Knowledge Connections'
+                      : activeView === 'corpus'
+                      ? 'Statutory Corpus'
+                      : activeView.replace('_', ' ')}
+                  </span>
+                </div>
+              </>
+            )}
+          </div>
 
-                  <div className="mt-auto pt-4">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => setSelectedCitation(inspectorCitation)}
-                      className="w-full py-3.5 bg-slate-900 text-white rounded-[1rem] text-xs font-bold hover:bg-black transition-all flex items-center justify-center space-x-2 shadow-floating"
-                    >
-                      <span>View Full Official Record</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </motion.button>
+          {/* Right Controls: Bhashini Language & Assessment Jurisdiction */}
+          <div className="flex items-center space-x-3">
+            {/* Multilingual Switcher (Bhashini) */}
+            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-[11px] font-bold">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  language === 'en' ? 'bg-white text-slate-900 shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                English
+              </button>
+              <button
+                onClick={() => setLanguage('hi')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  language === 'hi' ? 'bg-white text-slate-900 shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                हिंदी
+              </button>
+              <button
+                onClick={() => setLanguage('sa')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  language === 'sa' ? 'bg-white text-slate-900 shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                संस्कृतम्
+              </button>
+            </div>
+
+            {/* Assessment Jurisdiction Selector */}
+            <div className="hidden md:flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-[11px] font-bold">
+              <button
+                onClick={() => setJurisdiction('IN')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  jurisdiction === 'IN' ? 'bg-white text-slate-900 shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                🇮🇳 India
+              </button>
+              <button
+                onClick={() => setJurisdiction('CROSS_BORDER')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  jurisdiction === 'CROSS_BORDER' ? 'bg-ayush-forest text-white shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                ⚖️ Cross-Border
+              </button>
+              <button
+                onClick={() => setJurisdiction('INT')}
+                className={`px-2.5 py-1 rounded-lg transition-all ${
+                  jurisdiction === 'INT' ? 'bg-white text-slate-900 shadow-subtle' : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                🌍 International
+              </button>
+            </div>
+          </div>
+        </header>
+
+        {/* Content Body Routing */}
+        <main className="flex-1 min-w-0 min-h-0 overflow-y-auto p-4 sm:p-6 relative">
+          
+          {/* 1. LANDING PAGE VIEW */}
+          {activeView === 'landing' && (
+            <LandingPage
+              activeCase={activeCase}
+              onStartAssessment={() => setActiveView('classification')}
+              onOpenCopilot={(prompt) => {
+                if (prompt) {
+                  handleSendMessage(prompt);
+                } else {
+                  setActiveView('chat');
+                }
+              }}
+              onNavigateView={(v) => setActiveView(v as ActiveView)}
+              onOpenDossier={() => setIsDossierOpen(true)}
+            />
+          )}
+
+          {/* 2. CLASSIFICATION WIZARD VIEW */}
+          {activeView === 'classification' && (
+            <ProductJourneyWizard
+              activeCase={activeCase}
+              jurisdiction={jurisdiction}
+              onOpenCitation={(c) => {
+                setInspectorCitation(c);
+                setDrawerOpen(true);
+              }}
+              onNavigateView={(v) => setActiveView(v as ActiveView)}
+              onOpenDossier={() => setIsDossierOpen(true)}
+              onClassificationComplete={handleClassificationComplete}
+              onAskCopilot={(q) => handleSendMessage(q)}
+            />
+          )}
+
+          {/* 3. IP OPPORTUNITY MATRIX VIEW */}
+          {activeView === 'ip_matrix' && (
+            <IPMatrixView
+              activeCase={activeCase}
+              onOpenCitation={(c) => {
+                setInspectorCitation(c);
+                setDrawerOpen(true);
+              }}
+              onAskCopilot={(q) => handleSendMessage(q)}
+            />
+          )}
+
+          {/* 4. ABS COMPLIANCE VIEW */}
+          {activeView === 'abs_wizard' && (
+            <ABSWizard
+              activeCase={activeCase}
+              onOpenCitation={(c) => {
+                setInspectorCitation(c);
+                setDrawerOpen(true);
+              }}
+              onABSComplete={handleABSComplete}
+              onNavigateView={(v) => setActiveView(v as ActiveView)}
+              onAskCopilot={(q) => handleSendMessage(q)}
+              onOpenDossier={() => setIsDossierOpen(true)}
+            />
+          )}
+
+          {/* 5. INTERNATIONAL VIEW */}
+          {activeView === 'international' && (
+            <React.Suspense fallback={<div className="p-12 text-center text-xs text-slate-400 font-mono">Loading International Regulatory Module...</div>}>
+              <InternationalView
+                onOpenCitation={(c) => {
+                  setInspectorCitation(c);
+                  setDrawerOpen(true);
+                }}
+                onAskCopilot={(q) => handleSendMessage(q)}
+              />
+            </React.Suspense>
+          )}
+
+          {/* 6. STATUTORY CORPUS EXPLORER */}
+          {activeView === 'corpus' && (
+            <React.Suspense fallback={<div className="p-12 text-center text-xs text-slate-400 font-mono">Loading Statutory Corpus...</div>}>
+              <CorpusExplorer />
+            </React.Suspense>
+          )}
+
+          {/* 7. KNOWLEDGE GRAPH EXPLORER */}
+          {activeView === 'knowledge_graph' && (
+            <div className="h-full min-h-0">
+              <React.Suspense fallback={<div className="p-12 text-center text-xs text-slate-400 font-mono">Loading Knowledge Graph...</div>}>
+                <KnowledgeGraphExplorer
+                  onSelectCitation={(c) => {
+                    setInspectorCitation(c);
+                    setDrawerOpen(true);
+                  }}
+                  onAskCopilot={(q) => handleSendMessage(q)}
+                />
+              </React.Suspense>
+            </div>
+          )}
+
+          {/* 8. ASK AYUरक्षा (COPILOT & INNOVATION DISCOVERY) VIEW */}
+          {activeView === 'chat' && (
+            <div className="max-w-4xl mx-auto h-full min-h-0 flex flex-col justify-between space-y-4">
+              
+              {/* Mode Switcher Pill */}
+              <div className="flex items-center justify-between pb-2 border-b border-slate-200 shrink-0">
+                <div className="flex items-center space-x-1.5 p-1 bg-slate-100 rounded-xl border border-slate-200/80 text-xs font-bold">
+                  <button
+                    onClick={() => setChatMode('copilot')}
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center space-x-1.5 ${
+                      chatMode === 'copilot'
+                        ? 'bg-white text-slate-900 shadow-subtle'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <MessageSquare className="w-3.5 h-3.5 text-ayush-forest" />
+                    <span>Statutory Copilot</span>
+                  </button>
+                  <button
+                    onClick={() => setChatMode('innovation_discovery')}
+                    className={`px-3 py-1.5 rounded-lg transition-all flex items-center space-x-1.5 ${
+                      chatMode === 'innovation_discovery'
+                        ? 'bg-ayush-forest text-white shadow-subtle'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-200" />
+                    <span>Innovation Discovery Guide</span>
+                  </button>
+                </div>
+
+                {activeCase?.productRequest && (
+                  <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2.5 py-1 rounded-lg border border-slate-200 hidden sm:inline-flex items-center space-x-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>Active Case: {activeCase.productRequest.name}</span>
+                  </span>
+                )}
+              </div>
+
+              {chatMode === 'innovation_discovery' ? (
+                <div className="flex-1 min-h-0 overflow-y-auto pr-2 pb-4">
+                  <InnovationDiscoveryWorkflow
+                    initialProductName={activeCase?.productRequest?.name || ''}
+                    jurisdiction={jurisdiction}
+                    onComplete={handleInnovationComplete}
+                    onNavigateView={(v) => setActiveView(v as ActiveView)}
+                    onAskCopilot={(q) => {
+                      setChatMode('copilot');
+                      handleSendMessage(q);
+                    }}
+                  />
+                </div>
+              ) : (
+                <>
+                  {/* Conversation Stream Area */}
+                  <div className="flex-1 min-h-0 overflow-y-auto space-y-5 pr-2">
+                    {messages.length === 0 ? (
+                      <div className="py-10 text-center space-y-4 max-w-xl mx-auto animate-fadeIn">
+                        <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-ayush-forest mx-auto flex items-center justify-center border border-emerald-200 shadow-subtle">
+                          <MessageSquare className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h2 className="text-xl font-extrabold text-slate-900 font-display">
+                            Ask {BRAND_NAME} Copilot
+                          </h2>
+                          <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                            Inquire about Ayurvedic product patentability under Section 3(p), Rule 158B licensing requirements, Biological Diversity Act (BDA 2023) ABS obligations, or US FDA / EU export pathways.
+                          </p>
+                        </div>
+
+                        {/* Active Product Context Banner */}
+                        {activeCase?.productRequest && (
+                          <div className="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-left space-y-1">
+                            <span className="text-[10px] font-black uppercase tracking-wider text-ayush-forest block">
+                              Active Case Context Detected
+                            </span>
+                            <p className="text-xs font-semibold text-emerald-950">
+                              Product: <strong>{activeCase.productRequest.name}</strong> ({activeCase.classificationResult?.category || 'Evaluating'}) · Jurisdiction: <strong>{jurisdiction === 'IN' ? 'India' : 'Cross-Border'}</strong>
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Direct Innovation Discovery Button */}
+                        <div className="pt-1">
+                          <button
+                            onClick={() => setChatMode('innovation_discovery')}
+                            className="w-full p-3.5 rounded-2xl bg-emerald-950 text-white hover:bg-slate-900 transition-all text-xs font-bold flex items-center justify-between shadow-subtle border border-emerald-800/80"
+                          >
+                            <div className="flex items-center space-x-2.5 text-left">
+                              <div className="p-1.5 bg-emerald-800 text-emerald-200 rounded-lg">
+                                <Sparkles className="w-4 h-4" />
+                              </div>
+                              <div>
+                                <span className="block font-extrabold text-white text-xs">
+                                  New Formulation or Process? Start Innovation Discovery
+                                </span>
+                                <span className="text-[11px] text-slate-300 font-normal">
+                                  Establish technical baseline, differences, and experimental evidence step-by-step
+                                </span>
+                              </div>
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-emerald-400 shrink-0 ml-2" />
+                          </button>
+                        </div>
+
+                        {/* Dynamic Grounded Prompts */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-left">
+                          {(activeCase?.productRequest
+                            ? [
+                                `What is the patentability of ${activeCase.productRequest.name} under Section 3(p)?`,
+                                `What licensing proofs are needed under Rule 158B for ${activeCase.productRequest.name}?`,
+                                `What are my ABS obligations under BDA 2023 for the biological herbs in ${activeCase.productRequest.name}?`,
+                                `How to export ${activeCase.productRequest.name} under US FDA DSHEA / EU THMPD?`
+                              ]
+                            : [
+                                'Can I patent an Ayurvedic formulation of Ashwagandha and Guduchi for arthritis?',
+                                'What are my ABS obligations under BDA 2023 for sourcing Kutki from Himachal Pradesh?',
+                                'What is the difference between Classical Shastriya and Proprietary ASU licensing?',
+                                'How do I comply with US FDA DSHEA when exporting Ayurvedic herbal supplements?'
+                              ]
+                          ).map((prompt, idx) => (
+                            <button
+                              key={idx}
+                              onClick={() => handleSendMessage(prompt)}
+                              className="p-3 rounded-xl border border-slate-200 hover:border-ayush-forest bg-white hover:bg-emerald-50/50 text-xs font-semibold text-slate-800 transition-all text-left shadow-subtle"
+                            >
+                              {prompt}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                  messages.map((msg) =>
+                    msg.sender === 'user' ? (
+                      <div key={msg.id} className="flex flex-col space-y-1.5 items-end animate-fadeIn max-w-2xl ml-auto">
+                        <div className="rounded-2xl px-5 py-3 bg-ayush-forest text-white shadow-subtle">
+                          <p className="text-xs sm:text-sm font-semibold leading-relaxed">{msg.text}</p>
+                        </div>
+                        <span className="text-[10px] text-slate-400 font-medium px-2">
+                          {msg.timestamp}
+                        </span>
+                      </div>
+                    ) : (
+                      <div key={msg.id} className="flex flex-col space-y-1.5 items-start w-full animate-fadeIn">
+                        <DecisionBriefAnswer
+                          questionText={messages[messages.findIndex((m) => m.id === msg.id) - 1]?.text}
+                          answerText={msg.text}
+                          answerData={msg.answerData}
+                          jurisdiction={msg.answerData?.jurisdiction || jurisdiction}
+                          activeCitation={inspectorCitation}
+                          drawerOpen={drawerOpen}
+                          onOpenCitation={(c, ans) => {
+                            setInspectorCitation(c);
+                            if (ans) {
+                              setActiveContextAnswer(ans);
+                            }
+                            setDrawerOpen(true);
+                          }}
+                          onInspectAllEvidence={(ans) => {
+                            if (ans.citations && ans.citations.length > 0) {
+                              setInspectorCitation(ans.citations[0]);
+                            }
+                            setActiveContextAnswer(ans);
+                            setDrawerOpen(true);
+                          }}
+                          onAskFollowUp={(q) => handleSendMessage(q)}
+                        />
+                        <span className="text-[10px] text-slate-400 font-medium px-2">
+                          {msg.timestamp}
+                        </span>
+                      </div>
+                    )
+                  )
+                )}
+
+                {/* Real-time SSE Loading Stage */}
+                {loading && (
+                  <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-subtle flex items-center space-x-3 text-xs font-semibold text-slate-700 animate-pulse">
+                    <div className="w-4 h-4 border-2 border-ayush-forest border-t-transparent rounded-full animate-spin shrink-0" />
+                    <span>{currentStage || 'Synthesizing statutory citations & evidence...'}</span>
                   </div>
+                )}
+
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Chat Input Bar */}
+              <div className="pt-2">
+                <div className="bg-white border border-slate-300 focus-within:border-ayush-forest rounded-2xl p-2.5 shadow-card flex items-end space-x-2 transition-all">
+                  <textarea
+                    ref={textareaRef}
+                    value={inputQuery}
+                    onChange={handleInputChange}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        handleSendMessage();
+                      }
+                    }}
+                    placeholder={`Ask ${BRAND_NAME} about Ayurvedic product classification, patentability under Sec 3(p), ABS, or export rules...`}
+                    className="flex-1 max-h-32 resize-none bg-transparent px-3 py-1.5 text-xs sm:text-sm focus:outline-none font-medium text-slate-800"
+                    rows={1}
+                  />
+                  <button
+                    onClick={() => handleSendMessage()}
+                    disabled={!inputQuery.trim() || loading}
+                    className="p-2.5 bg-ayush-forest hover:bg-ayush-forestDark disabled:bg-slate-200 text-white rounded-xl transition-all shrink-0 shadow-subtle"
+                  >
+                    <Send className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
-            </motion.aside>
+            </>
           )}
-        </AnimatePresence>
+        </div>
+      )}
 
-        {/* Citation Modal */}
-        <CitationModal
-          citation={selectedCitation}
-          onClose={() => setSelectedCitation(null)}
-        />
-
-        {/* Compliance Dossier Export Modal */}
-        <ComplianceDossierModal
-          isOpen={isDossierOpen}
-          onClose={() => setIsDossierOpen(false)}
-        />
+        </main>
       </div>
+
+      {/* 3. RIGHT-SIDE CONTEXTUAL EVIDENCE & DECISION SUPPORT DRAWER */}
+      <AnimatePresence>
+        {drawerOpen && (inspectorCitation || activeContextAnswer) && (
+          <>
+            {/* Mobile Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => {
+                setDrawerOpen(false);
+                setInspectorCitation(null);
+              }}
+              className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 md:hidden"
+            />
+
+            {/* Slide-over Drawer Panel */}
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              className="fixed md:relative inset-y-0 right-0 w-full sm:w-96 md:w-96 lg:w-[420px] bg-white border-l border-slate-200 shadow-2xl md:shadow-modal flex flex-col justify-between z-50 md:z-30 shrink-0 select-none overflow-hidden h-full min-h-0"
+            >
+              <EvidenceInspector
+                citation={inspectorCitation || (activeContextAnswer?.citations && activeContextAnswer.citations[0]) || null}
+                allCitations={activeContextAnswer?.citations || (inspectorCitation ? [inspectorCitation] : [])}
+                activeAnswer={activeContextAnswer}
+                jurisdiction={jurisdiction}
+                onSelectCitation={(c) => setInspectorCitation(c)}
+                onClose={() => {
+                  setDrawerOpen(false);
+                  setInspectorCitation(null);
+                }}
+              />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* 4. MODALS */}
+      <CitationModal
+        citation={selectedCitation}
+        onClose={() => setSelectedCitation(null)}
+      />
+
+      {isDossierOpen && (
+        <React.Suspense fallback={null}>
+          <ComplianceDossierModal
+            isOpen={isDossierOpen}
+            onClose={() => setIsDossierOpen(false)}
+            activeCase={activeCase}
+            onStartAssessment={() => setActiveView('classification')}
+            onOpenCitation={(c) => {
+              setIsDossierOpen(false);
+              setInspectorCitation(c);
+              setDrawerOpen(true);
+            }}
+          />
+        </React.Suspense>
+      )}
+
     </div>
   );
 }
