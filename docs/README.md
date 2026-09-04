@@ -10,12 +10,13 @@ All core documentation is organized into **6 comprehensive documents** directly 
 
 | Document | Title | Description |
 | :--- | :--- | :--- |
+| **[`SIH_PRESENTATION_TRUTH.md`](./SIH_PRESENTATION_TRUTH.md)** | SIH Presentation Truth (Master Source) | Master single source of truth for presentation claims, actual benchmarks, 19-source corpus, and verified USPs. |
 | **[`01_PRD.md`](./01_PRD.md)** | Product Requirements Document | Product vision, target personas, problem statement, core capabilities, and success metrics. |
-| **[`02_TRD.md`](./02_TRD.md)** | Technical Requirements Document | Architecture principles, technology stack, dataflow pipeline, latency optimizations (~500ms TTFT), and security models. |
-| **[`03_APP_FLOW.md`](./03_APP_FLOW.md)** | App Flow & User Journeys | Screen map, information architecture, and the 5 core user journeys (Inquiry, Graph, Classification, ABS, Dossier). |
+| **[`02_TRD.md`](./02_TRD.md)** | Technical Requirements Document | Architecture principles, technology stack, dataflow pipeline, latency optimizations, and security models. |
+| **[`03_APP_FLOW.md`](./03_APP_FLOW.md)** | App Flow & User Journeys | Screen map, information architecture, and core user journeys (Inquiry, Classification, ABS, Matrix, Dossier). |
 | **[`04_UIUX_SPEC.md`](./04_UIUX_SPEC.md)** | UI/UX Design System & Tokens | Editorial design ethos, color tokens, typography, Framer Motion spring physics, and custom component specifications. |
 | **[`05_ARCHITECTURE_AND_SCHEMA.md`](./05_ARCHITECTURE_AND_SCHEMA.md)** | System Architecture & Database Schema | Modular monolith diagram, Neon Serverless PostgreSQL + `pgvector` tables, Knowledge Graph engine, and key ADR summaries. |
-| **[`06_REGULATORY_AND_INNOVATION_GUIDE.md`](./06_REGULATORY_AND_INNOVATION_GUIDE.md)** | Regulatory Frameworks & Innovation Guide | Detailed analysis of Patents Act 1970/2024, DCA 1940, BDA 2023, FSSAI 2022, 37 official Patent Forms, and SIH 26045 scorecard. |
+| **[`06_REGULATORY_AND_INNOVATION_GUIDE.md`](./06_REGULATORY_AND_INNOVATION_GUIDE.md)** | Regulatory Frameworks & Innovation Guide | Detailed analysis of Patents Act 1970/2024, DCA 1940, BDA 2023, FSSAI 2022, WIPO GRATK Treaty 2024, and official forms. |
 
 ---
 

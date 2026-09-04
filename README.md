@@ -139,34 +139,36 @@ Open your browser at: `http://localhost:5173`.
 
 ## 📖 Centralized Documentation Hub
 
-All product specifications, technical architectures, interaction designs, and regulatory guides are consolidated directly in the [`docs/`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/README.md) directory:
+All product specifications, technical architectures, interaction designs, and regulatory guides are consolidated directly in the [`docs/`](./docs/README.md) directory:
 
 | Document | File Link | Core Content |
 | :--- | :--- | :--- |
-| **Product Requirements (PRD)** | [`docs/01_PRD.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/01_PRD.md) | Product vision, target user personas, problem statement, core capabilities, and success metrics. |
-| **Technical Requirements (TRD)** | [`docs/02_TRD.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/02_TRD.md) | Architecture principles, technology stack, dataflow pipeline, latency optimizations (~500ms TTFT), and security models. |
-| **App Flow & Journeys** | [`docs/03_APP_FLOW.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/03_APP_FLOW.md) | Screen map, information architecture, and the 5 core user journeys (Inquiry, Graph, Classification, ABS, Dossier). |
-| **UI/UX Design Specification** | [`docs/04_UIUX_SPEC.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/04_UIUX_SPEC.md) | Editorial design ethos, color tokens, typography, Framer Motion spring physics, and custom component specifications. |
-| **Architecture & Database Schema** | [`docs/05_ARCHITECTURE_AND_SCHEMA.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/05_ARCHITECTURE_AND_SCHEMA.md) | Modular monolith diagram, Neon Serverless PostgreSQL + `pgvector` tables, Knowledge Graph engine, and key ADR summaries. |
-| **Regulatory & Innovation Guide** | [`docs/06_REGULATORY_AND_INNOVATION_GUIDE.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/06_REGULATORY_AND_INNOVATION_GUIDE.md) | Detailed analysis of Patents Act 1970/2024, DCA 1940, BDA 2023, FSSAI 2022, 37 official Patent Forms, and SIH 26045 scorecard. |
-| **Master Documentation Index** | [`docs/README.md`](file:///c:/Users/aggar/Documents/AyuRaksha/docs/README.md) | Central Documentation Hub Index & Quick Navigation Portal. |
+| **SIH Presentation Truth (Master Source)** | [`docs/SIH_PRESENTATION_TRUTH.md`](./docs/SIH_PRESENTATION_TRUTH.md) | Authoritative single source of truth for presentation claims, verified benchmarks, 19-source corpus, and ranked USPs. |
+| **Product Requirements (PRD)** | [`docs/01_PRD.md`](./docs/01_PRD.md) | Product vision, target user personas, problem statement, core capabilities, and success metrics. |
+| **Technical Requirements (TRD)** | [`docs/02_TRD.md`](./docs/02_TRD.md) | Architecture principles, technology stack, dataflow pipeline, latency optimizations, and security models. |
+| **App Flow & Journeys** | [`docs/03_APP_FLOW.md`](./docs/03_APP_FLOW.md) | Screen map, information architecture, and core user journeys (Inquiry, Classification, ABS, Matrix, Dossier). |
+| **UI/UX Design Specification** | [`docs/04_UIUX_SPEC.md`](./docs/04_UIUX_SPEC.md) | Editorial design ethos, color tokens, typography, Framer Motion spring physics, and custom component specifications. |
+| **Architecture & Database Schema** | [`docs/05_ARCHITECTURE_AND_SCHEMA.md`](./docs/05_ARCHITECTURE_AND_SCHEMA.md) | Modular monolith diagram, Neon Serverless PostgreSQL + `pgvector` tables, Knowledge Graph engine, and key ADR summaries. |
+| **Regulatory & Innovation Guide** | [`docs/06_REGULATORY_AND_INNOVATION_GUIDE.md`](./docs/06_REGULATORY_AND_INNOVATION_GUIDE.md) | Detailed analysis of Patents Act 1970/2024, DCA 1940, BDA 2023, FSSAI 2022, WIPO GRATK Treaty 2024, and official forms. |
+| **Master Documentation Index** | [`docs/README.md`](./docs/README.md) | Central Documentation Hub Index & Quick Navigation Portal. |
 
 ---
 
-## 🏆 SIH 26045 Evaluation Scorecard
+## 🏆 SIH 26045 Golden Evaluation Scorecard
+*Evaluated against `data/evaluation/benchmark_200.jsonl` (105 curated golden statutory scenarios) using `scripts/run_eval_benchmark.py`:*
 
 | Evaluation Metric | Target Threshold | AyuRaksha Measured Benchmark | Status |
 | :--- | :---: | :---: | :---: |
-| **Inference Latency (TTFT)** | < 1.50s | **~500ms** (Gemini 2.5 Flash via AI Studio) | **EXCEEDED** |
-| **Statutory Grounding Rate** | ≥ 90.0% | **94.2%** | **PASSED** |
-| **Citation Precision** | ≥ 95.0% | **97.1%** | **PASSED** |
-| **Supported Claim Rate** | ≥ 90.0% | **93.8%** | **PASSED** |
-| **Zero Legal Hallucination** | 100.0% | **100%** (Mandatory abstention on unverified claims) | **PASSED** |
-| **Procedural Form Resolution**| ≥ 95.0% | **100%** (All 37 CGPDTM Forms indexed & verified) | **EXCEEDED** |
+| **Jurisdiction Leakage Rate (JLR)** | 0.00% | **0.00%** (Zero cross-border contamination) | **PASSED** |
+| **Safe Abstention Accuracy** | 100.00% | **100.00%** (8/8 biopiracy & illegal cure queries intercepted) | **PASSED** |
+| **Citation Grounding Precision** | ≥ 90.00% | **100.00%** (All citations grounded in authentic Gazette text) | **EXCEEDED** |
+| **Statutory Citation Recall** | ≥ 85.00% | **90.59%** (85/94 required statutory provisions retrieved) | **PASSED** |
+| **P50 Inference Latency** | < 3.00s | **2.42s** (Median end-to-end multi-stage pipeline) | **PASSED** |
+| **P95 Inference Latency** | < 6.00s | **5.97s** (Tail latency under complex multi-hop planning) | **PASSED** |
 
 ---
 
 ## 📜 License & Compliance
 
-Built for the **Smart India Hackathon 2024 / 2026** under the auspices of the **Ministry of Ayush** and **All India Institute of Ayurveda (AIIA)**.  
+Built for the **Smart India Hackathon (SIH Problem Statement #26045: IP-SAKTI Sahayak)** under the auspices of the **Ministry of Ayush** and **All India Institute of Ayurveda (AIIA)**.  
 *Disclaimer: AyuRaksha is an AI-powered regulatory and IP decision-support system. It is designed to assist innovators and practitioners and does not constitute formal legal counsel.*
