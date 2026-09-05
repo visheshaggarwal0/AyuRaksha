@@ -12,12 +12,7 @@ logger = logging.getLogger("AyuRaksha")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"Starting {settings.APP_NAME}...")
-    # Pre-warm embedding model once on startup to eliminate query latency
-    try:
-        from app.modules.embeddings import embedding_module
-        embedding_module._get_model()
-    except Exception as e:
-        logger.warning(f"Embedding model pre-warming skipped: {e}")
+    # Defer heavy model loading to keep startup memory < 100MB and ensure instant port binding
     yield
     logger.info(f"Shutting down {settings.APP_NAME}...")
 

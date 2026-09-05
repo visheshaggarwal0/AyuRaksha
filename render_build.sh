@@ -14,7 +14,7 @@ python -m pip install --no-cache-dir torch --index-url https://download.pytorch.
 echo "=== [3/3] Installing AyuRaksha backend dependencies ==="
 python -m pip install --no-cache-dir -r backend/requirements.txt
 
-echo "=== Validating environment & pre-warming embedding cache ==="
-python -c "import sentence_transformers; print('✓ Sentence-transformers loaded successfully in CPU mode')"
+echo "=== Validating environment & caching embedding weights ==="
+python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('all-MiniLM-L6-v2'); print('✓ all-MiniLM-L6-v2 cached on disk')"
 
 echo "=== Build Complete ==="

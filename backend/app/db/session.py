@@ -58,6 +58,10 @@ except Exception as e:
     engine = None
     AsyncSessionLocal = None
 
+def get_engine():
+    """Returns active SQLAlchemy AsyncEngine or None."""
+    return engine
+
 class MockSession:
     def __init__(self):
         import logging
