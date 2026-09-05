@@ -6,18 +6,19 @@ interface BrandLogoProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   showSubtitle?: boolean;
   iconOnly?: boolean;
+  variant?: 'mark' | 'full-graphic';
   onClick?: () => void;
 }
 
 /**
- * BrandLogo — Unified single source of truth for Ayuरक्षा Shield Icon + Wordmark.
- * Uses clean cropped shield icon (zero embedded text) + live BrandWordmark typography.
+ * BrandLogo — Unified single source of truth for Ayuरक्षा Shield Icon + Wordmark / Full Graphic.
  */
 export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = '',
   size = 'md',
   showSubtitle = false,
   iconOnly = false,
+  variant = 'mark',
   onClick,
 }) => {
   const iconSizes = {
@@ -27,6 +28,32 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     lg: 'h-9 w-auto',
     xl: 'h-11 w-auto',
   };
+
+  const fullLogoSizes = {
+    xs: 'h-6 w-auto',
+    sm: 'h-7 w-auto',
+    md: 'h-9 w-auto',
+    lg: 'h-11 w-auto',
+    xl: 'h-14 w-auto',
+  };
+
+  if (variant === 'full-graphic') {
+    return (
+      <div
+        onClick={onClick}
+        className={`inline-flex items-center ${
+          onClick ? 'cursor-pointer transition-opacity hover:opacity-90 select-none' : 'select-none'
+        } ${className}`}
+        title="Ayuरक्षा — IP-SAKTI Sahayak"
+      >
+        <img
+          src="/branding/ayuraksha-logo.png"
+          alt="Ayuरक्षा — IP-SAKTI Sahayak"
+          className={`${fullLogoSizes[size]} object-contain`}
+        />
+      </div>
+    );
+  }
 
   return (
     <div

@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: ayuraksha-backend
+    env: python
+    runtime: python
+    region: singapore
+    plan: free
+    branch: main
+    buildCommand: "./render_build.sh"
+    startCommand: "uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: APP_ENV
+        value: production
+      - key: ALLOWED_ORIGINS
+        value: "http://localhost:5173,http://localhost:3000,https://ayuraksha.vercel.app"
+      # Secure credentials to be provided in the Render dashboard
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: BHASHINI_API_KEY
+        sync: false
+      - key: BHASHINI_USER_ID
+        sync: false
+      - key: BHASHINI_PIPELINE_ID
+        sync: false

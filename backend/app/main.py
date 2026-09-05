@@ -36,6 +36,7 @@ from starlette.requests import Request
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
@@ -81,13 +82,14 @@ async def health_check():
     if db_configured:
         try:
             from app.db.session import get_engine
+            from sqlalchemy import text
             engine = get_engine()
             if engine:
-                with engine.connect() as conn:
-                    conn.execute(__import__("sqlalchemy").text("SELECT 1"))
+                async with engine.connect() as conn:
+                    await conn.execute(text("SELECT 1"))
                 db_reachable = True
-        except Exception:
-            pass
+        except Exception as e:
+            logger.warning(f"Database health check failed: {e}")
     return {
         "status": "healthy",
         "app": settings.APP_NAME,

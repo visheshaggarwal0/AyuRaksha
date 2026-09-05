@@ -101,6 +101,15 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       <section className="relative pt-6 pb-4">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           
+          {/* Official Brand Emblem & Logo */}
+          <div className="flex justify-center items-center pb-1">
+            <img
+              src="/branding/ayuraksha-logo.png"
+              alt="Ayuरक्षा — IP-SAKTI Sahayak"
+              className="h-16 sm:h-20 w-auto object-contain drop-shadow-xs select-none"
+            />
+          </div>
+
           {/* Institutional Badge */}
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-ayush-forest border border-emerald-200 text-xs font-bold tracking-wide shadow-xs">
             <ShieldCheck className="w-4 h-4 text-ayush-forest" />
