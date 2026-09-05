@@ -81,9 +81,11 @@ class CompositeRetrievalModule(IRetrievalModule):
                     rrf_scores[key] = 0.0
                 rrf_scores[key] += 1.0 / (60 + rank)
 
-        # Graph expansion on top candidates
-        top_keys = sorted(rrf_scores.keys(), key=lambda k: rrf_scores[k], reverse=True)[:3]
+        # Graph expansion on query entities and top candidate relations
         entities_for_graph = []
+        if query:
+            entities_for_graph.append(query)
+        top_keys = sorted(rrf_scores.keys(), key=lambda k: rrf_scores[k], reverse=True)[:3]
         for k in top_keys:
             if "|" in k:
                 src, sec = k.split("|", 1)
@@ -92,7 +94,7 @@ class CompositeRetrievalModule(IRetrievalModule):
                 if sec:
                     entities_for_graph.append(sec)
         if entities_for_graph:
-            graph_results = await self.graph_retriever.retrieve_graph(entities_for_graph, limit=3)
+            graph_results = await self.graph_retriever.retrieve_graph(entities_for_graph, limit=4)
             self.last_graph_count = len(graph_results)
             if graph_results:
                 modalities.append(RetrievalModality.GRAPH)
@@ -102,7 +104,7 @@ class CompositeRetrievalModule(IRetrievalModule):
                     if key not in fused_candidates:
                         fused_candidates[key] = ev
                         rrf_scores[key] = 0.0
-                    rrf_scores[key] += 0.015  # Graph bonus
+                    rrf_scores[key] += 0.02  # Knowledge Graph relational boost
 
         # Sort and assemble final evidence with statutory authority weighting
         def _get_effective_score(k: str) -> float:
