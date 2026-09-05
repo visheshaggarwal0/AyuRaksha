@@ -291,43 +291,54 @@ class GroqProvider(ILLMProvider):
             return None
 
         url = "https://api.groq.com/openai/v1/chat/completions"
-        payload: Dict[str, Any] = {
-            "model": self._model,
-            "messages": messages,
-            "temperature": temperature,
-            "max_tokens": max_tokens
-        }
-        if response_format == "json":
-            payload["response_format"] = {"type": "json_object"}
+        candidate_models = list(dict.fromkeys([
+            self._model,
+            "openai/gpt-oss-120b",
+            "groq/compound-mini",
+            "llama-3.3-70b-versatile"
+        ]))
 
-        try:
-            async with httpx.AsyncClient(timeout=3.0) as client:
-                resp = await client.post(
-                    url,
-                    json=payload,
-                    headers={
-                        "Authorization": f"Bearer {self._api_key}",
-                        "Content-Type": "application/json"
-                    }
-                )
-                if resp.status_code == 200:
-                    data = resp.json()
-                    choices = data.get("choices", [])
-                    if choices:
-                        usage = data.get("usage", {})
-                        if usage:
-                            from app.telemetry.models import TokenUsage
-                            self._last_token_usage = TokenUsage(
-                                input_tokens=usage.get("prompt_tokens"),
-                                output_tokens=usage.get("completion_tokens"),
-                                total_tokens=usage.get("total_tokens")
-                            )
-                        return choices[0].get("message", {}).get("content", "").strip()
-                elif resp.status_code in (401, 403):
-                    self._circuit_broken = True
-        except Exception as e:
-            logger.debug("Groq call failed: %s", e)
-            self._circuit_broken = True
+        for mod in candidate_models:
+            payload: Dict[str, Any] = {
+                "model": mod,
+                "messages": messages,
+                "temperature": temperature,
+                "max_tokens": max_tokens
+            }
+            if response_format == "json":
+                payload["response_format"] = {"type": "json_object"}
+
+            try:
+                async with httpx.AsyncClient(timeout=8.0) as client:
+                    resp = await client.post(
+                        url,
+                        json=payload,
+                        headers={
+                            "Authorization": f"Bearer {self._api_key}",
+                            "Content-Type": "application/json"
+                        }
+                    )
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        choices = data.get("choices", [])
+                        if choices:
+                            usage = data.get("usage", {})
+                            if usage:
+                                from app.telemetry.models import TokenUsage
+                                self._last_token_usage = TokenUsage(
+                                    input_tokens=usage.get("prompt_tokens"),
+                                    output_tokens=usage.get("completion_tokens"),
+                                    total_tokens=usage.get("total_tokens")
+                                )
+                            self._model = mod
+                            return choices[0].get("message", {}).get("content", "").strip()
+                    elif resp.status_code in (401, 403):
+                        self._circuit_broken = True
+                        break
+                    elif resp.status_code == 404:
+                        continue
+            except Exception as e:
+                logger.debug("Groq call failed for %s: %s", mod, e)
 
         return None
 
