@@ -22,6 +22,10 @@ def generate_deterministic_embedding(text_content: str, dim: int = 384) -> List[
     otherwise falls back to a deterministic 384-dimensional unit vector.
     """
     from app.modules.embeddings import embedding_module
+    import os
+    if os.getenv("LIGHTWEIGHT_EMBEDDINGS", "1").lower() in ("1", "true", "yes"):
+        return embedding_module._fallback_vector(text_content)
+
     model = get_embedding_model()
     if model is not None:
         raw_vector = model.encode(text_content, normalize_embeddings=True)

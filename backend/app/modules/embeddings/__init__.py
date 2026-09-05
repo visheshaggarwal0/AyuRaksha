@@ -27,6 +27,14 @@ class ModularEmbeddingEngine(IEmbeddingModule):
 
     def _get_model(self):
         if not self._initialized:
+            import os
+            # On memory-constrained free tiers (<= 512MB RAM), bypass PyTorch model loading
+            if os.getenv("LIGHTWEIGHT_EMBEDDINGS", "1").lower() in ("1", "true", "yes"):
+                logger.info("Operating in lightweight vector mode (0MB RAM footprint for free tier).")
+                self._model = None
+                self._initialized = True
+                return None
+
             try:
                 from sentence_transformers import SentenceTransformer
                 try:
