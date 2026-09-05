@@ -39,7 +39,6 @@ import { CitationModal } from './components/modals/CitationModal';
 import { ObservabilityConsole } from './components/observability/ObservabilityConsole';
 import { useTranslation } from './i18n/LanguageContext';
 import { BrandLogo } from './components/common/BrandLogo';
-import { BrandWordmark } from './components/common/BrandWordmark';
 import { DecisionBriefAnswer } from './components/chat/DecisionBriefAnswer';
 import { InnovationDiscoveryWorkflow } from './components/wizards/InnovationDiscoveryWorkflow';
 import { EvidenceInspector } from './components/evidence/EvidenceInspector';
@@ -417,7 +416,7 @@ export function App() {
             {sidebarOpen ? (
               <BrandLogo
                 size="lg"
-                showSubtitle={true}
+                variant="full-graphic"
                 onClick={() => {
                   setActiveView('landing');
                   setDrawerOpen(false);
@@ -531,7 +530,16 @@ export function App() {
         <header className="h-16 border-b border-slate-200 bg-white/95 backdrop-blur-md px-5 flex items-center justify-between shrink-0 z-20">
           {/* Breadcrumb / Journey Indicator */}
           <div className="flex items-center space-x-3">
-            <BrandWordmark size="xs" className="hidden sm:inline-flex" />
+            <BrandLogo
+              size="xs"
+              onClick={() => {
+                setActiveView('landing');
+                setDrawerOpen(false);
+                setInspectorCitation(null);
+                setActiveContextAnswer(null);
+              }}
+              className="hidden sm:inline-flex"
+            />
             {activeView !== 'landing' && (
               <>
                 <span className="text-slate-300 hidden sm:inline">/</span>
