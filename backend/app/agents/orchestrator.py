@@ -95,6 +95,10 @@ class AyuRakshaOrchestrator:
             cross_border_posture=resp.cross_border_posture,
             language=resp.language,
             execution_mode=getattr(resp, "execution_mode", "GUIDED_RAG"),
+            intent_type=getattr(resp, "intent_type", "LEGAL_ASSESSMENT") or "LEGAL_ASSESSMENT",
+            clarification_chips=getattr(resp, "clarification_chips", []) or [],
+            suggested_prompts=getattr(resp, "suggested_prompts", []) or [],
+            statutory_category=getattr(resp, "statutory_category", None),
             resolved_concepts=getattr(resp, "resolved_concepts", []),
             evidence_pack=resp.evidence_pack.model_dump() if getattr(resp, "evidence_pack", None) else None,
             diagnostics=resp.diagnostics,
@@ -159,7 +163,16 @@ class AyuRakshaOrchestrator:
                     safe_abstention=raw_resp.get("safe_abstention", False),
                     abstention_reason=raw_resp.get("abstention_reason", {}).get("description") if raw_resp.get("abstention_reason") else None,
                     cross_border_posture=raw_resp.get("cross_border_posture"),
-                    language=raw_resp.get("language", language)
+                    language=raw_resp.get("language", language),
+                    execution_mode=raw_resp.get("execution_mode", "GUIDED_RAG"),
+                    intent_type=raw_resp.get("intent_type", "LEGAL_ASSESSMENT"),
+                    clarification_chips=raw_resp.get("clarification_chips", []),
+                    suggested_prompts=raw_resp.get("suggested_prompts", []),
+                    statutory_category=raw_resp.get("statutory_category"),
+                    resolved_concepts=raw_resp.get("resolved_concepts", []),
+                    evidence_pack=raw_resp.get("evidence_pack"),
+                    diagnostics=raw_resp.get("diagnostics", {}),
+                    latency_breakdown=raw_resp.get("latency_breakdown", {})
                 )
                 yield {"event": "result", "data": structured.model_dump()}
             else:

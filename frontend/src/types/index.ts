@@ -21,6 +21,12 @@ export interface ClaimVerification {
   supporting_citations: Citation[];
 }
 
+export interface ClarificationChip {
+  label: string;
+  action_payload: string;
+  category_hint?: string;
+}
+
 export interface StructuredAnswer {
   direct_answer: string;
   jurisdiction: Jurisdiction;
@@ -37,6 +43,15 @@ export interface StructuredAnswer {
     international_posture: string;
   };
   language?: string;
+  intent_type?: 'GREETING' | 'CLASSIFICATION_INTAKE' | 'LEGAL_ASSESSMENT';
+  clarification_chips?: ClarificationChip[];
+  suggested_prompts?: string[];
+  statutory_category?: string;
+  execution_mode?: string;
+  resolved_concepts?: string[];
+  evidence_pack?: any;
+  diagnostics?: Record<string, any>;
+  latency_breakdown?: Record<string, number>;
 }
 
 export interface ProductClassificationRequest {

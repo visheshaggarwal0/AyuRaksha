@@ -17,7 +17,9 @@ from app.models.domain import (
     JurisdictionEnum,
     ClaimVerificationResult,
     ExecutionMode,
-    EvidencePack
+    EvidencePack,
+    Confidence,
+    ConfidenceLevel
 )
 from app.modules.guardrails import guardrails_module
 from app.modules.retrieval import retrieval_module
@@ -91,7 +93,29 @@ class ModularOrchestrator(IOrchestrationModule):
         resolved_concepts = concept_engine.resolve_concepts(normalized_query)
         execution_mode = self.determine_execution_mode(normalized_query, resolved_concepts, jurisdiction)
 
-        if execution_mode == ExecutionMode.DIRECT_STATUTORY:
+        if execution_mode == ExecutionMode.CONVERSATIONAL_GREETING:
+            return await self._execute_conversational_greeting(
+                query=query,
+                jur_enum=jur_enum,
+                jurisdiction=jurisdiction,
+                eff_lang=eff_lang,
+                trace_id=trace_id,
+                t_start=t_start,
+                t_norm_ms=t_norm_ms,
+                t_guard_ms=t_guard_ms
+            )
+        elif execution_mode == ExecutionMode.CLASSIFICATION_INTAKE:
+            return await self._execute_classification_intake(
+                query=query,
+                jur_enum=jur_enum,
+                jurisdiction=jurisdiction,
+                eff_lang=eff_lang,
+                trace_id=trace_id,
+                t_start=t_start,
+                t_norm_ms=t_norm_ms,
+                t_guard_ms=t_guard_ms
+            )
+        elif execution_mode == ExecutionMode.DIRECT_STATUTORY:
             return await self._execute_direct_statutory(
                 query=query,
                 normalized_query=normalized_query,
@@ -132,6 +156,18 @@ class ModularOrchestrator(IOrchestrationModule):
             t_guard_ms=t_guard_ms
         )
 
+    GREETING_REGEX = re.compile(
+        r"^(?:hi|hy|hello|hey|heya|namaste|namaskar|pranam)(?:\s+(?:there|all|team|sahayak|ayuraksha))?[!.\s?]*$|"
+        r"^(?:good\s+(?:morning|afternoon|evening)|greetings)[!.\s?]*$|"
+        r"^(?:who\s+are\s+you|what\s+(?:can\s+you\s+do|is\s+ayuraksha|is\s+ip\s*sakti|is\s+this\s+app)|help(?:\s+me)?|how\s+does\s+this\s+work)[!.\s?]*$",
+        re.IGNORECASE
+    )
+
+    CLASSIFICATION_INTAKE_REGEX = re.compile(
+        r"^(?:(?:can|how)\s+i\s+(?:patent|license|sell|protect|register|export)|i\s+(?:want\s+to|have\s+an?|make|developed)\s+(?:patent|license|sell|protect|a\s+new)|what\s+about\s+my|classify\s+(?:my|this)|evaluate\s+(?:my|this))\s+.*(?:oil|cream|ointment|tablet|capsule|syrup|gummy|gummies|drops|churna|formulation|product|medicine|remedy)[!.\s?]*$",
+        re.IGNORECASE
+    )
+
     DIRECT_STATUTORY_REGEX = re.compile(
         r"(?:^|\b)(?:what\s+(?:is|does|are|says)|text\s+of|show\s+me|explain|define|provision\s+of|under|cite|state|meaning\s+of)?\s*(?:the\s+)?(section|sec\.?|rule|regulation|article)\s+([0-9]+[a-zA-Z0-9\(\)\-_/]*)",
         re.IGNORECASE
@@ -145,11 +181,23 @@ class ModularOrchestrator(IOrchestrationModule):
     ) -> ExecutionMode:
         """
         Determines the optimal execution mode:
-        1. DIRECT_STATUTORY: When the query is an explicit statutory definition or provision lookup.
-        2. MULTI_HOP_PLANNER: When the query spans multiple regulatory domains or cross-border regimes.
-        3. GUIDED_RAG: Standard regulatory compliance inquiries (~85% of queries).
+        1. CONVERSATIONAL_GREETING: Small talk, welcomes, capabilities intake.
+        2. CLASSIFICATION_INTAKE: Underspecified product queries needing multi-turn clarifying intake.
+        3. DIRECT_STATUTORY: When the query is an explicit statutory definition or provision lookup.
+        4. MULTI_HOP_PLANNER: When the query spans multiple regulatory domains or cross-border regimes.
+        5. GUIDED_RAG: Standard regulatory compliance inquiries (~85% of queries).
         """
         q_strip = query.strip()
+        q_lower = q_strip.lower()
+        clean_q = re.sub(r"[^\w\s]", "", q_lower).strip()
+
+        # 0. Conversational Greeting check
+        if self.GREETING_REGEX.search(q_strip) or clean_q in [
+            "hi", "hy", "hy there", "hello", "hello there", "hey", "hey there",
+            "namaste", "namaskar", "pranam", "help", "start", "greetings"
+        ]:
+            return ExecutionMode.CONVERSATIONAL_GREETING
+
         # Cross-border / export query detection
         cross_border_match = bool(
             re.search(r"\b(export|germany|europe|eu|us|usa|fda|united states|america|abroad|foreign|overseas)\b", query.lower())
@@ -161,7 +209,11 @@ class ModularOrchestrator(IOrchestrationModule):
         if self.DIRECT_STATUTORY_REGEX.search(q_strip) and len(q_strip.split()) <= 15 and not cross_border_match and jurisdiction != "CROSS_BORDER":
             return ExecutionMode.DIRECT_STATUTORY
 
-        # 2. Multi-Hop Planner Check (cross-border or spanning >= 2 regulatory pillars / statutes)
+        # 2. Underspecified Formulation Intake check
+        if self.is_underspecified_intake(q_strip, resolved_concepts):
+            return ExecutionMode.CLASSIFICATION_INTAKE
+
+        # 3. Multi-Hop Planner Check (cross-border or spanning >= 2 regulatory pillars / statutes)
         domains = {c.domain for c in resolved_concepts}
         statute_prefixes = set()
         for c in resolved_concepts:
@@ -173,8 +225,153 @@ class ModularOrchestrator(IOrchestrationModule):
         if jurisdiction == "CROSS_BORDER" or is_multi_pillar:
             return ExecutionMode.MULTI_HOP_PLANNER
 
-        # 3. Default Guided RAG
+        # 4. Default Guided RAG
         return ExecutionMode.GUIDED_RAG
+
+    def is_underspecified_intake(self, query: str, resolved_concepts: List[Any]) -> bool:
+        q_lower = query.lower().strip()
+        if re.search(r"\b(classify\s+(?:my|this)|help\s+me\s+classify|evaluate\s+my\s+formulation|start\s+classification)\b", q_lower):
+            return True
+        if len(q_lower.split()) <= 12 and self.CLASSIFICATION_INTAKE_REGEX.search(q_lower):
+            specific_botanicals = [
+                "ashwagandha", "guduchi", "curcumin", "turmeric", "neem", "tulsi", "triphala",
+                "kutki", "shatavari", "brahmi", "guggulu", "amla", "haritaki", "bibhitaki",
+                "arjuna", "licorice", "ginger", "boswellia", "shallaki"
+            ]
+            has_botanical = any(b in q_lower for b in specific_botanicals)
+            has_statute = bool(re.search(r"\b(section|sec\.?|rule|act|tkdl|bda|dca)\b", q_lower))
+            if not has_botanical and not has_statute:
+                return True
+        return False
+
+    async def _execute_conversational_greeting(
+        self,
+        query: str,
+        jur_enum: JurisdictionEnum,
+        jurisdiction: str,
+        eff_lang: str,
+        trace_id: str,
+        t_start: float,
+        t_norm_ms: float,
+        t_guard_ms: float
+    ) -> RAGResponse:
+        total_ms = round((time.perf_counter() - t_start) * 1000, 2)
+        latency_breakdown = {
+            "normalization_ms": t_norm_ms,
+            "guardrails_ms": t_guard_ms,
+            "retrieval_ms": 0.0,
+            "reranking_ms": 0.0,
+            "generation_ms": 0.1,
+            "verification_ms": 0.1,
+            "total_ms": total_ms
+        }
+        greeting_text = (
+            "**Namaste! I am your IP-SAKTI Sahayak** — your AI co-counsel for Intellectual Property and regulatory guidance in Ayurveda, grounded in official statutes from the Ministry of Ayush.\n\n"
+            "Protecting and commercializing an Ayurvedic formulation requires navigating three interconnected regimes:\n"
+            "1. **Statutory Classification:** Deciding whether your product is Classical Shastriya, Proprietary ASU, Phytopharmaceutical, Ayurveda Aahar, or Cosmetic.\n"
+            "2. **Patentability & TKDL:** Navigating Section 3(p) exclusions and non-obvious synergy.\n"
+            "3. **Biodiversity & ABS:** Ensuring compliance with the Biological Diversity Act, 2023 (NBA/SBB rules).\n\n"
+            "To get started, tell me about your formulation or select one of the 6 official statutory categories below:"
+        )
+        chips = [
+            {"label": "📜 1. Classical Shastriya (First Schedule)", "action_payload": "I have a Classical Ayurvedic Medicine formulated strictly according to a First Schedule text like Charaka Samhita.", "category_hint": "CLASSICAL_SHASTRIYA"},
+            {"label": "🧪 2. Proprietary ASU Formulation", "action_payload": "I have a Proprietary Ayurvedic Medicine (ASU) with a new combination or ratio of traditional ingredients.", "category_hint": "PROPRIETARY_ASU"},
+            {"label": "🔬 3. Phytopharmaceutical Extract", "action_payload": "I have a purified and standardized botanical fraction with defined biomarkers (Phytopharmaceutical).", "category_hint": "PHYTOPHARMACEUTICAL"},
+            {"label": "🥗 4. Ayurveda-Aahar (Food/Nutraceutical)", "action_payload": "I want to formulate an Ayurveda-Aahar food product under FSSAI 2022 Regulations.", "category_hint": "AYURVEDA_AAHAR"},
+            {"label": "🌿 5. Ayurvedic Cosmetic (Topical)", "action_payload": "I want to market an Ayurvedic cosmetic or personal care formulation for skin/hair.", "category_hint": "COSMETIC"},
+            {"label": "🌱 6. Biological Diversity & ABS Check", "action_payload": "Check Biological Diversity Act 2023 ABS approval requirements for sourcing Indian herbs.", "category_hint": "ABS"}
+        ]
+        return RAGResponse(
+            query=query,
+            jurisdiction=jur_enum,
+            detected_intent="CONVERSATIONAL_GREETING",
+            direct_answer=greeting_text,
+            assessment_table={
+                "Trace ID": trace_id,
+                "Execution Mode": "CONVERSATIONAL_GREETING",
+                "Assistant": "IP-SAKTI Sahayak",
+                "Authority": "Ministry of Ayush / AIIA"
+            },
+            citations=[],
+            verified_claims=[],
+            confidence=Confidence(level=ConfidenceLevel.HIGH, score=1.0, grounding_rate=1.0, caveats=[]),
+            safe_abstention=False,
+            language=eff_lang,
+            execution_mode=ExecutionMode.CONVERSATIONAL_GREETING,
+            intent_type="GREETING",
+            clarification_chips=chips,
+            suggested_prompts=[
+                "Can I patent an arthritis oil with Ashwagandha and Guduchi?",
+                "What licensing proof is required under Rule 158B for a proprietary churna?",
+                "Do I need NBA permission to source Kutki from Himachal Pradesh under BDA 2023?",
+                "What are the US FDA DSHEA export requirements for Ayurvedic supplements?"
+            ],
+            trace_id=trace_id,
+            diagnostics={"greeting": True, "provider": "IP-SAKTI-OnboardingEngine"},
+            latency_breakdown=latency_breakdown
+        )
+
+    async def _execute_classification_intake(
+        self,
+        query: str,
+        jur_enum: JurisdictionEnum,
+        jurisdiction: str,
+        eff_lang: str,
+        trace_id: str,
+        t_start: float,
+        t_norm_ms: float,
+        t_guard_ms: float
+    ) -> RAGResponse:
+        total_ms = round((time.perf_counter() - t_start) * 1000, 2)
+        latency_breakdown = {
+            "normalization_ms": t_norm_ms,
+            "guardrails_ms": t_guard_ms,
+            "retrieval_ms": 0.0,
+            "reranking_ms": 0.0,
+            "generation_ms": 0.1,
+            "verification_ms": 0.1,
+            "total_ms": total_ms
+        }
+        intake_text = (
+            "Because intellectual property for an Ayurvedic product is inseparable from how it is regulated, we must first establish your **statutory classification** under Chapter IV-A of the Drugs & Cosmetics Act, 1940.\n\n"
+            "To determine whether your formulation faces the **Section 3(p) patenting bar** or requires a **Rule 158B manufacturing license**, please clarify:\n\n"
+            "1. **Is the recipe drawn directly from an authoritative First-Schedule text** (such as *Charaka Samhita*, *Sushruta Samhita*, or *Bhavaprakasha*), or is it your own new recipe?\n"
+            "2. **Is it a whole crude herb/powder/oil**, or a **purified, standardized solvent extract** with characterized biomarkers?"
+        )
+        chips = [
+            {"label": "📜 Classical Text Recipe (First Schedule)", "action_payload": "My formulation is drawn from an authoritative First-Schedule classical Ayurvedic text.", "category_hint": "CLASSICAL_SHASTRIYA"},
+            {"label": "🧪 New Proprietary ASU Combination", "action_payload": "My formulation is a new proprietary combination of traditional Ayurvedic herbs not found in classical texts.", "category_hint": "PROPRIETARY_ASU"},
+            {"label": "🔬 Standardized Solvent Extract (Phytopharmaceutical)", "action_payload": "My formulation is a standardized botanical extract with defined biomarkers.", "category_hint": "PHYTOPHARMACEUTICAL"},
+            {"label": "🥗 Ayurveda-Aahar Dietary Supplement", "action_payload": "My formulation is intended as an Ayurveda-Aahar nutritional/dietary supplement under FSSAI regulations.", "category_hint": "AYURVEDA_AAHAR"}
+        ]
+        return RAGResponse(
+            query=query,
+            jurisdiction=jur_enum,
+            detected_intent="CLASSIFICATION_INTAKE",
+            direct_answer=intake_text,
+            assessment_table={
+                "Trace ID": trace_id,
+                "Execution Mode": "CLASSIFICATION_INTAKE",
+                "Regulatory Stage": "Formulation Classification Intake",
+                "Next Step": "Select or clarify formulation origin"
+            },
+            citations=[],
+            verified_claims=[],
+            confidence=Confidence(level=ConfidenceLevel.HIGH, score=0.95, grounding_rate=1.0, caveats=[]),
+            safe_abstention=False,
+            language=eff_lang,
+            execution_mode=ExecutionMode.CLASSIFICATION_INTAKE,
+            intent_type="CLASSIFICATION_INTAKE",
+            clarification_chips=chips,
+            suggested_prompts=[
+                "What is the difference between Classical Shastriya and Proprietary ASU licensing?",
+                "Can a proprietary polyherbal formulation overcome Section 3(p)?",
+                "What clinical or safety data does Rule 158B require?"
+            ],
+            trace_id=trace_id,
+            diagnostics={"intake": True, "provider": "IP-SAKTI-ClassificationIntakeEngine"},
+            latency_breakdown=latency_breakdown
+        )
 
     async def _execute_direct_statutory(
         self,
@@ -707,6 +904,62 @@ class ModularOrchestrator(IOrchestrationModule):
                 language=eff_lang,
                 trace_id=trace_id
             )
+            telemetry_collector.record_orchestration_response(
+                response_obj=resp,
+                query=query,
+                request_id=req_id,
+                token_usage=None,
+                success=True
+            )
+            yield {"event": "result", "data": resp.model_dump()}
+            return
+
+        # Stage 2b: Conversational & Formulation Intake Routing
+        resolved_concepts = concept_engine.resolve_concepts(normalized_query)
+        execution_mode = self.determine_execution_mode(normalized_query, resolved_concepts, jurisdiction)
+
+        if execution_mode == ExecutionMode.CONVERSATIONAL_GREETING:
+            yield {
+                "event": "stage",
+                "data": {"stage": "CONVERSATIONAL_ROUTER", "message": "Welcoming innovator to IP-SAKTI Sahayak..."}
+            }
+            resp = await self._execute_conversational_greeting(
+                query=query,
+                jur_enum=jur_enum,
+                jurisdiction=jurisdiction,
+                eff_lang=eff_lang,
+                trace_id=trace_id,
+                t_start=time.perf_counter(),
+                t_norm_ms=0.1,
+                t_guard_ms=0.1
+            )
+            yield {"event": "token", "data": {"token": resp.direct_answer}}
+            telemetry_collector.record_orchestration_response(
+                response_obj=resp,
+                query=query,
+                request_id=req_id,
+                token_usage=None,
+                success=True
+            )
+            yield {"event": "result", "data": resp.model_dump()}
+            return
+
+        if execution_mode == ExecutionMode.CLASSIFICATION_INTAKE:
+            yield {
+                "event": "stage",
+                "data": {"stage": "CLASSIFICATION_INTAKE", "message": "Initiating formulation classification intake..."}
+            }
+            resp = await self._execute_classification_intake(
+                query=query,
+                jur_enum=jur_enum,
+                jurisdiction=jurisdiction,
+                eff_lang=eff_lang,
+                trace_id=trace_id,
+                t_start=time.perf_counter(),
+                t_norm_ms=0.1,
+                t_guard_ms=0.1
+            )
+            yield {"event": "token", "data": {"token": resp.direct_answer}}
             telemetry_collector.record_orchestration_response(
                 response_obj=resp,
                 query=query,

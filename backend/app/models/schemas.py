@@ -32,6 +32,19 @@ class ClaimVerification(BaseModel):
     confidence_score: float
     supporting_citations: List[Citation] = []
 
+class StatutoryCategory(str, Enum):
+    CLASSICAL_SHASTRIYA = "Classical Ayurvedic Medicine (Shastriya)"
+    PROPRIETARY_ASU = "Patent or Proprietary Medicine (ASU)"
+    NEW_DRUG = "New / Non-Classical Ayurvedic Drug"
+    PHYTOPHARMACEUTICAL = "Phytopharmaceutical Drug (D&C Act)"
+    AYURVEDA_AAHAR = "Ayurveda Aahar (FSSAI Regs 2022)"
+    COSMETIC = "Ayurvedic Cosmetic Formulation"
+
+class ClarificationChip(BaseModel):
+    label: str
+    action_payload: str
+    category_hint: Optional[str] = None
+
 class StructuredAnswer(BaseModel):
     direct_answer: str
     jurisdiction: Jurisdiction
@@ -46,6 +59,10 @@ class StructuredAnswer(BaseModel):
     cross_border_posture: Optional[Dict[str, str]] = None
     language: str = "en"
     execution_mode: str = "GUIDED_RAG"
+    intent_type: str = "LEGAL_ASSESSMENT" # GREETING, CLARIFICATION_INTAKE, LEGAL_ASSESSMENT
+    clarification_chips: List[ClarificationChip] = []
+    suggested_prompts: List[str] = []
+    statutory_category: Optional[str] = None
     resolved_concepts: List[str] = []
     evidence_pack: Optional[Dict[str, Any]] = None
     diagnostics: Dict[str, Any] = {}

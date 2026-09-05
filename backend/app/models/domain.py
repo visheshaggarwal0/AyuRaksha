@@ -56,6 +56,8 @@ class ExecutionMode(str, Enum):
     DIRECT_STATUTORY = "DIRECT_STATUTORY"
     GUIDED_RAG = "GUIDED_RAG"
     MULTI_HOP_PLANNER = "MULTI_HOP_PLANNER"
+    CONVERSATIONAL_GREETING = "CONVERSATIONAL_GREETING"
+    CLASSIFICATION_INTAKE = "CLASSIFICATION_INTAKE"
 
 
 # ============================================================================
@@ -262,7 +264,11 @@ class RAGResponse(BaseModel):
     safe_abstention: bool = Field(default=False)
     abstention_reason: Optional[AbstentionReason] = None
     language: str = Field(default="en")
-    execution_mode: ExecutionMode = Field(default=ExecutionMode.GUIDED_RAG, description="DIRECT_STATUTORY, GUIDED_RAG, or MULTI_HOP_PLANNER")
+    execution_mode: ExecutionMode = Field(default=ExecutionMode.GUIDED_RAG, description="DIRECT_STATUTORY, GUIDED_RAG, MULTI_HOP_PLANNER, CONVERSATIONAL_GREETING, or CLASSIFICATION_INTAKE")
+    intent_type: str = Field(default="LEGAL_ASSESSMENT", description="GREETING, CLARIFICATION_INTAKE, or LEGAL_ASSESSMENT")
+    clarification_chips: List[Dict[str, Any]] = Field(default_factory=list, description="Interactive quick-reply chips")
+    suggested_prompts: List[str] = Field(default_factory=list, description="Suggested starter prompts")
+    statutory_category: Optional[str] = Field(default=None, description="One of the 6 PS 26045 statutory categories")
     resolved_concepts: List[str] = Field(default_factory=list, description="Detected legal concept tags")
     evidence_pack: Optional[EvidencePack] = None
     trace_id: Optional[str] = None
